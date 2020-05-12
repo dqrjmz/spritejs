@@ -203,34 +203,46 @@ export default class Scene extends Group {
    */
   constructor(options = {}) {
     super();
+    // 是否传入绘图容器
     if(!options.container) {
+      // 环境容器属性Container为函数
       if(typeof ENV.Container === 'function') {
+        // 内部创建一个容器对象
         options.container = new ENV.Container(options.width || 300, options.height || 150);
       } else {
         throw new Error('No container specified.');
       }
     }
+    // 设置容器的引用
     this.container = options.container;
+    // 容器是否存在样式
     if(this.container.style) {
+      // 没有设置overflow样式，进行设置
       if(!this.container.style.overflow) {
         this.container.style.overflow = 'hidden';
       }
+      // 没有设置position时，进行设置
       if(!this.container.style.position) {
         this.container.style.position = 'relative';
       }
     }
-
+    // 这是选项引用
     this.options = options;
+    // 获取展示比率
     options.displayRatio = options.displayRatio || 1.0;
+    // 获取场景模型
     options.mode = options.mode || 'scale';
-
+    // 场景位置（坐标，x,y轴）
     options.left = 0;
     options.top = 0;
+    // 是否自动重新改动尺寸
     options.autoResize = options.autoResize !== false;
-
+    
     if(options.autoResize) {
+      // window,web平台下
       if(global.addEventListener) {
         const that = this;
+        // 监听视口的大小变动
         global.addEventListener('resize', function listener() {
           if(typeof document !== 'undefined' && document.contains(that.container)) {
             that.resize();
@@ -366,6 +378,10 @@ export default class Scene extends Group {
     return layer;
   }
 
+  /**
+   * 预加载资源
+   * @param  {...any} resources 资源地址
+   */
   async preload(...resources) {
     const loaded = [],
       tasks = [],
@@ -374,7 +390,7 @@ export default class Scene extends Group {
     for(let i = 0; i < resources.length; i++) {
       const res = resources[i];
       let task;
-
+      // 加载
       if(typeof res === 'string') {
         task = loadTexture(res);
       } else if(Array.isArray(res)) {

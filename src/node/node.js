@@ -501,6 +501,11 @@ export default class Node {
     return false;
   }
 
+  /**
+   * 移除所有监听器
+   * @param {*} type 事件类型
+   * @param {*} options 
+   */
   removeAllListeners(type, options = {}) {
     if(typeof options === 'boolean') options = {capture: options};
     const capture = options.capture;
@@ -508,15 +513,25 @@ export default class Node {
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
 
     if(this[eventListeners][type]) {
+      // 清空
       this[eventListeners][type] = [];
     }
     return this;
   }
-
+  /**
+   * 移除html元素特性
+   * @param {*} key html元素特性
+   */
   removeAttribute(key) {
     this.setAttribute(key, null);
   }
 
+  /**
+   * 移除事件监听
+   * @param {*} type 事件类型
+   * @param {*} listener 监听器
+   * @param {*} options 选项
+   */
   removeEventListener(type, listener, options = {}) {
     if(typeof options === 'boolean') options = {capture: options};
     const capture = options.capture;
@@ -524,8 +539,10 @@ export default class Node {
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
 
     if(this[eventListeners][type]) {
+      // 某种事件的监听器集合
       const listeners = this[eventListeners][type];
       if(listeners) {
+        // 一个一个将监听器引用删除
         for(let i = 0; i < listeners.length; i++) {
           const {listener: _listener} = listeners[i];
           if(_listener === listener) {

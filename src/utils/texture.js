@@ -3,6 +3,11 @@ import {compareValue} from './attribute_value';
 
 const loadedTextures = {};
 
+/**
+ * 
+ * @param {*} src 资源地址
+ * @param {*} alias 
+ */
 export function loadTexture(src, alias) {
   if(loadedTextures[src]) return loadedTextures[src];
   const img = ENV.loadImage(src, {alias, useImageBitmap: false});
