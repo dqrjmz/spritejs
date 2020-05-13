@@ -65,11 +65,16 @@ function delegateEvents(scene) {
     'touchstart', 'touchend', 'touchmove', 'touchcancel',
     'click', 'dblclick', 'longpress', 'tap'];
 
+  // 场景容器
   const container = scene.container;
+  // 场景参数
   const {left, top, displayRatio} = scene.options;
 
+  // 给容器添加鼠标事件
   container.addEventListener('mouseleave', (event) => {
+    // 目标集合 Set,不重复
     const enteredTargets = scene[_enteredTargets];
+    // 存在
     if(enteredTargets.size) {
       const leaveEvent = new Event('mouseleave');
       leaveEvent.setOriginalEvent(event);
@@ -167,15 +172,25 @@ function delegateEvents(scene) {
   });
 }
 
+/**
+ * 设置视口
+ * @param {*} options 选项
+ * @param {*} canvas 画布
+ */
 function setViewport(options, canvas) {
+  // 画布存在， 样式存在
   if(canvas && canvas.style) {
+    // 结构选项
     let {width, height, mode, container} = options;
+    // 结构容器尺寸
     const {clientWidth, clientHeight} = container;
 
     width = width || clientWidth;
     height = height || clientHeight;
 
+    // 视口模式
     if(mode === 'static') {
+      // 设置画布样式大小
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
       // canvas.style.top = '50%';
@@ -253,10 +268,12 @@ export default class Scene extends Group {
       }
     }
 
+    // 初始化目标对象集合
     this[_enteredTargets] = new Set();
     this.setResolution(options);
+    // 初始化事件系统
     delegateEvents(this);
-
+    // 离开屏层数量
     this[_offscreenLayerCount] = 0;
   }
 
@@ -356,8 +373,15 @@ export default class Scene extends Group {
     return ret;
   }
 
+  /**
+   * 层
+   * @param {*} id 
+   * @param {*} options 
+   */
   layer(id = 'default', options = {}) {
+    // 合并参数
     options = Object.assign({}, this.options, options);
+    // 设置id
     options.id = id;
     const layers = this.orderedChildren;
     for(let i = 0; i < layers.length; i++) {
@@ -497,21 +521,32 @@ export default class Scene extends Group {
   }
 
   /* override */
+  /**
+   * 设置分辨率
+   * @param {*} param0 
+   */
   setResolution({width, height} = {}) {
+    // 容器对象dom
     const container = this.container;
+    // 容器尺寸
     const {clientWidth, clientHeight} = container;
+    // 设置分辨率
     if(width == null || height == null) {
       width = width == null ? clientWidth : width;
       height = height == null ? clientHeight : height;
     }
 
+    // canvas渲染模式 device piexl ratio
     const {mode, displayRatio} = this.options;
+    // 分辨率乘以dpr
     width *= displayRatio;
     height *= displayRatio;
 
+    // 设置位置
     this.options.left = 0;
     this.options.top = 0;
 
+    // 根据渲染模式。设置元素的宽高
     if(mode === 'stickyHeight' || mode === 'stickyLeft' || mode === 'stickyRight') {
       const w = width;
       width = clientWidth * height / clientHeight;
@@ -547,4 +582,5 @@ export default class Scene extends Group {
   }
 }
 
+// 将节点注册到内部
 ownerDocument.registerNode(Scene, 'scene');

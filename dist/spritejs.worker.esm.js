@@ -82,7 +82,7 @@ var spritejs =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 297);
+/******/ 	return __webpack_require__(__webpack_require__.s = 299);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -112,6 +112,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "vec3", function() { return _vec3_js__WEBPACK_IMPORTED_MODULE_8__; });
 /* harmony import */ var _vec4_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9);
 /* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "vec4", function() { return _vec4_js__WEBPACK_IMPORTED_MODULE_9__; });
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 
 
@@ -136,6 +138,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setMatrixArrayType", function() { return setMatrixArrayType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toRadian", function() { return toRadian; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "equals", function() { return equals; });
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 /**
  * Common utilities
  * @module glMatrix
@@ -147,7 +151,7 @@ var RANDOM = Math.random;
 /**
  * Sets the type of array used when creating new vectors and matrices
  *
- * @param {Type} type Array type, such as Float32Array or Array
+ * @param {Float32ArrayConstructor | ArrayConstructor} type Array type, such as Float32Array or Array
  */
 
 function setMatrixArrayType(type) {
@@ -220,6 +224,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mul", function() { return mul; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return sub; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 2x2 Matrix
@@ -247,7 +253,7 @@ function create() {
 /**
  * Creates a new mat2 initialized with values from an existing matrix
  *
- * @param {mat2} a matrix to clone
+ * @param {ReadonlyMat2} a matrix to clone
  * @returns {mat2} a new 2x2 matrix
  */
 
@@ -263,7 +269,7 @@ function clone(a) {
  * Copy the values from one mat2 to another
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -328,7 +334,7 @@ function set(out, m00, m01, m10, m11) {
  * Transpose the values of a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -352,7 +358,7 @@ function transpose(out, a) {
  * Inverts a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -379,7 +385,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -395,7 +401,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat2
  *
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -406,8 +412,8 @@ function determinant(a) {
  * Multiplies two mat2's
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -430,7 +436,7 @@ function multiply(out, a, b) {
  * Rotates a mat2 by the given angle
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to rotate
+ * @param {ReadonlyMat2} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat2} out
  */
@@ -452,8 +458,8 @@ function rotate(out, a, rad) {
  * Scales the mat2 by the dimensions in the given vec2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to rotate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat2} a the matrix to rotate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat2} out
  **/
 
@@ -499,7 +505,7 @@ function fromRotation(out, rad) {
  *     mat2.scale(dest, dest, vec);
  *
  * @param {mat2} out mat2 receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat2} out
  */
 
@@ -513,17 +519,17 @@ function fromScaling(out, v) {
 /**
  * Returns a string representation of a mat2
  *
- * @param {mat2} a matrix to represent as a string
+ * @param {ReadonlyMat2} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat2(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "mat2(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Returns Frobenius norm of a mat2
  *
- * @param {mat2} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat2} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -532,10 +538,10 @@ function frob(a) {
 }
 /**
  * Returns L, D and U matrices (Lower triangular, Diagonal and Upper triangular) by factorizing the input matrix
- * @param {mat2} L the lower triangular matrix
- * @param {mat2} D the diagonal matrix
- * @param {mat2} U the upper triangular matrix
- * @param {mat2} a the input matrix to factorize
+ * @param {ReadonlyMat2} L the lower triangular matrix
+ * @param {ReadonlyMat2} D the diagonal matrix
+ * @param {ReadonlyMat2} U the upper triangular matrix
+ * @param {ReadonlyMat2} a the input matrix to factorize
  */
 
 function LDU(L, D, U, a) {
@@ -549,8 +555,8 @@ function LDU(L, D, U, a) {
  * Adds two mat2's
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -565,8 +571,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -580,8 +586,8 @@ function subtract(out, a, b) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat2} a The first matrix.
- * @param {mat2} b The second matrix.
+ * @param {ReadonlyMat2} a The first matrix.
+ * @param {ReadonlyMat2} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -591,8 +597,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat2} a The first matrix.
- * @param {mat2} b The second matrix.
+ * @param {ReadonlyMat2} a The first matrix.
+ * @param {ReadonlyMat2} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -611,7 +617,7 @@ function equals(a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to scale
+ * @param {ReadonlyMat2} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat2} out
  */
@@ -627,8 +633,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat2's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat2} out the receiving vector
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat2} out
  */
@@ -685,16 +691,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mul", function() { return mul; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return sub; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 2x3 Matrix
  * @module mat2d
- *
  * @description
  * A mat2d contains six elements defined as:
  * <pre>
- * [a, b, c,
- *  d, tx, ty]
+ * [a, b,
+ *  c, d,
+ *  tx, ty]
  * </pre>
  * This is a short form for the 3x3 matrix:
  * <pre>
@@ -728,7 +736,7 @@ function create() {
 /**
  * Creates a new mat2d initialized with values from an existing matrix
  *
- * @param {mat2d} a matrix to clone
+ * @param {ReadonlyMat2d} a matrix to clone
  * @returns {mat2d} a new 2x3 matrix
  */
 
@@ -746,7 +754,7 @@ function clone(a) {
  * Copy the values from one mat2d to another
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {mat2d} out
  */
 
@@ -823,7 +831,7 @@ function set(out, a, b, c, d, tx, ty) {
  * Inverts a mat2d
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {mat2d} out
  */
 
@@ -852,7 +860,7 @@ function invert(out, a) {
 /**
  * Calculates the determinant of a mat2d
  *
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -863,8 +871,8 @@ function determinant(a) {
  * Multiplies two mat2d's
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -893,7 +901,7 @@ function multiply(out, a, b) {
  * Rotates a mat2d by the given angle
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to rotate
+ * @param {ReadonlyMat2d} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat2d} out
  */
@@ -919,8 +927,8 @@ function rotate(out, a, rad) {
  * Scales the mat2d by the dimensions in the given vec2
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to translate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat2d} a the matrix to translate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat2d} out
  **/
 
@@ -945,8 +953,8 @@ function scale(out, a, v) {
  * Translates the mat2d by the dimensions in the given vec2
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to translate
- * @param {vec2} v the vec2 to translate the matrix by
+ * @param {ReadonlyMat2d} a the matrix to translate
+ * @param {ReadonlyVec2} v the vec2 to translate the matrix by
  * @returns {mat2d} out
  **/
 
@@ -998,7 +1006,7 @@ function fromRotation(out, rad) {
  *     mat2d.scale(dest, dest, vec);
  *
  * @param {mat2d} out mat2d receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat2d} out
  */
 
@@ -1019,7 +1027,7 @@ function fromScaling(out, v) {
  *     mat2d.translate(dest, dest, vec);
  *
  * @param {mat2d} out mat2d receiving operation result
- * @param {vec2} v Translation vector
+ * @param {ReadonlyVec2} v Translation vector
  * @returns {mat2d} out
  */
 
@@ -1035,17 +1043,17 @@ function fromTranslation(out, v) {
 /**
  * Returns a string representation of a mat2d
  *
- * @param {mat2d} a matrix to represent as a string
+ * @param {ReadonlyMat2d} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat2d(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ')';
+  return "mat2d(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ")";
 }
 /**
  * Returns Frobenius norm of a mat2d
  *
- * @param {mat2d} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat2d} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -1056,8 +1064,8 @@ function frob(a) {
  * Adds two mat2d's
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -1074,8 +1082,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -1092,7 +1100,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to scale
+ * @param {ReadonlyMat2d} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat2d} out
  */
@@ -1110,8 +1118,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat2d's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat2d} out the receiving vector
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat2d} out
  */
@@ -1128,8 +1136,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat2d} a The first matrix.
- * @param {mat2d} b The second matrix.
+ * @param {ReadonlyMat2d} a The first matrix.
+ * @param {ReadonlyMat2d} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -1139,8 +1147,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat2d} a The first matrix.
- * @param {mat2d} b The second matrix.
+ * @param {ReadonlyMat2d} a The first matrix.
+ * @param {ReadonlyMat2d} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -1211,6 +1219,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mul", function() { return mul; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return sub; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 3x3 Matrix
@@ -1244,7 +1254,7 @@ function create() {
  * Copies the upper-left 3x3 values into the given mat3.
  *
  * @param {mat3} out the receiving 3x3 matrix
- * @param {mat4} a   the source 4x4 matrix
+ * @param {ReadonlyMat4} a   the source 4x4 matrix
  * @returns {mat3} out
  */
 
@@ -1263,7 +1273,7 @@ function fromMat4(out, a) {
 /**
  * Creates a new mat3 initialized with values from an existing matrix
  *
- * @param {mat3} a matrix to clone
+ * @param {ReadonlyMat3} a matrix to clone
  * @returns {mat3} a new 3x3 matrix
  */
 
@@ -1284,7 +1294,7 @@ function clone(a) {
  * Copy the values from one mat3 to another
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1379,7 +1389,7 @@ function identity(out) {
  * Transpose the values of a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1413,7 +1423,7 @@ function transpose(out, a) {
  * Inverts a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1453,7 +1463,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1481,7 +1491,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat3
  *
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -1501,8 +1511,8 @@ function determinant(a) {
  * Multiplies two mat3's
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -1540,8 +1550,8 @@ function multiply(out, a, b) {
  * Translate a mat3 by the given vector
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to translate
- * @param {vec2} v vector to translate by
+ * @param {ReadonlyMat3} a the matrix to translate
+ * @param {ReadonlyVec2} v vector to translate by
  * @returns {mat3} out
  */
 
@@ -1572,7 +1582,7 @@ function translate(out, a, v) {
  * Rotates a mat3 by the given angle
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to rotate
+ * @param {ReadonlyMat3} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat3} out
  */
@@ -1600,13 +1610,12 @@ function rotate(out, a, rad) {
   out[8] = a22;
   return out;
 }
-;
 /**
  * Scales the mat3 by the dimensions in the given vec2
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to rotate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat3} a the matrix to rotate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat3} out
  **/
 
@@ -1632,7 +1641,7 @@ function scale(out, a, v) {
  *     mat3.translate(dest, dest, vec);
  *
  * @param {mat3} out mat3 receiving operation result
- * @param {vec2} v Translation vector
+ * @param {ReadonlyVec2} v Translation vector
  * @returns {mat3} out
  */
 
@@ -1682,7 +1691,7 @@ function fromRotation(out, rad) {
  *     mat3.scale(dest, dest, vec);
  *
  * @param {mat3} out mat3 receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat3} out
  */
 
@@ -1702,7 +1711,7 @@ function fromScaling(out, v) {
  * Copies the values from a mat2d into a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat2d} a the matrix to copy
+ * @param {ReadonlyMat2d} a the matrix to copy
  * @returns {mat3} out
  **/
 
@@ -1719,13 +1728,13 @@ function fromMat2d(out, a) {
   return out;
 }
 /**
-* Calculates a 3x3 matrix from the given quaternion
-*
-* @param {mat3} out mat3 receiving operation result
-* @param {quat} q Quaternion to create matrix from
-*
-* @returns {mat3} out
-*/
+ * Calculates a 3x3 matrix from the given quaternion
+ *
+ * @param {mat3} out mat3 receiving operation result
+ * @param {ReadonlyQuat} q Quaternion to create matrix from
+ *
+ * @returns {mat3} out
+ */
 
 function fromQuat(out, q) {
   var x = q[0],
@@ -1756,13 +1765,13 @@ function fromQuat(out, q) {
   return out;
 }
 /**
-* Calculates a 3x3 normal matrix (transpose inverse) from the 4x4 matrix
-*
-* @param {mat3} out mat3 receiving operation result
-* @param {mat4} a Mat4 to derive the normal matrix from
-*
-* @returns {mat3} out
-*/
+ * Calculates a 3x3 normal matrix (transpose inverse) from the 4x4 matrix
+ *
+ * @param {mat3} out mat3 receiving operation result
+ * @param {ReadonlyMat4} a Mat4 to derive the normal matrix from
+ *
+ * @returns {mat3} out
+ */
 
 function normalFromMat4(out, a) {
   var a00 = a[0],
@@ -1836,17 +1845,17 @@ function projection(out, width, height) {
 /**
  * Returns a string representation of a mat3
  *
- * @param {mat3} a matrix to represent as a string
+ * @param {ReadonlyMat3} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat3(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ', ' + a[8] + ')';
+  return "mat3(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ", " + a[8] + ")";
 }
 /**
  * Returns Frobenius norm of a mat3
  *
- * @param {mat3} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat3} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -1857,8 +1866,8 @@ function frob(a) {
  * Adds two mat3's
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -1878,8 +1887,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -1899,7 +1908,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to scale
+ * @param {ReadonlyMat3} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat3} out
  */
@@ -1920,8 +1929,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat3's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat3} out the receiving vector
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat3} out
  */
@@ -1941,8 +1950,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat3} a The first matrix.
- * @param {mat3} b The second matrix.
+ * @param {ReadonlyMat3} a The first matrix.
+ * @param {ReadonlyMat3} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -1952,8 +1961,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat3} a The first matrix.
- * @param {mat3} b The second matrix.
+ * @param {ReadonlyMat3} a The first matrix.
+ * @param {ReadonlyMat3} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -2045,6 +2054,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mul", function() { return mul; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return sub; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 4x4 Matrix<br>Format: column-major, when typed out it looks like row-major<br>The matrices are being post multiplied.
@@ -2084,7 +2095,7 @@ function create() {
 /**
  * Creates a new mat4 initialized with values from an existing matrix
  *
- * @param {mat4} a matrix to clone
+ * @param {ReadonlyMat4} a matrix to clone
  * @returns {mat4} a new 4x4 matrix
  */
 
@@ -2112,7 +2123,7 @@ function clone(a) {
  * Copy the values from one mat4 to another
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2249,7 +2260,7 @@ function identity(out) {
  * Transpose the values of a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2299,7 +2310,7 @@ function transpose(out, a) {
  * Inverts a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2362,7 +2373,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2404,7 +2415,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat4
  *
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -2444,8 +2455,8 @@ function determinant(a) {
  * Multiplies two mat4s
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -2505,8 +2516,8 @@ function multiply(out, a, b) {
  * Translate a mat4 by the given vector
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to translate
- * @param {vec3} v vector to translate by
+ * @param {ReadonlyMat4} a the matrix to translate
+ * @param {ReadonlyVec3} v vector to translate by
  * @returns {mat4} out
  */
 
@@ -2560,8 +2571,8 @@ function translate(out, a, v) {
  * Scales the mat4 by the dimensions in the given vec3 not using vectorization
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to scale
- * @param {vec3} v the vec3 to scale the matrix by
+ * @param {ReadonlyMat4} a the matrix to scale
+ * @param {ReadonlyVec3} v the vec3 to scale the matrix by
  * @returns {mat4} out
  **/
 
@@ -2591,9 +2602,9 @@ function scale(out, a, v) {
  * Rotates a mat4 by the given angle around the given axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @returns {mat4} out
  */
 
@@ -2671,7 +2682,7 @@ function rotate(out, a, rad, axis) {
  * Rotates a matrix by the given angle around the X axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2715,7 +2726,7 @@ function rotateX(out, a, rad) {
  * Rotates a matrix by the given angle around the Y axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2759,7 +2770,7 @@ function rotateY(out, a, rad) {
  * Rotates a matrix by the given angle around the Z axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2807,7 +2818,7 @@ function rotateZ(out, a, rad) {
  *     mat4.translate(dest, dest, vec);
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {vec3} v Translation vector
+ * @param {ReadonlyVec3} v Translation vector
  * @returns {mat4} out
  */
 
@@ -2838,7 +2849,7 @@ function fromTranslation(out, v) {
  *     mat4.scale(dest, dest, vec);
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {vec3} v Scaling vector
+ * @param {ReadonlyVec3} v Scaling vector
  * @returns {mat4} out
  */
 
@@ -2870,7 +2881,7 @@ function fromScaling(out, v) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {Number} rad the angle to rotate the matrix by
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @returns {mat4} out
  */
 
@@ -3025,7 +3036,7 @@ function fromZRotation(out, rad) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
+ * @param {ReadonlyVec3} v Translation vector
  * @returns {mat4} out
  */
 
@@ -3069,7 +3080,7 @@ function fromRotationTranslation(out, q, v) {
  * Creates a new mat4 from a dual quat.
  *
  * @param {mat4} out Matrix
- * @param {quat2} a Dual Quaternion
+ * @param {ReadonlyQuat2} a Dual Quaternion
  * @returns {mat4} mat4 receiving operation result
  */
 
@@ -3104,7 +3115,7 @@ function fromQuat2(out, a) {
  *  the returned vector will be the same as the translation vector
  *  originally supplied.
  * @param  {vec3} out Vector to receive translation component
- * @param  {mat4} mat Matrix to be decomposed (input)
+ * @param  {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {vec3} out
  */
 
@@ -3121,7 +3132,7 @@ function getTranslation(out, mat) {
  *  the same as the scaling vector
  *  originally supplied.
  * @param  {vec3} out Vector to receive scaling factor component
- * @param  {mat4} mat Matrix to be decomposed (input)
+ * @param  {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {vec3} out
  */
 
@@ -3146,7 +3157,7 @@ function getScaling(out, mat) {
  *  fromRotationTranslation, the returned quaternion will be the
  *  same as the quaternion originally supplied.
  * @param {quat} out Quaternion to receive the rotation component
- * @param {mat4} mat Matrix to be decomposed (input)
+ * @param {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {quat} out
  */
 
@@ -3209,8 +3220,8 @@ function getRotation(out, mat) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
- * @param {vec3} s Scaling vector
+ * @param {ReadonlyVec3} v Translation vector
+ * @param {ReadonlyVec3} s Scaling vector
  * @returns {mat4} out
  */
 
@@ -3268,9 +3279,9 @@ function fromRotationTranslationScale(out, q, v, s) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
- * @param {vec3} s Scaling vector
- * @param {vec3} o The origin vector around which to scale and rotate
+ * @param {ReadonlyVec3} v Translation vector
+ * @param {ReadonlyVec3} s Scaling vector
+ * @param {ReadonlyVec3} o The origin vector around which to scale and rotate
  * @returns {mat4} out
  */
 
@@ -3329,7 +3340,7 @@ function fromRotationTranslationScaleOrigin(out, q, v, s, o) {
  * Calculates a 4x4 matrix from the given quaternion
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {quat} q Quaternion to create matrix from
+ * @param {ReadonlyQuat} q Quaternion to create matrix from
  *
  * @returns {mat4} out
  */
@@ -3522,9 +3533,9 @@ function ortho(out, left, right, bottom, top, near, far) {
  * If you want a matrix that actually makes an object look at another object, you should use targetTo instead.
  *
  * @param {mat4} out mat4 frustum matrix will be written into
- * @param {vec3} eye Position of the viewer
- * @param {vec3} center Point the viewer is looking at
- * @param {vec3} up vec3 pointing up
+ * @param {ReadonlyVec3} eye Position of the viewer
+ * @param {ReadonlyVec3} center Point the viewer is looking at
+ * @param {ReadonlyVec3} up vec3 pointing up
  * @returns {mat4} out
  */
 
@@ -3605,9 +3616,9 @@ function lookAt(out, eye, center, up) {
  * Generates a matrix that makes something look at something else.
  *
  * @param {mat4} out mat4 frustum matrix will be written into
- * @param {vec3} eye Position of the viewer
- * @param {vec3} center Point the viewer is looking at
- * @param {vec3} up vec3 pointing up
+ * @param {ReadonlyVec3} eye Position of the viewer
+ * @param {ReadonlyVec3} center Point the viewer is looking at
+ * @param {ReadonlyVec3} up vec3 pointing up
  * @returns {mat4} out
  */
 
@@ -3660,33 +3671,32 @@ function targetTo(out, eye, target, up) {
   out[15] = 1;
   return out;
 }
-;
 /**
  * Returns a string representation of a mat4
  *
- * @param {mat4} a matrix to represent as a string
+ * @param {ReadonlyMat4} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat4(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ', ' + a[8] + ', ' + a[9] + ', ' + a[10] + ', ' + a[11] + ', ' + a[12] + ', ' + a[13] + ', ' + a[14] + ', ' + a[15] + ')';
+  return "mat4(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ", " + a[8] + ", " + a[9] + ", " + a[10] + ", " + a[11] + ", " + a[12] + ", " + a[13] + ", " + a[14] + ", " + a[15] + ")";
 }
 /**
  * Returns Frobenius norm of a mat4
  *
- * @param {mat4} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat4} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
 function frob(a) {
-  return Math.hypot(a[0], a[1], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15]);
+  return Math.hypot(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15]);
 }
 /**
  * Adds two mat4's
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -3713,8 +3723,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -3741,7 +3751,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to scale
+ * @param {ReadonlyMat4} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat4} out
  */
@@ -3769,8 +3779,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat4's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat4} out the receiving vector
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat4} out
  */
@@ -3797,8 +3807,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat4} a The first matrix.
- * @param {mat4} b The second matrix.
+ * @param {ReadonlyMat4} a The first matrix.
+ * @param {ReadonlyMat4} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -3808,8 +3818,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat4} a The first matrix.
- * @param {mat4} b The second matrix.
+ * @param {ReadonlyMat4} a The first matrix.
+ * @param {ReadonlyMat4} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -3910,6 +3920,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mat3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var _vec3_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
 /* harmony import */ var _vec4_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 
 
@@ -3956,7 +3968,7 @@ function identity(out) {
  * then returns it.
  *
  * @param {quat} out the receiving quaternion
- * @param {vec3} axis the axis around which to rotate
+ * @param {ReadonlyVec3} axis the axis around which to rotate
  * @param {Number} rad the angle in radians
  * @returns {quat} out
  **/
@@ -3980,7 +3992,7 @@ function setAxisAngle(out, axis, rad) {
  *  angle -90 is the same as the quaternion formed by
  *  [0, 0, 1] and 270. This method favors the latter.
  * @param  {vec3} out_axis  Vector receiving the axis of rotation
- * @param  {quat} q     Quaternion to be decomposed
+ * @param  {ReadonlyQuat} q     Quaternion to be decomposed
  * @return {Number}     Angle, in radians, of the rotation
  */
 
@@ -4004,8 +4016,8 @@ function getAxisAngle(out_axis, q) {
 /**
  * Gets the angular distance between two unit quaternions
  *
- * @param  {quat} a     Origin unit quaternion 
- * @param  {quat} b     Destination unit quaternion
+ * @param  {ReadonlyQuat} a     Origin unit quaternion
+ * @param  {ReadonlyQuat} b     Destination unit quaternion
  * @return {Number}     Angle, in radians, between the two quaternions
  */
 
@@ -4017,8 +4029,8 @@ function getAngle(a, b) {
  * Multiplies two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {quat} out
  */
 
@@ -4041,7 +4053,7 @@ function multiply(out, a, b) {
  * Rotates a quaternion by the given angle about the X axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4064,7 +4076,7 @@ function rotateX(out, a, rad) {
  * Rotates a quaternion by the given angle about the Y axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4087,7 +4099,7 @@ function rotateY(out, a, rad) {
  * Rotates a quaternion by the given angle about the Z axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4112,7 +4124,7 @@ function rotateZ(out, a, rad) {
  * Any existing W component will be ignored.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate W component of
+ * @param {ReadonlyQuat} a quat to calculate W component of
  * @returns {quat} out
  */
 
@@ -4130,7 +4142,7 @@ function calculateW(out, a) {
  * Calculate the exponential of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @returns {quat} out
  */
 
@@ -4152,7 +4164,7 @@ function exp(out, a) {
  * Calculate the natural logarithm of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @returns {quat} out
  */
 
@@ -4173,7 +4185,7 @@ function ln(out, a) {
  * Calculate the scalar power of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @param {Number} b amount to scale the quaternion by
  * @returns {quat} out
  */
@@ -4188,8 +4200,8 @@ function pow(out, a, b) {
  * Performs a spherical linear interpolation between two quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  */
@@ -4240,7 +4252,7 @@ function slerp(out, a, b, t) {
 }
 /**
  * Generates a random unit quaternion
- * 
+ *
  * @param {quat} out the receiving quaternion
  * @returns {quat} out
  */
@@ -4263,7 +4275,7 @@ function random(out) {
  * Calculates the inverse of a quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate inverse of
+ * @param {ReadonlyQuat} a quat to calculate inverse of
  * @returns {quat} out
  */
 
@@ -4286,7 +4298,7 @@ function invert(out, a) {
  * If the quaternion is normalized, this function is faster than quat.inverse and produces the same result.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate conjugate of
+ * @param {ReadonlyQuat} a quat to calculate conjugate of
  * @returns {quat} out
  */
 
@@ -4304,7 +4316,7 @@ function conjugate(out, a) {
  * to renormalize the quaternion yourself where necessary.
  *
  * @param {quat} out the receiving quaternion
- * @param {mat3} m rotation matrix
+ * @param {ReadonlyMat3} m rotation matrix
  * @returns {quat} out
  * @function
  */
@@ -4373,17 +4385,17 @@ function fromEuler(out, x, y, z) {
 /**
  * Returns a string representation of a quatenion
  *
- * @param {quat} a vector to represent as a string
+ * @param {ReadonlyQuat} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'quat(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "quat(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Creates a new quat initialized with values from an existing quaternion
  *
- * @param {quat} a quaternion to clone
+ * @param {ReadonlyQuat} a quaternion to clone
  * @returns {quat} a new quaternion
  * @function
  */
@@ -4405,7 +4417,7 @@ var fromValues = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["fromValues"];
  * Copy the values from one quat to another
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the source quaternion
+ * @param {ReadonlyQuat} a the source quaternion
  * @returns {quat} out
  * @function
  */
@@ -4428,8 +4440,8 @@ var set = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["set"];
  * Adds two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {quat} out
  * @function
  */
@@ -4445,7 +4457,7 @@ var mul = multiply;
  * Scales a quat by a scalar number
  *
  * @param {quat} out the receiving vector
- * @param {quat} a the vector to scale
+ * @param {ReadonlyQuat} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {quat} out
  * @function
@@ -4455,8 +4467,8 @@ var scale = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["scale"];
 /**
  * Calculates the dot product of two quat's
  *
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {Number} dot product of a and b
  * @function
  */
@@ -4466,8 +4478,8 @@ var dot = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["dot"];
  * Performs a linear interpolation between two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  * @function
@@ -4477,7 +4489,7 @@ var lerp = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["lerp"];
 /**
  * Calculates the length of a quat
  *
- * @param {quat} a vector to calculate length of
+ * @param {ReadonlyQuat} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -4491,7 +4503,7 @@ var len = length;
 /**
  * Calculates the squared length of a quat
  *
- * @param {quat} a vector to calculate squared length of
+ * @param {ReadonlyQuat} a vector to calculate squared length of
  * @returns {Number} squared length of a
  * @function
  */
@@ -4507,7 +4519,7 @@ var sqrLen = squaredLength;
  * Normalize a quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quaternion to normalize
+ * @param {ReadonlyQuat} a quaternion to normalize
  * @returns {quat} out
  * @function
  */
@@ -4516,8 +4528,8 @@ var normalize = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["normalize"];
 /**
  * Returns whether or not the quaternions have exactly the same elements in the same position (when compared with ===)
  *
- * @param {quat} a The first quaternion.
- * @param {quat} b The second quaternion.
+ * @param {ReadonlyQuat} a The first quaternion.
+ * @param {ReadonlyQuat} b The second quaternion.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -4525,8 +4537,8 @@ var exactEquals = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["exactEquals"];
 /**
  * Returns whether or not the quaternions have approximately the same elements in the same position.
  *
- * @param {quat} a The first vector.
- * @param {quat} b The second vector.
+ * @param {ReadonlyQuat} a The first vector.
+ * @param {ReadonlyQuat} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -4538,8 +4550,8 @@ var equals = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["equals"];
  * Both vectors are assumed to be unit length.
  *
  * @param {quat} out the receiving quaternion.
- * @param {vec3} a the initial vector
- * @param {vec3} b the destination vector
+ * @param {ReadonlyVec3} a the initial vector
+ * @param {ReadonlyVec3} b the destination vector
  * @returns {quat} out
  */
 
@@ -4576,10 +4588,10 @@ var rotationTo = function () {
  * Performs a spherical linear interpolation with two control points
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
- * @param {quat} c the third operand
- * @param {quat} d the fourth operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
+ * @param {ReadonlyQuat} c the third operand
+ * @param {ReadonlyQuat} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  */
@@ -4599,9 +4611,9 @@ var sqlerp = function () {
  * axes. Each axis is a vec3 and is expected to be unit length and
  * perpendicular to all other specified axes.
  *
- * @param {vec3} view  the vector representing the viewing direction
- * @param {vec3} right the vector representing the local "right" direction
- * @param {vec3} up    the vector representing the local "up" direction
+ * @param {ReadonlyVec3} view  the vector representing the viewing direction
+ * @param {ReadonlyVec3} right the vector representing the local "right" direction
+ * @param {ReadonlyVec3} up    the vector representing the local "up" direction
  * @returns {quat} out
  */
 
@@ -4676,6 +4688,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sqrLen", function() { return sqrLen; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forEach", function() { return forEach; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 3 Dimensional Vector
@@ -4702,7 +4716,7 @@ function create() {
 /**
  * Creates a new vec3 initialized with values from an existing vector
  *
- * @param {vec3} a vector to clone
+ * @param {ReadonlyVec3} a vector to clone
  * @returns {vec3} a new 3D vector
  */
 
@@ -4716,7 +4730,7 @@ function clone(a) {
 /**
  * Calculates the length of a vec3
  *
- * @param {vec3} a vector to calculate length of
+ * @param {ReadonlyVec3} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -4746,7 +4760,7 @@ function fromValues(x, y, z) {
  * Copy the values from one vec3 to another
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the source vector
+ * @param {ReadonlyVec3} a the source vector
  * @returns {vec3} out
  */
 
@@ -4776,8 +4790,8 @@ function set(out, x, y, z) {
  * Adds two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4791,8 +4805,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4806,8 +4820,8 @@ function subtract(out, a, b) {
  * Multiplies two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4821,8 +4835,8 @@ function multiply(out, a, b) {
  * Divides two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4836,7 +4850,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to ceil
+ * @param {ReadonlyVec3} a vector to ceil
  * @returns {vec3} out
  */
 
@@ -4850,7 +4864,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to floor
+ * @param {ReadonlyVec3} a vector to floor
  * @returns {vec3} out
  */
 
@@ -4864,8 +4878,8 @@ function floor(out, a) {
  * Returns the minimum of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4879,8 +4893,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4894,7 +4908,7 @@ function max(out, a, b) {
  * Math.round the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to round
+ * @param {ReadonlyVec3} a vector to round
  * @returns {vec3} out
  */
 
@@ -4908,7 +4922,7 @@ function round(out, a) {
  * Scales a vec3 by a scalar number
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to scale
+ * @param {ReadonlyVec3} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec3} out
  */
@@ -4923,8 +4937,8 @@ function scale(out, a, b) {
  * Adds two vec3's after scaling the second operand by a scalar value
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec3} out
  */
@@ -4938,8 +4952,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -4952,8 +4966,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -4966,7 +4980,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the squared length of a vec3
  *
- * @param {vec3} a vector to calculate squared length of
+ * @param {ReadonlyVec3} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -4980,7 +4994,7 @@ function squaredLength(a) {
  * Negates the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to negate
+ * @param {ReadonlyVec3} a vector to negate
  * @returns {vec3} out
  */
 
@@ -4994,7 +5008,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to invert
+ * @param {ReadonlyVec3} a vector to invert
  * @returns {vec3} out
  */
 
@@ -5008,7 +5022,7 @@ function inverse(out, a) {
  * Normalize a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to normalize
+ * @param {ReadonlyVec3} a vector to normalize
  * @returns {vec3} out
  */
 
@@ -5031,8 +5045,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -5043,8 +5057,8 @@ function dot(a, b) {
  * Computes the cross product of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -5064,8 +5078,8 @@ function cross(out, a, b) {
  * Performs a linear interpolation between two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5083,10 +5097,10 @@ function lerp(out, a, b, t) {
  * Performs a hermite interpolation with two control points
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
- * @param {vec3} c the third operand
- * @param {vec3} d the fourth operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
+ * @param {ReadonlyVec3} c the third operand
+ * @param {ReadonlyVec3} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5106,10 +5120,10 @@ function hermite(out, a, b, c, d, t) {
  * Performs a bezier interpolation with two control points
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
- * @param {vec3} c the third operand
- * @param {vec3} d the fourth operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
+ * @param {ReadonlyVec3} c the third operand
+ * @param {ReadonlyVec3} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5150,8 +5164,8 @@ function random(out, scale) {
  * 4th vector component is implicitly '1'
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec3} out
  */
 
@@ -5170,8 +5184,8 @@ function transformMat4(out, a, m) {
  * Transforms the vec3 with a mat3.
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {mat3} m the 3x3 matrix to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyMat3} m the 3x3 matrix to transform with
  * @returns {vec3} out
  */
 
@@ -5189,8 +5203,8 @@ function transformMat3(out, a, m) {
  * Can also be used for dual quaternions. (Multiply it with the real part)
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {quat} q quaternion to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyQuat} q quaternion to transform with
  * @returns {vec3} out
  */
 
@@ -5230,13 +5244,13 @@ function transformQuat(out, a, q) {
 /**
  * Rotate a 3D vector around the x-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateX(out, a, b, c) {
+function rotateX(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5245,8 +5259,8 @@ function rotateX(out, a, b, c) {
   p[2] = a[2] - b[2]; //perform rotation
 
   r[0] = p[0];
-  r[1] = p[1] * Math.cos(c) - p[2] * Math.sin(c);
-  r[2] = p[1] * Math.sin(c) + p[2] * Math.cos(c); //translate to correct position
+  r[1] = p[1] * Math.cos(rad) - p[2] * Math.sin(rad);
+  r[2] = p[1] * Math.sin(rad) + p[2] * Math.cos(rad); //translate to correct position
 
   out[0] = r[0] + b[0];
   out[1] = r[1] + b[1];
@@ -5256,13 +5270,13 @@ function rotateX(out, a, b, c) {
 /**
  * Rotate a 3D vector around the y-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateY(out, a, b, c) {
+function rotateY(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5270,9 +5284,9 @@ function rotateY(out, a, b, c) {
   p[1] = a[1] - b[1];
   p[2] = a[2] - b[2]; //perform rotation
 
-  r[0] = p[2] * Math.sin(c) + p[0] * Math.cos(c);
+  r[0] = p[2] * Math.sin(rad) + p[0] * Math.cos(rad);
   r[1] = p[1];
-  r[2] = p[2] * Math.cos(c) - p[0] * Math.sin(c); //translate to correct position
+  r[2] = p[2] * Math.cos(rad) - p[0] * Math.sin(rad); //translate to correct position
 
   out[0] = r[0] + b[0];
   out[1] = r[1] + b[1];
@@ -5282,13 +5296,13 @@ function rotateY(out, a, b, c) {
 /**
  * Rotate a 3D vector around the z-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateZ(out, a, b, c) {
+function rotateZ(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5296,8 +5310,8 @@ function rotateZ(out, a, b, c) {
   p[1] = a[1] - b[1];
   p[2] = a[2] - b[2]; //perform rotation
 
-  r[0] = p[0] * Math.cos(c) - p[1] * Math.sin(c);
-  r[1] = p[0] * Math.sin(c) + p[1] * Math.cos(c);
+  r[0] = p[0] * Math.cos(rad) - p[1] * Math.sin(rad);
+  r[1] = p[0] * Math.sin(rad) + p[1] * Math.cos(rad);
   r[2] = p[2]; //translate to correct position
 
   out[0] = r[0] + b[0];
@@ -5307,25 +5321,23 @@ function rotateZ(out, a, b, c) {
 }
 /**
  * Get the angle between two 3D vectors
- * @param {vec3} a The first operand
- * @param {vec3} b The second operand
+ * @param {ReadonlyVec3} a The first operand
+ * @param {ReadonlyVec3} b The second operand
  * @returns {Number} The angle in radians
  */
 
 function angle(a, b) {
-  var tempA = fromValues(a[0], a[1], a[2]);
-  var tempB = fromValues(b[0], b[1], b[2]);
-  normalize(tempA, tempA);
-  normalize(tempB, tempB);
-  var cosine = dot(tempA, tempB);
-
-  if (cosine > 1.0) {
-    return 0;
-  } else if (cosine < -1.0) {
-    return Math.PI;
-  } else {
-    return Math.acos(cosine);
-  }
+  var ax = a[0],
+      ay = a[1],
+      az = a[2],
+      bx = b[0],
+      by = b[1],
+      bz = b[2],
+      mag1 = Math.sqrt(ax * ax + ay * ay + az * az),
+      mag2 = Math.sqrt(bx * bx + by * by + bz * bz),
+      mag = mag1 * mag2,
+      cosine = mag && dot(a, b) / mag;
+  return Math.acos(Math.min(Math.max(cosine, -1), 1));
 }
 /**
  * Set the components of a vec3 to zero
@@ -5343,18 +5355,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec3} a vector to represent as a string
+ * @param {ReadonlyVec3} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec3(' + a[0] + ', ' + a[1] + ', ' + a[2] + ')';
+  return "vec3(" + a[0] + ", " + a[1] + ", " + a[2] + ")";
 }
 /**
  * Returns whether or not the vectors have exactly the same elements in the same position (when compared with ===)
  *
- * @param {vec3} a The first vector.
- * @param {vec3} b The second vector.
+ * @param {ReadonlyVec3} a The first vector.
+ * @param {ReadonlyVec3} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -5364,8 +5376,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec3} a The first vector.
- * @param {vec3} b The second vector.
+ * @param {ReadonlyVec3} a The first vector.
+ * @param {ReadonlyVec3} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -5514,6 +5526,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sqrLen", function() { return sqrLen; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forEach", function() { return forEach; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 4 Dimensional Vector
@@ -5541,7 +5555,7 @@ function create() {
 /**
  * Creates a new vec4 initialized with values from an existing vector
  *
- * @param {vec4} a vector to clone
+ * @param {ReadonlyVec4} a vector to clone
  * @returns {vec4} a new 4D vector
  */
 
@@ -5575,7 +5589,7 @@ function fromValues(x, y, z, w) {
  * Copy the values from one vec4 to another
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the source vector
+ * @param {ReadonlyVec4} a the source vector
  * @returns {vec4} out
  */
 
@@ -5608,8 +5622,8 @@ function set(out, x, y, z, w) {
  * Adds two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5624,8 +5638,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5640,8 +5654,8 @@ function subtract(out, a, b) {
  * Multiplies two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5656,8 +5670,8 @@ function multiply(out, a, b) {
  * Divides two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5672,7 +5686,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to ceil
+ * @param {ReadonlyVec4} a vector to ceil
  * @returns {vec4} out
  */
 
@@ -5687,7 +5701,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to floor
+ * @param {ReadonlyVec4} a vector to floor
  * @returns {vec4} out
  */
 
@@ -5702,8 +5716,8 @@ function floor(out, a) {
  * Returns the minimum of two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5718,8 +5732,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5734,7 +5748,7 @@ function max(out, a, b) {
  * Math.round the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to round
+ * @param {ReadonlyVec4} a vector to round
  * @returns {vec4} out
  */
 
@@ -5749,7 +5763,7 @@ function round(out, a) {
  * Scales a vec4 by a scalar number
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to scale
+ * @param {ReadonlyVec4} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec4} out
  */
@@ -5765,8 +5779,8 @@ function scale(out, a, b) {
  * Adds two vec4's after scaling the second operand by a scalar value
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec4} out
  */
@@ -5781,8 +5795,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -5796,8 +5810,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -5811,7 +5825,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the length of a vec4
  *
- * @param {vec4} a vector to calculate length of
+ * @param {ReadonlyVec4} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -5825,7 +5839,7 @@ function length(a) {
 /**
  * Calculates the squared length of a vec4
  *
- * @param {vec4} a vector to calculate squared length of
+ * @param {ReadonlyVec4} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -5840,7 +5854,7 @@ function squaredLength(a) {
  * Negates the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to negate
+ * @param {ReadonlyVec4} a vector to negate
  * @returns {vec4} out
  */
 
@@ -5855,7 +5869,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to invert
+ * @param {ReadonlyVec4} a vector to invert
  * @returns {vec4} out
  */
 
@@ -5870,7 +5884,7 @@ function inverse(out, a) {
  * Normalize a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to normalize
+ * @param {ReadonlyVec4} a vector to normalize
  * @returns {vec4} out
  */
 
@@ -5894,8 +5908,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -5905,10 +5919,10 @@ function dot(a, b) {
 /**
  * Returns the cross-product of three vectors in a 4-dimensional space
  *
- * @param {vec4} result the receiving vector
- * @param {vec4} U the first vector
- * @param {vec4} V the second vector
- * @param {vec4} W the third vector
+ * @param {ReadonlyVec4} result the receiving vector
+ * @param {ReadonlyVec4} U the first vector
+ * @param {ReadonlyVec4} V the second vector
+ * @param {ReadonlyVec4} W the third vector
  * @returns {vec4} result
  */
 
@@ -5929,13 +5943,12 @@ function cross(out, u, v, w) {
   out[3] = -(G * D) + H * B - I * A;
   return out;
 }
-;
 /**
  * Performs a linear interpolation between two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec4} out
  */
@@ -5990,8 +6003,8 @@ function random(out, scale) {
  * Transforms the vec4 with a mat4.
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec4} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec4} out
  */
 
@@ -6010,8 +6023,8 @@ function transformMat4(out, a, m) {
  * Transforms the vec4 with a quat
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to transform
- * @param {quat} q quaternion to transform with
+ * @param {ReadonlyVec4} a the vector to transform
+ * @param {ReadonlyQuat} q quaternion to transform with
  * @returns {vec4} out
  */
 
@@ -6052,18 +6065,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec4} a vector to represent as a string
+ * @param {ReadonlyVec4} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec4(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "vec4(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Returns whether or not the vectors have exactly the same elements in the same position (when compared with ===)
  *
- * @param {vec4} a The first vector.
- * @param {vec4} b The second vector.
+ * @param {ReadonlyVec4} a The first vector.
+ * @param {ReadonlyVec4} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -6073,8 +6086,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec4} a The first vector.
- * @param {vec4} b The second vector.
+ * @param {ReadonlyVec4} a The first vector.
+ * @param {ReadonlyVec4} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -6227,6 +6240,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var _quat_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
 /* harmony import */ var _mat4_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 
 
@@ -6263,7 +6278,7 @@ function create() {
 /**
  * Creates a new quat initialized with values from an existing quaternion
  *
- * @param {quat2} a dual quaternion to clone
+ * @param {ReadonlyQuat2} a dual quaternion to clone
  * @returns {quat2} new dual quaternion
  * @function
  */
@@ -6339,9 +6354,9 @@ function fromRotationTranslationValues(x1, y1, z1, w1, x2, y2, z2) {
 /**
  * Creates a dual quat from a quaternion and a translation
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {quat} q a normalized quaternion
- * @param {vec3} t tranlation vector
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyQuat} q a normalized quaternion
+ * @param {ReadonlyVec3} t tranlation vector
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6367,8 +6382,8 @@ function fromRotationTranslation(out, q, t) {
 /**
  * Creates a dual quat from a translation
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {vec3} t translation vector
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyVec3} t translation vector
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6387,8 +6402,8 @@ function fromTranslation(out, t) {
 /**
  * Creates a dual quat from a quaternion
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {quat} q the quaternion
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyQuat} q the quaternion
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6408,7 +6423,7 @@ function fromRotation(out, q) {
  * Creates a new dual quat from a matrix (4x4)
  *
  * @param {quat2} out the dual quaternion
- * @param {mat4} a the matrix
+ * @param {ReadonlyMat4} a the matrix
  * @returns {quat2} dual quat receiving operation result
  * @function
  */
@@ -6426,7 +6441,7 @@ function fromMat4(out, a) {
  * Copy the values from one dual quat to another
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the source dual quaternion
+ * @param {ReadonlyQuat2} a the source dual quaternion
  * @returns {quat2} out
  * @function
  */
@@ -6490,7 +6505,7 @@ function set(out, x1, y1, z1, w1, x2, y2, z2, w2) {
 /**
  * Gets the real part of a dual quat
  * @param  {quat} out real part
- * @param  {quat2} a Dual Quaternion
+ * @param  {ReadonlyQuat2} a Dual Quaternion
  * @return {quat} real part
  */
 
@@ -6498,7 +6513,7 @@ var getReal = _quat_js__WEBPACK_IMPORTED_MODULE_1__["copy"];
 /**
  * Gets the dual part of a dual quat
  * @param  {quat} out dual part
- * @param  {quat2} a Dual Quaternion
+ * @param  {ReadonlyQuat2} a Dual Quaternion
  * @return {quat} dual part
  */
 
@@ -6513,7 +6528,7 @@ function getDual(out, a) {
  * Set the real component of a dual quat to the given quaternion
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat} q a quaternion representing the real part
+ * @param {ReadonlyQuat} q a quaternion representing the real part
  * @returns {quat2} out
  * @function
  */
@@ -6523,7 +6538,7 @@ var setReal = _quat_js__WEBPACK_IMPORTED_MODULE_1__["copy"];
  * Set the dual component of a dual quat to the given quaternion
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat} q a quaternion representing the dual part
+ * @param {ReadonlyQuat} q a quaternion representing the dual part
  * @returns {quat2} out
  * @function
  */
@@ -6538,7 +6553,7 @@ function setDual(out, q) {
 /**
  * Gets the translation of a normalized dual quat
  * @param  {vec3} out translation
- * @param  {quat2} a Dual Quaternion to be decomposed
+ * @param  {ReadonlyQuat2} a Dual Quaternion to be decomposed
  * @return {vec3} translation
  */
 
@@ -6560,8 +6575,8 @@ function getTranslation(out, a) {
  * Translates a dual quat by the given vector
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to translate
- * @param {vec3} v vector to translate by
+ * @param {ReadonlyQuat2} a the dual quaternion to translate
+ * @param {ReadonlyVec3} v vector to translate by
  * @returns {quat2} out
  */
 
@@ -6591,7 +6606,7 @@ function translate(out, a, v) {
  * Rotates a dual quat around the X axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6624,7 +6639,7 @@ function rotateX(out, a, rad) {
  * Rotates a dual quat around the Y axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6657,7 +6672,7 @@ function rotateY(out, a, rad) {
  * Rotates a dual quat around the Z axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6690,8 +6705,8 @@ function rotateZ(out, a, rad) {
  * Rotates a dual quat by a given quaternion (a * q)
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
- * @param {quat} q quaternion to rotate by
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat} q quaternion to rotate by
  * @returns {quat2} out
  */
 
@@ -6722,8 +6737,8 @@ function rotateByQuatAppend(out, a, q) {
  * Rotates a dual quat by a given quaternion (q * a)
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat} q quaternion to rotate by
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat} q quaternion to rotate by
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @returns {quat2} out
  */
 
@@ -6754,8 +6769,8 @@ function rotateByQuatPrepend(out, q, a) {
  * Rotates a dual quat around a given axis. Does the normalisation automatically
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @param {Number} rad how far the rotation should be
  * @returns {quat2} out
  */
@@ -6795,8 +6810,8 @@ function rotateAroundAxis(out, a, axis, rad) {
  * Adds two dual quat's
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {quat2} out
  * @function
  */
@@ -6816,8 +6831,8 @@ function add(out, a, b) {
  * Multiplies two dual quat's
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {quat2} out
  */
 
@@ -6858,7 +6873,7 @@ var mul = multiply;
  * Scales a dual quat by a scalar number
  *
  * @param {quat2} out the receiving dual quat
- * @param {quat2} a the dual quat to scale
+ * @param {ReadonlyQuat2} a the dual quat to scale
  * @param {Number} b amount to scale the dual quat by
  * @returns {quat2} out
  * @function
@@ -6878,8 +6893,8 @@ function scale(out, a, b) {
 /**
  * Calculates the dot product of two dual quat's (The dot product of the real parts)
  *
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {Number} dot product of a and b
  * @function
  */
@@ -6890,8 +6905,8 @@ var dot = _quat_js__WEBPACK_IMPORTED_MODULE_1__["dot"];
  * NOTE: The resulting dual quaternions won't always be normalized (The error is most noticeable when t = 0.5)
  *
  * @param {quat2} out the receiving dual quat
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat2} out
  */
@@ -6913,7 +6928,7 @@ function lerp(out, a, b, t) {
  * Calculates the inverse of a dual quat. If they are normalized, conjugate is cheaper
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a dual quat to calculate inverse of
+ * @param {ReadonlyQuat2} a dual quat to calculate inverse of
  * @returns {quat2} out
  */
 
@@ -6934,7 +6949,7 @@ function invert(out, a) {
  * If the dual quaternion is normalized, this function is faster than quat2.inverse and produces the same result.
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat2} a quat to calculate conjugate of
+ * @param {ReadonlyQuat2} a quat to calculate conjugate of
  * @returns {quat2} out
  */
 
@@ -6952,7 +6967,7 @@ function conjugate(out, a) {
 /**
  * Calculates the length of a dual quat
  *
- * @param {quat2} a dual quat to calculate length of
+ * @param {ReadonlyQuat2} a dual quat to calculate length of
  * @returns {Number} length of a
  * @function
  */
@@ -6967,7 +6982,7 @@ var len = length;
 /**
  * Calculates the squared length of a dual quat
  *
- * @param {quat2} a dual quat to calculate squared length of
+ * @param {ReadonlyQuat2} a dual quat to calculate squared length of
  * @returns {Number} squared length of a
  * @function
  */
@@ -6983,7 +6998,7 @@ var sqrLen = squaredLength;
  * Normalize a dual quat
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a dual quaternion to normalize
+ * @param {ReadonlyQuat2} a dual quaternion to normalize
  * @returns {quat2} out
  * @function
  */
@@ -7017,18 +7032,18 @@ function normalize(out, a) {
 /**
  * Returns a string representation of a dual quatenion
  *
- * @param {quat2} a dual quaternion to represent as a string
+ * @param {ReadonlyQuat2} a dual quaternion to represent as a string
  * @returns {String} string representation of the dual quat
  */
 
 function str(a) {
-  return 'quat2(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ')';
+  return "quat2(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ")";
 }
 /**
  * Returns whether or not the dual quaternions have exactly the same elements in the same position (when compared with ===)
  *
- * @param {quat2} a the first dual quaternion.
- * @param {quat2} b the second dual quaternion.
+ * @param {ReadonlyQuat2} a the first dual quaternion.
+ * @param {ReadonlyQuat2} b the second dual quaternion.
  * @returns {Boolean} true if the dual quaternions are equal, false otherwise.
  */
 
@@ -7038,8 +7053,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the dual quaternions have approximately the same elements in the same position.
  *
- * @param {quat2} a the first dual quat.
- * @param {quat2} b the second dual quat.
+ * @param {ReadonlyQuat2} a the first dual quat.
+ * @param {ReadonlyQuat2} b the second dual quat.
  * @returns {Boolean} true if the dual quats are equal, false otherwise.
  */
 
@@ -7115,6 +7130,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sqrLen", function() { return sqrLen; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "forEach", function() { return forEach; });
 /* harmony import */ var _common_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 
 /**
  * 2 Dimensional Vector
@@ -7140,7 +7157,7 @@ function create() {
 /**
  * Creates a new vec2 initialized with values from an existing vector
  *
- * @param {vec2} a vector to clone
+ * @param {ReadonlyVec2} a vector to clone
  * @returns {vec2} a new 2D vector
  */
 
@@ -7168,7 +7185,7 @@ function fromValues(x, y) {
  * Copy the values from one vec2 to another
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the source vector
+ * @param {ReadonlyVec2} a the source vector
  * @returns {vec2} out
  */
 
@@ -7195,8 +7212,8 @@ function set(out, x, y) {
  * Adds two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7209,8 +7226,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7223,8 +7240,8 @@ function subtract(out, a, b) {
  * Multiplies two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7237,8 +7254,8 @@ function multiply(out, a, b) {
  * Divides two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7251,7 +7268,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to ceil
+ * @param {ReadonlyVec2} a vector to ceil
  * @returns {vec2} out
  */
 
@@ -7264,7 +7281,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to floor
+ * @param {ReadonlyVec2} a vector to floor
  * @returns {vec2} out
  */
 
@@ -7277,8 +7294,8 @@ function floor(out, a) {
  * Returns the minimum of two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7291,8 +7308,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7305,7 +7322,7 @@ function max(out, a, b) {
  * Math.round the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to round
+ * @param {ReadonlyVec2} a vector to round
  * @returns {vec2} out
  */
 
@@ -7318,7 +7335,7 @@ function round(out, a) {
  * Scales a vec2 by a scalar number
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to scale
+ * @param {ReadonlyVec2} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec2} out
  */
@@ -7332,8 +7349,8 @@ function scale(out, a, b) {
  * Adds two vec2's after scaling the second operand by a scalar value
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec2} out
  */
@@ -7346,8 +7363,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -7359,8 +7376,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -7372,7 +7389,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the length of a vec2
  *
- * @param {vec2} a vector to calculate length of
+ * @param {ReadonlyVec2} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -7384,7 +7401,7 @@ function length(a) {
 /**
  * Calculates the squared length of a vec2
  *
- * @param {vec2} a vector to calculate squared length of
+ * @param {ReadonlyVec2} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -7397,7 +7414,7 @@ function squaredLength(a) {
  * Negates the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to negate
+ * @param {ReadonlyVec2} a vector to negate
  * @returns {vec2} out
  */
 
@@ -7410,7 +7427,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to invert
+ * @param {ReadonlyVec2} a vector to invert
  * @returns {vec2} out
  */
 
@@ -7423,7 +7440,7 @@ function inverse(out, a) {
  * Normalize a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to normalize
+ * @param {ReadonlyVec2} a vector to normalize
  * @returns {vec2} out
  */
 
@@ -7444,8 +7461,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -7457,8 +7474,8 @@ function dot(a, b) {
  * Note that the cross product must by definition produce a 3D vector
  *
  * @param {vec3} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec3} out
  */
 
@@ -7472,8 +7489,8 @@ function cross(out, a, b) {
  * Performs a linear interpolation between two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec2} out
  */
@@ -7504,8 +7521,8 @@ function random(out, scale) {
  * Transforms the vec2 with a mat2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat2} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat2} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7520,8 +7537,8 @@ function transformMat2(out, a, m) {
  * Transforms the vec2 with a mat2d
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat2d} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat2d} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7537,8 +7554,8 @@ function transformMat2d(out, a, m) {
  * 3rd vector component is implicitly '1'
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat3} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat3} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7555,8 +7572,8 @@ function transformMat3(out, a, m) {
  * 4th vector component is implicitly '1'
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7570,18 +7587,18 @@ function transformMat4(out, a, m) {
 /**
  * Rotate a 2D vector
  * @param {vec2} out The receiving vec2
- * @param {vec2} a The vec2 point to rotate
- * @param {vec2} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec2} a The vec2 point to rotate
+ * @param {ReadonlyVec2} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec2} out
  */
 
-function rotate(out, a, b, c) {
+function rotate(out, a, b, rad) {
   //Translate point to the origin
   var p0 = a[0] - b[0],
       p1 = a[1] - b[1],
-      sinC = Math.sin(c),
-      cosC = Math.cos(c); //perform rotation and translate to correct position
+      sinC = Math.sin(rad),
+      cosC = Math.cos(rad); //perform rotation and translate to correct position
 
   out[0] = p0 * cosC - p1 * sinC + b[0];
   out[1] = p0 * sinC + p1 * cosC + b[1];
@@ -7589,8 +7606,8 @@ function rotate(out, a, b, c) {
 }
 /**
  * Get the angle between two 2D vectors
- * @param {vec2} a The first operand
- * @param {vec2} b The second operand
+ * @param {ReadonlyVec2} a The first operand
+ * @param {ReadonlyVec2} b The second operand
  * @returns {Number} The angle in radians
  */
 
@@ -7598,30 +7615,13 @@ function angle(a, b) {
   var x1 = a[0],
       y1 = a[1],
       x2 = b[0],
-      y2 = b[1];
-  var len1 = x1 * x1 + y1 * y1;
+      y2 = b[1],
+      // mag is the product of the magnitudes of a and b
+  mag = Math.sqrt(x1 * x1 + y1 * y1) * Math.sqrt(x2 * x2 + y2 * y2),
+      // mag &&.. short circuits if mag == 0
+  cosine = mag && (x1 * x2 + y1 * y2) / mag; // Math.min(Math.max(cosine, -1), 1) clamps the cosine between -1 and 1
 
-  if (len1 > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len1 = 1 / Math.sqrt(len1);
-  }
-
-  var len2 = x2 * x2 + y2 * y2;
-
-  if (len2 > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len2 = 1 / Math.sqrt(len2);
-  }
-
-  var cosine = (x1 * x2 + y1 * y2) * len1 * len2;
-
-  if (cosine > 1.0) {
-    return 0;
-  } else if (cosine < -1.0) {
-    return Math.PI;
-  } else {
-    return Math.acos(cosine);
-  }
+  return Math.acos(Math.min(Math.max(cosine, -1), 1));
 }
 /**
  * Set the components of a vec2 to zero
@@ -7638,18 +7638,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec2} a vector to represent as a string
+ * @param {ReadonlyVec2} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec2(' + a[0] + ', ' + a[1] + ')';
+  return "vec2(" + a[0] + ", " + a[1] + ")";
 }
 /**
  * Returns whether or not the vectors exactly have the same elements in the same position (when compared with ===)
  *
- * @param {vec2} a The first vector.
- * @param {vec2} b The second vector.
+ * @param {ReadonlyVec2} a The first vector.
+ * @param {ReadonlyVec2} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -7659,8 +7659,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec2} a The first vector.
- * @param {vec2} b The second vector.
+ * @param {ReadonlyVec2} a The first vector.
+ * @param {ReadonlyVec2} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -9392,8 +9392,10 @@ function pointsToBuffer(points, Type = Float32Array, buffer = null) {
   }
 
   return buffer;
-}
-const imageCache = {};
+} // 图片下载缓存
+
+const imageCache = {}; // ImageBitmap
+
 function loadImage(src, {
   useImageBitmap = true,
   alias = null
@@ -9812,6 +9814,12 @@ function createCanvas(width, height, options = {}) {
 
   return canvas;
 }
+/**
+ * canvas
+ * text(dom)
+ * image
+ */
+
 
 const ENV = {
   createCanvas,
@@ -9823,29 +9831,28 @@ const ENV = {
 
 /***/ }),
 /* 22 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var g;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
+var g; // This works in non-strict mode
+
+g = function () {
+  return this;
+}();
 
 try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
+  // This works if eval is allowed (see CSP)
+  g = g || new Function("return this")();
 } catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
+  // This works if the window reference is available
+  if (typeof window === "object") g = window;
+} // g can still be undefined, but nothing to do about it...
 // We return undefined, instead of nothing here, so it's
 // easier to handle this case. if(!global) { ...}
 
-module.exports = g;
 
+module.exports = g;
 
 /***/ }),
 /* 23 */
@@ -10764,7 +10771,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -11457,33 +11464,31 @@ function parseColor(colorStr) {
 /** @module  color-rgba */
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-var parse = __webpack_require__(33)
-var hsl = __webpack_require__(37)
-var clamp = __webpack_require__(39)
+var parse = __webpack_require__(33);
 
-module.exports = function rgba (color) {
-	var values, i, l
+var hsl = __webpack_require__(37);
 
-	//attempt to parse non-array arguments
-	var parsed = parse(color)
+var clamp = __webpack_require__(39);
 
-	if (!parsed.space) return []
+module.exports = function rgba(color) {
+  var values, i, l; //attempt to parse non-array arguments
 
-	values = Array(3)
-	values[0] = clamp(parsed.values[0], 0, 255)
-	values[1] = clamp(parsed.values[1], 0, 255)
-	values[2] = clamp(parsed.values[2], 0, 255)
+  var parsed = parse(color);
+  if (!parsed.space) return [];
+  values = Array(3);
+  values[0] = clamp(parsed.values[0], 0, 255);
+  values[1] = clamp(parsed.values[1], 0, 255);
+  values[2] = clamp(parsed.values[2], 0, 255);
 
-	if (parsed.space[0] === 'h') {
-		values = hsl.rgb(values)
-	}
+  if (parsed.space[0] === 'h') {
+    values = hsl.rgb(values);
+  }
 
-	values.push(clamp(parsed.alpha, 0, 1))
-
-	return values
-}
-
+  values.push(clamp(parsed.alpha, 0, 1));
+  return values;
+};
 
 /***/ }),
 /* 33 */
@@ -11495,177 +11500,145 @@ module.exports = function rgba (color) {
  */
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-var names = __webpack_require__(34)
-var isObject = __webpack_require__(35)
-var defined = __webpack_require__(36)
+var names = __webpack_require__(34);
 
-module.exports = parse
+var isObject = __webpack_require__(35);
 
+var defined = __webpack_require__(36);
+
+module.exports = parse;
 /**
  * Base hues
  * http://dev.w3.org/csswg/css-color/#typedef-named-hue
  */
 //FIXME: use external hue detector
-var baseHues = {
-	red: 0,
-	orange: 60,
-	yellow: 120,
-	green: 180,
-	blue: 240,
-	purple: 300
-}
 
+var baseHues = {
+  red: 0,
+  orange: 60,
+  yellow: 120,
+  green: 180,
+  blue: 240,
+  purple: 300
+};
 /**
  * Parse color from the string passed
  *
  * @return {Object} A space indicator `space`, an array `values` and `alpha`
  */
-function parse (cstr) {
-	var m, parts = [], alpha = 1, space
 
-	if (typeof cstr === 'string') {
-		//keyword
-		if (names[cstr]) {
-			parts = names[cstr].slice()
-			space = 'rgb'
-		}
+function parse(cstr) {
+  var m,
+      parts = [],
+      alpha = 1,
+      space;
 
-		//reserved words
-		else if (cstr === 'transparent') {
-			alpha = 0
-			space = 'rgb'
-			parts = [0,0,0]
-		}
+  if (typeof cstr === 'string') {
+    //keyword
+    if (names[cstr]) {
+      parts = names[cstr].slice();
+      space = 'rgb';
+    } //reserved words
+    else if (cstr === 'transparent') {
+        alpha = 0;
+        space = 'rgb';
+        parts = [0, 0, 0];
+      } //hex
+      else if (/^#[A-Fa-f0-9]+$/.test(cstr)) {
+          var base = cstr.slice(1);
+          var size = base.length;
+          var isShort = size <= 4;
+          alpha = 1;
 
-		//hex
-		else if (/^#[A-Fa-f0-9]+$/.test(cstr)) {
-			var base = cstr.slice(1)
-			var size = base.length
-			var isShort = size <= 4
-			alpha = 1
+          if (isShort) {
+            parts = [parseInt(base[0] + base[0], 16), parseInt(base[1] + base[1], 16), parseInt(base[2] + base[2], 16)];
 
-			if (isShort) {
-				parts = [
-					parseInt(base[0] + base[0], 16),
-					parseInt(base[1] + base[1], 16),
-					parseInt(base[2] + base[2], 16)
-				]
-				if (size === 4) {
-					alpha = parseInt(base[3] + base[3], 16) / 255
-				}
-			}
-			else {
-				parts = [
-					parseInt(base[0] + base[1], 16),
-					parseInt(base[2] + base[3], 16),
-					parseInt(base[4] + base[5], 16)
-				]
-				if (size === 8) {
-					alpha = parseInt(base[6] + base[7], 16) / 255
-				}
-			}
+            if (size === 4) {
+              alpha = parseInt(base[3] + base[3], 16) / 255;
+            }
+          } else {
+            parts = [parseInt(base[0] + base[1], 16), parseInt(base[2] + base[3], 16), parseInt(base[4] + base[5], 16)];
 
-			if (!parts[0]) parts[0] = 0
-			if (!parts[1]) parts[1] = 0
-			if (!parts[2]) parts[2] = 0
+            if (size === 8) {
+              alpha = parseInt(base[6] + base[7], 16) / 255;
+            }
+          }
 
-			space = 'rgb'
-		}
+          if (!parts[0]) parts[0] = 0;
+          if (!parts[1]) parts[1] = 0;
+          if (!parts[2]) parts[2] = 0;
+          space = 'rgb';
+        } //color space
+        else if (m = /^((?:rgb|hs[lvb]|hwb|cmyk?|xy[zy]|gray|lab|lchu?v?|[ly]uv|lms)a?)\s*\(([^\)]*)\)/.exec(cstr)) {
+            var name = m[1];
+            var isRGB = name === 'rgb';
+            var base = name.replace(/a$/, '');
+            space = base;
+            var size = base === 'cmyk' ? 4 : base === 'gray' ? 1 : 3;
+            parts = m[2].trim().split(/\s*,\s*/).map(function (x, i) {
+              //<percentage>
+              if (/%$/.test(x)) {
+                //alpha
+                if (i === size) return parseFloat(x) / 100; //rgb
 
-		//color space
-		else if (m = /^((?:rgb|hs[lvb]|hwb|cmyk?|xy[zy]|gray|lab|lchu?v?|[ly]uv|lms)a?)\s*\(([^\)]*)\)/.exec(cstr)) {
-			var name = m[1]
-			var isRGB = name === 'rgb'
-			var base = name.replace(/a$/, '')
-			space = base
-			var size = base === 'cmyk' ? 4 : base === 'gray' ? 1 : 3
-			parts = m[2].trim()
-				.split(/\s*,\s*/)
-				.map(function (x, i) {
-					//<percentage>
-					if (/%$/.test(x)) {
-						//alpha
-						if (i === size)	return parseFloat(x) / 100
-						//rgb
-						if (base === 'rgb') return parseFloat(x) * 255 / 100
-						return parseFloat(x)
-					}
-					//hue
-					else if (base[i] === 'h') {
-						//<deg>
-						if (/deg$/.test(x)) {
-							return parseFloat(x)
-						}
-						//<base-hue>
-						else if (baseHues[x] !== undefined) {
-							return baseHues[x]
-						}
-					}
-					return parseFloat(x)
-				})
+                if (base === 'rgb') return parseFloat(x) * 255 / 100;
+                return parseFloat(x);
+              } //hue
+              else if (base[i] === 'h') {
+                  //<deg>
+                  if (/deg$/.test(x)) {
+                    return parseFloat(x);
+                  } //<base-hue>
+                  else if (baseHues[x] !== undefined) {
+                      return baseHues[x];
+                    }
+                }
 
-			if (name === base) parts.push(1)
-			alpha = (isRGB) ? 1 : (parts[size] === undefined) ? 1 : parts[size]
-			parts = parts.slice(0, size)
-		}
+              return parseFloat(x);
+            });
+            if (name === base) parts.push(1);
+            alpha = isRGB ? 1 : parts[size] === undefined ? 1 : parts[size];
+            parts = parts.slice(0, size);
+          } //named channels case
+          else if (cstr.length > 10 && /[0-9](?:\s|\/)/.test(cstr)) {
+              parts = cstr.match(/([0-9]+)/g).map(function (value) {
+                return parseFloat(value);
+              });
+              space = cstr.match(/([a-z])/ig).join('').toLowerCase();
+            }
+  } //numeric case
+  else if (!isNaN(cstr)) {
+      space = 'rgb';
+      parts = [cstr >>> 16, (cstr & 0x00ff00) >>> 8, cstr & 0x0000ff];
+    } //object case - detects css cases of rgb and hsl
+    else if (isObject(cstr)) {
+        var r = defined(cstr.r, cstr.red, cstr.R, null);
 
-		//named channels case
-		else if (cstr.length > 10 && /[0-9](?:\s|\/)/.test(cstr)) {
-			parts = cstr.match(/([0-9]+)/g).map(function (value) {
-				return parseFloat(value)
-			})
+        if (r !== null) {
+          space = 'rgb';
+          parts = [r, defined(cstr.g, cstr.green, cstr.G), defined(cstr.b, cstr.blue, cstr.B)];
+        } else {
+          space = 'hsl';
+          parts = [defined(cstr.h, cstr.hue, cstr.H), defined(cstr.s, cstr.saturation, cstr.S), defined(cstr.l, cstr.lightness, cstr.L, cstr.b, cstr.brightness)];
+        }
 
-			space = cstr.match(/([a-z])/ig).join('').toLowerCase()
-		}
-	}
+        alpha = defined(cstr.a, cstr.alpha, cstr.opacity, 1);
+        if (cstr.opacity != null) alpha /= 100;
+      } //array
+      else if (Array.isArray(cstr) || global.ArrayBuffer && ArrayBuffer.isView && ArrayBuffer.isView(cstr)) {
+          parts = [cstr[0], cstr[1], cstr[2]];
+          space = 'rgb';
+          alpha = cstr.length === 4 ? cstr[3] : 1;
+        }
 
-	//numeric case
-	else if (!isNaN(cstr)) {
-		space = 'rgb'
-		parts = [cstr >>> 16, (cstr & 0x00ff00) >>> 8, cstr & 0x0000ff]
-	}
-
-	//object case - detects css cases of rgb and hsl
-	else if (isObject(cstr)) {
-		var r = defined(cstr.r, cstr.red, cstr.R, null)
-
-		if (r !== null) {
-			space = 'rgb'
-			parts = [
-				r,
-				defined(cstr.g, cstr.green, cstr.G),
-				defined(cstr.b, cstr.blue, cstr.B)
-			]
-		}
-		else {
-			space = 'hsl'
-			parts = [
-				defined(cstr.h, cstr.hue, cstr.H),
-				defined(cstr.s, cstr.saturation, cstr.S),
-				defined(cstr.l, cstr.lightness, cstr.L, cstr.b, cstr.brightness)
-			]
-		}
-
-		alpha = defined(cstr.a, cstr.alpha, cstr.opacity, 1)
-
-		if (cstr.opacity != null) alpha /= 100
-	}
-
-	//array
-	else if (Array.isArray(cstr) || global.ArrayBuffer && ArrayBuffer.isView && ArrayBuffer.isView(cstr)) {
-		parts = [cstr[0], cstr[1], cstr[2]]
-		space = 'rgb'
-		alpha = cstr.length === 4 ? cstr[3] : 1
-	}
-
-	return {
-		space: space,
-		values: parts,
-		alpha: alpha
-	}
+  return {
+    space: space,
+    values: parts,
+    alpha: alpha
+  };
 }
-
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(22)))
 
 /***/ }),
@@ -11675,157 +11648,158 @@ function parse (cstr) {
 "use strict";
 
 
-module.exports = {
-	"aliceblue": [240, 248, 255],
-	"antiquewhite": [250, 235, 215],
-	"aqua": [0, 255, 255],
-	"aquamarine": [127, 255, 212],
-	"azure": [240, 255, 255],
-	"beige": [245, 245, 220],
-	"bisque": [255, 228, 196],
-	"black": [0, 0, 0],
-	"blanchedalmond": [255, 235, 205],
-	"blue": [0, 0, 255],
-	"blueviolet": [138, 43, 226],
-	"brown": [165, 42, 42],
-	"burlywood": [222, 184, 135],
-	"cadetblue": [95, 158, 160],
-	"chartreuse": [127, 255, 0],
-	"chocolate": [210, 105, 30],
-	"coral": [255, 127, 80],
-	"cornflowerblue": [100, 149, 237],
-	"cornsilk": [255, 248, 220],
-	"crimson": [220, 20, 60],
-	"cyan": [0, 255, 255],
-	"darkblue": [0, 0, 139],
-	"darkcyan": [0, 139, 139],
-	"darkgoldenrod": [184, 134, 11],
-	"darkgray": [169, 169, 169],
-	"darkgreen": [0, 100, 0],
-	"darkgrey": [169, 169, 169],
-	"darkkhaki": [189, 183, 107],
-	"darkmagenta": [139, 0, 139],
-	"darkolivegreen": [85, 107, 47],
-	"darkorange": [255, 140, 0],
-	"darkorchid": [153, 50, 204],
-	"darkred": [139, 0, 0],
-	"darksalmon": [233, 150, 122],
-	"darkseagreen": [143, 188, 143],
-	"darkslateblue": [72, 61, 139],
-	"darkslategray": [47, 79, 79],
-	"darkslategrey": [47, 79, 79],
-	"darkturquoise": [0, 206, 209],
-	"darkviolet": [148, 0, 211],
-	"deeppink": [255, 20, 147],
-	"deepskyblue": [0, 191, 255],
-	"dimgray": [105, 105, 105],
-	"dimgrey": [105, 105, 105],
-	"dodgerblue": [30, 144, 255],
-	"firebrick": [178, 34, 34],
-	"floralwhite": [255, 250, 240],
-	"forestgreen": [34, 139, 34],
-	"fuchsia": [255, 0, 255],
-	"gainsboro": [220, 220, 220],
-	"ghostwhite": [248, 248, 255],
-	"gold": [255, 215, 0],
-	"goldenrod": [218, 165, 32],
-	"gray": [128, 128, 128],
-	"green": [0, 128, 0],
-	"greenyellow": [173, 255, 47],
-	"grey": [128, 128, 128],
-	"honeydew": [240, 255, 240],
-	"hotpink": [255, 105, 180],
-	"indianred": [205, 92, 92],
-	"indigo": [75, 0, 130],
-	"ivory": [255, 255, 240],
-	"khaki": [240, 230, 140],
-	"lavender": [230, 230, 250],
-	"lavenderblush": [255, 240, 245],
-	"lawngreen": [124, 252, 0],
-	"lemonchiffon": [255, 250, 205],
-	"lightblue": [173, 216, 230],
-	"lightcoral": [240, 128, 128],
-	"lightcyan": [224, 255, 255],
-	"lightgoldenrodyellow": [250, 250, 210],
-	"lightgray": [211, 211, 211],
-	"lightgreen": [144, 238, 144],
-	"lightgrey": [211, 211, 211],
-	"lightpink": [255, 182, 193],
-	"lightsalmon": [255, 160, 122],
-	"lightseagreen": [32, 178, 170],
-	"lightskyblue": [135, 206, 250],
-	"lightslategray": [119, 136, 153],
-	"lightslategrey": [119, 136, 153],
-	"lightsteelblue": [176, 196, 222],
-	"lightyellow": [255, 255, 224],
-	"lime": [0, 255, 0],
-	"limegreen": [50, 205, 50],
-	"linen": [250, 240, 230],
-	"magenta": [255, 0, 255],
-	"maroon": [128, 0, 0],
-	"mediumaquamarine": [102, 205, 170],
-	"mediumblue": [0, 0, 205],
-	"mediumorchid": [186, 85, 211],
-	"mediumpurple": [147, 112, 219],
-	"mediumseagreen": [60, 179, 113],
-	"mediumslateblue": [123, 104, 238],
-	"mediumspringgreen": [0, 250, 154],
-	"mediumturquoise": [72, 209, 204],
-	"mediumvioletred": [199, 21, 133],
-	"midnightblue": [25, 25, 112],
-	"mintcream": [245, 255, 250],
-	"mistyrose": [255, 228, 225],
-	"moccasin": [255, 228, 181],
-	"navajowhite": [255, 222, 173],
-	"navy": [0, 0, 128],
-	"oldlace": [253, 245, 230],
-	"olive": [128, 128, 0],
-	"olivedrab": [107, 142, 35],
-	"orange": [255, 165, 0],
-	"orangered": [255, 69, 0],
-	"orchid": [218, 112, 214],
-	"palegoldenrod": [238, 232, 170],
-	"palegreen": [152, 251, 152],
-	"paleturquoise": [175, 238, 238],
-	"palevioletred": [219, 112, 147],
-	"papayawhip": [255, 239, 213],
-	"peachpuff": [255, 218, 185],
-	"peru": [205, 133, 63],
-	"pink": [255, 192, 203],
-	"plum": [221, 160, 221],
-	"powderblue": [176, 224, 230],
-	"purple": [128, 0, 128],
-	"rebeccapurple": [102, 51, 153],
-	"red": [255, 0, 0],
-	"rosybrown": [188, 143, 143],
-	"royalblue": [65, 105, 225],
-	"saddlebrown": [139, 69, 19],
-	"salmon": [250, 128, 114],
-	"sandybrown": [244, 164, 96],
-	"seagreen": [46, 139, 87],
-	"seashell": [255, 245, 238],
-	"sienna": [160, 82, 45],
-	"silver": [192, 192, 192],
-	"skyblue": [135, 206, 235],
-	"slateblue": [106, 90, 205],
-	"slategray": [112, 128, 144],
-	"slategrey": [112, 128, 144],
-	"snow": [255, 250, 250],
-	"springgreen": [0, 255, 127],
-	"steelblue": [70, 130, 180],
-	"tan": [210, 180, 140],
-	"teal": [0, 128, 128],
-	"thistle": [216, 191, 216],
-	"tomato": [255, 99, 71],
-	"turquoise": [64, 224, 208],
-	"violet": [238, 130, 238],
-	"wheat": [245, 222, 179],
-	"white": [255, 255, 255],
-	"whitesmoke": [245, 245, 245],
-	"yellow": [255, 255, 0],
-	"yellowgreen": [154, 205, 50]
-};
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = {
+  "aliceblue": [240, 248, 255],
+  "antiquewhite": [250, 235, 215],
+  "aqua": [0, 255, 255],
+  "aquamarine": [127, 255, 212],
+  "azure": [240, 255, 255],
+  "beige": [245, 245, 220],
+  "bisque": [255, 228, 196],
+  "black": [0, 0, 0],
+  "blanchedalmond": [255, 235, 205],
+  "blue": [0, 0, 255],
+  "blueviolet": [138, 43, 226],
+  "brown": [165, 42, 42],
+  "burlywood": [222, 184, 135],
+  "cadetblue": [95, 158, 160],
+  "chartreuse": [127, 255, 0],
+  "chocolate": [210, 105, 30],
+  "coral": [255, 127, 80],
+  "cornflowerblue": [100, 149, 237],
+  "cornsilk": [255, 248, 220],
+  "crimson": [220, 20, 60],
+  "cyan": [0, 255, 255],
+  "darkblue": [0, 0, 139],
+  "darkcyan": [0, 139, 139],
+  "darkgoldenrod": [184, 134, 11],
+  "darkgray": [169, 169, 169],
+  "darkgreen": [0, 100, 0],
+  "darkgrey": [169, 169, 169],
+  "darkkhaki": [189, 183, 107],
+  "darkmagenta": [139, 0, 139],
+  "darkolivegreen": [85, 107, 47],
+  "darkorange": [255, 140, 0],
+  "darkorchid": [153, 50, 204],
+  "darkred": [139, 0, 0],
+  "darksalmon": [233, 150, 122],
+  "darkseagreen": [143, 188, 143],
+  "darkslateblue": [72, 61, 139],
+  "darkslategray": [47, 79, 79],
+  "darkslategrey": [47, 79, 79],
+  "darkturquoise": [0, 206, 209],
+  "darkviolet": [148, 0, 211],
+  "deeppink": [255, 20, 147],
+  "deepskyblue": [0, 191, 255],
+  "dimgray": [105, 105, 105],
+  "dimgrey": [105, 105, 105],
+  "dodgerblue": [30, 144, 255],
+  "firebrick": [178, 34, 34],
+  "floralwhite": [255, 250, 240],
+  "forestgreen": [34, 139, 34],
+  "fuchsia": [255, 0, 255],
+  "gainsboro": [220, 220, 220],
+  "ghostwhite": [248, 248, 255],
+  "gold": [255, 215, 0],
+  "goldenrod": [218, 165, 32],
+  "gray": [128, 128, 128],
+  "green": [0, 128, 0],
+  "greenyellow": [173, 255, 47],
+  "grey": [128, 128, 128],
+  "honeydew": [240, 255, 240],
+  "hotpink": [255, 105, 180],
+  "indianred": [205, 92, 92],
+  "indigo": [75, 0, 130],
+  "ivory": [255, 255, 240],
+  "khaki": [240, 230, 140],
+  "lavender": [230, 230, 250],
+  "lavenderblush": [255, 240, 245],
+  "lawngreen": [124, 252, 0],
+  "lemonchiffon": [255, 250, 205],
+  "lightblue": [173, 216, 230],
+  "lightcoral": [240, 128, 128],
+  "lightcyan": [224, 255, 255],
+  "lightgoldenrodyellow": [250, 250, 210],
+  "lightgray": [211, 211, 211],
+  "lightgreen": [144, 238, 144],
+  "lightgrey": [211, 211, 211],
+  "lightpink": [255, 182, 193],
+  "lightsalmon": [255, 160, 122],
+  "lightseagreen": [32, 178, 170],
+  "lightskyblue": [135, 206, 250],
+  "lightslategray": [119, 136, 153],
+  "lightslategrey": [119, 136, 153],
+  "lightsteelblue": [176, 196, 222],
+  "lightyellow": [255, 255, 224],
+  "lime": [0, 255, 0],
+  "limegreen": [50, 205, 50],
+  "linen": [250, 240, 230],
+  "magenta": [255, 0, 255],
+  "maroon": [128, 0, 0],
+  "mediumaquamarine": [102, 205, 170],
+  "mediumblue": [0, 0, 205],
+  "mediumorchid": [186, 85, 211],
+  "mediumpurple": [147, 112, 219],
+  "mediumseagreen": [60, 179, 113],
+  "mediumslateblue": [123, 104, 238],
+  "mediumspringgreen": [0, 250, 154],
+  "mediumturquoise": [72, 209, 204],
+  "mediumvioletred": [199, 21, 133],
+  "midnightblue": [25, 25, 112],
+  "mintcream": [245, 255, 250],
+  "mistyrose": [255, 228, 225],
+  "moccasin": [255, 228, 181],
+  "navajowhite": [255, 222, 173],
+  "navy": [0, 0, 128],
+  "oldlace": [253, 245, 230],
+  "olive": [128, 128, 0],
+  "olivedrab": [107, 142, 35],
+  "orange": [255, 165, 0],
+  "orangered": [255, 69, 0],
+  "orchid": [218, 112, 214],
+  "palegoldenrod": [238, 232, 170],
+  "palegreen": [152, 251, 152],
+  "paleturquoise": [175, 238, 238],
+  "palevioletred": [219, 112, 147],
+  "papayawhip": [255, 239, 213],
+  "peachpuff": [255, 218, 185],
+  "peru": [205, 133, 63],
+  "pink": [255, 192, 203],
+  "plum": [221, 160, 221],
+  "powderblue": [176, 224, 230],
+  "purple": [128, 0, 128],
+  "rebeccapurple": [102, 51, 153],
+  "red": [255, 0, 0],
+  "rosybrown": [188, 143, 143],
+  "royalblue": [65, 105, 225],
+  "saddlebrown": [139, 69, 19],
+  "salmon": [250, 128, 114],
+  "sandybrown": [244, 164, 96],
+  "seagreen": [46, 139, 87],
+  "seashell": [255, 245, 238],
+  "sienna": [160, 82, 45],
+  "silver": [192, 192, 192],
+  "skyblue": [135, 206, 235],
+  "slateblue": [106, 90, 205],
+  "slategray": [112, 128, 144],
+  "slategrey": [112, 128, 144],
+  "snow": [255, 250, 250],
+  "springgreen": [0, 255, 127],
+  "steelblue": [70, 130, 180],
+  "tan": [210, 180, 140],
+  "teal": [0, 128, 128],
+  "thistle": [216, 191, 216],
+  "tomato": [255, 99, 71],
+  "turquoise": [64, 224, 208],
+  "violet": [238, 130, 238],
+  "wheat": [245, 222, 179],
+  "white": [255, 255, 255],
+  "whitesmoke": [245, 245, 245],
+  "yellow": [255, 255, 0],
+  "yellowgreen": [154, 205, 50]
+};
 
 /***/ }),
 /* 35 */
@@ -11833,24 +11807,27 @@ module.exports = {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var toString = Object.prototype.toString;
 
 module.exports = function (x) {
-	var prototype;
-	return toString.call(x) === '[object Object]' && (prototype = Object.getPrototypeOf(x), prototype === null || prototype === Object.getPrototypeOf({}));
+  var prototype;
+  return toString.call(x) === '[object Object]' && (prototype = Object.getPrototypeOf(x), prototype === null || prototype === Object.getPrototypeOf({}));
 };
-
 
 /***/ }),
 /* 36 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function () {
-    for (var i = 0; i < arguments.length; i++) {
-        if (arguments[i] !== undefined) return arguments[i];
-    }
+  for (var i = 0; i < arguments.length; i++) {
+    if (arguments[i] !== undefined) return arguments[i];
+  }
 };
-
 
 /***/ }),
 /* 37 */
@@ -11862,109 +11839,105 @@ module.exports = function () {
  */
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var rgb = __webpack_require__(38);
 
 module.exports = {
-	name: 'hsl',
-	min: [0,0,0],
-	max: [360,100,100],
-	channel: ['hue', 'saturation', 'lightness'],
-	alias: ['HSL'],
+  name: 'hsl',
+  min: [0, 0, 0],
+  max: [360, 100, 100],
+  channel: ['hue', 'saturation', 'lightness'],
+  alias: ['HSL'],
+  rgb: function (hsl) {
+    var h = hsl[0] / 360,
+        s = hsl[1] / 100,
+        l = hsl[2] / 100,
+        t1,
+        t2,
+        t3,
+        rgb,
+        val;
 
-	rgb: function(hsl) {
-		var h = hsl[0] / 360,
-				s = hsl[1] / 100,
-				l = hsl[2] / 100,
-				t1, t2, t3, rgb, val;
+    if (s === 0) {
+      val = l * 255;
+      return [val, val, val];
+    }
 
-		if (s === 0) {
-			val = l * 255;
-			return [val, val, val];
-		}
+    if (l < 0.5) {
+      t2 = l * (1 + s);
+    } else {
+      t2 = l + s - l * s;
+    }
 
-		if (l < 0.5) {
-			t2 = l * (1 + s);
-		}
-		else {
-			t2 = l + s - l * s;
-		}
-		t1 = 2 * l - t2;
+    t1 = 2 * l - t2;
+    rgb = [0, 0, 0];
 
-		rgb = [0, 0, 0];
-		for (var i = 0; i < 3; i++) {
-			t3 = h + 1 / 3 * - (i - 1);
-			if (t3 < 0) {
-				t3++;
-			}
-			else if (t3 > 1) {
-				t3--;
-			}
+    for (var i = 0; i < 3; i++) {
+      t3 = h + 1 / 3 * -(i - 1);
 
-			if (6 * t3 < 1) {
-				val = t1 + (t2 - t1) * 6 * t3;
-			}
-			else if (2 * t3 < 1) {
-				val = t2;
-			}
-			else if (3 * t3 < 2) {
-				val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
-			}
-			else {
-				val = t1;
-			}
+      if (t3 < 0) {
+        t3++;
+      } else if (t3 > 1) {
+        t3--;
+      }
 
-			rgb[i] = val * 255;
-		}
+      if (6 * t3 < 1) {
+        val = t1 + (t2 - t1) * 6 * t3;
+      } else if (2 * t3 < 1) {
+        val = t2;
+      } else if (3 * t3 < 2) {
+        val = t1 + (t2 - t1) * (2 / 3 - t3) * 6;
+      } else {
+        val = t1;
+      }
 
-		return rgb;
-	}
+      rgb[i] = val * 255;
+    }
+
+    return rgb;
+  }
+}; //extend rgb
+
+rgb.hsl = function (rgb) {
+  var r = rgb[0] / 255,
+      g = rgb[1] / 255,
+      b = rgb[2] / 255,
+      min = Math.min(r, g, b),
+      max = Math.max(r, g, b),
+      delta = max - min,
+      h,
+      s,
+      l;
+
+  if (max === min) {
+    h = 0;
+  } else if (r === max) {
+    h = (g - b) / delta;
+  } else if (g === max) {
+    h = 2 + (b - r) / delta;
+  } else if (b === max) {
+    h = 4 + (r - g) / delta;
+  }
+
+  h = Math.min(h * 60, 360);
+
+  if (h < 0) {
+    h += 360;
+  }
+
+  l = (min + max) / 2;
+
+  if (max === min) {
+    s = 0;
+  } else if (l <= 0.5) {
+    s = delta / (max + min);
+  } else {
+    s = delta / (2 - max - min);
+  }
+
+  return [h, s * 100, l * 100];
 };
-
-
-//extend rgb
-rgb.hsl = function(rgb) {
-	var r = rgb[0]/255,
-			g = rgb[1]/255,
-			b = rgb[2]/255,
-			min = Math.min(r, g, b),
-			max = Math.max(r, g, b),
-			delta = max - min,
-			h, s, l;
-
-	if (max === min) {
-		h = 0;
-	}
-	else if (r === max) {
-		h = (g - b) / delta;
-	}
-	else if (g === max) {
-		h = 2 + (b - r) / delta;
-	}
-	else if (b === max) {
-		h = 4 + (r - g)/ delta;
-	}
-
-	h = Math.min(h * 60, 360);
-
-	if (h < 0) {
-		h += 360;
-	}
-
-	l = (min + max) / 2;
-
-	if (max === min) {
-		s = 0;
-	}
-	else if (l <= 0.5) {
-		s = delta / (max + min);
-	}
-	else {
-		s = delta / (2 - max - min);
-	}
-
-	return [h, s * 100, l * 100];
-};
-
 
 /***/ }),
 /* 38 */
@@ -11978,27 +11951,27 @@ rgb.hsl = function(rgb) {
  */
 
 
-module.exports = {
-	name: 'rgb',
-	min: [0,0,0],
-	max: [255,255,255],
-	channel: ['red', 'green', 'blue'],
-	alias: ['RGB']
-};
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = {
+  name: 'rgb',
+  min: [0, 0, 0],
+  max: [255, 255, 255],
+  channel: ['red', 'green', 'blue'],
+  alias: ['RGB']
+};
 
 /***/ }),
 /* 39 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = clamp
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = clamp;
 
 function clamp(value, min, max) {
-  return min < max
-    ? (value < min ? min : value > max ? max : value)
-    : (value < max ? max : value > min ? min : value)
+  return min < max ? value < min ? min : value > max ? max : value : value < max ? max : value > min ? min : value;
 }
-
 
 /***/ }),
 /* 40 */
@@ -12242,25 +12215,34 @@ class Figure2D {
 
 /***/ }),
 /* 41 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-module.exports = parse
-
+module.exports = parse;
 /**
  * expected argument lengths
  * @type {Object}
  */
 
-var length = {a: 7, c: 6, h: 1, l: 2, m: 2, q: 4, s: 4, t: 2, v: 1, z: 0}
-
+var length = {
+  a: 7,
+  c: 6,
+  h: 1,
+  l: 2,
+  m: 2,
+  q: 4,
+  s: 4,
+  t: 2,
+  v: 1,
+  z: 0
+};
 /**
  * segment pattern
  * @type {RegExp}
  */
 
-var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig
-
+var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig;
 /**
  * parse an svg path data string. Generates an Array
  * of commands where each command is an Array of the
@@ -12271,37 +12253,36 @@ var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig
  */
 
 function parse(path) {
-	var data = []
-	path.replace(segment, function(_, command, args){
-		var type = command.toLowerCase()
-		args = parseValues(args)
+  var data = [];
+  path.replace(segment, function (_, command, args) {
+    var type = command.toLowerCase();
+    args = parseValues(args); // overloaded moveTo
 
-		// overloaded moveTo
-		if (type == 'm' && args.length > 2) {
-			data.push([command].concat(args.splice(0, 2)))
-			type = 'l'
-			command = command == 'm' ? 'l' : 'L'
-		}
+    if (type == 'm' && args.length > 2) {
+      data.push([command].concat(args.splice(0, 2)));
+      type = 'l';
+      command = command == 'm' ? 'l' : 'L';
+    }
 
-		while (true) {
-			if (args.length == length[type]) {
-				args.unshift(command)
-				return data.push(args)
-			}
-			if (args.length < length[type]) throw new Error('malformed path data')
-			data.push([command].concat(args.splice(0, length[type])))
-		}
-	})
-	return data
+    while (true) {
+      if (args.length == length[type]) {
+        args.unshift(command);
+        return data.push(args);
+      }
+
+      if (args.length < length[type]) throw new Error('malformed path data');
+      data.push([command].concat(args.splice(0, length[type])));
+    }
+  });
+  return data;
 }
 
-var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig
+var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig;
 
 function parseValues(args) {
-	var numbers = args.match(number)
-	return numbers ? numbers.map(Number) : []
+  var numbers = args.match(number);
+  return numbers ? numbers.map(Number) : [];
 }
-
 
 /***/ }),
 /* 42 */
@@ -12310,34 +12291,41 @@ function parseValues(args) {
 "use strict";
 
 
-module.exports = findBounds
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = findBounds;
 
 function findBounds(points) {
-  var n = points.length
-  if(n === 0) {
-    return [[], []]
+  var n = points.length;
+
+  if (n === 0) {
+    return [[], []];
   }
-  var d = points[0].length
-  var lo = points[0].slice()
-  var hi = points[0].slice()
-  for(var i=1; i<n; ++i) {
-    var p = points[i]
-    for(var j=0; j<d; ++j) {
-      var x = p[j]
-      lo[j] = Math.min(lo[j], x)
-      hi[j] = Math.max(hi[j], x)
+
+  var d = points[0].length;
+  var lo = points[0].slice();
+  var hi = points[0].slice();
+
+  for (var i = 1; i < n; ++i) {
+    var p = points[i];
+
+    for (var j = 0; j < d; ++j) {
+      var x = p[j];
+      lo[j] = Math.min(lo[j], x);
+      hi[j] = Math.max(hi[j], x);
     }
   }
-  return [lo, hi]
+
+  return [lo, hi];
 }
 
 /***/ }),
 /* 43 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-module.exports = absolutize
-
+module.exports = absolutize;
 /**
  * redefine `path` with absolute coordinates
  *
@@ -12345,64 +12333,70 @@ module.exports = absolutize
  * @return {Array}
  */
 
-function absolutize(path){
-	var startX = 0
-	var startY = 0
-	var x = 0
-	var y = 0
+function absolutize(path) {
+  var startX = 0;
+  var startY = 0;
+  var x = 0;
+  var y = 0;
+  return path.map(function (seg) {
+    seg = seg.slice();
+    var type = seg[0];
+    var command = type.toUpperCase(); // is relative
 
-	return path.map(function(seg){
-		seg = seg.slice()
-		var type = seg[0]
-		var command = type.toUpperCase()
+    if (type != command) {
+      seg[0] = command;
 
-		// is relative
-		if (type != command) {
-			seg[0] = command
-			switch (type) {
-				case 'a':
-					seg[6] += x
-					seg[7] += y
-					break
-				case 'v':
-					seg[1] += y
-					break
-				case 'h':
-					seg[1] += x
-					break
-				default:
-					for (var i = 1; i < seg.length;) {
-						seg[i++] += x
-						seg[i++] += y
-					}
-			}
-		}
+      switch (type) {
+        case 'a':
+          seg[6] += x;
+          seg[7] += y;
+          break;
 
-		// update cursor state
-		switch (command) {
-			case 'Z':
-				x = startX
-				y = startY
-				break
-			case 'H':
-				x = seg[1]
-				break
-			case 'V':
-				y = seg[1]
-				break
-			case 'M':
-				x = startX = seg[1]
-				y = startY = seg[2]
-				break
-			default:
-				x = seg[seg.length - 2]
-				y = seg[seg.length - 1]
-		}
+        case 'v':
+          seg[1] += y;
+          break;
 
-		return seg
-	})
+        case 'h':
+          seg[1] += x;
+          break;
+
+        default:
+          for (var i = 1; i < seg.length;) {
+            seg[i++] += x;
+            seg[i++] += y;
+          }
+
+      }
+    } // update cursor state
+
+
+    switch (command) {
+      case 'Z':
+        x = startX;
+        y = startY;
+        break;
+
+      case 'H':
+        x = seg[1];
+        break;
+
+      case 'V':
+        y = seg[1];
+        break;
+
+      case 'M':
+        x = startX = seg[1];
+        y = startY = seg[2];
+        break;
+
+      default:
+        x = seg[seg.length - 2];
+        y = seg[seg.length - 1];
+    }
+
+    return seg;
+  });
 }
-
 
 /***/ }),
 /* 44 */
@@ -12782,210 +12776,199 @@ module.exports = function contours(svg, scale, simp) {
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(48)()
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = __webpack_require__(48)();
 
 /***/ }),
 /* 48 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function clone(point) { //TODO: use gl-vec2 for this
-    return [point[0], point[1]]
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function clone(point) {
+  //TODO: use gl-vec2 for this
+  return [point[0], point[1]];
 }
 
 function vec2(x, y) {
-    return [x, y]
+  return [x, y];
 }
 
 module.exports = function createBezierBuilder(opt) {
-    opt = opt||{}
+  opt = opt || {};
+  var RECURSION_LIMIT = typeof opt.recursion === 'number' ? opt.recursion : 8;
+  var FLT_EPSILON = typeof opt.epsilon === 'number' ? opt.epsilon : 1.19209290e-7;
+  var PATH_DISTANCE_EPSILON = typeof opt.pathEpsilon === 'number' ? opt.pathEpsilon : 1.0;
+  var curve_angle_tolerance_epsilon = typeof opt.angleEpsilon === 'number' ? opt.angleEpsilon : 0.01;
+  var m_angle_tolerance = opt.angleTolerance || 0;
+  var m_cusp_limit = opt.cuspLimit || 0;
+  return function bezierCurve(start, c1, c2, end, scale, points) {
+    if (!points) points = [];
+    scale = typeof scale === 'number' ? scale : 1.0;
+    var distanceTolerance = PATH_DISTANCE_EPSILON / scale;
+    distanceTolerance *= distanceTolerance;
+    begin(start, c1, c2, end, points, distanceTolerance);
+    return points;
+  }; ////// Based on:
+  ////// https://github.com/pelson/antigrain/blob/master/agg-2.4/src/agg_curves.cpp
 
-    var RECURSION_LIMIT = typeof opt.recursion === 'number' ? opt.recursion : 8
-    var FLT_EPSILON = typeof opt.epsilon === 'number' ? opt.epsilon : 1.19209290e-7
-    var PATH_DISTANCE_EPSILON = typeof opt.pathEpsilon === 'number' ? opt.pathEpsilon : 1.0
+  function begin(start, c1, c2, end, points, distanceTolerance) {
+    points.push(clone(start));
+    var x1 = start[0],
+        y1 = start[1],
+        x2 = c1[0],
+        y2 = c1[1],
+        x3 = c2[0],
+        y3 = c2[1],
+        x4 = end[0],
+        y4 = end[1];
+    recursive(x1, y1, x2, y2, x3, y3, x4, y4, points, distanceTolerance, 0);
+    points.push(clone(end));
+  }
 
-    var curve_angle_tolerance_epsilon = typeof opt.angleEpsilon === 'number' ? opt.angleEpsilon : 0.01
-    var m_angle_tolerance = opt.angleTolerance || 0
-    var m_cusp_limit = opt.cuspLimit || 0
+  function recursive(x1, y1, x2, y2, x3, y3, x4, y4, points, distanceTolerance, level) {
+    if (level > RECURSION_LIMIT) return;
+    var pi = Math.PI; // Calculate all the mid-points of the line segments
+    //----------------------
 
-    return function bezierCurve(start, c1, c2, end, scale, points) {
-        if (!points)
-            points = []
+    var x12 = (x1 + x2) / 2;
+    var y12 = (y1 + y2) / 2;
+    var x23 = (x2 + x3) / 2;
+    var y23 = (y2 + y3) / 2;
+    var x34 = (x3 + x4) / 2;
+    var y34 = (y3 + y4) / 2;
+    var x123 = (x12 + x23) / 2;
+    var y123 = (y12 + y23) / 2;
+    var x234 = (x23 + x34) / 2;
+    var y234 = (y23 + y34) / 2;
+    var x1234 = (x123 + x234) / 2;
+    var y1234 = (y123 + y234) / 2;
 
-        scale = typeof scale === 'number' ? scale : 1.0
-        var distanceTolerance = PATH_DISTANCE_EPSILON / scale
-        distanceTolerance *= distanceTolerance
-        begin(start, c1, c2, end, points, distanceTolerance)
-        return points
-    }
+    if (level > 0) {
+      // Enforce subdivision first time
+      // Try to approximate the full cubic curve by a single straight line
+      //------------------
+      var dx = x4 - x1;
+      var dy = y4 - y1;
+      var d2 = Math.abs((x2 - x4) * dy - (y2 - y4) * dx);
+      var d3 = Math.abs((x3 - x4) * dy - (y3 - y4) * dx);
+      var da1, da2;
+
+      if (d2 > FLT_EPSILON && d3 > FLT_EPSILON) {
+        // Regular care
+        //-----------------
+        if ((d2 + d3) * (d2 + d3) <= distanceTolerance * (dx * dx + dy * dy)) {
+          // If the curvature doesn't exceed the distanceTolerance value
+          // we tend to finish subdivisions.
+          //----------------------
+          if (m_angle_tolerance < curve_angle_tolerance_epsilon) {
+            points.push(vec2(x1234, y1234));
+            return;
+          } // Angle & Cusp Condition
+          //----------------------
 
 
-    ////// Based on:
-    ////// https://github.com/pelson/antigrain/blob/master/agg-2.4/src/agg_curves.cpp
+          var a23 = Math.atan2(y3 - y2, x3 - x2);
+          da1 = Math.abs(a23 - Math.atan2(y2 - y1, x2 - x1));
+          da2 = Math.abs(Math.atan2(y4 - y3, x4 - x3) - a23);
+          if (da1 >= pi) da1 = 2 * pi - da1;
+          if (da2 >= pi) da2 = 2 * pi - da2;
 
-    function begin(start, c1, c2, end, points, distanceTolerance) {
-        points.push(clone(start))
-        var x1 = start[0],
-            y1 = start[1],
-            x2 = c1[0],
-            y2 = c1[1],
-            x3 = c2[0],
-            y3 = c2[1],
-            x4 = end[0],
-            y4 = end[1]
-        recursive(x1, y1, x2, y2, x3, y3, x4, y4, points, distanceTolerance, 0)
-        points.push(clone(end))
-    }
+          if (da1 + da2 < m_angle_tolerance) {
+            // Finally we can stop the recursion
+            //----------------------
+            points.push(vec2(x1234, y1234));
+            return;
+          }
 
-    function recursive(x1, y1, x2, y2, x3, y3, x4, y4, points, distanceTolerance, level) {
-        if(level > RECURSION_LIMIT) 
-            return
-
-        var pi = Math.PI
-
-        // Calculate all the mid-points of the line segments
-        //----------------------
-        var x12   = (x1 + x2) / 2
-        var y12   = (y1 + y2) / 2
-        var x23   = (x2 + x3) / 2
-        var y23   = (y2 + y3) / 2
-        var x34   = (x3 + x4) / 2
-        var y34   = (y3 + y4) / 2
-        var x123  = (x12 + x23) / 2
-        var y123  = (y12 + y23) / 2
-        var x234  = (x23 + x34) / 2
-        var y234  = (y23 + y34) / 2
-        var x1234 = (x123 + x234) / 2
-        var y1234 = (y123 + y234) / 2
-
-        if(level > 0) { // Enforce subdivision first time
-            // Try to approximate the full cubic curve by a single straight line
-            //------------------
-            var dx = x4-x1
-            var dy = y4-y1
-
-            var d2 = Math.abs((x2 - x4) * dy - (y2 - y4) * dx)
-            var d3 = Math.abs((x3 - x4) * dy - (y3 - y4) * dx)
-
-            var da1, da2
-
-            if(d2 > FLT_EPSILON && d3 > FLT_EPSILON) {
-                // Regular care
-                //-----------------
-                if((d2 + d3)*(d2 + d3) <= distanceTolerance * (dx*dx + dy*dy)) {
-                    // If the curvature doesn't exceed the distanceTolerance value
-                    // we tend to finish subdivisions.
-                    //----------------------
-                    if(m_angle_tolerance < curve_angle_tolerance_epsilon) {
-                        points.push(vec2(x1234, y1234))
-                        return
-                    }
-
-                    // Angle & Cusp Condition
-                    //----------------------
-                    var a23 = Math.atan2(y3 - y2, x3 - x2)
-                    da1 = Math.abs(a23 - Math.atan2(y2 - y1, x2 - x1))
-                    da2 = Math.abs(Math.atan2(y4 - y3, x4 - x3) - a23)
-                    if(da1 >= pi) da1 = 2*pi - da1
-                    if(da2 >= pi) da2 = 2*pi - da2
-
-                    if(da1 + da2 < m_angle_tolerance) {
-                        // Finally we can stop the recursion
-                        //----------------------
-                        points.push(vec2(x1234, y1234))
-                        return
-                    }
-
-                    if(m_cusp_limit !== 0.0) {
-                        if(da1 > m_cusp_limit) {
-                            points.push(vec2(x2, y2))
-                            return
-                        }
-
-                        if(da2 > m_cusp_limit) {
-                            points.push(vec2(x3, y3))
-                            return
-                        }
-                    }
-                }
+          if (m_cusp_limit !== 0.0) {
+            if (da1 > m_cusp_limit) {
+              points.push(vec2(x2, y2));
+              return;
             }
-            else {
-                if(d2 > FLT_EPSILON) {
-                    // p1,p3,p4 are collinear, p2 is considerable
-                    //----------------------
-                    if(d2 * d2 <= distanceTolerance * (dx*dx + dy*dy)) {
-                        if(m_angle_tolerance < curve_angle_tolerance_epsilon) {
-                            points.push(vec2(x1234, y1234))
-                            return
-                        }
 
-                        // Angle Condition
-                        //----------------------
-                        da1 = Math.abs(Math.atan2(y3 - y2, x3 - x2) - Math.atan2(y2 - y1, x2 - x1))
-                        if(da1 >= pi) da1 = 2*pi - da1
-
-                        if(da1 < m_angle_tolerance) {
-                            points.push(vec2(x2, y2))
-                            points.push(vec2(x3, y3))
-                            return
-                        }
-
-                        if(m_cusp_limit !== 0.0) {
-                            if(da1 > m_cusp_limit) {
-                                points.push(vec2(x2, y2))
-                                return
-                            }
-                        }
-                    }
-                }
-                else if(d3 > FLT_EPSILON) {
-                    // p1,p2,p4 are collinear, p3 is considerable
-                    //----------------------
-                    if(d3 * d3 <= distanceTolerance * (dx*dx + dy*dy)) {
-                        if(m_angle_tolerance < curve_angle_tolerance_epsilon) {
-                            points.push(vec2(x1234, y1234))
-                            return
-                        }
-
-                        // Angle Condition
-                        //----------------------
-                        da1 = Math.abs(Math.atan2(y4 - y3, x4 - x3) - Math.atan2(y3 - y2, x3 - x2))
-                        if(da1 >= pi) da1 = 2*pi - da1
-
-                        if(da1 < m_angle_tolerance) {
-                            points.push(vec2(x2, y2))
-                            points.push(vec2(x3, y3))
-                            return
-                        }
-
-                        if(m_cusp_limit !== 0.0) {
-                            if(da1 > m_cusp_limit)
-                            {
-                                points.push(vec2(x3, y3))
-                                return
-                            }
-                        }
-                    }
-                }
-                else {
-                    // Collinear case
-                    //-----------------
-                    dx = x1234 - (x1 + x4) / 2
-                    dy = y1234 - (y1 + y4) / 2
-                    if(dx*dx + dy*dy <= distanceTolerance) {
-                        points.push(vec2(x1234, y1234))
-                        return
-                    }
-                }
+            if (da2 > m_cusp_limit) {
+              points.push(vec2(x3, y3));
+              return;
             }
+          }
         }
+      } else {
+        if (d2 > FLT_EPSILON) {
+          // p1,p3,p4 are collinear, p2 is considerable
+          //----------------------
+          if (d2 * d2 <= distanceTolerance * (dx * dx + dy * dy)) {
+            if (m_angle_tolerance < curve_angle_tolerance_epsilon) {
+              points.push(vec2(x1234, y1234));
+              return;
+            } // Angle Condition
+            //----------------------
 
-        // Continue subdivision
-        //----------------------
-        recursive(x1, y1, x12, y12, x123, y123, x1234, y1234, points, distanceTolerance, level + 1) 
-        recursive(x1234, y1234, x234, y234, x34, y34, x4, y4, points, distanceTolerance, level + 1) 
-    }
-}
 
+            da1 = Math.abs(Math.atan2(y3 - y2, x3 - x2) - Math.atan2(y2 - y1, x2 - x1));
+            if (da1 >= pi) da1 = 2 * pi - da1;
+
+            if (da1 < m_angle_tolerance) {
+              points.push(vec2(x2, y2));
+              points.push(vec2(x3, y3));
+              return;
+            }
+
+            if (m_cusp_limit !== 0.0) {
+              if (da1 > m_cusp_limit) {
+                points.push(vec2(x2, y2));
+                return;
+              }
+            }
+          }
+        } else if (d3 > FLT_EPSILON) {
+          // p1,p2,p4 are collinear, p3 is considerable
+          //----------------------
+          if (d3 * d3 <= distanceTolerance * (dx * dx + dy * dy)) {
+            if (m_angle_tolerance < curve_angle_tolerance_epsilon) {
+              points.push(vec2(x1234, y1234));
+              return;
+            } // Angle Condition
+            //----------------------
+
+
+            da1 = Math.abs(Math.atan2(y4 - y3, x4 - x3) - Math.atan2(y3 - y2, x3 - x2));
+            if (da1 >= pi) da1 = 2 * pi - da1;
+
+            if (da1 < m_angle_tolerance) {
+              points.push(vec2(x2, y2));
+              points.push(vec2(x3, y3));
+              return;
+            }
+
+            if (m_cusp_limit !== 0.0) {
+              if (da1 > m_cusp_limit) {
+                points.push(vec2(x3, y3));
+                return;
+              }
+            }
+          }
+        } else {
+          // Collinear case
+          //-----------------
+          dx = x1234 - (x1 + x4) / 2;
+          dy = y1234 - (y1 + y4) / 2;
+
+          if (dx * dx + dy * dy <= distanceTolerance) {
+            points.push(vec2(x1234, y1234));
+            return;
+          }
+        }
+      }
+    } // Continue subdivision
+    //----------------------
+
+
+    recursive(x1, y1, x12, y12, x123, y123, x1234, y1234, points, distanceTolerance, level + 1);
+    recursive(x1234, y1234, x234, y234, x34, y34, x4, y4, points, distanceTolerance, level + 1);
+  }
+};
 
 /***/ }),
 /* 49 */
@@ -13028,122 +13011,117 @@ const add = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].add;
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var simplifyRadialDist = __webpack_require__(51)
-var simplifyDouglasPeucker = __webpack_require__(52)
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-//simplifies using both algorithms
+var simplifyRadialDist = __webpack_require__(51);
+
+var simplifyDouglasPeucker = __webpack_require__(52); //simplifies using both algorithms
+
+
 module.exports = function simplify(points, tolerance) {
-    points = simplifyRadialDist(points, tolerance);
-    points = simplifyDouglasPeucker(points, tolerance);
-    return points;
-}
+  points = simplifyRadialDist(points, tolerance);
+  points = simplifyDouglasPeucker(points, tolerance);
+  return points;
+};
 
 module.exports.radialDistance = simplifyRadialDist;
 module.exports.douglasPeucker = simplifyDouglasPeucker;
 
 /***/ }),
 /* 51 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function getSqDist(p1, p2) {
-    var dx = p1[0] - p2[0],
-        dy = p1[1] - p2[1];
+  var dx = p1[0] - p2[0],
+      dy = p1[1] - p2[1];
+  return dx * dx + dy * dy;
+} // basic distance-based simplification
 
-    return dx * dx + dy * dy;
-}
 
-// basic distance-based simplification
 module.exports = function simplifyRadialDist(points, tolerance) {
-    if (points.length<=1)
-        return points;
-    tolerance = typeof tolerance === 'number' ? tolerance : 1;
-    var sqTolerance = tolerance * tolerance;
-    
-    var prevPoint = points[0],
-        newPoints = [prevPoint],
-        point;
+  if (points.length <= 1) return points;
+  tolerance = typeof tolerance === 'number' ? tolerance : 1;
+  var sqTolerance = tolerance * tolerance;
+  var prevPoint = points[0],
+      newPoints = [prevPoint],
+      point;
 
-    for (var i = 1, len = points.length; i < len; i++) {
-        point = points[i];
+  for (var i = 1, len = points.length; i < len; i++) {
+    point = points[i];
 
-        if (getSqDist(point, prevPoint) > sqTolerance) {
-            newPoints.push(point);
-            prevPoint = point;
-        }
+    if (getSqDist(point, prevPoint) > sqTolerance) {
+      newPoints.push(point);
+      prevPoint = point;
     }
+  }
 
-    if (prevPoint !== point) newPoints.push(point);
-
-    return newPoints;
-}
+  if (prevPoint !== point) newPoints.push(point);
+  return newPoints;
+};
 
 /***/ }),
 /* 52 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // square distance from a point to a segment
 function getSqSegDist(p, p1, p2) {
-    var x = p1[0],
-        y = p1[1],
-        dx = p2[0] - x,
-        dy = p2[1] - y;
+  var x = p1[0],
+      y = p1[1],
+      dx = p2[0] - x,
+      dy = p2[1] - y;
 
-    if (dx !== 0 || dy !== 0) {
+  if (dx !== 0 || dy !== 0) {
+    var t = ((p[0] - x) * dx + (p[1] - y) * dy) / (dx * dx + dy * dy);
 
-        var t = ((p[0] - x) * dx + (p[1] - y) * dy) / (dx * dx + dy * dy);
-
-        if (t > 1) {
-            x = p2[0];
-            y = p2[1];
-
-        } else if (t > 0) {
-            x += dx * t;
-            y += dy * t;
-        }
+    if (t > 1) {
+      x = p2[0];
+      y = p2[1];
+    } else if (t > 0) {
+      x += dx * t;
+      y += dy * t;
     }
+  }
 
-    dx = p[0] - x;
-    dy = p[1] - y;
-
-    return dx * dx + dy * dy;
+  dx = p[0] - x;
+  dy = p[1] - y;
+  return dx * dx + dy * dy;
 }
 
 function simplifyDPStep(points, first, last, sqTolerance, simplified) {
-    var maxSqDist = sqTolerance,
-        index;
+  var maxSqDist = sqTolerance,
+      index;
 
-    for (var i = first + 1; i < last; i++) {
-        var sqDist = getSqSegDist(points[i], points[first], points[last]);
+  for (var i = first + 1; i < last; i++) {
+    var sqDist = getSqSegDist(points[i], points[first], points[last]);
 
-        if (sqDist > maxSqDist) {
-            index = i;
-            maxSqDist = sqDist;
-        }
+    if (sqDist > maxSqDist) {
+      index = i;
+      maxSqDist = sqDist;
     }
+  }
 
-    if (maxSqDist > sqTolerance) {
-        if (index - first > 1) simplifyDPStep(points, first, index, sqTolerance, simplified);
-        simplified.push(points[index]);
-        if (last - index > 1) simplifyDPStep(points, index, last, sqTolerance, simplified);
-    }
-}
+  if (maxSqDist > sqTolerance) {
+    if (index - first > 1) simplifyDPStep(points, first, index, sqTolerance, simplified);
+    simplified.push(points[index]);
+    if (last - index > 1) simplifyDPStep(points, index, last, sqTolerance, simplified);
+  }
+} // simplification using Ramer-Douglas-Peucker algorithm
 
-// simplification using Ramer-Douglas-Peucker algorithm
+
 module.exports = function simplifyDouglasPeucker(points, tolerance) {
-    if (points.length<=1)
-        return points;
-    tolerance = typeof tolerance === 'number' ? tolerance : 1;
-    var sqTolerance = tolerance * tolerance;
-    
-    var last = points.length - 1;
-
-    var simplified = [points[0]];
-    simplifyDPStep(points, 0, last, sqTolerance, simplified);
-    simplified.push(points[last]);
-
-    return simplified;
-}
-
+  if (points.length <= 1) return points;
+  tolerance = typeof tolerance === 'number' ? tolerance : 1;
+  var sqTolerance = tolerance * tolerance;
+  var last = points.length - 1;
+  var simplified = [points[0]];
+  simplifyDPStep(points, 0, last, sqTolerance, simplified);
+  simplified.push(points[last]);
+  return simplified;
+};
 
 /***/ }),
 /* 53 */
@@ -14761,58 +14739,63 @@ function round(complex, point, normal, scale, dir = 1, roundSegments = 20) {
 
 /***/ }),
 /* 58 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function numtype(num, def) {
-	return typeof num === 'number'
-		? num 
-		: (typeof def === 'number' ? def : 0)
-}
+  return typeof num === 'number' ? num : typeof def === 'number' ? def : 0;
+};
 
 /***/ }),
 /* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var add = __webpack_require__(60)
-var set = __webpack_require__(61)
-var normalize = __webpack_require__(62)
-var subtract = __webpack_require__(63)
-var dot = __webpack_require__(64)
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-var tmp = [0, 0]
+var add = __webpack_require__(60);
+
+var set = __webpack_require__(61);
+
+var normalize = __webpack_require__(62);
+
+var subtract = __webpack_require__(63);
+
+var dot = __webpack_require__(64);
+
+var tmp = [0, 0];
 
 module.exports.computeMiter = function computeMiter(tangent, miter, lineA, lineB, halfThick) {
-    //get tangent line
-    add(tangent, lineA, lineB)
-    normalize(tangent, tangent)
+  //get tangent line
+  add(tangent, lineA, lineB);
+  normalize(tangent, tangent); //get miter as a unit vector
 
-    //get miter as a unit vector
-    set(miter, -tangent[1], tangent[0])
-    set(tmp, -lineA[1], lineA[0])
+  set(miter, -tangent[1], tangent[0]);
+  set(tmp, -lineA[1], lineA[0]); //get the necessary length of our miter
 
-    //get the necessary length of our miter
-    return halfThick / dot(miter, tmp)
-}
+  return halfThick / dot(miter, tmp);
+};
 
 module.exports.normal = function normal(out, dir) {
-    //get perpendicular
-    set(out, -dir[1], dir[0])
-    return out
-}
+  //get perpendicular
+  set(out, -dir[1], dir[0]);
+  return out;
+};
 
 module.exports.direction = function direction(out, a, b) {
-    //get unit dir of two lines
-    subtract(out, a, b)
-    normalize(out, out)
-    return out
-}
+  //get unit dir of two lines
+  subtract(out, a, b);
+  normalize(out, out);
+  return out;
+};
 
 /***/ }),
 /* 60 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = add
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = add;
 /**
  * Adds two vec2's
  *
@@ -14821,18 +14804,20 @@ module.exports = add
  * @param {vec2} b the second operand
  * @returns {vec2} out
  */
+
 function add(out, a, b) {
-    out[0] = a[0] + b[0]
-    out[1] = a[1] + b[1]
-    return out
+  out[0] = a[0] + b[0];
+  out[1] = a[1] + b[1];
+  return out;
 }
 
 /***/ }),
 /* 61 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = set
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = set;
 /**
  * Set the components of a vec2 to the given values
  *
@@ -14841,18 +14826,20 @@ module.exports = set
  * @param {Number} y Y component
  * @returns {vec2} out
  */
+
 function set(out, x, y) {
-    out[0] = x
-    out[1] = y
-    return out
+  out[0] = x;
+  out[1] = y;
+  return out;
 }
 
 /***/ }),
 /* 62 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = normalize
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = normalize;
 /**
  * Normalize a vec2
  *
@@ -14860,25 +14847,29 @@ module.exports = normalize
  * @param {vec2} a vector to normalize
  * @returns {vec2} out
  */
+
 function normalize(out, a) {
-    var x = a[0],
-        y = a[1]
-    var len = x*x + y*y
-    if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
-        len = 1 / Math.sqrt(len)
-        out[0] = a[0] * len
-        out[1] = a[1] * len
-    }
-    return out
+  var x = a[0],
+      y = a[1];
+  var len = x * x + y * y;
+
+  if (len > 0) {
+    //TODO: evaluate use of glm_invsqrt here?
+    len = 1 / Math.sqrt(len);
+    out[0] = a[0] * len;
+    out[1] = a[1] * len;
+  }
+
+  return out;
 }
 
 /***/ }),
 /* 63 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = subtract
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = subtract;
 /**
  * Subtracts vector b from vector a
  *
@@ -14887,18 +14878,20 @@ module.exports = subtract
  * @param {vec2} b the second operand
  * @returns {vec2} out
  */
+
 function subtract(out, a, b) {
-    out[0] = a[0] - b[0]
-    out[1] = a[1] - b[1]
-    return out
+  out[0] = a[0] - b[0];
+  out[1] = a[1] - b[1];
+  return out;
 }
 
 /***/ }),
 /* 64 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = dot
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = dot;
 /**
  * Calculates the dot product of two vec2's
  *
@@ -14906,8 +14899,9 @@ module.exports = dot
  * @param {vec2} b the second operand
  * @returns {Number} dot product of a and b
  */
+
 function dot(a, b) {
-    return a[0] * b[0] + a[1] * b[1]
+  return a[0] * b[0] + a[1] * b[1];
 }
 
 /***/ }),
@@ -14992,6 +14986,8 @@ module.exports = function (contours, opt) {
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 module.exports = __webpack_require__(68);
 
 /***/ }),
@@ -15026,3429 +15022,3668 @@ module.exports = __webpack_require__(68);
 ** be used in advertising or otherwise to promote the sale, use or other dealings in
 ** this Software without prior written authorization from Silicon Graphics, Inc.
 */
+
 /*
 ** Author: Mikko Mononen, Aug 2013.
 ** The code is based on GLU libtess by Eric Veach, July 1994
 */
 
-	
-
-	/* Public API */
-
-	var Tess2 = {};
-
-	module.exports = Tess2;
-	
-	Tess2.WINDING_ODD = 0;
-	Tess2.WINDING_NONZERO = 1;
-	Tess2.WINDING_POSITIVE = 2;
-	Tess2.WINDING_NEGATIVE = 3;
-	Tess2.WINDING_ABS_GEQ_TWO = 4;
-
-	Tess2.POLYGONS = 0;
-	Tess2.CONNECTED_POLYGONS = 1;
-	Tess2.BOUNDARY_CONTOURS = 2;
-
-	Tess2.tesselate = function(opts) {
-		var debug =  opts.debug || false;
-		var tess = new Tesselator();
-		for (var i = 0; i < opts.contours.length; i++) {
-			tess.addContour(opts.vertexSize || 2, opts.contours[i]);
-		}
-		tess.tesselate(opts.windingRule || Tess2.WINDING_ODD,
-					   opts.elementType || Tess2.POLYGONS,
-					   opts.polySize || 3,
-					   opts.vertexSize || 2,
-					   opts.normal || [0,0,1]);
-		return {
-			vertices: tess.vertices,
-			vertexIndices: tess.vertexIndices,
-			vertexCount: tess.vertexCount,
-			elements: tess.elements,
-			elementCount: tess.elementCount,
-			mesh: debug ? tess.mesh : undefined
-		};
-	};
-
-	/* Internal */
-
-	var assert = function(cond) {
-		if (!cond) {
-			throw "Assertion Failed!";
-		}
-	}
-
-	/* The mesh structure is similar in spirit, notation, and operations
-	* to the "quad-edge" structure (see L. Guibas and J. Stolfi, Primitives
-	* for the manipulation of general subdivisions and the computation of
-	* Voronoi diagrams, ACM Transactions on Graphics, 4(2):74-123, April 1985).
-	* For a simplified description, see the course notes for CS348a,
-	* "Mathematical Foundations of Computer Graphics", available at the
-	* Stanford bookstore (and taught during the fall quarter).
-	* The implementation also borrows a tiny subset of the graph-based approach
-	* use in Mantyla's Geometric Work Bench (see M. Mantyla, An Introduction
-	* to Sold Modeling, Computer Science Press, Rockville, Maryland, 1988).
-	*
-	* The fundamental data structure is the "half-edge".  Two half-edges
-	* go together to make an edge, but they point in opposite directions.
-	* Each half-edge has a pointer to its mate (the "symmetric" half-edge Sym),
-	* its origin vertex (Org), the face on its left side (Lface), and the
-	* adjacent half-edges in the CCW direction around the origin vertex
-	* (Onext) and around the left face (Lnext).  There is also a "next"
-	* pointer for the global edge list (see below).
-	*
-	* The notation used for mesh navigation:
-	*  Sym   = the mate of a half-edge (same edge, but opposite direction)
-	*  Onext = edge CCW around origin vertex (keep same origin)
-	*  Dnext = edge CCW around destination vertex (keep same dest)
-	*  Lnext = edge CCW around left face (dest becomes new origin)
-	*  Rnext = edge CCW around right face (origin becomes new dest)
-	*
-	* "prev" means to substitute CW for CCW in the definitions above.
-	*
-	* The mesh keeps global lists of all vertices, faces, and edges,
-	* stored as doubly-linked circular lists with a dummy header node.
-	* The mesh stores pointers to these dummy headers (vHead, fHead, eHead).
-	*
-	* The circular edge list is special; since half-edges always occur
-	* in pairs (e and e->Sym), each half-edge stores a pointer in only
-	* one direction.  Starting at eHead and following the e->next pointers
-	* will visit each *edge* once (ie. e or e->Sym, but not both).
-	* e->Sym stores a pointer in the opposite direction, thus it is
-	* always true that e->Sym->next->Sym->next == e.
-	*
-	* Each vertex has a pointer to next and previous vertices in the
-	* circular list, and a pointer to a half-edge with this vertex as
-	* the origin (NULL if this is the dummy header).  There is also a
-	* field "data" for client data.
-	*
-	* Each face has a pointer to the next and previous faces in the
-	* circular list, and a pointer to a half-edge with this face as
-	* the left face (NULL if this is the dummy header).  There is also
-	* a field "data" for client data.
-	*
-	* Note that what we call a "face" is really a loop; faces may consist
-	* of more than one loop (ie. not simply connected), but there is no
-	* record of this in the data structure.  The mesh may consist of
-	* several disconnected regions, so it may not be possible to visit
-	* the entire mesh by starting at a half-edge and traversing the edge
-	* structure.
-	*
-	* The mesh does NOT support isolated vertices; a vertex is deleted along
-	* with its last edge.  Similarly when two faces are merged, one of the
-	* faces is deleted (see tessMeshDelete below).  For mesh operations,
-	* all face (loop) and vertex pointers must not be NULL.  However, once
-	* mesh manipulation is finished, TESSmeshZapFace can be used to delete
-	* faces of the mesh, one at a time.  All external faces can be "zapped"
-	* before the mesh is returned to the client; then a NULL face indicates
-	* a region which is not part of the output polygon.
-	*/
-
-	function TESSvertex() {
-		this.next = null;	/* next vertex (never NULL) */
-		this.prev = null;	/* previous vertex (never NULL) */
-		this.anEdge = null;	/* a half-edge with this origin */
-
-		/* Internal data (keep hidden) */
-		this.coords = [0,0,0];	/* vertex location in 3D */
-		this.s = 0.0;
-		this.t = 0.0;			/* projection onto the sweep plane */
-		this.pqHandle = 0;		/* to allow deletion from priority queue */
-		this.n = 0;				/* to allow identify unique vertices */
-		this.idx = 0;			/* to allow map result to original verts */
-	} 
-
-	function TESSface() {
-		this.next = null;		/* next face (never NULL) */
-		this.prev = null;		/* previous face (never NULL) */
-		this.anEdge = null;		/* a half edge with this left face */
-
-		/* Internal data (keep hidden) */
-		this.trail = null;		/* "stack" for conversion to strips */
-		this.n = 0;				/* to allow identiy unique faces */
-		this.marked = false;	/* flag for conversion to strips */
-		this.inside = false;	/* this face is in the polygon interior */
-	};
-
-	function TESShalfEdge(side) {
-		this.next = null;		/* doubly-linked list (prev==Sym->next) */
-		this.Sym = null;		/* same edge, opposite direction */
-		this.Onext = null;		/* next edge CCW around origin */
-		this.Lnext = null;		/* next edge CCW around left face */
-		this.Org = null;		/* origin vertex (Overtex too long) */
-		this.Lface = null;		/* left face */
-
-		/* Internal data (keep hidden) */
-		this.activeRegion = null;	/* a region with this upper edge (sweep.c) */
-		this.winding = 0;			/* change in winding number when crossing
-									   from the right face to the left face */
-		this.side = side;
-	};
-
-	TESShalfEdge.prototype = {
-		get Rface() { return this.Sym.Lface; },
-		set Rface(v) { this.Sym.Lface = v; },
-		get Dst() { return this.Sym.Org; },
-		set Dst(v) { this.Sym.Org = v; },
-		get Oprev() { return this.Sym.Lnext; },
-		set Oprev(v) { this.Sym.Lnext = v; },
-		get Lprev() { return this.Onext.Sym; },
-		set Lprev(v) { this.Onext.Sym = v; },
-		get Dprev() { return this.Lnext.Sym; },
-		set Dprev(v) { this.Lnext.Sym = v; },
-		get Rprev() { return this.Sym.Onext; },
-		set Rprev(v) { this.Sym.Onext = v; },
-		get Dnext() { return /*this.Rprev*/this.Sym.Onext.Sym; },  /* 3 pointers */
-		set Dnext(v) { /*this.Rprev*/this.Sym.Onext.Sym = v; },  /* 3 pointers */
-		get Rnext() { return /*this.Oprev*/this.Sym.Lnext.Sym; },  /* 3 pointers */
-		set Rnext(v) { /*this.Oprev*/this.Sym.Lnext.Sym = v; },  /* 3 pointers */
-	};
-
-
-
-	function TESSmesh() {
-		var v = new TESSvertex();
-		var f = new TESSface();
-		var e = new TESShalfEdge(0);
-		var eSym = new TESShalfEdge(1);
-
-		v.next = v.prev = v;
-		v.anEdge = null;
-
-		f.next = f.prev = f;
-		f.anEdge = null;
-		f.trail = null;
-		f.marked = false;
-		f.inside = false;
-
-		e.next = e;
-		e.Sym = eSym;
-		e.Onext = null;
-		e.Lnext = null;
-		e.Org = null;
-		e.Lface = null;
-		e.winding = 0;
-		e.activeRegion = null;
-
-		eSym.next = eSym;
-		eSym.Sym = e;
-		eSym.Onext = null;
-		eSym.Lnext = null;
-		eSym.Org = null;
-		eSym.Lface = null;
-		eSym.winding = 0;
-		eSym.activeRegion = null;
-
-		this.vHead = v;		/* dummy header for vertex list */
-		this.fHead = f;		/* dummy header for face list */
-		this.eHead = e;		/* dummy header for edge list */
-		this.eHeadSym = eSym;	/* and its symmetric counterpart */
-	};
-
-	/* The mesh operations below have three motivations: completeness,
-	* convenience, and efficiency.  The basic mesh operations are MakeEdge,
-	* Splice, and Delete.  All the other edge operations can be implemented
-	* in terms of these.  The other operations are provided for convenience
-	* and/or efficiency.
-	*
-	* When a face is split or a vertex is added, they are inserted into the
-	* global list *before* the existing vertex or face (ie. e->Org or e->Lface).
-	* This makes it easier to process all vertices or faces in the global lists
-	* without worrying about processing the same data twice.  As a convenience,
-	* when a face is split, the "inside" flag is copied from the old face.
-	* Other internal data (v->data, v->activeRegion, f->data, f->marked,
-	* f->trail, e->winding) is set to zero.
-	*
-	* ********************** Basic Edge Operations **************************
-	*
-	* tessMeshMakeEdge( mesh ) creates one edge, two vertices, and a loop.
-	* The loop (face) consists of the two new half-edges.
-	*
-	* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
-	* mesh connectivity and topology.  It changes the mesh so that
-	*  eOrg->Onext <- OLD( eDst->Onext )
-	*  eDst->Onext <- OLD( eOrg->Onext )
-	* where OLD(...) means the value before the meshSplice operation.
-	*
-	* This can have two effects on the vertex structure:
-	*  - if eOrg->Org != eDst->Org, the two vertices are merged together
-	*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
-	* In both cases, eDst->Org is changed and eOrg->Org is untouched.
-	*
-	* Similarly (and independently) for the face structure,
-	*  - if eOrg->Lface == eDst->Lface, one loop is split into two
-	*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
-	* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
-	*
-	* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
-	* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
-	* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
-	* the newly created loop will contain eDel->Dst.  If the deletion of eDel
-	* would create isolated vertices, those are deleted as well.
-	*
-	* ********************** Other Edge Operations **************************
-	*
-	* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
-	* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
-	* eOrg and eNew will have the same left face.
-	*
-	* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
-	* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
-	* eOrg and eNew will have the same left face.
-	*
-	* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
-	* to eDst->Org, and returns the corresponding half-edge eNew.
-	* If eOrg->Lface == eDst->Lface, this splits one loop into two,
-	* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
-	* loops are merged into one, and the loop eDst->Lface is destroyed.
-	*
-	* ************************ Other Operations *****************************
-	*
-	* tessMeshNewMesh() creates a new mesh with no edges, no vertices,
-	* and no loops (what we usually call a "face").
-	*
-	* tessMeshUnion( mesh1, mesh2 ) forms the union of all structures in
-	* both meshes, and returns the new mesh (the old meshes are destroyed).
-	*
-	* tessMeshDeleteMesh( mesh ) will free all storage for any valid mesh.
-	*
-	* tessMeshZapFace( fZap ) destroys a face and removes it from the
-	* global face list.  All edges of fZap will have a NULL pointer as their
-	* left face.  Any edges which also have a NULL pointer as their right face
-	* are deleted entirely (along with any isolated vertices this produces).
-	* An entire mesh can be deleted by zapping its faces, one at a time,
-	* in any order.  Zapped faces cannot be used in further mesh operations!
-	*
-	* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
-	*/
-
-	TESSmesh.prototype = {
-
-		/* MakeEdge creates a new pair of half-edges which form their own loop.
-		* No vertex or face structures are allocated, but these must be assigned
-		* before the current edge operation is completed.
-		*/
-		//static TESShalfEdge *MakeEdge( TESSmesh* mesh, TESShalfEdge *eNext )
-		makeEdge_: function(eNext) {
-			var e = new TESShalfEdge(0);
-			var eSym = new TESShalfEdge(1);
-
-			/* Make sure eNext points to the first edge of the edge pair */
-			if( eNext.Sym.side < eNext.side ) { eNext = eNext.Sym; }
-
-			/* Insert in circular doubly-linked list before eNext.
-			* Note that the prev pointer is stored in Sym->next.
-			*/
-			var ePrev = eNext.Sym.next;
-			eSym.next = ePrev;
-			ePrev.Sym.next = e;
-			e.next = eNext;
-			eNext.Sym.next = eSym;
-
-			e.Sym = eSym;
-			e.Onext = e;
-			e.Lnext = eSym;
-			e.Org = null;
-			e.Lface = null;
-			e.winding = 0;
-			e.activeRegion = null;
-
-			eSym.Sym = e;
-			eSym.Onext = eSym;
-			eSym.Lnext = e;
-			eSym.Org = null;
-			eSym.Lface = null;
-			eSym.winding = 0;
-			eSym.activeRegion = null;
-
-			return e;
-		},
-
-		/* Splice( a, b ) is best described by the Guibas/Stolfi paper or the
-		* CS348a notes (see mesh.h).  Basically it modifies the mesh so that
-		* a->Onext and b->Onext are exchanged.  This can have various effects
-		* depending on whether a and b belong to different face or vertex rings.
-		* For more explanation see tessMeshSplice() below.
-		*/
-		// static void Splice( TESShalfEdge *a, TESShalfEdge *b )
-		splice_: function(a, b) {
-			var aOnext = a.Onext;
-			var bOnext = b.Onext;
-			aOnext.Sym.Lnext = b;
-			bOnext.Sym.Lnext = a;
-			a.Onext = bOnext;
-			b.Onext = aOnext;
-		},
-
-		/* MakeVertex( newVertex, eOrig, vNext ) attaches a new vertex and makes it the
-		* origin of all edges in the vertex loop to which eOrig belongs. "vNext" gives
-		* a place to insert the new vertex in the global vertex list.  We insert
-		* the new vertex *before* vNext so that algorithms which walk the vertex
-		* list will not see the newly created vertices.
-		*/
-		//static void MakeVertex( TESSvertex *newVertex, TESShalfEdge *eOrig, TESSvertex *vNext )
-		makeVertex_: function(newVertex, eOrig, vNext) {
-			var vNew = newVertex;
-			assert(vNew !== null);
-
-			/* insert in circular doubly-linked list before vNext */
-			var vPrev = vNext.prev;
-			vNew.prev = vPrev;
-			vPrev.next = vNew;
-			vNew.next = vNext;
-			vNext.prev = vNew;
-
-			vNew.anEdge = eOrig;
-			/* leave coords, s, t undefined */
-
-			/* fix other edges on this vertex loop */
-			var e = eOrig;
-			do {
-				e.Org = vNew;
-				e = e.Onext;
-			} while(e !== eOrig);
-		},
-
-		/* MakeFace( newFace, eOrig, fNext ) attaches a new face and makes it the left
-		* face of all edges in the face loop to which eOrig belongs.  "fNext" gives
-		* a place to insert the new face in the global face list.  We insert
-		* the new face *before* fNext so that algorithms which walk the face
-		* list will not see the newly created faces.
-		*/
-		// static void MakeFace( TESSface *newFace, TESShalfEdge *eOrig, TESSface *fNext )
-		makeFace_: function(newFace, eOrig, fNext) {
-			var fNew = newFace;
-			assert(fNew !== null); 
-
-			/* insert in circular doubly-linked list before fNext */
-			var fPrev = fNext.prev;
-			fNew.prev = fPrev;
-			fPrev.next = fNew;
-			fNew.next = fNext;
-			fNext.prev = fNew;
-
-			fNew.anEdge = eOrig;
-			fNew.trail = null;
-			fNew.marked = false;
-
-			/* The new face is marked "inside" if the old one was.  This is a
-			* convenience for the common case where a face has been split in two.
-			*/
-			fNew.inside = fNext.inside;
-
-			/* fix other edges on this face loop */
-			var e = eOrig;
-			do {
-				e.Lface = fNew;
-				e = e.Lnext;
-			} while(e !== eOrig);
-		},
-
-		/* KillEdge( eDel ) destroys an edge (the half-edges eDel and eDel->Sym),
-		* and removes from the global edge list.
-		*/
-		//static void KillEdge( TESSmesh *mesh, TESShalfEdge *eDel )
-		killEdge_: function(eDel) {
-			/* Half-edges are allocated in pairs, see EdgePair above */
-			if( eDel.Sym.side < eDel.side ) { eDel = eDel.Sym; }
-
-			/* delete from circular doubly-linked list */
-			var eNext = eDel.next;
-			var ePrev = eDel.Sym.next;
-			eNext.Sym.next = ePrev;
-			ePrev.Sym.next = eNext;
-		},
-
-
-		/* KillVertex( vDel ) destroys a vertex and removes it from the global
-		* vertex list.  It updates the vertex loop to point to a given new vertex.
-		*/
-		//static void KillVertex( TESSmesh *mesh, TESSvertex *vDel, TESSvertex *newOrg )
-		killVertex_: function(vDel, newOrg) {
-			var eStart = vDel.anEdge;
-			/* change the origin of all affected edges */
-			var e = eStart;
-			do {
-				e.Org = newOrg;
-				e = e.Onext;
-			} while(e !== eStart);
-
-			/* delete from circular doubly-linked list */
-			var vPrev = vDel.prev;
-			var vNext = vDel.next;
-			vNext.prev = vPrev;
-			vPrev.next = vNext;
-		},
-
-		/* KillFace( fDel ) destroys a face and removes it from the global face
-		* list.  It updates the face loop to point to a given new face.
-		*/
-		//static void KillFace( TESSmesh *mesh, TESSface *fDel, TESSface *newLface )
-		killFace_: function(fDel, newLface) {
-			var eStart = fDel.anEdge;
-
-			/* change the left face of all affected edges */
-			var e = eStart;
-			do {
-				e.Lface = newLface;
-				e = e.Lnext;
-			} while(e !== eStart);
-
-			/* delete from circular doubly-linked list */
-			var fPrev = fDel.prev;
-			var fNext = fDel.next;
-			fNext.prev = fPrev;
-			fPrev.next = fNext;
-		},
-
-		/****************** Basic Edge Operations **********************/
-
-		/* tessMeshMakeEdge creates one edge, two vertices, and a loop (face).
-		* The loop consists of the two new half-edges.
-		*/
-		//TESShalfEdge *tessMeshMakeEdge( TESSmesh *mesh )
-		makeEdge: function() {
-			var newVertex1 = new TESSvertex();
-			var newVertex2 = new TESSvertex();
-			var newFace = new TESSface();
-			var e = this.makeEdge_( this.eHead);
-			this.makeVertex_( newVertex1, e, this.vHead );
-			this.makeVertex_( newVertex2, e.Sym, this.vHead );
-			this.makeFace_( newFace, e, this.fHead );
-			return e;
-		},
-
-		/* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
-		* mesh connectivity and topology.  It changes the mesh so that
-		*	eOrg->Onext <- OLD( eDst->Onext )
-		*	eDst->Onext <- OLD( eOrg->Onext )
-		* where OLD(...) means the value before the meshSplice operation.
-		*
-		* This can have two effects on the vertex structure:
-		*  - if eOrg->Org != eDst->Org, the two vertices are merged together
-		*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
-		* In both cases, eDst->Org is changed and eOrg->Org is untouched.
-		*
-		* Similarly (and independently) for the face structure,
-		*  - if eOrg->Lface == eDst->Lface, one loop is split into two
-		*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
-		* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
-		*
-		* Some special cases:
-		* If eDst == eOrg, the operation has no effect.
-		* If eDst == eOrg->Lnext, the new face will have a single edge.
-		* If eDst == eOrg->Lprev, the old face will have a single edge.
-		* If eDst == eOrg->Onext, the new vertex will have a single edge.
-		* If eDst == eOrg->Oprev, the old vertex will have a single edge.
-		*/
-		//int tessMeshSplice( TESSmesh* mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst )
-		splice: function(eOrg, eDst) {
-			var joiningLoops = false;
-			var joiningVertices = false;
-
-			if( eOrg === eDst ) return;
-
-			if( eDst.Org !== eOrg.Org ) {
-				/* We are merging two disjoint vertices -- destroy eDst->Org */
-				joiningVertices = true;
-				this.killVertex_( eDst.Org, eOrg.Org );
-			}
-			if( eDst.Lface !== eOrg.Lface ) {
-				/* We are connecting two disjoint loops -- destroy eDst->Lface */
-				joiningLoops = true;
-				this.killFace_( eDst.Lface, eOrg.Lface );
-			}
-
-			/* Change the edge structure */
-			this.splice_( eDst, eOrg );
-
-			if( ! joiningVertices ) {
-				var newVertex = new TESSvertex();
-
-				/* We split one vertex into two -- the new vertex is eDst->Org.
-				* Make sure the old vertex points to a valid half-edge.
-				*/
-				this.makeVertex_( newVertex, eDst, eOrg.Org );
-				eOrg.Org.anEdge = eOrg;
-			}
-			if( ! joiningLoops ) {
-				var newFace = new TESSface();  
-
-				/* We split one loop into two -- the new loop is eDst->Lface.
-				* Make sure the old face points to a valid half-edge.
-				*/
-				this.makeFace_( newFace, eDst, eOrg.Lface );
-				eOrg.Lface.anEdge = eOrg;
-			}
-		},
-
-		/* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
-		* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
-		* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
-		* the newly created loop will contain eDel->Dst.  If the deletion of eDel
-		* would create isolated vertices, those are deleted as well.
-		*
-		* This function could be implemented as two calls to tessMeshSplice
-		* plus a few calls to memFree, but this would allocate and delete
-		* unnecessary vertices and faces.
-		*/
-		//int tessMeshDelete( TESSmesh *mesh, TESShalfEdge *eDel )
-		delete: function(eDel) {
-			var eDelSym = eDel.Sym;
-			var joiningLoops = false;
-
-			/* First step: disconnect the origin vertex eDel->Org.  We make all
-			* changes to get a consistent mesh in this "intermediate" state.
-			*/
-			if( eDel.Lface !== eDel.Rface ) {
-				/* We are joining two loops into one -- remove the left face */
-				joiningLoops = true;
-				this.killFace_( eDel.Lface, eDel.Rface );
-			}
-
-			if( eDel.Onext === eDel ) {
-				this.killVertex_( eDel.Org, null );
-			} else {
-				/* Make sure that eDel->Org and eDel->Rface point to valid half-edges */
-				eDel.Rface.anEdge = eDel.Oprev;
-				eDel.Org.anEdge = eDel.Onext;
-
-				this.splice_( eDel, eDel.Oprev );
-				if( ! joiningLoops ) {
-					var newFace = new TESSface();
-
-					/* We are splitting one loop into two -- create a new loop for eDel. */
-					this.makeFace_( newFace, eDel, eDel.Lface );
-				}
-			}
-
-			/* Claim: the mesh is now in a consistent state, except that eDel->Org
-			* may have been deleted.  Now we disconnect eDel->Dst.
-			*/
-			if( eDelSym.Onext === eDelSym ) {
-				this.killVertex_( eDelSym.Org, null );
-				this.killFace_( eDelSym.Lface, null );
-			} else {
-				/* Make sure that eDel->Dst and eDel->Lface point to valid half-edges */
-				eDel.Lface.anEdge = eDelSym.Oprev;
-				eDelSym.Org.anEdge = eDelSym.Onext;
-				this.splice_( eDelSym, eDelSym.Oprev );
-			}
-
-			/* Any isolated vertices or faces have already been freed. */
-			this.killEdge_( eDel );
-		},
-
-		/******************** Other Edge Operations **********************/
-
-		/* All these routines can be implemented with the basic edge
-		* operations above.  They are provided for convenience and efficiency.
-		*/
-
-
-		/* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
-		* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
-		* eOrg and eNew will have the same left face.
-		*/
-		// TESShalfEdge *tessMeshAddEdgeVertex( TESSmesh *mesh, TESShalfEdge *eOrg );
-		addEdgeVertex: function(eOrg) {
-			var eNew = this.makeEdge_( eOrg );
-			var eNewSym = eNew.Sym;
-
-			/* Connect the new edge appropriately */
-			this.splice_( eNew, eOrg.Lnext );
-
-			/* Set the vertex and face information */
-			eNew.Org = eOrg.Dst;
-
-			var newVertex = new TESSvertex();
-			this.makeVertex_( newVertex, eNewSym, eNew.Org );
-
-			eNew.Lface = eNewSym.Lface = eOrg.Lface;
-
-			return eNew;
-		},
-
-
-		/* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
-		* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
-		* eOrg and eNew will have the same left face.
-		*/
-		// TESShalfEdge *tessMeshSplitEdge( TESSmesh *mesh, TESShalfEdge *eOrg );
-		splitEdge: function(eOrg, eDst) {
-			var tempHalfEdge = this.addEdgeVertex( eOrg );
-			var eNew = tempHalfEdge.Sym;
-
-			/* Disconnect eOrg from eOrg->Dst and connect it to eNew->Org */
-			this.splice_( eOrg.Sym, eOrg.Sym.Oprev );
-			this.splice_( eOrg.Sym, eNew );
-
-			/* Set the vertex and face information */
-			eOrg.Dst = eNew.Org;
-			eNew.Dst.anEdge = eNew.Sym;	/* may have pointed to eOrg->Sym */
-			eNew.Rface = eOrg.Rface;
-			eNew.winding = eOrg.winding;	/* copy old winding information */
-			eNew.Sym.winding = eOrg.Sym.winding;
-
-			return eNew;
-		},
-
-
-		/* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
-		* to eDst->Org, and returns the corresponding half-edge eNew.
-		* If eOrg->Lface == eDst->Lface, this splits one loop into two,
-		* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
-		* loops are merged into one, and the loop eDst->Lface is destroyed.
-		*
-		* If (eOrg == eDst), the new face will have only two edges.
-		* If (eOrg->Lnext == eDst), the old face is reduced to a single edge.
-		* If (eOrg->Lnext->Lnext == eDst), the old face is reduced to two edges.
-		*/
-
-		// TESShalfEdge *tessMeshConnect( TESSmesh *mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst );
-		connect: function(eOrg, eDst) {
-			var joiningLoops = false;  
-			var eNew = this.makeEdge_( eOrg );
-			var eNewSym = eNew.Sym;
-
-			if( eDst.Lface !== eOrg.Lface ) {
-				/* We are connecting two disjoint loops -- destroy eDst->Lface */
-				joiningLoops = true;
-				this.killFace_( eDst.Lface, eOrg.Lface );
-			}
-
-			/* Connect the new edge appropriately */
-			this.splice_( eNew, eOrg.Lnext );
-			this.splice_( eNewSym, eDst );
-
-			/* Set the vertex and face information */
-			eNew.Org = eOrg.Dst;
-			eNewSym.Org = eDst.Org;
-			eNew.Lface = eNewSym.Lface = eOrg.Lface;
-
-			/* Make sure the old face points to a valid half-edge */
-			eOrg.Lface.anEdge = eNewSym;
-
-			if( ! joiningLoops ) {
-				var newFace = new TESSface();
-				/* We split one loop into two -- the new loop is eNew->Lface */
-				this.makeFace_( newFace, eNew, eOrg.Lface );
-			}
-			return eNew;
-		},
-
-		/* tessMeshZapFace( fZap ) destroys a face and removes it from the
-		* global face list.  All edges of fZap will have a NULL pointer as their
-		* left face.  Any edges which also have a NULL pointer as their right face
-		* are deleted entirely (along with any isolated vertices this produces).
-		* An entire mesh can be deleted by zapping its faces, one at a time,
-		* in any order.  Zapped faces cannot be used in further mesh operations!
-		*/
-		zapFace: function( fZap )
-		{
-			var eStart = fZap.anEdge;
-			var e, eNext, eSym;
-			var fPrev, fNext;
-
-			/* walk around face, deleting edges whose right face is also NULL */
-			eNext = eStart.Lnext;
-			do {
-				e = eNext;
-				eNext = e.Lnext;
-
-				e.Lface = null;
-				if( e.Rface === null ) {
-					/* delete the edge -- see TESSmeshDelete above */
-
-					if( e.Onext === e ) {
-						this.killVertex_( e.Org, null );
-					} else {
-						/* Make sure that e->Org points to a valid half-edge */
-						e.Org.anEdge = e.Onext;
-						this.splice_( e, e.Oprev );
-					}
-					eSym = e.Sym;
-					if( eSym.Onext === eSym ) {
-						this.killVertex_( eSym.Org, null );
-					} else {
-						/* Make sure that eSym->Org points to a valid half-edge */
-						eSym.Org.anEdge = eSym.Onext;
-						this.splice_( eSym, eSym.Oprev );
-					}
-					this.killEdge_( e );
-				}
-			} while( e != eStart );
-
-			/* delete from circular doubly-linked list */
-			fPrev = fZap.prev;
-			fNext = fZap.next;
-			fNext.prev = fPrev;
-			fPrev.next = fNext;
-		},
-
-		countFaceVerts_: function(f) {
-			var eCur = f.anEdge;
-			var n = 0;
-			do
-			{
-				n++;
-				eCur = eCur.Lnext;
-			}
-			while (eCur !== f.anEdge);
-			return n;
-		},
-
-		//int tessMeshMergeConvexFaces( TESSmesh *mesh, int maxVertsPerFace )
-		mergeConvexFaces: function(maxVertsPerFace) {
-			var f;
-			var eCur, eNext, eSym;
-			var vStart;
-			var curNv, symNv;
-
-			for( f = this.fHead.next; f !== this.fHead; f = f.next )
-			{
-				// Skip faces which are outside the result.
-				if( !f.inside )
-					continue;
-
-				eCur = f.anEdge;
-				vStart = eCur.Org;
-					
-				while (true)
-				{
-					eNext = eCur.Lnext;
-					eSym = eCur.Sym;
-
-					// Try to merge if the neighbour face is valid.
-					if( eSym && eSym.Lface && eSym.Lface.inside )
-					{
-						// Try to merge the neighbour faces if the resulting polygons
-						// does not exceed maximum number of vertices.
-						curNv = this.countFaceVerts_( f );
-						symNv = this.countFaceVerts_( eSym.Lface );
-						if( (curNv+symNv-2) <= maxVertsPerFace )
-						{
-							// Merge if the resulting poly is convex.
-							if( Geom.vertCCW( eCur.Lprev.Org, eCur.Org, eSym.Lnext.Lnext.Org ) &&
-								Geom.vertCCW( eSym.Lprev.Org, eSym.Org, eCur.Lnext.Lnext.Org ) )
-							{
-								eNext = eSym.Lnext;
-								this.delete( eSym );
-								eCur = null;
-								eSym = null;
-							}
-						}
-					}
-					
-					if( eCur && eCur.Lnext.Org === vStart )
-						break;
-						
-					// Continue to next edge.
-					eCur = eNext;
-				}
-			}
-			
-			return true;
-		},
-
-		/* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
-		*/
-		check: function() {
-			var fHead = this.fHead;
-			var vHead = this.vHead;
-			var eHead = this.eHead;
-			var f, fPrev, v, vPrev, e, ePrev;
-
-			fPrev = fHead;
-			for( fPrev = fHead ; (f = fPrev.next) !== fHead; fPrev = f) {
-				assert( f.prev === fPrev );
-				e = f.anEdge;
-				do {
-					assert( e.Sym !== e );
-					assert( e.Sym.Sym === e );
-					assert( e.Lnext.Onext.Sym === e );
-					assert( e.Onext.Sym.Lnext === e );
-					assert( e.Lface === f );
-					e = e.Lnext;
-				} while( e !== f.anEdge );
-			}
-			assert( f.prev === fPrev && f.anEdge === null );
-
-			vPrev = vHead;
-			for( vPrev = vHead ; (v = vPrev.next) !== vHead; vPrev = v) {
-				assert( v.prev === vPrev );
-				e = v.anEdge;
-				do {
-					assert( e.Sym !== e );
-					assert( e.Sym.Sym === e );
-					assert( e.Lnext.Onext.Sym === e );
-					assert( e.Onext.Sym.Lnext === e );
-					assert( e.Org === v );
-					e = e.Onext;
-				} while( e !== v.anEdge );
-			}
-			assert( v.prev === vPrev && v.anEdge === null );
-
-			ePrev = eHead;
-			for( ePrev = eHead ; (e = ePrev.next) !== eHead; ePrev = e) {
-				assert( e.Sym.next === ePrev.Sym );
-				assert( e.Sym !== e );
-				assert( e.Sym.Sym === e );
-				assert( e.Org !== null );
-				assert( e.Dst !== null );
-				assert( e.Lnext.Onext.Sym === e );
-				assert( e.Onext.Sym.Lnext === e );
-			}
-			assert( e.Sym.next === ePrev.Sym
-				&& e.Sym === this.eHeadSym
-				&& e.Sym.Sym === e
-				&& e.Org === null && e.Dst === null
-				&& e.Lface === null && e.Rface === null );
-		}
-
-	};
-
-	var Geom = {};
-
-	Geom.vertEq = function(u,v) {
-		return (u.s === v.s && u.t === v.t);
-	};
-
-	/* Returns TRUE if u is lexicographically <= v. */
-	Geom.vertLeq = function(u,v) {
-		return ((u.s < v.s) || (u.s === v.s && u.t <= v.t));
-	};
-
-	/* Versions of VertLeq, EdgeSign, EdgeEval with s and t transposed. */
-	Geom.transLeq = function(u,v) {
-		return ((u.t < v.t) || (u.t === v.t && u.s <= v.s));
-	};
-
-	Geom.edgeGoesLeft = function(e) {
-		return Geom.vertLeq( e.Dst, e.Org );
-	};
-
-	Geom.edgeGoesRight = function(e) {
-		return Geom.vertLeq( e.Org, e.Dst );
-	};
-
-	Geom.vertL1dist = function(u,v) {
-		return (Math.abs(u.s - v.s) + Math.abs(u.t - v.t));
-	};
-
-	//TESSreal tesedgeEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.edgeEval = function( u, v, w ) {
-		/* Given three vertices u,v,w such that VertLeq(u,v) && VertLeq(v,w),
-		* evaluates the t-coord of the edge uw at the s-coord of the vertex v.
-		* Returns v->t - (uw)(v->s), ie. the signed distance from uw to v.
-		* If uw is vertical (and thus passes thru v), the result is zero.
-		*
-		* The calculation is extremely accurate and stable, even when v
-		* is very close to u or w.  In particular if we set v->t = 0 and
-		* let r be the negated result (this evaluates (uw)(v->s)), then
-		* r is guaranteed to satisfy MIN(u->t,w->t) <= r <= MAX(u->t,w->t).
-		*/
-		assert( Geom.vertLeq( u, v ) && Geom.vertLeq( v, w ));
-
-		var gapL = v.s - u.s;
-		var gapR = w.s - v.s;
-
-		if( gapL + gapR > 0.0 ) {
-			if( gapL < gapR ) {
-				return (v.t - u.t) + (u.t - w.t) * (gapL / (gapL + gapR));
-			} else {
-				return (v.t - w.t) + (w.t - u.t) * (gapR / (gapL + gapR));
-			}
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-	//TESSreal tesedgeSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.edgeSign = function( u, v, w ) {
-		/* Returns a number whose sign matches EdgeEval(u,v,w) but which
-		* is cheaper to evaluate.  Returns > 0, == 0 , or < 0
-		* as v is above, on, or below the edge uw.
-		*/
-		assert( Geom.vertLeq( u, v ) && Geom.vertLeq( v, w ));
-
-		var gapL = v.s - u.s;
-		var gapR = w.s - v.s;
-
-		if( gapL + gapR > 0.0 ) {
-			return (v.t - w.t) * gapL + (v.t - u.t) * gapR;
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-
-	/***********************************************************************
-	* Define versions of EdgeSign, EdgeEval with s and t transposed.
-	*/
-
-	//TESSreal testransEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.transEval = function( u, v, w ) {
-		/* Given three vertices u,v,w such that TransLeq(u,v) && TransLeq(v,w),
-		* evaluates the t-coord of the edge uw at the s-coord of the vertex v.
-		* Returns v->s - (uw)(v->t), ie. the signed distance from uw to v.
-		* If uw is vertical (and thus passes thru v), the result is zero.
-		*
-		* The calculation is extremely accurate and stable, even when v
-		* is very close to u or w.  In particular if we set v->s = 0 and
-		* let r be the negated result (this evaluates (uw)(v->t)), then
-		* r is guaranteed to satisfy MIN(u->s,w->s) <= r <= MAX(u->s,w->s).
-		*/
-		assert( Geom.transLeq( u, v ) && Geom.transLeq( v, w ));
-
-		var gapL = v.t - u.t;
-		var gapR = w.t - v.t;
-
-		if( gapL + gapR > 0.0 ) {
-			if( gapL < gapR ) {
-				return (v.s - u.s) + (u.s - w.s) * (gapL / (gapL + gapR));
-			} else {
-				return (v.s - w.s) + (w.s - u.s) * (gapR / (gapL + gapR));
-			}
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-	//TESSreal testransSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.transSign = function( u, v, w ) {
-		/* Returns a number whose sign matches TransEval(u,v,w) but which
-		* is cheaper to evaluate.  Returns > 0, == 0 , or < 0
-		* as v is above, on, or below the edge uw.
-		*/
-		assert( Geom.transLeq( u, v ) && Geom.transLeq( v, w ));
-
-		var gapL = v.t - u.t;
-		var gapR = w.t - v.t;
-
-		if( gapL + gapR > 0.0 ) {
-			return (v.s - w.s) * gapL + (v.s - u.s) * gapR;
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-
-	//int tesvertCCW( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.vertCCW = function( u, v, w ) {
-		/* For almost-degenerate situations, the results are not reliable.
-		* Unless the floating-point arithmetic can be performed without
-		* rounding errors, *any* implementation will give incorrect results
-		* on some degenerate inputs, so the client must have some way to
-		* handle this situation.
-		*/
-		return (u.s*(v.t - w.t) + v.s*(w.t - u.t) + w.s*(u.t - v.t)) >= 0.0;
-	};
-
-	/* Given parameters a,x,b,y returns the value (b*x+a*y)/(a+b),
-	* or (x+y)/2 if a==b==0.  It requires that a,b >= 0, and enforces
-	* this in the rare case that one argument is slightly negative.
-	* The implementation is extremely stable numerically.
-	* In particular it guarantees that the result r satisfies
-	* MIN(x,y) <= r <= MAX(x,y), and the results are very accurate
-	* even when a and b differ greatly in magnitude.
-	*/
-	Geom.interpolate = function(a,x,b,y) {
-		return (a = (a < 0) ? 0 : a, b = (b < 0) ? 0 : b, ((a <= b) ? ((b == 0) ? ((x+y) / 2) : (x + (y-x) * (a/(a+b)))) : (y + (x-y) * (b/(a+b)))));
-	};
-
-	/*
-	#ifndef FOR_TRITE_TEST_PROGRAM
-	#define Interpolate(a,x,b,y)	RealInterpolate(a,x,b,y)
-	#else
+/* Public API */
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var Tess2 = {};
+module.exports = Tess2;
+Tess2.WINDING_ODD = 0;
+Tess2.WINDING_NONZERO = 1;
+Tess2.WINDING_POSITIVE = 2;
+Tess2.WINDING_NEGATIVE = 3;
+Tess2.WINDING_ABS_GEQ_TWO = 4;
+Tess2.POLYGONS = 0;
+Tess2.CONNECTED_POLYGONS = 1;
+Tess2.BOUNDARY_CONTOURS = 2;
+
+Tess2.tesselate = function (opts) {
+  var debug = opts.debug || false;
+  var tess = new Tesselator();
+
+  for (var i = 0; i < opts.contours.length; i++) {
+    tess.addContour(opts.vertexSize || 2, opts.contours[i]);
+  }
+
+  tess.tesselate(opts.windingRule || Tess2.WINDING_ODD, opts.elementType || Tess2.POLYGONS, opts.polySize || 3, opts.vertexSize || 2, opts.normal || [0, 0, 1]);
+  return {
+    vertices: tess.vertices,
+    vertexIndices: tess.vertexIndices,
+    vertexCount: tess.vertexCount,
+    elements: tess.elements,
+    elementCount: tess.elementCount,
+    mesh: debug ? tess.mesh : undefined
+  };
+};
+/* Internal */
+
+
+var assert = function (cond) {
+  if (!cond) {
+    throw "Assertion Failed!";
+  }
+};
+/* The mesh structure is similar in spirit, notation, and operations
+* to the "quad-edge" structure (see L. Guibas and J. Stolfi, Primitives
+* for the manipulation of general subdivisions and the computation of
+* Voronoi diagrams, ACM Transactions on Graphics, 4(2):74-123, April 1985).
+* For a simplified description, see the course notes for CS348a,
+* "Mathematical Foundations of Computer Graphics", available at the
+* Stanford bookstore (and taught during the fall quarter).
+* The implementation also borrows a tiny subset of the graph-based approach
+* use in Mantyla's Geometric Work Bench (see M. Mantyla, An Introduction
+* to Sold Modeling, Computer Science Press, Rockville, Maryland, 1988).
+*
+* The fundamental data structure is the "half-edge".  Two half-edges
+* go together to make an edge, but they point in opposite directions.
+* Each half-edge has a pointer to its mate (the "symmetric" half-edge Sym),
+* its origin vertex (Org), the face on its left side (Lface), and the
+* adjacent half-edges in the CCW direction around the origin vertex
+* (Onext) and around the left face (Lnext).  There is also a "next"
+* pointer for the global edge list (see below).
+*
+* The notation used for mesh navigation:
+*  Sym   = the mate of a half-edge (same edge, but opposite direction)
+*  Onext = edge CCW around origin vertex (keep same origin)
+*  Dnext = edge CCW around destination vertex (keep same dest)
+*  Lnext = edge CCW around left face (dest becomes new origin)
+*  Rnext = edge CCW around right face (origin becomes new dest)
+*
+* "prev" means to substitute CW for CCW in the definitions above.
+*
+* The mesh keeps global lists of all vertices, faces, and edges,
+* stored as doubly-linked circular lists with a dummy header node.
+* The mesh stores pointers to these dummy headers (vHead, fHead, eHead).
+*
+* The circular edge list is special; since half-edges always occur
+* in pairs (e and e->Sym), each half-edge stores a pointer in only
+* one direction.  Starting at eHead and following the e->next pointers
+* will visit each *edge* once (ie. e or e->Sym, but not both).
+* e->Sym stores a pointer in the opposite direction, thus it is
+* always true that e->Sym->next->Sym->next == e.
+*
+* Each vertex has a pointer to next and previous vertices in the
+* circular list, and a pointer to a half-edge with this vertex as
+* the origin (NULL if this is the dummy header).  There is also a
+* field "data" for client data.
+*
+* Each face has a pointer to the next and previous faces in the
+* circular list, and a pointer to a half-edge with this face as
+* the left face (NULL if this is the dummy header).  There is also
+* a field "data" for client data.
+*
+* Note that what we call a "face" is really a loop; faces may consist
+* of more than one loop (ie. not simply connected), but there is no
+* record of this in the data structure.  The mesh may consist of
+* several disconnected regions, so it may not be possible to visit
+* the entire mesh by starting at a half-edge and traversing the edge
+* structure.
+*
+* The mesh does NOT support isolated vertices; a vertex is deleted along
+* with its last edge.  Similarly when two faces are merged, one of the
+* faces is deleted (see tessMeshDelete below).  For mesh operations,
+* all face (loop) and vertex pointers must not be NULL.  However, once
+* mesh manipulation is finished, TESSmeshZapFace can be used to delete
+* faces of the mesh, one at a time.  All external faces can be "zapped"
+* before the mesh is returned to the client; then a NULL face indicates
+* a region which is not part of the output polygon.
+*/
 
+
+function TESSvertex() {
+  this.next = null;
+  /* next vertex (never NULL) */
+
+  this.prev = null;
+  /* previous vertex (never NULL) */
+
+  this.anEdge = null;
+  /* a half-edge with this origin */
+
+  /* Internal data (keep hidden) */
+
+  this.coords = [0, 0, 0];
+  /* vertex location in 3D */
+
+  this.s = 0.0;
+  this.t = 0.0;
+  /* projection onto the sweep plane */
+
+  this.pqHandle = 0;
+  /* to allow deletion from priority queue */
+
+  this.n = 0;
+  /* to allow identify unique vertices */
+
+  this.idx = 0;
+  /* to allow map result to original verts */
+}
+
+function TESSface() {
+  this.next = null;
+  /* next face (never NULL) */
+
+  this.prev = null;
+  /* previous face (never NULL) */
+
+  this.anEdge = null;
+  /* a half edge with this left face */
+
+  /* Internal data (keep hidden) */
+
+  this.trail = null;
+  /* "stack" for conversion to strips */
+
+  this.n = 0;
+  /* to allow identiy unique faces */
+
+  this.marked = false;
+  /* flag for conversion to strips */
+
+  this.inside = false;
+  /* this face is in the polygon interior */
+}
+
+;
+
+function TESShalfEdge(side) {
+  this.next = null;
+  /* doubly-linked list (prev==Sym->next) */
+
+  this.Sym = null;
+  /* same edge, opposite direction */
+
+  this.Onext = null;
+  /* next edge CCW around origin */
+
+  this.Lnext = null;
+  /* next edge CCW around left face */
+
+  this.Org = null;
+  /* origin vertex (Overtex too long) */
+
+  this.Lface = null;
+  /* left face */
+
+  /* Internal data (keep hidden) */
+
+  this.activeRegion = null;
+  /* a region with this upper edge (sweep.c) */
+
+  this.winding = 0;
+  /* change in winding number when crossing
+  from the right face to the left face */
+
+  this.side = side;
+}
+
+;
+TESShalfEdge.prototype = {
+  get Rface() {
+    return this.Sym.Lface;
+  },
+
+  set Rface(v) {
+    this.Sym.Lface = v;
+  },
+
+  get Dst() {
+    return this.Sym.Org;
+  },
+
+  set Dst(v) {
+    this.Sym.Org = v;
+  },
+
+  get Oprev() {
+    return this.Sym.Lnext;
+  },
+
+  set Oprev(v) {
+    this.Sym.Lnext = v;
+  },
+
+  get Lprev() {
+    return this.Onext.Sym;
+  },
+
+  set Lprev(v) {
+    this.Onext.Sym = v;
+  },
+
+  get Dprev() {
+    return this.Lnext.Sym;
+  },
+
+  set Dprev(v) {
+    this.Lnext.Sym = v;
+  },
+
+  get Rprev() {
+    return this.Sym.Onext;
+  },
+
+  set Rprev(v) {
+    this.Sym.Onext = v;
+  },
+
+  get Dnext() {
+    return (
+      /*this.Rprev*/
+      this.Sym.Onext.Sym
+    );
+  },
+
+  /* 3 pointers */
+  set Dnext(v) {
+    /*this.Rprev*/
+    this.Sym.Onext.Sym = v;
+  },
+
+  /* 3 pointers */
+  get Rnext() {
+    return (
+      /*this.Oprev*/
+      this.Sym.Lnext.Sym
+    );
+  },
+
+  /* 3 pointers */
+  set Rnext(v) {
+    /*this.Oprev*/
+    this.Sym.Lnext.Sym = v;
+  }
+  /* 3 pointers */
+
+
+};
+
+function TESSmesh() {
+  var v = new TESSvertex();
+  var f = new TESSface();
+  var e = new TESShalfEdge(0);
+  var eSym = new TESShalfEdge(1);
+  v.next = v.prev = v;
+  v.anEdge = null;
+  f.next = f.prev = f;
+  f.anEdge = null;
+  f.trail = null;
+  f.marked = false;
+  f.inside = false;
+  e.next = e;
+  e.Sym = eSym;
+  e.Onext = null;
+  e.Lnext = null;
+  e.Org = null;
+  e.Lface = null;
+  e.winding = 0;
+  e.activeRegion = null;
+  eSym.next = eSym;
+  eSym.Sym = e;
+  eSym.Onext = null;
+  eSym.Lnext = null;
+  eSym.Org = null;
+  eSym.Lface = null;
+  eSym.winding = 0;
+  eSym.activeRegion = null;
+  this.vHead = v;
+  /* dummy header for vertex list */
+
+  this.fHead = f;
+  /* dummy header for face list */
+
+  this.eHead = e;
+  /* dummy header for edge list */
+
+  this.eHeadSym = eSym;
+  /* and its symmetric counterpart */
+}
+
+;
+/* The mesh operations below have three motivations: completeness,
+* convenience, and efficiency.  The basic mesh operations are MakeEdge,
+* Splice, and Delete.  All the other edge operations can be implemented
+* in terms of these.  The other operations are provided for convenience
+* and/or efficiency.
+*
+* When a face is split or a vertex is added, they are inserted into the
+* global list *before* the existing vertex or face (ie. e->Org or e->Lface).
+* This makes it easier to process all vertices or faces in the global lists
+* without worrying about processing the same data twice.  As a convenience,
+* when a face is split, the "inside" flag is copied from the old face.
+* Other internal data (v->data, v->activeRegion, f->data, f->marked,
+* f->trail, e->winding) is set to zero.
+*
+* ********************** Basic Edge Operations **************************
+*
+* tessMeshMakeEdge( mesh ) creates one edge, two vertices, and a loop.
+* The loop (face) consists of the two new half-edges.
+*
+* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
+* mesh connectivity and topology.  It changes the mesh so that
+*  eOrg->Onext <- OLD( eDst->Onext )
+*  eDst->Onext <- OLD( eOrg->Onext )
+* where OLD(...) means the value before the meshSplice operation.
+*
+* This can have two effects on the vertex structure:
+*  - if eOrg->Org != eDst->Org, the two vertices are merged together
+*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
+* In both cases, eDst->Org is changed and eOrg->Org is untouched.
+*
+* Similarly (and independently) for the face structure,
+*  - if eOrg->Lface == eDst->Lface, one loop is split into two
+*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
+* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
+*
+* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
+* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
+* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
+* the newly created loop will contain eDel->Dst.  If the deletion of eDel
+* would create isolated vertices, those are deleted as well.
+*
+* ********************** Other Edge Operations **************************
+*
+* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
+* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
+* eOrg and eNew will have the same left face.
+*
+* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
+* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
+* eOrg and eNew will have the same left face.
+*
+* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
+* to eDst->Org, and returns the corresponding half-edge eNew.
+* If eOrg->Lface == eDst->Lface, this splits one loop into two,
+* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
+* loops are merged into one, and the loop eDst->Lface is destroyed.
+*
+* ************************ Other Operations *****************************
+*
+* tessMeshNewMesh() creates a new mesh with no edges, no vertices,
+* and no loops (what we usually call a "face").
+*
+* tessMeshUnion( mesh1, mesh2 ) forms the union of all structures in
+* both meshes, and returns the new mesh (the old meshes are destroyed).
+*
+* tessMeshDeleteMesh( mesh ) will free all storage for any valid mesh.
+*
+* tessMeshZapFace( fZap ) destroys a face and removes it from the
+* global face list.  All edges of fZap will have a NULL pointer as their
+* left face.  Any edges which also have a NULL pointer as their right face
+* are deleted entirely (along with any isolated vertices this produces).
+* An entire mesh can be deleted by zapping its faces, one at a time,
+* in any order.  Zapped faces cannot be used in further mesh operations!
+*
+* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
+*/
+
+TESSmesh.prototype = {
+  /* MakeEdge creates a new pair of half-edges which form their own loop.
+  * No vertex or face structures are allocated, but these must be assigned
+  * before the current edge operation is completed.
+  */
+  //static TESShalfEdge *MakeEdge( TESSmesh* mesh, TESShalfEdge *eNext )
+  makeEdge_: function (eNext) {
+    var e = new TESShalfEdge(0);
+    var eSym = new TESShalfEdge(1);
+    /* Make sure eNext points to the first edge of the edge pair */
+
+    if (eNext.Sym.side < eNext.side) {
+      eNext = eNext.Sym;
+    }
+    /* Insert in circular doubly-linked list before eNext.
+    * Note that the prev pointer is stored in Sym->next.
+    */
+
+
+    var ePrev = eNext.Sym.next;
+    eSym.next = ePrev;
+    ePrev.Sym.next = e;
+    e.next = eNext;
+    eNext.Sym.next = eSym;
+    e.Sym = eSym;
+    e.Onext = e;
+    e.Lnext = eSym;
+    e.Org = null;
+    e.Lface = null;
+    e.winding = 0;
+    e.activeRegion = null;
+    eSym.Sym = e;
+    eSym.Onext = eSym;
+    eSym.Lnext = e;
+    eSym.Org = null;
+    eSym.Lface = null;
+    eSym.winding = 0;
+    eSym.activeRegion = null;
+    return e;
+  },
+
+  /* Splice( a, b ) is best described by the Guibas/Stolfi paper or the
+  * CS348a notes (see mesh.h).  Basically it modifies the mesh so that
+  * a->Onext and b->Onext are exchanged.  This can have various effects
+  * depending on whether a and b belong to different face or vertex rings.
+  * For more explanation see tessMeshSplice() below.
+  */
+  // static void Splice( TESShalfEdge *a, TESShalfEdge *b )
+  splice_: function (a, b) {
+    var aOnext = a.Onext;
+    var bOnext = b.Onext;
+    aOnext.Sym.Lnext = b;
+    bOnext.Sym.Lnext = a;
+    a.Onext = bOnext;
+    b.Onext = aOnext;
+  },
+
+  /* MakeVertex( newVertex, eOrig, vNext ) attaches a new vertex and makes it the
+  * origin of all edges in the vertex loop to which eOrig belongs. "vNext" gives
+  * a place to insert the new vertex in the global vertex list.  We insert
+  * the new vertex *before* vNext so that algorithms which walk the vertex
+  * list will not see the newly created vertices.
+  */
+  //static void MakeVertex( TESSvertex *newVertex, TESShalfEdge *eOrig, TESSvertex *vNext )
+  makeVertex_: function (newVertex, eOrig, vNext) {
+    var vNew = newVertex;
+    assert(vNew !== null);
+    /* insert in circular doubly-linked list before vNext */
+
+    var vPrev = vNext.prev;
+    vNew.prev = vPrev;
+    vPrev.next = vNew;
+    vNew.next = vNext;
+    vNext.prev = vNew;
+    vNew.anEdge = eOrig;
+    /* leave coords, s, t undefined */
+
+    /* fix other edges on this vertex loop */
+
+    var e = eOrig;
+
+    do {
+      e.Org = vNew;
+      e = e.Onext;
+    } while (e !== eOrig);
+  },
+
+  /* MakeFace( newFace, eOrig, fNext ) attaches a new face and makes it the left
+  * face of all edges in the face loop to which eOrig belongs.  "fNext" gives
+  * a place to insert the new face in the global face list.  We insert
+  * the new face *before* fNext so that algorithms which walk the face
+  * list will not see the newly created faces.
+  */
+  // static void MakeFace( TESSface *newFace, TESShalfEdge *eOrig, TESSface *fNext )
+  makeFace_: function (newFace, eOrig, fNext) {
+    var fNew = newFace;
+    assert(fNew !== null);
+    /* insert in circular doubly-linked list before fNext */
+
+    var fPrev = fNext.prev;
+    fNew.prev = fPrev;
+    fPrev.next = fNew;
+    fNew.next = fNext;
+    fNext.prev = fNew;
+    fNew.anEdge = eOrig;
+    fNew.trail = null;
+    fNew.marked = false;
+    /* The new face is marked "inside" if the old one was.  This is a
+    * convenience for the common case where a face has been split in two.
+    */
+
+    fNew.inside = fNext.inside;
+    /* fix other edges on this face loop */
+
+    var e = eOrig;
+
+    do {
+      e.Lface = fNew;
+      e = e.Lnext;
+    } while (e !== eOrig);
+  },
+
+  /* KillEdge( eDel ) destroys an edge (the half-edges eDel and eDel->Sym),
+  * and removes from the global edge list.
+  */
+  //static void KillEdge( TESSmesh *mesh, TESShalfEdge *eDel )
+  killEdge_: function (eDel) {
+    /* Half-edges are allocated in pairs, see EdgePair above */
+    if (eDel.Sym.side < eDel.side) {
+      eDel = eDel.Sym;
+    }
+    /* delete from circular doubly-linked list */
+
+
+    var eNext = eDel.next;
+    var ePrev = eDel.Sym.next;
+    eNext.Sym.next = ePrev;
+    ePrev.Sym.next = eNext;
+  },
+
+  /* KillVertex( vDel ) destroys a vertex and removes it from the global
+  * vertex list.  It updates the vertex loop to point to a given new vertex.
+  */
+  //static void KillVertex( TESSmesh *mesh, TESSvertex *vDel, TESSvertex *newOrg )
+  killVertex_: function (vDel, newOrg) {
+    var eStart = vDel.anEdge;
+    /* change the origin of all affected edges */
+
+    var e = eStart;
+
+    do {
+      e.Org = newOrg;
+      e = e.Onext;
+    } while (e !== eStart);
+    /* delete from circular doubly-linked list */
+
+
+    var vPrev = vDel.prev;
+    var vNext = vDel.next;
+    vNext.prev = vPrev;
+    vPrev.next = vNext;
+  },
+
+  /* KillFace( fDel ) destroys a face and removes it from the global face
+  * list.  It updates the face loop to point to a given new face.
+  */
+  //static void KillFace( TESSmesh *mesh, TESSface *fDel, TESSface *newLface )
+  killFace_: function (fDel, newLface) {
+    var eStart = fDel.anEdge;
+    /* change the left face of all affected edges */
+
+    var e = eStart;
+
+    do {
+      e.Lface = newLface;
+      e = e.Lnext;
+    } while (e !== eStart);
+    /* delete from circular doubly-linked list */
+
+
+    var fPrev = fDel.prev;
+    var fNext = fDel.next;
+    fNext.prev = fPrev;
+    fPrev.next = fNext;
+  },
+
+  /****************** Basic Edge Operations **********************/
+
+  /* tessMeshMakeEdge creates one edge, two vertices, and a loop (face).
+  * The loop consists of the two new half-edges.
+  */
+  //TESShalfEdge *tessMeshMakeEdge( TESSmesh *mesh )
+  makeEdge: function () {
+    var newVertex1 = new TESSvertex();
+    var newVertex2 = new TESSvertex();
+    var newFace = new TESSface();
+    var e = this.makeEdge_(this.eHead);
+    this.makeVertex_(newVertex1, e, this.vHead);
+    this.makeVertex_(newVertex2, e.Sym, this.vHead);
+    this.makeFace_(newFace, e, this.fHead);
+    return e;
+  },
+
+  /* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
+  * mesh connectivity and topology.  It changes the mesh so that
+  *	eOrg->Onext <- OLD( eDst->Onext )
+  *	eDst->Onext <- OLD( eOrg->Onext )
+  * where OLD(...) means the value before the meshSplice operation.
+  *
+  * This can have two effects on the vertex structure:
+  *  - if eOrg->Org != eDst->Org, the two vertices are merged together
+  *  - if eOrg->Org == eDst->Org, the origin is split into two vertices
+  * In both cases, eDst->Org is changed and eOrg->Org is untouched.
+  *
+  * Similarly (and independently) for the face structure,
+  *  - if eOrg->Lface == eDst->Lface, one loop is split into two
+  *  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
+  * In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
+  *
+  * Some special cases:
+  * If eDst == eOrg, the operation has no effect.
+  * If eDst == eOrg->Lnext, the new face will have a single edge.
+  * If eDst == eOrg->Lprev, the old face will have a single edge.
+  * If eDst == eOrg->Onext, the new vertex will have a single edge.
+  * If eDst == eOrg->Oprev, the old vertex will have a single edge.
+  */
+  //int tessMeshSplice( TESSmesh* mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst )
+  splice: function (eOrg, eDst) {
+    var joiningLoops = false;
+    var joiningVertices = false;
+    if (eOrg === eDst) return;
+
+    if (eDst.Org !== eOrg.Org) {
+      /* We are merging two disjoint vertices -- destroy eDst->Org */
+      joiningVertices = true;
+      this.killVertex_(eDst.Org, eOrg.Org);
+    }
+
+    if (eDst.Lface !== eOrg.Lface) {
+      /* We are connecting two disjoint loops -- destroy eDst->Lface */
+      joiningLoops = true;
+      this.killFace_(eDst.Lface, eOrg.Lface);
+    }
+    /* Change the edge structure */
+
+
+    this.splice_(eDst, eOrg);
+
+    if (!joiningVertices) {
+      var newVertex = new TESSvertex();
+      /* We split one vertex into two -- the new vertex is eDst->Org.
+      * Make sure the old vertex points to a valid half-edge.
+      */
+
+      this.makeVertex_(newVertex, eDst, eOrg.Org);
+      eOrg.Org.anEdge = eOrg;
+    }
+
+    if (!joiningLoops) {
+      var newFace = new TESSface();
+      /* We split one loop into two -- the new loop is eDst->Lface.
+      * Make sure the old face points to a valid half-edge.
+      */
+
+      this.makeFace_(newFace, eDst, eOrg.Lface);
+      eOrg.Lface.anEdge = eOrg;
+    }
+  },
+
+  /* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
+  * if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
+  * eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
+  * the newly created loop will contain eDel->Dst.  If the deletion of eDel
+  * would create isolated vertices, those are deleted as well.
+  *
+  * This function could be implemented as two calls to tessMeshSplice
+  * plus a few calls to memFree, but this would allocate and delete
+  * unnecessary vertices and faces.
+  */
+  //int tessMeshDelete( TESSmesh *mesh, TESShalfEdge *eDel )
+  delete: function (eDel) {
+    var eDelSym = eDel.Sym;
+    var joiningLoops = false;
+    /* First step: disconnect the origin vertex eDel->Org.  We make all
+    * changes to get a consistent mesh in this "intermediate" state.
+    */
+
+    if (eDel.Lface !== eDel.Rface) {
+      /* We are joining two loops into one -- remove the left face */
+      joiningLoops = true;
+      this.killFace_(eDel.Lface, eDel.Rface);
+    }
+
+    if (eDel.Onext === eDel) {
+      this.killVertex_(eDel.Org, null);
+    } else {
+      /* Make sure that eDel->Org and eDel->Rface point to valid half-edges */
+      eDel.Rface.anEdge = eDel.Oprev;
+      eDel.Org.anEdge = eDel.Onext;
+      this.splice_(eDel, eDel.Oprev);
+
+      if (!joiningLoops) {
+        var newFace = new TESSface();
+        /* We are splitting one loop into two -- create a new loop for eDel. */
+
+        this.makeFace_(newFace, eDel, eDel.Lface);
+      }
+    }
+    /* Claim: the mesh is now in a consistent state, except that eDel->Org
+    * may have been deleted.  Now we disconnect eDel->Dst.
+    */
+
+
+    if (eDelSym.Onext === eDelSym) {
+      this.killVertex_(eDelSym.Org, null);
+      this.killFace_(eDelSym.Lface, null);
+    } else {
+      /* Make sure that eDel->Dst and eDel->Lface point to valid half-edges */
+      eDel.Lface.anEdge = eDelSym.Oprev;
+      eDelSym.Org.anEdge = eDelSym.Onext;
+      this.splice_(eDelSym, eDelSym.Oprev);
+    }
+    /* Any isolated vertices or faces have already been freed. */
+
+
+    this.killEdge_(eDel);
+  },
+
+  /******************** Other Edge Operations **********************/
+
+  /* All these routines can be implemented with the basic edge
+  * operations above.  They are provided for convenience and efficiency.
+  */
+
+  /* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
+  * eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
+  * eOrg and eNew will have the same left face.
+  */
+  // TESShalfEdge *tessMeshAddEdgeVertex( TESSmesh *mesh, TESShalfEdge *eOrg );
+  addEdgeVertex: function (eOrg) {
+    var eNew = this.makeEdge_(eOrg);
+    var eNewSym = eNew.Sym;
+    /* Connect the new edge appropriately */
+
+    this.splice_(eNew, eOrg.Lnext);
+    /* Set the vertex and face information */
+
+    eNew.Org = eOrg.Dst;
+    var newVertex = new TESSvertex();
+    this.makeVertex_(newVertex, eNewSym, eNew.Org);
+    eNew.Lface = eNewSym.Lface = eOrg.Lface;
+    return eNew;
+  },
+
+  /* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
+  * such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
+  * eOrg and eNew will have the same left face.
+  */
+  // TESShalfEdge *tessMeshSplitEdge( TESSmesh *mesh, TESShalfEdge *eOrg );
+  splitEdge: function (eOrg, eDst) {
+    var tempHalfEdge = this.addEdgeVertex(eOrg);
+    var eNew = tempHalfEdge.Sym;
+    /* Disconnect eOrg from eOrg->Dst and connect it to eNew->Org */
+
+    this.splice_(eOrg.Sym, eOrg.Sym.Oprev);
+    this.splice_(eOrg.Sym, eNew);
+    /* Set the vertex and face information */
+
+    eOrg.Dst = eNew.Org;
+    eNew.Dst.anEdge = eNew.Sym;
+    /* may have pointed to eOrg->Sym */
+
+    eNew.Rface = eOrg.Rface;
+    eNew.winding = eOrg.winding;
+    /* copy old winding information */
+
+    eNew.Sym.winding = eOrg.Sym.winding;
+    return eNew;
+  },
+
+  /* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
+  * to eDst->Org, and returns the corresponding half-edge eNew.
+  * If eOrg->Lface == eDst->Lface, this splits one loop into two,
+  * and the newly created loop is eNew->Lface.  Otherwise, two disjoint
+  * loops are merged into one, and the loop eDst->Lface is destroyed.
+  *
+  * If (eOrg == eDst), the new face will have only two edges.
+  * If (eOrg->Lnext == eDst), the old face is reduced to a single edge.
+  * If (eOrg->Lnext->Lnext == eDst), the old face is reduced to two edges.
+  */
+  // TESShalfEdge *tessMeshConnect( TESSmesh *mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst );
+  connect: function (eOrg, eDst) {
+    var joiningLoops = false;
+    var eNew = this.makeEdge_(eOrg);
+    var eNewSym = eNew.Sym;
+
+    if (eDst.Lface !== eOrg.Lface) {
+      /* We are connecting two disjoint loops -- destroy eDst->Lface */
+      joiningLoops = true;
+      this.killFace_(eDst.Lface, eOrg.Lface);
+    }
+    /* Connect the new edge appropriately */
+
+
+    this.splice_(eNew, eOrg.Lnext);
+    this.splice_(eNewSym, eDst);
+    /* Set the vertex and face information */
+
+    eNew.Org = eOrg.Dst;
+    eNewSym.Org = eDst.Org;
+    eNew.Lface = eNewSym.Lface = eOrg.Lface;
+    /* Make sure the old face points to a valid half-edge */
+
+    eOrg.Lface.anEdge = eNewSym;
+
+    if (!joiningLoops) {
+      var newFace = new TESSface();
+      /* We split one loop into two -- the new loop is eNew->Lface */
+
+      this.makeFace_(newFace, eNew, eOrg.Lface);
+    }
+
+    return eNew;
+  },
+
+  /* tessMeshZapFace( fZap ) destroys a face and removes it from the
+  * global face list.  All edges of fZap will have a NULL pointer as their
+  * left face.  Any edges which also have a NULL pointer as their right face
+  * are deleted entirely (along with any isolated vertices this produces).
+  * An entire mesh can be deleted by zapping its faces, one at a time,
+  * in any order.  Zapped faces cannot be used in further mesh operations!
+  */
+  zapFace: function (fZap) {
+    var eStart = fZap.anEdge;
+    var e, eNext, eSym;
+    var fPrev, fNext;
+    /* walk around face, deleting edges whose right face is also NULL */
+
+    eNext = eStart.Lnext;
+
+    do {
+      e = eNext;
+      eNext = e.Lnext;
+      e.Lface = null;
+
+      if (e.Rface === null) {
+        /* delete the edge -- see TESSmeshDelete above */
+        if (e.Onext === e) {
+          this.killVertex_(e.Org, null);
+        } else {
+          /* Make sure that e->Org points to a valid half-edge */
+          e.Org.anEdge = e.Onext;
+          this.splice_(e, e.Oprev);
+        }
+
+        eSym = e.Sym;
+
+        if (eSym.Onext === eSym) {
+          this.killVertex_(eSym.Org, null);
+        } else {
+          /* Make sure that eSym->Org points to a valid half-edge */
+          eSym.Org.anEdge = eSym.Onext;
+          this.splice_(eSym, eSym.Oprev);
+        }
+
+        this.killEdge_(e);
+      }
+    } while (e != eStart);
+    /* delete from circular doubly-linked list */
+
+
+    fPrev = fZap.prev;
+    fNext = fZap.next;
+    fNext.prev = fPrev;
+    fPrev.next = fNext;
+  },
+  countFaceVerts_: function (f) {
+    var eCur = f.anEdge;
+    var n = 0;
+
+    do {
+      n++;
+      eCur = eCur.Lnext;
+    } while (eCur !== f.anEdge);
+
+    return n;
+  },
+  //int tessMeshMergeConvexFaces( TESSmesh *mesh, int maxVertsPerFace )
+  mergeConvexFaces: function (maxVertsPerFace) {
+    var f;
+    var eCur, eNext, eSym;
+    var vStart;
+    var curNv, symNv;
+
+    for (f = this.fHead.next; f !== this.fHead; f = f.next) {
+      // Skip faces which are outside the result.
+      if (!f.inside) continue;
+      eCur = f.anEdge;
+      vStart = eCur.Org;
+
+      while (true) {
+        eNext = eCur.Lnext;
+        eSym = eCur.Sym; // Try to merge if the neighbour face is valid.
+
+        if (eSym && eSym.Lface && eSym.Lface.inside) {
+          // Try to merge the neighbour faces if the resulting polygons
+          // does not exceed maximum number of vertices.
+          curNv = this.countFaceVerts_(f);
+          symNv = this.countFaceVerts_(eSym.Lface);
+
+          if (curNv + symNv - 2 <= maxVertsPerFace) {
+            // Merge if the resulting poly is convex.
+            if (Geom.vertCCW(eCur.Lprev.Org, eCur.Org, eSym.Lnext.Lnext.Org) && Geom.vertCCW(eSym.Lprev.Org, eSym.Org, eCur.Lnext.Lnext.Org)) {
+              eNext = eSym.Lnext;
+              this.delete(eSym);
+              eCur = null;
+              eSym = null;
+            }
+          }
+        }
+
+        if (eCur && eCur.Lnext.Org === vStart) break; // Continue to next edge.
+
+        eCur = eNext;
+      }
+    }
+
+    return true;
+  },
+
+  /* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
+  */
+  check: function () {
+    var fHead = this.fHead;
+    var vHead = this.vHead;
+    var eHead = this.eHead;
+    var f, fPrev, v, vPrev, e, ePrev;
+    fPrev = fHead;
+
+    for (fPrev = fHead; (f = fPrev.next) !== fHead; fPrev = f) {
+      assert(f.prev === fPrev);
+      e = f.anEdge;
+
+      do {
+        assert(e.Sym !== e);
+        assert(e.Sym.Sym === e);
+        assert(e.Lnext.Onext.Sym === e);
+        assert(e.Onext.Sym.Lnext === e);
+        assert(e.Lface === f);
+        e = e.Lnext;
+      } while (e !== f.anEdge);
+    }
+
+    assert(f.prev === fPrev && f.anEdge === null);
+    vPrev = vHead;
+
+    for (vPrev = vHead; (v = vPrev.next) !== vHead; vPrev = v) {
+      assert(v.prev === vPrev);
+      e = v.anEdge;
+
+      do {
+        assert(e.Sym !== e);
+        assert(e.Sym.Sym === e);
+        assert(e.Lnext.Onext.Sym === e);
+        assert(e.Onext.Sym.Lnext === e);
+        assert(e.Org === v);
+        e = e.Onext;
+      } while (e !== v.anEdge);
+    }
+
+    assert(v.prev === vPrev && v.anEdge === null);
+    ePrev = eHead;
+
+    for (ePrev = eHead; (e = ePrev.next) !== eHead; ePrev = e) {
+      assert(e.Sym.next === ePrev.Sym);
+      assert(e.Sym !== e);
+      assert(e.Sym.Sym === e);
+      assert(e.Org !== null);
+      assert(e.Dst !== null);
+      assert(e.Lnext.Onext.Sym === e);
+      assert(e.Onext.Sym.Lnext === e);
+    }
+
+    assert(e.Sym.next === ePrev.Sym && e.Sym === this.eHeadSym && e.Sym.Sym === e && e.Org === null && e.Dst === null && e.Lface === null && e.Rface === null);
+  }
+};
+var Geom = {};
+
+Geom.vertEq = function (u, v) {
+  return u.s === v.s && u.t === v.t;
+};
+/* Returns TRUE if u is lexicographically <= v. */
+
+
+Geom.vertLeq = function (u, v) {
+  return u.s < v.s || u.s === v.s && u.t <= v.t;
+};
+/* Versions of VertLeq, EdgeSign, EdgeEval with s and t transposed. */
+
+
+Geom.transLeq = function (u, v) {
+  return u.t < v.t || u.t === v.t && u.s <= v.s;
+};
+
+Geom.edgeGoesLeft = function (e) {
+  return Geom.vertLeq(e.Dst, e.Org);
+};
+
+Geom.edgeGoesRight = function (e) {
+  return Geom.vertLeq(e.Org, e.Dst);
+};
+
+Geom.vertL1dist = function (u, v) {
+  return Math.abs(u.s - v.s) + Math.abs(u.t - v.t);
+}; //TESSreal tesedgeEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.edgeEval = function (u, v, w) {
+  /* Given three vertices u,v,w such that VertLeq(u,v) && VertLeq(v,w),
+  * evaluates the t-coord of the edge uw at the s-coord of the vertex v.
+  * Returns v->t - (uw)(v->s), ie. the signed distance from uw to v.
+  * If uw is vertical (and thus passes thru v), the result is zero.
+  *
+  * The calculation is extremely accurate and stable, even when v
+  * is very close to u or w.  In particular if we set v->t = 0 and
+  * let r be the negated result (this evaluates (uw)(v->s)), then
+  * r is guaranteed to satisfy MIN(u->t,w->t) <= r <= MAX(u->t,w->t).
+  */
+  assert(Geom.vertLeq(u, v) && Geom.vertLeq(v, w));
+  var gapL = v.s - u.s;
+  var gapR = w.s - v.s;
+
+  if (gapL + gapR > 0.0) {
+    if (gapL < gapR) {
+      return v.t - u.t + (u.t - w.t) * (gapL / (gapL + gapR));
+    } else {
+      return v.t - w.t + (w.t - u.t) * (gapR / (gapL + gapR));
+    }
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //TESSreal tesedgeSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.edgeSign = function (u, v, w) {
+  /* Returns a number whose sign matches EdgeEval(u,v,w) but which
+  * is cheaper to evaluate.  Returns > 0, == 0 , or < 0
+  * as v is above, on, or below the edge uw.
+  */
+  assert(Geom.vertLeq(u, v) && Geom.vertLeq(v, w));
+  var gapL = v.s - u.s;
+  var gapR = w.s - v.s;
+
+  if (gapL + gapR > 0.0) {
+    return (v.t - w.t) * gapL + (v.t - u.t) * gapR;
+  }
+  /* vertical line */
+
+
+  return 0.0;
+};
+/***********************************************************************
+* Define versions of EdgeSign, EdgeEval with s and t transposed.
+*/
+//TESSreal testransEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.transEval = function (u, v, w) {
+  /* Given three vertices u,v,w such that TransLeq(u,v) && TransLeq(v,w),
+  * evaluates the t-coord of the edge uw at the s-coord of the vertex v.
+  * Returns v->s - (uw)(v->t), ie. the signed distance from uw to v.
+  * If uw is vertical (and thus passes thru v), the result is zero.
+  *
+  * The calculation is extremely accurate and stable, even when v
+  * is very close to u or w.  In particular if we set v->s = 0 and
+  * let r be the negated result (this evaluates (uw)(v->t)), then
+  * r is guaranteed to satisfy MIN(u->s,w->s) <= r <= MAX(u->s,w->s).
+  */
+  assert(Geom.transLeq(u, v) && Geom.transLeq(v, w));
+  var gapL = v.t - u.t;
+  var gapR = w.t - v.t;
+
+  if (gapL + gapR > 0.0) {
+    if (gapL < gapR) {
+      return v.s - u.s + (u.s - w.s) * (gapL / (gapL + gapR));
+    } else {
+      return v.s - w.s + (w.s - u.s) * (gapR / (gapL + gapR));
+    }
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //TESSreal testransSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.transSign = function (u, v, w) {
+  /* Returns a number whose sign matches TransEval(u,v,w) but which
+  * is cheaper to evaluate.  Returns > 0, == 0 , or < 0
+  * as v is above, on, or below the edge uw.
+  */
+  assert(Geom.transLeq(u, v) && Geom.transLeq(v, w));
+  var gapL = v.t - u.t;
+  var gapR = w.t - v.t;
+
+  if (gapL + gapR > 0.0) {
+    return (v.s - w.s) * gapL + (v.s - u.s) * gapR;
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //int tesvertCCW( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.vertCCW = function (u, v, w) {
+  /* For almost-degenerate situations, the results are not reliable.
+  * Unless the floating-point arithmetic can be performed without
+  * rounding errors, *any* implementation will give incorrect results
+  * on some degenerate inputs, so the client must have some way to
+  * handle this situation.
+  */
+  return u.s * (v.t - w.t) + v.s * (w.t - u.t) + w.s * (u.t - v.t) >= 0.0;
+};
+/* Given parameters a,x,b,y returns the value (b*x+a*y)/(a+b),
+* or (x+y)/2 if a==b==0.  It requires that a,b >= 0, and enforces
+* this in the rare case that one argument is slightly negative.
+* The implementation is extremely stable numerically.
+* In particular it guarantees that the result r satisfies
+* MIN(x,y) <= r <= MAX(x,y), and the results are very accurate
+* even when a and b differ greatly in magnitude.
+*/
+
+
+Geom.interpolate = function (a, x, b, y) {
+  return a = a < 0 ? 0 : a, b = b < 0 ? 0 : b, a <= b ? b == 0 ? (x + y) / 2 : x + (y - x) * (a / (a + b)) : y + (x - y) * (b / (a + b));
+};
+/*
+#ifndef FOR_TRITE_TEST_PROGRAM
+#define Interpolate(a,x,b,y)	RealInterpolate(a,x,b,y)
+#else
 	// Claim: the ONLY property the sweep algorithm relies on is that
-	// MIN(x,y) <= r <= MAX(x,y).  This is a nasty way to test that.
-	#include <stdlib.h>
-	extern int RandomInterpolate;
-
+// MIN(x,y) <= r <= MAX(x,y).  This is a nasty way to test that.
+#include <stdlib.h>
+extern int RandomInterpolate;
 	double Interpolate( double a, double x, double b, double y)
-	{
-		printf("*********************%d\n",RandomInterpolate);
-		if( RandomInterpolate ) {
-			a = 1.2 * drand48() - 0.1;
-			a = (a < 0) ? 0 : ((a > 1) ? 1 : a);
-			b = 1.0 - a;
-		}
-		return RealInterpolate(a,x,b,y);
+{
+	printf("*********************%d\n",RandomInterpolate);
+	if( RandomInterpolate ) {
+		a = 1.2 * drand48() - 0.1;
+		a = (a < 0) ? 0 : ((a > 1) ? 1 : a);
+		b = 1.0 - a;
 	}
-	#endif*/
-
-	Geom.intersect = function( o1, d1, o2, d2, v ) {
-		/* Given edges (o1,d1) and (o2,d2), compute their point of intersection.
-		* The computed point is guaranteed to lie in the intersection of the
-		* bounding rectangles defined by each edge.
-		*/
-		var z1, z2;
-		var t;
-
-		/* This is certainly not the most efficient way to find the intersection
-		* of two line segments, but it is very numerically stable.
-		*
-		* Strategy: find the two middle vertices in the VertLeq ordering,
-		* and interpolate the intersection s-value from these.  Then repeat
-		* using the TransLeq ordering to find the intersection t-value.
-		*/
-
-		if( ! Geom.vertLeq( o1, d1 )) { t = o1; o1 = d1; d1 = t; } //swap( o1, d1 ); }
-		if( ! Geom.vertLeq( o2, d2 )) { t = o2; o2 = d2; d2 = t; } //swap( o2, d2 ); }
-		if( ! Geom.vertLeq( o1, o2 )) { t = o1; o1 = o2; o2 = t; t = d1; d1 = d2; d2 = t; }//swap( o1, o2 ); swap( d1, d2 ); }
-
-		if( ! Geom.vertLeq( o2, d1 )) {
-			/* Technically, no intersection -- do our best */
-			v.s = (o2.s + d1.s) / 2;
-		} else if( Geom.vertLeq( d1, d2 )) {
-			/* Interpolate between o2 and d1 */
-			z1 = Geom.edgeEval( o1, o2, d1 );
-			z2 = Geom.edgeEval( o2, d1, d2 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.s = Geom.interpolate( z1, o2.s, z2, d1.s );
-		} else {
-			/* Interpolate between o2 and d2 */
-			z1 = Geom.edgeSign( o1, o2, d1 );
-			z2 = -Geom.edgeSign( o1, d2, d1 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.s = Geom.interpolate( z1, o2.s, z2, d2.s );
-		}
-
-		/* Now repeat the process for t */
-
-		if( ! Geom.transLeq( o1, d1 )) { t = o1; o1 = d1; d1 = t; } //swap( o1, d1 ); }
-		if( ! Geom.transLeq( o2, d2 )) { t = o2; o2 = d2; d2 = t; } //swap( o2, d2 ); }
-		if( ! Geom.transLeq( o1, o2 )) { t = o1; o1 = o2; o2 = t; t = d1; d1 = d2; d2 = t; } //swap( o1, o2 ); swap( d1, d2 ); }
-
-		if( ! Geom.transLeq( o2, d1 )) {
-			/* Technically, no intersection -- do our best */
-			v.t = (o2.t + d1.t) / 2;
-		} else if( Geom.transLeq( d1, d2 )) {
-			/* Interpolate between o2 and d1 */
-			z1 = Geom.transEval( o1, o2, d1 );
-			z2 = Geom.transEval( o2, d1, d2 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.t = Geom.interpolate( z1, o2.t, z2, d1.t );
-		} else {
-			/* Interpolate between o2 and d2 */
-			z1 = Geom.transSign( o1, o2, d1 );
-			z2 = -Geom.transSign( o1, d2, d1 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.t = Geom.interpolate( z1, o2.t, z2, d2.t );
-		}
-	};
-
-
-
-	function DictNode() {
-		this.key = null;
-		this.next = null;
-		this.prev = null;
-	};
-
-	function Dict(frame, leq) {
-		this.head = new DictNode();
-		this.head.next = this.head;
-		this.head.prev = this.head;
-		this.frame = frame;
-		this.leq = leq;
-	};
-
-	Dict.prototype = {
-		min: function() {
-			return this.head.next;
-		},
-
-		max: function() {
-			return this.head.prev;
-		},
-
-		insert: function(k) {
-			return this.insertBefore(this.head, k);
-		},
-
-		search: function(key) {
-			/* Search returns the node with the smallest key greater than or equal
-			* to the given key.  If there is no such key, returns a node whose
-			* key is NULL.  Similarly, Succ(Max(d)) has a NULL key, etc.
-			*/
-			var node = this.head;
-			do {
-				node = node.next;
-			} while( node.key !== null && ! this.leq(this.frame, key, node.key));
-
-			return node;
-		},
-
-		insertBefore: function(node, key) {
-			do {
-				node = node.prev;
-			} while( node.key !== null && ! this.leq(this.frame, node.key, key));
-
-			var newNode = new DictNode();
-			newNode.key = key;
-			newNode.next = node.next;
-			node.next.prev = newNode;
-			newNode.prev = node;
-			node.next = newNode;
-
-			return newNode;
-		},
-
-		delete: function(node) {
-			node.next.prev = node.prev;
-			node.prev.next = node.next;
-		}
-	};
-
-
-	function PQnode() {
-		this.handle = null;
-	}
-
-	function PQhandleElem() {
-		this.key = null;
-		this.node = null;
-	}
-
-	function PriorityQ(size, leq) {
-		this.size = 0;
-		this.max = size;
-
-		this.nodes = [];
-		this.nodes.length = size+1;
-		for (var i = 0; i < this.nodes.length; i++)
-			this.nodes[i] = new PQnode();
-
-		this.handles = [];
-		this.handles.length = size+1;
-		for (var i = 0; i < this.handles.length; i++)
-			this.handles[i] = new PQhandleElem();
-
-		this.initialized = false;
-		this.freeList = 0;
-		this.leq = leq;
-
-		this.nodes[1].handle = 1;	/* so that Minimum() returns NULL */
-		this.handles[1].key = null;
-	};
-
-	PriorityQ.prototype = {
-
-		floatDown_: function( curr )
-		{
-			var n = this.nodes;
-			var h = this.handles;
-			var hCurr, hChild;
-			var child;
-
-			hCurr = n[curr].handle;
-			for( ;; ) {
-				child = curr << 1;
-				if( child < this.size && this.leq( h[n[child+1].handle].key, h[n[child].handle].key )) {
-					++child;
-				}
-
-				assert(child <= this.max);
-
-				hChild = n[child].handle;
-				if( child > this.size || this.leq( h[hCurr].key, h[hChild].key )) {
-					n[curr].handle = hCurr;
-					h[hCurr].node = curr;
-					break;
-				}
-				n[curr].handle = hChild;
-				h[hChild].node = curr;
-				curr = child;
-			}
-		},
-
-		floatUp_: function( curr )
-		{
-			var n = this.nodes;
-			var h = this.handles;
-			var hCurr, hParent;
-			var parent;
-
-			hCurr = n[curr].handle;
-			for( ;; ) {
-				parent = curr >> 1;
-				hParent = n[parent].handle;
-				if( parent == 0 || this.leq( h[hParent].key, h[hCurr].key )) {
-					n[curr].handle = hCurr;
-					h[hCurr].node = curr;
-					break;
-				}
-				n[curr].handle = hParent;
-				h[hParent].node = curr;
-				curr = parent;
-			}
-		},
-
-		init: function() {
-			/* This method of building a heap is O(n), rather than O(n lg n). */
-			for( var i = this.size; i >= 1; --i ) {
-				this.floatDown_( i );
-			}
-			this.initialized = true;
-		},
-
-		min: function() {
-			return this.handles[this.nodes[1].handle].key;
-		},
-
-		isEmpty: function() {
-			this.size === 0;
-		},
-
-		/* really pqHeapInsert */
-		/* returns INV_HANDLE iff out of memory */
-		//PQhandle pqHeapInsert( TESSalloc* alloc, PriorityQHeap *pq, PQkey keyNew )
-		insert: function(keyNew)
-		{
-			var curr;
-			var free;
-
-			curr = ++this.size;
-			if( (curr*2) > this.max ) {
-				this.max *= 2;
-				var s;
-				s = this.nodes.length;
-				this.nodes.length = this.max+1;
-				for (var i = s; i < this.nodes.length; i++)
-					this.nodes[i] = new PQnode();
-
-				s = this.handles.length;
-				this.handles.length = this.max+1;
-				for (var i = s; i < this.handles.length; i++)
-					this.handles[i] = new PQhandleElem();
-			}
-
-			if( this.freeList === 0 ) {
-				free = curr;
-			} else {
-				free = this.freeList;
-				this.freeList = this.handles[free].node;
-			}
-
-			this.nodes[curr].handle = free;
-			this.handles[free].node = curr;
-			this.handles[free].key = keyNew;
-
-			if( this.initialized ) {
-				this.floatUp_( curr );
-			}
-			return free;
-		},
-
-		//PQkey pqHeapExtractMin( PriorityQHeap *pq )
-		extractMin: function() {
-			var n = this.nodes;
-			var h = this.handles;
-			var hMin = n[1].handle;
-			var min = h[hMin].key;
-
-			if( this.size > 0 ) {
-				n[1].handle = n[this.size].handle;
-				h[n[1].handle].node = 1;
-
-				h[hMin].key = null;
-				h[hMin].node = this.freeList;
-				this.freeList = hMin;
-
-				--this.size;
-				if( this.size > 0 ) {
-					this.floatDown_( 1 );
-				}
-			}
-			return min;
-		},
-
-		delete: function( hCurr ) {
-			var n = this.nodes;
-			var h = this.handles;
-			var curr;
-
-			assert( hCurr >= 1 && hCurr <= this.max && h[hCurr].key !== null );
-
-			curr = h[hCurr].node;
-			n[curr].handle = n[this.size].handle;
-			h[n[curr].handle].node = curr;
-
-			--this.size;
-			if( curr <= this.size ) {
-				if( curr <= 1 || this.leq( h[n[curr>>1].handle].key, h[n[curr].handle].key )) {
-					this.floatDown_( curr );
-				} else {
-					this.floatUp_( curr );
-				}
-			}
-			h[hCurr].key = null;
-			h[hCurr].node = this.freeList;
-			this.freeList = hCurr;
-		}
-	};
-
-
-	/* For each pair of adjacent edges crossing the sweep line, there is
-	* an ActiveRegion to represent the region between them.  The active
-	* regions are kept in sorted order in a dynamic dictionary.  As the
-	* sweep line crosses each vertex, we update the affected regions.
-	*/
-
-	function ActiveRegion() {
-		this.eUp = null;		/* upper edge, directed right to left */
-		this.nodeUp = null;	/* dictionary node corresponding to eUp */
-		this.windingNumber = 0;	/* used to determine which regions are
-								* inside the polygon */
-		this.inside = false;		/* is this region inside the polygon? */
-		this.sentinel = false;	/* marks fake edges at t = +/-infinity */
-		this.dirty = false;		/* marks regions where the upper or lower
-						* edge has changed, but we haven't checked
-						* whether they intersect yet */
-		this.fixUpperEdge = false;	/* marks temporary edges introduced when
-							* we process a "right vertex" (one without
-							* any edges leaving to the right) */
-	};
-
-	var Sweep = {};
-
-	Sweep.regionBelow = function(r) {
-		return r.nodeUp.prev.key;
-	}
-
-	Sweep.regionAbove = function(r) {
-		return r.nodeUp.next.key;
-	}
-
-	Sweep.debugEvent = function( tess ) {
-		// empty
-	}
-
-
-	/*
-	* Invariants for the Edge Dictionary.
-	* - each pair of adjacent edges e2=Succ(e1) satisfies EdgeLeq(e1,e2)
-	*   at any valid location of the sweep event
-	* - if EdgeLeq(e2,e1) as well (at any valid sweep event), then e1 and e2
-	*   share a common endpoint
-	* - for each e, e->Dst has been processed, but not e->Org
-	* - each edge e satisfies VertLeq(e->Dst,event) && VertLeq(event,e->Org)
-	*   where "event" is the current sweep line event.
-	* - no edge e has zero length
-	*
-	* Invariants for the Mesh (the processed portion).
-	* - the portion of the mesh left of the sweep line is a planar graph,
-	*   ie. there is *some* way to embed it in the plane
-	* - no processed edge has zero length
-	* - no two processed vertices have identical coordinates
-	* - each "inside" region is monotone, ie. can be broken into two chains
-	*   of monotonically increasing vertices according to VertLeq(v1,v2)
-	*   - a non-invariant: these chains may intersect (very slightly)
-	*
-	* Invariants for the Sweep.
-	* - if none of the edges incident to the event vertex have an activeRegion
-	*   (ie. none of these edges are in the edge dictionary), then the vertex
-	*   has only right-going edges.
-	* - if an edge is marked "fixUpperEdge" (it is a temporary edge introduced
-	*   by ConnectRightVertex), then it is the only right-going edge from
-	*   its associated vertex.  (This says that these edges exist only
-	*   when it is necessary.)
-	*/
-
-	/* When we merge two edges into one, we need to compute the combined
-	* winding of the new edge.
-	*/
-	Sweep.addWinding = function(eDst,eSrc) {
-		eDst.winding += eSrc.winding;
-		eDst.Sym.winding += eSrc.Sym.winding;
-	}
-
-
-	//static int EdgeLeq( TESStesselator *tess, ActiveRegion *reg1, ActiveRegion *reg2 )
-	Sweep.edgeLeq = function( tess, reg1, reg2 ) {
-		/*
-		* Both edges must be directed from right to left (this is the canonical
-		* direction for the upper edge of each region).
-		*
-		* The strategy is to evaluate a "t" value for each edge at the
-		* current sweep line position, given by tess->event.  The calculations
-		* are designed to be very stable, but of course they are not perfect.
-		*
-		* Special case: if both edge destinations are at the sweep event,
-		* we sort the edges by slope (they would otherwise compare equally).
-		*/
-		var ev = tess.event;
-		var t1, t2;
-
-		var e1 = reg1.eUp;
-		var e2 = reg2.eUp;
-
-		if( e1.Dst === ev ) {
-			if( e2.Dst === ev ) {
-				/* Two edges right of the sweep line which meet at the sweep event.
-				* Sort them by slope.
-				*/
-				if( Geom.vertLeq( e1.Org, e2.Org )) {
-					return Geom.edgeSign( e2.Dst, e1.Org, e2.Org ) <= 0;
-				}
-				return Geom.edgeSign( e1.Dst, e2.Org, e1.Org ) >= 0;
-			}
-			return Geom.edgeSign( e2.Dst, ev, e2.Org ) <= 0;
-		}
-		if( e2.Dst === ev ) {
-			return Geom.edgeSign( e1.Dst, ev, e1.Org ) >= 0;
-		}
-
-		/* General case - compute signed distance *from* e1, e2 to event */
-		var t1 = Geom.edgeEval( e1.Dst, ev, e1.Org );
-		var t2 = Geom.edgeEval( e2.Dst, ev, e2.Org );
-		return (t1 >= t2);
-	}
-
-
-	//static void DeleteRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.deleteRegion = function( tess, reg ) {
-		if( reg.fixUpperEdge ) {
-			/* It was created with zero winding number, so it better be
-			* deleted with zero winding number (ie. it better not get merged
-			* with a real edge).
-			*/
-			assert( reg.eUp.winding === 0 );
-		}
-		reg.eUp.activeRegion = null;
-		tess.dict.delete( reg.nodeUp );
-	}
-
-	//static int FixUpperEdge( TESStesselator *tess, ActiveRegion *reg, TESShalfEdge *newEdge )
-	Sweep.fixUpperEdge = function( tess, reg, newEdge ) {
-		/*
-		* Replace an upper edge which needs fixing (see ConnectRightVertex).
-		*/
-		assert( reg.fixUpperEdge );
-		tess.mesh.delete( reg.eUp );
-		reg.fixUpperEdge = false;
-		reg.eUp = newEdge;
-		newEdge.activeRegion = reg;
-	}
-
-	//static ActiveRegion *TopLeftRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.topLeftRegion = function( tess, reg ) {
-		var org = reg.eUp.Org;
-		var e;
-
-		/* Find the region above the uppermost edge with the same origin */
-		do {
-			reg = Sweep.regionAbove( reg );
-		} while( reg.eUp.Org === org );
-
-		/* If the edge above was a temporary edge introduced by ConnectRightVertex,
-		* now is the time to fix it.
-		*/
-		if( reg.fixUpperEdge ) {
-			e = tess.mesh.connect( Sweep.regionBelow(reg).eUp.Sym, reg.eUp.Lnext );
-			if (e === null) return null;
-			Sweep.fixUpperEdge( tess, reg, e );
-			reg = Sweep.regionAbove( reg );
-		}
-		return reg;
-	}
-
-	//static ActiveRegion *TopRightRegion( ActiveRegion *reg )
-	Sweep.topRightRegion = function( reg )
-	{
-		var dst = reg.eUp.Dst;
-		var reg = null;
-		/* Find the region above the uppermost edge with the same destination */
-		do {
-			reg = Sweep.regionAbove( reg );
-		} while( reg.eUp.Dst === dst );
-		return reg;
-	}
-
-	//static ActiveRegion *AddRegionBelow( TESStesselator *tess, ActiveRegion *regAbove, TESShalfEdge *eNewUp )
-	Sweep.addRegionBelow = function( tess, regAbove, eNewUp ) {
-		/*
-		* Add a new active region to the sweep line, *somewhere* below "regAbove"
-		* (according to where the new edge belongs in the sweep-line dictionary).
-		* The upper edge of the new region will be "eNewUp".
-		* Winding number and "inside" flag are not updated.
-		*/
-		var regNew = new ActiveRegion();
-		regNew.eUp = eNewUp;
-		regNew.nodeUp = tess.dict.insertBefore( regAbove.nodeUp, regNew );
-	//	if (regNew->nodeUp == NULL) longjmp(tess->env,1);
-		regNew.fixUpperEdge = false;
-		regNew.sentinel = false;
-		regNew.dirty = false;
-
-		eNewUp.activeRegion = regNew;
-		return regNew;
-	}
-
-	//static int IsWindingInside( TESStesselator *tess, int n )
-	Sweep.isWindingInside = function( tess, n ) {
-		switch( tess.windingRule ) {
-			case Tess2.WINDING_ODD:
-				return (n & 1) != 0;
-			case Tess2.WINDING_NONZERO:
-				return (n != 0);
-			case Tess2.WINDING_POSITIVE:
-				return (n > 0);
-			case Tess2.WINDING_NEGATIVE:
-				return (n < 0);
-			case Tess2.WINDING_ABS_GEQ_TWO:
-				return (n >= 2) || (n <= -2);
-		}
-		assert( false );
-		return false;
-	}
-
-	//static void ComputeWinding( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.computeWinding = function( tess, reg ) {
-		reg.windingNumber = Sweep.regionAbove(reg).windingNumber + reg.eUp.winding;
-		reg.inside = Sweep.isWindingInside( tess, reg.windingNumber );
-	}
-
-
-	//static void FinishRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.finishRegion = function( tess, reg ) {
-		/*
-		* Delete a region from the sweep line.  This happens when the upper
-		* and lower chains of a region meet (at a vertex on the sweep line).
-		* The "inside" flag is copied to the appropriate mesh face (we could
-		* not do this before -- since the structure of the mesh is always
-		* changing, this face may not have even existed until now).
-		*/
-		var e = reg.eUp;
-		var f = e.Lface;
-
-		f.inside = reg.inside;
-		f.anEdge = e;   /* optimization for tessMeshTessellateMonoRegion() */
-		Sweep.deleteRegion( tess, reg );
-	}
-
-
-	//static TESShalfEdge *FinishLeftRegions( TESStesselator *tess, ActiveRegion *regFirst, ActiveRegion *regLast )
-	Sweep.finishLeftRegions = function( tess, regFirst, regLast ) {
-		/*
-		* We are given a vertex with one or more left-going edges.  All affected
-		* edges should be in the edge dictionary.  Starting at regFirst->eUp,
-		* we walk down deleting all regions where both edges have the same
-		* origin vOrg.  At the same time we copy the "inside" flag from the
-		* active region to the face, since at this point each face will belong
-		* to at most one region (this was not necessarily true until this point
-		* in the sweep).  The walk stops at the region above regLast; if regLast
-		* is NULL we walk as far as possible.  At the same time we relink the
-		* mesh if necessary, so that the ordering of edges around vOrg is the
-		* same as in the dictionary.
-		*/
-		var e, ePrev;
-		var reg = null;
-		var regPrev = regFirst;
-		var ePrev = regFirst.eUp;
-		while( regPrev !== regLast ) {
-			regPrev.fixUpperEdge = false;	/* placement was OK */
-			reg = Sweep.regionBelow( regPrev );
-			e = reg.eUp;
-			if( e.Org != ePrev.Org ) {
-				if( ! reg.fixUpperEdge ) {
-					/* Remove the last left-going edge.  Even though there are no further
-					* edges in the dictionary with this origin, there may be further
-					* such edges in the mesh (if we are adding left edges to a vertex
-					* that has already been processed).  Thus it is important to call
-					* FinishRegion rather than just DeleteRegion.
-					*/
-					Sweep.finishRegion( tess, regPrev );
-					break;
-				}
-				/* If the edge below was a temporary edge introduced by
-				* ConnectRightVertex, now is the time to fix it.
-				*/
-				e = tess.mesh.connect( ePrev.Lprev, e.Sym );
-	//			if (e == NULL) longjmp(tess->env,1);
-				Sweep.fixUpperEdge( tess, reg, e );
-			}
-
-			/* Relink edges so that ePrev->Onext == e */
-			if( ePrev.Onext !== e ) {
-				tess.mesh.splice( e.Oprev, e );
-				tess.mesh.splice( ePrev, e );
-			}
-			Sweep.finishRegion( tess, regPrev );	/* may change reg->eUp */
-			ePrev = reg.eUp;
-			regPrev = reg;
-		}
-		return ePrev;
-	}
-
-
-	//static void AddRightEdges( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eFirst, TESShalfEdge *eLast, TESShalfEdge *eTopLeft, int cleanUp )
-	Sweep.addRightEdges = function( tess, regUp, eFirst, eLast, eTopLeft, cleanUp ) {
-		/*
-		* Purpose: insert right-going edges into the edge dictionary, and update
-		* winding numbers and mesh connectivity appropriately.  All right-going
-		* edges share a common origin vOrg.  Edges are inserted CCW starting at
-		* eFirst; the last edge inserted is eLast->Oprev.  If vOrg has any
-		* left-going edges already processed, then eTopLeft must be the edge
-		* such that an imaginary upward vertical segment from vOrg would be
-		* contained between eTopLeft->Oprev and eTopLeft; otherwise eTopLeft
-		* should be NULL.
-		*/
-		var reg, regPrev;
-		var e, ePrev;
-		var firstTime = true;
-
-		/* Insert the new right-going edges in the dictionary */
-		e = eFirst;
-		do {
-			assert( Geom.vertLeq( e.Org, e.Dst ));
-			Sweep.addRegionBelow( tess, regUp, e.Sym );
-			e = e.Onext;
-		} while ( e !== eLast );
-
-		/* Walk *all* right-going edges from e->Org, in the dictionary order,
-		* updating the winding numbers of each region, and re-linking the mesh
-		* edges to match the dictionary ordering (if necessary).
-		*/
-		if( eTopLeft === null ) {
-			eTopLeft = Sweep.regionBelow( regUp ).eUp.Rprev;
-		}
-		regPrev = regUp;
-		ePrev = eTopLeft;
-		for( ;; ) {
-			reg = Sweep.regionBelow( regPrev );
-			e = reg.eUp.Sym;
-			if( e.Org !== ePrev.Org ) break;
-
-			if( e.Onext !== ePrev ) {
-				/* Unlink e from its current position, and relink below ePrev */
-				tess.mesh.splice( e.Oprev, e );
-				tess.mesh.splice( ePrev.Oprev, e );
-			}
-			/* Compute the winding number and "inside" flag for the new regions */
-			reg.windingNumber = regPrev.windingNumber - e.winding;
-			reg.inside = Sweep.isWindingInside( tess, reg.windingNumber );
-
-			/* Check for two outgoing edges with same slope -- process these
-			* before any intersection tests (see example in tessComputeInterior).
-			*/
-			regPrev.dirty = true;
-			if( ! firstTime && Sweep.checkForRightSplice( tess, regPrev )) {
-				Sweep.addWinding( e, ePrev );
-				Sweep.deleteRegion( tess, regPrev );
-				tess.mesh.delete( ePrev );
-			}
-			firstTime = false;
-			regPrev = reg;
-			ePrev = e;
-		}
-		regPrev.dirty = true;
-		assert( regPrev.windingNumber - e.winding === reg.windingNumber );
-
-		if( cleanUp ) {
-			/* Check for intersections between newly adjacent edges. */
-			Sweep.walkDirtyRegions( tess, regPrev );
-		}
-	}
-
-
-	//static void SpliceMergeVertices( TESStesselator *tess, TESShalfEdge *e1, TESShalfEdge *e2 )
-	Sweep.spliceMergeVertices = function( tess, e1, e2 ) {
-		/*
-		* Two vertices with idential coordinates are combined into one.
-		* e1->Org is kept, while e2->Org is discarded.
-		*/
-		tess.mesh.splice( e1, e2 ); 
-	}
-
-	//static void VertexWeights( TESSvertex *isect, TESSvertex *org, TESSvertex *dst, TESSreal *weights )
-	Sweep.vertexWeights = function( isect, org, dst ) {
-		/*
-		* Find some weights which describe how the intersection vertex is
-		* a linear combination of "org" and "dest".  Each of the two edges
-		* which generated "isect" is allocated 50% of the weight; each edge
-		* splits the weight between its org and dst according to the
-		* relative distance to "isect".
-		*/
-		var t1 = Geom.vertL1dist( org, isect );
-		var t2 = Geom.vertL1dist( dst, isect );
-		var w0 = 0.5 * t2 / (t1 + t2);
-		var w1 = 0.5 * t1 / (t1 + t2);
-		isect.coords[0] += w0*org.coords[0] + w1*dst.coords[0];
-		isect.coords[1] += w0*org.coords[1] + w1*dst.coords[1];
-		isect.coords[2] += w0*org.coords[2] + w1*dst.coords[2];
-	}
-
-
-	//static void GetIntersectData( TESStesselator *tess, TESSvertex *isect, TESSvertex *orgUp, TESSvertex *dstUp, TESSvertex *orgLo, TESSvertex *dstLo )
-	Sweep.getIntersectData = function( tess, isect, orgUp, dstUp, orgLo, dstLo ) {
-		 /*
-		 * We've computed a new intersection point, now we need a "data" pointer
-		 * from the user so that we can refer to this new vertex in the
-		 * rendering callbacks.
-		 */
-		isect.coords[0] = isect.coords[1] = isect.coords[2] = 0;
-		isect.idx = -1;
-		Sweep.vertexWeights( isect, orgUp, dstUp );
-		Sweep.vertexWeights( isect, orgLo, dstLo );
-	}
-
-	//static int CheckForRightSplice( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForRightSplice = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edge of "regUp", to make sure that the
-		* eUp->Org is above eLo, or eLo->Org is below eUp (depending on which
-		* origin is leftmost).
-		*
-		* The main purpose is to splice right-going edges with the same
-		* dest vertex and nearly identical slopes (ie. we can't distinguish
-		* the slopes numerically).  However the splicing can also help us
-		* to recover from numerical errors.  For example, suppose at one
-		* point we checked eUp and eLo, and decided that eUp->Org is barely
-		* above eLo.  Then later, we split eLo into two edges (eg. from
-		* a splice operation like this one).  This can change the result of
-		* our test so that now eUp->Org is incident to eLo, or barely below it.
-		* We must correct this condition to maintain the dictionary invariants.
-		*
-		* One possibility is to check these edges for intersection again
-		* (ie. CheckForIntersect).  This is what we do if possible.  However
-		* CheckForIntersect requires that tess->event lies between eUp and eLo,
-		* so that it has something to fall back on when the intersection
-		* calculation gives us an unusable answer.  So, for those cases where
-		* we can't check for intersection, this routine fixes the problem
-		* by just splicing the offending vertex into the other edge.
-		* This is a guaranteed solution, no matter how degenerate things get.
-		* Basically this is a combinatorial solution to a numerical problem.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-
-		if( Geom.vertLeq( eUp.Org, eLo.Org )) {
-			if( Geom.edgeSign( eLo.Dst, eUp.Org, eLo.Org ) > 0 ) return false;
-
-			/* eUp->Org appears to be below eLo */
-			if( ! Geom.vertEq( eUp.Org, eLo.Org )) {
-				/* Splice eUp->Org into eLo */
-				tess.mesh.splitEdge( eLo.Sym );
-				tess.mesh.splice( eUp, eLo.Oprev );
-				regUp.dirty = regLo.dirty = true;
-
-			} else if( eUp.Org !== eLo.Org ) {
-				/* merge the two vertices, discarding eUp->Org */
-				tess.pq.delete( eUp.Org.pqHandle );
-				Sweep.spliceMergeVertices( tess, eLo.Oprev, eUp );
-			}
-		} else {
-			if( Geom.edgeSign( eUp.Dst, eLo.Org, eUp.Org ) < 0 ) return false;
-
-			/* eLo->Org appears to be above eUp, so splice eLo->Org into eUp */
-			Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-			tess.mesh.splitEdge( eUp.Sym );
-			tess.mesh.splice( eLo.Oprev, eUp );
-		}
-		return true;
-	}
-
-	//static int CheckForLeftSplice( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForLeftSplice = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edge of "regUp", to make sure that the
-		* eUp->Dst is above eLo, or eLo->Dst is below eUp (depending on which
-		* destination is rightmost).
-		*
-		* Theoretically, this should always be true.  However, splitting an edge
-		* into two pieces can change the results of previous tests.  For example,
-		* suppose at one point we checked eUp and eLo, and decided that eUp->Dst
-		* is barely above eLo.  Then later, we split eLo into two edges (eg. from
-		* a splice operation like this one).  This can change the result of
-		* the test so that now eUp->Dst is incident to eLo, or barely below it.
-		* We must correct this condition to maintain the dictionary invariants
-		* (otherwise new edges might get inserted in the wrong place in the
-		* dictionary, and bad stuff will happen).
-		*
-		* We fix the problem by just splicing the offending vertex into the
-		* other edge.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var e;
-
-		assert( ! Geom.vertEq( eUp.Dst, eLo.Dst ));
-
-		if( Geom.vertLeq( eUp.Dst, eLo.Dst )) {
-			if( Geom.edgeSign( eUp.Dst, eLo.Dst, eUp.Org ) < 0 ) return false;
-
-			/* eLo->Dst is above eUp, so splice eLo->Dst into eUp */
-			Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-			e = tess.mesh.splitEdge( eUp );
-			tess.mesh.splice( eLo.Sym, e );
-			e.Lface.inside = regUp.inside;
-		} else {
-			if( Geom.edgeSign( eLo.Dst, eUp.Dst, eLo.Org ) > 0 ) return false;
-
-			/* eUp->Dst is below eLo, so splice eUp->Dst into eLo */
-			regUp.dirty = regLo.dirty = true;
-			e = tess.mesh.splitEdge( eLo );
-			tess.mesh.splice( eUp.Lnext, eLo.Sym );
-			e.Rface.inside = regUp.inside;
-		}
-		return true;
-	}
-
-
-	//static int CheckForIntersect( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForIntersect = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edges of the given region to see if
-		* they intersect.  If so, create the intersection and add it
-		* to the data structures.
-		*
-		* Returns TRUE if adding the new intersection resulted in a recursive
-		* call to AddRightEdges(); in this case all "dirty" regions have been
-		* checked for intersections, and possibly regUp has been deleted.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var orgUp = eUp.Org;
-		var orgLo = eLo.Org;
-		var dstUp = eUp.Dst;
-		var dstLo = eLo.Dst;
-		var tMinUp, tMaxLo;
-		var isect = new TESSvertex, orgMin;
-		var e;
-
-		assert( ! Geom.vertEq( dstLo, dstUp ));
-		assert( Geom.edgeSign( dstUp, tess.event, orgUp ) <= 0 );
-		assert( Geom.edgeSign( dstLo, tess.event, orgLo ) >= 0 );
-		assert( orgUp !== tess.event && orgLo !== tess.event );
-		assert( ! regUp.fixUpperEdge && ! regLo.fixUpperEdge );
-
-		if( orgUp === orgLo ) return false;	/* right endpoints are the same */
-
-		tMinUp = Math.min( orgUp.t, dstUp.t );
-		tMaxLo = Math.max( orgLo.t, dstLo.t );
-		if( tMinUp > tMaxLo ) return false;	/* t ranges do not overlap */
-
-		if( Geom.vertLeq( orgUp, orgLo )) {
-			if( Geom.edgeSign( dstLo, orgUp, orgLo ) > 0 ) return false;
-		} else {
-			if( Geom.edgeSign( dstUp, orgLo, orgUp ) < 0 ) return false;
-		}
-
-		/* At this point the edges intersect, at least marginally */
-		Sweep.debugEvent( tess );
-
-		Geom.intersect( dstUp, orgUp, dstLo, orgLo, isect );
-		/* The following properties are guaranteed: */
-		assert( Math.min( orgUp.t, dstUp.t ) <= isect.t );
-		assert( isect.t <= Math.max( orgLo.t, dstLo.t ));
-		assert( Math.min( dstLo.s, dstUp.s ) <= isect.s );
-		assert( isect.s <= Math.max( orgLo.s, orgUp.s ));
-
-		if( Geom.vertLeq( isect, tess.event )) {
-			/* The intersection point lies slightly to the left of the sweep line,
-			* so move it until it''s slightly to the right of the sweep line.
-			* (If we had perfect numerical precision, this would never happen
-			* in the first place).  The easiest and safest thing to do is
-			* replace the intersection by tess->event.
-			*/
-			isect.s = tess.event.s;
-			isect.t = tess.event.t;
-		}
-		/* Similarly, if the computed intersection lies to the right of the
-		* rightmost origin (which should rarely happen), it can cause
-		* unbelievable inefficiency on sufficiently degenerate inputs.
-		* (If you have the test program, try running test54.d with the
-		* "X zoom" option turned on).
-		*/
-		orgMin = Geom.vertLeq( orgUp, orgLo ) ? orgUp : orgLo;
-		if( Geom.vertLeq( orgMin, isect )) {
-			isect.s = orgMin.s;
-			isect.t = orgMin.t;
-		}
-
-		if( Geom.vertEq( isect, orgUp ) || Geom.vertEq( isect, orgLo )) {
-			/* Easy case -- intersection at one of the right endpoints */
-			Sweep.checkForRightSplice( tess, regUp );
-			return false;
-		}
-
-		if(    (! Geom.vertEq( dstUp, tess.event )
-			&& Geom.edgeSign( dstUp, tess.event, isect ) >= 0)
-			|| (! Geom.vertEq( dstLo, tess.event )
-			&& Geom.edgeSign( dstLo, tess.event, isect ) <= 0 ))
-		{
-			/* Very unusual -- the new upper or lower edge would pass on the
-			* wrong side of the sweep event, or through it.  This can happen
-			* due to very small numerical errors in the intersection calculation.
-			*/
-			if( dstLo === tess.event ) {
-				/* Splice dstLo into eUp, and process the new region(s) */
-				tess.mesh.splitEdge( eUp.Sym );
-				tess.mesh.splice( eLo.Sym, eUp );
-				regUp = Sweep.topLeftRegion( tess, regUp );
-	//			if (regUp == NULL) longjmp(tess->env,1);
-				eUp = Sweep.regionBelow(regUp).eUp;
-				Sweep.finishLeftRegions( tess, Sweep.regionBelow(regUp), regLo );
-				Sweep.addRightEdges( tess, regUp, eUp.Oprev, eUp, eUp, true );
-				return TRUE;
-			}
-			if( dstUp === tess.event ) {
-				/* Splice dstUp into eLo, and process the new region(s) */
-				tess.mesh.splitEdge( eLo.Sym );
-				tess.mesh.splice( eUp.Lnext, eLo.Oprev ); 
-				regLo = regUp;
-				regUp = Sweep.topRightRegion( regUp );
-				e = Sweep.regionBelow(regUp).eUp.Rprev;
-				regLo.eUp = eLo.Oprev;
-				eLo = Sweep.finishLeftRegions( tess, regLo, null );
-				Sweep.addRightEdges( tess, regUp, eLo.Onext, eUp.Rprev, e, true );
-				return true;
-			}
-			/* Special case: called from ConnectRightVertex.  If either
-			* edge passes on the wrong side of tess->event, split it
-			* (and wait for ConnectRightVertex to splice it appropriately).
-			*/
-			if( Geom.edgeSign( dstUp, tess.event, isect ) >= 0 ) {
-				Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-				tess.mesh.splitEdge( eUp.Sym );
-				eUp.Org.s = tess.event.s;
-				eUp.Org.t = tess.event.t;
-			}
-			if( Geom.edgeSign( dstLo, tess.event, isect ) <= 0 ) {
-				regUp.dirty = regLo.dirty = true;
-				tess.mesh.splitEdge( eLo.Sym );
-				eLo.Org.s = tess.event.s;
-				eLo.Org.t = tess.event.t;
-			}
-			/* leave the rest for ConnectRightVertex */
-			return false;
-		}
-
-		/* General case -- split both edges, splice into new vertex.
-		* When we do the splice operation, the order of the arguments is
-		* arbitrary as far as correctness goes.  However, when the operation
-		* creates a new face, the work done is proportional to the size of
-		* the new face.  We expect the faces in the processed part of
-		* the mesh (ie. eUp->Lface) to be smaller than the faces in the
-		* unprocessed original contours (which will be eLo->Oprev->Lface).
-		*/
-		tess.mesh.splitEdge( eUp.Sym );
-		tess.mesh.splitEdge( eLo.Sym );
-		tess.mesh.splice( eLo.Oprev, eUp );
-		eUp.Org.s = isect.s;
-		eUp.Org.t = isect.t;
-		eUp.Org.pqHandle = tess.pq.insert( eUp.Org );
-		Sweep.getIntersectData( tess, eUp.Org, orgUp, dstUp, orgLo, dstLo );
-		Sweep.regionAbove(regUp).dirty = regUp.dirty = regLo.dirty = true;
-		return false;
-	}
-
-	//static void WalkDirtyRegions( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.walkDirtyRegions = function( tess, regUp ) {
-		/*
-		* When the upper or lower edge of any region changes, the region is
-		* marked "dirty".  This routine walks through all the dirty regions
-		* and makes sure that the dictionary invariants are satisfied
-		* (see the comments at the beginning of this file).  Of course
-		* new dirty regions can be created as we make changes to restore
-		* the invariants.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp, eLo;
-
-		for( ;; ) {
-			/* Find the lowest dirty region (we walk from the bottom up). */
-			while( regLo.dirty ) {
-				regUp = regLo;
-				regLo = Sweep.regionBelow(regLo);
-			}
-			if( ! regUp.dirty ) {
-				regLo = regUp;
-				regUp = Sweep.regionAbove( regUp );
-				if( regUp == null || ! regUp.dirty ) {
-					/* We've walked all the dirty regions */
-					return;
-				}
-			}
-			regUp.dirty = false;
-			eUp = regUp.eUp;
-			eLo = regLo.eUp;
-
-			if( eUp.Dst !== eLo.Dst ) {
-				/* Check that the edge ordering is obeyed at the Dst vertices. */
-				if( Sweep.checkForLeftSplice( tess, regUp )) {
-
-					/* If the upper or lower edge was marked fixUpperEdge, then
-					* we no longer need it (since these edges are needed only for
-					* vertices which otherwise have no right-going edges).
-					*/
-					if( regLo.fixUpperEdge ) {
-						Sweep.deleteRegion( tess, regLo );
-						tess.mesh.delete( eLo );
-						regLo = Sweep.regionBelow( regUp );
-						eLo = regLo.eUp;
-					} else if( regUp.fixUpperEdge ) {
-						Sweep.deleteRegion( tess, regUp );
-						tess.mesh.delete( eUp );
-						regUp = Sweep.regionAbove( regLo );
-						eUp = regUp.eUp;
-					}
-				}
-			}
-			if( eUp.Org !== eLo.Org ) {
-				if(    eUp.Dst !== eLo.Dst
-					&& ! regUp.fixUpperEdge && ! regLo.fixUpperEdge
-					&& (eUp.Dst === tess.event || eLo.Dst === tess.event) )
-				{
-					/* When all else fails in CheckForIntersect(), it uses tess->event
-					* as the intersection location.  To make this possible, it requires
-					* that tess->event lie between the upper and lower edges, and also
-					* that neither of these is marked fixUpperEdge (since in the worst
-					* case it might splice one of these edges into tess->event, and
-					* violate the invariant that fixable edges are the only right-going
-					* edge from their associated vertex).
-					*/
-					if( Sweep.checkForIntersect( tess, regUp )) {
-						/* WalkDirtyRegions() was called recursively; we're done */
-						return;
-					}
-				} else {
-					/* Even though we can't use CheckForIntersect(), the Org vertices
-					* may violate the dictionary edge ordering.  Check and correct this.
-					*/
-					Sweep.checkForRightSplice( tess, regUp );
-				}
-			}
-			if( eUp.Org === eLo.Org && eUp.Dst === eLo.Dst ) {
-				/* A degenerate loop consisting of only two edges -- delete it. */
-				Sweep.addWinding( eLo, eUp );
-				Sweep.deleteRegion( tess, regUp );
-				tess.mesh.delete( eUp );
-				regUp = Sweep.regionAbove( regLo );
-			}
-		}
-	}
-
-
-	//static void ConnectRightVertex( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eBottomLeft )
-	Sweep.connectRightVertex = function( tess, regUp, eBottomLeft ) {
-		/*
-		* Purpose: connect a "right" vertex vEvent (one where all edges go left)
-		* to the unprocessed portion of the mesh.  Since there are no right-going
-		* edges, two regions (one above vEvent and one below) are being merged
-		* into one.  "regUp" is the upper of these two regions.
-		*
-		* There are two reasons for doing this (adding a right-going edge):
-		*  - if the two regions being merged are "inside", we must add an edge
-		*    to keep them separated (the combined region would not be monotone).
-		*  - in any case, we must leave some record of vEvent in the dictionary,
-		*    so that we can merge vEvent with features that we have not seen yet.
-		*    For example, maybe there is a vertical edge which passes just to
-		*    the right of vEvent; we would like to splice vEvent into this edge.
-		*
-		* However, we don't want to connect vEvent to just any vertex.  We don''t
-		* want the new edge to cross any other edges; otherwise we will create
-		* intersection vertices even when the input data had no self-intersections.
-		* (This is a bad thing; if the user's input data has no intersections,
-		* we don't want to generate any false intersections ourselves.)
-		*
-		* Our eventual goal is to connect vEvent to the leftmost unprocessed
-		* vertex of the combined region (the union of regUp and regLo).
-		* But because of unseen vertices with all right-going edges, and also
-		* new vertices which may be created by edge intersections, we don''t
-		* know where that leftmost unprocessed vertex is.  In the meantime, we
-		* connect vEvent to the closest vertex of either chain, and mark the region
-		* as "fixUpperEdge".  This flag says to delete and reconnect this edge
-		* to the next processed vertex on the boundary of the combined region.
-		* Quite possibly the vertex we connected to will turn out to be the
-		* closest one, in which case we won''t need to make any changes.
-		*/
-		var eNew;
-		var eTopLeft = eBottomLeft.Onext;
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var degenerate = false;
-
-		if( eUp.Dst !== eLo.Dst ) {
-			Sweep.checkForIntersect( tess, regUp );
-		}
-
-		/* Possible new degeneracies: upper or lower edge of regUp may pass
-		* through vEvent, or may coincide with new intersection vertex
-		*/
-		if( Geom.vertEq( eUp.Org, tess.event )) {
-			tess.mesh.splice( eTopLeft.Oprev, eUp );
-			regUp = Sweep.topLeftRegion( tess, regUp );
-			eTopLeft = Sweep.regionBelow( regUp ).eUp;
-			Sweep.finishLeftRegions( tess, Sweep.regionBelow(regUp), regLo );
-			degenerate = true;
-		}
-		if( Geom.vertEq( eLo.Org, tess.event )) {
-			tess.mesh.splice( eBottomLeft, eLo.Oprev );
-			eBottomLeft = Sweep.finishLeftRegions( tess, regLo, null );
-			degenerate = true;
-		}
-		if( degenerate ) {
-			Sweep.addRightEdges( tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true );
-			return;
-		}
-
-		/* Non-degenerate situation -- need to add a temporary, fixable edge.
-		* Connect to the closer of eLo->Org, eUp->Org.
-		*/
-		if( Geom.vertLeq( eLo.Org, eUp.Org )) {
-			eNew = eLo.Oprev;
-		} else {
-			eNew = eUp;
-		}
-		eNew = tess.mesh.connect( eBottomLeft.Lprev, eNew );
-
-		/* Prevent cleanup, otherwise eNew might disappear before we've even
-		* had a chance to mark it as a temporary edge.
-		*/
-		Sweep.addRightEdges( tess, regUp, eNew, eNew.Onext, eNew.Onext, false );
-		eNew.Sym.activeRegion.fixUpperEdge = true;
-		Sweep.walkDirtyRegions( tess, regUp );
-	}
-
-	/* Because vertices at exactly the same location are merged together
-	* before we process the sweep event, some degenerate cases can't occur.
-	* However if someone eventually makes the modifications required to
-	* merge features which are close together, the cases below marked
-	* TOLERANCE_NONZERO will be useful.  They were debugged before the
-	* code to merge identical vertices in the main loop was added.
-	*/
-	//#define TOLERANCE_NONZERO	FALSE
-
-	//static void ConnectLeftDegenerate( TESStesselator *tess, ActiveRegion *regUp, TESSvertex *vEvent )
-	Sweep.connectLeftDegenerate = function( tess, regUp, vEvent ) {
-		/*
-		* The event vertex lies exacty on an already-processed edge or vertex.
-		* Adding the new vertex involves splicing it into the already-processed
-		* part of the mesh.
-		*/
-		var e, eTopLeft, eTopRight, eLast;
-		var reg;
-
-		e = regUp.eUp;
-		if( Geom.vertEq( e.Org, vEvent )) {
-			/* e->Org is an unprocessed vertex - just combine them, and wait
-			* for e->Org to be pulled from the queue
-			*/
-			assert( false /*TOLERANCE_NONZERO*/ );
-			Sweep.spliceMergeVertices( tess, e, vEvent.anEdge );
-			return;
-		}
-
-		if( ! Geom.vertEq( e.Dst, vEvent )) {
-			/* General case -- splice vEvent into edge e which passes through it */
-			tess.mesh.splitEdge( e.Sym );
-			if( regUp.fixUpperEdge ) {
-				/* This edge was fixable -- delete unused portion of original edge */
-				tess.mesh.delete( e.Onext );
-				regUp.fixUpperEdge = false;
-			}
-			tess.mesh.splice( vEvent.anEdge, e );
-			Sweep.sweepEvent( tess, vEvent );	/* recurse */
-			return;
-		}
-
-		/* vEvent coincides with e->Dst, which has already been processed.
-		* Splice in the additional right-going edges.
-		*/
-		assert( false /*TOLERANCE_NONZERO*/ );
-		regUp = Sweep.topRightRegion( regUp );
-		reg = Sweep.regionBelow( regUp );
-		eTopRight = reg.eUp.Sym;
-		eTopLeft = eLast = eTopRight.Onext;
-		if( reg.fixUpperEdge ) {
-			/* Here e->Dst has only a single fixable edge going right.
-			* We can delete it since now we have some real right-going edges.
-			*/
-			assert( eTopLeft !== eTopRight );   /* there are some left edges too */
-			Sweep.deleteRegion( tess, reg );
-			tess.mesh.delete( eTopRight );
-			eTopRight = eTopLeft.Oprev;
-		}
-		tess.mesh.splice( vEvent.anEdge, eTopRight );
-		if( ! Geom.edgeGoesLeft( eTopLeft )) {
-			/* e->Dst had no left-going edges -- indicate this to AddRightEdges() */
-			eTopLeft = null;
-		}
-		Sweep.addRightEdges( tess, regUp, eTopRight.Onext, eLast, eTopLeft, true );
-	}
-
-
-	//static void ConnectLeftVertex( TESStesselator *tess, TESSvertex *vEvent )
-	Sweep.connectLeftVertex = function( tess, vEvent ) {
-		/*
-		* Purpose: connect a "left" vertex (one where both edges go right)
-		* to the processed portion of the mesh.  Let R be the active region
-		* containing vEvent, and let U and L be the upper and lower edge
-		* chains of R.  There are two possibilities:
-		*
-		* - the normal case: split R into two regions, by connecting vEvent to
-		*   the rightmost vertex of U or L lying to the left of the sweep line
-		*
-		* - the degenerate case: if vEvent is close enough to U or L, we
-		*   merge vEvent into that edge chain.  The subcases are:
-		*	- merging with the rightmost vertex of U or L
-		*	- merging with the active edge of U or L
-		*	- merging with an already-processed portion of U or L
-		*/
-		var regUp, regLo, reg;
-		var eUp, eLo, eNew;
-		var tmp = new ActiveRegion();
-
-		/* assert( vEvent->anEdge->Onext->Onext == vEvent->anEdge ); */
-
-		/* Get a pointer to the active region containing vEvent */
-		tmp.eUp = vEvent.anEdge.Sym;
-		/* __GL_DICTLISTKEY */ /* tessDictListSearch */
-		regUp = tess.dict.search( tmp ).key;
-		regLo = Sweep.regionBelow( regUp );
-		if( !regLo ) {
-			// This may happen if the input polygon is coplanar.
-			return;
-		}
-		eUp = regUp.eUp;
-		eLo = regLo.eUp;
-
-		/* Try merging with U or L first */
-		if( Geom.edgeSign( eUp.Dst, vEvent, eUp.Org ) === 0.0 ) {
-			Sweep.connectLeftDegenerate( tess, regUp, vEvent );
-			return;
-		}
-
-		/* Connect vEvent to rightmost processed vertex of either chain.
-		* e->Dst is the vertex that we will connect to vEvent.
-		*/
-		reg = Geom.vertLeq( eLo.Dst, eUp.Dst ) ? regUp : regLo;
-
-		if( regUp.inside || reg.fixUpperEdge) {
-			if( reg === regUp ) {
-				eNew = tess.mesh.connect( vEvent.anEdge.Sym, eUp.Lnext );
-			} else {
-				var tempHalfEdge = tess.mesh.connect( eLo.Dnext, vEvent.anEdge);
-				eNew = tempHalfEdge.Sym;
-			}
-			if( reg.fixUpperEdge ) {
-				Sweep.fixUpperEdge( tess, reg, eNew );
-			} else {
-				Sweep.computeWinding( tess, Sweep.addRegionBelow( tess, regUp, eNew ));
-			}
-			Sweep.sweepEvent( tess, vEvent );
-		} else {
-			/* The new vertex is in a region which does not belong to the polygon.
-			* We don''t need to connect this vertex to the rest of the mesh.
-			*/
-			Sweep.addRightEdges( tess, regUp, vEvent.anEdge, vEvent.anEdge, null, true );
-		}
-	};
-
-
-	//static void SweepEvent( TESStesselator *tess, TESSvertex *vEvent )
-	Sweep.sweepEvent = function( tess, vEvent ) {
-		/*
-		* Does everything necessary when the sweep line crosses a vertex.
-		* Updates the mesh and the edge dictionary.
-		*/
-
-		tess.event = vEvent;		/* for access in EdgeLeq() */
-		Sweep.debugEvent( tess );
-
-		/* Check if this vertex is the right endpoint of an edge that is
-		* already in the dictionary.  In this case we don't need to waste
-		* time searching for the location to insert new edges.
-		*/
-		var e = vEvent.anEdge;
-		while( e.activeRegion === null ) {
-			e = e.Onext;
-			if( e == vEvent.anEdge ) {
-				/* All edges go right -- not incident to any processed edges */
-				Sweep.connectLeftVertex( tess, vEvent );
-				return;
-			}
-		}
-
-		/* Processing consists of two phases: first we "finish" all the
-		* active regions where both the upper and lower edges terminate
-		* at vEvent (ie. vEvent is closing off these regions).
-		* We mark these faces "inside" or "outside" the polygon according
-		* to their winding number, and delete the edges from the dictionary.
-		* This takes care of all the left-going edges from vEvent.
-		*/
-		var regUp = Sweep.topLeftRegion( tess, e.activeRegion );
-		assert( regUp !== null );
-	//	if (regUp == NULL) longjmp(tess->env,1);
-		var reg = Sweep.regionBelow( regUp );
-		var eTopLeft = reg.eUp;
-		var eBottomLeft = Sweep.finishLeftRegions( tess, reg, null );
-
-		/* Next we process all the right-going edges from vEvent.  This
-		* involves adding the edges to the dictionary, and creating the
-		* associated "active regions" which record information about the
-		* regions between adjacent dictionary edges.
-		*/
-		if( eBottomLeft.Onext === eTopLeft ) {
-			/* No right-going edges -- add a temporary "fixable" edge */
-			Sweep.connectRightVertex( tess, regUp, eBottomLeft );
-		} else {
-			Sweep.addRightEdges( tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true );
-		}
-	};
-
-
-	/* Make the sentinel coordinates big enough that they will never be
-	* merged with real input features.
-	*/
-
-	//static void AddSentinel( TESStesselator *tess, TESSreal smin, TESSreal smax, TESSreal t )
-	Sweep.addSentinel = function( tess, smin, smax, t ) {
-		/*
-		* We add two sentinel edges above and below all other edges,
-		* to avoid special cases at the top and bottom.
-		*/
-		var reg = new ActiveRegion();
-		var e = tess.mesh.makeEdge();
-	//	if (e == NULL) longjmp(tess->env,1);
-
-		e.Org.s = smax;
-		e.Org.t = t;
-		e.Dst.s = smin;
-		e.Dst.t = t;
-		tess.event = e.Dst;		/* initialize it */
-
-		reg.eUp = e;
-		reg.windingNumber = 0;
-		reg.inside = false;
-		reg.fixUpperEdge = false;
-		reg.sentinel = true;
-		reg.dirty = false;
-		reg.nodeUp = tess.dict.insert( reg );
-	//	if (reg->nodeUp == NULL) longjmp(tess->env,1);
-	}
-
-
-	//static void InitEdgeDict( TESStesselator *tess )
-	Sweep.initEdgeDict = function( tess ) {
-		/*
-		* We maintain an ordering of edge intersections with the sweep line.
-		* This order is maintained in a dynamic dictionary.
-		*/
-		tess.dict = new Dict( tess, Sweep.edgeLeq );
-	//	if (tess->dict == NULL) longjmp(tess->env,1);
-
-		var w = (tess.bmax[0] - tess.bmin[0]);
-		var h = (tess.bmax[1] - tess.bmin[1]);
-
-		var smin = tess.bmin[0] - w;
-		var smax = tess.bmax[0] + w;
-		var tmin = tess.bmin[1] - h;
-		var tmax = tess.bmax[1] + h;
-
-		Sweep.addSentinel( tess, smin, smax, tmin );
-		Sweep.addSentinel( tess, smin, smax, tmax );
-	}
-
-
-	Sweep.doneEdgeDict = function( tess )
-	{
-		var reg;
-		var fixedEdges = 0;
-
-		while( (reg = tess.dict.min().key) !== null ) {
-			/*
-			* At the end of all processing, the dictionary should contain
-			* only the two sentinel edges, plus at most one "fixable" edge
-			* created by ConnectRightVertex().
-			*/
-			if( ! reg.sentinel ) {
-				assert( reg.fixUpperEdge );
-				assert( ++fixedEdges == 1 );
-			}
-			assert( reg.windingNumber == 0 );
-			Sweep.deleteRegion( tess, reg );
-			/*    tessMeshDelete( reg->eUp );*/
-		}
-	//	dictDeleteDict( &tess->alloc, tess->dict );
-	}
-
-
-	Sweep.removeDegenerateEdges = function( tess ) {
-		/*
-		* Remove zero-length edges, and contours with fewer than 3 vertices.
-		*/
-		var e, eNext, eLnext;
-		var eHead = tess.mesh.eHead;
-
-		/*LINTED*/
-		for( e = eHead.next; e !== eHead; e = eNext ) {
-			eNext = e.next;
-			eLnext = e.Lnext;
-
-			if( Geom.vertEq( e.Org, e.Dst ) && e.Lnext.Lnext !== e ) {
-				/* Zero-length edge, contour has at least 3 edges */
-				Sweep.spliceMergeVertices( tess, eLnext, e );	/* deletes e->Org */
-				tess.mesh.delete( e ); /* e is a self-loop */
-				e = eLnext;
-				eLnext = e.Lnext;
-			}
-			if( eLnext.Lnext === e ) {
-				/* Degenerate contour (one or two edges) */
-				if( eLnext !== e ) {
-					if( eLnext === eNext || eLnext === eNext.Sym ) { eNext = eNext.next; }
-					tess.mesh.delete( eLnext );
-				}
-				if( e === eNext || e === eNext.Sym ) { eNext = eNext.next; }
-				tess.mesh.delete( e );
-			}
-		}
-	}
-
-	Sweep.initPriorityQ = function( tess ) {
-		/*
-		* Insert all vertices into the priority queue which determines the
-		* order in which vertices cross the sweep line.
-		*/
-		var pq;
-		var v, vHead;
-		var vertexCount = 0;
-		
-		vHead = tess.mesh.vHead;
-		for( v = vHead.next; v !== vHead; v = v.next ) {
-			vertexCount++;
-		}
-		/* Make sure there is enough space for sentinels. */
-		vertexCount += 8; //MAX( 8, tess->alloc.extraVertices );
-		
-		pq = tess.pq = new PriorityQ( vertexCount, Geom.vertLeq );
-	//	if (pq == NULL) return 0;
-
-		vHead = tess.mesh.vHead;
-		for( v = vHead.next; v !== vHead; v = v.next ) {
-			v.pqHandle = pq.insert( v );
-	//		if (v.pqHandle == INV_HANDLE)
-	//			break;
-		}
-
-		if (v !== vHead) {
-			return false;
-		}
-
-		pq.init();
-
-		return true;
-	}
-
-
-	Sweep.donePriorityQ = function( tess ) {
-		tess.pq = null;
-	}
-
-
-	Sweep.removeDegenerateFaces = function( tess, mesh ) {
-		/*
-		* Delete any degenerate faces with only two edges.  WalkDirtyRegions()
-		* will catch almost all of these, but it won't catch degenerate faces
-		* produced by splice operations on already-processed edges.
-		* The two places this can happen are in FinishLeftRegions(), when
-		* we splice in a "temporary" edge produced by ConnectRightVertex(),
-		* and in CheckForLeftSplice(), where we splice already-processed
-		* edges to ensure that our dictionary invariants are not violated
-		* by numerical errors.
-		*
-		* In both these cases it is *very* dangerous to delete the offending
-		* edge at the time, since one of the routines further up the stack
-		* will sometimes be keeping a pointer to that edge.
-		*/
-		var f, fNext;
-		var e;
-
-		/*LINTED*/
-		for( f = mesh.fHead.next; f !== mesh.fHead; f = fNext ) {
-			fNext = f.next;
-			e = f.anEdge;
-			assert( e.Lnext !== e );
-
-			if( e.Lnext.Lnext === e ) {
-				/* A face with only two edges */
-				Sweep.addWinding( e.Onext, e );
-				tess.mesh.delete( e );
-			}
-		}
-		return true;
-	}
-
-	Sweep.computeInterior = function( tess ) {
-		/*
-		* tessComputeInterior( tess ) computes the planar arrangement specified
-		* by the given contours, and further subdivides this arrangement
-		* into regions.  Each region is marked "inside" if it belongs
-		* to the polygon, according to the rule given by tess->windingRule.
-		* Each interior region is guaranteed be monotone.
-		*/
-		var v, vNext;
-
-		/* Each vertex defines an event for our sweep line.  Start by inserting
-		* all the vertices in a priority queue.  Events are processed in
-		* lexicographic order, ie.
-		*
-		*	e1 < e2  iff  e1.x < e2.x || (e1.x == e2.x && e1.y < e2.y)
-		*/
-		Sweep.removeDegenerateEdges( tess );
-		if ( !Sweep.initPriorityQ( tess ) ) return false; /* if error */
-		Sweep.initEdgeDict( tess );
-
-		while( (v = tess.pq.extractMin()) !== null ) {
-			for( ;; ) {
-				vNext = tess.pq.min();
-				if( vNext === null || ! Geom.vertEq( vNext, v )) break;
-
-				/* Merge together all vertices at exactly the same location.
-				* This is more efficient than processing them one at a time,
-				* simplifies the code (see ConnectLeftDegenerate), and is also
-				* important for correct handling of certain degenerate cases.
-				* For example, suppose there are two identical edges A and B
-				* that belong to different contours (so without this code they would
-				* be processed by separate sweep events).  Suppose another edge C
-				* crosses A and B from above.  When A is processed, we split it
-				* at its intersection point with C.  However this also splits C,
-				* so when we insert B we may compute a slightly different
-				* intersection point.  This might leave two edges with a small
-				* gap between them.  This kind of error is especially obvious
-				* when using boundary extraction (TESS_BOUNDARY_ONLY).
-				*/
-				vNext = tess.pq.extractMin();
-				Sweep.spliceMergeVertices( tess, v.anEdge, vNext.anEdge );
-			}
-			Sweep.sweepEvent( tess, v );
-		}
-
-		/* Set tess->event for debugging purposes */
-		tess.event = tess.dict.min().key.eUp.Org;
-		Sweep.debugEvent( tess );
-		Sweep.doneEdgeDict( tess );
-		Sweep.donePriorityQ( tess );
-
-		if ( !Sweep.removeDegenerateFaces( tess, tess.mesh ) ) return false;
-		tess.mesh.check();
-
-		return true;
-	}
-
-
-	function Tesselator() {
-
-		/*** state needed for collecting the input data ***/
-		this.mesh = null;		/* stores the input contours, and eventually
-							the tessellation itself */
-
-		/*** state needed for projecting onto the sweep plane ***/
-
-		this.normal = [0.0, 0.0, 0.0];	/* user-specified normal (if provided) */
-		this.sUnit = [0.0, 0.0, 0.0];	/* unit vector in s-direction (debugging) */
-		this.tUnit = [0.0, 0.0, 0.0];	/* unit vector in t-direction (debugging) */
-
-		this.bmin = [0.0, 0.0];
-		this.bmax = [0.0, 0.0];
-
-		/*** state needed for the line sweep ***/
-		this.windingRule = Tess2.WINDING_ODD;	/* rule for determining polygon interior */
-
-		this.dict = null;		/* edge dictionary for sweep line */
-		this.pq = null;		/* priority queue of vertex events */
-		this.event = null;		/* current sweep event being processed */
-
-		this.vertexIndexCounter = 0;
-		
-		this.vertices = [];
-		this.vertexIndices = [];
-		this.vertexCount = 0;
-		this.elements = [];
-		this.elementCount = 0;
-	};
-
-	Tesselator.prototype = {
-
-		dot_: function(u, v) {
-			return (u[0]*v[0] + u[1]*v[1] + u[2]*v[2]);
-		},
-
-		normalize_: function( v ) {
-			var len = v[0]*v[0] + v[1]*v[1] + v[2]*v[2];
-			assert( len > 0.0 );
-			len = Math.sqrt( len );
-			v[0] /= len;
-			v[1] /= len;
-			v[2] /= len;
-		},
-
-		longAxis_: function( v ) {
-			var i = 0;
-			if( Math.abs(v[1]) > Math.abs(v[0]) ) { i = 1; }
-			if( Math.abs(v[2]) > Math.abs(v[i]) ) { i = 2; }
-			return i;
-		},
-
-		computeNormal_: function( norm )
-		{
-			var v, v1, v2;
-			var c, tLen2, maxLen2;
-			var maxVal = [0,0,0], minVal = [0,0,0], d1 = [0,0,0], d2 = [0,0,0], tNorm = [0,0,0];
-			var maxVert = [null,null,null], minVert = [null,null,null];
-			var vHead = this.mesh.vHead;
-			var i;
-
-			v = vHead.next;
-			for( i = 0; i < 3; ++i ) {
-				c = v.coords[i];
-				minVal[i] = c;
-				minVert[i] = v;
-				maxVal[i] = c;
-				maxVert[i] = v;
-			}
-
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				for( i = 0; i < 3; ++i ) {
-					c = v.coords[i];
-					if( c < minVal[i] ) { minVal[i] = c; minVert[i] = v; }
-					if( c > maxVal[i] ) { maxVal[i] = c; maxVert[i] = v; }
-				}
-			}
-
-			/* Find two vertices separated by at least 1/sqrt(3) of the maximum
-			* distance between any two vertices
-			*/
-			i = 0;
-			if( maxVal[1] - minVal[1] > maxVal[0] - minVal[0] ) { i = 1; }
-			if( maxVal[2] - minVal[2] > maxVal[i] - minVal[i] ) { i = 2; }
-			if( minVal[i] >= maxVal[i] ) {
-				/* All vertices are the same -- normal doesn't matter */
-				norm[0] = 0; norm[1] = 0; norm[2] = 1;
-				return;
-			}
-
-			/* Look for a third vertex which forms the triangle with maximum area
-			* (Length of normal == twice the triangle area)
-			*/
-			maxLen2 = 0;
-			v1 = minVert[i];
-			v2 = maxVert[i];
-			d1[0] = v1.coords[0] - v2.coords[0];
-			d1[1] = v1.coords[1] - v2.coords[1];
-			d1[2] = v1.coords[2] - v2.coords[2];
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				d2[0] = v.coords[0] - v2.coords[0];
-				d2[1] = v.coords[1] - v2.coords[1];
-				d2[2] = v.coords[2] - v2.coords[2];
-				tNorm[0] = d1[1]*d2[2] - d1[2]*d2[1];
-				tNorm[1] = d1[2]*d2[0] - d1[0]*d2[2];
-				tNorm[2] = d1[0]*d2[1] - d1[1]*d2[0];
-				tLen2 = tNorm[0]*tNorm[0] + tNorm[1]*tNorm[1] + tNorm[2]*tNorm[2];
-				if( tLen2 > maxLen2 ) {
-					maxLen2 = tLen2;
-					norm[0] = tNorm[0];
-					norm[1] = tNorm[1];
-					norm[2] = tNorm[2];
-				}
-			}
-
-			if( maxLen2 <= 0 ) {
-				/* All points lie on a single line -- any decent normal will do */
-				norm[0] = norm[1] = norm[2] = 0;
-				norm[this.longAxis_(d1)] = 1;
-			}
-		},
-
-		checkOrientation_: function() {
-			var area;
-			var f, fHead = this.mesh.fHead;
-			var v, vHead = this.mesh.vHead;
-			var e;
-
-			/* When we compute the normal automatically, we choose the orientation
-			* so that the the sum of the signed areas of all contours is non-negative.
-			*/
-			area = 0;
-			for( f = fHead.next; f !== fHead; f = f.next ) {
-				e = f.anEdge;
-				if( e.winding <= 0 ) continue;
-				do {
-					area += (e.Org.s - e.Dst.s) * (e.Org.t + e.Dst.t);
-					e = e.Lnext;
-				} while( e !== f.anEdge );
-			}
-			if( area < 0 ) {
-				/* Reverse the orientation by flipping all the t-coordinates */
-				for( v = vHead.next; v !== vHead; v = v.next ) {
-					v.t = - v.t;
-				}
-				this.tUnit[0] = - this.tUnit[0];
-				this.tUnit[1] = - this.tUnit[1];
-				this.tUnit[2] = - this.tUnit[2];
-			}
-		},
-
-	/*	#ifdef FOR_TRITE_TEST_PROGRAM
-		#include <stdlib.h>
-		extern int RandomSweep;
-		#define S_UNIT_X	(RandomSweep ? (2*drand48()-1) : 1.0)
-		#define S_UNIT_Y	(RandomSweep ? (2*drand48()-1) : 0.0)
-		#else
-		#if defined(SLANTED_SWEEP) */
-		/* The "feature merging" is not intended to be complete.  There are
-		* special cases where edges are nearly parallel to the sweep line
-		* which are not implemented.  The algorithm should still behave
-		* robustly (ie. produce a reasonable tesselation) in the presence
-		* of such edges, however it may miss features which could have been
-		* merged.  We could minimize this effect by choosing the sweep line
-		* direction to be something unusual (ie. not parallel to one of the
-		* coordinate axes).
-		*/
-	/*	#define S_UNIT_X	(TESSreal)0.50941539564955385	// Pre-normalized
-		#define S_UNIT_Y	(TESSreal)0.86052074622010633
-		#else
-		#define S_UNIT_X	(TESSreal)1.0
-		#define S_UNIT_Y	(TESSreal)0.0
-		#endif
-		#endif*/
-
-		/* Determine the polygon normal and project vertices onto the plane
-		* of the polygon.
-		*/
-		projectPolygon_: function() {
-			var v, vHead = this.mesh.vHead;
-			var norm = [0,0,0];
-			var sUnit, tUnit;
-			var i, first, computedNormal = false;
-
-			norm[0] = this.normal[0];
-			norm[1] = this.normal[1];
-			norm[2] = this.normal[2];
-			if( norm[0] === 0.0 && norm[1] === 0.0 && norm[2] === 0.0 ) {
-				this.computeNormal_( norm );
-				computedNormal = true;
-			}
-			sUnit = this.sUnit;
-			tUnit = this.tUnit;
-			i = this.longAxis_( norm );
-
-	/*	#if defined(FOR_TRITE_TEST_PROGRAM) || defined(TRUE_PROJECT)
-			// Choose the initial sUnit vector to be approximately perpendicular
-			// to the normal.
-			
-			Normalize( norm );
-
-			sUnit[i] = 0;
-			sUnit[(i+1)%3] = S_UNIT_X;
-			sUnit[(i+2)%3] = S_UNIT_Y;
-
-			// Now make it exactly perpendicular 
-			w = Dot( sUnit, norm );
-			sUnit[0] -= w * norm[0];
-			sUnit[1] -= w * norm[1];
-			sUnit[2] -= w * norm[2];
-			Normalize( sUnit );
-
-			// Choose tUnit so that (sUnit,tUnit,norm) form a right-handed frame 
-			tUnit[0] = norm[1]*sUnit[2] - norm[2]*sUnit[1];
-			tUnit[1] = norm[2]*sUnit[0] - norm[0]*sUnit[2];
-			tUnit[2] = norm[0]*sUnit[1] - norm[1]*sUnit[0];
-			Normalize( tUnit );
-		#else*/
-			/* Project perpendicular to a coordinate axis -- better numerically */
-			sUnit[i] = 0;
-			sUnit[(i+1)%3] = 1.0;
-			sUnit[(i+2)%3] = 0.0;
-
-			tUnit[i] = 0;
-			tUnit[(i+1)%3] = 0.0;
-			tUnit[(i+2)%3] = (norm[i] > 0) ? 1.0 : -1.0;
-	//	#endif
-
-			/* Project the vertices onto the sweep plane */
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				v.s = this.dot_( v.coords, sUnit );
-				v.t = this.dot_( v.coords, tUnit );
-			}
-			if( computedNormal ) {
-				this.checkOrientation_();
-			}
-
-			/* Compute ST bounds. */
-			first = true;
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				if (first) {
-					this.bmin[0] = this.bmax[0] = v.s;
-					this.bmin[1] = this.bmax[1] = v.t;
-					first = false;
-				} else {
-					if (v.s < this.bmin[0]) this.bmin[0] = v.s;
-					if (v.s > this.bmax[0]) this.bmax[0] = v.s;
-					if (v.t < this.bmin[1]) this.bmin[1] = v.t;
-					if (v.t > this.bmax[1]) this.bmax[1] = v.t;
-				}
-			}
-		},
-
-		addWinding_: function(eDst,eSrc) {
-			eDst.winding += eSrc.winding;
-			eDst.Sym.winding += eSrc.Sym.winding;
-		},
-		
-		/* tessMeshTessellateMonoRegion( face ) tessellates a monotone region
-		* (what else would it do??)  The region must consist of a single
-		* loop of half-edges (see mesh.h) oriented CCW.  "Monotone" in this
-		* case means that any vertical line intersects the interior of the
-		* region in a single interval.  
-		*
-		* Tessellation consists of adding interior edges (actually pairs of
-		* half-edges), to split the region into non-overlapping triangles.
-		*
-		* The basic idea is explained in Preparata and Shamos (which I don''t
-		* have handy right now), although their implementation is more
-		* complicated than this one.  The are two edge chains, an upper chain
-		* and a lower chain.  We process all vertices from both chains in order,
-		* from right to left.
-		*
-		* The algorithm ensures that the following invariant holds after each
-		* vertex is processed: the untessellated region consists of two
-		* chains, where one chain (say the upper) is a single edge, and
-		* the other chain is concave.  The left vertex of the single edge
-		* is always to the left of all vertices in the concave chain.
-		*
-		* Each step consists of adding the rightmost unprocessed vertex to one
-		* of the two chains, and forming a fan of triangles from the rightmost
-		* of two chain endpoints.  Determining whether we can add each triangle
-		* to the fan is a simple orientation test.  By making the fan as large
-		* as possible, we restore the invariant (check it yourself).
-		*/
-	//	int tessMeshTessellateMonoRegion( TESSmesh *mesh, TESSface *face )
-		tessellateMonoRegion_: function( mesh, face ) {
-			var up, lo;
-
-			/* All edges are oriented CCW around the boundary of the region.
-			* First, find the half-edge whose origin vertex is rightmost.
-			* Since the sweep goes from left to right, face->anEdge should
-			* be close to the edge we want.
-			*/
-			up = face.anEdge;
-			assert( up.Lnext !== up && up.Lnext.Lnext !== up );
-
-			for( ; Geom.vertLeq( up.Dst, up.Org ); up = up.Lprev )
-				;
-			for( ; Geom.vertLeq( up.Org, up.Dst ); up = up.Lnext )
-				;
-			lo = up.Lprev;
-
-			while( up.Lnext !== lo ) {
-				if( Geom.vertLeq( up.Dst, lo.Org )) {
-					/* up->Dst is on the left.  It is safe to form triangles from lo->Org.
-					* The EdgeGoesLeft test guarantees progress even when some triangles
-					* are CW, given that the upper and lower chains are truly monotone.
-					*/
-					while( lo.Lnext !== up && (Geom.edgeGoesLeft( lo.Lnext )
-						|| Geom.edgeSign( lo.Org, lo.Dst, lo.Lnext.Dst ) <= 0.0 )) {
-							var tempHalfEdge = mesh.connect( lo.Lnext, lo );
-							//if (tempHalfEdge == NULL) return 0;
-							lo = tempHalfEdge.Sym;
-					}
-					lo = lo.Lprev;
-				} else {
-					/* lo->Org is on the left.  We can make CCW triangles from up->Dst. */
-					while( lo.Lnext != up && (Geom.edgeGoesRight( up.Lprev )
-						|| Geom.edgeSign( up.Dst, up.Org, up.Lprev.Org ) >= 0.0 )) {
-							var tempHalfEdge = mesh.connect( up, up.Lprev );
-							//if (tempHalfEdge == NULL) return 0;
-							up = tempHalfEdge.Sym;
-					}
-					up = up.Lnext;
-				}
-			}
-
-			/* Now lo->Org == up->Dst == the leftmost vertex.  The remaining region
-			* can be tessellated in a fan from this leftmost vertex.
-			*/
-			assert( lo.Lnext !== up );
-			while( lo.Lnext.Lnext !== up ) {
-				var tempHalfEdge = mesh.connect( lo.Lnext, lo );
-				//if (tempHalfEdge == NULL) return 0;
-				lo = tempHalfEdge.Sym;
-			}
-
-			return true;
-		},
-
-
-		/* tessMeshTessellateInterior( mesh ) tessellates each region of
-		* the mesh which is marked "inside" the polygon.  Each such region
-		* must be monotone.
-		*/
-		//int tessMeshTessellateInterior( TESSmesh *mesh )
-		tessellateInterior_: function( mesh ) {
-			var f, next;
-
-			/*LINTED*/
-			for( f = mesh.fHead.next; f !== mesh.fHead; f = next ) {
-				/* Make sure we don''t try to tessellate the new triangles. */
-				next = f.next;
-				if( f.inside ) {
-					if ( !this.tessellateMonoRegion_( mesh, f ) ) return false;
-				}
-			}
-
-			return true;
-		},
-
-
-		/* tessMeshDiscardExterior( mesh ) zaps (ie. sets to NULL) all faces
-		* which are not marked "inside" the polygon.  Since further mesh operations
-		* on NULL faces are not allowed, the main purpose is to clean up the
-		* mesh so that exterior loops are not represented in the data structure.
-		*/
-		//void tessMeshDiscardExterior( TESSmesh *mesh )
-		discardExterior_: function( mesh ) {
-			var f, next;
-
-			/*LINTED*/
-			for( f = mesh.fHead.next; f !== mesh.fHead; f = next ) {
-				/* Since f will be destroyed, save its next pointer. */
-				next = f.next;
-				if( ! f.inside ) {
-					mesh.zapFace( f );
-				}
-			}
-		},
-
-		/* tessMeshSetWindingNumber( mesh, value, keepOnlyBoundary ) resets the
-		* winding numbers on all edges so that regions marked "inside" the
-		* polygon have a winding number of "value", and regions outside
-		* have a winding number of 0.
-		*
-		* If keepOnlyBoundary is TRUE, it also deletes all edges which do not
-		* separate an interior region from an exterior one.
-		*/
-	//	int tessMeshSetWindingNumber( TESSmesh *mesh, int value, int keepOnlyBoundary )
-		setWindingNumber_: function( mesh, value, keepOnlyBoundary ) {
-			var e, eNext;
-
-			for( e = mesh.eHead.next; e !== mesh.eHead; e = eNext ) {
-				eNext = e.next;
-				if( e.Rface.inside !== e.Lface.inside ) {
-
-					/* This is a boundary edge (one side is interior, one is exterior). */
-					e.winding = (e.Lface.inside) ? value : -value;
-				} else {
-
-					/* Both regions are interior, or both are exterior. */
-					if( ! keepOnlyBoundary ) {
-						e.winding = 0;
-					} else {
-						mesh.delete( e );
-					}
-				}
-			}
-		},
-
-		getNeighbourFace_: function(edge)
-		{
-			if (!edge.Rface)
-				return -1;
-			if (!edge.Rface.inside)
-				return -1;
-			return edge.Rface.n;
-		},
-
-		outputPolymesh_: function( mesh, elementType, polySize, vertexSize ) {
-			var v;
-			var f;
-			var edge;
-			var maxFaceCount = 0;
-			var maxVertexCount = 0;
-			var faceVerts, i;
-			var elements = 0;
-			var vert;
-
-			// Assume that the input data is triangles now.
-			// Try to merge as many polygons as possible
-			if (polySize > 3)
-			{
-				mesh.mergeConvexFaces( polySize );
-			}
-
-			// Mark unused
-			for ( v = mesh.vHead.next; v !== mesh.vHead; v = v.next )
-				v.n = -1;
-
-			// Create unique IDs for all vertices and faces.
-			for ( f = mesh.fHead.next; f != mesh.fHead; f = f.next )
-			{
-				f.n = -1;
-				if( !f.inside ) continue;
-
-				edge = f.anEdge;
-				faceVerts = 0;
-				do
-				{
-					v = edge.Org;
-					if ( v.n === -1 )
-					{
-						v.n = maxVertexCount;
-						maxVertexCount++;
-					}
-					faceVerts++;
-					edge = edge.Lnext;
-				}
-				while (edge !== f.anEdge);
-				
-				assert( faceVerts <= polySize );
-
-				f.n = maxFaceCount;
-				++maxFaceCount;
-			}
-
-			this.elementCount = maxFaceCount;
-			if (elementType == Tess2.CONNECTED_POLYGONS)
-				maxFaceCount *= 2;
-	/*		tess.elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSindex) * maxFaceCount * polySize );
-			if (!tess->elements)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.elements = [];
-			this.elements.length = maxFaceCount * polySize;
-			
-			this.vertexCount = maxVertexCount;
-	/*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
-															 sizeof(TESSreal) * tess->vertexCount * vertexSize );
-			if (!tess->vertices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertices = [];
-			this.vertices.length = maxVertexCount * vertexSize;
-
-	/*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-																    sizeof(TESSindex) * tess->vertexCount );
-			if (!tess->vertexIndices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertexIndices = [];
-			this.vertexIndices.length = maxVertexCount;
-
-			
-			// Output vertices.
-			for ( v = mesh.vHead.next; v !== mesh.vHead; v = v.next )
-			{
-				if ( v.n != -1 )
-				{
-					// Store coordinate
-					var idx = v.n * vertexSize;
-					this.vertices[idx+0] = v.coords[0];
-					this.vertices[idx+1] = v.coords[1];
-					if ( vertexSize > 2 )
-						this.vertices[idx+2] = v.coords[2];
-					// Store vertex index.
-					this.vertexIndices[v.n] = v.idx;
-				}
-			}
-
-			// Output indices.
-			var nel = 0;
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-				
-				// Store polygon
-				edge = f.anEdge;
-				faceVerts = 0;
-				do
-				{
-					v = edge.Org;
-					this.elements[nel++] = v.n;
-					faceVerts++;
-					edge = edge.Lnext;
-				}
-				while (edge !== f.anEdge);
-				// Fill unused.
-				for (i = faceVerts; i < polySize; ++i)
-					this.elements[nel++] = -1;
-
-				// Store polygon connectivity
-				if ( elementType == Tess2.CONNECTED_POLYGONS )
-				{
-					edge = f.anEdge;
-					do
-					{
-						this.elements[nel++] = this.getNeighbourFace_( edge );
-						edge = edge.Lnext;
-					}
-					while (edge !== f.anEdge);
-					// Fill unused.
-					for (i = faceVerts; i < polySize; ++i)
-						this.elements[nel++] = -1;
-				}
-			}
-		},
-
-	//	void OutputContours( TESStesselator *tess, TESSmesh *mesh, int vertexSize )
-		outputContours_: function( mesh, vertexSize ) {
-			var f;
-			var edge;
-			var start;
-			var verts;
-			var elements;
-			var vertInds;
-			var startVert = 0;
-			var vertCount = 0;
-
-			this.vertexCount = 0;
-			this.elementCount = 0;
-
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-
-				start = edge = f.anEdge;
-				do
-				{
-					this.vertexCount++;
-					edge = edge.Lnext;
-				}
-				while ( edge !== start );
-
-				this.elementCount++;
-			}
-
-	/*		tess->elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSindex) * tess->elementCount * 2 );
-			if (!tess->elements)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.elements = [];
-			this.elements.length = this.elementCount * 2;
-			
-	/*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSreal) * tess->vertexCount * vertexSize );
-			if (!tess->vertices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertices = [];
-			this.vertices.length = this.vertexCount * vertexSize;
-
-	/*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-																    sizeof(TESSindex) * tess->vertexCount );
-			if (!tess->vertexIndices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertexIndices = [];
-			this.vertexIndices.length = this.vertexCount;
-
-			var nv = 0;
-			var nvi = 0;
-			var nel = 0;
-			startVert = 0;
-
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-
-				vertCount = 0;
-				start = edge = f.anEdge;
-				do
-				{
-					this.vertices[nv++] = edge.Org.coords[0];
-					this.vertices[nv++] = edge.Org.coords[1];
-					if ( vertexSize > 2 )
-						this.vertices[nv++] = edge.Org.coords[2];
-					this.vertexIndices[nvi++] = edge.Org.idx;
-					vertCount++;
-					edge = edge.Lnext;
-				}
-				while ( edge !== start );
-
-				this.elements[nel++] = startVert;
-				this.elements[nel++] = vertCount;
-
-				startVert += vertCount;
-			}
-		},
-
-		addContour: function( size, vertices )
-		{
-			var e;
-			var i;
-
-			if ( this.mesh === null )
-			  	this.mesh = new TESSmesh();
-	/*	 	if ( tess->mesh == NULL ) {
-				tess->outOfMemory = 1;
-				return;
-			}*/
-
-			if ( size < 2 )
-				size = 2;
-			if ( size > 3 )
-				size = 3;
-
-			e = null;
-
-			for( i = 0; i < vertices.length; i += size )
-			{
-				if( e == null ) {
-					/* Make a self-loop (one vertex, one edge). */
-					e = this.mesh.makeEdge();
-	/*				if ( e == NULL ) {
-						tess->outOfMemory = 1;
-						return;
-					}*/
-					this.mesh.splice( e, e.Sym );
-				} else {
-					/* Create a new vertex and edge which immediately follow e
-					* in the ordering around the left face.
-					*/
-					this.mesh.splitEdge( e );
-					e = e.Lnext;
-				}
-
-				/* The new vertex is now e->Org. */
-				e.Org.coords[0] = vertices[i+0];
-				e.Org.coords[1] = vertices[i+1];
-				if ( size > 2 )
-					e.Org.coords[2] = vertices[i+2];
-				else
-					e.Org.coords[2] = 0.0;
-				/* Store the insertion number so that the vertex can be later recognized. */
-				e.Org.idx = this.vertexIndexCounter++;
-
-				/* The winding of an edge says how the winding number changes as we
-				* cross from the edge''s right face to its left face.  We add the
-				* vertices in such an order that a CCW contour will add +1 to
-				* the winding number of the region inside the contour.
-				*/
-				e.winding = 1;
-				e.Sym.winding = -1;
-			}
-		},
-
-	//	int tessTesselate( TESStesselator *tess, int windingRule, int elementType, int polySize, int vertexSize, const TESSreal* normal )
-		tesselate: function( windingRule, elementType, polySize, vertexSize, normal ) {
-			this.vertices = [];
-			this.elements = [];
-			this.vertexIndices = [];
-
-			this.vertexIndexCounter = 0;
-			
-			if (normal)
-			{
-				this.normal[0] = normal[0];
-				this.normal[1] = normal[1];
-				this.normal[2] = normal[2];
-			}
-
-			this.windingRule = windingRule;
-
-			if (vertexSize < 2)
-				vertexSize = 2;
-			if (vertexSize > 3)
-				vertexSize = 3;
-
-	/*		if (setjmp(tess->env) != 0) { 
-				// come back here if out of memory
-				return 0;
-			}*/
-
-			if (!this.mesh)
-			{
-				return false;
-			}
-
-			/* Determine the polygon normal and project vertices onto the plane
-			* of the polygon.
-			*/
-			this.projectPolygon_();
-
-			/* tessComputeInterior( tess ) computes the planar arrangement specified
-			* by the given contours, and further subdivides this arrangement
-			* into regions.  Each region is marked "inside" if it belongs
-			* to the polygon, according to the rule given by tess->windingRule.
-			* Each interior region is guaranteed be monotone.
-			*/
-			Sweep.computeInterior( this );
-
-			var mesh = this.mesh;
-
-			/* If the user wants only the boundary contours, we throw away all edges
-			* except those which separate the interior from the exterior.
-			* Otherwise we tessellate all the regions marked "inside".
-			*/
-			if (elementType == Tess2.BOUNDARY_CONTOURS) {
-				this.setWindingNumber_( mesh, 1, true );
-			} else {
-				this.tessellateInterior_( mesh ); 
-			}
-	//		if (rc == 0) longjmp(tess->env,1);  /* could've used a label */
-
-			mesh.check();
-
-			if (elementType == Tess2.BOUNDARY_CONTOURS) {
-				this.outputContours_( mesh, vertexSize );     /* output contours */
-			}
-			else
-			{
-				this.outputPolymesh_( mesh, elementType, polySize, vertexSize );     /* output polygons */
-			}
-
-//			tess.mesh = null;
-
-			return true;
-		}
-	};
+	return RealInterpolate(a,x,b,y);
+}
+#endif*/
+
+
+Geom.intersect = function (o1, d1, o2, d2, v) {
+  /* Given edges (o1,d1) and (o2,d2), compute their point of intersection.
+  * The computed point is guaranteed to lie in the intersection of the
+  * bounding rectangles defined by each edge.
+  */
+  var z1, z2;
+  var t;
+  /* This is certainly not the most efficient way to find the intersection
+  * of two line segments, but it is very numerically stable.
+  *
+  * Strategy: find the two middle vertices in the VertLeq ordering,
+  * and interpolate the intersection s-value from these.  Then repeat
+  * using the TransLeq ordering to find the intersection t-value.
+  */
+
+  if (!Geom.vertLeq(o1, d1)) {
+    t = o1;
+    o1 = d1;
+    d1 = t;
+  } //swap( o1, d1 ); }
+
+
+  if (!Geom.vertLeq(o2, d2)) {
+    t = o2;
+    o2 = d2;
+    d2 = t;
+  } //swap( o2, d2 ); }
+
+
+  if (!Geom.vertLeq(o1, o2)) {
+    t = o1;
+    o1 = o2;
+    o2 = t;
+    t = d1;
+    d1 = d2;
+    d2 = t;
+  } //swap( o1, o2 ); swap( d1, d2 ); }
+
+
+  if (!Geom.vertLeq(o2, d1)) {
+    /* Technically, no intersection -- do our best */
+    v.s = (o2.s + d1.s) / 2;
+  } else if (Geom.vertLeq(d1, d2)) {
+    /* Interpolate between o2 and d1 */
+    z1 = Geom.edgeEval(o1, o2, d1);
+    z2 = Geom.edgeEval(o2, d1, d2);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.s = Geom.interpolate(z1, o2.s, z2, d1.s);
+  } else {
+    /* Interpolate between o2 and d2 */
+    z1 = Geom.edgeSign(o1, o2, d1);
+    z2 = -Geom.edgeSign(o1, d2, d1);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.s = Geom.interpolate(z1, o2.s, z2, d2.s);
+  }
+  /* Now repeat the process for t */
+
+
+  if (!Geom.transLeq(o1, d1)) {
+    t = o1;
+    o1 = d1;
+    d1 = t;
+  } //swap( o1, d1 ); }
+
+
+  if (!Geom.transLeq(o2, d2)) {
+    t = o2;
+    o2 = d2;
+    d2 = t;
+  } //swap( o2, d2 ); }
+
+
+  if (!Geom.transLeq(o1, o2)) {
+    t = o1;
+    o1 = o2;
+    o2 = t;
+    t = d1;
+    d1 = d2;
+    d2 = t;
+  } //swap( o1, o2 ); swap( d1, d2 ); }
+
+
+  if (!Geom.transLeq(o2, d1)) {
+    /* Technically, no intersection -- do our best */
+    v.t = (o2.t + d1.t) / 2;
+  } else if (Geom.transLeq(d1, d2)) {
+    /* Interpolate between o2 and d1 */
+    z1 = Geom.transEval(o1, o2, d1);
+    z2 = Geom.transEval(o2, d1, d2);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.t = Geom.interpolate(z1, o2.t, z2, d1.t);
+  } else {
+    /* Interpolate between o2 and d2 */
+    z1 = Geom.transSign(o1, o2, d1);
+    z2 = -Geom.transSign(o1, d2, d1);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.t = Geom.interpolate(z1, o2.t, z2, d2.t);
+  }
+};
+
+function DictNode() {
+  this.key = null;
+  this.next = null;
+  this.prev = null;
+}
+
+;
+
+function Dict(frame, leq) {
+  this.head = new DictNode();
+  this.head.next = this.head;
+  this.head.prev = this.head;
+  this.frame = frame;
+  this.leq = leq;
+}
+
+;
+Dict.prototype = {
+  min: function () {
+    return this.head.next;
+  },
+  max: function () {
+    return this.head.prev;
+  },
+  insert: function (k) {
+    return this.insertBefore(this.head, k);
+  },
+  search: function (key) {
+    /* Search returns the node with the smallest key greater than or equal
+    * to the given key.  If there is no such key, returns a node whose
+    * key is NULL.  Similarly, Succ(Max(d)) has a NULL key, etc.
+    */
+    var node = this.head;
+
+    do {
+      node = node.next;
+    } while (node.key !== null && !this.leq(this.frame, key, node.key));
+
+    return node;
+  },
+  insertBefore: function (node, key) {
+    do {
+      node = node.prev;
+    } while (node.key !== null && !this.leq(this.frame, node.key, key));
+
+    var newNode = new DictNode();
+    newNode.key = key;
+    newNode.next = node.next;
+    node.next.prev = newNode;
+    newNode.prev = node;
+    node.next = newNode;
+    return newNode;
+  },
+  delete: function (node) {
+    node.next.prev = node.prev;
+    node.prev.next = node.next;
+  }
+};
+
+function PQnode() {
+  this.handle = null;
+}
+
+function PQhandleElem() {
+  this.key = null;
+  this.node = null;
+}
+
+function PriorityQ(size, leq) {
+  this.size = 0;
+  this.max = size;
+  this.nodes = [];
+  this.nodes.length = size + 1;
+
+  for (var i = 0; i < this.nodes.length; i++) this.nodes[i] = new PQnode();
+
+  this.handles = [];
+  this.handles.length = size + 1;
+
+  for (var i = 0; i < this.handles.length; i++) this.handles[i] = new PQhandleElem();
+
+  this.initialized = false;
+  this.freeList = 0;
+  this.leq = leq;
+  this.nodes[1].handle = 1;
+  /* so that Minimum() returns NULL */
+
+  this.handles[1].key = null;
+}
+
+;
+PriorityQ.prototype = {
+  floatDown_: function (curr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var hCurr, hChild;
+    var child;
+    hCurr = n[curr].handle;
+
+    for (;;) {
+      child = curr << 1;
+
+      if (child < this.size && this.leq(h[n[child + 1].handle].key, h[n[child].handle].key)) {
+        ++child;
+      }
+
+      assert(child <= this.max);
+      hChild = n[child].handle;
+
+      if (child > this.size || this.leq(h[hCurr].key, h[hChild].key)) {
+        n[curr].handle = hCurr;
+        h[hCurr].node = curr;
+        break;
+      }
+
+      n[curr].handle = hChild;
+      h[hChild].node = curr;
+      curr = child;
+    }
+  },
+  floatUp_: function (curr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var hCurr, hParent;
+    var parent;
+    hCurr = n[curr].handle;
+
+    for (;;) {
+      parent = curr >> 1;
+      hParent = n[parent].handle;
+
+      if (parent == 0 || this.leq(h[hParent].key, h[hCurr].key)) {
+        n[curr].handle = hCurr;
+        h[hCurr].node = curr;
+        break;
+      }
+
+      n[curr].handle = hParent;
+      h[hParent].node = curr;
+      curr = parent;
+    }
+  },
+  init: function () {
+    /* This method of building a heap is O(n), rather than O(n lg n). */
+    for (var i = this.size; i >= 1; --i) {
+      this.floatDown_(i);
+    }
+
+    this.initialized = true;
+  },
+  min: function () {
+    return this.handles[this.nodes[1].handle].key;
+  },
+  isEmpty: function () {
+    this.size === 0;
+  },
+
+  /* really pqHeapInsert */
+
+  /* returns INV_HANDLE iff out of memory */
+  //PQhandle pqHeapInsert( TESSalloc* alloc, PriorityQHeap *pq, PQkey keyNew )
+  insert: function (keyNew) {
+    var curr;
+    var free;
+    curr = ++this.size;
+
+    if (curr * 2 > this.max) {
+      this.max *= 2;
+      var s;
+      s = this.nodes.length;
+      this.nodes.length = this.max + 1;
+
+      for (var i = s; i < this.nodes.length; i++) this.nodes[i] = new PQnode();
+
+      s = this.handles.length;
+      this.handles.length = this.max + 1;
+
+      for (var i = s; i < this.handles.length; i++) this.handles[i] = new PQhandleElem();
+    }
+
+    if (this.freeList === 0) {
+      free = curr;
+    } else {
+      free = this.freeList;
+      this.freeList = this.handles[free].node;
+    }
+
+    this.nodes[curr].handle = free;
+    this.handles[free].node = curr;
+    this.handles[free].key = keyNew;
+
+    if (this.initialized) {
+      this.floatUp_(curr);
+    }
+
+    return free;
+  },
+  //PQkey pqHeapExtractMin( PriorityQHeap *pq )
+  extractMin: function () {
+    var n = this.nodes;
+    var h = this.handles;
+    var hMin = n[1].handle;
+    var min = h[hMin].key;
+
+    if (this.size > 0) {
+      n[1].handle = n[this.size].handle;
+      h[n[1].handle].node = 1;
+      h[hMin].key = null;
+      h[hMin].node = this.freeList;
+      this.freeList = hMin;
+      --this.size;
+
+      if (this.size > 0) {
+        this.floatDown_(1);
+      }
+    }
+
+    return min;
+  },
+  delete: function (hCurr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var curr;
+    assert(hCurr >= 1 && hCurr <= this.max && h[hCurr].key !== null);
+    curr = h[hCurr].node;
+    n[curr].handle = n[this.size].handle;
+    h[n[curr].handle].node = curr;
+    --this.size;
+
+    if (curr <= this.size) {
+      if (curr <= 1 || this.leq(h[n[curr >> 1].handle].key, h[n[curr].handle].key)) {
+        this.floatDown_(curr);
+      } else {
+        this.floatUp_(curr);
+      }
+    }
+
+    h[hCurr].key = null;
+    h[hCurr].node = this.freeList;
+    this.freeList = hCurr;
+  }
+};
+/* For each pair of adjacent edges crossing the sweep line, there is
+* an ActiveRegion to represent the region between them.  The active
+* regions are kept in sorted order in a dynamic dictionary.  As the
+* sweep line crosses each vertex, we update the affected regions.
+*/
+
+function ActiveRegion() {
+  this.eUp = null;
+  /* upper edge, directed right to left */
+
+  this.nodeUp = null;
+  /* dictionary node corresponding to eUp */
+
+  this.windingNumber = 0;
+  /* used to determine which regions are
+  * inside the polygon */
+
+  this.inside = false;
+  /* is this region inside the polygon? */
+
+  this.sentinel = false;
+  /* marks fake edges at t = +/-infinity */
+
+  this.dirty = false;
+  /* marks regions where the upper or lower
+  * edge has changed, but we haven't checked
+  * whether they intersect yet */
+
+  this.fixUpperEdge = false;
+  /* marks temporary edges introduced when
+  * we process a "right vertex" (one without
+  * any edges leaving to the right) */
+}
+
+;
+var Sweep = {};
+
+Sweep.regionBelow = function (r) {
+  return r.nodeUp.prev.key;
+};
+
+Sweep.regionAbove = function (r) {
+  return r.nodeUp.next.key;
+};
+
+Sweep.debugEvent = function (tess) {} // empty
+
+/*
+* Invariants for the Edge Dictionary.
+* - each pair of adjacent edges e2=Succ(e1) satisfies EdgeLeq(e1,e2)
+*   at any valid location of the sweep event
+* - if EdgeLeq(e2,e1) as well (at any valid sweep event), then e1 and e2
+*   share a common endpoint
+* - for each e, e->Dst has been processed, but not e->Org
+* - each edge e satisfies VertLeq(e->Dst,event) && VertLeq(event,e->Org)
+*   where "event" is the current sweep line event.
+* - no edge e has zero length
+*
+* Invariants for the Mesh (the processed portion).
+* - the portion of the mesh left of the sweep line is a planar graph,
+*   ie. there is *some* way to embed it in the plane
+* - no processed edge has zero length
+* - no two processed vertices have identical coordinates
+* - each "inside" region is monotone, ie. can be broken into two chains
+*   of monotonically increasing vertices according to VertLeq(v1,v2)
+*   - a non-invariant: these chains may intersect (very slightly)
+*
+* Invariants for the Sweep.
+* - if none of the edges incident to the event vertex have an activeRegion
+*   (ie. none of these edges are in the edge dictionary), then the vertex
+*   has only right-going edges.
+* - if an edge is marked "fixUpperEdge" (it is a temporary edge introduced
+*   by ConnectRightVertex), then it is the only right-going edge from
+*   its associated vertex.  (This says that these edges exist only
+*   when it is necessary.)
+*/
+
+/* When we merge two edges into one, we need to compute the combined
+* winding of the new edge.
+*/
+;
+
+Sweep.addWinding = function (eDst, eSrc) {
+  eDst.winding += eSrc.winding;
+  eDst.Sym.winding += eSrc.Sym.winding;
+}; //static int EdgeLeq( TESStesselator *tess, ActiveRegion *reg1, ActiveRegion *reg2 )
+
+
+Sweep.edgeLeq = function (tess, reg1, reg2) {
+  /*
+  * Both edges must be directed from right to left (this is the canonical
+  * direction for the upper edge of each region).
+  *
+  * The strategy is to evaluate a "t" value for each edge at the
+  * current sweep line position, given by tess->event.  The calculations
+  * are designed to be very stable, but of course they are not perfect.
+  *
+  * Special case: if both edge destinations are at the sweep event,
+  * we sort the edges by slope (they would otherwise compare equally).
+  */
+  var ev = tess.event;
+  var t1, t2;
+  var e1 = reg1.eUp;
+  var e2 = reg2.eUp;
+
+  if (e1.Dst === ev) {
+    if (e2.Dst === ev) {
+      /* Two edges right of the sweep line which meet at the sweep event.
+      * Sort them by slope.
+      */
+      if (Geom.vertLeq(e1.Org, e2.Org)) {
+        return Geom.edgeSign(e2.Dst, e1.Org, e2.Org) <= 0;
+      }
+
+      return Geom.edgeSign(e1.Dst, e2.Org, e1.Org) >= 0;
+    }
+
+    return Geom.edgeSign(e2.Dst, ev, e2.Org) <= 0;
+  }
+
+  if (e2.Dst === ev) {
+    return Geom.edgeSign(e1.Dst, ev, e1.Org) >= 0;
+  }
+  /* General case - compute signed distance *from* e1, e2 to event */
+
+
+  var t1 = Geom.edgeEval(e1.Dst, ev, e1.Org);
+  var t2 = Geom.edgeEval(e2.Dst, ev, e2.Org);
+  return t1 >= t2;
+}; //static void DeleteRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.deleteRegion = function (tess, reg) {
+  if (reg.fixUpperEdge) {
+    /* It was created with zero winding number, so it better be
+    * deleted with zero winding number (ie. it better not get merged
+    * with a real edge).
+    */
+    assert(reg.eUp.winding === 0);
+  }
+
+  reg.eUp.activeRegion = null;
+  tess.dict.delete(reg.nodeUp);
+}; //static int FixUpperEdge( TESStesselator *tess, ActiveRegion *reg, TESShalfEdge *newEdge )
+
+
+Sweep.fixUpperEdge = function (tess, reg, newEdge) {
+  /*
+  * Replace an upper edge which needs fixing (see ConnectRightVertex).
+  */
+  assert(reg.fixUpperEdge);
+  tess.mesh.delete(reg.eUp);
+  reg.fixUpperEdge = false;
+  reg.eUp = newEdge;
+  newEdge.activeRegion = reg;
+}; //static ActiveRegion *TopLeftRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.topLeftRegion = function (tess, reg) {
+  var org = reg.eUp.Org;
+  var e;
+  /* Find the region above the uppermost edge with the same origin */
+
+  do {
+    reg = Sweep.regionAbove(reg);
+  } while (reg.eUp.Org === org);
+  /* If the edge above was a temporary edge introduced by ConnectRightVertex,
+  * now is the time to fix it.
+  */
+
+
+  if (reg.fixUpperEdge) {
+    e = tess.mesh.connect(Sweep.regionBelow(reg).eUp.Sym, reg.eUp.Lnext);
+    if (e === null) return null;
+    Sweep.fixUpperEdge(tess, reg, e);
+    reg = Sweep.regionAbove(reg);
+  }
+
+  return reg;
+}; //static ActiveRegion *TopRightRegion( ActiveRegion *reg )
+
+
+Sweep.topRightRegion = function (reg) {
+  var dst = reg.eUp.Dst;
+  var reg = null;
+  /* Find the region above the uppermost edge with the same destination */
+
+  do {
+    reg = Sweep.regionAbove(reg);
+  } while (reg.eUp.Dst === dst);
+
+  return reg;
+}; //static ActiveRegion *AddRegionBelow( TESStesselator *tess, ActiveRegion *regAbove, TESShalfEdge *eNewUp )
+
+
+Sweep.addRegionBelow = function (tess, regAbove, eNewUp) {
+  /*
+  * Add a new active region to the sweep line, *somewhere* below "regAbove"
+  * (according to where the new edge belongs in the sweep-line dictionary).
+  * The upper edge of the new region will be "eNewUp".
+  * Winding number and "inside" flag are not updated.
+  */
+  var regNew = new ActiveRegion();
+  regNew.eUp = eNewUp;
+  regNew.nodeUp = tess.dict.insertBefore(regAbove.nodeUp, regNew); //	if (regNew->nodeUp == NULL) longjmp(tess->env,1);
+
+  regNew.fixUpperEdge = false;
+  regNew.sentinel = false;
+  regNew.dirty = false;
+  eNewUp.activeRegion = regNew;
+  return regNew;
+}; //static int IsWindingInside( TESStesselator *tess, int n )
+
+
+Sweep.isWindingInside = function (tess, n) {
+  switch (tess.windingRule) {
+    case Tess2.WINDING_ODD:
+      return (n & 1) != 0;
+
+    case Tess2.WINDING_NONZERO:
+      return n != 0;
+
+    case Tess2.WINDING_POSITIVE:
+      return n > 0;
+
+    case Tess2.WINDING_NEGATIVE:
+      return n < 0;
+
+    case Tess2.WINDING_ABS_GEQ_TWO:
+      return n >= 2 || n <= -2;
+  }
+
+  assert(false);
+  return false;
+}; //static void ComputeWinding( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.computeWinding = function (tess, reg) {
+  reg.windingNumber = Sweep.regionAbove(reg).windingNumber + reg.eUp.winding;
+  reg.inside = Sweep.isWindingInside(tess, reg.windingNumber);
+}; //static void FinishRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.finishRegion = function (tess, reg) {
+  /*
+  * Delete a region from the sweep line.  This happens when the upper
+  * and lower chains of a region meet (at a vertex on the sweep line).
+  * The "inside" flag is copied to the appropriate mesh face (we could
+  * not do this before -- since the structure of the mesh is always
+  * changing, this face may not have even existed until now).
+  */
+  var e = reg.eUp;
+  var f = e.Lface;
+  f.inside = reg.inside;
+  f.anEdge = e;
+  /* optimization for tessMeshTessellateMonoRegion() */
+
+  Sweep.deleteRegion(tess, reg);
+}; //static TESShalfEdge *FinishLeftRegions( TESStesselator *tess, ActiveRegion *regFirst, ActiveRegion *regLast )
+
+
+Sweep.finishLeftRegions = function (tess, regFirst, regLast) {
+  /*
+  * We are given a vertex with one or more left-going edges.  All affected
+  * edges should be in the edge dictionary.  Starting at regFirst->eUp,
+  * we walk down deleting all regions where both edges have the same
+  * origin vOrg.  At the same time we copy the "inside" flag from the
+  * active region to the face, since at this point each face will belong
+  * to at most one region (this was not necessarily true until this point
+  * in the sweep).  The walk stops at the region above regLast; if regLast
+  * is NULL we walk as far as possible.  At the same time we relink the
+  * mesh if necessary, so that the ordering of edges around vOrg is the
+  * same as in the dictionary.
+  */
+  var e, ePrev;
+  var reg = null;
+  var regPrev = regFirst;
+  var ePrev = regFirst.eUp;
+
+  while (regPrev !== regLast) {
+    regPrev.fixUpperEdge = false;
+    /* placement was OK */
+
+    reg = Sweep.regionBelow(regPrev);
+    e = reg.eUp;
+
+    if (e.Org != ePrev.Org) {
+      if (!reg.fixUpperEdge) {
+        /* Remove the last left-going edge.  Even though there are no further
+        * edges in the dictionary with this origin, there may be further
+        * such edges in the mesh (if we are adding left edges to a vertex
+        * that has already been processed).  Thus it is important to call
+        * FinishRegion rather than just DeleteRegion.
+        */
+        Sweep.finishRegion(tess, regPrev);
+        break;
+      }
+      /* If the edge below was a temporary edge introduced by
+      * ConnectRightVertex, now is the time to fix it.
+      */
+
+
+      e = tess.mesh.connect(ePrev.Lprev, e.Sym); //			if (e == NULL) longjmp(tess->env,1);
+
+      Sweep.fixUpperEdge(tess, reg, e);
+    }
+    /* Relink edges so that ePrev->Onext == e */
+
+
+    if (ePrev.Onext !== e) {
+      tess.mesh.splice(e.Oprev, e);
+      tess.mesh.splice(ePrev, e);
+    }
+
+    Sweep.finishRegion(tess, regPrev);
+    /* may change reg->eUp */
+
+    ePrev = reg.eUp;
+    regPrev = reg;
+  }
+
+  return ePrev;
+}; //static void AddRightEdges( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eFirst, TESShalfEdge *eLast, TESShalfEdge *eTopLeft, int cleanUp )
+
+
+Sweep.addRightEdges = function (tess, regUp, eFirst, eLast, eTopLeft, cleanUp) {
+  /*
+  * Purpose: insert right-going edges into the edge dictionary, and update
+  * winding numbers and mesh connectivity appropriately.  All right-going
+  * edges share a common origin vOrg.  Edges are inserted CCW starting at
+  * eFirst; the last edge inserted is eLast->Oprev.  If vOrg has any
+  * left-going edges already processed, then eTopLeft must be the edge
+  * such that an imaginary upward vertical segment from vOrg would be
+  * contained between eTopLeft->Oprev and eTopLeft; otherwise eTopLeft
+  * should be NULL.
+  */
+  var reg, regPrev;
+  var e, ePrev;
+  var firstTime = true;
+  /* Insert the new right-going edges in the dictionary */
+
+  e = eFirst;
+
+  do {
+    assert(Geom.vertLeq(e.Org, e.Dst));
+    Sweep.addRegionBelow(tess, regUp, e.Sym);
+    e = e.Onext;
+  } while (e !== eLast);
+  /* Walk *all* right-going edges from e->Org, in the dictionary order,
+  * updating the winding numbers of each region, and re-linking the mesh
+  * edges to match the dictionary ordering (if necessary).
+  */
+
+
+  if (eTopLeft === null) {
+    eTopLeft = Sweep.regionBelow(regUp).eUp.Rprev;
+  }
+
+  regPrev = regUp;
+  ePrev = eTopLeft;
+
+  for (;;) {
+    reg = Sweep.regionBelow(regPrev);
+    e = reg.eUp.Sym;
+    if (e.Org !== ePrev.Org) break;
+
+    if (e.Onext !== ePrev) {
+      /* Unlink e from its current position, and relink below ePrev */
+      tess.mesh.splice(e.Oprev, e);
+      tess.mesh.splice(ePrev.Oprev, e);
+    }
+    /* Compute the winding number and "inside" flag for the new regions */
+
+
+    reg.windingNumber = regPrev.windingNumber - e.winding;
+    reg.inside = Sweep.isWindingInside(tess, reg.windingNumber);
+    /* Check for two outgoing edges with same slope -- process these
+    * before any intersection tests (see example in tessComputeInterior).
+    */
+
+    regPrev.dirty = true;
+
+    if (!firstTime && Sweep.checkForRightSplice(tess, regPrev)) {
+      Sweep.addWinding(e, ePrev);
+      Sweep.deleteRegion(tess, regPrev);
+      tess.mesh.delete(ePrev);
+    }
+
+    firstTime = false;
+    regPrev = reg;
+    ePrev = e;
+  }
+
+  regPrev.dirty = true;
+  assert(regPrev.windingNumber - e.winding === reg.windingNumber);
+
+  if (cleanUp) {
+    /* Check for intersections between newly adjacent edges. */
+    Sweep.walkDirtyRegions(tess, regPrev);
+  }
+}; //static void SpliceMergeVertices( TESStesselator *tess, TESShalfEdge *e1, TESShalfEdge *e2 )
+
+
+Sweep.spliceMergeVertices = function (tess, e1, e2) {
+  /*
+  * Two vertices with idential coordinates are combined into one.
+  * e1->Org is kept, while e2->Org is discarded.
+  */
+  tess.mesh.splice(e1, e2);
+}; //static void VertexWeights( TESSvertex *isect, TESSvertex *org, TESSvertex *dst, TESSreal *weights )
+
+
+Sweep.vertexWeights = function (isect, org, dst) {
+  /*
+  * Find some weights which describe how the intersection vertex is
+  * a linear combination of "org" and "dest".  Each of the two edges
+  * which generated "isect" is allocated 50% of the weight; each edge
+  * splits the weight between its org and dst according to the
+  * relative distance to "isect".
+  */
+  var t1 = Geom.vertL1dist(org, isect);
+  var t2 = Geom.vertL1dist(dst, isect);
+  var w0 = 0.5 * t2 / (t1 + t2);
+  var w1 = 0.5 * t1 / (t1 + t2);
+  isect.coords[0] += w0 * org.coords[0] + w1 * dst.coords[0];
+  isect.coords[1] += w0 * org.coords[1] + w1 * dst.coords[1];
+  isect.coords[2] += w0 * org.coords[2] + w1 * dst.coords[2];
+}; //static void GetIntersectData( TESStesselator *tess, TESSvertex *isect, TESSvertex *orgUp, TESSvertex *dstUp, TESSvertex *orgLo, TESSvertex *dstLo )
+
+
+Sweep.getIntersectData = function (tess, isect, orgUp, dstUp, orgLo, dstLo) {
+  /*
+  * We've computed a new intersection point, now we need a "data" pointer
+  * from the user so that we can refer to this new vertex in the
+  * rendering callbacks.
+  */
+  isect.coords[0] = isect.coords[1] = isect.coords[2] = 0;
+  isect.idx = -1;
+  Sweep.vertexWeights(isect, orgUp, dstUp);
+  Sweep.vertexWeights(isect, orgLo, dstLo);
+}; //static int CheckForRightSplice( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForRightSplice = function (tess, regUp) {
+  /*
+  * Check the upper and lower edge of "regUp", to make sure that the
+  * eUp->Org is above eLo, or eLo->Org is below eUp (depending on which
+  * origin is leftmost).
+  *
+  * The main purpose is to splice right-going edges with the same
+  * dest vertex and nearly identical slopes (ie. we can't distinguish
+  * the slopes numerically).  However the splicing can also help us
+  * to recover from numerical errors.  For example, suppose at one
+  * point we checked eUp and eLo, and decided that eUp->Org is barely
+  * above eLo.  Then later, we split eLo into two edges (eg. from
+  * a splice operation like this one).  This can change the result of
+  * our test so that now eUp->Org is incident to eLo, or barely below it.
+  * We must correct this condition to maintain the dictionary invariants.
+  *
+  * One possibility is to check these edges for intersection again
+  * (ie. CheckForIntersect).  This is what we do if possible.  However
+  * CheckForIntersect requires that tess->event lies between eUp and eLo,
+  * so that it has something to fall back on when the intersection
+  * calculation gives us an unusable answer.  So, for those cases where
+  * we can't check for intersection, this routine fixes the problem
+  * by just splicing the offending vertex into the other edge.
+  * This is a guaranteed solution, no matter how degenerate things get.
+  * Basically this is a combinatorial solution to a numerical problem.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+
+  if (Geom.vertLeq(eUp.Org, eLo.Org)) {
+    if (Geom.edgeSign(eLo.Dst, eUp.Org, eLo.Org) > 0) return false;
+    /* eUp->Org appears to be below eLo */
+
+    if (!Geom.vertEq(eUp.Org, eLo.Org)) {
+      /* Splice eUp->Org into eLo */
+      tess.mesh.splitEdge(eLo.Sym);
+      tess.mesh.splice(eUp, eLo.Oprev);
+      regUp.dirty = regLo.dirty = true;
+    } else if (eUp.Org !== eLo.Org) {
+      /* merge the two vertices, discarding eUp->Org */
+      tess.pq.delete(eUp.Org.pqHandle);
+      Sweep.spliceMergeVertices(tess, eLo.Oprev, eUp);
+    }
+  } else {
+    if (Geom.edgeSign(eUp.Dst, eLo.Org, eUp.Org) < 0) return false;
+    /* eLo->Org appears to be above eUp, so splice eLo->Org into eUp */
+
+    Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+    tess.mesh.splitEdge(eUp.Sym);
+    tess.mesh.splice(eLo.Oprev, eUp);
+  }
+
+  return true;
+}; //static int CheckForLeftSplice( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForLeftSplice = function (tess, regUp) {
+  /*
+  * Check the upper and lower edge of "regUp", to make sure that the
+  * eUp->Dst is above eLo, or eLo->Dst is below eUp (depending on which
+  * destination is rightmost).
+  *
+  * Theoretically, this should always be true.  However, splitting an edge
+  * into two pieces can change the results of previous tests.  For example,
+  * suppose at one point we checked eUp and eLo, and decided that eUp->Dst
+  * is barely above eLo.  Then later, we split eLo into two edges (eg. from
+  * a splice operation like this one).  This can change the result of
+  * the test so that now eUp->Dst is incident to eLo, or barely below it.
+  * We must correct this condition to maintain the dictionary invariants
+  * (otherwise new edges might get inserted in the wrong place in the
+  * dictionary, and bad stuff will happen).
+  *
+  * We fix the problem by just splicing the offending vertex into the
+  * other edge.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var e;
+  assert(!Geom.vertEq(eUp.Dst, eLo.Dst));
+
+  if (Geom.vertLeq(eUp.Dst, eLo.Dst)) {
+    if (Geom.edgeSign(eUp.Dst, eLo.Dst, eUp.Org) < 0) return false;
+    /* eLo->Dst is above eUp, so splice eLo->Dst into eUp */
+
+    Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+    e = tess.mesh.splitEdge(eUp);
+    tess.mesh.splice(eLo.Sym, e);
+    e.Lface.inside = regUp.inside;
+  } else {
+    if (Geom.edgeSign(eLo.Dst, eUp.Dst, eLo.Org) > 0) return false;
+    /* eUp->Dst is below eLo, so splice eUp->Dst into eLo */
+
+    regUp.dirty = regLo.dirty = true;
+    e = tess.mesh.splitEdge(eLo);
+    tess.mesh.splice(eUp.Lnext, eLo.Sym);
+    e.Rface.inside = regUp.inside;
+  }
+
+  return true;
+}; //static int CheckForIntersect( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForIntersect = function (tess, regUp) {
+  /*
+  * Check the upper and lower edges of the given region to see if
+  * they intersect.  If so, create the intersection and add it
+  * to the data structures.
+  *
+  * Returns TRUE if adding the new intersection resulted in a recursive
+  * call to AddRightEdges(); in this case all "dirty" regions have been
+  * checked for intersections, and possibly regUp has been deleted.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var orgUp = eUp.Org;
+  var orgLo = eLo.Org;
+  var dstUp = eUp.Dst;
+  var dstLo = eLo.Dst;
+  var tMinUp, tMaxLo;
+  var isect = new TESSvertex(),
+      orgMin;
+  var e;
+  assert(!Geom.vertEq(dstLo, dstUp));
+  assert(Geom.edgeSign(dstUp, tess.event, orgUp) <= 0);
+  assert(Geom.edgeSign(dstLo, tess.event, orgLo) >= 0);
+  assert(orgUp !== tess.event && orgLo !== tess.event);
+  assert(!regUp.fixUpperEdge && !regLo.fixUpperEdge);
+  if (orgUp === orgLo) return false;
+  /* right endpoints are the same */
+
+  tMinUp = Math.min(orgUp.t, dstUp.t);
+  tMaxLo = Math.max(orgLo.t, dstLo.t);
+  if (tMinUp > tMaxLo) return false;
+  /* t ranges do not overlap */
+
+  if (Geom.vertLeq(orgUp, orgLo)) {
+    if (Geom.edgeSign(dstLo, orgUp, orgLo) > 0) return false;
+  } else {
+    if (Geom.edgeSign(dstUp, orgLo, orgUp) < 0) return false;
+  }
+  /* At this point the edges intersect, at least marginally */
+
+
+  Sweep.debugEvent(tess);
+  Geom.intersect(dstUp, orgUp, dstLo, orgLo, isect);
+  /* The following properties are guaranteed: */
+
+  assert(Math.min(orgUp.t, dstUp.t) <= isect.t);
+  assert(isect.t <= Math.max(orgLo.t, dstLo.t));
+  assert(Math.min(dstLo.s, dstUp.s) <= isect.s);
+  assert(isect.s <= Math.max(orgLo.s, orgUp.s));
+
+  if (Geom.vertLeq(isect, tess.event)) {
+    /* The intersection point lies slightly to the left of the sweep line,
+    * so move it until it''s slightly to the right of the sweep line.
+    * (If we had perfect numerical precision, this would never happen
+    * in the first place).  The easiest and safest thing to do is
+    * replace the intersection by tess->event.
+    */
+    isect.s = tess.event.s;
+    isect.t = tess.event.t;
+  }
+  /* Similarly, if the computed intersection lies to the right of the
+  * rightmost origin (which should rarely happen), it can cause
+  * unbelievable inefficiency on sufficiently degenerate inputs.
+  * (If you have the test program, try running test54.d with the
+  * "X zoom" option turned on).
+  */
+
+
+  orgMin = Geom.vertLeq(orgUp, orgLo) ? orgUp : orgLo;
+
+  if (Geom.vertLeq(orgMin, isect)) {
+    isect.s = orgMin.s;
+    isect.t = orgMin.t;
+  }
+
+  if (Geom.vertEq(isect, orgUp) || Geom.vertEq(isect, orgLo)) {
+    /* Easy case -- intersection at one of the right endpoints */
+    Sweep.checkForRightSplice(tess, regUp);
+    return false;
+  }
+
+  if (!Geom.vertEq(dstUp, tess.event) && Geom.edgeSign(dstUp, tess.event, isect) >= 0 || !Geom.vertEq(dstLo, tess.event) && Geom.edgeSign(dstLo, tess.event, isect) <= 0) {
+    /* Very unusual -- the new upper or lower edge would pass on the
+    * wrong side of the sweep event, or through it.  This can happen
+    * due to very small numerical errors in the intersection calculation.
+    */
+    if (dstLo === tess.event) {
+      /* Splice dstLo into eUp, and process the new region(s) */
+      tess.mesh.splitEdge(eUp.Sym);
+      tess.mesh.splice(eLo.Sym, eUp);
+      regUp = Sweep.topLeftRegion(tess, regUp); //			if (regUp == NULL) longjmp(tess->env,1);
+
+      eUp = Sweep.regionBelow(regUp).eUp;
+      Sweep.finishLeftRegions(tess, Sweep.regionBelow(regUp), regLo);
+      Sweep.addRightEdges(tess, regUp, eUp.Oprev, eUp, eUp, true);
+      return TRUE;
+    }
+
+    if (dstUp === tess.event) {
+      /* Splice dstUp into eLo, and process the new region(s) */
+      tess.mesh.splitEdge(eLo.Sym);
+      tess.mesh.splice(eUp.Lnext, eLo.Oprev);
+      regLo = regUp;
+      regUp = Sweep.topRightRegion(regUp);
+      e = Sweep.regionBelow(regUp).eUp.Rprev;
+      regLo.eUp = eLo.Oprev;
+      eLo = Sweep.finishLeftRegions(tess, regLo, null);
+      Sweep.addRightEdges(tess, regUp, eLo.Onext, eUp.Rprev, e, true);
+      return true;
+    }
+    /* Special case: called from ConnectRightVertex.  If either
+    * edge passes on the wrong side of tess->event, split it
+    * (and wait for ConnectRightVertex to splice it appropriately).
+    */
+
+
+    if (Geom.edgeSign(dstUp, tess.event, isect) >= 0) {
+      Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+      tess.mesh.splitEdge(eUp.Sym);
+      eUp.Org.s = tess.event.s;
+      eUp.Org.t = tess.event.t;
+    }
+
+    if (Geom.edgeSign(dstLo, tess.event, isect) <= 0) {
+      regUp.dirty = regLo.dirty = true;
+      tess.mesh.splitEdge(eLo.Sym);
+      eLo.Org.s = tess.event.s;
+      eLo.Org.t = tess.event.t;
+    }
+    /* leave the rest for ConnectRightVertex */
+
+
+    return false;
+  }
+  /* General case -- split both edges, splice into new vertex.
+  * When we do the splice operation, the order of the arguments is
+  * arbitrary as far as correctness goes.  However, when the operation
+  * creates a new face, the work done is proportional to the size of
+  * the new face.  We expect the faces in the processed part of
+  * the mesh (ie. eUp->Lface) to be smaller than the faces in the
+  * unprocessed original contours (which will be eLo->Oprev->Lface).
+  */
+
+
+  tess.mesh.splitEdge(eUp.Sym);
+  tess.mesh.splitEdge(eLo.Sym);
+  tess.mesh.splice(eLo.Oprev, eUp);
+  eUp.Org.s = isect.s;
+  eUp.Org.t = isect.t;
+  eUp.Org.pqHandle = tess.pq.insert(eUp.Org);
+  Sweep.getIntersectData(tess, eUp.Org, orgUp, dstUp, orgLo, dstLo);
+  Sweep.regionAbove(regUp).dirty = regUp.dirty = regLo.dirty = true;
+  return false;
+}; //static void WalkDirtyRegions( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.walkDirtyRegions = function (tess, regUp) {
+  /*
+  * When the upper or lower edge of any region changes, the region is
+  * marked "dirty".  This routine walks through all the dirty regions
+  * and makes sure that the dictionary invariants are satisfied
+  * (see the comments at the beginning of this file).  Of course
+  * new dirty regions can be created as we make changes to restore
+  * the invariants.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp, eLo;
+
+  for (;;) {
+    /* Find the lowest dirty region (we walk from the bottom up). */
+    while (regLo.dirty) {
+      regUp = regLo;
+      regLo = Sweep.regionBelow(regLo);
+    }
+
+    if (!regUp.dirty) {
+      regLo = regUp;
+      regUp = Sweep.regionAbove(regUp);
+
+      if (regUp == null || !regUp.dirty) {
+        /* We've walked all the dirty regions */
+        return;
+      }
+    }
+
+    regUp.dirty = false;
+    eUp = regUp.eUp;
+    eLo = regLo.eUp;
+
+    if (eUp.Dst !== eLo.Dst) {
+      /* Check that the edge ordering is obeyed at the Dst vertices. */
+      if (Sweep.checkForLeftSplice(tess, regUp)) {
+        /* If the upper or lower edge was marked fixUpperEdge, then
+        * we no longer need it (since these edges are needed only for
+        * vertices which otherwise have no right-going edges).
+        */
+        if (regLo.fixUpperEdge) {
+          Sweep.deleteRegion(tess, regLo);
+          tess.mesh.delete(eLo);
+          regLo = Sweep.regionBelow(regUp);
+          eLo = regLo.eUp;
+        } else if (regUp.fixUpperEdge) {
+          Sweep.deleteRegion(tess, regUp);
+          tess.mesh.delete(eUp);
+          regUp = Sweep.regionAbove(regLo);
+          eUp = regUp.eUp;
+        }
+      }
+    }
+
+    if (eUp.Org !== eLo.Org) {
+      if (eUp.Dst !== eLo.Dst && !regUp.fixUpperEdge && !regLo.fixUpperEdge && (eUp.Dst === tess.event || eLo.Dst === tess.event)) {
+        /* When all else fails in CheckForIntersect(), it uses tess->event
+        * as the intersection location.  To make this possible, it requires
+        * that tess->event lie between the upper and lower edges, and also
+        * that neither of these is marked fixUpperEdge (since in the worst
+        * case it might splice one of these edges into tess->event, and
+        * violate the invariant that fixable edges are the only right-going
+        * edge from their associated vertex).
+        */
+        if (Sweep.checkForIntersect(tess, regUp)) {
+          /* WalkDirtyRegions() was called recursively; we're done */
+          return;
+        }
+      } else {
+        /* Even though we can't use CheckForIntersect(), the Org vertices
+        * may violate the dictionary edge ordering.  Check and correct this.
+        */
+        Sweep.checkForRightSplice(tess, regUp);
+      }
+    }
+
+    if (eUp.Org === eLo.Org && eUp.Dst === eLo.Dst) {
+      /* A degenerate loop consisting of only two edges -- delete it. */
+      Sweep.addWinding(eLo, eUp);
+      Sweep.deleteRegion(tess, regUp);
+      tess.mesh.delete(eUp);
+      regUp = Sweep.regionAbove(regLo);
+    }
+  }
+}; //static void ConnectRightVertex( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eBottomLeft )
+
+
+Sweep.connectRightVertex = function (tess, regUp, eBottomLeft) {
+  /*
+  * Purpose: connect a "right" vertex vEvent (one where all edges go left)
+  * to the unprocessed portion of the mesh.  Since there are no right-going
+  * edges, two regions (one above vEvent and one below) are being merged
+  * into one.  "regUp" is the upper of these two regions.
+  *
+  * There are two reasons for doing this (adding a right-going edge):
+  *  - if the two regions being merged are "inside", we must add an edge
+  *    to keep them separated (the combined region would not be monotone).
+  *  - in any case, we must leave some record of vEvent in the dictionary,
+  *    so that we can merge vEvent with features that we have not seen yet.
+  *    For example, maybe there is a vertical edge which passes just to
+  *    the right of vEvent; we would like to splice vEvent into this edge.
+  *
+  * However, we don't want to connect vEvent to just any vertex.  We don''t
+  * want the new edge to cross any other edges; otherwise we will create
+  * intersection vertices even when the input data had no self-intersections.
+  * (This is a bad thing; if the user's input data has no intersections,
+  * we don't want to generate any false intersections ourselves.)
+  *
+  * Our eventual goal is to connect vEvent to the leftmost unprocessed
+  * vertex of the combined region (the union of regUp and regLo).
+  * But because of unseen vertices with all right-going edges, and also
+  * new vertices which may be created by edge intersections, we don''t
+  * know where that leftmost unprocessed vertex is.  In the meantime, we
+  * connect vEvent to the closest vertex of either chain, and mark the region
+  * as "fixUpperEdge".  This flag says to delete and reconnect this edge
+  * to the next processed vertex on the boundary of the combined region.
+  * Quite possibly the vertex we connected to will turn out to be the
+  * closest one, in which case we won''t need to make any changes.
+  */
+  var eNew;
+  var eTopLeft = eBottomLeft.Onext;
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var degenerate = false;
+
+  if (eUp.Dst !== eLo.Dst) {
+    Sweep.checkForIntersect(tess, regUp);
+  }
+  /* Possible new degeneracies: upper or lower edge of regUp may pass
+  * through vEvent, or may coincide with new intersection vertex
+  */
+
+
+  if (Geom.vertEq(eUp.Org, tess.event)) {
+    tess.mesh.splice(eTopLeft.Oprev, eUp);
+    regUp = Sweep.topLeftRegion(tess, regUp);
+    eTopLeft = Sweep.regionBelow(regUp).eUp;
+    Sweep.finishLeftRegions(tess, Sweep.regionBelow(regUp), regLo);
+    degenerate = true;
+  }
+
+  if (Geom.vertEq(eLo.Org, tess.event)) {
+    tess.mesh.splice(eBottomLeft, eLo.Oprev);
+    eBottomLeft = Sweep.finishLeftRegions(tess, regLo, null);
+    degenerate = true;
+  }
+
+  if (degenerate) {
+    Sweep.addRightEdges(tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true);
+    return;
+  }
+  /* Non-degenerate situation -- need to add a temporary, fixable edge.
+  * Connect to the closer of eLo->Org, eUp->Org.
+  */
+
+
+  if (Geom.vertLeq(eLo.Org, eUp.Org)) {
+    eNew = eLo.Oprev;
+  } else {
+    eNew = eUp;
+  }
+
+  eNew = tess.mesh.connect(eBottomLeft.Lprev, eNew);
+  /* Prevent cleanup, otherwise eNew might disappear before we've even
+  * had a chance to mark it as a temporary edge.
+  */
+
+  Sweep.addRightEdges(tess, regUp, eNew, eNew.Onext, eNew.Onext, false);
+  eNew.Sym.activeRegion.fixUpperEdge = true;
+  Sweep.walkDirtyRegions(tess, regUp);
+};
+/* Because vertices at exactly the same location are merged together
+* before we process the sweep event, some degenerate cases can't occur.
+* However if someone eventually makes the modifications required to
+* merge features which are close together, the cases below marked
+* TOLERANCE_NONZERO will be useful.  They were debugged before the
+* code to merge identical vertices in the main loop was added.
+*/
+//#define TOLERANCE_NONZERO	FALSE
+//static void ConnectLeftDegenerate( TESStesselator *tess, ActiveRegion *regUp, TESSvertex *vEvent )
+
+
+Sweep.connectLeftDegenerate = function (tess, regUp, vEvent) {
+  /*
+  * The event vertex lies exacty on an already-processed edge or vertex.
+  * Adding the new vertex involves splicing it into the already-processed
+  * part of the mesh.
+  */
+  var e, eTopLeft, eTopRight, eLast;
+  var reg;
+  e = regUp.eUp;
+
+  if (Geom.vertEq(e.Org, vEvent)) {
+    /* e->Org is an unprocessed vertex - just combine them, and wait
+    * for e->Org to be pulled from the queue
+    */
+    assert(false
+    /*TOLERANCE_NONZERO*/
+    );
+    Sweep.spliceMergeVertices(tess, e, vEvent.anEdge);
+    return;
+  }
+
+  if (!Geom.vertEq(e.Dst, vEvent)) {
+    /* General case -- splice vEvent into edge e which passes through it */
+    tess.mesh.splitEdge(e.Sym);
+
+    if (regUp.fixUpperEdge) {
+      /* This edge was fixable -- delete unused portion of original edge */
+      tess.mesh.delete(e.Onext);
+      regUp.fixUpperEdge = false;
+    }
+
+    tess.mesh.splice(vEvent.anEdge, e);
+    Sweep.sweepEvent(tess, vEvent);
+    /* recurse */
+
+    return;
+  }
+  /* vEvent coincides with e->Dst, which has already been processed.
+  * Splice in the additional right-going edges.
+  */
+
+
+  assert(false
+  /*TOLERANCE_NONZERO*/
+  );
+  regUp = Sweep.topRightRegion(regUp);
+  reg = Sweep.regionBelow(regUp);
+  eTopRight = reg.eUp.Sym;
+  eTopLeft = eLast = eTopRight.Onext;
+
+  if (reg.fixUpperEdge) {
+    /* Here e->Dst has only a single fixable edge going right.
+    * We can delete it since now we have some real right-going edges.
+    */
+    assert(eTopLeft !== eTopRight);
+    /* there are some left edges too */
+
+    Sweep.deleteRegion(tess, reg);
+    tess.mesh.delete(eTopRight);
+    eTopRight = eTopLeft.Oprev;
+  }
+
+  tess.mesh.splice(vEvent.anEdge, eTopRight);
+
+  if (!Geom.edgeGoesLeft(eTopLeft)) {
+    /* e->Dst had no left-going edges -- indicate this to AddRightEdges() */
+    eTopLeft = null;
+  }
+
+  Sweep.addRightEdges(tess, regUp, eTopRight.Onext, eLast, eTopLeft, true);
+}; //static void ConnectLeftVertex( TESStesselator *tess, TESSvertex *vEvent )
+
+
+Sweep.connectLeftVertex = function (tess, vEvent) {
+  /*
+  * Purpose: connect a "left" vertex (one where both edges go right)
+  * to the processed portion of the mesh.  Let R be the active region
+  * containing vEvent, and let U and L be the upper and lower edge
+  * chains of R.  There are two possibilities:
+  *
+  * - the normal case: split R into two regions, by connecting vEvent to
+  *   the rightmost vertex of U or L lying to the left of the sweep line
+  *
+  * - the degenerate case: if vEvent is close enough to U or L, we
+  *   merge vEvent into that edge chain.  The subcases are:
+  *	- merging with the rightmost vertex of U or L
+  *	- merging with the active edge of U or L
+  *	- merging with an already-processed portion of U or L
+  */
+  var regUp, regLo, reg;
+  var eUp, eLo, eNew;
+  var tmp = new ActiveRegion();
+  /* assert( vEvent->anEdge->Onext->Onext == vEvent->anEdge ); */
+
+  /* Get a pointer to the active region containing vEvent */
+
+  tmp.eUp = vEvent.anEdge.Sym;
+  /* __GL_DICTLISTKEY */
+
+  /* tessDictListSearch */
+
+  regUp = tess.dict.search(tmp).key;
+  regLo = Sweep.regionBelow(regUp);
+
+  if (!regLo) {
+    // This may happen if the input polygon is coplanar.
+    return;
+  }
+
+  eUp = regUp.eUp;
+  eLo = regLo.eUp;
+  /* Try merging with U or L first */
+
+  if (Geom.edgeSign(eUp.Dst, vEvent, eUp.Org) === 0.0) {
+    Sweep.connectLeftDegenerate(tess, regUp, vEvent);
+    return;
+  }
+  /* Connect vEvent to rightmost processed vertex of either chain.
+  * e->Dst is the vertex that we will connect to vEvent.
+  */
+
+
+  reg = Geom.vertLeq(eLo.Dst, eUp.Dst) ? regUp : regLo;
+
+  if (regUp.inside || reg.fixUpperEdge) {
+    if (reg === regUp) {
+      eNew = tess.mesh.connect(vEvent.anEdge.Sym, eUp.Lnext);
+    } else {
+      var tempHalfEdge = tess.mesh.connect(eLo.Dnext, vEvent.anEdge);
+      eNew = tempHalfEdge.Sym;
+    }
+
+    if (reg.fixUpperEdge) {
+      Sweep.fixUpperEdge(tess, reg, eNew);
+    } else {
+      Sweep.computeWinding(tess, Sweep.addRegionBelow(tess, regUp, eNew));
+    }
+
+    Sweep.sweepEvent(tess, vEvent);
+  } else {
+    /* The new vertex is in a region which does not belong to the polygon.
+    * We don''t need to connect this vertex to the rest of the mesh.
+    */
+    Sweep.addRightEdges(tess, regUp, vEvent.anEdge, vEvent.anEdge, null, true);
+  }
+}; //static void SweepEvent( TESStesselator *tess, TESSvertex *vEvent )
+
+
+Sweep.sweepEvent = function (tess, vEvent) {
+  /*
+  * Does everything necessary when the sweep line crosses a vertex.
+  * Updates the mesh and the edge dictionary.
+  */
+  tess.event = vEvent;
+  /* for access in EdgeLeq() */
+
+  Sweep.debugEvent(tess);
+  /* Check if this vertex is the right endpoint of an edge that is
+  * already in the dictionary.  In this case we don't need to waste
+  * time searching for the location to insert new edges.
+  */
+
+  var e = vEvent.anEdge;
+
+  while (e.activeRegion === null) {
+    e = e.Onext;
+
+    if (e == vEvent.anEdge) {
+      /* All edges go right -- not incident to any processed edges */
+      Sweep.connectLeftVertex(tess, vEvent);
+      return;
+    }
+  }
+  /* Processing consists of two phases: first we "finish" all the
+  * active regions where both the upper and lower edges terminate
+  * at vEvent (ie. vEvent is closing off these regions).
+  * We mark these faces "inside" or "outside" the polygon according
+  * to their winding number, and delete the edges from the dictionary.
+  * This takes care of all the left-going edges from vEvent.
+  */
+
+
+  var regUp = Sweep.topLeftRegion(tess, e.activeRegion);
+  assert(regUp !== null); //	if (regUp == NULL) longjmp(tess->env,1);
+
+  var reg = Sweep.regionBelow(regUp);
+  var eTopLeft = reg.eUp;
+  var eBottomLeft = Sweep.finishLeftRegions(tess, reg, null);
+  /* Next we process all the right-going edges from vEvent.  This
+  * involves adding the edges to the dictionary, and creating the
+  * associated "active regions" which record information about the
+  * regions between adjacent dictionary edges.
+  */
+
+  if (eBottomLeft.Onext === eTopLeft) {
+    /* No right-going edges -- add a temporary "fixable" edge */
+    Sweep.connectRightVertex(tess, regUp, eBottomLeft);
+  } else {
+    Sweep.addRightEdges(tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true);
+  }
+};
+/* Make the sentinel coordinates big enough that they will never be
+* merged with real input features.
+*/
+//static void AddSentinel( TESStesselator *tess, TESSreal smin, TESSreal smax, TESSreal t )
+
+
+Sweep.addSentinel = function (tess, smin, smax, t) {
+  /*
+  * We add two sentinel edges above and below all other edges,
+  * to avoid special cases at the top and bottom.
+  */
+  var reg = new ActiveRegion();
+  var e = tess.mesh.makeEdge(); //	if (e == NULL) longjmp(tess->env,1);
+
+  e.Org.s = smax;
+  e.Org.t = t;
+  e.Dst.s = smin;
+  e.Dst.t = t;
+  tess.event = e.Dst;
+  /* initialize it */
+
+  reg.eUp = e;
+  reg.windingNumber = 0;
+  reg.inside = false;
+  reg.fixUpperEdge = false;
+  reg.sentinel = true;
+  reg.dirty = false;
+  reg.nodeUp = tess.dict.insert(reg); //	if (reg->nodeUp == NULL) longjmp(tess->env,1);
+}; //static void InitEdgeDict( TESStesselator *tess )
+
+
+Sweep.initEdgeDict = function (tess) {
+  /*
+  * We maintain an ordering of edge intersections with the sweep line.
+  * This order is maintained in a dynamic dictionary.
+  */
+  tess.dict = new Dict(tess, Sweep.edgeLeq); //	if (tess->dict == NULL) longjmp(tess->env,1);
+
+  var w = tess.bmax[0] - tess.bmin[0];
+  var h = tess.bmax[1] - tess.bmin[1];
+  var smin = tess.bmin[0] - w;
+  var smax = tess.bmax[0] + w;
+  var tmin = tess.bmin[1] - h;
+  var tmax = tess.bmax[1] + h;
+  Sweep.addSentinel(tess, smin, smax, tmin);
+  Sweep.addSentinel(tess, smin, smax, tmax);
+};
+
+Sweep.doneEdgeDict = function (tess) {
+  var reg;
+  var fixedEdges = 0;
+
+  while ((reg = tess.dict.min().key) !== null) {
+    /*
+    * At the end of all processing, the dictionary should contain
+    * only the two sentinel edges, plus at most one "fixable" edge
+    * created by ConnectRightVertex().
+    */
+    if (!reg.sentinel) {
+      assert(reg.fixUpperEdge);
+      assert(++fixedEdges == 1);
+    }
+
+    assert(reg.windingNumber == 0);
+    Sweep.deleteRegion(tess, reg);
+    /*    tessMeshDelete( reg->eUp );*/
+  } //	dictDeleteDict( &tess->alloc, tess->dict );
+
+};
+
+Sweep.removeDegenerateEdges = function (tess) {
+  /*
+  * Remove zero-length edges, and contours with fewer than 3 vertices.
+  */
+  var e, eNext, eLnext;
+  var eHead = tess.mesh.eHead;
+  /*LINTED*/
+
+  for (e = eHead.next; e !== eHead; e = eNext) {
+    eNext = e.next;
+    eLnext = e.Lnext;
+
+    if (Geom.vertEq(e.Org, e.Dst) && e.Lnext.Lnext !== e) {
+      /* Zero-length edge, contour has at least 3 edges */
+      Sweep.spliceMergeVertices(tess, eLnext, e);
+      /* deletes e->Org */
+
+      tess.mesh.delete(e);
+      /* e is a self-loop */
+
+      e = eLnext;
+      eLnext = e.Lnext;
+    }
+
+    if (eLnext.Lnext === e) {
+      /* Degenerate contour (one or two edges) */
+      if (eLnext !== e) {
+        if (eLnext === eNext || eLnext === eNext.Sym) {
+          eNext = eNext.next;
+        }
+
+        tess.mesh.delete(eLnext);
+      }
+
+      if (e === eNext || e === eNext.Sym) {
+        eNext = eNext.next;
+      }
+
+      tess.mesh.delete(e);
+    }
+  }
+};
+
+Sweep.initPriorityQ = function (tess) {
+  /*
+  * Insert all vertices into the priority queue which determines the
+  * order in which vertices cross the sweep line.
+  */
+  var pq;
+  var v, vHead;
+  var vertexCount = 0;
+  vHead = tess.mesh.vHead;
+
+  for (v = vHead.next; v !== vHead; v = v.next) {
+    vertexCount++;
+  }
+  /* Make sure there is enough space for sentinels. */
+
+
+  vertexCount += 8; //MAX( 8, tess->alloc.extraVertices );
+
+  pq = tess.pq = new PriorityQ(vertexCount, Geom.vertLeq); //	if (pq == NULL) return 0;
+
+  vHead = tess.mesh.vHead;
+
+  for (v = vHead.next; v !== vHead; v = v.next) {
+    v.pqHandle = pq.insert(v); //		if (v.pqHandle == INV_HANDLE)
+    //			break;
+  }
+
+  if (v !== vHead) {
+    return false;
+  }
+
+  pq.init();
+  return true;
+};
+
+Sweep.donePriorityQ = function (tess) {
+  tess.pq = null;
+};
+
+Sweep.removeDegenerateFaces = function (tess, mesh) {
+  /*
+  * Delete any degenerate faces with only two edges.  WalkDirtyRegions()
+  * will catch almost all of these, but it won't catch degenerate faces
+  * produced by splice operations on already-processed edges.
+  * The two places this can happen are in FinishLeftRegions(), when
+  * we splice in a "temporary" edge produced by ConnectRightVertex(),
+  * and in CheckForLeftSplice(), where we splice already-processed
+  * edges to ensure that our dictionary invariants are not violated
+  * by numerical errors.
+  *
+  * In both these cases it is *very* dangerous to delete the offending
+  * edge at the time, since one of the routines further up the stack
+  * will sometimes be keeping a pointer to that edge.
+  */
+  var f, fNext;
+  var e;
+  /*LINTED*/
+
+  for (f = mesh.fHead.next; f !== mesh.fHead; f = fNext) {
+    fNext = f.next;
+    e = f.anEdge;
+    assert(e.Lnext !== e);
+
+    if (e.Lnext.Lnext === e) {
+      /* A face with only two edges */
+      Sweep.addWinding(e.Onext, e);
+      tess.mesh.delete(e);
+    }
+  }
+
+  return true;
+};
+
+Sweep.computeInterior = function (tess) {
+  /*
+  * tessComputeInterior( tess ) computes the planar arrangement specified
+  * by the given contours, and further subdivides this arrangement
+  * into regions.  Each region is marked "inside" if it belongs
+  * to the polygon, according to the rule given by tess->windingRule.
+  * Each interior region is guaranteed be monotone.
+  */
+  var v, vNext;
+  /* Each vertex defines an event for our sweep line.  Start by inserting
+  * all the vertices in a priority queue.  Events are processed in
+  * lexicographic order, ie.
+  *
+  *	e1 < e2  iff  e1.x < e2.x || (e1.x == e2.x && e1.y < e2.y)
+  */
+
+  Sweep.removeDegenerateEdges(tess);
+  if (!Sweep.initPriorityQ(tess)) return false;
+  /* if error */
+
+  Sweep.initEdgeDict(tess);
+
+  while ((v = tess.pq.extractMin()) !== null) {
+    for (;;) {
+      vNext = tess.pq.min();
+      if (vNext === null || !Geom.vertEq(vNext, v)) break;
+      /* Merge together all vertices at exactly the same location.
+      * This is more efficient than processing them one at a time,
+      * simplifies the code (see ConnectLeftDegenerate), and is also
+      * important for correct handling of certain degenerate cases.
+      * For example, suppose there are two identical edges A and B
+      * that belong to different contours (so without this code they would
+      * be processed by separate sweep events).  Suppose another edge C
+      * crosses A and B from above.  When A is processed, we split it
+      * at its intersection point with C.  However this also splits C,
+      * so when we insert B we may compute a slightly different
+      * intersection point.  This might leave two edges with a small
+      * gap between them.  This kind of error is especially obvious
+      * when using boundary extraction (TESS_BOUNDARY_ONLY).
+      */
+
+      vNext = tess.pq.extractMin();
+      Sweep.spliceMergeVertices(tess, v.anEdge, vNext.anEdge);
+    }
+
+    Sweep.sweepEvent(tess, v);
+  }
+  /* Set tess->event for debugging purposes */
+
+
+  tess.event = tess.dict.min().key.eUp.Org;
+  Sweep.debugEvent(tess);
+  Sweep.doneEdgeDict(tess);
+  Sweep.donePriorityQ(tess);
+  if (!Sweep.removeDegenerateFaces(tess, tess.mesh)) return false;
+  tess.mesh.check();
+  return true;
+};
+
+function Tesselator() {
+  /*** state needed for collecting the input data ***/
+  this.mesh = null;
+  /* stores the input contours, and eventually
+  the tessellation itself */
+
+  /*** state needed for projecting onto the sweep plane ***/
+
+  this.normal = [0.0, 0.0, 0.0];
+  /* user-specified normal (if provided) */
+
+  this.sUnit = [0.0, 0.0, 0.0];
+  /* unit vector in s-direction (debugging) */
+
+  this.tUnit = [0.0, 0.0, 0.0];
+  /* unit vector in t-direction (debugging) */
+
+  this.bmin = [0.0, 0.0];
+  this.bmax = [0.0, 0.0];
+  /*** state needed for the line sweep ***/
+
+  this.windingRule = Tess2.WINDING_ODD;
+  /* rule for determining polygon interior */
+
+  this.dict = null;
+  /* edge dictionary for sweep line */
+
+  this.pq = null;
+  /* priority queue of vertex events */
+
+  this.event = null;
+  /* current sweep event being processed */
+
+  this.vertexIndexCounter = 0;
+  this.vertices = [];
+  this.vertexIndices = [];
+  this.vertexCount = 0;
+  this.elements = [];
+  this.elementCount = 0;
+}
+
+;
+Tesselator.prototype = {
+  dot_: function (u, v) {
+    return u[0] * v[0] + u[1] * v[1] + u[2] * v[2];
+  },
+  normalize_: function (v) {
+    var len = v[0] * v[0] + v[1] * v[1] + v[2] * v[2];
+    assert(len > 0.0);
+    len = Math.sqrt(len);
+    v[0] /= len;
+    v[1] /= len;
+    v[2] /= len;
+  },
+  longAxis_: function (v) {
+    var i = 0;
+
+    if (Math.abs(v[1]) > Math.abs(v[0])) {
+      i = 1;
+    }
+
+    if (Math.abs(v[2]) > Math.abs(v[i])) {
+      i = 2;
+    }
+
+    return i;
+  },
+  computeNormal_: function (norm) {
+    var v, v1, v2;
+    var c, tLen2, maxLen2;
+    var maxVal = [0, 0, 0],
+        minVal = [0, 0, 0],
+        d1 = [0, 0, 0],
+        d2 = [0, 0, 0],
+        tNorm = [0, 0, 0];
+    var maxVert = [null, null, null],
+        minVert = [null, null, null];
+    var vHead = this.mesh.vHead;
+    var i;
+    v = vHead.next;
+
+    for (i = 0; i < 3; ++i) {
+      c = v.coords[i];
+      minVal[i] = c;
+      minVert[i] = v;
+      maxVal[i] = c;
+      maxVert[i] = v;
+    }
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      for (i = 0; i < 3; ++i) {
+        c = v.coords[i];
+
+        if (c < minVal[i]) {
+          minVal[i] = c;
+          minVert[i] = v;
+        }
+
+        if (c > maxVal[i]) {
+          maxVal[i] = c;
+          maxVert[i] = v;
+        }
+      }
+    }
+    /* Find two vertices separated by at least 1/sqrt(3) of the maximum
+    * distance between any two vertices
+    */
+
+
+    i = 0;
+
+    if (maxVal[1] - minVal[1] > maxVal[0] - minVal[0]) {
+      i = 1;
+    }
+
+    if (maxVal[2] - minVal[2] > maxVal[i] - minVal[i]) {
+      i = 2;
+    }
+
+    if (minVal[i] >= maxVal[i]) {
+      /* All vertices are the same -- normal doesn't matter */
+      norm[0] = 0;
+      norm[1] = 0;
+      norm[2] = 1;
+      return;
+    }
+    /* Look for a third vertex which forms the triangle with maximum area
+    * (Length of normal == twice the triangle area)
+    */
+
+
+    maxLen2 = 0;
+    v1 = minVert[i];
+    v2 = maxVert[i];
+    d1[0] = v1.coords[0] - v2.coords[0];
+    d1[1] = v1.coords[1] - v2.coords[1];
+    d1[2] = v1.coords[2] - v2.coords[2];
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      d2[0] = v.coords[0] - v2.coords[0];
+      d2[1] = v.coords[1] - v2.coords[1];
+      d2[2] = v.coords[2] - v2.coords[2];
+      tNorm[0] = d1[1] * d2[2] - d1[2] * d2[1];
+      tNorm[1] = d1[2] * d2[0] - d1[0] * d2[2];
+      tNorm[2] = d1[0] * d2[1] - d1[1] * d2[0];
+      tLen2 = tNorm[0] * tNorm[0] + tNorm[1] * tNorm[1] + tNorm[2] * tNorm[2];
+
+      if (tLen2 > maxLen2) {
+        maxLen2 = tLen2;
+        norm[0] = tNorm[0];
+        norm[1] = tNorm[1];
+        norm[2] = tNorm[2];
+      }
+    }
+
+    if (maxLen2 <= 0) {
+      /* All points lie on a single line -- any decent normal will do */
+      norm[0] = norm[1] = norm[2] = 0;
+      norm[this.longAxis_(d1)] = 1;
+    }
+  },
+  checkOrientation_: function () {
+    var area;
+    var f,
+        fHead = this.mesh.fHead;
+    var v,
+        vHead = this.mesh.vHead;
+    var e;
+    /* When we compute the normal automatically, we choose the orientation
+    * so that the the sum of the signed areas of all contours is non-negative.
+    */
+
+    area = 0;
+
+    for (f = fHead.next; f !== fHead; f = f.next) {
+      e = f.anEdge;
+      if (e.winding <= 0) continue;
+
+      do {
+        area += (e.Org.s - e.Dst.s) * (e.Org.t + e.Dst.t);
+        e = e.Lnext;
+      } while (e !== f.anEdge);
+    }
+
+    if (area < 0) {
+      /* Reverse the orientation by flipping all the t-coordinates */
+      for (v = vHead.next; v !== vHead; v = v.next) {
+        v.t = -v.t;
+      }
+
+      this.tUnit[0] = -this.tUnit[0];
+      this.tUnit[1] = -this.tUnit[1];
+      this.tUnit[2] = -this.tUnit[2];
+    }
+  },
+
+  /*	#ifdef FOR_TRITE_TEST_PROGRAM
+  	#include <stdlib.h>
+  	extern int RandomSweep;
+  	#define S_UNIT_X	(RandomSweep ? (2*drand48()-1) : 1.0)
+  	#define S_UNIT_Y	(RandomSweep ? (2*drand48()-1) : 0.0)
+  	#else
+  	#if defined(SLANTED_SWEEP) */
+
+  /* The "feature merging" is not intended to be complete.  There are
+  * special cases where edges are nearly parallel to the sweep line
+  * which are not implemented.  The algorithm should still behave
+  * robustly (ie. produce a reasonable tesselation) in the presence
+  * of such edges, however it may miss features which could have been
+  * merged.  We could minimize this effect by choosing the sweep line
+  * direction to be something unusual (ie. not parallel to one of the
+  * coordinate axes).
+  */
+
+  /*	#define S_UNIT_X	(TESSreal)0.50941539564955385	// Pre-normalized
+  	#define S_UNIT_Y	(TESSreal)0.86052074622010633
+  	#else
+  	#define S_UNIT_X	(TESSreal)1.0
+  	#define S_UNIT_Y	(TESSreal)0.0
+  	#endif
+  	#endif*/
+
+  /* Determine the polygon normal and project vertices onto the plane
+  * of the polygon.
+  */
+  projectPolygon_: function () {
+    var v,
+        vHead = this.mesh.vHead;
+    var norm = [0, 0, 0];
+    var sUnit, tUnit;
+    var i,
+        first,
+        computedNormal = false;
+    norm[0] = this.normal[0];
+    norm[1] = this.normal[1];
+    norm[2] = this.normal[2];
+
+    if (norm[0] === 0.0 && norm[1] === 0.0 && norm[2] === 0.0) {
+      this.computeNormal_(norm);
+      computedNormal = true;
+    }
+
+    sUnit = this.sUnit;
+    tUnit = this.tUnit;
+    i = this.longAxis_(norm);
+    /*	#if defined(FOR_TRITE_TEST_PROGRAM) || defined(TRUE_PROJECT)
+    		// Choose the initial sUnit vector to be approximately perpendicular
+    		// to the normal.
+    		
+    		Normalize( norm );
+    			sUnit[i] = 0;
+    		sUnit[(i+1)%3] = S_UNIT_X;
+    		sUnit[(i+2)%3] = S_UNIT_Y;
+    			// Now make it exactly perpendicular 
+    		w = Dot( sUnit, norm );
+    		sUnit[0] -= w * norm[0];
+    		sUnit[1] -= w * norm[1];
+    		sUnit[2] -= w * norm[2];
+    		Normalize( sUnit );
+    			// Choose tUnit so that (sUnit,tUnit,norm) form a right-handed frame 
+    		tUnit[0] = norm[1]*sUnit[2] - norm[2]*sUnit[1];
+    		tUnit[1] = norm[2]*sUnit[0] - norm[0]*sUnit[2];
+    		tUnit[2] = norm[0]*sUnit[1] - norm[1]*sUnit[0];
+    		Normalize( tUnit );
+    	#else*/
+
+    /* Project perpendicular to a coordinate axis -- better numerically */
+
+    sUnit[i] = 0;
+    sUnit[(i + 1) % 3] = 1.0;
+    sUnit[(i + 2) % 3] = 0.0;
+    tUnit[i] = 0;
+    tUnit[(i + 1) % 3] = 0.0;
+    tUnit[(i + 2) % 3] = norm[i] > 0 ? 1.0 : -1.0; //	#endif
+
+    /* Project the vertices onto the sweep plane */
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      v.s = this.dot_(v.coords, sUnit);
+      v.t = this.dot_(v.coords, tUnit);
+    }
+
+    if (computedNormal) {
+      this.checkOrientation_();
+    }
+    /* Compute ST bounds. */
+
+
+    first = true;
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      if (first) {
+        this.bmin[0] = this.bmax[0] = v.s;
+        this.bmin[1] = this.bmax[1] = v.t;
+        first = false;
+      } else {
+        if (v.s < this.bmin[0]) this.bmin[0] = v.s;
+        if (v.s > this.bmax[0]) this.bmax[0] = v.s;
+        if (v.t < this.bmin[1]) this.bmin[1] = v.t;
+        if (v.t > this.bmax[1]) this.bmax[1] = v.t;
+      }
+    }
+  },
+  addWinding_: function (eDst, eSrc) {
+    eDst.winding += eSrc.winding;
+    eDst.Sym.winding += eSrc.Sym.winding;
+  },
+
+  /* tessMeshTessellateMonoRegion( face ) tessellates a monotone region
+  * (what else would it do??)  The region must consist of a single
+  * loop of half-edges (see mesh.h) oriented CCW.  "Monotone" in this
+  * case means that any vertical line intersects the interior of the
+  * region in a single interval.  
+  *
+  * Tessellation consists of adding interior edges (actually pairs of
+  * half-edges), to split the region into non-overlapping triangles.
+  *
+  * The basic idea is explained in Preparata and Shamos (which I don''t
+  * have handy right now), although their implementation is more
+  * complicated than this one.  The are two edge chains, an upper chain
+  * and a lower chain.  We process all vertices from both chains in order,
+  * from right to left.
+  *
+  * The algorithm ensures that the following invariant holds after each
+  * vertex is processed: the untessellated region consists of two
+  * chains, where one chain (say the upper) is a single edge, and
+  * the other chain is concave.  The left vertex of the single edge
+  * is always to the left of all vertices in the concave chain.
+  *
+  * Each step consists of adding the rightmost unprocessed vertex to one
+  * of the two chains, and forming a fan of triangles from the rightmost
+  * of two chain endpoints.  Determining whether we can add each triangle
+  * to the fan is a simple orientation test.  By making the fan as large
+  * as possible, we restore the invariant (check it yourself).
+  */
+  //	int tessMeshTessellateMonoRegion( TESSmesh *mesh, TESSface *face )
+  tessellateMonoRegion_: function (mesh, face) {
+    var up, lo;
+    /* All edges are oriented CCW around the boundary of the region.
+    * First, find the half-edge whose origin vertex is rightmost.
+    * Since the sweep goes from left to right, face->anEdge should
+    * be close to the edge we want.
+    */
+
+    up = face.anEdge;
+    assert(up.Lnext !== up && up.Lnext.Lnext !== up);
+
+    for (; Geom.vertLeq(up.Dst, up.Org); up = up.Lprev);
+
+    for (; Geom.vertLeq(up.Org, up.Dst); up = up.Lnext);
+
+    lo = up.Lprev;
+
+    while (up.Lnext !== lo) {
+      if (Geom.vertLeq(up.Dst, lo.Org)) {
+        /* up->Dst is on the left.  It is safe to form triangles from lo->Org.
+        * The EdgeGoesLeft test guarantees progress even when some triangles
+        * are CW, given that the upper and lower chains are truly monotone.
+        */
+        while (lo.Lnext !== up && (Geom.edgeGoesLeft(lo.Lnext) || Geom.edgeSign(lo.Org, lo.Dst, lo.Lnext.Dst) <= 0.0)) {
+          var tempHalfEdge = mesh.connect(lo.Lnext, lo); //if (tempHalfEdge == NULL) return 0;
+
+          lo = tempHalfEdge.Sym;
+        }
+
+        lo = lo.Lprev;
+      } else {
+        /* lo->Org is on the left.  We can make CCW triangles from up->Dst. */
+        while (lo.Lnext != up && (Geom.edgeGoesRight(up.Lprev) || Geom.edgeSign(up.Dst, up.Org, up.Lprev.Org) >= 0.0)) {
+          var tempHalfEdge = mesh.connect(up, up.Lprev); //if (tempHalfEdge == NULL) return 0;
+
+          up = tempHalfEdge.Sym;
+        }
+
+        up = up.Lnext;
+      }
+    }
+    /* Now lo->Org == up->Dst == the leftmost vertex.  The remaining region
+    * can be tessellated in a fan from this leftmost vertex.
+    */
+
+
+    assert(lo.Lnext !== up);
+
+    while (lo.Lnext.Lnext !== up) {
+      var tempHalfEdge = mesh.connect(lo.Lnext, lo); //if (tempHalfEdge == NULL) return 0;
+
+      lo = tempHalfEdge.Sym;
+    }
+
+    return true;
+  },
+
+  /* tessMeshTessellateInterior( mesh ) tessellates each region of
+  * the mesh which is marked "inside" the polygon.  Each such region
+  * must be monotone.
+  */
+  //int tessMeshTessellateInterior( TESSmesh *mesh )
+  tessellateInterior_: function (mesh) {
+    var f, next;
+    /*LINTED*/
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = next) {
+      /* Make sure we don''t try to tessellate the new triangles. */
+      next = f.next;
+
+      if (f.inside) {
+        if (!this.tessellateMonoRegion_(mesh, f)) return false;
+      }
+    }
+
+    return true;
+  },
+
+  /* tessMeshDiscardExterior( mesh ) zaps (ie. sets to NULL) all faces
+  * which are not marked "inside" the polygon.  Since further mesh operations
+  * on NULL faces are not allowed, the main purpose is to clean up the
+  * mesh so that exterior loops are not represented in the data structure.
+  */
+  //void tessMeshDiscardExterior( TESSmesh *mesh )
+  discardExterior_: function (mesh) {
+    var f, next;
+    /*LINTED*/
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = next) {
+      /* Since f will be destroyed, save its next pointer. */
+      next = f.next;
+
+      if (!f.inside) {
+        mesh.zapFace(f);
+      }
+    }
+  },
+
+  /* tessMeshSetWindingNumber( mesh, value, keepOnlyBoundary ) resets the
+  * winding numbers on all edges so that regions marked "inside" the
+  * polygon have a winding number of "value", and regions outside
+  * have a winding number of 0.
+  *
+  * If keepOnlyBoundary is TRUE, it also deletes all edges which do not
+  * separate an interior region from an exterior one.
+  */
+  //	int tessMeshSetWindingNumber( TESSmesh *mesh, int value, int keepOnlyBoundary )
+  setWindingNumber_: function (mesh, value, keepOnlyBoundary) {
+    var e, eNext;
+
+    for (e = mesh.eHead.next; e !== mesh.eHead; e = eNext) {
+      eNext = e.next;
+
+      if (e.Rface.inside !== e.Lface.inside) {
+        /* This is a boundary edge (one side is interior, one is exterior). */
+        e.winding = e.Lface.inside ? value : -value;
+      } else {
+        /* Both regions are interior, or both are exterior. */
+        if (!keepOnlyBoundary) {
+          e.winding = 0;
+        } else {
+          mesh.delete(e);
+        }
+      }
+    }
+  },
+  getNeighbourFace_: function (edge) {
+    if (!edge.Rface) return -1;
+    if (!edge.Rface.inside) return -1;
+    return edge.Rface.n;
+  },
+  outputPolymesh_: function (mesh, elementType, polySize, vertexSize) {
+    var v;
+    var f;
+    var edge;
+    var maxFaceCount = 0;
+    var maxVertexCount = 0;
+    var faceVerts, i;
+    var elements = 0;
+    var vert; // Assume that the input data is triangles now.
+    // Try to merge as many polygons as possible
+
+    if (polySize > 3) {
+      mesh.mergeConvexFaces(polySize);
+    } // Mark unused
+
+
+    for (v = mesh.vHead.next; v !== mesh.vHead; v = v.next) v.n = -1; // Create unique IDs for all vertices and faces.
+
+
+    for (f = mesh.fHead.next; f != mesh.fHead; f = f.next) {
+      f.n = -1;
+      if (!f.inside) continue;
+      edge = f.anEdge;
+      faceVerts = 0;
+
+      do {
+        v = edge.Org;
+
+        if (v.n === -1) {
+          v.n = maxVertexCount;
+          maxVertexCount++;
+        }
+
+        faceVerts++;
+        edge = edge.Lnext;
+      } while (edge !== f.anEdge);
+
+      assert(faceVerts <= polySize);
+      f.n = maxFaceCount;
+      ++maxFaceCount;
+    }
+
+    this.elementCount = maxFaceCount;
+    if (elementType == Tess2.CONNECTED_POLYGONS) maxFaceCount *= 2;
+    /*		tess.elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+    														  sizeof(TESSindex) * maxFaceCount * polySize );
+    		if (!tess->elements)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    this.elements = [];
+    this.elements.length = maxFaceCount * polySize;
+    this.vertexCount = maxVertexCount;
+    /*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
+    														 sizeof(TESSreal) * tess->vertexCount * vertexSize );
+    		if (!tess->vertices)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    this.vertices = [];
+    this.vertices.length = maxVertexCount * vertexSize;
+    /*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+    															    sizeof(TESSindex) * tess->vertexCount );
+    		if (!tess->vertexIndices)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    this.vertexIndices = [];
+    this.vertexIndices.length = maxVertexCount; // Output vertices.
+
+    for (v = mesh.vHead.next; v !== mesh.vHead; v = v.next) {
+      if (v.n != -1) {
+        // Store coordinate
+        var idx = v.n * vertexSize;
+        this.vertices[idx + 0] = v.coords[0];
+        this.vertices[idx + 1] = v.coords[1];
+        if (vertexSize > 2) this.vertices[idx + 2] = v.coords[2]; // Store vertex index.
+
+        this.vertexIndices[v.n] = v.idx;
+      }
+    } // Output indices.
+
+
+    var nel = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue; // Store polygon
+
+      edge = f.anEdge;
+      faceVerts = 0;
+
+      do {
+        v = edge.Org;
+        this.elements[nel++] = v.n;
+        faceVerts++;
+        edge = edge.Lnext;
+      } while (edge !== f.anEdge); // Fill unused.
+
+
+      for (i = faceVerts; i < polySize; ++i) this.elements[nel++] = -1; // Store polygon connectivity
+
+
+      if (elementType == Tess2.CONNECTED_POLYGONS) {
+        edge = f.anEdge;
+
+        do {
+          this.elements[nel++] = this.getNeighbourFace_(edge);
+          edge = edge.Lnext;
+        } while (edge !== f.anEdge); // Fill unused.
+
+
+        for (i = faceVerts; i < polySize; ++i) this.elements[nel++] = -1;
+      }
+    }
+  },
+  //	void OutputContours( TESStesselator *tess, TESSmesh *mesh, int vertexSize )
+  outputContours_: function (mesh, vertexSize) {
+    var f;
+    var edge;
+    var start;
+    var verts;
+    var elements;
+    var vertInds;
+    var startVert = 0;
+    var vertCount = 0;
+    this.vertexCount = 0;
+    this.elementCount = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue;
+      start = edge = f.anEdge;
+
+      do {
+        this.vertexCount++;
+        edge = edge.Lnext;
+      } while (edge !== start);
+
+      this.elementCount++;
+    }
+    /*		tess->elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+    														  sizeof(TESSindex) * tess->elementCount * 2 );
+    		if (!tess->elements)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+
+    this.elements = [];
+    this.elements.length = this.elementCount * 2;
+    /*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
+    														  sizeof(TESSreal) * tess->vertexCount * vertexSize );
+    		if (!tess->vertices)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    this.vertices = [];
+    this.vertices.length = this.vertexCount * vertexSize;
+    /*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+    															    sizeof(TESSindex) * tess->vertexCount );
+    		if (!tess->vertexIndices)
+    		{
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    this.vertexIndices = [];
+    this.vertexIndices.length = this.vertexCount;
+    var nv = 0;
+    var nvi = 0;
+    var nel = 0;
+    startVert = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue;
+      vertCount = 0;
+      start = edge = f.anEdge;
+
+      do {
+        this.vertices[nv++] = edge.Org.coords[0];
+        this.vertices[nv++] = edge.Org.coords[1];
+        if (vertexSize > 2) this.vertices[nv++] = edge.Org.coords[2];
+        this.vertexIndices[nvi++] = edge.Org.idx;
+        vertCount++;
+        edge = edge.Lnext;
+      } while (edge !== start);
+
+      this.elements[nel++] = startVert;
+      this.elements[nel++] = vertCount;
+      startVert += vertCount;
+    }
+  },
+  addContour: function (size, vertices) {
+    var e;
+    var i;
+    if (this.mesh === null) this.mesh = new TESSmesh();
+    /*	 	if ( tess->mesh == NULL ) {
+    			tess->outOfMemory = 1;
+    			return;
+    		}*/
+
+    if (size < 2) size = 2;
+    if (size > 3) size = 3;
+    e = null;
+
+    for (i = 0; i < vertices.length; i += size) {
+      if (e == null) {
+        /* Make a self-loop (one vertex, one edge). */
+        e = this.mesh.makeEdge();
+        /*				if ( e == NULL ) {
+        					tess->outOfMemory = 1;
+        					return;
+        				}*/
+
+        this.mesh.splice(e, e.Sym);
+      } else {
+        /* Create a new vertex and edge which immediately follow e
+        * in the ordering around the left face.
+        */
+        this.mesh.splitEdge(e);
+        e = e.Lnext;
+      }
+      /* The new vertex is now e->Org. */
+
+
+      e.Org.coords[0] = vertices[i + 0];
+      e.Org.coords[1] = vertices[i + 1];
+      if (size > 2) e.Org.coords[2] = vertices[i + 2];else e.Org.coords[2] = 0.0;
+      /* Store the insertion number so that the vertex can be later recognized. */
+
+      e.Org.idx = this.vertexIndexCounter++;
+      /* The winding of an edge says how the winding number changes as we
+      * cross from the edge''s right face to its left face.  We add the
+      * vertices in such an order that a CCW contour will add +1 to
+      * the winding number of the region inside the contour.
+      */
+
+      e.winding = 1;
+      e.Sym.winding = -1;
+    }
+  },
+  //	int tessTesselate( TESStesselator *tess, int windingRule, int elementType, int polySize, int vertexSize, const TESSreal* normal )
+  tesselate: function (windingRule, elementType, polySize, vertexSize, normal) {
+    this.vertices = [];
+    this.elements = [];
+    this.vertexIndices = [];
+    this.vertexIndexCounter = 0;
+
+    if (normal) {
+      this.normal[0] = normal[0];
+      this.normal[1] = normal[1];
+      this.normal[2] = normal[2];
+    }
+
+    this.windingRule = windingRule;
+    if (vertexSize < 2) vertexSize = 2;
+    if (vertexSize > 3) vertexSize = 3;
+    /*		if (setjmp(tess->env) != 0) { 
+    			// come back here if out of memory
+    			return 0;
+    		}*/
+
+    if (!this.mesh) {
+      return false;
+    }
+    /* Determine the polygon normal and project vertices onto the plane
+    * of the polygon.
+    */
+
+
+    this.projectPolygon_();
+    /* tessComputeInterior( tess ) computes the planar arrangement specified
+    * by the given contours, and further subdivides this arrangement
+    * into regions.  Each region is marked "inside" if it belongs
+    * to the polygon, according to the rule given by tess->windingRule.
+    * Each interior region is guaranteed be monotone.
+    */
+
+    Sweep.computeInterior(this);
+    var mesh = this.mesh;
+    /* If the user wants only the boundary contours, we throw away all edges
+    * except those which separate the interior from the exterior.
+    * Otherwise we tessellate all the regions marked "inside".
+    */
+
+    if (elementType == Tess2.BOUNDARY_CONTOURS) {
+      this.setWindingNumber_(mesh, 1, true);
+    } else {
+      this.tessellateInterior_(mesh);
+    } //		if (rc == 0) longjmp(tess->env,1);  /* could've used a label */
+
+
+    mesh.check();
+
+    if (elementType == Tess2.BOUNDARY_CONTOURS) {
+      this.outputContours_(mesh, vertexSize);
+      /* output contours */
+    } else {
+      this.outputPolymesh_(mesh, elementType, polySize, vertexSize);
+      /* output polygons */
+    } //			tess.mesh = null;
+
+
+    return true;
+  }
+};
 
 /***/ }),
 /* 69 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = extend
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = extend;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
 function extend() {
-    var target = {}
+  var target = {};
 
-    for (var i = 0; i < arguments.length; i++) {
-        var source = arguments[i]
+  for (var i = 0; i < arguments.length; i++) {
+    var source = arguments[i];
 
-        for (var key in source) {
-            if (hasOwnProperty.call(source, key)) {
-                target[key] = source[key]
-            }
-        }
+    for (var key in source) {
+      if (hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
     }
+  }
 
-    return target
+  return target;
 }
-
 
 /***/ }),
 /* 70 */
@@ -18674,12 +18909,12 @@ if (typeof global !== 'undefined' && typeof global.requestAnimationFrame === 'fu
 
 /***/ }),
 /* 76 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
+var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
 // don't break things.  But we need to wrap it in a try catch in case it is
 // wrapped in strict mode code which doesn't define any globals.  It's inside a
 // function because try/catches deoptimize in certain engines.
@@ -18688,153 +18923,171 @@ var cachedSetTimeout;
 var cachedClearTimeout;
 
 function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
+  throw new Error('setTimeout has not been defined');
 }
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
+
+function defaultClearTimeout() {
+  throw new Error('clearTimeout has not been defined');
 }
+
 (function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
+  try {
+    if (typeof setTimeout === 'function') {
+      cachedSetTimeout = setTimeout;
+    } else {
+      cachedSetTimeout = defaultSetTimout;
     }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
+  } catch (e) {
+    cachedSetTimeout = defaultSetTimout;
+  }
+
+  try {
+    if (typeof clearTimeout === 'function') {
+      cachedClearTimeout = clearTimeout;
+    } else {
+      cachedClearTimeout = defaultClearTimeout;
     }
-} ())
+  } catch (e) {
+    cachedClearTimeout = defaultClearTimeout;
+  }
+})();
+
 function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
+  if (cachedSetTimeout === setTimeout) {
+    //normal enviroments in sane situations
+    return setTimeout(fun, 0);
+  } // if setTimeout wasn't available but was latter defined
+
+
+  if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+    cachedSetTimeout = setTimeout;
+    return setTimeout(fun, 0);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedSetTimeout(fun, 0);
+  } catch (e) {
     try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
+      // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+      return cachedSetTimeout.call(null, fun, 0);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+      return cachedSetTimeout.call(this, fun, 0);
     }
-
-
+  }
 }
+
 function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
+  if (cachedClearTimeout === clearTimeout) {
+    //normal enviroments in sane situations
+    return clearTimeout(marker);
+  } // if clearTimeout wasn't available but was latter defined
+
+
+  if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+    cachedClearTimeout = clearTimeout;
+    return clearTimeout(marker);
+  }
+
+  try {
+    // when when somebody has screwed with setTimeout but no I.E. maddness
+    return cachedClearTimeout(marker);
+  } catch (e) {
     try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
+      // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+      return cachedClearTimeout.call(null, marker);
+    } catch (e) {
+      // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+      // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+      return cachedClearTimeout.call(this, marker);
     }
-
-
-
+  }
 }
+
 var queue = [];
 var draining = false;
 var currentQueue;
 var queueIndex = -1;
 
 function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
+  if (!draining || !currentQueue) {
+    return;
+  }
+
+  draining = false;
+
+  if (currentQueue.length) {
+    queue = currentQueue.concat(queue);
+  } else {
+    queueIndex = -1;
+  }
+
+  if (queue.length) {
+    drainQueue();
+  }
 }
 
 function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
+  if (draining) {
+    return;
+  }
 
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
+  var timeout = runTimeout(cleanUpNextTick);
+  draining = true;
+  var len = queue.length;
+
+  while (len) {
+    currentQueue = queue;
+    queue = [];
+
+    while (++queueIndex < len) {
+      if (currentQueue) {
+        currentQueue[queueIndex].run();
+      }
     }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
+
+    queueIndex = -1;
+    len = queue.length;
+  }
+
+  currentQueue = null;
+  draining = false;
+  runClearTimeout(timeout);
 }
 
 process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
+  var args = new Array(arguments.length - 1);
+
+  if (arguments.length > 1) {
+    for (var i = 1; i < arguments.length; i++) {
+      args[i - 1] = arguments[i];
     }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
+  }
+
+  queue.push(new Item(fun, args));
+
+  if (queue.length === 1 && !draining) {
+    runTimeout(drainQueue);
+  }
+}; // v8 likes predictible objects
+
+
+function Item(fun, array) {
+  this.fun = fun;
+  this.array = array;
+}
+
+Item.prototype.run = function () {
+  this.fun.apply(null, this.array);
 };
 
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
 process.title = 'browser';
 process.browser = true;
 process.env = {};
 process.argv = [];
 process.version = ''; // empty string to avoid regexp issues
+
 process.versions = {};
 
 function noop() {}
@@ -18849,18 +19102,25 @@ process.emit = noop;
 process.prependListener = noop;
 process.prependOnceListener = noop;
 
-process.listeners = function (name) { return [] }
+process.listeners = function (name) {
+  return [];
+};
 
 process.binding = function (name) {
-    throw new Error('process.binding is not supported');
+  throw new Error('process.binding is not supported');
 };
 
-process.cwd = function () { return '/' };
+process.cwd = function () {
+  return '/';
+};
+
 process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
+  throw new Error('process.chdir is not supported');
 };
-process.umask = function() { return 0; };
 
+process.umask = function () {
+  return 0;
+};
 
 /***/ }),
 /* 77 */
@@ -18880,7 +19140,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -18913,7 +19173,9 @@ const _shaderAttrs = Symbol('shaderAttrs');
 const _uniforms = Symbol('uniforms');
 
 class Node {
+  // 节点属性
   constructor(attrs = {}) {
+    // 节点的属性类
     this.attributes = new this.constructor.Attr(this);
     this[_resolution] = {
       width: 300,
@@ -18923,10 +19185,16 @@ class Node {
     //   Object.seal(this.attributes);
     // }
 
-    this[_animations] = new Set();
-    this[_eventListeners] = {};
+    this[_animations] = new Set(); // 初始化事件监听器容器
+
+    this[_eventListeners] = {}; // 捕获型
+
     this[_captureEventListeners] = {};
   }
+  /**
+   * 当前节点的祖先
+   */
+
 
   get ancestors() {
     let parent = this.parent;
@@ -19101,16 +19369,26 @@ class Node {
       }
     }
   }
+  /**
+   * 
+   * @param {*} type 事件类型
+   * @param {*} listener 监听器
+   * @param {*} options 选项
+   */
+
 
   addEventListener(type, listener, options = {}) {
+    // 捕获或者冒泡
     if (typeof options === 'boolean') options = {
       capture: options
     };
     const {
       capture,
       once
-    } = options;
-    const eventListeners = capture ? _captureEventListeners : _eventListeners;
+    } = options; // 不同类型的事件
+
+    const eventListeners = capture ? _captureEventListeners : _eventListeners; // Symbol值 是否存在这种事件的监听队列
+
     this[eventListeners][type] = this[eventListeners][type] || [];
     this[eventListeners][type].push({
       listener,
@@ -19135,9 +19413,15 @@ class Node {
 
     return animation;
   }
+  /**
+   * 给节点设置属性
+   * @param  {...any} args 参数对象
+   */
+
 
   attr(...args) {
-    if (args.length === 0) return this.attributes[attributes];
+    // 没有设置属性， 返回默认的
+    if (args.length === 0) return this.attributes[attributes]; // 多余1个属性
 
     if (args.length > 1) {
       let [key, value] = args;
@@ -19148,7 +19432,8 @@ class Node {
 
       this.setAttribute(key, value);
       return this;
-    }
+    } // 第一个值为字符串
+
 
     if (typeof args[0] === 'string') {
       return this.getAttribute(args[0]);
@@ -19483,6 +19768,12 @@ class Node {
 
     return false;
   }
+  /**
+   * 移除所有监听器
+   * @param {*} type 事件类型
+   * @param {*} options 
+   */
+
 
   removeAllListeners(type, options = {}) {
     if (typeof options === 'boolean') options = {
@@ -19492,15 +19783,28 @@ class Node {
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
 
     if (this[eventListeners][type]) {
+      // 清空
       this[eventListeners][type] = [];
     }
 
     return this;
   }
+  /**
+   * 移除html元素特性
+   * @param {*} key html元素特性
+   */
+
 
   removeAttribute(key) {
     this.setAttribute(key, null);
   }
+  /**
+   * 移除事件监听
+   * @param {*} type 事件类型
+   * @param {*} listener 监听器
+   * @param {*} options 选项
+   */
+
 
   removeEventListener(type, listener, options = {}) {
     if (typeof options === 'boolean') options = {
@@ -19510,9 +19814,11 @@ class Node {
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
 
     if (this[eventListeners][type]) {
+      // 某种事件的监听器集合
       const listeners = this[eventListeners][type];
 
       if (listeners) {
+        // 一个一个将监听器引用删除
         for (let i = 0; i < listeners.length; i++) {
           const {
             listener: _listener
@@ -20425,6 +20731,8 @@ class Animation extends sprite_animator__WEBPACK_IMPORTED_MODULE_0__["Animator"]
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -20444,7 +20752,11 @@ var _animator = __webpack_require__(197);
 
 var _animator2 = _interopRequireDefault(_animator);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 exports.Animator = _animator2.default;
 exports.Easings = _easing.Easings;
@@ -20457,6 +20769,8 @@ exports.Timeline = _spriteTimeline2.default;
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -20492,7 +20806,11 @@ var _symbol2 = _interopRequireDefault(_symbol);
 
 var _utils = __webpack_require__(193);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 var _nowtime = (0, _utils.createNowTime)();
 
@@ -20524,6 +20842,7 @@ var Timeline = function () {
     }
 
     var nowtime = options.nowtime || _nowtime;
+
     if (!parent) {
       var createTime = nowtime();
       Object.defineProperty(this, 'globalTime', {
@@ -20537,14 +20856,14 @@ var Timeline = function () {
           return parent.currentTime;
         }
       });
-    }
-
-    // timeMark records the reference points on timeline
+    } // timeMark records the reference points on timeline
     // Each time we change the playbackRate or currentTime or entropy
     // A new timeMark will be generated
     // timeMark sorted by entropy
     // If you reset entropy, all the timeMarks behind the new entropy
     // should be dropped
+
+
     this[_timeMark] = [{
       globalTime: this.globalTime,
       localTime: -options.originTime,
@@ -20580,6 +20899,7 @@ var Timeline = function () {
         playbackRate: playbackRate,
         globalEntropy: this.globalEntropy
       };
+
       this[_timeMark].push(timeMark);
     }
   }, {
@@ -20592,12 +20912,9 @@ var Timeline = function () {
     value: function seekGlobalTime(seekEntropy) {
       var idx = this.seekTimeMark(seekEntropy),
           timeMark = this[_timeMark][idx];
-
       var entropy = timeMark.entropy,
           playbackRate = timeMark.playbackRate,
           globalTime = timeMark.globalTime;
-
-
       return globalTime + (seekEntropy - entropy) / Math.abs(playbackRate);
     }
   }, {
@@ -20605,28 +20922,27 @@ var Timeline = function () {
     value: function seekLocalTime(seekEntropy) {
       var idx = this.seekTimeMark(seekEntropy),
           timeMark = this[_timeMark][idx];
-
       var localTime = timeMark.localTime,
           entropy = timeMark.entropy,
           playbackRate = timeMark.playbackRate;
 
-
       if (playbackRate > 0) {
         return localTime + (seekEntropy - entropy);
       }
+
       return localTime - (seekEntropy - entropy);
     }
   }, {
     key: 'seekTimeMark',
     value: function seekTimeMark(entropy) {
       var timeMark = this[_timeMark];
-
       var l = 0,
           r = timeMark.length - 1;
 
       if (entropy <= timeMark[l].entropy) {
         return l;
       }
+
       if (entropy >= timeMark[r].entropy) {
         return r;
       }
@@ -20636,11 +20952,14 @@ var Timeline = function () {
       while (m > l && m < r) {
         if (entropy === timeMark[m].entropy) {
           return m;
-        }if (entropy < timeMark[m].entropy) {
+        }
+
+        if (entropy < timeMark[m].entropy) {
           r = m;
         } else if (entropy > timeMark[m].entropy) {
           l = m;
         }
+
         m = Math.floor((l + r) / 2);
       }
 
@@ -20682,6 +21001,7 @@ var Timeline = function () {
           clearTimeout(timer.timerID);
         }
       }
+
       this[_timers].delete(id);
     })
   }, {
@@ -20692,14 +21012,14 @@ var Timeline = function () {
   }, {
     key: 'clear',
     value: function clear() {
-      var _this2 = this;
+      var _this2 = this; // clear all running timers
 
-      // clear all running timers
-      var timers = this[_timers];[].concat((0, _toConsumableArray3.default)(timers.keys())).forEach(function (id) {
+
+      var timers = this[_timers];
+      [].concat((0, _toConsumableArray3.default)(timers.keys())).forEach(function (id) {
         _this2.clearTimeout(id);
       });
     }
-
     /*
       setTimeout(func, {delay: 100, isEntropy: true})
       setTimeout(func, {entropy: 100})
@@ -20709,19 +21029,23 @@ var Timeline = function () {
   }, {
     key: 'setTimeout',
     value: function setTimeout(handler) {
-      var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { delay: 0 };
-
+      var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+        delay: 0
+      };
       return this[_setTimer](handler, time);
     }
   }, {
     key: 'setInterval',
     value: function setInterval(handler) {
-      var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : { delay: 0 };
-
+      var time = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+        delay: 0
+      };
       var that = this;
+
       var id = this[_setTimer](function step() {
         // reset timer before handler cause we may clearTimeout in handler()
         that[_setTimer](step, time, id);
+
         handler();
       }, time);
 
@@ -20733,10 +21057,10 @@ var Timeline = function () {
       var _this3 = this;
 
       var id = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : (0, _symbol2.default)('timerID');
-
       time = (0, _utils.formatDelay)(time);
 
       var timer = this[_timers].get(id);
+
       var delay = void 0,
           timerID = null,
           startTime = void 0,
@@ -20744,11 +21068,13 @@ var Timeline = function () {
 
       if (timer) {
         this.clearTimeout(id);
+
         if (time.isEntropy) {
           delay = (time.delay - (this.entropy - timer.startEntropy)) / Math.abs(this.playbackRate);
         } else {
           delay = (time.delay - (this.currentTime - timer.startTime)) / this.playbackRate;
         }
+
         startTime = timer.startTime;
         startEntropy = timer.startEntropy;
       } else {
@@ -20759,23 +21085,28 @@ var Timeline = function () {
 
       var parent = this[_parent],
           globalTimeout = parent ? parent.setTimeout.bind(parent) : setTimeout;
+      var heading = time.heading; // console.log(heading, parent, delay)
 
-      var heading = time.heading;
-      // console.log(heading, parent, delay)
       if (!parent && heading === false && delay < 0) {
         delay = Infinity;
-      }
-
-      // if playbackRate is zero, delay will be infinity.
+      } // if playbackRate is zero, delay will be infinity.
       // For wxapp bugs, cannot use Number.isFinite yet.
+
+
       if (isFinite(delay) || parent) {
         // eslint-disable-line no-restricted-globals
         delay = Math.ceil(delay);
+
         if (globalTimeout !== setTimeout) {
-          delay = { delay: delay, heading: heading };
+          delay = {
+            delay: delay,
+            heading: heading
+          };
         }
+
         timerID = globalTimeout(function () {
           _this3[_timers].delete(id);
+
           handler();
         }, delay);
       }
@@ -20806,7 +21137,6 @@ var Timeline = function () {
       var _lastTimeMark = this.lastTimeMark,
           localTime = _lastTimeMark.localTime,
           globalTime = _lastTimeMark.globalTime;
-
       return localTime + (this.globalTime - globalTime) * this.playbackRate;
     },
     set: function set(time) {
@@ -20815,13 +21145,16 @@ var Timeline = function () {
       var from = this.currentTime,
           to = time,
           timers = this[_timers];
-
-      this.markTime({ time: time });[].concat((0, _toConsumableArray3.default)(timers)).forEach(function (_ref4) {
+      this.markTime({
+        time: time
+      });
+      [].concat((0, _toConsumableArray3.default)(timers)).forEach(function (_ref4) {
         var _ref5 = (0, _slicedToArray3.default)(_ref4, 2),
             id = _ref5[0],
             timer = _ref5[1];
 
         if (!timers.has(id)) return; // Need check because it maybe clearTimeout by former handler().
+
         var _timer$time = timer.time,
             isEntropy = _timer$time.isEntropy,
             delay = _timer$time.delay,
@@ -20829,22 +21162,22 @@ var Timeline = function () {
             handler = timer.handler,
             startTime = timer.startTime;
 
-
         if (!isEntropy) {
           var endTime = startTime + delay;
+
           if (delay === 0 || heading !== false && (to - from) * delay <= 0 || from <= endTime && endTime <= to || from >= endTime && endTime >= to) {
             handler();
+
             _this4.clearTimeout(id);
           }
         } else if (delay === 0) {
           handler();
+
           _this4.clearTimeout(id);
         }
       });
       this.updateTimers();
-    }
-
-    // Both currentTime and entropy should be influenced by playbackRate.
+    } // Both currentTime and entropy should be influenced by playbackRate.
     // If current playbackRate is negative, the currentTime should go backwards
     // while the entropy remain to go forwards.
     // Both of the initial values is set to -originTime
@@ -20855,19 +21188,14 @@ var Timeline = function () {
       var _lastTimeMark2 = this.lastTimeMark,
           entropy = _lastTimeMark2.entropy,
           globalEntropy = _lastTimeMark2.globalEntropy;
-
       return entropy + Math.abs((this.globalEntropy - globalEntropy) * this.playbackRate);
     },
-
-
     // get globalTime() {
     //   if(this[_parent]) {
     //     return this[_parent].currentTime;
     //   }
-
     //   return nowtime();
     // }
-
     // change entropy will NOT cause currentTime changing but may influence the pass
     // and the future of the timeline. (It may change the result of seek***Time)
     // While entropy is set, all the marks behind will be droped
@@ -20876,7 +21204,10 @@ var Timeline = function () {
         var idx = this.seekTimeMark(entropy);
         this[_timeMark].length = idx + 1;
       }
-      this.markTime({ entropy: entropy });
+
+      this.markTime({
+        entropy: entropy
+      });
       this.updateTimers();
     }
   }, {
@@ -20891,7 +21222,9 @@ var Timeline = function () {
     },
     set: function set(rate) {
       if (rate !== this.playbackRate) {
-        this.markTime({ playbackRate: rate });
+        this.markTime({
+          playbackRate: rate
+        });
         this[_playbackRate] = rate;
         this.updateTimers();
       }
@@ -20901,10 +21234,12 @@ var Timeline = function () {
     get: function get() {
       if (this.playbackRate === 0) return true;
       var parent = this.parent;
+
       while (parent) {
         if (parent.playbackRate === 0) return true;
         parent = parent.parent;
       }
+
       return false;
     }
   }]);
@@ -20920,6 +21255,8 @@ exports.default = Timeline;
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 exports.__esModule = true;
 
 var _isIterable2 = __webpack_require__(84);
@@ -20930,7 +21267,11 @@ var _getIterator2 = __webpack_require__(136);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 exports.default = function () {
   function sliceIterator(arr, i) {
@@ -20974,32 +21315,42 @@ exports.default = function () {
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(85), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(85),
+  __esModule: true
+};
 
 /***/ }),
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(86);
-__webpack_require__(132);
-module.exports = __webpack_require__(134);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(86);
+
+__webpack_require__(132);
+
+module.exports = __webpack_require__(134);
 
 /***/ }),
 /* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 __webpack_require__(87);
+
 var global = __webpack_require__(98);
+
 var hide = __webpack_require__(102);
+
 var Iterators = __webpack_require__(90);
+
 var TO_STRING_TAG = __webpack_require__(129)('toStringTag');
 
-var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
-  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
-  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
-  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
-  'TextTrackList,TouchList').split(',');
+var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' + 'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' + 'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' + 'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' + 'TextTrackList,TouchList').split(',');
 
 for (var i = 0; i < DOMIterables.length; i++) {
   var NAME = DOMIterables[i];
@@ -21009,98 +21360,119 @@ for (var i = 0; i < DOMIterables.length; i++) {
   Iterators[NAME] = Iterators.Array;
 }
 
-
 /***/ }),
 /* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(88);
-var step = __webpack_require__(89);
-var Iterators = __webpack_require__(90);
-var toIObject = __webpack_require__(91);
 
-// 22.1.3.4 Array.prototype.entries()
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var addToUnscopables = __webpack_require__(88);
+
+var step = __webpack_require__(89);
+
+var Iterators = __webpack_require__(90);
+
+var toIObject = __webpack_require__(91); // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
+
+
 module.exports = __webpack_require__(95)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
-  this._i = 0;                   // next index
-  this._k = kind;                // kind
-// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+
+  this._i = 0; // next index
+
+  this._k = kind; // kind
+  // 22.1.5.2.1 %ArrayIteratorPrototype%.next()
 }, function () {
   var O = this._t;
   var kind = this._k;
   var index = this._i++;
+
   if (!O || index >= O.length) {
     this._t = undefined;
     return step(1);
   }
+
   if (kind == 'keys') return step(0, index);
   if (kind == 'values') return step(0, O[index]);
   return step(0, [index, O[index]]);
-}, 'values');
+}, 'values'); // argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
 
-// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
 Iterators.Arguments = Iterators.Array;
-
 addToUnscopables('keys');
 addToUnscopables('values');
 addToUnscopables('entries');
 
-
 /***/ }),
 /* 88 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function () { /* empty */ };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = function () {
+  /* empty */
+};
 
 /***/ }),
 /* 89 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (done, value) {
-  return { value: value, done: !!done };
+  return {
+    value: value,
+    done: !!done
+  };
 };
-
 
 /***/ }),
 /* 90 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = {};
-
 
 /***/ }),
 /* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = __webpack_require__(92);
+
 var defined = __webpack_require__(94);
+
 module.exports = function (it) {
   return IObject(defined(it));
 };
-
 
 /***/ }),
 /* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(93);
-// eslint-disable-next-line no-prototype-builtins
+var cof = __webpack_require__(93); // eslint-disable-next-line no-prototype-builtins
+
+
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
 
-
 /***/ }),
 /* 93 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var toString = {}.toString;
 
@@ -21108,10 +21480,11 @@ module.exports = function (it) {
   return toString.call(it).slice(8, -1);
 };
 
-
 /***/ }),
 /* 94 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // 7.2.1 RequireObjectCoercible(argument)
 module.exports = function (it) {
@@ -21119,38 +21492,66 @@ module.exports = function (it) {
   return it;
 };
 
-
 /***/ }),
 /* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var LIBRARY = __webpack_require__(96);
+
 var $export = __webpack_require__(97);
+
 var redefine = __webpack_require__(113);
+
 var hide = __webpack_require__(102);
+
 var Iterators = __webpack_require__(90);
+
 var $iterCreate = __webpack_require__(114);
+
 var setToStringTag = __webpack_require__(128);
+
 var getPrototypeOf = __webpack_require__(130);
+
 var ITERATOR = __webpack_require__(129)('iterator');
+
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+
 var FF_ITERATOR = '@@iterator';
 var KEYS = 'keys';
 var VALUES = 'values';
 
-var returnThis = function () { return this; };
+var returnThis = function () {
+  return this;
+};
 
 module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
   $iterCreate(Constructor, NAME, next);
+
   var getMethod = function (kind) {
     if (!BUGGY && kind in proto) return proto[kind];
+
     switch (kind) {
-      case KEYS: return function keys() { return new Constructor(this, kind); };
-      case VALUES: return function values() { return new Constructor(this, kind); };
-    } return function entries() { return new Constructor(this, kind); };
+      case KEYS:
+        return function keys() {
+          return new Constructor(this, kind);
+        };
+
+      case VALUES:
+        return function values() {
+          return new Constructor(this, kind);
+        };
+    }
+
+    return function entries() {
+      return new Constructor(this, kind);
+    };
   };
+
   var TAG = NAME + ' Iterator';
   var DEF_VALUES = DEFAULT == VALUES;
   var VALUES_BUG = false;
@@ -21159,29 +21560,37 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
   var $default = $native || getMethod(DEFAULT);
   var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
   var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
-  var methods, key, IteratorPrototype;
-  // Fix native
+  var methods, key, IteratorPrototype; // Fix native
+
   if ($anyNative) {
     IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+
     if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
       // Set @@toStringTag to native iterators
-      setToStringTag(IteratorPrototype, TAG, true);
-      // fix for some old engines
+      setToStringTag(IteratorPrototype, TAG, true); // fix for some old engines
+
       if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
     }
-  }
-  // fix Array#{values, @@iterator}.name in V8 / FF
+  } // fix Array#{values, @@iterator}.name in V8 / FF
+
+
   if (DEF_VALUES && $native && $native.name !== VALUES) {
     VALUES_BUG = true;
-    $default = function values() { return $native.call(this); };
-  }
-  // Define iterator
+
+    $default = function values() {
+      return $native.call(this);
+    };
+  } // Define iterator
+
+
   if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
     hide(proto, ITERATOR, $default);
-  }
-  // Plug for library
+  } // Plug for library
+
+
   Iterators[NAME] = $default;
   Iterators[TAG] = returnThis;
+
   if (DEFAULT) {
     methods = {
       values: DEF_VALUES ? $default : getMethod(VALUES),
@@ -21192,26 +21601,34 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
       if (!(key in proto)) redefine(proto, key, methods[key]);
     } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
   }
+
   return methods;
 };
 
-
 /***/ }),
 /* 96 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = true;
-
 
 /***/ }),
 /* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var core = __webpack_require__(99);
+
 var ctx = __webpack_require__(100);
+
 var hide = __webpack_require__(102);
+
 var has = __webpack_require__(112);
+
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -21226,113 +21643,147 @@ var $export = function (type, name, source) {
   var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
   var key, own, out;
   if (IS_GLOBAL) source = name;
+
   for (key in source) {
     // contains in native
     own = !IS_FORCED && target && target[key] !== undefined;
-    if (own && has(exports, key)) continue;
-    // export native or passed
-    out = own ? target[key] : source[key];
-    // prevent global pollution for namespaces
-    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
-    // bind timers to global for call from export context
-    : IS_BIND && own ? ctx(out, global)
-    // wrap global constructors for prevent change them in library
-    : IS_WRAP && target[key] == out ? (function (C) {
+    if (own && has(exports, key)) continue; // export native or passed
+
+    out = own ? target[key] : source[key]; // prevent global pollution for namespaces
+
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key] // bind timers to global for call from export context
+    : IS_BIND && own ? ctx(out, global) // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? function (C) {
       var F = function (a, b, c) {
         if (this instanceof C) {
           switch (arguments.length) {
-            case 0: return new C();
-            case 1: return new C(a);
-            case 2: return new C(a, b);
-          } return new C(a, b, c);
-        } return C.apply(this, arguments);
+            case 0:
+              return new C();
+
+            case 1:
+              return new C(a);
+
+            case 2:
+              return new C(a, b);
+          }
+
+          return new C(a, b, c);
+        }
+
+        return C.apply(this, arguments);
       };
+
       F[PROTOTYPE] = C[PROTOTYPE];
-      return F;
-    // make static versions for prototype methods
-    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
-    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+      return F; // make static versions for prototype methods
+    }(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out; // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+
     if (IS_PROTO) {
-      (exports.virtual || (exports.virtual = {}))[key] = out;
-      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      (exports.virtual || (exports.virtual = {}))[key] = out; // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+
       if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
     }
   }
-};
-// type bitmap
-$export.F = 1;   // forced
-$export.G = 2;   // global
-$export.S = 4;   // static
-$export.P = 8;   // proto
-$export.B = 16;  // bind
-$export.W = 32;  // wrap
-$export.U = 64;  // safe
-$export.R = 128; // real proto method for `library`
-module.exports = $export;
+}; // type bitmap
 
+
+$export.F = 1; // forced
+
+$export.G = 2; // global
+
+$export.S = 4; // static
+
+$export.P = 8; // proto
+
+$export.B = 16; // bind
+
+$export.W = 32; // wrap
+
+$export.U = 64; // safe
+
+$export.R = 128; // real proto method for `library`
+
+module.exports = $export;
 
 /***/ }),
 /* 98 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self
-  // eslint-disable-next-line no-new-func
-  : Function('return this')();
+var global = module.exports = typeof window != 'undefined' && window.Math == Math ? window : typeof self != 'undefined' && self.Math == Math ? self // eslint-disable-next-line no-new-func
+: Function('return this')();
 if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-
 
 /***/ }),
 /* 99 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var core = module.exports = { version: '2.6.11' };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var core = module.exports = {
+  version: '2.6.11'
+};
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
 
 /***/ }),
 /* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // optional / simple context binding
 var aFunction = __webpack_require__(101);
+
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
+
   switch (length) {
-    case 1: return function (a) {
-      return fn.call(that, a);
-    };
-    case 2: return function (a, b) {
-      return fn.call(that, a, b);
-    };
-    case 3: return function (a, b, c) {
-      return fn.call(that, a, b, c);
-    };
+    case 1:
+      return function (a) {
+        return fn.call(that, a);
+      };
+
+    case 2:
+      return function (a, b) {
+        return fn.call(that, a, b);
+      };
+
+    case 3:
+      return function (a, b, c) {
+        return fn.call(that, a, b, c);
+      };
   }
-  return function (/* ...args */) {
+
+  return function ()
+  /* ...args */
+  {
     return fn.apply(that, arguments);
   };
 };
 
-
 /***/ }),
 /* 101 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (it) {
   if (typeof it != 'function') throw TypeError(it + ' is not a function!');
   return it;
 };
 
-
 /***/ }),
 /* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var dP = __webpack_require__(103);
+
 var createDesc = __webpack_require__(111);
+
 module.exports = __webpack_require__(107) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
@@ -21340,71 +21791,90 @@ module.exports = __webpack_require__(107) ? function (object, key, value) {
   return object;
 };
 
-
 /***/ }),
 /* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(104);
-var IE8_DOM_DEFINE = __webpack_require__(106);
-var toPrimitive = __webpack_require__(110);
-var dP = Object.defineProperty;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var anObject = __webpack_require__(104);
+
+var IE8_DOM_DEFINE = __webpack_require__(106);
+
+var toPrimitive = __webpack_require__(110);
+
+var dP = Object.defineProperty;
 exports.f = __webpack_require__(107) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPrimitive(P, true);
   anObject(Attributes);
   if (IE8_DOM_DEFINE) try {
     return dP(O, P, Attributes);
-  } catch (e) { /* empty */ }
+  } catch (e) {
+    /* empty */
+  }
   if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
   if ('value' in Attributes) O[P] = Attributes.value;
   return O;
 };
 
-
 /***/ }),
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var isObject = __webpack_require__(105);
+
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
   return it;
 };
 
-
 /***/ }),
 /* 105 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (it) {
   return typeof it === 'object' ? it !== null : typeof it === 'function';
 };
 
-
 /***/ }),
 /* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(107) && !__webpack_require__(108)(function () {
-  return Object.defineProperty(__webpack_require__(109)('div'), 'a', { get: function () { return 7; } }).a != 7;
-});
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = !__webpack_require__(107) && !__webpack_require__(108)(function () {
+  return Object.defineProperty(__webpack_require__(109)('div'), 'a', {
+    get: function () {
+      return 7;
+    }
+  }).a != 7;
+});
 
 /***/ }),
 /* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // Thank's IE8 for his funny defineProperty
 module.exports = !__webpack_require__(108)(function () {
-  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+  return Object.defineProperty({}, 'a', {
+    get: function () {
+      return 7;
+    }
+  }).a != 7;
 });
-
 
 /***/ }),
 /* 108 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (exec) {
   try {
@@ -21414,28 +21884,34 @@ module.exports = function (exec) {
   }
 };
 
-
 /***/ }),
 /* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var isObject = __webpack_require__(105);
-var document = __webpack_require__(98).document;
-// typeof document.createElement is 'object' in old IE
+
+var document = __webpack_require__(98).document; // typeof document.createElement is 'object' in old IE
+
+
 var is = isObject(document) && isObject(document.createElement);
+
 module.exports = function (it) {
   return is ? document.createElement(it) : {};
 };
-
 
 /***/ }),
 /* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(105);
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+var isObject = __webpack_require__(105); // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
+
+
 module.exports = function (it, S) {
   if (!isObject(it)) return it;
   var fn, val;
@@ -21445,10 +21921,11 @@ module.exports = function (it, S) {
   throw TypeError("Can't convert object to primitive value");
 };
 
-
 /***/ }),
 /* 111 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (bitmap, value) {
   return {
@@ -21459,23 +21936,25 @@ module.exports = function (bitmap, value) {
   };
 };
 
-
 /***/ }),
 /* 112 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var hasOwnProperty = {}.hasOwnProperty;
+
 module.exports = function (it, key) {
   return hasOwnProperty.call(it, key);
 };
-
 
 /***/ }),
 /* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(102);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+module.exports = __webpack_require__(102);
 
 /***/ }),
 /* 114 */
@@ -21483,73 +21962,100 @@ module.exports = __webpack_require__(102);
 
 "use strict";
 
-var create = __webpack_require__(115);
-var descriptor = __webpack_require__(111);
-var setToStringTag = __webpack_require__(128);
-var IteratorPrototype = {};
 
-// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(102)(IteratorPrototype, __webpack_require__(129)('iterator'), function () { return this; });
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var create = __webpack_require__(115);
+
+var descriptor = __webpack_require__(111);
+
+var setToStringTag = __webpack_require__(128);
+
+var IteratorPrototype = {}; // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+
+__webpack_require__(102)(IteratorPrototype, __webpack_require__(129)('iterator'), function () {
+  return this;
+});
 
 module.exports = function (Constructor, NAME, next) {
-  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  Constructor.prototype = create(IteratorPrototype, {
+    next: descriptor(1, next)
+  });
   setToStringTag(Constructor, NAME + ' Iterator');
 };
-
 
 /***/ }),
 /* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(104);
-var dPs = __webpack_require__(116);
-var enumBugKeys = __webpack_require__(126);
-var IE_PROTO = __webpack_require__(123)('IE_PROTO');
-var Empty = function () { /* empty */ };
-var PROTOTYPE = 'prototype';
 
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var dPs = __webpack_require__(116);
+
+var enumBugKeys = __webpack_require__(126);
+
+var IE_PROTO = __webpack_require__(123)('IE_PROTO');
+
+var Empty = function () {
+  /* empty */
+};
+
+var PROTOTYPE = 'prototype'; // Create object with fake `null` prototype: use iframe Object with cleared prototype
+
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
   var iframe = __webpack_require__(109)('iframe');
+
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
+
   __webpack_require__(127).appendChild(iframe);
+
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
+
   iframeDocument = iframe.contentWindow.document;
   iframeDocument.open();
   iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
   iframeDocument.close();
   createDict = iframeDocument.F;
+
   while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+
   return createDict();
 };
 
 module.exports = Object.create || function create(O, Properties) {
   var result;
+
   if (O !== null) {
     Empty[PROTOTYPE] = anObject(O);
     result = new Empty();
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
+    Empty[PROTOTYPE] = null; // add "__proto__" for Object.getPrototypeOf polyfill
+
     result[IE_PROTO] = O;
   } else result = createDict();
+
   return Properties === undefined ? result : dPs(result, Properties);
 };
-
 
 /***/ }),
 /* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var dP = __webpack_require__(103);
+
 var anObject = __webpack_require__(104);
+
 var getKeys = __webpack_require__(117);
 
 module.exports = __webpack_require__(107) ? Object.defineProperties : function defineProperties(O, Properties) {
@@ -21558,31 +22064,39 @@ module.exports = __webpack_require__(107) ? Object.defineProperties : function d
   var length = keys.length;
   var i = 0;
   var P;
+
   while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+
   return O;
 };
-
 
 /***/ }),
 /* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys = __webpack_require__(118);
+
 var enumBugKeys = __webpack_require__(126);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
 };
 
-
 /***/ }),
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var has = __webpack_require__(112);
+
 var toIObject = __webpack_require__(91);
+
 var arrayIndexOf = __webpack_require__(119)(false);
+
 var IE_PROTO = __webpack_require__(123)('IE_PROTO');
 
 module.exports = function (object, names) {
@@ -21590,101 +22104,121 @@ module.exports = function (object, names) {
   var i = 0;
   var result = [];
   var key;
-  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
-  // Don't enum bug & hidden keys
+
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key); // Don't enum bug & hidden keys
+
+
   while (names.length > i) if (has(O, key = names[i++])) {
     ~arrayIndexOf(result, key) || result.push(key);
   }
+
   return result;
 };
-
 
 /***/ }),
 /* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(91);
+
 var toLength = __webpack_require__(120);
+
 var toAbsoluteIndex = __webpack_require__(122);
+
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
     var length = toLength(O.length);
     var index = toAbsoluteIndex(fromIndex, length);
-    var value;
-    // Array#includes uses SameValueZero equality algorithm
+    var value; // Array#includes uses SameValueZero equality algorithm
     // eslint-disable-next-line no-self-compare
+
     if (IS_INCLUDES && el != el) while (length > index) {
-      value = O[index++];
-      // eslint-disable-next-line no-self-compare
-      if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      value = O[index++]; // eslint-disable-next-line no-self-compare
+
+      if (value != value) return true; // Array#indexOf ignores holes, Array#includes - not
+    } else for (; length > index; index++) if (IS_INCLUDES || index in O) {
       if (O[index] === el) return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
+    }
+    return !IS_INCLUDES && -1;
   };
 };
-
 
 /***/ }),
 /* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 7.1.15 ToLength
 var toInteger = __webpack_require__(121);
+
 var min = Math.min;
+
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 };
 
-
 /***/ }),
 /* 121 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // 7.1.4 ToInteger
 var ceil = Math.ceil;
 var floor = Math.floor;
+
 module.exports = function (it) {
   return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 };
-
 
 /***/ }),
 /* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var toInteger = __webpack_require__(121);
+
 var max = Math.max;
 var min = Math.min;
+
 module.exports = function (index, length) {
   index = toInteger(index);
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
 
-
 /***/ }),
 /* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var shared = __webpack_require__(124)('keys');
+
 var uid = __webpack_require__(125);
+
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
-
 
 /***/ }),
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var core = __webpack_require__(99);
+
 var global = __webpack_require__(98);
+
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
-
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
@@ -21693,95 +22227,115 @@ var store = global[SHARED] || (global[SHARED] = {});
   copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
 });
 
-
 /***/ }),
 /* 125 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var id = 0;
 var px = Math.random();
+
 module.exports = function (key) {
   return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 };
 
-
 /***/ }),
 /* 126 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // IE 8- don't enum bug keys
-module.exports = (
-  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-).split(',');
-
+module.exports = 'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'.split(',');
 
 /***/ }),
 /* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(98).document;
-module.exports = document && document.documentElement;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var document = __webpack_require__(98).document;
+
+module.exports = document && document.documentElement;
 
 /***/ }),
 /* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var def = __webpack_require__(103).f;
+
 var has = __webpack_require__(112);
+
 var TAG = __webpack_require__(129)('toStringTag');
 
 module.exports = function (it, tag, stat) {
-  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, {
+    configurable: true,
+    value: tag
+  });
 };
-
 
 /***/ }),
 /* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var store = __webpack_require__(124)('wks');
+
 var uid = __webpack_require__(125);
+
 var Symbol = __webpack_require__(98).Symbol;
+
 var USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+  return store[name] || (store[name] = USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
 };
 
 $exports.store = store;
-
 
 /***/ }),
 /* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(112);
+
 var toObject = __webpack_require__(131);
+
 var IE_PROTO = __webpack_require__(123)('IE_PROTO');
+
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
   O = toObject(O);
   if (has(O, IE_PROTO)) return O[IE_PROTO];
+
   if (typeof O.constructor == 'function' && O instanceof O.constructor) {
     return O.constructor.prototype;
-  } return O instanceof Object ? ObjectProto : null;
-};
+  }
 
+  return O instanceof Object ? ObjectProto : null;
+};
 
 /***/ }),
 /* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 7.1.13 ToObject(argument)
 var defined = __webpack_require__(94);
+
 module.exports = function (it) {
   return Object(defined(it));
 };
-
 
 /***/ }),
 /* 132 */
@@ -21789,32 +22343,45 @@ module.exports = function (it) {
 
 "use strict";
 
-var $at = __webpack_require__(133)(true);
 
-// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var $at = __webpack_require__(133)(true); // 21.1.3.27 String.prototype[@@iterator]()
+
+
 __webpack_require__(95)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
-  this._i = 0;                // next index
-// 21.1.5.2.1 %StringIteratorPrototype%.next()
+
+  this._i = 0; // next index
+  // 21.1.5.2.1 %StringIteratorPrototype%.next()
 }, function () {
   var O = this._t;
   var index = this._i;
   var point;
-  if (index >= O.length) return { value: undefined, done: true };
+  if (index >= O.length) return {
+    value: undefined,
+    done: true
+  };
   point = $at(O, index);
   this._i += point.length;
-  return { value: point, done: false };
+  return {
+    value: point,
+    done: false
+  };
 });
-
 
 /***/ }),
 /* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var toInteger = __webpack_require__(121);
-var defined = __webpack_require__(94);
-// true  -> String#at
+
+var defined = __webpack_require__(94); // true  -> String#at
 // false -> String#codePointAt
+
+
 module.exports = function (TO_STRING) {
   return function (that, pos) {
     var s = String(defined(that));
@@ -21823,99 +22390,114 @@ module.exports = function (TO_STRING) {
     var a, b;
     if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
     a = s.charCodeAt(i);
-    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
-      ? TO_STRING ? s.charAt(i) : a
-      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff ? TO_STRING ? s.charAt(i) : a : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
   };
 };
-
 
 /***/ }),
 /* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var classof = __webpack_require__(135);
+
 var ITERATOR = __webpack_require__(129)('iterator');
+
 var Iterators = __webpack_require__(90);
+
 module.exports = __webpack_require__(99).isIterable = function (it) {
   var O = Object(it);
-  return O[ITERATOR] !== undefined
-    || '@@iterator' in O
-    // eslint-disable-next-line no-prototype-builtins
-    || Iterators.hasOwnProperty(classof(O));
+  return O[ITERATOR] !== undefined || '@@iterator' in O // eslint-disable-next-line no-prototype-builtins
+  || Iterators.hasOwnProperty(classof(O));
 };
-
 
 /***/ }),
 /* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // getting tag from 19.1.3.6 Object.prototype.toString()
 var cof = __webpack_require__(93);
-var TAG = __webpack_require__(129)('toStringTag');
-// ES3 wrong here
-var ARG = cof(function () { return arguments; }()) == 'Arguments';
 
-// fallback for IE11 Script Access Denied error
+var TAG = __webpack_require__(129)('toStringTag'); // ES3 wrong here
+
+
+var ARG = cof(function () {
+  return arguments;
+}()) == 'Arguments'; // fallback for IE11 Script Access Denied error
+
 var tryGet = function (it, key) {
   try {
     return it[key];
-  } catch (e) { /* empty */ }
+  } catch (e) {
+    /* empty */
+  }
 };
 
 module.exports = function (it) {
   var O, T, B;
-  return it === undefined ? 'Undefined' : it === null ? 'Null'
-    // @@toStringTag case
-    : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T
-    // builtinTag case
-    : ARG ? cof(O)
-    // ES3 arguments fallback
-    : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
+  return it === undefined ? 'Undefined' : it === null ? 'Null' // @@toStringTag case
+  : typeof (T = tryGet(O = Object(it), TAG)) == 'string' ? T // builtinTag case
+  : ARG ? cof(O) // ES3 arguments fallback
+  : (B = cof(O)) == 'Object' && typeof O.callee == 'function' ? 'Arguments' : B;
 };
-
 
 /***/ }),
 /* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(137), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(137),
+  __esModule: true
+};
 
 /***/ }),
 /* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(86);
-__webpack_require__(132);
-module.exports = __webpack_require__(138);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(86);
+
+__webpack_require__(132);
+
+module.exports = __webpack_require__(138);
 
 /***/ }),
 /* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var anObject = __webpack_require__(104);
+
 var get = __webpack_require__(139);
+
 module.exports = __webpack_require__(99).getIterator = function (it) {
   var iterFn = get(it);
   if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
   return anObject(iterFn.call(it));
 };
 
-
 /***/ }),
 /* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(135);
-var ITERATOR = __webpack_require__(129)('iterator');
-var Iterators = __webpack_require__(90);
-module.exports = __webpack_require__(99).getIteratorMethod = function (it) {
-  if (it != undefined) return it[ITERATOR]
-    || it['@@iterator']
-    || Iterators[classof(it)];
-};
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var classof = __webpack_require__(135);
+
+var ITERATOR = __webpack_require__(129)('iterator');
+
+var Iterators = __webpack_require__(90);
+
+module.exports = __webpack_require__(99).getIteratorMethod = function (it) {
+  if (it != undefined) return it[ITERATOR] || it['@@iterator'] || Iterators[classof(it)];
+};
 
 /***/ }),
 /* 140 */
@@ -21924,13 +22506,19 @@ module.exports = __webpack_require__(99).getIteratorMethod = function (it) {
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 exports.__esModule = true;
 
 var _from = __webpack_require__(141);
 
 var _from2 = _interopRequireDefault(_from);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 exports.default = function (arr) {
   if (Array.isArray(arr)) {
@@ -21948,16 +22536,24 @@ exports.default = function (arr) {
 /* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(142), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(142),
+  __esModule: true
+};
 
 /***/ }),
 /* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(132);
-__webpack_require__(143);
-module.exports = __webpack_require__(99).Array.from;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(132);
+
+__webpack_require__(143);
+
+module.exports = __webpack_require__(99).Array.from;
 
 /***/ }),
 /* 143 */
@@ -21965,18 +22561,32 @@ module.exports = __webpack_require__(99).Array.from;
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var ctx = __webpack_require__(100);
+
 var $export = __webpack_require__(97);
+
 var toObject = __webpack_require__(131);
+
 var call = __webpack_require__(144);
+
 var isArrayIter = __webpack_require__(145);
+
 var toLength = __webpack_require__(120);
+
 var createProperty = __webpack_require__(146);
+
 var getIterFn = __webpack_require__(139);
 
-$export($export.S + $export.F * !__webpack_require__(147)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(147)(function (iter) {
+  Array.from(iter);
+}), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
-  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
+  from: function from(arrayLike
+  /* , mapfn = undefined, thisArg = undefined */
+  ) {
     var O = toObject(arrayLike);
     var C = typeof this == 'function' ? this : Array;
     var aLen = arguments.length;
@@ -21985,34 +22595,37 @@ $export($export.S + $export.F * !__webpack_require__(147)(function (iter) { Arra
     var index = 0;
     var iterFn = getIterFn(O);
     var length, result, step, iterator;
-    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
-    // if object isn't iterable or it's array with default iterator - use simple case
+    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2); // if object isn't iterable or it's array with default iterator - use simple case
+
     if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
       for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
         createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
       }
     } else {
       length = toLength(O.length);
+
       for (result = new C(length); length > index; index++) {
         createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
       }
     }
+
     result.length = index;
     return result;
   }
 });
 
-
 /***/ }),
 /* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // call something on iterator step with safe closing on error
 var anObject = __webpack_require__(104);
+
 module.exports = function (iterator, fn, value, entries) {
   try {
-    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
-  // 7.4.6 IteratorClose(iterator, completion)
+    return entries ? fn(anObject(value)[0], value[1]) : fn(value); // 7.4.6 IteratorClose(iterator, completion)
   } catch (e) {
     var ret = iterator['return'];
     if (ret !== undefined) anObject(ret.call(iterator));
@@ -22020,20 +22633,22 @@ module.exports = function (iterator, fn, value, entries) {
   }
 };
 
-
 /***/ }),
 /* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // check on default Array iterator
 var Iterators = __webpack_require__(90);
+
 var ITERATOR = __webpack_require__(129)('iterator');
+
 var ArrayProto = Array.prototype;
 
 module.exports = function (it) {
   return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
 };
-
 
 /***/ }),
 /* 146 */
@@ -22041,62 +22656,100 @@ module.exports = function (it) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var $defineProperty = __webpack_require__(103);
+
 var createDesc = __webpack_require__(111);
 
 module.exports = function (object, index, value) {
-  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
-  else object[index] = value;
+  if (index in object) $defineProperty.f(object, index, createDesc(0, value));else object[index] = value;
 };
-
 
 /***/ }),
 /* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var ITERATOR = __webpack_require__(129)('iterator');
+
 var SAFE_CLOSING = false;
 
 try {
   var riter = [7][ITERATOR]();
-  riter['return'] = function () { SAFE_CLOSING = true; };
-  // eslint-disable-next-line no-throw-literal
-  Array.from(riter, function () { throw 2; });
-} catch (e) { /* empty */ }
+
+  riter['return'] = function () {
+    SAFE_CLOSING = true;
+  }; // eslint-disable-next-line no-throw-literal
+
+
+  Array.from(riter, function () {
+    throw 2;
+  });
+} catch (e) {
+  /* empty */
+}
 
 module.exports = function (exec, skipClosing) {
   if (!skipClosing && !SAFE_CLOSING) return false;
   var safe = false;
+
   try {
     var arr = [7];
     var iter = arr[ITERATOR]();
-    iter.next = function () { return { done: safe = true }; };
-    arr[ITERATOR] = function () { return iter; };
+
+    iter.next = function () {
+      return {
+        done: safe = true
+      };
+    };
+
+    arr[ITERATOR] = function () {
+      return iter;
+    };
+
     exec(arr);
-  } catch (e) { /* empty */ }
+  } catch (e) {
+    /* empty */
+  }
+
   return safe;
 };
-
 
 /***/ }),
 /* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(149), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(149),
+  __esModule: true
+};
 
 /***/ }),
 /* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(150);
-__webpack_require__(132);
-__webpack_require__(86);
-__webpack_require__(151);
-__webpack_require__(164);
-__webpack_require__(167);
-__webpack_require__(169);
-module.exports = __webpack_require__(99).Map;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(150);
+
+__webpack_require__(132);
+
+__webpack_require__(86);
+
+__webpack_require__(151);
+
+__webpack_require__(164);
+
+__webpack_require__(167);
+
+__webpack_require__(169);
+
+module.exports = __webpack_require__(99).Map;
 
 /***/ }),
 /* 150 */
@@ -22110,13 +22763,19 @@ module.exports = __webpack_require__(99).Map;
 
 "use strict";
 
-var strong = __webpack_require__(152);
-var validate = __webpack_require__(158);
-var MAP = 'Map';
 
-// 23.1 Map Objects
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var strong = __webpack_require__(152);
+
+var validate = __webpack_require__(158);
+
+var MAP = 'Map'; // 23.1 Map Objects
+
 module.exports = __webpack_require__(159)(MAP, function (get) {
-  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+  return function Map() {
+    return get(this, arguments.length > 0 ? arguments[0] : undefined);
+  };
 }, {
   // 23.1.3.6 Map.prototype.get(key)
   get: function get(key) {
@@ -22129,33 +22788,47 @@ module.exports = __webpack_require__(159)(MAP, function (get) {
   }
 }, strong, true);
 
-
 /***/ }),
 /* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var dP = __webpack_require__(103).f;
+
 var create = __webpack_require__(115);
+
 var redefineAll = __webpack_require__(153);
+
 var ctx = __webpack_require__(100);
+
 var anInstance = __webpack_require__(154);
+
 var forOf = __webpack_require__(155);
+
 var $iterDefine = __webpack_require__(95);
+
 var step = __webpack_require__(89);
+
 var setSpecies = __webpack_require__(156);
+
 var DESCRIPTORS = __webpack_require__(107);
+
 var fastKey = __webpack_require__(157).fastKey;
+
 var validate = __webpack_require__(158);
+
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function (that, key) {
   // fast case
   var index = fastKey(key);
   var entry;
-  if (index !== 'F') return that._i[index];
-  // frozen object case
+  if (index !== 'F') return that._i[index]; // frozen object case
+
   for (entry = that._f; entry; entry = entry.n) {
     if (entry.k == key) return entry;
   }
@@ -22165,11 +22838,16 @@ module.exports = {
   getConstructor: function (wrapper, NAME, IS_MAP, ADDER) {
     var C = wrapper(function (that, iterable) {
       anInstance(that, C, NAME, '_i');
-      that._t = NAME;         // collection type
+      that._t = NAME; // collection type
+
       that._i = create(null); // index
-      that._f = undefined;    // first entry
-      that._l = undefined;    // last entry
-      that[SIZE] = 0;         // size
+
+      that._f = undefined; // first entry
+
+      that._l = undefined; // last entry
+
+      that[SIZE] = 0; // size
+
       if (iterable != undefined) forOf(iterable, IS_MAP, that[ADDER], that);
     });
     redefineAll(C.prototype, {
@@ -22181,6 +22859,7 @@ module.exports = {
           if (entry.p) entry.p = entry.p.n = undefined;
           delete data[entry.i];
         }
+
         that._f = that._l = undefined;
         that[SIZE] = 0;
       },
@@ -22189,6 +22868,7 @@ module.exports = {
       'delete': function (key) {
         var that = validate(this, NAME);
         var entry = getEntry(that, key);
+
         if (entry) {
           var next = entry.n;
           var prev = entry.p;
@@ -22199,17 +22879,22 @@ module.exports = {
           if (that._f == entry) that._f = next;
           if (that._l == entry) that._l = prev;
           that[SIZE]--;
-        } return !!entry;
+        }
+
+        return !!entry;
       },
       // 23.2.3.6 Set.prototype.forEach(callbackfn, thisArg = undefined)
       // 23.1.3.5 Map.prototype.forEach(callbackfn, thisArg = undefined)
-      forEach: function forEach(callbackfn /* , that = undefined */) {
+      forEach: function forEach(callbackfn
+      /* , that = undefined */
+      ) {
         validate(this, NAME);
         var f = ctx(callbackfn, arguments.length > 1 ? arguments[1] : undefined, 3);
         var entry;
+
         while (entry = entry ? entry.n : this._f) {
-          f(entry.v, entry.k, this);
-          // revert to the last existing entry
+          f(entry.v, entry.k, this); // revert to the last existing entry
+
           while (entry && entry.r) entry = entry.p;
         }
       },
@@ -22228,26 +22913,33 @@ module.exports = {
   },
   def: function (that, key, value) {
     var entry = getEntry(that, key);
-    var prev, index;
-    // change existing entry
+    var prev, index; // change existing entry
+
     if (entry) {
-      entry.v = value;
-    // create new entry
+      entry.v = value; // create new entry
     } else {
       that._l = entry = {
-        i: index = fastKey(key, true), // <- index
-        k: key,                        // <- key
-        v: value,                      // <- value
-        p: prev = that._l,             // <- previous entry
-        n: undefined,                  // <- next entry
-        r: false                       // <- removed
+        i: index = fastKey(key, true),
+        // <- index
+        k: key,
+        // <- key
+        v: value,
+        // <- value
+        p: prev = that._l,
+        // <- previous entry
+        n: undefined,
+        // <- next entry
+        r: false // <- removed
+
       };
       if (!that._f) that._f = entry;
       if (prev) prev.n = entry;
-      that[SIZE]++;
-      // add to index
+      that[SIZE]++; // add to index
+
       if (index !== 'F') that._i[index] = entry;
-    } return that;
+    }
+
+    return that;
   },
   getEntry: getEntry,
   setStrong: function (C, NAME, IS_MAP) {
@@ -22255,75 +22947,94 @@ module.exports = {
     // 23.1.3.4, 23.1.3.8, 23.1.3.11, 23.1.3.12, 23.2.3.5, 23.2.3.8, 23.2.3.10, 23.2.3.11
     $iterDefine(C, NAME, function (iterated, kind) {
       this._t = validate(iterated, NAME); // target
-      this._k = kind;                     // kind
-      this._l = undefined;                // previous
+
+      this._k = kind; // kind
+
+      this._l = undefined; // previous
     }, function () {
       var that = this;
       var kind = that._k;
-      var entry = that._l;
-      // revert to the last existing entry
-      while (entry && entry.r) entry = entry.p;
-      // get next entry
+      var entry = that._l; // revert to the last existing entry
+
+      while (entry && entry.r) entry = entry.p; // get next entry
+
+
       if (!that._t || !(that._l = entry = entry ? entry.n : that._t._f)) {
         // or finish the iteration
         that._t = undefined;
         return step(1);
-      }
-      // return step by kind
+      } // return step by kind
+
+
       if (kind == 'keys') return step(0, entry.k);
       if (kind == 'values') return step(0, entry.v);
       return step(0, [entry.k, entry.v]);
-    }, IS_MAP ? 'entries' : 'values', !IS_MAP, true);
+    }, IS_MAP ? 'entries' : 'values', !IS_MAP, true); // add [@@species], 23.1.2.2, 23.2.2.2
 
-    // add [@@species], 23.1.2.2, 23.2.2.2
     setSpecies(NAME);
   }
 };
-
 
 /***/ }),
 /* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var hide = __webpack_require__(102);
+
 module.exports = function (target, src, safe) {
   for (var key in src) {
-    if (safe && target[key]) target[key] = src[key];
-    else hide(target, key, src[key]);
-  } return target;
-};
+    if (safe && target[key]) target[key] = src[key];else hide(target, key, src[key]);
+  }
 
+  return target;
+};
 
 /***/ }),
 /* 154 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (it, Constructor, name, forbiddenField) {
-  if (!(it instanceof Constructor) || (forbiddenField !== undefined && forbiddenField in it)) {
+  if (!(it instanceof Constructor) || forbiddenField !== undefined && forbiddenField in it) {
     throw TypeError(name + ': incorrect invocation!');
-  } return it;
-};
+  }
 
+  return it;
+};
 
 /***/ }),
 /* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var ctx = __webpack_require__(100);
+
 var call = __webpack_require__(144);
+
 var isArrayIter = __webpack_require__(145);
+
 var anObject = __webpack_require__(104);
+
 var toLength = __webpack_require__(120);
+
 var getIterFn = __webpack_require__(139);
+
 var BREAK = {};
 var RETURN = {};
+
 var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
-  var iterFn = ITERATOR ? function () { return iterable; } : getIterFn(iterable);
+  var iterFn = ITERATOR ? function () {
+    return iterable;
+  } : getIterFn(iterable);
   var f = ctx(fn, that, entries ? 2 : 1);
   var index = 0;
   var length, step, iterator, result;
-  if (typeof iterFn != 'function') throw TypeError(iterable + ' is not iterable!');
-  // fast case for arrays with default iterator
+  if (typeof iterFn != 'function') throw TypeError(iterable + ' is not iterable!'); // fast case for arrays with default iterator
+
   if (isArrayIter(iterFn)) for (length = toLength(iterable.length); length > index; index++) {
     result = entries ? f(anObject(step = iterable[index])[0], step[1]) : f(iterable[index]);
     if (result === BREAK || result === RETURN) return result;
@@ -22332,9 +23043,9 @@ var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) 
     if (result === BREAK || result === RETURN) return result;
   }
 };
+
 exports.BREAK = BREAK;
 exports.RETURN = RETURN;
-
 
 /***/ }),
 /* 156 */
@@ -22342,71 +23053,99 @@ exports.RETURN = RETURN;
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var core = __webpack_require__(99);
+
 var dP = __webpack_require__(103);
+
 var DESCRIPTORS = __webpack_require__(107);
+
 var SPECIES = __webpack_require__(129)('species');
 
 module.exports = function (KEY) {
   var C = typeof core[KEY] == 'function' ? core[KEY] : global[KEY];
   if (DESCRIPTORS && C && !C[SPECIES]) dP.f(C, SPECIES, {
     configurable: true,
-    get: function () { return this; }
+    get: function () {
+      return this;
+    }
   });
 };
-
 
 /***/ }),
 /* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var META = __webpack_require__(125)('meta');
+
 var isObject = __webpack_require__(105);
+
 var has = __webpack_require__(112);
+
 var setDesc = __webpack_require__(103).f;
+
 var id = 0;
+
 var isExtensible = Object.isExtensible || function () {
   return true;
 };
+
 var FREEZE = !__webpack_require__(108)(function () {
   return isExtensible(Object.preventExtensions({}));
 });
+
 var setMeta = function (it) {
-  setDesc(it, META, { value: {
-    i: 'O' + ++id, // object ID
-    w: {}          // weak collections IDs
-  } });
+  setDesc(it, META, {
+    value: {
+      i: 'O' + ++id,
+      // object ID
+      w: {} // weak collections IDs
+
+    }
+  });
 };
+
 var fastKey = function (it, create) {
   // return primitive with prefix
   if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+
   if (!has(it, META)) {
     // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return 'F';
-    // not necessary to add metadata
-    if (!create) return 'E';
-    // add missing metadata
-    setMeta(it);
-  // return object ID
-  } return it[META].i;
+    if (!isExtensible(it)) return 'F'; // not necessary to add metadata
+
+    if (!create) return 'E'; // add missing metadata
+
+    setMeta(it); // return object ID
+  }
+
+  return it[META].i;
 };
+
 var getWeak = function (it, create) {
   if (!has(it, META)) {
     // can't set metadata to uncaught frozen object
-    if (!isExtensible(it)) return true;
-    // not necessary to add metadata
-    if (!create) return false;
-    // add missing metadata
-    setMeta(it);
-  // return hash weak collections IDs
-  } return it[META].w;
-};
-// add metadata on freeze-family methods calling
+    if (!isExtensible(it)) return true; // not necessary to add metadata
+
+    if (!create) return false; // add missing metadata
+
+    setMeta(it); // return hash weak collections IDs
+  }
+
+  return it[META].w;
+}; // add metadata on freeze-family methods calling
+
+
 var onFreeze = function (it) {
   if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
   return it;
 };
+
 var meta = module.exports = {
   KEY: META,
   NEED: false,
@@ -22415,17 +23154,18 @@ var meta = module.exports = {
   onFreeze: onFreeze
 };
 
-
 /***/ }),
 /* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var isObject = __webpack_require__(105);
+
 module.exports = function (it, TYPE) {
   if (!isObject(it) || it._t !== TYPE) throw TypeError('Incompatible receiver, ' + TYPE + ' required!');
   return it;
 };
-
 
 /***/ }),
 /* 159 */
@@ -22433,18 +23173,33 @@ module.exports = function (it, TYPE) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var $export = __webpack_require__(97);
+
 var meta = __webpack_require__(157);
+
 var fails = __webpack_require__(108);
+
 var hide = __webpack_require__(102);
+
 var redefineAll = __webpack_require__(153);
+
 var forOf = __webpack_require__(155);
+
 var anInstance = __webpack_require__(154);
+
 var isObject = __webpack_require__(105);
+
 var setToStringTag = __webpack_require__(128);
+
 var dP = __webpack_require__(103).f;
+
 var each = __webpack_require__(160)(0);
+
 var DESCRIPTORS = __webpack_require__(107);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
@@ -22453,6 +23208,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
   var ADDER = IS_MAP ? 'set' : 'add';
   var proto = C && C.prototype;
   var O = {};
+
   if (!DESCRIPTORS || typeof C != 'function' || !(IS_WEAK || proto.forEach && !fails(function () {
     new C().entries().next();
   }))) {
@@ -22471,7 +23227,9 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
       if (KEY in proto && !(IS_WEAK && KEY == 'clear')) hide(C.prototype, KEY, function (a, b) {
         anInstance(this, C, KEY);
         if (!IS_ADDER && IS_WEAK && !isObject(a)) return KEY == 'get' ? undefined : false;
+
         var result = this._c[KEY](a === 0 ? 0 : a, b);
+
         return IS_ADDER ? this : result;
       });
     });
@@ -22483,19 +23241,17 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
   }
 
   setToStringTag(C, NAME);
-
   O[NAME] = C;
   $export($export.G + $export.W + $export.F, O);
-
   if (!IS_WEAK) common.setStrong(C, NAME, IS_MAP);
-
   return C;
 };
-
 
 /***/ }),
 /* 160 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // 0 -> Array#forEach
 // 1 -> Array#map
@@ -22505,10 +23261,15 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 // 5 -> Array#find
 // 6 -> Array#findIndex
 var ctx = __webpack_require__(100);
+
 var IObject = __webpack_require__(92);
+
 var toObject = __webpack_require__(131);
+
 var toLength = __webpack_require__(120);
+
 var asc = __webpack_require__(161);
+
 module.exports = function (TYPE, $create) {
   var IS_MAP = TYPE == 1;
   var IS_FILTER = TYPE == 2;
@@ -22525,27 +23286,42 @@ module.exports = function (TYPE, $create) {
     var index = 0;
     var result = IS_MAP ? create($this, length) : IS_FILTER ? create($this, 0) : undefined;
     var val, res;
-    for (;length > index; index++) if (NO_HOLES || index in self) {
+
+    for (; length > index; index++) if (NO_HOLES || index in self) {
       val = self[index];
       res = f(val, index, O);
+
       if (TYPE) {
-        if (IS_MAP) result[index] = res;   // map
+        if (IS_MAP) result[index] = res; // map
         else if (res) switch (TYPE) {
-          case 3: return true;             // some
-          case 5: return val;              // find
-          case 6: return index;            // findIndex
-          case 2: result.push(val);        // filter
-        } else if (IS_EVERY) return false; // every
+            case 3:
+              return true;
+            // some
+
+            case 5:
+              return val;
+            // find
+
+            case 6:
+              return index;
+            // findIndex
+
+            case 2:
+              result.push(val);
+            // filter
+          } else if (IS_EVERY) return false; // every
       }
     }
+
     return IS_FIND_INDEX ? -1 : IS_SOME || IS_EVERY ? IS_EVERY : result;
   };
 };
 
-
 /***/ }),
 /* 161 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
 var speciesConstructor = __webpack_require__(162);
@@ -22554,57 +23330,72 @@ module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
 };
 
-
 /***/ }),
 /* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var isObject = __webpack_require__(105);
+
 var isArray = __webpack_require__(163);
+
 var SPECIES = __webpack_require__(129)('species');
 
 module.exports = function (original) {
   var C;
+
   if (isArray(original)) {
-    C = original.constructor;
-    // cross-realm fallback
+    C = original.constructor; // cross-realm fallback
+
     if (typeof C == 'function' && (C === Array || isArray(C.prototype))) C = undefined;
+
     if (isObject(C)) {
       C = C[SPECIES];
       if (C === null) C = undefined;
     }
-  } return C === undefined ? Array : C;
-};
+  }
 
+  return C === undefined ? Array : C;
+};
 
 /***/ }),
 /* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 7.2.2 IsArray(argument)
 var cof = __webpack_require__(93);
+
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
-
 
 /***/ }),
 /* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var $export = __webpack_require__(97);
 
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(165)('Map') });
-
+$export($export.P + $export.R, 'Map', {
+  toJSON: __webpack_require__(165)('Map')
+});
 
 /***/ }),
 /* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
 var classof = __webpack_require__(135);
+
 var from = __webpack_require__(166);
+
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -22612,10 +23403,11 @@ module.exports = function (NAME) {
   };
 };
 
-
 /***/ }),
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var forOf = __webpack_require__(155);
 
@@ -22625,159 +23417,200 @@ module.exports = function (iter, ITERATOR) {
   return result;
 };
 
-
 /***/ }),
 /* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
 __webpack_require__(168)('Map');
-
 
 /***/ }),
 /* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // https://tc39.github.io/proposal-setmap-offrom/
 
-// https://tc39.github.io/proposal-setmap-offrom/
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var $export = __webpack_require__(97);
 
 module.exports = function (COLLECTION) {
-  $export($export.S, COLLECTION, { of: function of() {
-    var length = arguments.length;
-    var A = new Array(length);
-    while (length--) A[length] = arguments[length];
-    return new this(A);
-  } });
-};
+  $export($export.S, COLLECTION, {
+    of: function of() {
+      var length = arguments.length;
+      var A = new Array(length);
 
+      while (length--) A[length] = arguments[length];
+
+      return new this(A);
+    }
+  });
+};
 
 /***/ }),
 /* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
 __webpack_require__(170)('Map');
-
 
 /***/ }),
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // https://tc39.github.io/proposal-setmap-offrom/
 
-// https://tc39.github.io/proposal-setmap-offrom/
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var $export = __webpack_require__(97);
+
 var aFunction = __webpack_require__(101);
+
 var ctx = __webpack_require__(100);
+
 var forOf = __webpack_require__(155);
 
 module.exports = function (COLLECTION) {
-  $export($export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
-    var mapFn = arguments[1];
-    var mapping, A, n, cb;
-    aFunction(this);
-    mapping = mapFn !== undefined;
-    if (mapping) aFunction(mapFn);
-    if (source == undefined) return new this();
-    A = [];
-    if (mapping) {
-      n = 0;
-      cb = ctx(mapFn, arguments[2], 2);
-      forOf(source, false, function (nextItem) {
-        A.push(cb(nextItem, n++));
-      });
-    } else {
-      forOf(source, false, A.push, A);
-    }
-    return new this(A);
-  } });
-};
+  $export($export.S, COLLECTION, {
+    from: function from(source
+    /* , mapFn, thisArg */
+    ) {
+      var mapFn = arguments[1];
+      var mapping, A, n, cb;
+      aFunction(this);
+      mapping = mapFn !== undefined;
+      if (mapping) aFunction(mapFn);
+      if (source == undefined) return new this();
+      A = [];
 
+      if (mapping) {
+        n = 0;
+        cb = ctx(mapFn, arguments[2], 2);
+        forOf(source, false, function (nextItem) {
+          A.push(cb(nextItem, n++));
+        });
+      } else {
+        forOf(source, false, A.push, A);
+      }
+
+      return new this(A);
+    }
+  });
+};
 
 /***/ }),
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(172), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(172),
+  __esModule: true
+};
 
 /***/ }),
 /* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(173);
-module.exports = __webpack_require__(99).Object.assign;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(173);
+
+module.exports = __webpack_require__(99).Object.assign;
 
 /***/ }),
 /* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.3.1 Object.assign(target, source)
 var $export = __webpack_require__(97);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(174) });
-
+$export($export.S + $export.F, 'Object', {
+  assign: __webpack_require__(174)
+});
 
 /***/ }),
 /* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // 19.1.2.1 Object.assign(target, source, ...)
 
-// 19.1.2.1 Object.assign(target, source, ...)
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var DESCRIPTORS = __webpack_require__(107);
-var getKeys = __webpack_require__(117);
-var gOPS = __webpack_require__(175);
-var pIE = __webpack_require__(176);
-var toObject = __webpack_require__(131);
-var IObject = __webpack_require__(92);
-var $assign = Object.assign;
 
-// should work with symbols and should have deterministic property order (V8 bug)
+var getKeys = __webpack_require__(117);
+
+var gOPS = __webpack_require__(175);
+
+var pIE = __webpack_require__(176);
+
+var toObject = __webpack_require__(131);
+
+var IObject = __webpack_require__(92);
+
+var $assign = Object.assign; // should work with symbols and should have deterministic property order (V8 bug)
+
 module.exports = !$assign || __webpack_require__(108)(function () {
   var A = {};
-  var B = {};
-  // eslint-disable-next-line no-undef
+  var B = {}; // eslint-disable-next-line no-undef
+
   var S = Symbol();
   var K = 'abcdefghijklmnopqrst';
   A[S] = 7;
-  K.split('').forEach(function (k) { B[k] = k; });
+  K.split('').forEach(function (k) {
+    B[k] = k;
+  });
   return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+}) ? function assign(target, source) {
+  // eslint-disable-line no-unused-vars
   var T = toObject(target);
   var aLen = arguments.length;
   var index = 1;
   var getSymbols = gOPS.f;
   var isEnum = pIE.f;
+
   while (aLen > index) {
     var S = IObject(arguments[index++]);
     var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
     var length = keys.length;
     var j = 0;
     var key;
+
     while (length > j) {
       key = keys[j++];
       if (!DESCRIPTORS || isEnum.call(S, key)) T[key] = S[key];
     }
-  } return T;
-} : $assign;
+  }
 
+  return T;
+} : $assign;
 
 /***/ }),
 /* 175 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 exports.f = Object.getOwnPropertySymbols;
 
-
 /***/ }),
 /* 176 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 exports.f = {}.propertyIsEnumerable;
-
 
 /***/ }),
 /* 177 */
@@ -22785,6 +23618,8 @@ exports.f = {}.propertyIsEnumerable;
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 exports.__esModule = true;
 
@@ -22801,13 +23636,19 @@ exports.default = function (instance, Constructor) {
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 exports.__esModule = true;
 
 var _defineProperty = __webpack_require__(179);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 exports.default = function () {
   function defineProperties(target, props) {
@@ -22831,85 +23672,138 @@ exports.default = function () {
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(180), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(180),
+  __esModule: true
+};
 
 /***/ }),
 /* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 __webpack_require__(181);
+
 var $Object = __webpack_require__(99).Object;
+
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
-
 
 /***/ }),
 /* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(97);
-// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(107), 'Object', { defineProperty: __webpack_require__(103).f });
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var $export = __webpack_require__(97); // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+
+
+$export($export.S + $export.F * !__webpack_require__(107), 'Object', {
+  defineProperty: __webpack_require__(103).f
+});
 
 /***/ }),
 /* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(183), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(183),
+  __esModule: true
+};
 
 /***/ }),
 /* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(184);
-__webpack_require__(150);
-__webpack_require__(191);
-__webpack_require__(192);
-module.exports = __webpack_require__(99).Symbol;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(184);
+
+__webpack_require__(150);
+
+__webpack_require__(191);
+
+__webpack_require__(192);
+
+module.exports = __webpack_require__(99).Symbol;
 
 /***/ }),
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // ECMAScript 6 symbols shim
 
-// ECMAScript 6 symbols shim
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var has = __webpack_require__(112);
+
 var DESCRIPTORS = __webpack_require__(107);
+
 var $export = __webpack_require__(97);
+
 var redefine = __webpack_require__(113);
+
 var META = __webpack_require__(157).KEY;
+
 var $fails = __webpack_require__(108);
+
 var shared = __webpack_require__(124);
+
 var setToStringTag = __webpack_require__(128);
+
 var uid = __webpack_require__(125);
+
 var wks = __webpack_require__(129);
+
 var wksExt = __webpack_require__(185);
+
 var wksDefine = __webpack_require__(186);
+
 var enumKeys = __webpack_require__(187);
+
 var isArray = __webpack_require__(163);
+
 var anObject = __webpack_require__(104);
+
 var isObject = __webpack_require__(105);
+
 var toObject = __webpack_require__(131);
+
 var toIObject = __webpack_require__(91);
+
 var toPrimitive = __webpack_require__(110);
+
 var createDesc = __webpack_require__(111);
+
 var _create = __webpack_require__(115);
+
 var gOPNExt = __webpack_require__(188);
+
 var $GOPD = __webpack_require__(190);
+
 var $GOPS = __webpack_require__(175);
+
 var $DP = __webpack_require__(103);
+
 var $keys = __webpack_require__(117);
+
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
 var $Symbol = global.Symbol;
 var $JSON = global.JSON;
+
 var _stringify = $JSON && $JSON.stringify;
+
 var PROTOTYPE = 'prototype';
 var HIDDEN = wks('_hidden');
 var TO_PRIMITIVE = wks('toPrimitive');
@@ -22919,14 +23813,17 @@ var AllSymbols = shared('symbols');
 var OPSymbols = shared('op-symbols');
 var ObjectProto = Object[PROTOTYPE];
 var USE_NATIVE = typeof $Symbol == 'function' && !!$GOPS.f;
-var QObject = global.QObject;
-// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
-var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+var QObject = global.QObject; // Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
 
-// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild; // fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+
 var setSymbolDesc = DESCRIPTORS && $fails(function () {
   return _create(dP({}, 'a', {
-    get: function () { return dP(this, 'a', { value: 7 }).a; }
+    get: function () {
+      return dP(this, 'a', {
+        value: 7
+      }).a;
+    }
   })).a != 7;
 }) ? function (it, key, D) {
   var protoDesc = gOPD(ObjectProto, key);
@@ -22937,6 +23834,7 @@ var setSymbolDesc = DESCRIPTORS && $fails(function () {
 
 var wrap = function (tag) {
   var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
+
   sym._k = tag;
   return sym;
 };
@@ -22952,33 +23850,46 @@ var $defineProperty = function defineProperty(it, key, D) {
   anObject(it);
   key = toPrimitive(key, true);
   anObject(D);
+
   if (has(AllSymbols, key)) {
     if (!D.enumerable) {
       if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));
       it[HIDDEN][key] = true;
     } else {
       if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;
-      D = _create(D, { enumerable: createDesc(0, false) });
-    } return setSymbolDesc(it, key, D);
-  } return dP(it, key, D);
+      D = _create(D, {
+        enumerable: createDesc(0, false)
+      });
+    }
+
+    return setSymbolDesc(it, key, D);
+  }
+
+  return dP(it, key, D);
 };
+
 var $defineProperties = function defineProperties(it, P) {
   anObject(it);
   var keys = enumKeys(P = toIObject(P));
   var i = 0;
   var l = keys.length;
   var key;
+
   while (l > i) $defineProperty(it, key = keys[i++], P[key]);
+
   return it;
 };
+
 var $create = function create(it, P) {
   return P === undefined ? _create(it) : $defineProperties(_create(it), P);
 };
+
 var $propertyIsEnumerable = function propertyIsEnumerable(key) {
   var E = isEnum.call(this, key = toPrimitive(key, true));
   if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;
   return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
 };
+
 var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
   it = toIObject(it);
   key = toPrimitive(key, true);
@@ -22987,43 +23898,56 @@ var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
   if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;
   return D;
 };
+
 var $getOwnPropertyNames = function getOwnPropertyNames(it) {
   var names = gOPN(toIObject(it));
   var result = [];
   var i = 0;
   var key;
+
   while (names.length > i) {
     if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);
-  } return result;
+  }
+
+  return result;
 };
+
 var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
   var IS_OP = it === ObjectProto;
   var names = gOPN(IS_OP ? OPSymbols : toIObject(it));
   var result = [];
   var i = 0;
   var key;
+
   while (names.length > i) {
     if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);
-  } return result;
-};
+  }
 
-// 19.4.1.1 Symbol([description])
+  return result;
+}; // 19.4.1.1 Symbol([description])
+
+
 if (!USE_NATIVE) {
   $Symbol = function Symbol() {
     if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');
     var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
+
     var $set = function (value) {
       if (this === ObjectProto) $set.call(OPSymbols, value);
       if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;
       setSymbolDesc(this, tag, createDesc(1, value));
     };
-    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });
+
+    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, {
+      configurable: true,
+      set: $set
+    });
     return wrap(tag);
   };
+
   redefine($Symbol[PROTOTYPE], 'toString', function toString() {
     return this._k;
   });
-
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
   __webpack_require__(189).f = gOPNExt.f = $getOwnPropertyNames;
@@ -23039,31 +23963,33 @@ if (!USE_NATIVE) {
   };
 }
 
-$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
+$export($export.G + $export.W + $export.F * !USE_NATIVE, {
+  Symbol: $Symbol
+});
 
-for (var es6Symbols = (
-  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
-  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
-).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);
+for (var es6Symbols = // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'.split(','), j = 0; es6Symbols.length > j;) wks(es6Symbols[j++]);
 
 for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);
 
 $export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
   // 19.4.2.1 Symbol.for(key)
   'for': function (key) {
-    return has(SymbolRegistry, key += '')
-      ? SymbolRegistry[key]
-      : SymbolRegistry[key] = $Symbol(key);
+    return has(SymbolRegistry, key += '') ? SymbolRegistry[key] : SymbolRegistry[key] = $Symbol(key);
   },
   // 19.4.2.5 Symbol.keyFor(sym)
   keyFor: function keyFor(sym) {
     if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');
+
     for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;
   },
-  useSetter: function () { setter = true; },
-  useSimple: function () { setter = false; }
+  useSetter: function () {
+    setter = true;
+  },
+  useSimple: function () {
+    setter = false;
+  }
 });
-
 $export($export.S + $export.F * !USE_NATIVE, 'Object', {
   // 19.1.2.2 Object.create(O [, Properties])
   create: $create,
@@ -23077,33 +24003,37 @@ $export($export.S + $export.F * !USE_NATIVE, 'Object', {
   getOwnPropertyNames: $getOwnPropertyNames,
   // 19.1.2.8 Object.getOwnPropertySymbols(O)
   getOwnPropertySymbols: $getOwnPropertySymbols
-});
-
-// Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives
+}); // Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives
 // https://bugs.chromium.org/p/v8/issues/detail?id=3443
-var FAILS_ON_PRIMITIVES = $fails(function () { $GOPS.f(1); });
 
+var FAILS_ON_PRIMITIVES = $fails(function () {
+  $GOPS.f(1);
+});
 $export($export.S + $export.F * FAILS_ON_PRIMITIVES, 'Object', {
   getOwnPropertySymbols: function getOwnPropertySymbols(it) {
     return $GOPS.f(toObject(it));
   }
-});
+}); // 24.3.2 JSON.stringify(value [, replacer [, space]])
 
-// 24.3.2 JSON.stringify(value [, replacer [, space]])
 $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
-  var S = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
+  var S = $Symbol(); // MS Edge converts symbol values to JSON as {}
   // WebKit converts symbol values to JSON as null
   // V8 throws on boxed symbols
-  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
+
+  return _stringify([S]) != '[null]' || _stringify({
+    a: S
+  }) != '{}' || _stringify(Object(S)) != '{}';
 })), 'JSON', {
   stringify: function stringify(it) {
     var args = [it];
     var i = 1;
     var replacer, $replacer;
+
     while (arguments.length > i) args.push(arguments[i++]);
+
     $replacer = replacer = args[1];
     if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
+
     if (!isArray(replacer)) replacer = function (key, value) {
       if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
       if (!isSymbol(value)) return value;
@@ -23111,72 +24041,89 @@ $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
     args[1] = replacer;
     return _stringify.apply($JSON, args);
   }
-});
+}); // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
 
-// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(102)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
-// 19.4.3.5 Symbol.prototype[@@toStringTag]
-setToStringTag($Symbol, 'Symbol');
-// 20.2.1.9 Math[@@toStringTag]
-setToStringTag(Math, 'Math', true);
-// 24.3.3 JSON[@@toStringTag]
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(102)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf); // 19.4.3.5 Symbol.prototype[@@toStringTag]
+
+setToStringTag($Symbol, 'Symbol'); // 20.2.1.9 Math[@@toStringTag]
+
+setToStringTag(Math, 'Math', true); // 24.3.3 JSON[@@toStringTag]
+
 setToStringTag(global.JSON, 'JSON', true);
-
 
 /***/ }),
 /* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(129);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+exports.f = __webpack_require__(129);
 
 /***/ }),
 /* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var core = __webpack_require__(99);
+
 var LIBRARY = __webpack_require__(96);
+
 var wksExt = __webpack_require__(185);
+
 var defineProperty = __webpack_require__(103).f;
+
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
-  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
+  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, {
+    value: wksExt.f(name)
+  });
 };
-
 
 /***/ }),
 /* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(117);
+
 var gOPS = __webpack_require__(175);
+
 var pIE = __webpack_require__(176);
+
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
+
   if (getSymbols) {
     var symbols = getSymbols(it);
     var isEnum = pIE.f;
     var i = 0;
     var key;
-    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
-  } return result;
-};
 
+    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
+  }
+
+  return result;
+};
 
 /***/ }),
 /* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(91);
-var gOPN = __webpack_require__(189).f;
-var toString = {}.toString;
 
-var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
-  ? Object.getOwnPropertyNames(window) : [];
+var gOPN = __webpack_require__(189).f;
+
+var toString = {}.toString;
+var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : [];
 
 var getWindowNames = function (it) {
   try {
@@ -23190,55 +24137,66 @@ module.exports.f = function getOwnPropertyNames(it) {
   return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
 };
 
-
 /***/ }),
 /* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys = __webpack_require__(118);
+
 var hiddenKeys = __webpack_require__(126).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
 };
 
-
 /***/ }),
 /* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(176);
-var createDesc = __webpack_require__(111);
-var toIObject = __webpack_require__(91);
-var toPrimitive = __webpack_require__(110);
-var has = __webpack_require__(112);
-var IE8_DOM_DEFINE = __webpack_require__(106);
-var gOPD = Object.getOwnPropertyDescriptor;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var pIE = __webpack_require__(176);
+
+var createDesc = __webpack_require__(111);
+
+var toIObject = __webpack_require__(91);
+
+var toPrimitive = __webpack_require__(110);
+
+var has = __webpack_require__(112);
+
+var IE8_DOM_DEFINE = __webpack_require__(106);
+
+var gOPD = Object.getOwnPropertyDescriptor;
 exports.f = __webpack_require__(107) ? gOPD : function getOwnPropertyDescriptor(O, P) {
   O = toIObject(O);
   P = toPrimitive(P, true);
   if (IE8_DOM_DEFINE) try {
     return gOPD(O, P);
-  } catch (e) { /* empty */ }
+  } catch (e) {
+    /* empty */
+  }
   if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
 };
-
 
 /***/ }),
 /* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(186)('asyncIterator');
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(186)('asyncIterator');
 
 /***/ }),
 /* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(186)('observable');
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(186)('observable');
 
 /***/ }),
 /* 193 */
@@ -23247,15 +24205,18 @@ __webpack_require__(186)('observable');
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createNowTime = createNowTime;
 exports.formatDelay = formatDelay;
+
 function createNowTime() {
   var syncLocker = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
-
   var nowtime = null;
+
   if (Date.now) {
     nowtime = Date.now;
   } else {
@@ -23266,17 +24227,24 @@ function createNowTime() {
 
   return nowtime;
 }
-
 /*
   delay = 100 -> delay = {delay: 100}
   delay = {entropy: 100} -> delay = {delay: 100, isEntropy: true}
  */
+
+
 function formatDelay(delay) {
   if (typeof delay === 'number') {
-    delay = { delay: delay };
+    delay = {
+      delay: delay
+    };
   } else if ('entropy' in delay) {
-    delay = { delay: delay.entropy, isEntropy: true };
+    delay = {
+      delay: delay.entropy,
+      isEntropy: true
+    };
   }
+
   return delay;
 }
 
@@ -23286,6 +24254,8 @@ function formatDelay(delay) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -23300,6 +24270,7 @@ exports.default = {
     if (p - s > e - p) {
       return to;
     }
+
     return from;
   }
 };
@@ -23310,6 +24281,8 @@ exports.default = {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -23328,9 +24301,14 @@ var _map = __webpack_require__(148);
 
 var _map2 = _interopRequireDefault(_map);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 var BezierEasing = __webpack_require__(196);
+
 var bezierFuncCache = new _map2.default();
 
 function getBezierEasing() {
@@ -23339,9 +24317,11 @@ function getBezierEasing() {
   }
 
   var easing = bezierFuncCache.get(value);
+
   if (easing) {
     return easing;
   }
+
   easing = BezierEasing.apply(undefined, value);
   bezierFuncCache.set(value, easing);
   return easing;
@@ -23349,7 +24329,6 @@ function getBezierEasing() {
 
 function getStepsEasing(step) {
   var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'end';
-
   return function (p, frames) {
     for (var i = 1; i < frames.length; i++) {
       var offset = frames[i].offset;
@@ -23359,8 +24338,8 @@ function getStepsEasing(step) {
             end = offset;
         var fp = (p - start) / (end - start),
             d = 1 / step;
-
         var t = fp / d;
+
         if (pos === 'end') {
           t = Math.floor(t);
         } else {
@@ -23370,6 +24349,7 @@ function getStepsEasing(step) {
         return d * t * (end - start) + start;
       }
     }
+
     return 0;
   };
 }
@@ -23391,6 +24371,7 @@ function parseEasingStr(easingStr) {
 
   if (matched) {
     var _value = matched[1].trim();
+
     _value = _value.split(',').map(function (v) {
       return v.trim();
     });
@@ -23402,6 +24383,7 @@ function parseEasingStr(easingStr) {
 
     return getStepsEasing(parseInt(step, 10), pos);
   }
+
   return easingStr;
 }
 
@@ -23409,7 +24391,6 @@ var Easings = {
   linear: function linear(p) {
     return p;
   },
-
   ease: getBezierEasing(0.25, 0.1, 0.25, 1),
   'ease-in': getBezierEasing(0.42, 0, 1, 1),
   'ease-out': getBezierEasing(0, 0, 0.58, 1),
@@ -23453,6 +24434,7 @@ function parseEasing(easing) {
   } else if (easing.type === 'steps') {
     easing = getStepsEasing(easing.step, easing.pos);
   }
+
   return easing;
 }
 
@@ -23461,81 +24443,101 @@ exports.parseEasing = parseEasing;
 
 /***/ }),
 /* 196 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 /**
  * https://github.com/gre/bezier-easing
  * BezierEasing - use bezier curve for transition easing function
  * by Gaëtan Renaudeau 2014 - 2015 – MIT License
  */
-
 // These values are established by empiricism with tests (tradeoff: performance VS precision)
 var NEWTON_ITERATIONS = 4;
 var NEWTON_MIN_SLOPE = 0.001;
 var SUBDIVISION_PRECISION = 0.0000001;
 var SUBDIVISION_MAX_ITERATIONS = 10;
-
 var kSplineTableSize = 11;
 var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
-
 var float32ArraySupported = typeof Float32Array === 'function';
 
-function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
-function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
-function C (aA1)      { return 3.0 * aA1; }
+function A(aA1, aA2) {
+  return 1.0 - 3.0 * aA2 + 3.0 * aA1;
+}
 
-// Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
-function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT; }
+function B(aA1, aA2) {
+  return 3.0 * aA2 - 6.0 * aA1;
+}
 
-// Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
-function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
+function C(aA1) {
+  return 3.0 * aA1;
+} // Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
 
-function binarySubdivide (aX, aA, aB, mX1, mX2) {
-  var currentX, currentT, i = 0;
+
+function calcBezier(aT, aA1, aA2) {
+  return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT;
+} // Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
+
+
+function getSlope(aT, aA1, aA2) {
+  return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1);
+}
+
+function binarySubdivide(aX, aA, aB, mX1, mX2) {
+  var currentX,
+      currentT,
+      i = 0;
+
   do {
     currentT = aA + (aB - aA) / 2.0;
     currentX = calcBezier(currentT, mX1, mX2) - aX;
+
     if (currentX > 0.0) {
       aB = currentT;
     } else {
       aA = currentT;
     }
   } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
+
   return currentT;
 }
 
-function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
- for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
-   var currentSlope = getSlope(aGuessT, mX1, mX2);
-   if (currentSlope === 0.0) {
-     return aGuessT;
-   }
-   var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
-   aGuessT -= currentX / currentSlope;
- }
- return aGuessT;
+function newtonRaphsonIterate(aX, aGuessT, mX1, mX2) {
+  for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
+    var currentSlope = getSlope(aGuessT, mX1, mX2);
+
+    if (currentSlope === 0.0) {
+      return aGuessT;
+    }
+
+    var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
+    aGuessT -= currentX / currentSlope;
+  }
+
+  return aGuessT;
 }
 
-function LinearEasing (x) {
+function LinearEasing(x) {
   return x;
 }
 
-module.exports = function bezier (mX1, mY1, mX2, mY2) {
+module.exports = function bezier(mX1, mY1, mX2, mY2) {
   if (!(0 <= mX1 && mX1 <= 1 && 0 <= mX2 && mX2 <= 1)) {
     throw new Error('bezier x values must be in [0, 1] range');
   }
 
   if (mX1 === mY1 && mX2 === mY2) {
     return LinearEasing;
-  }
+  } // Precompute samples table
 
-  // Precompute samples table
+
   var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+
   for (var i = 0; i < kSplineTableSize; ++i) {
     sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
   }
 
-  function getTForX (aX) {
+  function getTForX(aX) {
     var intervalStart = 0.0;
     var currentSample = 1;
     var lastSample = kSplineTableSize - 1;
@@ -23543,13 +24545,13 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
     for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
       intervalStart += kSampleStepSize;
     }
-    --currentSample;
 
-    // Interpolate to provide an initial guess for t
+    --currentSample; // Interpolate to provide an initial guess for t
+
     var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
     var guessForT = intervalStart + dist * kSampleStepSize;
-
     var initialSlope = getSlope(guessForT, mX1, mX2);
+
     if (initialSlope >= NEWTON_MIN_SLOPE) {
       return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
     } else if (initialSlope === 0.0) {
@@ -23559,18 +24561,19 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
     }
   }
 
-  return function BezierEasing (x) {
+  return function BezierEasing(x) {
     // Because JavaScript number are imprecise, we should guarantee the extremes are right.
     if (x === 0) {
       return 0;
     }
+
     if (x === 1) {
       return 1;
     }
+
     return calcBezier(getTForX(x), mY1, mY2);
   };
 };
-
 
 /***/ }),
 /* 197 */
@@ -23578,6 +24581,8 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -23615,7 +24620,11 @@ var _utils = __webpack_require__(215);
 
 var _easing = __webpack_require__(195);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 var _timing = (0, _symbol2.default)('timing'),
     _keyframes = (0, _symbol2.default)('keyframes'),
@@ -23626,7 +24635,6 @@ var _timing = (0, _symbol2.default)('timing'),
     _activeReadyTimer = (0, _symbol2.default)('activeReadyTimer'),
     _activeFinishTimer = (0, _symbol2.default)('activeFinishTimer'),
     _removeDefer = (0, _symbol2.default)('removeDefer');
-
 /**
   easing: {
     type: 'cubic-bezier',
@@ -23638,6 +24646,8 @@ var _timing = (0, _symbol2.default)('timing'),
     pos: 'end'
   }
  */
+
+
 var defaultTiming = {
   delay: 0,
   endDelay: 0,
@@ -23648,7 +24658,6 @@ var defaultTiming = {
   easing: 'linear',
   effect: null
 };
-
 /**
   animation: play --> delay --> effect --> endDelay
   playState: idle --> pending --> running --> pending --> finished
@@ -23661,8 +24670,7 @@ var _class = function () {
     (0, _classCallCheck3.default)(this, _class);
 
     if (Array.isArray(initState)) {
-      var _ref = [initState[0], initState, keyframes];
-      // 如果 initState 缺省，默认 keyframes 的第一帧为 initState
+      var _ref = [initState[0], initState, keyframes]; // 如果 initState 缺省，默认 keyframes 的第一帧为 initState
 
       initState = _ref[0];
       keyframes = _ref[1];
@@ -23670,15 +24678,15 @@ var _class = function () {
     }
 
     if (typeof timing === 'number') {
-      timing = { duration: timing };
+      timing = {
+        duration: timing
+      };
     }
 
     this[_timing] = (0, _assign2.default)({}, defaultTiming, timing);
     this[_timing].easing = (0, _easing.parseEasing)(this[_timing].easing);
     this[_keyframes] = (0, _utils.calculateFramesOffset)(keyframes);
-
     var lastFrame = this[_keyframes][this[_keyframes].length - 1];
-
     this[_initState] = {}; // 初始状态
 
     (0, _keys2.default)(lastFrame).forEach(function (key) {
@@ -23687,20 +24695,24 @@ var _class = function () {
           _this[_initState][key] = initState[key];
         }
       }
-    });
+    }); // 补齐参数
 
-    // 补齐参数
     this[_keyframes] = this[_keyframes].map(function (frame) {
       return (0, _assign2.default)({}, _this[_initState], frame);
     });
 
     if (this[_keyframes][0].offset !== 0) {
       // 要补第一帧
-      this[_keyframes].unshift((0, _assign2.default)({}, this[_initState], { offset: 0 }));
+      this[_keyframes].unshift((0, _assign2.default)({}, this[_initState], {
+        offset: 0
+      }));
     }
+
     if (lastFrame.offset < 1) {
       // 要补最后一帧
-      this[_keyframes].push((0, _assign2.default)({}, lastFrame, { offset: 1 }));
+      this[_keyframes].push((0, _assign2.default)({}, lastFrame, {
+        offset: 1
+      }));
     }
 
     this[_effects] = {};
@@ -23721,13 +24733,21 @@ var _class = function () {
         if (this.timeline.currentTime < 0) {
           this[_readyDefer].timerID = this.timeline.setTimeout(function () {
             _this2[_readyDefer].resolve();
+
             delete _this2[_readyDefer];
-          }, { delay: -this.timeline.currentTime, heading: false });
+          }, {
+            delay: -this.timeline.currentTime,
+            heading: false
+          });
         } else {
           this[_readyDefer].timerID = this.timeline.setTimeout(function () {
             _this2[_readyDefer].resolve();
+
             delete _this2[_readyDefer];
-          }, { delay: 0, isEntropy: true });
+          }, {
+            delay: 0,
+            isEntropy: true
+          });
         }
       }
     }
@@ -23740,20 +24760,31 @@ var _class = function () {
           duration = _timing2.duration,
           iterations = _timing2.iterations,
           endDelay = _timing2.endDelay;
-
       var delay = Math.ceil(duration * iterations + endDelay - this.timeline.currentTime) + 1;
+
       if (this[_finishedDefer] && !this[_finishedDefer].timerID) {
         this[_finishedDefer].timerID = this.timeline.setTimeout(function () {
           _this3[_finishedDefer].resolve();
+
           _this3[_removeDefer](_readyDefer);
+
           _this3[_removeDefer](_finishedDefer);
-        }, { delay: delay, heading: false });
+        }, {
+          delay: delay,
+          heading: false
+        });
         this[_finishedDefer].reverseTimerID = this.timeline.setTimeout(function () {
           _this3[_finishedDefer].resolve();
+
           _this3[_removeDefer](_readyDefer);
+
           _this3[_removeDefer](_finishedDefer);
+
           _this3.timeline = null;
-        }, { delay: -this[_timing].delay - 1, heading: false });
+        }, {
+          delay: -this[_timing].delay - 1,
+          heading: false
+        });
       }
     }
   }, {
@@ -23767,19 +24798,22 @@ var _class = function () {
         if (this.playbackRate <= 0) {
           return;
         }
+
         var _timing3 = this[_timing],
             delay = _timing3.delay,
             playbackRate = _timing3.playbackRate,
             timeline = _timing3.timeline;
-
         this.timeline = new _spriteTimeline2.default({
           originTime: delay,
           playbackRate: playbackRate
         }, timeline);
+
         this[_activeReadyTimer]();
+
         this[_activeFinishTimer]();
       } else if (this.playState === 'paused') {
         this.timeline.playbackRate = this.playbackRate;
+
         this[_activeReadyTimer]();
       }
     }
@@ -23789,20 +24823,23 @@ var _class = function () {
       var defered = this[deferID],
           timeline = this.timeline;
 
-
       if (defered && timeline) {
         timeline.clearTimeout(defered.timerID);
+
         if (defered.reverseTimerID) {
           timeline.clearTimeout(defered.reverseTimerID);
         }
       }
+
       delete this[deferID];
     }
   }, {
     key: 'cancel',
     value: function cancel() {
       this[_removeDefer](_readyDefer);
+
       this[_removeDefer](_finishedDefer);
+
       this.timeline = null;
     }
   }, {
@@ -23811,7 +24848,9 @@ var _class = function () {
       if (this.timeline) {
         this.timeline.currentTime = Infinity / this.playbackRate;
       }
+
       this[_removeDefer](_readyDefer);
+
       this[_removeDefer](_finishedDefer);
     }
   }, {
@@ -23828,6 +24867,7 @@ var _class = function () {
       if (this.timeline) {
         this.timeline.playbackRate = rate;
       }
+
       this[_timing].playbackRate = rate;
     }
   }, {
@@ -23838,7 +24878,6 @@ var _class = function () {
           iterations = _timing4.iterations,
           duration = _timing4.duration,
           endDelay = _timing4.endDelay;
-
       var state = 'running';
 
       if (timeline == null) {
@@ -23850,6 +24889,7 @@ var _class = function () {
         state = 'pending';
       } else {
         var ed = timeline.currentTime - iterations * duration;
+
         if (ed > 0 && ed < endDelay) {
           // 结束 pending
           state = 'pending';
@@ -23857,20 +24897,18 @@ var _class = function () {
           state = 'finished';
         }
       }
+
       return state;
     }
   }, {
     key: 'progress',
     get: function get() {
       if (!this.timeline) return 0;
-
       var _timing5 = this[_timing],
           duration = _timing5.duration,
           iterations = _timing5.iterations;
-
       var timeline = this.timeline,
           playState = this.playState;
-
       var p = void 0;
 
       if (playState === 'idle') {
@@ -23901,7 +24939,6 @@ var _class = function () {
           initState = this[_initState],
           fill = this[_timing].fill;
 
-
       if (playState === 'idle') {
         return initState;
       }
@@ -23914,6 +24951,7 @@ var _class = function () {
           inverted = _getProgress.inverted;
 
       var frameState = initState;
+
       if (currentTime < 0 && playState === 'pending') {
         // 在开始前 delay 阶段
         if (fill === 'backwards' || fill === 'both') {
@@ -23923,6 +24961,7 @@ var _class = function () {
         // 不在 endDelay 或结束状态，或 forwards
         frameState = (0, _utils.getCurrentFrame)(this[_timing], keyframes, this[_effects], p);
       }
+
       return frameState;
     }
   }, {
@@ -23957,13 +24996,16 @@ var _class = function () {
       }
 
       this[_readyDefer] = (0, _utils.defer)();
+
       if (this.timeline) {
         // 已经在 pending 状态
         this[_activeReadyTimer]();
       }
+
       if (this[_readyDefer]) {
         return this[_readyDefer].promise;
       }
+
       return _promise2.default.resolve();
     }
   }, {
@@ -23972,6 +25014,7 @@ var _class = function () {
       if (this.playState === 'finished') {
         return _promise2.default.resolve();
       }
+
       if (!this[_finishedDefer]) {
         this[_finishedDefer] = (0, _utils.defer)();
 
@@ -23992,20 +25035,32 @@ exports.default = _class;
 /* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(199), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(199),
+  __esModule: true
+};
 
 /***/ }),
 /* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(150);
-__webpack_require__(132);
-__webpack_require__(86);
-__webpack_require__(200);
-__webpack_require__(209);
-__webpack_require__(210);
-module.exports = __webpack_require__(99).Promise;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(150);
+
+__webpack_require__(132);
+
+__webpack_require__(86);
+
+__webpack_require__(200);
+
+__webpack_require__(209);
+
+__webpack_require__(210);
+
+module.exports = __webpack_require__(99).Promise;
 
 /***/ }),
 /* 200 */
@@ -24013,22 +25068,41 @@ module.exports = __webpack_require__(99).Promise;
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var LIBRARY = __webpack_require__(96);
+
 var global = __webpack_require__(98);
+
 var ctx = __webpack_require__(100);
+
 var classof = __webpack_require__(135);
+
 var $export = __webpack_require__(97);
+
 var isObject = __webpack_require__(105);
+
 var aFunction = __webpack_require__(101);
+
 var anInstance = __webpack_require__(154);
+
 var forOf = __webpack_require__(155);
+
 var speciesConstructor = __webpack_require__(201);
+
 var task = __webpack_require__(202).set;
+
 var microtask = __webpack_require__(204)();
+
 var newPromiseCapabilityModule = __webpack_require__(205);
+
 var perform = __webpack_require__(206);
+
 var userAgent = __webpack_require__(207);
+
 var promiseResolve = __webpack_require__(208);
+
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -24036,33 +25110,37 @@ var versions = process && process.versions;
 var v8 = versions && versions.v8 || '';
 var $Promise = global[PROMISE];
 var isNode = classof(process) == 'process';
-var empty = function () { /* empty */ };
+
+var empty = function () {
+  /* empty */
+};
+
 var Internal, newGenericPromiseCapability, OwnPromiseCapability, Wrapper;
 var newPromiseCapability = newGenericPromiseCapability = newPromiseCapabilityModule.f;
-
 var USE_NATIVE = !!function () {
   try {
     // correct subclassing with @@species support
     var promise = $Promise.resolve(1);
+
     var FakePromise = (promise.constructor = {})[__webpack_require__(129)('species')] = function (exec) {
       exec(empty, empty);
-    };
-    // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
-    return (isNode || typeof PromiseRejectionEvent == 'function')
-      && promise.then(empty) instanceof FakePromise
-      // v8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
-      // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
-      // we can't detect it synchronously, so just check versions
-      && v8.indexOf('6.6') !== 0
-      && userAgent.indexOf('Chrome/66') === -1;
-  } catch (e) { /* empty */ }
-}();
+    }; // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
 
-// helpers
+
+    return (isNode || typeof PromiseRejectionEvent == 'function') && promise.then(empty) instanceof FakePromise // v8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
+    // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
+    // we can't detect it synchronously, so just check versions
+    && v8.indexOf('6.6') !== 0 && userAgent.indexOf('Chrome/66') === -1;
+  } catch (e) {
+    /* empty */
+  }
+}(); // helpers
+
 var isThenable = function (it) {
   var then;
   return isObject(it) && typeof (then = it.then) == 'function' ? then : false;
 };
+
 var notify = function (promise, isReject) {
   if (promise._n) return;
   promise._n = true;
@@ -24071,27 +25149,31 @@ var notify = function (promise, isReject) {
     var value = promise._v;
     var ok = promise._s == 1;
     var i = 0;
+
     var run = function (reaction) {
       var handler = ok ? reaction.ok : reaction.fail;
       var resolve = reaction.resolve;
       var reject = reaction.reject;
       var domain = reaction.domain;
       var result, then, exited;
+
       try {
         if (handler) {
           if (!ok) {
             if (promise._h == 2) onHandleUnhandled(promise);
             promise._h = 1;
           }
-          if (handler === true) result = value;
-          else {
+
+          if (handler === true) result = value;else {
             if (domain) domain.enter();
             result = handler(value); // may throw
+
             if (domain) {
               domain.exit();
               exited = true;
             }
           }
+
           if (result === reaction.promise) {
             reject(TypeError('Promise-chain cycle'));
           } else if (then = isThenable(result)) {
@@ -24103,67 +25185,92 @@ var notify = function (promise, isReject) {
         reject(e);
       }
     };
+
     while (chain.length > i) run(chain[i++]); // variable length - can't use forEach
+
+
     promise._c = [];
     promise._n = false;
     if (isReject && !promise._h) onUnhandled(promise);
   });
 };
+
 var onUnhandled = function (promise) {
   task.call(global, function () {
     var value = promise._v;
     var unhandled = isUnhandled(promise);
     var result, handler, console;
+
     if (unhandled) {
       result = perform(function () {
         if (isNode) {
           process.emit('unhandledRejection', value, promise);
         } else if (handler = global.onunhandledrejection) {
-          handler({ promise: promise, reason: value });
+          handler({
+            promise: promise,
+            reason: value
+          });
         } else if ((console = global.console) && console.error) {
           console.error('Unhandled promise rejection', value);
         }
-      });
-      // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
+      }); // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
+
       promise._h = isNode || isUnhandled(promise) ? 2 : 1;
-    } promise._a = undefined;
+    }
+
+    promise._a = undefined;
     if (unhandled && result.e) throw result.v;
   });
 };
+
 var isUnhandled = function (promise) {
   return promise._h !== 1 && (promise._a || promise._c).length === 0;
 };
+
 var onHandleUnhandled = function (promise) {
   task.call(global, function () {
     var handler;
+
     if (isNode) {
       process.emit('rejectionHandled', promise);
     } else if (handler = global.onrejectionhandled) {
-      handler({ promise: promise, reason: promise._v });
+      handler({
+        promise: promise,
+        reason: promise._v
+      });
     }
   });
 };
+
 var $reject = function (value) {
   var promise = this;
   if (promise._d) return;
   promise._d = true;
   promise = promise._w || promise; // unwrap
+
   promise._v = value;
   promise._s = 2;
   if (!promise._a) promise._a = promise._c.slice();
   notify(promise, true);
 };
+
 var $resolve = function (value) {
   var promise = this;
   var then;
   if (promise._d) return;
   promise._d = true;
   promise = promise._w || promise; // unwrap
+
   try {
     if (promise === value) throw TypeError("Promise can't be resolved itself");
+
     if (then = isThenable(value)) {
       microtask(function () {
-        var wrapper = { _w: promise, _d: false }; // wrap
+        var wrapper = {
+          _w: promise,
+          _d: false
+        }; // wrap
+
         try {
           then.call(value, ctx($resolve, wrapper, 1), ctx($reject, wrapper, 1));
         } catch (e) {
@@ -24176,33 +25283,45 @@ var $resolve = function (value) {
       notify(promise, false);
     }
   } catch (e) {
-    $reject.call({ _w: promise, _d: false }, e); // wrap
+    $reject.call({
+      _w: promise,
+      _d: false
+    }, e); // wrap
   }
-};
+}; // constructor polyfill
 
-// constructor polyfill
+
 if (!USE_NATIVE) {
   // 25.4.3.1 Promise(executor)
   $Promise = function Promise(executor) {
     anInstance(this, $Promise, PROMISE, '_h');
     aFunction(executor);
     Internal.call(this);
+
     try {
       executor(ctx($resolve, this, 1), ctx($reject, this, 1));
     } catch (err) {
       $reject.call(this, err);
     }
-  };
-  // eslint-disable-next-line no-unused-vars
+  }; // eslint-disable-next-line no-unused-vars
+
+
   Internal = function Promise(executor) {
-    this._c = [];             // <- awaiting reactions
-    this._a = undefined;      // <- checked in isUnhandled reactions
-    this._s = 0;              // <- state
-    this._d = false;          // <- done
-    this._v = undefined;      // <- value
-    this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
-    this._n = false;          // <- notify
+    this._c = []; // <- awaiting reactions
+
+    this._a = undefined; // <- checked in isUnhandled reactions
+
+    this._s = 0; // <- state
+
+    this._d = false; // <- done
+
+    this._v = undefined; // <- value
+
+    this._h = 0; // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
+
+    this._n = false; // <- notify
   };
+
   Internal.prototype = __webpack_require__(153)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected) {
@@ -24210,7 +25329,9 @@ if (!USE_NATIVE) {
       reaction.ok = typeof onFulfilled == 'function' ? onFulfilled : true;
       reaction.fail = typeof onRejected == 'function' && onRejected;
       reaction.domain = isNode ? process.domain : undefined;
+
       this._c.push(reaction);
+
       if (this._a) this._a.push(reaction);
       if (this._s) notify(this, false);
       return reaction.promise;
@@ -24220,25 +25341,29 @@ if (!USE_NATIVE) {
       return this.then(undefined, onRejected);
     }
   });
+
   OwnPromiseCapability = function () {
     var promise = new Internal();
     this.promise = promise;
     this.resolve = ctx($resolve, promise, 1);
     this.reject = ctx($reject, promise, 1);
   };
+
   newPromiseCapabilityModule.f = newPromiseCapability = function (C) {
-    return C === $Promise || C === Wrapper
-      ? new OwnPromiseCapability(C)
-      : newGenericPromiseCapability(C);
+    return C === $Promise || C === Wrapper ? new OwnPromiseCapability(C) : newGenericPromiseCapability(C);
   };
 }
 
-$export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(128)($Promise, PROMISE);
-__webpack_require__(156)(PROMISE);
-Wrapper = __webpack_require__(99)[PROMISE];
+$export($export.G + $export.W + $export.F * !USE_NATIVE, {
+  Promise: $Promise
+});
 
-// statics
+__webpack_require__(128)($Promise, PROMISE);
+
+__webpack_require__(156)(PROMISE);
+
+Wrapper = __webpack_require__(99)[PROMISE]; // statics
+
 $export($export.S + $export.F * !USE_NATIVE, PROMISE, {
   // 25.4.4.5 Promise.reject(r)
   reject: function reject(r) {
@@ -24299,31 +25424,41 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(147)(functio
   }
 });
 
-
 /***/ }),
 /* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
 var anObject = __webpack_require__(104);
+
 var aFunction = __webpack_require__(101);
+
 var SPECIES = __webpack_require__(129)('species');
+
 module.exports = function (O, D) {
   var C = anObject(O).constructor;
   var S;
   return C === undefined || (S = anObject(C)[SPECIES]) == undefined ? D : aFunction(S);
 };
 
-
 /***/ }),
 /* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var ctx = __webpack_require__(100);
+
 var invoke = __webpack_require__(203);
+
 var html = __webpack_require__(127);
+
 var cel = __webpack_require__(109);
+
 var global = __webpack_require__(98);
+
 var process = global.process;
 var setTask = global.setImmediate;
 var clearTask = global.clearImmediate;
@@ -24333,106 +25468,125 @@ var counter = 0;
 var queue = {};
 var ONREADYSTATECHANGE = 'onreadystatechange';
 var defer, channel, port;
+
 var run = function () {
-  var id = +this;
-  // eslint-disable-next-line no-prototype-builtins
+  var id = +this; // eslint-disable-next-line no-prototype-builtins
+
   if (queue.hasOwnProperty(id)) {
     var fn = queue[id];
     delete queue[id];
     fn();
   }
 };
+
 var listener = function (event) {
   run.call(event.data);
-};
-// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
+}; // Node.js 0.9+ & IE10+ has setImmediate, otherwise:
+
+
 if (!setTask || !clearTask) {
   setTask = function setImmediate(fn) {
     var args = [];
     var i = 1;
+
     while (arguments.length > i) args.push(arguments[i++]);
+
     queue[++counter] = function () {
       // eslint-disable-next-line no-new-func
       invoke(typeof fn == 'function' ? fn : Function(fn), args);
     };
+
     defer(counter);
     return counter;
   };
+
   clearTask = function clearImmediate(id) {
     delete queue[id];
-  };
-  // Node.js 0.8-
+  }; // Node.js 0.8-
+
+
   if (__webpack_require__(93)(process) == 'process') {
     defer = function (id) {
       process.nextTick(ctx(run, id, 1));
-    };
-  // Sphere (JS game engine) Dispatch API
+    }; // Sphere (JS game engine) Dispatch API
+
   } else if (Dispatch && Dispatch.now) {
     defer = function (id) {
       Dispatch.now(ctx(run, id, 1));
-    };
-  // Browsers with MessageChannel, includes WebWorkers
+    }; // Browsers with MessageChannel, includes WebWorkers
+
   } else if (MessageChannel) {
     channel = new MessageChannel();
     port = channel.port2;
     channel.port1.onmessage = listener;
-    defer = ctx(port.postMessage, port, 1);
-  // Browsers with postMessage, skip WebWorkers
-  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
+    defer = ctx(port.postMessage, port, 1); // Browsers with postMessage, skip WebWorkers
+    // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
   } else if (global.addEventListener && typeof postMessage == 'function' && !global.importScripts) {
     defer = function (id) {
       global.postMessage(id + '', '*');
     };
-    global.addEventListener('message', listener, false);
-  // IE8-
+
+    global.addEventListener('message', listener, false); // IE8-
   } else if (ONREADYSTATECHANGE in cel('script')) {
     defer = function (id) {
       html.appendChild(cel('script'))[ONREADYSTATECHANGE] = function () {
         html.removeChild(this);
         run.call(id);
       };
-    };
-  // Rest old browsers
+    }; // Rest old browsers
+
   } else {
     defer = function (id) {
       setTimeout(ctx(run, id, 1), 0);
     };
   }
 }
+
 module.exports = {
   set: setTask,
   clear: clearTask
 };
 
-
 /***/ }),
 /* 203 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
 module.exports = function (fn, args, that) {
   var un = that === undefined;
-  switch (args.length) {
-    case 0: return un ? fn()
-                      : fn.call(that);
-    case 1: return un ? fn(args[0])
-                      : fn.call(that, args[0]);
-    case 2: return un ? fn(args[0], args[1])
-                      : fn.call(that, args[0], args[1]);
-    case 3: return un ? fn(args[0], args[1], args[2])
-                      : fn.call(that, args[0], args[1], args[2]);
-    case 4: return un ? fn(args[0], args[1], args[2], args[3])
-                      : fn.call(that, args[0], args[1], args[2], args[3]);
-  } return fn.apply(that, args);
-};
 
+  switch (args.length) {
+    case 0:
+      return un ? fn() : fn.call(that);
+
+    case 1:
+      return un ? fn(args[0]) : fn.call(that, args[0]);
+
+    case 2:
+      return un ? fn(args[0], args[1]) : fn.call(that, args[0], args[1]);
+
+    case 3:
+      return un ? fn(args[0], args[1], args[2]) : fn.call(that, args[0], args[1], args[2]);
+
+    case 4:
+      return un ? fn(args[0], args[1], args[2], args[3]) : fn.call(that, args[0], args[1], args[2], args[3]);
+  }
+
+  return fn.apply(that, args);
+};
 
 /***/ }),
 /* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var macrotask = __webpack_require__(202).set;
+
 var Observer = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
 var Promise = global.Promise;
@@ -24444,46 +25598,53 @@ module.exports = function () {
   var flush = function () {
     var parent, fn;
     if (isNode && (parent = process.domain)) parent.exit();
+
     while (head) {
       fn = head.fn;
       head = head.next;
+
       try {
         fn();
       } catch (e) {
-        if (head) notify();
-        else last = undefined;
+        if (head) notify();else last = undefined;
         throw e;
       }
-    } last = undefined;
-    if (parent) parent.enter();
-  };
+    }
 
-  // Node.js
+    last = undefined;
+    if (parent) parent.enter();
+  }; // Node.js
+
+
   if (isNode) {
     notify = function () {
       process.nextTick(flush);
-    };
-  // browsers with MutationObserver, except iOS Safari - https://github.com/zloirock/core-js/issues/339
+    }; // browsers with MutationObserver, except iOS Safari - https://github.com/zloirock/core-js/issues/339
+
   } else if (Observer && !(global.navigator && global.navigator.standalone)) {
     var toggle = true;
     var node = document.createTextNode('');
-    new Observer(flush).observe(node, { characterData: true }); // eslint-disable-line no-new
+    new Observer(flush).observe(node, {
+      characterData: true
+    }); // eslint-disable-line no-new
+
     notify = function () {
       node.data = toggle = !toggle;
-    };
-  // environments with maybe non-completely correct, but existent Promise
+    }; // environments with maybe non-completely correct, but existent Promise
+
   } else if (Promise && Promise.resolve) {
     // Promise.resolve without an argument throws an error in LG WebOS 2
     var promise = Promise.resolve(undefined);
+
     notify = function () {
       promise.then(flush);
-    };
-  // for other environments - macrotask based on:
-  // - setImmediate
-  // - MessageChannel
-  // - window.postMessag
-  // - onreadystatechange
-  // - setTimeout
+    }; // for other environments - macrotask based on:
+    // - setImmediate
+    // - MessageChannel
+    // - window.postMessag
+    // - onreadystatechange
+    // - setTimeout
+
   } else {
     notify = function () {
       // strange IE + webpack dev server bug - use .call(global)
@@ -24492,23 +25653,30 @@ module.exports = function () {
   }
 
   return function (fn) {
-    var task = { fn: fn, next: undefined };
+    var task = {
+      fn: fn,
+      next: undefined
+    };
     if (last) last.next = task;
+
     if (!head) {
       head = task;
       notify();
-    } last = task;
+    }
+
+    last = task;
   };
 };
-
 
 /***/ }),
 /* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // 25.4.1.5 NewPromiseCapability(C)
 
-// 25.4.1.5 NewPromiseCapability(C)
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var aFunction = __webpack_require__(101);
 
 function PromiseCapability(C) {
@@ -24526,36 +25694,47 @@ module.exports.f = function (C) {
   return new PromiseCapability(C);
 };
 
-
 /***/ }),
 /* 206 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = function (exec) {
   try {
-    return { e: false, v: exec() };
+    return {
+      e: false,
+      v: exec()
+    };
   } catch (e) {
-    return { e: true, v: e };
+    return {
+      e: true,
+      v: e
+    };
   }
 };
-
 
 /***/ }),
 /* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var global = __webpack_require__(98);
+
 var navigator = global.navigator;
-
 module.exports = navigator && navigator.userAgent || '';
-
 
 /***/ }),
 /* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var anObject = __webpack_require__(104);
+
 var isObject = __webpack_require__(105);
+
 var newPromiseCapability = __webpack_require__(205);
 
 module.exports = function (C, x) {
@@ -24567,7 +25746,6 @@ module.exports = function (C, x) {
   return promiseCapability.promise;
 };
 
-
 /***/ }),
 /* 209 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -24575,65 +25753,89 @@ module.exports = function (C, x) {
 "use strict";
 // https://github.com/tc39/proposal-promise-finally
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var $export = __webpack_require__(97);
+
 var core = __webpack_require__(99);
+
 var global = __webpack_require__(98);
+
 var speciesConstructor = __webpack_require__(201);
+
 var promiseResolve = __webpack_require__(208);
 
-$export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
-  var C = speciesConstructor(this, core.Promise || global.Promise);
-  var isFunction = typeof onFinally == 'function';
-  return this.then(
-    isFunction ? function (x) {
-      return promiseResolve(C, onFinally()).then(function () { return x; });
-    } : onFinally,
-    isFunction ? function (e) {
-      return promiseResolve(C, onFinally()).then(function () { throw e; });
-    } : onFinally
-  );
-} });
-
+$export($export.P + $export.R, 'Promise', {
+  'finally': function (onFinally) {
+    var C = speciesConstructor(this, core.Promise || global.Promise);
+    var isFunction = typeof onFinally == 'function';
+    return this.then(isFunction ? function (x) {
+      return promiseResolve(C, onFinally()).then(function () {
+        return x;
+      });
+    } : onFinally, isFunction ? function (e) {
+      return promiseResolve(C, onFinally()).then(function () {
+        throw e;
+      });
+    } : onFinally);
+  }
+});
 
 /***/ }),
 /* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+ // https://github.com/tc39/proposal-promise-try
 
-// https://github.com/tc39/proposal-promise-try
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var $export = __webpack_require__(97);
+
 var newPromiseCapability = __webpack_require__(205);
+
 var perform = __webpack_require__(206);
 
-$export($export.S, 'Promise', { 'try': function (callbackfn) {
-  var promiseCapability = newPromiseCapability.f(this);
-  var result = perform(callbackfn);
-  (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);
-  return promiseCapability.promise;
-} });
-
+$export($export.S, 'Promise', {
+  'try': function (callbackfn) {
+    var promiseCapability = newPromiseCapability.f(this);
+    var result = perform(callbackfn);
+    (result.e ? promiseCapability.reject : promiseCapability.resolve)(result.v);
+    return promiseCapability.promise;
+  }
+});
 
 /***/ }),
 /* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(212), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(212),
+  __esModule: true
+};
 
 /***/ }),
 /* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(213);
-module.exports = __webpack_require__(99).Object.keys;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(213);
+
+module.exports = __webpack_require__(99).Object.keys;
 
 /***/ }),
 /* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // 19.1.2.14 Object.keys(O)
 var toObject = __webpack_require__(131);
+
 var $keys = __webpack_require__(117);
 
 __webpack_require__(214)('keys', function () {
@@ -24642,22 +25844,27 @@ __webpack_require__(214)('keys', function () {
   };
 });
 
-
 /***/ }),
 /* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(97);
+
 var core = __webpack_require__(99);
+
 var fails = __webpack_require__(108);
+
 module.exports = function (KEY, exec) {
   var fn = (core.Object || {})[KEY] || Object[KEY];
   var exp = {};
   exp[KEY] = exec(fn);
-  $export($export.S + $export.F * fails(function () { fn(1); }), 'Object', exp);
+  $export($export.S + $export.F * fails(function () {
+    fn(1);
+  }), 'Object', exp);
 };
-
 
 /***/ }),
 /* 215 */
@@ -24665,6 +25872,8 @@ module.exports = function (KEY, exec) {
 
 "use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -24698,7 +25907,11 @@ var _effect = __webpack_require__(194);
 
 var _effect2 = _interopRequireDefault(_effect);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
 
 function defer() {
   var ret = {};
@@ -24712,45 +25925,51 @@ function defer() {
 function periodicity(val, dur) {
   var t = Math.floor(val / dur);
   var v = val - t * dur;
+
   if (v === 0 && t > 0) {
     v = dur;
     t--;
   }
+
   return [t, v];
 }
 
 function calculateFramesOffset(keyframes) {
   keyframes = keyframes.slice(0);
-
   var firstFrame = keyframes[0],
       lastFrame = keyframes[keyframes.length - 1];
-
   lastFrame.offset = lastFrame.offset || 1;
   firstFrame.offset = firstFrame.offset || 0;
-
   var offset = 0,
       offsetFrom = -1;
 
   for (var i = 0; i < keyframes.length; i++) {
     var frame = keyframes[i];
+
     if (frame.offset != null) {
       var dis = i - offsetFrom;
+
       if (dis > 1) {
         var delta = (frame.offset - offset) / dis;
+
         for (var j = 0; j < dis - 1; j++) {
           keyframes[offsetFrom + j + 1].offset = offset + delta * (j + 1);
         }
       }
+
       offset = frame.offset;
       offsetFrom = i;
     }
+
     if (frame.easing != null) {
       frame.easing = (0, _easing2.parseEasing)(frame.easing);
     }
+
     if (i > 0) {
-      var hasEasing = keyframes[i].easing != null;
-      // 如果中间某个属性没有了，需要从前一帧复制过来
+      var hasEasing = keyframes[i].easing != null; // 如果中间某个属性没有了，需要从前一帧复制过来
+
       keyframes[i] = (0, _assign2.default)({}, keyframes[i - 1], keyframes[i]);
+
       if (!hasEasing) {
         // easing 不能复制
         delete keyframes[i].easing;
@@ -24765,23 +25984,25 @@ function getProgress(timeline, timing, p) {
   var currentTime = timeline.currentTime,
       direction = timing.direction,
       duration = timing.duration;
-
   var inverted = false;
+
   if (direction === 'reverse') {
     p = 1 - p;
     inverted = true;
   } else if (direction === 'alternate' || direction === 'alternate-reverse') {
     var period = Math.floor(currentTime / duration);
-
-    if (p === 1) period--;
-    // period = Math.max(0, period)
+    if (p === 1) period--; // period = Math.max(0, period)
 
     if (period % 2 ^ direction === 'alternate-reverse') {
       p = 1 - p;
       inverted = true;
     }
   }
-  return { p: p, inverted: inverted };
+
+  return {
+    p: p,
+    inverted: inverted
+  };
 }
 
 function calculateFrame(previousFrame, nextFrame, effects, p) {
@@ -24793,7 +26014,6 @@ function calculateFrame(previousFrame, nextFrame, effects, p) {
 
     if (key !== 'offset' && key !== 'easing') {
       var effect = effects[key] || effects.default;
-
       var v = effect(previousFrame[key], value, p, previousFrame.offset, nextFrame.offset);
 
       if (v != null) {
@@ -24808,14 +26028,12 @@ function getCurrentFrame(timing, keyframes, effects, p) {
   var easing = timing.easing,
       effect = timing.effect;
 
-
   if (!effect) {
     // timing.effect 会覆盖掉 Effects 和 animator.applyEffects 中定义的 effects
     effects = (0, _assign2.default)({}, _effect2.default, effects);
   }
 
   var ret = {};
-
   p = easing(p, keyframes);
 
   for (var i = 1; i < keyframes.length; i++) {
@@ -24826,8 +26044,8 @@ function getCurrentFrame(timing, keyframes, effects, p) {
       var previousFrame = keyframes[i - 1],
           previousOffset = previousFrame.offset,
           _easing = previousFrame.easing;
-
       var ep = p;
+
       if (_easing) {
         var d = offset - previousOffset;
         ep = _easing((p - previousOffset) / d) * d + previousOffset;
@@ -24838,6 +26056,7 @@ function getCurrentFrame(timing, keyframes, effects, p) {
       } else {
         ret = calculateFrame(previousFrame, frame, effects, ep);
       }
+
       break;
     }
   }
@@ -24849,22 +26068,32 @@ function getCurrentFrame(timing, keyframes, effects, p) {
 /* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(217), __esModule: true };
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = {
+  "default": __webpack_require__(217),
+  __esModule: true
+};
 
 /***/ }),
 /* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(218);
-module.exports = __webpack_require__(99).Object.entries;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+__webpack_require__(218);
+
+module.exports = __webpack_require__(99).Object.entries;
 
 /***/ }),
 /* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(97);
+
 var $entries = __webpack_require__(219)(true);
 
 $export($export.S, 'Object', {
@@ -24873,15 +26102,20 @@ $export($export.S, 'Object', {
   }
 });
 
-
 /***/ }),
 /* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var DESCRIPTORS = __webpack_require__(107);
+
 var getKeys = __webpack_require__(117);
+
 var toIObject = __webpack_require__(91);
+
 var isEnum = __webpack_require__(176).f;
+
 module.exports = function (isEntries) {
   return function (it) {
     var O = toIObject(it);
@@ -24890,16 +26124,18 @@ module.exports = function (isEntries) {
     var i = 0;
     var result = [];
     var key;
+
     while (length > i) {
       key = keys[i++];
+
       if (!DESCRIPTORS || isEnum.call(O, key)) {
         result.push(isEntries ? [key, O[key]] : O[key]);
       }
     }
+
     return result;
   };
 };
-
 
 /***/ }),
 /* 220 */
@@ -24923,10 +26159,20 @@ function createElement(nodeName, attrs = {}, children = []) {
 }
 
 const ownerDocument = {
+  /**
+   * 
+   * @param {*} Node 节点类（不是实例
+   * @param {*} nodeName 节点名称
+   * @param {*} nodeType 节点类型
+   */
   registerNode(Node, nodeName, nodeType = 100) {
-    nodeName = nodeName.toLowerCase();
-    if (nodeMap.has(nodeName)) throw new TypeError(`Cannot registerNode, ${nodeName} has been taken.`);
-    nodeMap.set(nodeName, Node);
+    // 将节点名称转换为小写
+    nodeName = nodeName.toLowerCase(); // 查看节点是否已经被注册
+
+    if (nodeMap.has(nodeName)) throw new TypeError(`Cannot registerNode, ${nodeName} has been taken.`); // 将节点类，记录进缓存
+
+    nodeMap.set(nodeName, Node); // 给节点类原型对象定义属性
+
     Object.defineProperties(Node.prototype, {
       nodeType: {
         value: nodeType
@@ -24952,6 +26198,10 @@ const ownerDocument = {
     return createElement(name);
   },
 
+  /**
+   * 是否是Sprite内部节点
+   * @param {*} nodeName 节点名称
+   */
   isSpriteNode(nodeName) {
     return nodeMap.has(nodeName.toLowerCase());
   }
@@ -25467,6 +26717,12 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
 const loadedTextures = {};
+/**
+ * 
+ * @param {*} src 资源地址
+ * @param {*} alias 
+ */
+
 function loadTexture(src, alias) {
   if (loadedTextures[src]) return loadedTextures[src];
   const img = _mesh_js_core__WEBPACK_IMPORTED_MODULE_0__["ENV"].loadImage(src, {
@@ -26991,155 +28247,144 @@ _document__WEBPACK_IMPORTED_MODULE_6__["default"].registerNode(Path, 'path');
 /* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 /**
- * pasition v1.0.1 By dntzhang
+ * pasition v1.0.2 By dntzhang
  * Github: https://github.com/AlloyTeam/pasition
  * MIT Licensed.
  */
-
 (function (global, factory) {
-   true ? module.exports = factory() :
-  undefined;
-}(this, (function () { 'use strict';
+   true ? module.exports = factory() : undefined;
+})(this, function () {
+  'use strict';
 
-var slicedToArray = function () {
-  function sliceIterator(arr, i) {
-    var _arr = [];
-    var _n = true;
-    var _d = false;
-    var _e = undefined;
+  var slicedToArray = function () {
+    function sliceIterator(arr, i) {
+      var _arr = [];
+      var _n = true;
+      var _d = false;
+      var _e = undefined;
 
-    try {
-      for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-        _arr.push(_s.value);
-
-        if (i && _arr.length === i) break;
-      }
-    } catch (err) {
-      _d = true;
-      _e = err;
-    } finally {
       try {
-        if (!_n && _i["return"]) _i["return"]();
+        for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+          _arr.push(_s.value);
+
+          if (i && _arr.length === i) break;
+        }
+      } catch (err) {
+        _d = true;
+        _e = err;
       } finally {
-        if (_d) throw _e;
+        try {
+          if (!_n && _i["return"]) _i["return"]();
+        } finally {
+          if (_d) throw _e;
+        }
       }
+
+      return _arr;
     }
 
-    return _arr;
-  }
+    return function (arr, i) {
+      if (Array.isArray(arr)) {
+        return arr;
+      } else if (Symbol.iterator in Object(arr)) {
+        return sliceIterator(arr, i);
+      } else {
+        throw new TypeError("Invalid attempt to destructure non-iterable instance");
+      }
+    };
+  }(); //https://github.com/colinmeinke/svg-arc-to-cubic-bezier
 
-  return function (arr, i) {
-    if (Array.isArray(arr)) {
-      return arr;
-    } else if (Symbol.iterator in Object(arr)) {
-      return sliceIterator(arr, i);
-    } else {
-      throw new TypeError("Invalid attempt to destructure non-iterable instance");
-    }
-  };
-}();
 
-//https://github.com/colinmeinke/svg-arc-to-cubic-bezier
+  var TAU = Math.PI * 2;
 
-var TAU = Math.PI * 2;
-
-var mapToEllipse = function mapToEllipse(_ref, rx, ry, cosphi, sinphi, centerx, centery) {
+  var mapToEllipse = function mapToEllipse(_ref, rx, ry, cosphi, sinphi, centerx, centery) {
     var x = _ref.x,
         y = _ref.y;
-
     x *= rx;
     y *= ry;
-
     var xp = cosphi * x - sinphi * y;
     var yp = sinphi * x + cosphi * y;
-
     return {
-        x: xp + centerx,
-        y: yp + centery
+      x: xp + centerx,
+      y: yp + centery
     };
-};
+  };
 
-var approxUnitArc = function approxUnitArc(ang1, ang2) {
+  var approxUnitArc = function approxUnitArc(ang1, ang2) {
     var a = 4 / 3 * Math.tan(ang2 / 4);
-
     var x1 = Math.cos(ang1);
     var y1 = Math.sin(ang1);
     var x2 = Math.cos(ang1 + ang2);
     var y2 = Math.sin(ang1 + ang2);
-
     return [{
-        x: x1 - y1 * a,
-        y: y1 + x1 * a
+      x: x1 - y1 * a,
+      y: y1 + x1 * a
     }, {
-        x: x2 + y2 * a,
-        y: y2 - x2 * a
+      x: x2 + y2 * a,
+      y: y2 - x2 * a
     }, {
-        x: x2,
-        y: y2
+      x: x2,
+      y: y2
     }];
-};
+  };
 
-var vectorAngle = function vectorAngle(ux, uy, vx, vy) {
+  var vectorAngle = function vectorAngle(ux, uy, vx, vy) {
     var sign = ux * vy - uy * vx < 0 ? -1 : 1;
     var umag = Math.sqrt(ux * ux + uy * uy);
     var vmag = Math.sqrt(ux * ux + uy * uy);
     var dot = ux * vx + uy * vy;
-
     var div = dot / (umag * vmag);
 
     if (div > 1) {
-        div = 1;
+      div = 1;
     }
 
     if (div < -1) {
-        div = -1;
+      div = -1;
     }
 
     return sign * Math.acos(div);
-};
+  };
 
-var getArcCenter = function getArcCenter(px, py, cx, cy, rx, ry, largeArcFlag, sweepFlag, sinphi, cosphi, pxp, pyp) {
+  var getArcCenter = function getArcCenter(px, py, cx, cy, rx, ry, largeArcFlag, sweepFlag, sinphi, cosphi, pxp, pyp) {
     var rxsq = Math.pow(rx, 2);
     var rysq = Math.pow(ry, 2);
     var pxpsq = Math.pow(pxp, 2);
     var pypsq = Math.pow(pyp, 2);
-
     var radicant = rxsq * rysq - rxsq * pypsq - rysq * pxpsq;
 
     if (radicant < 0) {
-        radicant = 0;
+      radicant = 0;
     }
 
     radicant /= rxsq * pypsq + rysq * pxpsq;
     radicant = Math.sqrt(radicant) * (largeArcFlag === sweepFlag ? -1 : 1);
-
     var centerxp = radicant * rx / ry * pyp;
     var centeryp = radicant * -ry / rx * pxp;
-
     var centerx = cosphi * centerxp - sinphi * centeryp + (px + cx) / 2;
     var centery = sinphi * centerxp + cosphi * centeryp + (py + cy) / 2;
-
     var vx1 = (pxp - centerxp) / rx;
     var vy1 = (pyp - centeryp) / ry;
     var vx2 = (-pxp - centerxp) / rx;
     var vy2 = (-pyp - centeryp) / ry;
-
     var ang1 = vectorAngle(1, 0, vx1, vy1);
     var ang2 = vectorAngle(vx1, vy1, vx2, vy2);
 
     if (sweepFlag === 0 && ang2 > 0) {
-        ang2 -= TAU;
+      ang2 -= TAU;
     }
 
     if (sweepFlag === 1 && ang2 < 0) {
-        ang2 += TAU;
+      ang2 += TAU;
     }
 
     return [centerx, centery, ang1, ang2];
-};
+  };
 
-var arcToBezier = function arcToBezier(_ref2) {
+  var arcToBezier = function arcToBezier(_ref2) {
     var px = _ref2.px,
         py = _ref2.py,
         cx = _ref2.cx,
@@ -27152,31 +28397,28 @@ var arcToBezier = function arcToBezier(_ref2) {
         largeArcFlag = _ref2$largeArcFlag === undefined ? 0 : _ref2$largeArcFlag,
         _ref2$sweepFlag = _ref2.sweepFlag,
         sweepFlag = _ref2$sweepFlag === undefined ? 0 : _ref2$sweepFlag;
-
     var curves = [];
 
     if (rx === 0 || ry === 0) {
-        return [];
+      return [];
     }
 
     var sinphi = Math.sin(xAxisRotation * TAU / 360);
     var cosphi = Math.cos(xAxisRotation * TAU / 360);
-
     var pxp = cosphi * (px - cx) / 2 + sinphi * (py - cy) / 2;
     var pyp = -sinphi * (px - cx) / 2 + cosphi * (py - cy) / 2;
 
     if (pxp === 0 && pyp === 0) {
-        return [];
+      return [];
     }
 
     rx = Math.abs(rx);
     ry = Math.abs(ry);
-
     var lambda = Math.pow(pxp, 2) / Math.pow(rx, 2) + Math.pow(pyp, 2) / Math.pow(ry, 2);
 
     if (lambda > 1) {
-        rx *= Math.sqrt(lambda);
-        ry *= Math.sqrt(lambda);
+      rx *= Math.sqrt(lambda);
+      ry *= Math.sqrt(lambda);
     }
 
     var _getArcCenter = getArcCenter(px, py, cx, cy, rx, ry, largeArcFlag, sweepFlag, sinphi, cosphi, pxp, pyp),
@@ -27187,116 +28429,129 @@ var arcToBezier = function arcToBezier(_ref2) {
         ang2 = _getArcCenter2[3];
 
     var segments = Math.max(Math.ceil(Math.abs(ang2) / (TAU / 4)), 1);
-
     ang2 /= segments;
 
     for (var i = 0; i < segments; i++) {
-        curves.push(approxUnitArc(ang1, ang2));
-        ang1 += ang2;
+      curves.push(approxUnitArc(ang1, ang2));
+      ang1 += ang2;
     }
 
     return curves.map(function (curve) {
-        var _mapToEllipse = mapToEllipse(curve[0], rx, ry, cosphi, sinphi, centerx, centery),
-            x1 = _mapToEllipse.x,
-            y1 = _mapToEllipse.y;
+      var _mapToEllipse = mapToEllipse(curve[0], rx, ry, cosphi, sinphi, centerx, centery),
+          x1 = _mapToEllipse.x,
+          y1 = _mapToEllipse.y;
 
-        var _mapToEllipse2 = mapToEllipse(curve[1], rx, ry, cosphi, sinphi, centerx, centery),
-            x2 = _mapToEllipse2.x,
-            y2 = _mapToEllipse2.y;
+      var _mapToEllipse2 = mapToEllipse(curve[1], rx, ry, cosphi, sinphi, centerx, centery),
+          x2 = _mapToEllipse2.x,
+          y2 = _mapToEllipse2.y;
 
-        var _mapToEllipse3 = mapToEllipse(curve[2], rx, ry, cosphi, sinphi, centerx, centery),
-            x = _mapToEllipse3.x,
-            y = _mapToEllipse3.y;
+      var _mapToEllipse3 = mapToEllipse(curve[2], rx, ry, cosphi, sinphi, centerx, centery),
+          x = _mapToEllipse3.x,
+          y = _mapToEllipse3.y;
 
-        return { x1: x1, y1: y1, x2: x2, y2: y2, x: x, y: y };
+      return {
+        x1: x1,
+        y1: y1,
+        x2: x2,
+        y2: y2,
+        x: x,
+        y: y
+      };
     });
-};
+  }; //https://github.com/jkroso/parse-svg-path/blob/master/index.js
 
-//https://github.com/jkroso/parse-svg-path/blob/master/index.js
-/**
- * expected argument lengths
- * @type {Object}
- */
+  /**
+   * expected argument lengths
+   * @type {Object}
+   */
 
-var length = { a: 7, c: 6, h: 1, l: 2, m: 2, q: 4, s: 4, t: 2, v: 1, z: 0
 
+  var length = {
+    a: 7,
+    c: 6,
+    h: 1,
+    l: 2,
+    m: 2,
+    q: 4,
+    s: 4,
+    t: 2,
+    v: 1,
+    z: 0
     /**
      * segment pattern
      * @type {RegExp}
      */
 
-};var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig;
+  };
+  var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig;
+  /**
+   * parse an svg path data string. Generates an Array
+   * of commands where each command is an Array of the
+   * form `[command, arg1, arg2, ...]`
+   *
+   * @param {String} path
+   * @return {Array}
+   */
 
-/**
- * parse an svg path data string. Generates an Array
- * of commands where each command is an Array of the
- * form `[command, arg1, arg2, ...]`
- *
- * @param {String} path
- * @return {Array}
- */
-
-function parse(path) {
+  function parse(path) {
     var data = [];
     path.replace(segment, function (_, command, args) {
-        var type = command.toLowerCase();
-        args = parseValues(args);
+      var type = command.toLowerCase();
+      args = parseValues(args); // overloaded moveTo
 
-        // overloaded moveTo
-        if (type == 'm' && args.length > 2) {
-            data.push([command].concat(args.splice(0, 2)));
-            type = 'l';
-            command = command == 'm' ? 'l' : 'L';
+      if (type == 'm' && args.length > 2) {
+        data.push([command].concat(args.splice(0, 2)));
+        type = 'l';
+        command = command == 'm' ? 'l' : 'L';
+      }
+
+      while (true) {
+        if (args.length == length[type]) {
+          args.unshift(command);
+          return data.push(args);
         }
 
-        while (true) {
-            if (args.length == length[type]) {
-                args.unshift(command);
-                return data.push(args);
-            }
-            if (args.length < length[type]) throw new Error('malformed path data');
-            data.push([command].concat(args.splice(0, length[type])));
-        }
+        if (args.length < length[type]) throw new Error('malformed path data');
+        data.push([command].concat(args.splice(0, length[type])));
+      }
     });
     return data;
-}
+  }
 
-var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig;
+  var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig;
 
-function parseValues(args) {
+  function parseValues(args) {
     var numbers = args.match(number);
     return numbers ? numbers.map(Number) : [];
-}
+  }
 
-function shapeBox(shape) {
+  function shapeBox(shape) {
     var minX = shape[0][0],
         minY = shape[0][1],
         maxX = minX,
         maxY = minY;
     shape.forEach(function (curve) {
-        var x1 = curve[0],
-            x2 = curve[2],
-            x3 = curve[4],
-            x4 = curve[6],
-            y1 = curve[1],
-            y2 = curve[3],
-            y3 = curve[5],
-            y4 = curve[7];
-
-        minX = Math.min(minX, x1, x2, x3, x4);
-        minY = Math.min(minY, y1, y2, y3, y4);
-        maxX = Math.max(maxX, x1, x2, x3, x4);
-        maxY = Math.max(maxY, y1, y2, y3, y4);
+      var x1 = curve[0],
+          x2 = curve[2],
+          x3 = curve[4],
+          x4 = curve[6],
+          y1 = curve[1],
+          y2 = curve[3],
+          y3 = curve[5],
+          y4 = curve[7];
+      minX = Math.min(minX, x1, x2, x3, x4);
+      minY = Math.min(minY, y1, y2, y3, y4);
+      maxX = Math.max(maxX, x1, x2, x3, x4);
+      maxY = Math.max(maxY, y1, y2, y3, y4);
     });
-
     return [minX, minY, maxX, maxY];
-}
+  }
 
-function boxDistance(boxA, boxB) {
+  function boxDistance(boxA, boxB) {
     return Math.sqrt(Math.pow(boxA[0] - boxB[0], 2) + Math.pow(boxA[1] - boxB[1], 2)) + Math.sqrt(Math.pow(boxA[2] - boxB[2], 2) + Math.pow(boxA[3] - boxB[3], 2));
-}
+  }
 
-function curveDistance(curveA, curveB) {
+  function curveDistance(curveA, curveB) {
     var x1 = curveA[0],
         x2 = curveA[2],
         x3 = curveA[4],
@@ -27313,126 +28568,126 @@ function curveDistance(curveA, curveB) {
         yb2 = curveB[3],
         yb3 = curveB[5],
         yb4 = curveB[7];
-
     return Math.sqrt(Math.pow(xb1 - x1, 2) + Math.pow(yb1 - y1, 2)) + Math.sqrt(Math.pow(xb2 - x2, 2) + Math.pow(yb2 - y2, 2)) + Math.sqrt(Math.pow(xb3 - x3, 2) + Math.pow(yb3 - y3, 2)) + Math.sqrt(Math.pow(xb4 - x4, 2) + Math.pow(yb4 - y4, 2));
-}
+  }
 
-function sortCurves(curvesA, curvesB) {
-
+  function sortCurves(curvesA, curvesB) {
     var arrList = permuteCurveNum(curvesA.length);
-
     var list = [];
     arrList.forEach(function (arr) {
-        var distance = 0;
-        var i = 0;
-        arr.forEach(function (index) {
-            distance += curveDistance(curvesA[index], curvesB[i++]);
-        });
-        list.push({ index: arr, distance: distance });
+      var distance = 0;
+      var i = 0;
+      arr.forEach(function (index) {
+        distance += curveDistance(curvesA[index], curvesB[i++]);
+      });
+      list.push({
+        index: arr,
+        distance: distance
+      });
     });
-
     list.sort(function (a, b) {
-        return a.distance - b.distance;
+      return a.distance - b.distance;
     });
-
     var result = [];
-
     list[0].index.forEach(function (index) {
-        result.push(curvesA[index]);
+      result.push(curvesA[index]);
     });
-
     return result;
-}
+  }
 
-function sort(pathA, pathB) {
-
+  function sort(pathA, pathB) {
     var arrList = permuteNum(pathA.length);
-
     var list = [];
     arrList.forEach(function (arr) {
-        var distance = 0;
-        arr.forEach(function (index) {
-            distance += boxDistance(shapeBox(pathA[index]), shapeBox(pathB[index]));
-        });
-        list.push({ index: arr, distance: distance });
+      var distance = 0;
+      arr.forEach(function (index) {
+        distance += boxDistance(shapeBox(pathA[index]), shapeBox(pathB[index]));
+      });
+      list.push({
+        index: arr,
+        distance: distance
+      });
     });
-
     list.sort(function (a, b) {
-        return a.distance - b.distance;
+      return a.distance - b.distance;
     });
-
     var result = [];
-
     list[0].index.forEach(function (index) {
-        result.push(pathA[index]);
+      result.push(pathA[index]);
     });
-
     return result;
-}
+  }
 
-function permuteCurveNum(num) {
+  function permuteCurveNum(num) {
     var arr = [];
 
     for (var i = 0; i < num; i++) {
-        var indexArr = [];
-        for (var j = 0; j < num; j++) {
-            var index = j + i;
-            if (index > num - 1) index -= num;
-            indexArr[index] = j;
-        }
+      var indexArr = [];
 
-        arr.push(indexArr);
+      for (var j = 0; j < num; j++) {
+        var index = j + i;
+        if (index > num - 1) index -= num;
+        indexArr[index] = j;
+      }
+
+      arr.push(indexArr);
     }
 
     return arr;
-}
+  }
 
-function permuteNum(num) {
+  function permuteNum(num) {
     var arr = [];
+
     for (var i = 0; i < num; i++) {
-        arr.push(i);
+      arr.push(i);
     }
 
     return permute(arr);
-}
+  }
 
-function permute(input) {
+  function permute(input) {
     var permArr = [],
         usedChars = [];
+
     function main(input) {
-        var i, ch;
-        for (i = 0; i < input.length; i++) {
-            ch = input.splice(i, 1)[0];
-            usedChars.push(ch);
-            if (input.length == 0) {
-                permArr.push(usedChars.slice());
-            }
-            main(input);
-            input.splice(i, 0, ch);
-            usedChars.pop();
+      var i, ch;
+
+      for (i = 0; i < input.length; i++) {
+        ch = input.splice(i, 1)[0];
+        usedChars.push(ch);
+
+        if (input.length == 0) {
+          permArr.push(usedChars.slice());
         }
-        return permArr;
+
+        main(input);
+        input.splice(i, 0, ch);
+        usedChars.pop();
+      }
+
+      return permArr;
     }
+
     return main(input);
-}
+  }
 
-var pasition = {};
-pasition.parser = parse;
+  var pasition = {};
+  pasition.parser = parse;
 
-pasition.lerpCurve = function (pathA, pathB, t) {
-
+  pasition.lerpCurve = function (pathA, pathB, t) {
     return pasition.lerpPoints(pathA[0], pathA[1], pathB[0], pathB[1], t).concat(pasition.lerpPoints(pathA[2], pathA[3], pathB[2], pathB[3], t)).concat(pasition.lerpPoints(pathA[4], pathA[5], pathB[4], pathB[5], t)).concat(pasition.lerpPoints(pathA[6], pathA[7], pathB[6], pathB[7], t));
-};
+  };
 
-pasition.lerpPoints = function (x1, y1, x2, y2, t) {
+  pasition.lerpPoints = function (x1, y1, x2, y2, t) {
     return [x1 + (x2 - x1) * t, y1 + (y2 - y1) * t];
-};
+  };
 
-pasition.q2b = function (x1, y1, x2, y2, x3, y3) {
+  pasition.q2b = function (x1, y1, x2, y2, x3, y3) {
     return [x1, y1, (x1 + 2 * x2) / 3, (y1 + 2 * y2) / 3, (x3 + 2 * x2) / 3, (y3 + 2 * y2) / 3, x3, y3];
-};
+  };
 
-pasition.path2shapes = function (path) {
+  pasition.path2shapes = function (path) {
     //https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths
     //M = moveto
     //L = lineto
@@ -27461,371 +28716,338 @@ pasition.path2shapes = function (path) {
         lastCurve = void 0;
 
     for (; j < len; j++) {
-        var item = cmds[j];
-        var action = item[0];
-        var preItem = cmds[j - 1];
+      var item = cmds[j];
+      var action = item[0];
+      var preItem = cmds[j - 1];
 
-        switch (action) {
-            case 'm':
-                sLen = shapes.length;
-                shapes[sLen] = [];
-                current = shapes[sLen];
-                preX = preX + item[1];
-                preY = preY + item[2];
-                break;
-            case 'M':
+      switch (action) {
+        case 'm':
+          sLen = shapes.length;
+          shapes[sLen] = [];
+          current = shapes[sLen];
+          preX = preX + item[1];
+          preY = preY + item[2];
+          break;
 
-                sLen = shapes.length;
-                shapes[sLen] = [];
-                current = shapes[sLen];
-                preX = item[1];
-                preY = item[2];
-                break;
+        case 'M':
+          sLen = shapes.length;
+          shapes[sLen] = [];
+          current = shapes[sLen];
+          preX = item[1];
+          preY = item[2];
+          break;
 
-            case 'l':
-                current.push([preX, preY, preX, preY, preX, preY, preX + item[1], preY + item[2]]);
-                preX += item[1];
-                preY += item[2];
-                break;
+        case 'l':
+          current.push([preX, preY, preX, preY, preX, preY, preX + item[1], preY + item[2]]);
+          preX += item[1];
+          preY += item[2];
+          break;
 
-            case 'L':
+        case 'L':
+          current.push([preX, preY, item[1], item[2], item[1], item[2], item[1], item[2]]);
+          preX = item[1];
+          preY = item[2];
+          break;
 
-                current.push([preX, preY, item[1], item[2], item[1], item[2], item[1], item[2]]);
-                preX = item[1];
-                preY = item[2];
+        case 'h':
+          current.push([preX, preY, preX, preY, preX, preY, preX + item[1], preY]);
+          preX += item[1];
+          break;
 
-                break;
+        case 'H':
+          current.push([preX, preY, item[1], preY, item[1], preY, item[1], preY]);
+          preX = item[1];
+          break;
 
-            case 'h':
+        case 'v':
+          current.push([preX, preY, preX, preY, preX, preY, preX, preY + item[1]]);
+          preY += item[1];
+          break;
 
-                current.push([preX, preY, preX, preY, preX, preY, preX + item[1], preY]);
-                preX += item[1];
-                break;
+        case 'V':
+          current.push([preX, preY, preX, item[1], preX, item[1], preX, item[1]]);
+          preY = item[1];
+          break;
 
-            case 'H':
-                current.push([preX, preY, item[1], preY, item[1], preY, item[1], preY]);
-                preX = item[1];
-                break;
+        case 'C':
+          current.push([preX, preY, item[1], item[2], item[3], item[4], item[5], item[6]]);
+          preX = item[5];
+          preY = item[6];
+          break;
 
-            case 'v':
-                current.push([preX, preY, preX, preY, preX, preY, preX, preY + item[1]]);
-                preY += item[1];
-                break;
+        case 'S':
+          if (preItem[0] === 'C' || preItem[0] === 'c') {
+            current.push([preX, preY, preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], item[1], item[2], item[3], item[4]]);
+          } else if (preItem[0] === 'S' || preItem[0] === 's') {
+            current.push([preX, preY, preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], item[1], item[2], item[3], item[4]]);
+          }
 
-            case 'V':
-                current.push([preX, preY, preX, item[1], preX, item[1], preX, item[1]]);
-                preY = item[1];
-                break;
+          preX = item[3];
+          preY = item[4];
+          break;
 
-            case 'C':
+        case 'c':
+          current.push([preX, preY, preX + item[1], preY + item[2], preX + item[3], preY + item[4], preX + item[5], preY + item[6]]);
+          preX = preX + item[5];
+          preY = preY + item[6];
+          break;
 
-                current.push([preX, preY, item[1], item[2], item[3], item[4], item[5], item[6]]);
-                preX = item[5];
-                preY = item[6];
-                break;
-            case 'S':
-                if (preItem[0] === 'C' || preItem[0] === 'c') {
-                    current.push([preX, preY, preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], item[1], item[2], item[3], item[4]]);
-                } else if (preItem[0] === 'S' || preItem[0] === 's') {
-                    current.push([preX, preY, preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], item[1], item[2], item[3], item[4]]);
-                }
-                preX = item[3];
-                preY = item[4];
-                break;
+        case 's':
+          if (preItem[0] === 'C' || preItem[0] === 'c') {
+            current.push([preX, preY, preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], preX + item[1], preY + item[2], preX + item[3], preY + item[4]]);
+          } else if (preItem[0] === 'S' || preItem[0] === 's') {
+            current.push([preX, preY, preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], preX + item[1], preY + item[2], preX + item[3], preY + item[4]]);
+          }
 
-            case 'c':
-                current.push([preX, preY, preX + item[1], preY + item[2], preX + item[3], preY + item[4], preX + item[5], preY + item[6]]);
-                preX = preX + item[5];
-                preY = preY + item[6];
-                break;
-            case 's':
-                if (preItem[0] === 'C' || preItem[0] === 'c') {
+          preX = preX + item[3];
+          preY = preY + item[4];
+          break;
 
-                    current.push([preX, preY, preX + preItem[5] - preItem[3], preY + preItem[6] - preItem[4], preX + item[1], preY + item[2], preX + item[3], preY + item[4]]);
-                } else if (preItem[0] === 'S' || preItem[0] === 's') {
-                    current.push([preX, preY, preX + preItem[3] - preItem[1], preY + preItem[4] - preItem[2], preX + item[1], preY + item[2], preX + item[3], preY + item[4]]);
-                }
+        case 'a':
+          curves = arcToBezier({
+            rx: item[1],
+            ry: item[2],
+            px: preX,
+            py: preY,
+            xAxisRotation: item[3],
+            largeArcFlag: item[4],
+            sweepFlag: item[5],
+            cx: preX + item[6],
+            cy: preY + item[7]
+          });
+          lastCurve = curves[curves.length - 1];
+          curves.forEach(function (curve, index) {
+            if (index === 0) {
+              current.push([preX, preY, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
+            } else {
+              current.push([curves[index - 1].x, curves[index - 1].y, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
+            }
+          });
+          preX = lastCurve.x;
+          preY = lastCurve.y;
+          break;
 
-                preX = preX + item[3];
-                preY = preY + item[4];
+        case 'A':
+          curves = arcToBezier({
+            rx: item[1],
+            ry: item[2],
+            px: preX,
+            py: preY,
+            xAxisRotation: item[3],
+            largeArcFlag: item[4],
+            sweepFlag: item[5],
+            cx: item[6],
+            cy: item[7]
+          });
+          lastCurve = curves[curves.length - 1];
+          curves.forEach(function (curve, index) {
+            if (index === 0) {
+              current.push([preX, preY, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
+            } else {
+              current.push([curves[index - 1].x, curves[index - 1].y, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
+            }
+          });
+          preX = lastCurve.x;
+          preY = lastCurve.y;
+          break;
 
-                break;
-            case 'a':
-                curves = arcToBezier({
-                    rx: item[1],
-                    ry: item[2],
-                    px: preX,
-                    py: preY,
-                    xAxisRotation: item[3],
-                    largeArcFlag: item[4],
-                    sweepFlag: item[5],
-                    cx: preX + item[6],
-                    cy: preY + item[7]
-                });
-                lastCurve = curves[curves.length - 1];
+        case 'Q':
+          current.push(pasition.q2b(preX, preY, item[1], item[2], item[3], item[4]));
+          preX = item[3];
+          preY = item[4];
+          break;
 
-                curves.forEach(function (curve, index) {
-                    if (index === 0) {
-                        current.push([preX, preY, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
-                    } else {
-                        current.push([curves[index - 1].x, curves[index - 1].y, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
-                    }
-                });
+        case 'q':
+          current.push(pasition.q2b(preX, preY, preX + item[1], preY + item[2], item[3] + preX, item[4] + preY));
+          preX += item[3];
+          preY += item[4];
+          break;
 
-                preX = lastCurve.x;
-                preY = lastCurve.y;
+        case 'T':
+          if (preItem[0] === 'Q' || preItem[0] === 'q') {
+            preCX = preX + preItem[3] - preItem[1];
+            preCY = preY + preItem[4] - preItem[2];
+            current.push(pasition.q2b(preX, preY, preCX, preCY, item[1], item[2]));
+          } else if (preItem[0] === 'T' || preItem[0] === 't') {
+            current.push(pasition.q2b(preX, preY, preX + preX - preCX, preY + preY - preCY, item[1], item[2]));
+            preCX = preX + preX - preCX;
+            preCY = preY + preY - preCY;
+          }
 
-                break;
+          preX = item[1];
+          preY = item[2];
+          break;
 
-            case 'A':
+        case 't':
+          if (preItem[0] === 'Q' || preItem[0] === 'q') {
+            preCX = preX + preItem[3] - preItem[1];
+            preCY = preY + preItem[4] - preItem[2];
+            current.push(pasition.q2b(preX, preY, preCX, preCY, preX + item[1], preY + item[2]));
+          } else if (preItem[0] === 'T' || preItem[0] === 't') {
+            current.push(pasition.q2b(preX, preY, preX + preX - preCX, preY + preY - preCY, preX + item[1], preY + item[2]));
+            preCX = preX + preX - preCX;
+            preCY = preY + preY - preCY;
+          }
 
-                curves = arcToBezier({
-                    rx: item[1],
-                    ry: item[2],
-                    px: preX,
-                    py: preY,
-                    xAxisRotation: item[3],
-                    largeArcFlag: item[4],
-                    sweepFlag: item[5],
-                    cx: item[6],
-                    cy: item[7]
-                });
-                lastCurve = curves[curves.length - 1];
+          preX += item[1];
+          preY += item[2];
+          break;
 
-                curves.forEach(function (curve, index) {
-                    if (index === 0) {
-                        current.push([preX, preY, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
-                    } else {
-                        current.push([curves[index - 1].x, curves[index - 1].y, curve.x1, curve.y1, curve.x2, curve.y2, curve.x, curve.y]);
-                    }
-                });
+        case 'Z':
+          closeX = current[0][0];
+          closeY = current[0][1];
+          current.push([preX, preY, closeX, closeY, closeX, closeY, closeX, closeY]);
+          break;
 
-                preX = lastCurve.x;
-                preY = lastCurve.y;
-
-                break;
-            case 'Q':
-                current.push(pasition.q2b(preX, preY, item[1], item[2], item[3], item[4]));
-                preX = item[3];
-                preY = item[4];
-
-                break;
-            case 'q':
-                current.push(pasition.q2b(preX, preY, preX + item[1], preY + item[2], item[3] + preX, item[4] + preY));
-                preX += item[3];
-                preY += item[4];
-                break;
-
-            case 'T':
-
-                if (preItem[0] === 'Q' || preItem[0] === 'q') {
-                    preCX = preX + preItem[3] - preItem[1];
-                    preCY = preY + preItem[4] - preItem[2];
-                    current.push(pasition.q2b(preX, preY, preCX, preCY, item[1], item[2]));
-                } else if (preItem[0] === 'T' || preItem[0] === 't') {
-                    current.push(pasition.q2b(preX, preY, preX + preX - preCX, preY + preY - preCY, item[1], item[2]));
-                    preCX = preX + preX - preCX;
-                    preCY = preY + preY - preCY;
-                }
-
-                preX = item[1];
-                preY = item[2];
-                break;
-
-            case 't':
-                if (preItem[0] === 'Q' || preItem[0] === 'q') {
-                    preCX = preX + preItem[3] - preItem[1];
-                    preCY = preY + preItem[4] - preItem[2];
-                    current.push(pasition.q2b(preX, preY, preCX, preCY, preX + item[1], preY + item[2]));
-                } else if (preItem[0] === 'T' || preItem[0] === 't') {
-                    current.push(pasition.q2b(preX, preY, preX + preX - preCX, preY + preY - preCY, preX + item[1], preY + item[2]));
-                    preCX = preX + preX - preCX;
-                    preCY = preY + preY - preCY;
-                }
-
-                preX += item[1];
-                preY += item[2];
-                break;
-
-            case 'Z':
-                closeX = current[0][0];
-                closeY = current[0][1];
-                current.push([preX, preY, closeX, closeY, closeX, closeY, closeX, closeY]);
-                break;
-            case 'z':
-                closeX = current[0][0];
-                closeY = current[0][1];
-                current.push([preX, preY, closeX, closeY, closeX, closeY, closeX, closeY]);
-                break;
-        }
+        case 'z':
+          closeX = current[0][0];
+          closeY = current[0][1];
+          current.push([preX, preY, closeX, closeY, closeX, closeY, closeX, closeY]);
+          break;
+      }
     }
 
     return shapes;
-};
+  };
 
-pasition._upCurves = function (curves, count) {
+  pasition._upCurves = function (curves, count) {
     var i = 0,
         index = 0,
         len = curves.length;
+
     for (; i < count; i++) {
-        curves.push(curves[index].slice(0));
-        index++;
-        if (index > len - 1) {
-            index -= len;
-        }
+      curves.push(curves[index].slice(0));
+      index++;
+
+      if (index > len - 1) {
+        index -= len;
+      }
     }
-};
+  };
 
-function split(x1, y1, x2, y2, x3, y3, x4, y4, t) {
+  function split(x1, y1, x2, y2, x3, y3, x4, y4, t) {
     return {
-        left: _split(x1, y1, x2, y2, x3, y3, x4, y4, t),
-        right: _split(x4, y4, x3, y3, x2, y2, x1, y1, 1 - t, true)
+      left: _split(x1, y1, x2, y2, x3, y3, x4, y4, t),
+      right: _split(x4, y4, x3, y3, x2, y2, x1, y1, 1 - t, true)
     };
-}
+  }
 
-function _split(x1, y1, x2, y2, x3, y3, x4, y4, t, reverse) {
-
+  function _split(x1, y1, x2, y2, x3, y3, x4, y4, t, reverse) {
     var x12 = (x2 - x1) * t + x1;
     var y12 = (y2 - y1) * t + y1;
-
     var x23 = (x3 - x2) * t + x2;
     var y23 = (y3 - y2) * t + y2;
-
     var x34 = (x4 - x3) * t + x3;
     var y34 = (y4 - y3) * t + y3;
-
     var x123 = (x23 - x12) * t + x12;
     var y123 = (y23 - y12) * t + y12;
-
     var x234 = (x34 - x23) * t + x23;
     var y234 = (y34 - y23) * t + y23;
-
     var x1234 = (x234 - x123) * t + x123;
     var y1234 = (y234 - y123) * t + y123;
 
     if (reverse) {
-        return [x1234, y1234, x123, y123, x12, y12, x1, y1];
+      return [x1234, y1234, x123, y123, x12, y12, x1, y1];
     }
-    return [x1, y1, x12, y12, x123, y123, x1234, y1234];
-}
 
-pasition._splitCurves = function (curves, count) {
+    return [x1, y1, x12, y12, x123, y123, x1234, y1234];
+  }
+
+  pasition._splitCurves = function (curves, count) {
     var i = 0,
         index = 0;
 
     for (; i < count; i++) {
-        var curve = curves[index];
-        var cs = split(curve[0], curve[1], curve[2], curve[3], curve[4], curve[5], curve[6], curve[7], 0.5);
-        curves.splice(index, 1);
-        curves.splice(index, 0, cs.left, cs.right);
+      var curve = curves[index];
+      var cs = split(curve[0], curve[1], curve[2], curve[3], curve[4], curve[5], curve[6], curve[7], 0.5);
+      curves.splice(index, 1);
+      curves.splice(index, 0, cs.left, cs.right);
+      index += 2;
 
-        index += 2;
-        if (index >= curves.length - 1) {
-            index = 0;
-        }
+      if (index >= curves.length - 1) {
+        index = 0;
+      }
     }
-};
+  };
 
-pasition._upShapes = function (shapes, count) {
+  function sync(shapes, count) {
     var _loop = function _loop(i) {
-        var shape = shapes[shapes.length - 1];
-        var newShape = [];
-
-        shape.forEach(function (curve) {
-            newShape.push(curve.slice(0));
-        });
-        shapes.push(newShape);
+      var shape = shapes[shapes.length - 1];
+      var newShape = [];
+      shape.forEach(function (curve) {
+        newShape.push(curve.slice(0));
+      });
+      shapes.push(newShape);
     };
 
     for (var i = 0; i < count; i++) {
-        _loop(i);
+      _loop(i);
     }
-};
+  }
 
-pasition._subShapes = function (shapes, count) {
-    var _loop2 = function _loop2(i) {
-        var shape = shapes[shapes.length - 1];
-        var newShape = [];
-        var x = shape[0][0],
-            y = shape[0][1];
-        shape.forEach(function () {
-            newShape.push([x, y, x, y, x, y, x, y]);
-        });
-
-        shapes.push(newShape);
-    };
-
-    for (var i = 0; i < count; i++) {
-        _loop2(i);
-    }
-};
-
-pasition.lerp = function (pathA, pathB, t) {
+  pasition.lerp = function (pathA, pathB, t) {
     return pasition._lerp(pasition.path2shapes(pathA), pasition.path2shapes(pathB), t);
-};
+  };
 
-pasition.MIM_CURVES_COUNT = 100;
+  pasition.MIM_CURVES_COUNT = 100;
 
-pasition._preprocessing = function (pathA, pathB) {
-
+  pasition._preprocessing = function (pathA, pathB) {
     var lenA = pathA.length,
         lenB = pathB.length,
         clonePathA = JSON.parse(JSON.stringify(pathA)),
         clonePathB = JSON.parse(JSON.stringify(pathB));
 
     if (lenA > lenB) {
-        pasition._subShapes(clonePathB, lenA - lenB);
+      sync(clonePathB, lenA - lenB);
     } else if (lenA < lenB) {
-        pasition._upShapes(clonePathA, lenB - lenA);
+      sync(clonePathA, lenB - lenA);
     }
 
     clonePathA = sort(clonePathA, clonePathB);
-
     clonePathA.forEach(function (curves, index) {
+      var lenA = curves.length,
+          lenB = clonePathB[index].length;
 
-        var lenA = curves.length,
-            lenB = clonePathB[index].length;
+      if (lenA > lenB) {
+        if (lenA < pasition.MIM_CURVES_COUNT) {
+          pasition._splitCurves(curves, pasition.MIM_CURVES_COUNT - lenA);
 
-        if (lenA > lenB) {
-            if (lenA < pasition.MIM_CURVES_COUNT) {
-                pasition._splitCurves(curves, pasition.MIM_CURVES_COUNT - lenA);
-                pasition._splitCurves(clonePathB[index], pasition.MIM_CURVES_COUNT - lenB);
-            } else {
-                pasition._splitCurves(clonePathB[index], lenA - lenB);
-            }
-        } else if (lenA < lenB) {
-            if (lenB < pasition.MIM_CURVES_COUNT) {
-                pasition._splitCurves(curves, pasition.MIM_CURVES_COUNT - lenA);
-                pasition._splitCurves(clonePathB[index], pasition.MIM_CURVES_COUNT - lenB);
-            } else {
-                pasition._splitCurves(curves, lenB - lenA);
-            }
+          pasition._splitCurves(clonePathB[index], pasition.MIM_CURVES_COUNT - lenB);
+        } else {
+          pasition._splitCurves(clonePathB[index], lenA - lenB);
         }
-    });
+      } else if (lenA < lenB) {
+        if (lenB < pasition.MIM_CURVES_COUNT) {
+          pasition._splitCurves(curves, pasition.MIM_CURVES_COUNT - lenA);
 
+          pasition._splitCurves(clonePathB[index], pasition.MIM_CURVES_COUNT - lenB);
+        } else {
+          pasition._splitCurves(curves, lenB - lenA);
+        }
+      }
+    });
     clonePathA.forEach(function (curves, index) {
-        clonePathA[index] = sortCurves(curves, clonePathB[index]);
+      clonePathA[index] = sortCurves(curves, clonePathB[index]);
     });
-
     return [clonePathA, clonePathB];
-};
+  };
 
-pasition._lerp = function (pathA, pathB, t) {
-
+  pasition._lerp = function (pathA, pathB, t) {
     var shapes = [];
     pathA.forEach(function (curves, index) {
-        var newCurves = [];
-        curves.forEach(function (curve, curveIndex) {
-            newCurves.push(pasition.lerpCurve(curve, pathB[index][curveIndex], t));
-        });
-        shapes.push(newCurves);
+      var newCurves = [];
+      curves.forEach(function (curve, curveIndex) {
+        newCurves.push(pasition.lerpCurve(curve, pathB[index][curveIndex], t));
+      });
+      shapes.push(newCurves);
     });
     return shapes;
-};
+  };
 
-pasition.animate = function (option) {
+  pasition.animate = function (option) {
     var pathA = pasition.path2shapes(option.from);
     var pathB = pasition.path2shapes(option.to);
+
     var pathArr = pasition._preprocessing(pathA, pathB);
 
     var beginTime = new Date(),
@@ -27833,7 +29055,7 @@ pasition.animate = function (option) {
         progress = option.progress || function () {},
         begin = option.begin || function () {},
         easing = option.easing || function (v) {
-        return v;
+      return v;
     },
         tickId = null,
         outShape = null,
@@ -27842,26 +29064,27 @@ pasition.animate = function (option) {
     begin(pathA);
 
     var tick = function tick() {
-        var dt = new Date() - beginTime;
-        if (dt >= time) {
-            outShape = pathB;
-            progress(outShape, 1);
-            end(outShape);
-            cancelAnimationFrame(tickId);
-            return;
-        }
-        var percent = easing(dt / time);
-        outShape = pasition._lerp(pathArr[0], pathArr[1], percent);
-        progress(outShape, percent);
-        tickId = requestAnimationFrame(tick);
+      var dt = new Date() - beginTime;
+
+      if (dt >= time) {
+        outShape = pathB;
+        progress(outShape, 1);
+        end(outShape);
+        cancelAnimationFrame(tickId);
+        return;
+      }
+
+      var percent = easing(dt / time);
+      outShape = pasition._lerp(pathArr[0], pathArr[1], percent);
+      progress(outShape, percent);
+      tickId = requestAnimationFrame(tick);
     };
+
     tick();
-};
+  };
 
-return pasition;
-
-})));
-
+  return pasition;
+});
 
 /***/ }),
 /* 235 */
@@ -30334,188 +31557,197 @@ function compile(query) {
 "use strict";
 
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 module.exports = CSSselect;
 
 var DomUtils = __webpack_require__(261);
+
 var falseFunc = __webpack_require__(280).falseFunc;
+
 var compileRaw = __webpack_require__(281);
 
 function wrapCompile(func) {
-    return function addAdapter(selector, options, context) {
-        options = options || {};
-        options.adapter = options.adapter || DomUtils;
-
-        return func(selector, options, context);
-    };
+  return function addAdapter(selector, options, context) {
+    options = options || {};
+    options.adapter = options.adapter || DomUtils;
+    return func(selector, options, context);
+  };
 }
 
 var compile = wrapCompile(compileRaw);
 var compileUnsafe = wrapCompile(compileRaw.compileUnsafe);
 
 function getSelectorFunc(searchFunc) {
-    return function select(query, elems, options) {
-        options = options || {};
-        options.adapter = options.adapter || DomUtils;
+  return function select(query, elems, options) {
+    options = options || {};
+    options.adapter = options.adapter || DomUtils;
 
-        if (typeof query !== "function") {
-            query = compileUnsafe(query, options, elems);
-        }
-        if (query.shouldTestNextSiblings) {
-            elems = appendNextSiblings((options && options.context) || elems, options.adapter);
-        }
-        if (!Array.isArray(elems)) elems = options.adapter.getChildren(elems);
-        else elems = options.adapter.removeSubsets(elems);
-        return searchFunc(query, elems, options);
-    };
+    if (typeof query !== "function") {
+      query = compileUnsafe(query, options, elems);
+    }
+
+    if (query.shouldTestNextSiblings) {
+      elems = appendNextSiblings(options && options.context || elems, options.adapter);
+    }
+
+    if (!Array.isArray(elems)) elems = options.adapter.getChildren(elems);else elems = options.adapter.removeSubsets(elems);
+    return searchFunc(query, elems, options);
+  };
 }
 
 function getNextSiblings(elem, adapter) {
-    var siblings = adapter.getSiblings(elem);
-    if (!Array.isArray(siblings)) return [];
-    siblings = siblings.slice(0);
-    while (siblings.shift() !== elem);
-    return siblings;
+  var siblings = adapter.getSiblings(elem);
+  if (!Array.isArray(siblings)) return [];
+  siblings = siblings.slice(0);
+
+  while (siblings.shift() !== elem);
+
+  return siblings;
 }
 
 function appendNextSiblings(elems, adapter) {
-    // Order matters because jQuery seems to check the children before the siblings
-    if (!Array.isArray(elems)) elems = [elems];
-    var newElems = elems.slice(0);
+  // Order matters because jQuery seems to check the children before the siblings
+  if (!Array.isArray(elems)) elems = [elems];
+  var newElems = elems.slice(0);
 
-    for (var i = 0, len = elems.length; i < len; i++) {
-        var nextSiblings = getNextSiblings(newElems[i], adapter);
-        newElems.push.apply(newElems, nextSiblings);
-    }
-    return newElems;
+  for (var i = 0, len = elems.length; i < len; i++) {
+    var nextSiblings = getNextSiblings(newElems[i], adapter);
+    newElems.push.apply(newElems, nextSiblings);
+  }
+
+  return newElems;
 }
 
 var selectAll = getSelectorFunc(function selectAll(query, elems, options) {
-    return query === falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems);
+  return query === falseFunc || !elems || elems.length === 0 ? [] : options.adapter.findAll(query, elems);
 });
-
 var selectOne = getSelectorFunc(function selectOne(query, elems, options) {
-    return query === falseFunc || !elems || elems.length === 0 ? null : options.adapter.findOne(query, elems);
+  return query === falseFunc || !elems || elems.length === 0 ? null : options.adapter.findOne(query, elems);
 });
 
 function is(elem, query, options) {
-    options = options || {};
-    options.adapter = options.adapter || DomUtils;
-    return (typeof query === "function" ? query : compile(query, options))(elem);
+  options = options || {};
+  options.adapter = options.adapter || DomUtils;
+  return (typeof query === "function" ? query : compile(query, options))(elem);
 }
-
 /*
 	the exported interface
 */
+
+
 function CSSselect(query, elems, options) {
-    return selectAll(query, elems, options);
+  return selectAll(query, elems, options);
 }
 
 CSSselect.compile = compile;
 CSSselect.filters = compileRaw.Pseudos.filters;
 CSSselect.pseudos = compileRaw.Pseudos.pseudos;
-
 CSSselect.selectAll = selectAll;
 CSSselect.selectOne = selectOne;
+CSSselect.is = is; //legacy methods (might be removed)
 
-CSSselect.is = is;
-
-//legacy methods (might be removed)
 CSSselect.parse = compile;
-CSSselect.iterate = selectAll;
+CSSselect.iterate = selectAll; //hooks
 
-//hooks
 CSSselect._compileUnsafe = compileUnsafe;
 CSSselect._compileToken = compileRaw.compileToken;
-
 
 /***/ }),
 /* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var DomUtils = module.exports;
-
-[
-	__webpack_require__(262),
-	__webpack_require__(275),
-	__webpack_require__(276),
-	__webpack_require__(277),
-	__webpack_require__(278),
-	__webpack_require__(279)
-].forEach(function(ext){
-	Object.keys(ext).forEach(function(key){
-		DomUtils[key] = ext[key].bind(DomUtils);
-	});
+[__webpack_require__(262), __webpack_require__(275), __webpack_require__(276), __webpack_require__(277), __webpack_require__(278), __webpack_require__(279)].forEach(function (ext) {
+  Object.keys(ext).forEach(function (key) {
+    DomUtils[key] = ext[key].bind(DomUtils);
+  });
 });
-
 
 /***/ }),
 /* 262 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var ElementType = __webpack_require__(263),
     getOuterHTML = __webpack_require__(264),
     isTag = ElementType.isTag;
 
 module.exports = {
-	getInnerHTML: getInnerHTML,
-	getOuterHTML: getOuterHTML,
-	getText: getText
+  getInnerHTML: getInnerHTML,
+  getOuterHTML: getOuterHTML,
+  getText: getText
 };
 
-function getInnerHTML(elem, opts){
-	return elem.children ? elem.children.map(function(elem){
-		return getOuterHTML(elem, opts);
-	}).join("") : "";
+function getInnerHTML(elem, opts) {
+  return elem.children ? elem.children.map(function (elem) {
+    return getOuterHTML(elem, opts);
+  }).join("") : "";
 }
 
-function getText(elem){
-	if(Array.isArray(elem)) return elem.map(getText).join("");
-	if(isTag(elem)) return elem.name === "br" ? "\n" : getText(elem.children);
-	if(elem.type === ElementType.CDATA) return getText(elem.children);
-	if(elem.type === ElementType.Text) return elem.data;
-	return "";
+function getText(elem) {
+  if (Array.isArray(elem)) return elem.map(getText).join("");
+  if (isTag(elem)) return elem.name === "br" ? "\n" : getText(elem.children);
+  if (elem.type === ElementType.CDATA) return getText(elem.children);
+  if (elem.type === ElementType.Text) return elem.data;
+  return "";
 }
-
 
 /***/ }),
 /* 263 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 //Types of elements found in the DOM
 module.exports = {
-	Text: "text", //Text
-	Directive: "directive", //<? ... ?>
-	Comment: "comment", //<!-- ... -->
-	Script: "script", //<script> tags
-	Style: "style", //<style> tags
-	Tag: "tag", //Any tag
-	CDATA: "cdata", //<![CDATA[ ... ]]>
-	Doctype: "doctype",
-
-	isTag: function(elem){
-		return elem.type === "tag" || elem.type === "script" || elem.type === "style";
-	}
+  Text: "text",
+  //Text
+  Directive: "directive",
+  //<? ... ?>
+  Comment: "comment",
+  //<!-- ... -->
+  Script: "script",
+  //<script> tags
+  Style: "style",
+  //<style> tags
+  Tag: "tag",
+  //Any tag
+  CDATA: "cdata",
+  //<![CDATA[ ... ]]>
+  Doctype: "doctype",
+  isTag: function (elem) {
+    return elem.type === "tag" || elem.type === "script" || elem.type === "style";
+  }
 };
-
 
 /***/ }),
 /* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 /*
   Module dependencies
 */
 var ElementType = __webpack_require__(265);
-var entities = __webpack_require__(266);
 
+var entities = __webpack_require__(266);
 /* mixed-case SVG and MathML tags & attributes
    recognized by the HTML parser, see
    https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inforeign
 */
-var foreignNames = __webpack_require__(274);
-foreignNames.elementNames.__proto__ = null; /* use as a simple dictionary */
-foreignNames.attributeNames.__proto__ = null;
 
+
+var foreignNames = __webpack_require__(274);
+
+foreignNames.elementNames.__proto__ = null;
+/* use as a simple dictionary */
+
+foreignNames.attributeNames.__proto__ = null;
 var unencodedElements = {
   __proto__: null,
   style: true,
@@ -30527,19 +31759,18 @@ var unencodedElements = {
   plaintext: true,
   noscript: true
 };
-
 /*
   Format attributes
 */
+
 function formatAttrs(attributes, opts) {
   if (!attributes) return;
-
   var output = '';
-  var value;
+  var value; // Loop through the attributes
 
-  // Loop through the attributes
   for (var key in attributes) {
     value = attributes[key];
+
     if (output) {
       output += ' ';
     }
@@ -30548,23 +31779,21 @@ function formatAttrs(attributes, opts) {
       /* fix up mixed-case attribute names */
       key = foreignNames.attributeNames[key] || key;
     }
+
     output += key;
-    if ((value !== null && value !== '') || opts.xmlMode) {
-      output +=
-        '="' +
-        (opts.decodeEntities
-          ? entities.encodeXML(value)
-          : value.replace(/\"/g, '&quot;')) +
-        '"';
+
+    if (value !== null && value !== '' || opts.xmlMode) {
+      output += '="' + (opts.decodeEntities ? entities.encodeXML(value) : value.replace(/\"/g, '&quot;')) + '"';
     }
   }
 
   return output;
 }
-
 /*
   Self-enclosing tags (stolen from node-htmlparser)
 */
+
+
 var singleTag = {
   __proto__: null,
   area: true,
@@ -30588,38 +31817,20 @@ var singleTag = {
   wbr: true
 };
 
-var render = (module.exports = function(dom, opts) {
+var render = module.exports = function (dom, opts) {
   if (!Array.isArray(dom) && !dom.cheerio) dom = [dom];
   opts = opts || {};
-
   var output = '';
 
   for (var i = 0; i < dom.length; i++) {
     var elem = dom[i];
-
-    if (elem.type === 'root') output += render(elem.children, opts);
-    else if (ElementType.isTag(elem)) output += renderTag(elem, opts);
-    else if (elem.type === ElementType.Directive)
-      output += renderDirective(elem);
-    else if (elem.type === ElementType.Comment) output += renderComment(elem);
-    else if (elem.type === ElementType.CDATA) output += renderCdata(elem);
-    else output += renderText(elem, opts);
+    if (elem.type === 'root') output += render(elem.children, opts);else if (ElementType.isTag(elem)) output += renderTag(elem, opts);else if (elem.type === ElementType.Directive) output += renderDirective(elem);else if (elem.type === ElementType.Comment) output += renderComment(elem);else if (elem.type === ElementType.CDATA) output += renderCdata(elem);else output += renderText(elem, opts);
   }
 
   return output;
-});
+};
 
-const foreignModeIntegrationPoints = [
-  'mi',
-  'mo',
-  'mn',
-  'ms',
-  'mtext',
-  'annotation-xml',
-  'foreignObject',
-  'desc',
-  'title'
-];
+var foreignModeIntegrationPoints = ['mi', 'mo', 'mn', 'ms', 'mtext', 'annotation-xml', 'foreignObject', 'desc', 'title'];
 
 function renderTag(elem, opts) {
   // Handle SVG / MathML in HTML
@@ -30627,14 +31838,16 @@ function renderTag(elem, opts) {
     /* fix up mixed-case element names */
     elem.name = foreignNames.elementNames[elem.name] || elem.name;
     /* exit foreign mode at integration points */
-    if (
-      elem.parent &&
-      foreignModeIntegrationPoints.indexOf(elem.parent.name) >= 0
-    )
-      opts = Object.assign({}, opts, { xmlMode: false });
+
+    if (elem.parent && foreignModeIntegrationPoints.indexOf(elem.parent.name) >= 0) opts = Object.assign({}, opts, {
+      xmlMode: false
+    });
   }
+
   if (!opts.xmlMode && ['svg', 'math'].indexOf(elem.name) >= 0) {
-    opts = Object.assign({}, opts, { xmlMode: 'foreign' });
+    opts = Object.assign({}, opts, {
+      xmlMode: 'foreign'
+    });
   }
 
   var tag = '<' + elem.name;
@@ -30648,6 +31861,7 @@ function renderTag(elem, opts) {
     tag += '/>';
   } else {
     tag += '>';
+
     if (elem.children) {
       tag += render(elem.children, opts);
     }
@@ -30665,13 +31879,9 @@ function renderDirective(elem) {
 }
 
 function renderText(elem, opts) {
-  var data = elem.data || '';
+  var data = elem.data || ''; // if entities weren't decoded, no need to encode them back
 
-  // if entities weren't decoded, no need to encode them back
-  if (
-    opts.decodeEntities &&
-    !(elem.parent && elem.parent.name in unencodedElements)
-  ) {
+  if (opts.decodeEntities && !(elem.parent && elem.parent.name in unencodedElements)) {
     data = entities.encodeXML(data);
   }
 
@@ -30686,35 +31896,67 @@ function renderComment(elem) {
   return '<!--' + elem.data + '-->';
 }
 
-
 /***/ }),
 /* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 /**
  * Tests whether an element is a tag or not.
  *
  * @param elem Element to test
  */
-function isTag(elem) {
-    return (elem.type === "tag" /* Tag */ ||
-        elem.type === "script" /* Script */ ||
-        elem.type === "style" /* Style */);
-}
-exports.isTag = isTag;
-// Exports for backwards compatibility
-exports.Text = "text" /* Text */; //Text
-exports.Directive = "directive" /* Directive */; //<? ... ?>
-exports.Comment = "comment" /* Comment */; //<!-- ... -->
-exports.Script = "script" /* Script */; //<script> tags
-exports.Style = "style" /* Style */; //<style> tags
-exports.Tag = "tag" /* Tag */; //Any tag
-exports.CDATA = "cdata" /* CDATA */; //<![CDATA[ ... ]]>
-exports.Doctype = "doctype" /* Doctype */;
 
+function isTag(elem) {
+  return elem.type === "tag"
+  /* Tag */
+  || elem.type === "script"
+  /* Script */
+  || elem.type === "style"
+  /* Style */
+  ;
+}
+
+exports.isTag = isTag; // Exports for backwards compatibility
+
+exports.Text = "text"
+/* Text */
+; //Text
+
+exports.Directive = "directive"
+/* Directive */
+; //<? ... ?>
+
+exports.Comment = "comment"
+/* Comment */
+; //<!-- ... -->
+
+exports.Script = "script"
+/* Script */
+; //<script> tags
+
+exports.Style = "style"
+/* Style */
+; //<style> tags
+
+exports.Tag = "tag"
+/* Tag */
+; //Any tag
+
+exports.CDATA = "cdata"
+/* CDATA */
+; //<![CDATA[ ... ]]>
+
+exports.Doctype = "doctype"
+/* Doctype */
+;
 
 /***/ }),
 /* 266 */
@@ -30722,39 +31964,74 @@ exports.Doctype = "doctype" /* Doctype */;
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", { value: true });
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var decode_1 = __webpack_require__(267);
+
 var encode_1 = __webpack_require__(273);
+/**
+ * Decodes a string with entities.
+ *
+ * @param data String to decode.
+ * @param level Optional level to decode at. 0 = XML, 1 = HTML. Default is 0.
+ */
+
+
 function decode(data, level) {
-    return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTML)(data);
+  return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTML)(data);
 }
+
 exports.decode = decode;
+/**
+ * Decodes a string with entities. Does not allow missing trailing semicolons for entities.
+ *
+ * @param data String to decode.
+ * @param level Optional level to decode at. 0 = XML, 1 = HTML. Default is 0.
+ */
+
 function decodeStrict(data, level) {
-    return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTMLStrict)(data);
+  return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTMLStrict)(data);
 }
+
 exports.decodeStrict = decodeStrict;
+/**
+ * Encodes a string with entities.
+ *
+ * @param data String to encode.
+ * @param level Optional level to encode at. 0 = XML, 1 = HTML. Default is 0.
+ */
+
 function encode(data, level) {
-    return (!level || level <= 0 ? encode_1.encodeXML : encode_1.encodeHTML)(data);
+  return (!level || level <= 0 ? encode_1.encodeXML : encode_1.encodeHTML)(data);
 }
+
 exports.encode = encode;
+
 var encode_2 = __webpack_require__(273);
+
 exports.encodeXML = encode_2.encodeXML;
 exports.encodeHTML = encode_2.encodeHTML;
-exports.escape = encode_2.escape;
-// Legacy aliases
+exports.escape = encode_2.escape; // Legacy aliases
+
 exports.encodeHTML4 = encode_2.encodeHTML;
 exports.encodeHTML5 = encode_2.encodeHTML;
+
 var decode_2 = __webpack_require__(267);
+
 exports.decodeXML = decode_2.decodeXML;
 exports.decodeHTML = decode_2.decodeHTML;
-exports.decodeHTMLStrict = decode_2.decodeHTMLStrict;
-// Legacy aliases
+exports.decodeHTMLStrict = decode_2.decodeHTMLStrict; // Legacy aliases
+
 exports.decodeHTML4 = decode_2.decodeHTML;
 exports.decodeHTML5 = decode_2.decodeHTML;
 exports.decodeHTML4Strict = decode_2.decodeHTMLStrict;
 exports.decodeHTML5Strict = decode_2.decodeHTMLStrict;
 exports.decodeXMLStrict = decode_2.decodeXML;
-
 
 /***/ }),
 /* 267 */
@@ -30762,60 +32039,86 @@ exports.decodeXMLStrict = decode_2.decodeXML;
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var entities_json_1 = __importDefault(__webpack_require__(268));
+
 var legacy_json_1 = __importDefault(__webpack_require__(269));
+
 var xml_json_1 = __importDefault(__webpack_require__(270));
+
 var decode_codepoint_1 = __importDefault(__webpack_require__(271));
+
 exports.decodeXML = getStrictDecoder(xml_json_1.default);
 exports.decodeHTMLStrict = getStrictDecoder(entities_json_1.default);
+
 function getStrictDecoder(map) {
-    var keys = Object.keys(map).join("|");
-    var replace = getReplacer(map);
-    keys += "|#[xX][\\da-fA-F]+|#\\d+";
-    var re = new RegExp("&(?:" + keys + ");", "g");
-    return function (str) { return String(str).replace(re, replace); };
-}
-var sorter = function (a, b) { return (a < b ? 1 : -1); };
-exports.decodeHTML = (function () {
-    var legacy = Object.keys(legacy_json_1.default).sort(sorter);
-    var keys = Object.keys(entities_json_1.default).sort(sorter);
-    for (var i = 0, j = 0; i < keys.length; i++) {
-        if (legacy[j] === keys[i]) {
-            keys[i] += ";?";
-            j++;
-        }
-        else {
-            keys[i] += ";";
-        }
-    }
-    var re = new RegExp("&(?:" + keys.join("|") + "|#[xX][\\da-fA-F]+;?|#\\d+;?)", "g");
-    var replace = getReplacer(entities_json_1.default);
-    function replacer(str) {
-        if (str.substr(-1) !== ";")
-            str += ";";
-        return replace(str);
-    }
-    //TODO consider creating a merged map
-    return function (str) {
-        return String(str).replace(re, replacer);
-    };
-})();
-function getReplacer(map) {
-    return function replace(str) {
-        if (str.charAt(1) === "#") {
-            if (str.charAt(2) === "X" || str.charAt(2) === "x") {
-                return decode_codepoint_1.default(parseInt(str.substr(3), 16));
-            }
-            return decode_codepoint_1.default(parseInt(str.substr(2), 10));
-        }
-        return map[str.slice(1, -1)];
-    };
+  var keys = Object.keys(map).join("|");
+  var replace = getReplacer(map);
+  keys += "|#[xX][\\da-fA-F]+|#\\d+";
+  var re = new RegExp("&(?:" + keys + ");", "g");
+  return function (str) {
+    return String(str).replace(re, replace);
+  };
 }
 
+var sorter = function (a, b) {
+  return a < b ? 1 : -1;
+};
+
+exports.decodeHTML = function () {
+  var legacy = Object.keys(legacy_json_1.default).sort(sorter);
+  var keys = Object.keys(entities_json_1.default).sort(sorter);
+
+  for (var i = 0, j = 0; i < keys.length; i++) {
+    if (legacy[j] === keys[i]) {
+      keys[i] += ";?";
+      j++;
+    } else {
+      keys[i] += ";";
+    }
+  }
+
+  var re = new RegExp("&(?:" + keys.join("|") + "|#[xX][\\da-fA-F]+;?|#\\d+;?)", "g");
+  var replace = getReplacer(entities_json_1.default);
+
+  function replacer(str) {
+    if (str.substr(-1) !== ";") str += ";";
+    return replace(str);
+  } //TODO consider creating a merged map
+
+
+  return function (str) {
+    return String(str).replace(re, replacer);
+  };
+}();
+
+function getReplacer(map) {
+  return function replace(str) {
+    if (str.charAt(1) === "#") {
+      var secondChar = str.charAt(2);
+
+      if (secondChar === "X" || secondChar === "x") {
+        return decode_codepoint_1.default(parseInt(str.substr(3), 16));
+      }
+
+      return decode_codepoint_1.default(parseInt(str.substr(2), 10));
+    }
+
+    return map[str.slice(1, -1)];
+  };
+}
 
 /***/ }),
 /* 268 */
@@ -30841,31 +32144,44 @@ module.exports = JSON.parse("{\"amp\":\"&\",\"apos\":\"'\",\"gt\":\">\",\"lt\":\
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-var decode_json_1 = __importDefault(__webpack_require__(272));
-// modified version of https://github.com/mathiasbynens/he/blob/master/src/he.js#L94-L119
-function decodeCodePoint(codePoint) {
-    if ((codePoint >= 0xd800 && codePoint <= 0xdfff) || codePoint > 0x10ffff) {
-        return "\uFFFD";
-    }
-    if (codePoint in decode_json_1.default) {
-        // @ts-ignore
-        codePoint = decode_json_1.default[codePoint];
-    }
-    var output = "";
-    if (codePoint > 0xffff) {
-        codePoint -= 0x10000;
-        output += String.fromCharCode(((codePoint >>> 10) & 0x3ff) | 0xd800);
-        codePoint = 0xdc00 | (codePoint & 0x3ff);
-    }
-    output += String.fromCharCode(codePoint);
-    return output;
-}
-exports.default = decodeCodePoint;
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var decode_json_1 = __importDefault(__webpack_require__(272)); // modified version of https://github.com/mathiasbynens/he/blob/master/src/he.js#L94-L119
+
+
+function decodeCodePoint(codePoint) {
+  if (codePoint >= 0xd800 && codePoint <= 0xdfff || codePoint > 0x10ffff) {
+    return "\uFFFD";
+  }
+
+  if (codePoint in decode_json_1.default) {
+    codePoint = decode_json_1.default[codePoint];
+  }
+
+  var output = "";
+
+  if (codePoint > 0xffff) {
+    codePoint -= 0x10000;
+    output += String.fromCharCode(codePoint >>> 10 & 0x3ff | 0xd800);
+    codePoint = 0xdc00 | codePoint & 0x3ff;
+  }
+
+  output += String.fromCharCode(codePoint);
+  return output;
+}
+
+exports.default = decodeCodePoint;
 
 /***/ }),
 /* 272 */
@@ -30879,73 +32195,97 @@ module.exports = JSON.parse("{\"0\":65533,\"128\":8364,\"130\":8218,\"131\":402,
 
 "use strict";
 
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
 };
-Object.defineProperty(exports, "__esModule", { value: true });
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var xml_json_1 = __importDefault(__webpack_require__(270));
+
 var inverseXML = getInverseObj(xml_json_1.default);
 var xmlReplacer = getInverseReplacer(inverseXML);
 exports.encodeXML = getInverse(inverseXML, xmlReplacer);
+
 var entities_json_1 = __importDefault(__webpack_require__(268));
+
 var inverseHTML = getInverseObj(entities_json_1.default);
 var htmlReplacer = getInverseReplacer(inverseHTML);
 exports.encodeHTML = getInverse(inverseHTML, htmlReplacer);
-function getInverseObj(obj) {
-    return Object.keys(obj)
-        .sort()
-        .reduce(function (inverse, name) {
-        inverse[obj[name]] = "&" + name + ";";
-        return inverse;
-    }, {});
-}
-function getInverseReplacer(inverse) {
-    var single = [];
-    var multiple = [];
-    Object.keys(inverse).forEach(function (k) {
-        return k.length === 1
-            ? // Add value to single array
-                single.push("\\" + k)
-            : // Add value to multiple array
-                multiple.push(k);
-    });
-    //TODO add ranges
-    multiple.unshift("[" + single.join("") + "]");
-    return new RegExp(multiple.join("|"), "g");
-}
-var reNonASCII = /[^\0-\x7F]/g;
-var reAstralSymbols = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-function singleCharReplacer(c) {
-    return "&#x" + c
-        .charCodeAt(0)
-        .toString(16)
-        .toUpperCase() + ";";
-}
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
-function astralReplacer(c, _) {
-    // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-    var high = c.charCodeAt(0);
-    var low = c.charCodeAt(1);
-    var codePoint = (high - 0xd800) * 0x400 + low - 0xdc00 + 0x10000;
-    return "&#x" + codePoint.toString(16).toUpperCase() + ";";
-}
-function getInverse(inverse, re) {
-    return function (data) {
-        return data
-            .replace(re, function (name) { return inverse[name]; })
-            .replace(reAstralSymbols, astralReplacer)
-            .replace(reNonASCII, singleCharReplacer);
-    };
-}
-var reXmlChars = getInverseReplacer(inverseXML);
-function escape(data) {
-    return data
-        .replace(reXmlChars, singleCharReplacer)
-        .replace(reAstralSymbols, astralReplacer)
-        .replace(reNonASCII, singleCharReplacer);
-}
-exports.escape = escape;
 
+function getInverseObj(obj) {
+  return Object.keys(obj).sort().reduce(function (inverse, name) {
+    inverse[obj[name]] = "&" + name + ";";
+    return inverse;
+  }, {});
+}
+
+function getInverseReplacer(inverse) {
+  var single = [];
+  var multiple = [];
+
+  for (var _i = 0, _a = Object.keys(inverse); _i < _a.length; _i++) {
+    var k = _a[_i];
+
+    if (k.length === 1) {
+      // Add value to single array
+      single.push("\\" + k);
+    } else {
+      // Add value to multiple array
+      multiple.push(k);
+    }
+  } // Add ranges to single characters.
+
+
+  single.sort();
+
+  for (var start = 0; start < single.length - 1; start++) {
+    // Find the end of a run of characters
+    var end = start;
+
+    while (end < single.length - 1 && single[end].charCodeAt(1) + 1 === single[end + 1].charCodeAt(1)) {
+      end += 1;
+    }
+
+    var count = 1 + end - start; // We want to replace at least three characters
+
+    if (count < 3) continue;
+    single.splice(start, count, single[start] + "-" + single[end]);
+  }
+
+  multiple.unshift("[" + single.join("") + "]");
+  return new RegExp(multiple.join("|"), "g");
+}
+
+var reNonASCII = /[^\0-\x7F]/gu;
+
+function singleCharReplacer(c) {
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  return "&#x" + c.codePointAt(0).toString(16).toUpperCase() + ";";
+}
+
+function getInverse(inverse, re) {
+  return function (data) {
+    return data.replace(re, function (name) {
+      return inverse[name];
+    }).replace(reNonASCII, singleCharReplacer);
+  };
+}
+
+var reXmlChars = getInverseReplacer(inverseXML);
+
+function escape(data) {
+  return data.replace(reXmlChars, singleCharReplacer).replace(reNonASCII, singleCharReplacer);
+}
+
+exports.escape = escape;
 
 /***/ }),
 /* 274 */
@@ -30955,357 +32295,378 @@ module.exports = JSON.parse("{\"elementNames\":{\"altglyph\":\"altGlyph\",\"altg
 
 /***/ }),
 /* 275 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var getChildren = exports.getChildren = function(elem){
-	return elem.children;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var getChildren = exports.getChildren = function (elem) {
+  return elem.children;
 };
 
-var getParent = exports.getParent = function(elem){
-	return elem.parent;
+var getParent = exports.getParent = function (elem) {
+  return elem.parent;
 };
 
-exports.getSiblings = function(elem){
-	var parent = getParent(elem);
-	return parent ? getChildren(parent) : [elem];
+exports.getSiblings = function (elem) {
+  var parent = getParent(elem);
+  return parent ? getChildren(parent) : [elem];
 };
 
-exports.getAttributeValue = function(elem, name){
-	return elem.attribs && elem.attribs[name];
+exports.getAttributeValue = function (elem, name) {
+  return elem.attribs && elem.attribs[name];
 };
 
-exports.hasAttrib = function(elem, name){
-	return !!elem.attribs && hasOwnProperty.call(elem.attribs, name);
+exports.hasAttrib = function (elem, name) {
+  return !!elem.attribs && hasOwnProperty.call(elem.attribs, name);
 };
 
-exports.getName = function(elem){
-	return elem.name;
+exports.getName = function (elem) {
+  return elem.name;
 };
-
 
 /***/ }),
 /* 276 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-exports.removeElement = function(elem){
-	if(elem.prev) elem.prev.next = elem.next;
-	if(elem.next) elem.next.prev = elem.prev;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-	if(elem.parent){
-		var childs = elem.parent.children;
-		childs.splice(childs.lastIndexOf(elem), 1);
-	}
+exports.removeElement = function (elem) {
+  if (elem.prev) elem.prev.next = elem.next;
+  if (elem.next) elem.next.prev = elem.prev;
+
+  if (elem.parent) {
+    var childs = elem.parent.children;
+    childs.splice(childs.lastIndexOf(elem), 1);
+  }
 };
 
-exports.replaceElement = function(elem, replacement){
-	var prev = replacement.prev = elem.prev;
-	if(prev){
-		prev.next = replacement;
-	}
+exports.replaceElement = function (elem, replacement) {
+  var prev = replacement.prev = elem.prev;
 
-	var next = replacement.next = elem.next;
-	if(next){
-		next.prev = replacement;
-	}
+  if (prev) {
+    prev.next = replacement;
+  }
 
-	var parent = replacement.parent = elem.parent;
-	if(parent){
-		var childs = parent.children;
-		childs[childs.lastIndexOf(elem)] = replacement;
-	}
+  var next = replacement.next = elem.next;
+
+  if (next) {
+    next.prev = replacement;
+  }
+
+  var parent = replacement.parent = elem.parent;
+
+  if (parent) {
+    var childs = parent.children;
+    childs[childs.lastIndexOf(elem)] = replacement;
+  }
 };
 
-exports.appendChild = function(elem, child){
-	child.parent = elem;
+exports.appendChild = function (elem, child) {
+  child.parent = elem;
 
-	if(elem.children.push(child) !== 1){
-		var sibling = elem.children[elem.children.length - 2];
-		sibling.next = child;
-		child.prev = sibling;
-		child.next = null;
-	}
+  if (elem.children.push(child) !== 1) {
+    var sibling = elem.children[elem.children.length - 2];
+    sibling.next = child;
+    child.prev = sibling;
+    child.next = null;
+  }
 };
 
-exports.append = function(elem, next){
-	var parent = elem.parent,
-		currNext = elem.next;
+exports.append = function (elem, next) {
+  var parent = elem.parent,
+      currNext = elem.next;
+  next.next = currNext;
+  next.prev = elem;
+  elem.next = next;
+  next.parent = parent;
 
-	next.next = currNext;
-	next.prev = elem;
-	elem.next = next;
-	next.parent = parent;
+  if (currNext) {
+    currNext.prev = next;
 
-	if(currNext){
-		currNext.prev = next;
-		if(parent){
-			var childs = parent.children;
-			childs.splice(childs.lastIndexOf(currNext), 0, next);
-		}
-	} else if(parent){
-		parent.children.push(next);
-	}
+    if (parent) {
+      var childs = parent.children;
+      childs.splice(childs.lastIndexOf(currNext), 0, next);
+    }
+  } else if (parent) {
+    parent.children.push(next);
+  }
 };
 
-exports.prepend = function(elem, prev){
-	var parent = elem.parent;
-	if(parent){
-		var childs = parent.children;
-		childs.splice(childs.lastIndexOf(elem), 0, prev);
-	}
+exports.prepend = function (elem, prev) {
+  var parent = elem.parent;
 
-	if(elem.prev){
-		elem.prev.next = prev;
-	}
-	
-	prev.parent = parent;
-	prev.prev = elem.prev;
-	prev.next = elem;
-	elem.prev = prev;
+  if (parent) {
+    var childs = parent.children;
+    childs.splice(childs.lastIndexOf(elem), 0, prev);
+  }
+
+  if (elem.prev) {
+    elem.prev.next = prev;
+  }
+
+  prev.parent = parent;
+  prev.prev = elem.prev;
+  prev.next = elem;
+  elem.prev = prev;
 };
-
-
-
 
 /***/ }),
 /* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var isTag = __webpack_require__(263).isTag;
 
 module.exports = {
-	filter: filter,
-	find: find,
-	findOneChild: findOneChild,
-	findOne: findOne,
-	existsOne: existsOne,
-	findAll: findAll
+  filter: filter,
+  find: find,
+  findOneChild: findOneChild,
+  findOne: findOne,
+  existsOne: existsOne,
+  findAll: findAll
 };
 
-function filter(test, element, recurse, limit){
-	if(!Array.isArray(element)) element = [element];
+function filter(test, element, recurse, limit) {
+  if (!Array.isArray(element)) element = [element];
 
-	if(typeof limit !== "number" || !isFinite(limit)){
-		limit = Infinity;
-	}
-	return find(test, element, recurse !== false, limit);
+  if (typeof limit !== "number" || !isFinite(limit)) {
+    limit = Infinity;
+  }
+
+  return find(test, element, recurse !== false, limit);
 }
 
-function find(test, elems, recurse, limit){
-	var result = [], childs;
+function find(test, elems, recurse, limit) {
+  var result = [],
+      childs;
 
-	for(var i = 0, j = elems.length; i < j; i++){
-		if(test(elems[i])){
-			result.push(elems[i]);
-			if(--limit <= 0) break;
-		}
+  for (var i = 0, j = elems.length; i < j; i++) {
+    if (test(elems[i])) {
+      result.push(elems[i]);
+      if (--limit <= 0) break;
+    }
 
-		childs = elems[i].children;
-		if(recurse && childs && childs.length > 0){
-			childs = find(test, childs, recurse, limit);
-			result = result.concat(childs);
-			limit -= childs.length;
-			if(limit <= 0) break;
-		}
-	}
+    childs = elems[i].children;
 
-	return result;
+    if (recurse && childs && childs.length > 0) {
+      childs = find(test, childs, recurse, limit);
+      result = result.concat(childs);
+      limit -= childs.length;
+      if (limit <= 0) break;
+    }
+  }
+
+  return result;
 }
 
-function findOneChild(test, elems){
-	for(var i = 0, l = elems.length; i < l; i++){
-		if(test(elems[i])) return elems[i];
-	}
+function findOneChild(test, elems) {
+  for (var i = 0, l = elems.length; i < l; i++) {
+    if (test(elems[i])) return elems[i];
+  }
 
-	return null;
+  return null;
 }
 
-function findOne(test, elems){
-	var elem = null;
+function findOne(test, elems) {
+  var elem = null;
 
-	for(var i = 0, l = elems.length; i < l && !elem; i++){
-		if(!isTag(elems[i])){
-			continue;
-		} else if(test(elems[i])){
-			elem = elems[i];
-		} else if(elems[i].children.length > 0){
-			elem = findOne(test, elems[i].children);
-		}
-	}
+  for (var i = 0, l = elems.length; i < l && !elem; i++) {
+    if (!isTag(elems[i])) {
+      continue;
+    } else if (test(elems[i])) {
+      elem = elems[i];
+    } else if (elems[i].children.length > 0) {
+      elem = findOne(test, elems[i].children);
+    }
+  }
 
-	return elem;
+  return elem;
 }
 
-function existsOne(test, elems){
-	for(var i = 0, l = elems.length; i < l; i++){
-		if(
-			isTag(elems[i]) && (
-				test(elems[i]) || (
-					elems[i].children.length > 0 &&
-					existsOne(test, elems[i].children)
-				)
-			)
-		){
-			return true;
-		}
-	}
+function existsOne(test, elems) {
+  for (var i = 0, l = elems.length; i < l; i++) {
+    if (isTag(elems[i]) && (test(elems[i]) || elems[i].children.length > 0 && existsOne(test, elems[i].children))) {
+      return true;
+    }
+  }
 
-	return false;
+  return false;
 }
 
-function findAll(test, rootElems){
-	var result = [];
-	var stack = rootElems.slice();
-	while(stack.length){
-		var elem = stack.shift();
-		if(!isTag(elem)) continue;
-		if (elem.children && elem.children.length > 0) {
-			stack.unshift.apply(stack, elem.children);
-		}
-		if(test(elem)) result.push(elem);
-	}
-	return result;
-}
+function findAll(test, rootElems) {
+  var result = [];
+  var stack = rootElems.slice();
 
+  while (stack.length) {
+    var elem = stack.shift();
+    if (!isTag(elem)) continue;
+
+    if (elem.children && elem.children.length > 0) {
+      stack.unshift.apply(stack, elem.children);
+    }
+
+    if (test(elem)) result.push(elem);
+  }
+
+  return result;
+}
 
 /***/ }),
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 var ElementType = __webpack_require__(263);
+
 var isTag = exports.isTag = ElementType.isTag;
 
-exports.testElement = function(options, element){
-	for(var key in options){
-		if(!options.hasOwnProperty(key));
-		else if(key === "tag_name"){
-			if(!isTag(element) || !options.tag_name(element.name)){
-				return false;
-			}
-		} else if(key === "tag_type"){
-			if(!options.tag_type(element.type)) return false;
-		} else if(key === "tag_contains"){
-			if(isTag(element) || !options.tag_contains(element.data)){
-				return false;
-			}
-		} else if(!element.attribs || !options[key](element.attribs[key])){
-			return false;
-		}
-	}
-	return true;
+exports.testElement = function (options, element) {
+  for (var key in options) {
+    if (!options.hasOwnProperty(key)) ;else if (key === "tag_name") {
+      if (!isTag(element) || !options.tag_name(element.name)) {
+        return false;
+      }
+    } else if (key === "tag_type") {
+      if (!options.tag_type(element.type)) return false;
+    } else if (key === "tag_contains") {
+      if (isTag(element) || !options.tag_contains(element.data)) {
+        return false;
+      }
+    } else if (!element.attribs || !options[key](element.attribs[key])) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 var Checks = {
-	tag_name: function(name){
-		if(typeof name === "function"){
-			return function(elem){ return isTag(elem) && name(elem.name); };
-		} else if(name === "*"){
-			return isTag;
-		} else {
-			return function(elem){ return isTag(elem) && elem.name === name; };
-		}
-	},
-	tag_type: function(type){
-		if(typeof type === "function"){
-			return function(elem){ return type(elem.type); };
-		} else {
-			return function(elem){ return elem.type === type; };
-		}
-	},
-	tag_contains: function(data){
-		if(typeof data === "function"){
-			return function(elem){ return !isTag(elem) && data(elem.data); };
-		} else {
-			return function(elem){ return !isTag(elem) && elem.data === data; };
-		}
-	}
+  tag_name: function (name) {
+    if (typeof name === "function") {
+      return function (elem) {
+        return isTag(elem) && name(elem.name);
+      };
+    } else if (name === "*") {
+      return isTag;
+    } else {
+      return function (elem) {
+        return isTag(elem) && elem.name === name;
+      };
+    }
+  },
+  tag_type: function (type) {
+    if (typeof type === "function") {
+      return function (elem) {
+        return type(elem.type);
+      };
+    } else {
+      return function (elem) {
+        return elem.type === type;
+      };
+    }
+  },
+  tag_contains: function (data) {
+    if (typeof data === "function") {
+      return function (elem) {
+        return !isTag(elem) && data(elem.data);
+      };
+    } else {
+      return function (elem) {
+        return !isTag(elem) && elem.data === data;
+      };
+    }
+  }
 };
 
-function getAttribCheck(attrib, value){
-	if(typeof value === "function"){
-		return function(elem){ return elem.attribs && value(elem.attribs[attrib]); };
-	} else {
-		return function(elem){ return elem.attribs && elem.attribs[attrib] === value; };
-	}
+function getAttribCheck(attrib, value) {
+  if (typeof value === "function") {
+    return function (elem) {
+      return elem.attribs && value(elem.attribs[attrib]);
+    };
+  } else {
+    return function (elem) {
+      return elem.attribs && elem.attribs[attrib] === value;
+    };
+  }
 }
 
-function combineFuncs(a, b){
-	return function(elem){
-		return a(elem) || b(elem);
-	};
+function combineFuncs(a, b) {
+  return function (elem) {
+    return a(elem) || b(elem);
+  };
 }
 
-exports.getElements = function(options, element, recurse, limit){
-	var funcs = Object.keys(options).map(function(key){
-		var value = options[key];
-		return key in Checks ? Checks[key](value) : getAttribCheck(key, value);
-	});
-
-	return funcs.length === 0 ? [] : this.filter(
-		funcs.reduce(combineFuncs),
-		element, recurse, limit
-	);
+exports.getElements = function (options, element, recurse, limit) {
+  var funcs = Object.keys(options).map(function (key) {
+    var value = options[key];
+    return key in Checks ? Checks[key](value) : getAttribCheck(key, value);
+  });
+  return funcs.length === 0 ? [] : this.filter(funcs.reduce(combineFuncs), element, recurse, limit);
 };
 
-exports.getElementById = function(id, element, recurse){
-	if(!Array.isArray(element)) element = [element];
-	return this.findOne(getAttribCheck("id", id), element, recurse !== false);
+exports.getElementById = function (id, element, recurse) {
+  if (!Array.isArray(element)) element = [element];
+  return this.findOne(getAttribCheck("id", id), element, recurse !== false);
 };
 
-exports.getElementsByTagName = function(name, element, recurse, limit){
-	return this.filter(Checks.tag_name(name), element, recurse, limit);
+exports.getElementsByTagName = function (name, element, recurse, limit) {
+  return this.filter(Checks.tag_name(name), element, recurse, limit);
 };
 
-exports.getElementsByTagType = function(type, element, recurse, limit){
-	return this.filter(Checks.tag_type(type), element, recurse, limit);
+exports.getElementsByTagType = function (type, element, recurse, limit) {
+  return this.filter(Checks.tag_type(type), element, recurse, limit);
 };
-
 
 /***/ }),
 /* 279 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 // removeSubsets
 // Given an array of nodes, remove any member that is contained by another.
-exports.removeSubsets = function(nodes) {
-	var idx = nodes.length, node, ancestor, replace;
+exports.removeSubsets = function (nodes) {
+  var idx = nodes.length,
+      node,
+      ancestor,
+      replace; // Check if each node (or one of its ancestors) is already contained in the
+  // array.
 
-	// Check if each node (or one of its ancestors) is already contained in the
-	// array.
-	while (--idx > -1) {
-		node = ancestor = nodes[idx];
+  while (--idx > -1) {
+    node = ancestor = nodes[idx]; // Temporarily remove the node under consideration
 
-		// Temporarily remove the node under consideration
-		nodes[idx] = null;
-		replace = true;
+    nodes[idx] = null;
+    replace = true;
 
-		while (ancestor) {
-			if (nodes.indexOf(ancestor) > -1) {
-				replace = false;
-				nodes.splice(idx, 1);
-				break;
-			}
-			ancestor = ancestor.parent;
-		}
+    while (ancestor) {
+      if (nodes.indexOf(ancestor) > -1) {
+        replace = false;
+        nodes.splice(idx, 1);
+        break;
+      }
 
-		// If the node has been found to be unique, re-insert it.
-		if (replace) {
-			nodes[idx] = node;
-		}
-	}
+      ancestor = ancestor.parent;
+    } // If the node has been found to be unique, re-insert it.
 
-	return nodes;
-};
 
-// Source: http://dom.spec.whatwg.org/#dom-node-comparedocumentposition
+    if (replace) {
+      nodes[idx] = node;
+    }
+  }
+
+  return nodes;
+}; // Source: http://dom.spec.whatwg.org/#dom-node-comparedocumentposition
+
+
 var POSITION = {
-	DISCONNECTED: 1,
-	PRECEDING: 2,
-	FOLLOWING: 4,
-	CONTAINS: 8,
-	CONTAINED_BY: 16
-};
-
-// Compare the position of one node against another node in any other document.
+  DISCONNECTED: 1,
+  PRECEDING: 2,
+  FOLLOWING: 4,
+  CONTAINS: 8,
+  CONTAINED_BY: 16
+}; // Compare the position of one node against another node in any other document.
 // The return value is a bitmask with the following values:
 //
 // document order:
@@ -31327,323 +32688,321 @@ var POSITION = {
 // @return {Number} A bitmask describing the input nodes' relative position.
 //         See http://dom.spec.whatwg.org/#dom-node-comparedocumentposition for
 //         a description of these values.
-var comparePos = exports.compareDocumentPosition = function(nodeA, nodeB) {
-	var aParents = [];
-	var bParents = [];
-	var current, sharedParent, siblings, aSibling, bSibling, idx;
 
-	if (nodeA === nodeB) {
-		return 0;
-	}
+var comparePos = exports.compareDocumentPosition = function (nodeA, nodeB) {
+  var aParents = [];
+  var bParents = [];
+  var current, sharedParent, siblings, aSibling, bSibling, idx;
 
-	current = nodeA;
-	while (current) {
-		aParents.unshift(current);
-		current = current.parent;
-	}
-	current = nodeB;
-	while (current) {
-		bParents.unshift(current);
-		current = current.parent;
-	}
+  if (nodeA === nodeB) {
+    return 0;
+  }
 
-	idx = 0;
-	while (aParents[idx] === bParents[idx]) {
-		idx++;
-	}
+  current = nodeA;
 
-	if (idx === 0) {
-		return POSITION.DISCONNECTED;
-	}
+  while (current) {
+    aParents.unshift(current);
+    current = current.parent;
+  }
 
-	sharedParent = aParents[idx - 1];
-	siblings = sharedParent.children;
-	aSibling = aParents[idx];
-	bSibling = bParents[idx];
+  current = nodeB;
 
-	if (siblings.indexOf(aSibling) > siblings.indexOf(bSibling)) {
-		if (sharedParent === nodeB) {
-			return POSITION.FOLLOWING | POSITION.CONTAINED_BY;
-		}
-		return POSITION.FOLLOWING;
-	} else {
-		if (sharedParent === nodeA) {
-			return POSITION.PRECEDING | POSITION.CONTAINS;
-		}
-		return POSITION.PRECEDING;
-	}
-};
+  while (current) {
+    bParents.unshift(current);
+    current = current.parent;
+  }
 
-// Sort an array of nodes based on their relative position in the document and
+  idx = 0;
+
+  while (aParents[idx] === bParents[idx]) {
+    idx++;
+  }
+
+  if (idx === 0) {
+    return POSITION.DISCONNECTED;
+  }
+
+  sharedParent = aParents[idx - 1];
+  siblings = sharedParent.children;
+  aSibling = aParents[idx];
+  bSibling = bParents[idx];
+
+  if (siblings.indexOf(aSibling) > siblings.indexOf(bSibling)) {
+    if (sharedParent === nodeB) {
+      return POSITION.FOLLOWING | POSITION.CONTAINED_BY;
+    }
+
+    return POSITION.FOLLOWING;
+  } else {
+    if (sharedParent === nodeA) {
+      return POSITION.PRECEDING | POSITION.CONTAINS;
+    }
+
+    return POSITION.PRECEDING;
+  }
+}; // Sort an array of nodes based on their relative position in the document and
 // remove any duplicate nodes. If the array contains nodes that do not belong
 // to the same document, sort order is unspecified.
 //
 // @argument {Array} nodes Array of DOM nodes
 //
 // @returns {Array} collection of unique nodes, sorted in document order
-exports.uniqueSort = function(nodes) {
-	var idx = nodes.length, node, position;
 
-	nodes = nodes.slice();
 
-	while (--idx > -1) {
-		node = nodes[idx];
-		position = nodes.indexOf(node);
-		if (position > -1 && position < idx) {
-			nodes.splice(idx, 1);
-		}
-	}
-	nodes.sort(function(a, b) {
-		var relative = comparePos(a, b);
-		if (relative & POSITION.PRECEDING) {
-			return -1;
-		} else if (relative & POSITION.FOLLOWING) {
-			return 1;
-		}
-		return 0;
-	});
+exports.uniqueSort = function (nodes) {
+  var idx = nodes.length,
+      node,
+      position;
+  nodes = nodes.slice();
 
-	return nodes;
+  while (--idx > -1) {
+    node = nodes[idx];
+    position = nodes.indexOf(node);
+
+    if (position > -1 && position < idx) {
+      nodes.splice(idx, 1);
+    }
+  }
+
+  nodes.sort(function (a, b) {
+    var relative = comparePos(a, b);
+
+    if (relative & POSITION.PRECEDING) {
+      return -1;
+    } else if (relative & POSITION.FOLLOWING) {
+      return 1;
+    }
+
+    return 0;
+  });
+  return nodes;
 };
-
 
 /***/ }),
 /* 280 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = {
-	trueFunc: function trueFunc(){
-		return true;
-	},
-	falseFunc: function falseFunc(){
-		return false;
-	}
+  trueFunc: function trueFunc() {
+    return true;
+  },
+  falseFunc: function falseFunc() {
+    return false;
+  }
 };
 
 /***/ }),
 /* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
 /*
 	compiles a selector to an executable function
 */
-
 module.exports = compile;
 
-var parse = __webpack_require__(282);
+var parse = __webpack_require__(282).parse;
+
 var BaseFuncs = __webpack_require__(280);
-var sortRules = __webpack_require__(283);
-var procedure = __webpack_require__(284);
-var Rules = __webpack_require__(285);
-var Pseudos = __webpack_require__(287);
+
+var sortRules = __webpack_require__(285);
+
+var procedure = __webpack_require__(286);
+
+var Rules = __webpack_require__(287);
+
+var Pseudos = __webpack_require__(289);
+
 var trueFunc = BaseFuncs.trueFunc;
 var falseFunc = BaseFuncs.falseFunc;
-
 var filters = Pseudos.filters;
 
 function compile(selector, options, context) {
-    var next = compileUnsafe(selector, options, context);
-    return wrap(next, options);
+  var next = compileUnsafe(selector, options, context);
+  return wrap(next, options);
 }
 
 function wrap(next, options) {
-    var adapter = options.adapter;
-
-    return function base(elem) {
-        return adapter.isTag(elem) && next(elem);
-    };
+  var adapter = options.adapter;
+  return function base(elem) {
+    return adapter.isTag(elem) && next(elem);
+  };
 }
 
 function compileUnsafe(selector, options, context) {
-    var token = parse(selector, options);
-    return compileToken(token, options, context);
+  var token = parse(selector, options);
+  return compileToken(token, options, context);
 }
 
 function includesScopePseudo(t) {
-    return (
-        t.type === "pseudo" &&
-        (t.name === "scope" ||
-            (Array.isArray(t.data) &&
-                t.data.some(function(data) {
-                    return data.some(includesScopePseudo);
-                })))
-    );
+  return t.type === "pseudo" && (t.name === "scope" || Array.isArray(t.data) && t.data.some(function (data) {
+    return data.some(includesScopePseudo);
+  }));
 }
 
-var DESCENDANT_TOKEN = { type: "descendant" };
-var FLEXIBLE_DESCENDANT_TOKEN = { type: "_flexibleDescendant" };
-var SCOPE_TOKEN = { type: "pseudo", name: "scope" };
-var PLACEHOLDER_ELEMENT = {};
-
-//CSS 4 Spec (Draft): 3.3.1. Absolutizing a Scope-relative Selector
+var DESCENDANT_TOKEN = {
+  type: "descendant"
+};
+var FLEXIBLE_DESCENDANT_TOKEN = {
+  type: "_flexibleDescendant"
+};
+var SCOPE_TOKEN = {
+  type: "pseudo",
+  name: "scope"
+};
+var PLACEHOLDER_ELEMENT = {}; //CSS 4 Spec (Draft): 3.3.1. Absolutizing a Scope-relative Selector
 //http://www.w3.org/TR/selectors4/#absolutizing
+
 function absolutize(token, options, context) {
-    var adapter = options.adapter;
+  var adapter = options.adapter; //TODO better check if context is document
 
-    //TODO better check if context is document
-    var hasContext =
-        !!context &&
-        !!context.length &&
-        context.every(function(e) {
-            return e === PLACEHOLDER_ELEMENT || !!adapter.getParent(e);
-        });
+  var hasContext = !!context && !!context.length && context.every(function (e) {
+    return e === PLACEHOLDER_ELEMENT || !!adapter.getParent(e);
+  });
+  token.forEach(function (t) {
+    if (t.length > 0 && isTraversal(t[0]) && t[0].type !== "descendant") {//don't return in else branch
+    } else if (hasContext && !(Array.isArray(t) ? t.some(includesScopePseudo) : includesScopePseudo(t))) {
+      t.unshift(DESCENDANT_TOKEN);
+    } else {
+      return;
+    }
 
-    token.forEach(function(t) {
-        if (t.length > 0 && isTraversal(t[0]) && t[0].type !== "descendant") {
-            //don't return in else branch
-        } else if (hasContext && !includesScopePseudo(t)) {
-            t.unshift(DESCENDANT_TOKEN);
-        } else {
-            return;
-        }
-
-        t.unshift(SCOPE_TOKEN);
-    });
+    t.unshift(SCOPE_TOKEN);
+  });
 }
 
 function compileToken(token, options, context) {
-    token = token.filter(function(t) {
-        return t.length > 0;
-    });
+  token = token.filter(function (t) {
+    return t.length > 0;
+  });
+  token.forEach(sortRules);
+  var isArrayContext = Array.isArray(context);
+  context = options && options.context || context;
+  if (context && !isArrayContext) context = [context];
+  absolutize(token, options, context);
+  var shouldTestNextSiblings = false;
+  var query = token.map(function (rules) {
+    if (rules[0] && rules[1] && rules[0].name === "scope") {
+      var ruleType = rules[1].type;
 
-    token.forEach(sortRules);
+      if (isArrayContext && ruleType === "descendant") {
+        rules[1] = FLEXIBLE_DESCENDANT_TOKEN;
+      } else if (ruleType === "adjacent" || ruleType === "sibling") {
+        shouldTestNextSiblings = true;
+      }
+    }
 
-    var isArrayContext = Array.isArray(context);
-
-    context = (options && options.context) || context;
-
-    if (context && !isArrayContext) context = [context];
-
-    absolutize(token, options, context);
-
-    var shouldTestNextSiblings = false;
-
-    var query = token
-        .map(function(rules) {
-            if (rules[0] && rules[1] && rules[0].name === "scope") {
-                var ruleType = rules[1].type;
-                if (isArrayContext && ruleType === "descendant") {
-                    rules[1] = FLEXIBLE_DESCENDANT_TOKEN;
-                } else if (ruleType === "adjacent" || ruleType === "sibling") {
-                    shouldTestNextSiblings = true;
-                }
-            }
-            return compileRules(rules, options, context);
-        })
-        .reduce(reduceRules, falseFunc);
-
-    query.shouldTestNextSiblings = shouldTestNextSiblings;
-
-    return query;
+    return compileRules(rules, options, context);
+  }).reduce(reduceRules, falseFunc);
+  query.shouldTestNextSiblings = shouldTestNextSiblings;
+  return query;
 }
 
 function isTraversal(t) {
-    return procedure[t.type] < 0;
+  return procedure[t.type] < 0;
 }
 
 function compileRules(rules, options, context) {
-    return rules.reduce(function(func, rule) {
-        if (func === falseFunc) return func;
+  return rules.reduce(function (func, rule) {
+    if (func === falseFunc) return func;
 
-        if (!(rule.type in Rules)) {
-            throw new Error("Rule type " + rule.type + " is not supported by css-select");
-        }
+    if (!(rule.type in Rules)) {
+      throw new Error("Rule type " + rule.type + " is not supported by css-select");
+    }
 
-        return Rules[rule.type](func, rule, options, context);
-    }, (options && options.rootFunc) || trueFunc);
+    return Rules[rule.type](func, rule, options, context);
+  }, options && options.rootFunc || trueFunc);
 }
 
 function reduceRules(a, b) {
-    if (b === falseFunc || a === trueFunc) {
-        return a;
-    }
-    if (a === falseFunc || b === trueFunc) {
-        return b;
-    }
+  if (b === falseFunc || a === trueFunc) {
+    return a;
+  }
 
-    return function combine(elem) {
-        return a(elem) || b(elem);
-    };
+  if (a === falseFunc || b === trueFunc) {
+    return b;
+  }
+
+  return function combine(elem) {
+    return a(elem) || b(elem);
+  };
 }
 
 function containsTraversal(t) {
-    return t.some(isTraversal);
-}
-
-//:not, :has and :matches have to compile selectors
+  return t.some(isTraversal);
+} //:not, :has and :matches have to compile selectors
 //doing this in lib/pseudos.js would lead to circular dependencies,
 //so we add them here
-filters.not = function(next, token, options, context) {
-    var opts = {
-        xmlMode: !!(options && options.xmlMode),
-        strict: !!(options && options.strict),
-        adapter: options.adapter
-    };
 
-    if (opts.strict) {
-        if (token.length > 1 || token.some(containsTraversal)) {
-            throw new Error("complex selectors in :not aren't allowed in strict mode");
-        }
+
+filters.not = function (next, token, options, context) {
+  var opts = {
+    xmlMode: !!(options && options.xmlMode),
+    strict: !!(options && options.strict),
+    adapter: options.adapter
+  };
+
+  if (opts.strict) {
+    if (token.length > 1 || token.some(containsTraversal)) {
+      throw new Error("complex selectors in :not aren't allowed in strict mode");
     }
+  }
 
-    var func = compileToken(token, opts, context);
-
-    if (func === falseFunc) return next;
-    if (func === trueFunc) return falseFunc;
-
-    return function not(elem) {
-        return !func(elem) && next(elem);
-    };
+  var func = compileToken(token, opts, context);
+  if (func === falseFunc) return next;
+  if (func === trueFunc) return falseFunc;
+  return function not(elem) {
+    return !func(elem) && next(elem);
+  };
 };
 
-filters.has = function(next, token, options) {
-    var adapter = options.adapter;
-    var opts = {
-        xmlMode: !!(options && options.xmlMode),
-        strict: !!(options && options.strict),
-        adapter: adapter
+filters.has = function (next, token, options) {
+  var adapter = options.adapter;
+  var opts = {
+    xmlMode: !!(options && options.xmlMode),
+    strict: !!(options && options.strict),
+    adapter: adapter
+  }; //FIXME: Uses an array as a pointer to the current element (side effects)
+
+  var context = token.some(containsTraversal) ? [PLACEHOLDER_ELEMENT] : null;
+  var func = compileToken(token, opts, context);
+  if (func === falseFunc) return falseFunc;
+
+  if (func === trueFunc) {
+    return function hasChild(elem) {
+      return adapter.getChildren(elem).some(adapter.isTag) && next(elem);
     };
+  }
 
-    //FIXME: Uses an array as a pointer to the current element (side effects)
-    var context = token.some(containsTraversal) ? [PLACEHOLDER_ELEMENT] : null;
+  func = wrap(func, options);
 
-    var func = compileToken(token, opts, context);
-
-    if (func === falseFunc) return falseFunc;
-    if (func === trueFunc) {
-        return function hasChild(elem) {
-            return adapter.getChildren(elem).some(adapter.isTag) && next(elem);
-        };
-    }
-
-    func = wrap(func, options);
-
-    if (context) {
-        return function has(elem) {
-            return next(elem) && ((context[0] = elem), adapter.existsOne(func, adapter.getChildren(elem)));
-        };
-    }
-
+  if (context) {
     return function has(elem) {
-        return next(elem) && adapter.existsOne(func, adapter.getChildren(elem));
+      return next(elem) && (context[0] = elem, adapter.existsOne(func, adapter.getChildren(elem)));
     };
+  }
+
+  return function has(elem) {
+    return next(elem) && adapter.existsOne(func, adapter.getChildren(elem));
+  };
 };
 
-filters.matches = function(next, token, options, context) {
-    var opts = {
-        xmlMode: !!(options && options.xmlMode),
-        strict: !!(options && options.strict),
-        rootFunc: next,
-        adapter: options.adapter
-    };
-
-    return compileToken(token, opts, context);
+filters.matches = function (next, token, options, context) {
+  var opts = {
+    xmlMode: !!(options && options.xmlMode),
+    strict: !!(options && options.strict),
+    rootFunc: next,
+    adapter: options.adapter
+  };
+  return compileToken(token, opts, context);
 };
 
 compile.compileToken = compileToken;
 compile.compileUnsafe = compileUnsafe;
 compile.Pseudos = Pseudos;
-
 
 /***/ }),
 /* 282 */
@@ -31652,694 +33011,778 @@ compile.Pseudos = Pseudos;
 "use strict";
 
 
-module.exports = parse;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-var re_name = /^(?:\\.|[\w\-\u00b0-\uFFFF])+/,
-    re_escape = /\\([\da-f]{1,6}\s?|(\s)|.)/ig,
-    //modified version of https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L87
-    re_attr = /^\s*((?:\\.|[\w\u00b0-\uFFFF\-])+)\s*(?:(\S?)=\s*(?:(['"])([^]*?)\3|(#?(?:\\.|[\w\u00b0-\uFFFF\-])*)|)|)\s*(i)?\]/;
-
-var actionTypes = {
-	__proto__: null,
-	"undefined": "exists",
-	"":  "equals",
-	"~": "element",
-	"^": "start",
-	"$": "end",
-	"*": "any",
-	"!": "not",
-	"|": "hyphen"
-};
-
-var simpleSelectors = {
-	__proto__: null,
-	">": "child",
-	"<": "parent",
-	"~": "sibling",
-	"+": "adjacent"
-};
-
-var attribSelectors = {
-	__proto__: null,
-	"#": ["id", "equals"],
-	".": ["class", "element"]
-};
-
-//pseudos, whose data-property is parsed as well
-var unpackPseudos = {
-	__proto__: null,
-	"has": true,
-	"not": true,
-	"matches": true
-};
-
-var stripQuotesFromPseudos = {
-	__proto__: null,
-	"contains": true,
-	"icontains": true
-};
-
-var quotes = {
-	__proto__: null,
-	"\"": true,
-	"'": true
-};
-
-//unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L139
-function funescape( _, escaped, escapedWhitespace ) {
-	var high = "0x" + escaped - 0x10000;
-	// NaN means non-codepoint
-	// Support: Firefox
-	// Workaround erroneous numeric interpretation of +"0x"
-	return high !== high || escapedWhitespace ?
-		escaped :
-		// BMP codepoint
-		high < 0 ?
-			String.fromCharCode( high + 0x10000 ) :
-			// Supplemental Plane codepoint (surrogate pair)
-			String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
+function __export(m) {
+  for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 
-function unescapeCSS(str){
-	return str.replace(re_escape, funescape);
-}
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
-function isWhitespace(c){
-	return c === " " || c === "\n" || c === "\t" || c === "\f" || c === "\r";
-}
+__export(__webpack_require__(283));
 
-function parse(selector, options){
-	var subselects = [];
+var parse_1 = __webpack_require__(283);
 
-	selector = parseSelector(subselects, selector + "", options);
+exports.parse = parse_1.default;
 
-	if(selector !== ""){
-		throw new SyntaxError("Unmatched selector: " + selector);
-	}
+var stringify_1 = __webpack_require__(284);
 
-	return subselects;
-}
-
-function parseSelector(subselects, selector, options){
-	var tokens = [],
-		sawWS = false,
-		data, firstChar, name, quot;
-
-	function getName(){
-		var sub = selector.match(re_name)[0];
-		selector = selector.substr(sub.length);
-		return unescapeCSS(sub);
-	}
-
-	function stripWhitespace(start){
-		while(isWhitespace(selector.charAt(start))) start++;
-		selector = selector.substr(start);
-	}
-
-	function isEscaped(pos) {
-		var slashCount = 0;
-
-		while (selector.charAt(--pos) === "\\") slashCount++;
-		return (slashCount & 1) === 1;
-	}
-
-	stripWhitespace(0);
-
-	while(selector !== ""){
-		firstChar = selector.charAt(0);
-
-		if(isWhitespace(firstChar)){
-			sawWS = true;
-			stripWhitespace(1);
-		} else if(firstChar in simpleSelectors){
-			tokens.push({type: simpleSelectors[firstChar]});
-			sawWS = false;
-
-			stripWhitespace(1);
-		} else if(firstChar === ","){
-			if(tokens.length === 0){
-				throw new SyntaxError("empty sub-selector");
-			}
-			subselects.push(tokens);
-			tokens = [];
-			sawWS = false;
-			stripWhitespace(1);
-		} else {
-			if(sawWS){
-				if(tokens.length > 0){
-					tokens.push({type: "descendant"});
-				}
-				sawWS = false;
-			}
-
-			if(firstChar === "*"){
-				selector = selector.substr(1);
-				tokens.push({type: "universal"});
-			} else if(firstChar in attribSelectors){
-				selector = selector.substr(1);
-				tokens.push({
-					type: "attribute",
-					name: attribSelectors[firstChar][0],
-					action: attribSelectors[firstChar][1],
-					value: getName(),
-					ignoreCase: false
-				});
-			} else if(firstChar === "["){
-				selector = selector.substr(1);
-				data = selector.match(re_attr);
-				if(!data){
-					throw new SyntaxError("Malformed attribute selector: " + selector);
-				}
-				selector = selector.substr(data[0].length);
-				name = unescapeCSS(data[1]);
-
-				if(
-					!options || (
-						"lowerCaseAttributeNames" in options ?
-							options.lowerCaseAttributeNames :
-							!options.xmlMode
-					)
-				){
-					name = name.toLowerCase();
-				}
-
-				tokens.push({
-					type: "attribute",
-					name: name,
-					action: actionTypes[data[2]],
-					value: unescapeCSS(data[4] || data[5] || ""),
-					ignoreCase: !!data[6]
-				});
-
-			} else if(firstChar === ":"){
-				if(selector.charAt(1) === ":"){
-					selector = selector.substr(2);
-					tokens.push({type: "pseudo-element", name: getName().toLowerCase()});
-					continue;
-				}
-
-				selector = selector.substr(1);
-
-				name = getName().toLowerCase();
-				data = null;
-
-				if(selector.charAt(0) === "("){
-					if(name in unpackPseudos){
-						quot = selector.charAt(1);
-						var quoted = quot in quotes;
-
-						selector = selector.substr(quoted + 1);
-
-						data = [];
-						selector = parseSelector(data, selector, options);
-
-						if(quoted){
-							if(selector.charAt(0) !== quot){
-								throw new SyntaxError("unmatched quotes in :" + name);
-							} else {
-								selector = selector.substr(1);
-							}
-						}
-
-						if(selector.charAt(0) !== ")"){
-							throw new SyntaxError("missing closing parenthesis in :" + name + " " + selector);
-						}
-
-						selector = selector.substr(1);
-					} else {
-						var pos = 1, counter = 1;
-
-						for(; counter > 0 && pos < selector.length; pos++){
-							if(selector.charAt(pos) === "(" && !isEscaped(pos)) counter++;
-							else if(selector.charAt(pos) === ")" && !isEscaped(pos)) counter--;
-						}
-
-						if(counter){
-							throw new SyntaxError("parenthesis not matched");
-						}
-
-						data = selector.substr(1, pos - 2);
-						selector = selector.substr(pos);
-
-						if(name in stripQuotesFromPseudos){
-							quot = data.charAt(0);
-
-							if(quot === data.slice(-1) && quot in quotes){
-								data = data.slice(1, -1);
-							}
-
-							data = unescapeCSS(data);
-						}
-					}
-				}
-
-				tokens.push({type: "pseudo", name: name, data: data});
-			} else if(re_name.test(selector)){
-				name = getName();
-
-				if(!options || ("lowerCaseTags" in options ? options.lowerCaseTags : !options.xmlMode)){
-					name = name.toLowerCase();
-				}
-
-				tokens.push({type: "tag", name: name});
-			} else {
-				if(tokens.length && tokens[tokens.length - 1].type === "descendant"){
-					tokens.pop();
-				}
-				addToken(subselects, tokens);
-				return selector;
-			}
-		}
-	}
-
-	addToken(subselects, tokens);
-
-	return selector;
-}
-
-function addToken(subselects, tokens){
-	if(subselects.length > 0 && tokens.length === 0){
-		throw new SyntaxError("empty sub-selector");
-	}
-
-	subselects.push(tokens);
-}
-
+exports.stringify = stringify_1.default;
 
 /***/ }),
 /* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = sortByProcedure;
+"use strict";
 
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = parse;
+var reName = /^(?:\\([\da-f]{1,6}\s?|(\s)|.)|[\w\-\u00b0-\uFFFF])+/,
+    reEscape = /\\([\da-f]{1,6}\s?|(\s)|.)/gi,
+    //modified version of https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L87
+reAttr = /^\s*((?:\\.|[\w\u00b0-\uFFFF-])+)\s*(?:(\S?)=\s*(?:(['"])([^]*?)\3|(#?(?:\\.|[\w\u00b0-\uFFFF-])*)|)|)\s*(i)?\]/;
+var actionTypes = {
+  undefined: "exists",
+  "": "equals",
+  "~": "element",
+  "^": "start",
+  $: "end",
+  "*": "any",
+  "!": "not",
+  "|": "hyphen"
+};
+var Traversals = {
+  ">": "child",
+  "<": "parent",
+  "~": "sibling",
+  "+": "adjacent"
+};
+var attribSelectors = {
+  "#": ["id", "equals"],
+  ".": ["class", "element"]
+}; //pseudos, whose data-property is parsed as well
+
+var unpackPseudos = new Set(["has", "not", "matches"]);
+var stripQuotesFromPseudos = new Set(["contains", "icontains"]);
+var quotes = new Set(['"', "'"]); //unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L152
+
+function funescape(_, escaped, escapedWhitespace) {
+  var high = parseInt(escaped, 16) - 0x10000; // NaN means non-codepoint
+
+  return high !== high || escapedWhitespace ? escaped : high < 0 ? // BMP codepoint
+  String.fromCharCode(high + 0x10000) : // Supplemental Plane codepoint (surrogate pair)
+  String.fromCharCode(high >> 10 | 0xd800, high & 0x3ff | 0xdc00);
+}
+
+function unescapeCSS(str) {
+  return str.replace(reEscape, funescape);
+}
+
+function isWhitespace(c) {
+  return c === " " || c === "\n" || c === "\t" || c === "\f" || c === "\r";
+}
+
+function parse(selector, options) {
+  var subselects = [];
+  selector = parseSelector(subselects, selector + "", options);
+
+  if (selector !== "") {
+    throw new Error("Unmatched selector: " + selector);
+  }
+
+  return subselects;
+}
+
+function parseSelector(subselects, selector, options) {
+  var tokens = [],
+      sawWS = false;
+
+  function getName() {
+    var match = selector.match(reName);
+
+    if (!match) {
+      throw new Error("Expected name, found " + selector);
+    }
+
+    var sub = match[0];
+    selector = selector.substr(sub.length);
+    return unescapeCSS(sub);
+  }
+
+  function stripWhitespace(start) {
+    while (isWhitespace(selector.charAt(start))) start++;
+
+    selector = selector.substr(start);
+  }
+
+  function isEscaped(pos) {
+    var slashCount = 0;
+
+    while (selector.charAt(--pos) === "\\") slashCount++;
+
+    return (slashCount & 1) === 1;
+  }
+
+  stripWhitespace(0);
+
+  while (selector !== "") {
+    var firstChar = selector.charAt(0);
+
+    if (isWhitespace(firstChar)) {
+      sawWS = true;
+      stripWhitespace(1);
+    } else if (firstChar in Traversals) {
+      tokens.push({
+        type: Traversals[firstChar]
+      });
+      sawWS = false;
+      stripWhitespace(1);
+    } else if (firstChar === ",") {
+      if (tokens.length === 0) {
+        throw new Error("Empty sub-selector");
+      }
+
+      subselects.push(tokens);
+      tokens = [];
+      sawWS = false;
+      stripWhitespace(1);
+    } else {
+      if (sawWS) {
+        if (tokens.length > 0) {
+          tokens.push({
+            type: "descendant"
+          });
+        }
+
+        sawWS = false;
+      }
+
+      if (firstChar === "*") {
+        selector = selector.substr(1);
+        tokens.push({
+          type: "universal"
+        });
+      } else if (firstChar in attribSelectors) {
+        var _a = attribSelectors[firstChar],
+            name_1 = _a[0],
+            action = _a[1];
+        selector = selector.substr(1);
+        tokens.push({
+          type: "attribute",
+          name: name_1,
+          action: action,
+          value: getName(),
+          ignoreCase: false
+        });
+      } else if (firstChar === "[") {
+        selector = selector.substr(1);
+        var data = selector.match(reAttr);
+
+        if (!data) {
+          throw new Error("Malformed attribute selector: " + selector);
+        }
+
+        selector = selector.substr(data[0].length);
+        var name_2 = unescapeCSS(data[1]);
+
+        if (!options || ("lowerCaseAttributeNames" in options ? options.lowerCaseAttributeNames : !options.xmlMode)) {
+          name_2 = name_2.toLowerCase();
+        }
+
+        tokens.push({
+          type: "attribute",
+          name: name_2,
+          action: actionTypes[data[2]],
+          value: unescapeCSS(data[4] || data[5] || ""),
+          ignoreCase: !!data[6]
+        });
+      } else if (firstChar === ":") {
+        if (selector.charAt(1) === ":") {
+          selector = selector.substr(2);
+          tokens.push({
+            type: "pseudo-element",
+            name: getName().toLowerCase()
+          });
+          continue;
+        }
+
+        selector = selector.substr(1);
+        var name_3 = getName().toLowerCase();
+        var data = null;
+
+        if (selector.charAt(0) === "(") {
+          if (unpackPseudos.has(name_3)) {
+            var quot = selector.charAt(1);
+            var quoted = quotes.has(quot);
+            selector = selector.substr(quoted ? 2 : 1);
+            data = [];
+            selector = parseSelector(data, selector, options);
+
+            if (quoted) {
+              if (selector.charAt(0) !== quot) {
+                throw new Error("Unmatched quotes in :" + name_3);
+              } else {
+                selector = selector.substr(1);
+              }
+            }
+
+            if (selector.charAt(0) !== ")") {
+              throw new Error("Missing closing parenthesis in :" + name_3 + " (" + selector + ")");
+            }
+
+            selector = selector.substr(1);
+          } else {
+            var pos = 1,
+                counter = 1;
+
+            for (; counter > 0 && pos < selector.length; pos++) {
+              if (selector.charAt(pos) === "(" && !isEscaped(pos)) counter++;else if (selector.charAt(pos) === ")" && !isEscaped(pos)) counter--;
+            }
+
+            if (counter) {
+              throw new Error("Parenthesis not matched");
+            }
+
+            data = selector.substr(1, pos - 2);
+            selector = selector.substr(pos);
+
+            if (stripQuotesFromPseudos.has(name_3)) {
+              var quot = data.charAt(0);
+
+              if (quot === data.slice(-1) && quotes.has(quot)) {
+                data = data.slice(1, -1);
+              }
+
+              data = unescapeCSS(data);
+            }
+          }
+        }
+
+        tokens.push({
+          type: "pseudo",
+          name: name_3,
+          data: data
+        });
+      } else if (reName.test(selector)) {
+        var name_4 = getName();
+
+        if (!options || ("lowerCaseTags" in options ? options.lowerCaseTags : !options.xmlMode)) {
+          name_4 = name_4.toLowerCase();
+        }
+
+        tokens.push({
+          type: "tag",
+          name: name_4
+        });
+      } else {
+        if (tokens.length && tokens[tokens.length - 1].type === "descendant") {
+          tokens.pop();
+        }
+
+        addToken(subselects, tokens);
+        return selector;
+      }
+    }
+  }
+
+  addToken(subselects, tokens);
+  return selector;
+}
+
+function addToken(subselects, tokens) {
+  if (subselects.length > 0 && tokens.length === 0) {
+    throw new Error("Empty sub-selector");
+  }
+
+  subselects.push(tokens);
+}
+
+/***/ }),
+/* 284 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var actionTypes = {
+  equals: "",
+  element: "~",
+  start: "^",
+  end: "$",
+  any: "*",
+  not: "!",
+  hyphen: "|"
+};
+var simpleSelectors = {
+  child: " > ",
+  parent: " < ",
+  sibling: " ~ ",
+  adjacent: " + ",
+  descendant: " ",
+  universal: "*"
+};
+
+function stringify(token) {
+  return token.map(stringifySubselector).join(", ");
+}
+
+exports.default = stringify;
+
+function stringifySubselector(token) {
+  return token.map(stringifyToken).join("");
+}
+
+function stringifyToken(token) {
+  if (token.type in simpleSelectors) return simpleSelectors[token.type];
+  if (token.type === "tag") return escapeName(token.name);
+  if (token.type === "pseudo-element") return "::" + escapeName(token.name);
+
+  if (token.type === "attribute") {
+    if (token.action === "exists") {
+      return "[" + escapeName(token.name) + "]";
+    }
+
+    if (token.name === "id" && token.action === "equals" && !token.ignoreCase) {
+      return "#" + escapeName(token.value);
+    }
+
+    if (token.name === "class" && token.action === "element" && !token.ignoreCase) {
+      return "." + escapeName(token.value);
+    }
+
+    var atributeName = escapeName(token.name);
+    var action = actionTypes[token.action];
+    var value = escapeName(token.value);
+    var ignoreCase = token.ignoreCase ? "i" : "";
+    return "[" + atributeName + action + "='" + value + "'" + ignoreCase + "]";
+  }
+
+  if (token.type === "pseudo") {
+    if (token.data === null) return ":" + escapeName(token.name);
+
+    if (typeof token.data === "string") {
+      return ":" + escapeName(token.name) + "(" + token.data + ")";
+    }
+
+    return ":" + escapeName(token.name) + "(" + stringify(token.data) + ")";
+  }
+
+  throw new Error("Unknown type");
+}
+
+function escapeName(str) {
+  //TODO
+  return str;
+}
+
+/***/ }),
+/* 285 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+module.exports = sortByProcedure;
 /*
 	sort the parts of the passed selector,
 	as there is potential for optimization
 	(some types of selectors are faster than others)
 */
 
-var procedure = __webpack_require__(284);
+var procedure = __webpack_require__(286);
 
 var attributes = {
-    __proto__: null,
-    exists: 10,
-    equals: 8,
-    not: 7,
-    start: 6,
-    end: 6,
-    any: 5,
-    hyphen: 4,
-    element: 4
+  __proto__: null,
+  exists: 10,
+  equals: 8,
+  not: 7,
+  start: 6,
+  end: 6,
+  any: 5,
+  hyphen: 4,
+  element: 4
 };
 
 function sortByProcedure(arr) {
-    var procs = arr.map(getProcedure);
-    for (var i = 1; i < arr.length; i++) {
-        var procNew = procs[i];
+  var procs = arr.map(getProcedure);
 
-        if (procNew < 0) continue;
+  for (var i = 1; i < arr.length; i++) {
+    var procNew = procs[i];
+    if (procNew < 0) continue;
 
-        for (var j = i - 1; j >= 0 && procNew < procs[j]; j--) {
-            var token = arr[j + 1];
-            arr[j + 1] = arr[j];
-            arr[j] = token;
-            procs[j + 1] = procs[j];
-            procs[j] = procNew;
-        }
+    for (var j = i - 1; j >= 0 && procNew < procs[j]; j--) {
+      var token = arr[j + 1];
+      arr[j + 1] = arr[j];
+      arr[j] = token;
+      procs[j + 1] = procs[j];
+      procs[j] = procNew;
     }
+  }
 }
 
 function getProcedure(token) {
-    var proc = procedure[token.type];
+  var proc = procedure[token.type];
 
-    if (proc === procedure.attribute) {
-        proc = attributes[token.action];
+  if (proc === procedure.attribute) {
+    proc = attributes[token.action];
 
-        if (proc === attributes.equals && token.name === "id") {
-            //prefer ID selectors (eg. #ID)
-            proc = 9;
-        }
-
-        if (token.ignoreCase) {
-            //ignoreCase adds some overhead, prefer "normal" token
-            //this is a binary operation, to ensure it's still an int
-            proc >>= 1;
-        }
-    } else if (proc === procedure.pseudo) {
-        if (!token.data) {
-            proc = 3;
-        } else if (token.name === "has" || token.name === "contains") {
-            proc = 0; //expensive in any case
-        } else if (token.name === "matches" || token.name === "not") {
-            proc = 0;
-            for (var i = 0; i < token.data.length; i++) {
-                //TODO better handling of complex selectors
-                if (token.data[i].length !== 1) continue;
-                var cur = getProcedure(token.data[i][0]);
-                //avoid executing :has or :contains
-                if (cur === 0) {
-                    proc = 0;
-                    break;
-                }
-                if (cur > proc) proc = cur;
-            }
-            if (token.data.length > 1 && proc > 0) proc -= 1;
-        } else {
-            proc = 1;
-        }
+    if (proc === attributes.equals && token.name === "id") {
+      //prefer ID selectors (eg. #ID)
+      proc = 9;
     }
-    return proc;
+
+    if (token.ignoreCase) {
+      //ignoreCase adds some overhead, prefer "normal" token
+      //this is a binary operation, to ensure it's still an int
+      proc >>= 1;
+    }
+  } else if (proc === procedure.pseudo) {
+    if (!token.data) {
+      proc = 3;
+    } else if (token.name === "has" || token.name === "contains") {
+      proc = 0; //expensive in any case
+    } else if (token.name === "matches" || token.name === "not") {
+      proc = 0;
+
+      for (var i = 0; i < token.data.length; i++) {
+        //TODO better handling of complex selectors
+        if (token.data[i].length !== 1) continue;
+        var cur = getProcedure(token.data[i][0]); //avoid executing :has or :contains
+
+        if (cur === 0) {
+          proc = 0;
+          break;
+        }
+
+        if (cur > proc) proc = cur;
+      }
+
+      if (token.data.length > 1 && proc > 0) proc -= 1;
+    } else {
+      proc = 1;
+    }
+  }
+
+  return proc;
 }
 
-
 /***/ }),
-/* 284 */
+/* 286 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"universal\":50,\"tag\":30,\"attribute\":1,\"pseudo\":0,\"descendant\":-1,\"child\":-1,\"parent\":-1,\"sibling\":-1,\"adjacent\":-1}");
 
 /***/ }),
-/* 285 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var attributes = __webpack_require__(286);
-var Pseudos = __webpack_require__(287);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+var attributes = __webpack_require__(288);
+
+var Pseudos = __webpack_require__(289);
 /*
 	all available rules
 */
+
+
 module.exports = {
-    __proto__: null,
+  __proto__: null,
+  attribute: attributes.compile,
+  pseudo: Pseudos.compile,
+  //tags
+  tag: function (next, data, options) {
+    var name = data.name;
+    var adapter = options.adapter;
+    return function tag(elem) {
+      return adapter.getName(elem) === name && next(elem);
+    };
+  },
+  //traversal
+  descendant: function (next, data, options) {
+    // eslint-disable-next-line no-undef
+    var isFalseCache = typeof WeakSet !== "undefined" ? new WeakSet() : null;
+    var adapter = options.adapter;
+    return function descendant(elem) {
+      var found = false;
 
-    attribute: attributes.compile,
-    pseudo: Pseudos.compile,
+      while (!found && (elem = adapter.getParent(elem))) {
+        if (!isFalseCache || !isFalseCache.has(elem)) {
+          found = next(elem);
 
-    //tags
-    tag: function(next, data, options) {
-        var name = data.name;
-        var adapter = options.adapter;
-
-        return function tag(elem) {
-            return adapter.getName(elem) === name && next(elem);
-        };
-    },
-
-    //traversal
-    descendant: function(next, data, options) {
-        // eslint-disable-next-line no-undef
-        var isFalseCache = typeof WeakSet !== "undefined" ? new WeakSet() : null;
-        var adapter = options.adapter;
-
-        return function descendant(elem) {
-            var found = false;
-
-            while (!found && (elem = adapter.getParent(elem))) {
-                if (!isFalseCache || !isFalseCache.has(elem)) {
-                    found = next(elem);
-                    if (!found && isFalseCache) {
-                        isFalseCache.add(elem);
-                    }
-                }
-            }
-
-            return found;
-        };
-    },
-    _flexibleDescendant: function(next, data, options) {
-        var adapter = options.adapter;
-
-        // Include element itself, only used while querying an array
-        return function descendant(elem) {
-            var found = next(elem);
-
-            while (!found && (elem = adapter.getParent(elem))) {
-                found = next(elem);
-            }
-
-            return found;
-        };
-    },
-    parent: function(next, data, options) {
-        if (options && options.strict) {
-            throw new Error("Parent selector isn't part of CSS3");
+          if (!found && isFalseCache) {
+            isFalseCache.add(elem);
+          }
         }
+      }
 
-        var adapter = options.adapter;
+      return found;
+    };
+  },
+  _flexibleDescendant: function (next, data, options) {
+    var adapter = options.adapter; // Include element itself, only used while querying an array
 
-        return function parent(elem) {
-            return adapter.getChildren(elem).some(test);
-        };
+    return function descendant(elem) {
+      var found = next(elem);
 
-        function test(elem) {
-            return adapter.isTag(elem) && next(elem);
-        }
-    },
-    child: function(next, data, options) {
-        var adapter = options.adapter;
+      while (!found && (elem = adapter.getParent(elem))) {
+        found = next(elem);
+      }
 
-        return function child(elem) {
-            var parent = adapter.getParent(elem);
-            return !!parent && next(parent);
-        };
-    },
-    sibling: function(next, data, options) {
-        var adapter = options.adapter;
-
-        return function sibling(elem) {
-            var siblings = adapter.getSiblings(elem);
-
-            for (var i = 0; i < siblings.length; i++) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    if (next(siblings[i])) return true;
-                }
-            }
-
-            return false;
-        };
-    },
-    adjacent: function(next, data, options) {
-        var adapter = options.adapter;
-
-        return function adjacent(elem) {
-            var siblings = adapter.getSiblings(elem),
-                lastElement;
-
-            for (var i = 0; i < siblings.length; i++) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    lastElement = siblings[i];
-                }
-            }
-
-            return !!lastElement && next(lastElement);
-        };
-    },
-    universal: function(next) {
-        return next;
+      return found;
+    };
+  },
+  parent: function (next, data, options) {
+    if (options && options.strict) {
+      throw new Error("Parent selector isn't part of CSS3");
     }
+
+    var adapter = options.adapter;
+    return function parent(elem) {
+      return adapter.getChildren(elem).some(test);
+    };
+
+    function test(elem) {
+      return adapter.isTag(elem) && next(elem);
+    }
+  },
+  child: function (next, data, options) {
+    var adapter = options.adapter;
+    return function child(elem) {
+      var parent = adapter.getParent(elem);
+      return !!parent && next(parent);
+    };
+  },
+  sibling: function (next, data, options) {
+    var adapter = options.adapter;
+    return function sibling(elem) {
+      var siblings = adapter.getSiblings(elem);
+
+      for (var i = 0; i < siblings.length; i++) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;
+          if (next(siblings[i])) return true;
+        }
+      }
+
+      return false;
+    };
+  },
+  adjacent: function (next, data, options) {
+    var adapter = options.adapter;
+    return function adjacent(elem) {
+      var siblings = adapter.getSiblings(elem),
+          lastElement;
+
+      for (var i = 0; i < siblings.length; i++) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;
+          lastElement = siblings[i];
+        }
+      }
+
+      return !!lastElement && next(lastElement);
+    };
+  },
+  universal: function (next) {
+    return next;
+  }
 };
 
-
 /***/ }),
-/* 286 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var falseFunc = __webpack_require__(280).falseFunc;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-//https://github.com/slevithan/XRegExp/blob/master/src/xregexp.js#L469
+var falseFunc = __webpack_require__(280).falseFunc; //https://github.com/slevithan/XRegExp/blob/master/src/xregexp.js#L469
+
+
 var reChars = /[-[\]{}()*+?.,\\^$|#\s]/g;
-
 /*
 	attribute selectors
 */
+
 var attributeRules = {
-    __proto__: null,
-    equals: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var adapter = options.adapter;
+  __proto__: null,
+  equals: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var adapter = options.adapter;
 
-        if (data.ignoreCase) {
-            value = value.toLowerCase();
-
-            return function equalsIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return attr != null && attr.toLowerCase() === value && next(elem);
-            };
-        }
-
-        return function equals(elem) {
-            return adapter.getAttributeValue(elem, name) === value && next(elem);
-        };
-    },
-    hyphen: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var len = value.length;
-        var adapter = options.adapter;
-
-        if (data.ignoreCase) {
-            value = value.toLowerCase();
-
-            return function hyphenIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return (
-                    attr != null &&
-                    (attr.length === len || attr.charAt(len) === "-") &&
-                    attr.substr(0, len).toLowerCase() === value &&
-                    next(elem)
-                );
-            };
-        }
-
-        return function hyphen(elem) {
-            var attr = adapter.getAttributeValue(elem, name);
-            return (
-                attr != null &&
-                attr.substr(0, len) === value &&
-                (attr.length === len || attr.charAt(len) === "-") &&
-                next(elem)
-            );
-        };
-    },
-    element: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var adapter = options.adapter;
-
-        if (/\s/.test(value)) {
-            return falseFunc;
-        }
-
-        value = value.replace(reChars, "\\$&");
-
-        var pattern = "(?:^|\\s)" + value + "(?:$|\\s)",
-            flags = data.ignoreCase ? "i" : "",
-            regex = new RegExp(pattern, flags);
-
-        return function element(elem) {
-            var attr = adapter.getAttributeValue(elem, name);
-            return attr != null && regex.test(attr) && next(elem);
-        };
-    },
-    exists: function(next, data, options) {
-        var name = data.name;
-        var adapter = options.adapter;
-
-        return function exists(elem) {
-            return adapter.hasAttrib(elem, name) && next(elem);
-        };
-    },
-    start: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var len = value.length;
-        var adapter = options.adapter;
-
-        if (len === 0) {
-            return falseFunc;
-        }
-
-        if (data.ignoreCase) {
-            value = value.toLowerCase();
-
-            return function startIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return attr != null && attr.substr(0, len).toLowerCase() === value && next(elem);
-            };
-        }
-
-        return function start(elem) {
-            var attr = adapter.getAttributeValue(elem, name);
-            return attr != null && attr.substr(0, len) === value && next(elem);
-        };
-    },
-    end: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var len = -value.length;
-        var adapter = options.adapter;
-
-        if (len === 0) {
-            return falseFunc;
-        }
-
-        if (data.ignoreCase) {
-            value = value.toLowerCase();
-
-            return function endIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return attr != null && attr.substr(len).toLowerCase() === value && next(elem);
-            };
-        }
-
-        return function end(elem) {
-            var attr = adapter.getAttributeValue(elem, name);
-            return attr != null && attr.substr(len) === value && next(elem);
-        };
-    },
-    any: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var adapter = options.adapter;
-
-        if (value === "") {
-            return falseFunc;
-        }
-
-        if (data.ignoreCase) {
-            var regex = new RegExp(value.replace(reChars, "\\$&"), "i");
-
-            return function anyIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return attr != null && regex.test(attr) && next(elem);
-            };
-        }
-
-        return function any(elem) {
-            var attr = adapter.getAttributeValue(elem, name);
-            return attr != null && attr.indexOf(value) >= 0 && next(elem);
-        };
-    },
-    not: function(next, data, options) {
-        var name = data.name;
-        var value = data.value;
-        var adapter = options.adapter;
-
-        if (value === "") {
-            return function notEmpty(elem) {
-                return !!adapter.getAttributeValue(elem, name) && next(elem);
-            };
-        } else if (data.ignoreCase) {
-            value = value.toLowerCase();
-
-            return function notIC(elem) {
-                var attr = adapter.getAttributeValue(elem, name);
-                return attr != null && attr.toLowerCase() !== value && next(elem);
-            };
-        }
-
-        return function not(elem) {
-            return adapter.getAttributeValue(elem, name) !== value && next(elem);
-        };
+    if (data.ignoreCase) {
+      value = value.toLowerCase();
+      return function equalsIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && attr.toLowerCase() === value && next(elem);
+      };
     }
-};
 
+    return function equals(elem) {
+      return adapter.getAttributeValue(elem, name) === value && next(elem);
+    };
+  },
+  hyphen: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var len = value.length;
+    var adapter = options.adapter;
+
+    if (data.ignoreCase) {
+      value = value.toLowerCase();
+      return function hyphenIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && (attr.length === len || attr.charAt(len) === "-") && attr.substr(0, len).toLowerCase() === value && next(elem);
+      };
+    }
+
+    return function hyphen(elem) {
+      var attr = adapter.getAttributeValue(elem, name);
+      return attr != null && attr.substr(0, len) === value && (attr.length === len || attr.charAt(len) === "-") && next(elem);
+    };
+  },
+  element: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var adapter = options.adapter;
+
+    if (/\s/.test(value)) {
+      return falseFunc;
+    }
+
+    value = value.replace(reChars, "\\$&");
+    var pattern = "(?:^|\\s)" + value + "(?:$|\\s)",
+        flags = data.ignoreCase ? "i" : "",
+        regex = new RegExp(pattern, flags);
+    return function element(elem) {
+      var attr = adapter.getAttributeValue(elem, name);
+      return attr != null && regex.test(attr) && next(elem);
+    };
+  },
+  exists: function (next, data, options) {
+    var name = data.name;
+    var adapter = options.adapter;
+    return function exists(elem) {
+      return adapter.hasAttrib(elem, name) && next(elem);
+    };
+  },
+  start: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var len = value.length;
+    var adapter = options.adapter;
+
+    if (len === 0) {
+      return falseFunc;
+    }
+
+    if (data.ignoreCase) {
+      value = value.toLowerCase();
+      return function startIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && attr.substr(0, len).toLowerCase() === value && next(elem);
+      };
+    }
+
+    return function start(elem) {
+      var attr = adapter.getAttributeValue(elem, name);
+      return attr != null && attr.substr(0, len) === value && next(elem);
+    };
+  },
+  end: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var len = -value.length;
+    var adapter = options.adapter;
+
+    if (len === 0) {
+      return falseFunc;
+    }
+
+    if (data.ignoreCase) {
+      value = value.toLowerCase();
+      return function endIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && attr.substr(len).toLowerCase() === value && next(elem);
+      };
+    }
+
+    return function end(elem) {
+      var attr = adapter.getAttributeValue(elem, name);
+      return attr != null && attr.substr(len) === value && next(elem);
+    };
+  },
+  any: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var adapter = options.adapter;
+
+    if (value === "") {
+      return falseFunc;
+    }
+
+    if (data.ignoreCase) {
+      var regex = new RegExp(value.replace(reChars, "\\$&"), "i");
+      return function anyIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && regex.test(attr) && next(elem);
+      };
+    }
+
+    return function any(elem) {
+      var attr = adapter.getAttributeValue(elem, name);
+      return attr != null && attr.indexOf(value) >= 0 && next(elem);
+    };
+  },
+  not: function (next, data, options) {
+    var name = data.name;
+    var value = data.value;
+    var adapter = options.adapter;
+
+    if (value === "") {
+      return function notEmpty(elem) {
+        return !!adapter.getAttributeValue(elem, name) && next(elem);
+      };
+    } else if (data.ignoreCase) {
+      value = value.toLowerCase();
+      return function notIC(elem) {
+        var attr = adapter.getAttributeValue(elem, name);
+        return attr != null && attr.toLowerCase() !== value && next(elem);
+      };
+    }
+
+    return function not(elem) {
+      return adapter.getAttributeValue(elem, name) !== value && next(elem);
+    };
+  }
+};
 module.exports = {
-    compile: function(next, data, options) {
-        if (options && options.strict && (data.ignoreCase || data.action === "not")) {
-            throw new Error("Unsupported attribute selector");
-        }
-        return attributeRules[data.action](next, data, options);
-    },
-    rules: attributeRules
-};
+  compile: function (next, data, options) {
+    if (options && options.strict && (data.ignoreCase || data.action === "not")) {
+      throw new Error("Unsupported attribute selector");
+    }
 
+    return attributeRules[data.action](next, data, options);
+  },
+  rules: attributeRules
+};
 
 /***/ }),
-/* 287 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 /*
 	pseudo selectors
@@ -32353,521 +33796,521 @@ module.exports = {
 	* pseudos get called on execution
 	  they need to return a boolean
 */
+var getNCheck = __webpack_require__(290);
 
-var getNCheck = __webpack_require__(288);
 var BaseFuncs = __webpack_require__(280);
-var attributes = __webpack_require__(286);
+
+var attributes = __webpack_require__(288);
+
 var trueFunc = BaseFuncs.trueFunc;
 var falseFunc = BaseFuncs.falseFunc;
-
 var checkAttrib = attributes.rules.equals;
 
 function getAttribFunc(name, value) {
-    var data = { name: name, value: value };
-    return function attribFunc(next, rule, options) {
-        return checkAttrib(next, data, options);
-    };
+  var data = {
+    name: name,
+    value: value
+  };
+  return function attribFunc(next, rule, options) {
+    return checkAttrib(next, data, options);
+  };
 }
 
 function getChildFunc(next, adapter) {
-    return function(elem) {
-        return !!adapter.getParent(elem) && next(elem);
-    };
+  return function (elem) {
+    return !!adapter.getParent(elem) && next(elem);
+  };
 }
 
 var filters = {
-    contains: function(next, text, options) {
-        var adapter = options.adapter;
+  contains: function (next, text, options) {
+    var adapter = options.adapter;
+    return function contains(elem) {
+      return next(elem) && adapter.getText(elem).indexOf(text) >= 0;
+    };
+  },
+  icontains: function (next, text, options) {
+    var itext = text.toLowerCase();
+    var adapter = options.adapter;
+    return function icontains(elem) {
+      return next(elem) && adapter.getText(elem).toLowerCase().indexOf(itext) >= 0;
+    };
+  },
+  //location specific methods
+  "nth-child": function (next, rule, options) {
+    var func = getNCheck(rule);
+    var adapter = options.adapter;
+    if (func === falseFunc) return func;
+    if (func === trueFunc) return getChildFunc(next, adapter);
+    return function nthChild(elem) {
+      var siblings = adapter.getSiblings(elem);
 
-        return function contains(elem) {
-            return next(elem) && adapter.getText(elem).indexOf(text) >= 0;
-        };
-    },
-    icontains: function(next, text, options) {
-        var itext = text.toLowerCase();
-        var adapter = options.adapter;
-
-        return function icontains(elem) {
-            return (
-                next(elem) &&
-                adapter
-                    .getText(elem)
-                    .toLowerCase()
-                    .indexOf(itext) >= 0
-            );
-        };
-    },
-
-    //location specific methods
-    "nth-child": function(next, rule, options) {
-        var func = getNCheck(rule);
-        var adapter = options.adapter;
-
-        if (func === falseFunc) return func;
-        if (func === trueFunc) return getChildFunc(next, adapter);
-
-        return function nthChild(elem) {
-            var siblings = adapter.getSiblings(elem);
-
-            for (var i = 0, pos = 0; i < siblings.length; i++) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    else pos++;
-                }
-            }
-
-            return func(pos) && next(elem);
-        };
-    },
-    "nth-last-child": function(next, rule, options) {
-        var func = getNCheck(rule);
-        var adapter = options.adapter;
-
-        if (func === falseFunc) return func;
-        if (func === trueFunc) return getChildFunc(next, adapter);
-
-        return function nthLastChild(elem) {
-            var siblings = adapter.getSiblings(elem);
-
-            for (var pos = 0, i = siblings.length - 1; i >= 0; i--) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    else pos++;
-                }
-            }
-
-            return func(pos) && next(elem);
-        };
-    },
-    "nth-of-type": function(next, rule, options) {
-        var func = getNCheck(rule);
-        var adapter = options.adapter;
-
-        if (func === falseFunc) return func;
-        if (func === trueFunc) return getChildFunc(next, adapter);
-
-        return function nthOfType(elem) {
-            var siblings = adapter.getSiblings(elem);
-
-            for (var pos = 0, i = 0; i < siblings.length; i++) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    if (adapter.getName(siblings[i]) === adapter.getName(elem)) pos++;
-                }
-            }
-
-            return func(pos) && next(elem);
-        };
-    },
-    "nth-last-of-type": function(next, rule, options) {
-        var func = getNCheck(rule);
-        var adapter = options.adapter;
-
-        if (func === falseFunc) return func;
-        if (func === trueFunc) return getChildFunc(next, adapter);
-
-        return function nthLastOfType(elem) {
-            var siblings = adapter.getSiblings(elem);
-
-            for (var pos = 0, i = siblings.length - 1; i >= 0; i--) {
-                if (adapter.isTag(siblings[i])) {
-                    if (siblings[i] === elem) break;
-                    if (adapter.getName(siblings[i]) === adapter.getName(elem)) pos++;
-                }
-            }
-
-            return func(pos) && next(elem);
-        };
-    },
-
-    //TODO determine the actual root element
-    root: function(next, rule, options) {
-        var adapter = options.adapter;
-
-        return function(elem) {
-            return !adapter.getParent(elem) && next(elem);
-        };
-    },
-
-    scope: function(next, rule, options, context) {
-        var adapter = options.adapter;
-
-        if (!context || context.length === 0) {
-            //equivalent to :root
-            return filters.root(next, rule, options);
+      for (var i = 0, pos = 0; i < siblings.length; i++) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;else pos++;
         }
+      }
 
-        function equals(a, b) {
-            if (typeof adapter.equals === "function") return adapter.equals(a, b);
+      return func(pos) && next(elem);
+    };
+  },
+  "nth-last-child": function (next, rule, options) {
+    var func = getNCheck(rule);
+    var adapter = options.adapter;
+    if (func === falseFunc) return func;
+    if (func === trueFunc) return getChildFunc(next, adapter);
+    return function nthLastChild(elem) {
+      var siblings = adapter.getSiblings(elem);
 
-            return a === b;
+      for (var pos = 0, i = siblings.length - 1; i >= 0; i--) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;else pos++;
         }
+      }
 
-        if (context.length === 1) {
-            //NOTE: can't be unpacked, as :has uses this for side-effects
-            return function(elem) {
-                return equals(context[0], elem) && next(elem);
-            };
+      return func(pos) && next(elem);
+    };
+  },
+  "nth-of-type": function (next, rule, options) {
+    var func = getNCheck(rule);
+    var adapter = options.adapter;
+    if (func === falseFunc) return func;
+    if (func === trueFunc) return getChildFunc(next, adapter);
+    return function nthOfType(elem) {
+      var siblings = adapter.getSiblings(elem);
+
+      for (var pos = 0, i = 0; i < siblings.length; i++) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;
+          if (adapter.getName(siblings[i]) === adapter.getName(elem)) pos++;
         }
+      }
 
-        return function(elem) {
-            return context.indexOf(elem) >= 0 && next(elem);
-        };
-    },
+      return func(pos) && next(elem);
+    };
+  },
+  "nth-last-of-type": function (next, rule, options) {
+    var func = getNCheck(rule);
+    var adapter = options.adapter;
+    if (func === falseFunc) return func;
+    if (func === trueFunc) return getChildFunc(next, adapter);
+    return function nthLastOfType(elem) {
+      var siblings = adapter.getSiblings(elem);
 
-    //jQuery extensions (others follow as pseudos)
-    checkbox: getAttribFunc("type", "checkbox"),
-    file: getAttribFunc("type", "file"),
-    password: getAttribFunc("type", "password"),
-    radio: getAttribFunc("type", "radio"),
-    reset: getAttribFunc("type", "reset"),
-    image: getAttribFunc("type", "image"),
-    submit: getAttribFunc("type", "submit")
-};
+      for (var pos = 0, i = siblings.length - 1; i >= 0; i--) {
+        if (adapter.isTag(siblings[i])) {
+          if (siblings[i] === elem) break;
+          if (adapter.getName(siblings[i]) === adapter.getName(elem)) pos++;
+        }
+      }
 
-//helper methods
+      return func(pos) && next(elem);
+    };
+  },
+  //TODO determine the actual root element
+  root: function (next, rule, options) {
+    var adapter = options.adapter;
+    return function (elem) {
+      return !adapter.getParent(elem) && next(elem);
+    };
+  },
+  scope: function (next, rule, options, context) {
+    var adapter = options.adapter;
+
+    if (!context || context.length === 0) {
+      //equivalent to :root
+      return filters.root(next, rule, options);
+    }
+
+    function equals(a, b) {
+      if (typeof adapter.equals === "function") return adapter.equals(a, b);
+      return a === b;
+    }
+
+    if (context.length === 1) {
+      //NOTE: can't be unpacked, as :has uses this for side-effects
+      return function (elem) {
+        return equals(context[0], elem) && next(elem);
+      };
+    }
+
+    return function (elem) {
+      return context.indexOf(elem) >= 0 && next(elem);
+    };
+  },
+  //jQuery extensions (others follow as pseudos)
+  checkbox: getAttribFunc("type", "checkbox"),
+  file: getAttribFunc("type", "file"),
+  password: getAttribFunc("type", "password"),
+  radio: getAttribFunc("type", "radio"),
+  reset: getAttribFunc("type", "reset"),
+  image: getAttribFunc("type", "image"),
+  submit: getAttribFunc("type", "submit"),
+  //dynamic state pseudos. These depend on optional Adapter methods.
+  hover: function (next, rule, options) {
+    var adapter = options.adapter;
+
+    if (typeof adapter.isHovered === 'function') {
+      return function hover(elem) {
+        return next(elem) && adapter.isHovered(elem);
+      };
+    }
+
+    return falseFunc;
+  },
+  visited: function (next, rule, options) {
+    var adapter = options.adapter;
+
+    if (typeof adapter.isVisited === 'function') {
+      return function visited(elem) {
+        return next(elem) && adapter.isVisited(elem);
+      };
+    }
+
+    return falseFunc;
+  },
+  active: function (next, rule, options) {
+    var adapter = options.adapter;
+
+    if (typeof adapter.isActive === 'function') {
+      return function active(elem) {
+        return next(elem) && adapter.isActive(elem);
+      };
+    }
+
+    return falseFunc;
+  }
+}; //helper methods
+
 function getFirstElement(elems, adapter) {
-    for (var i = 0; elems && i < elems.length; i++) {
-        if (adapter.isTag(elems[i])) return elems[i];
-    }
-}
+  for (var i = 0; elems && i < elems.length; i++) {
+    if (adapter.isTag(elems[i])) return elems[i];
+  }
+} //while filters are precompiled, pseudos get called when they are needed
 
-//while filters are precompiled, pseudos get called when they are needed
+
 var pseudos = {
-    empty: function(elem, adapter) {
-        return !adapter.getChildren(elem).some(function(elem) {
-            return adapter.isTag(elem) || elem.type === "text";
-        });
-    },
+  empty: function (elem, adapter) {
+    return !adapter.getChildren(elem).some(function (elem) {
+      return adapter.isTag(elem) || elem.type === "text";
+    });
+  },
+  "first-child": function (elem, adapter) {
+    return getFirstElement(adapter.getSiblings(elem), adapter) === elem;
+  },
+  "last-child": function (elem, adapter) {
+    var siblings = adapter.getSiblings(elem);
 
-    "first-child": function(elem, adapter) {
-        return getFirstElement(adapter.getSiblings(elem), adapter) === elem;
-    },
-    "last-child": function(elem, adapter) {
-        var siblings = adapter.getSiblings(elem);
-
-        for (var i = siblings.length - 1; i >= 0; i--) {
-            if (siblings[i] === elem) return true;
-            if (adapter.isTag(siblings[i])) break;
-        }
-
-        return false;
-    },
-    "first-of-type": function(elem, adapter) {
-        var siblings = adapter.getSiblings(elem);
-
-        for (var i = 0; i < siblings.length; i++) {
-            if (adapter.isTag(siblings[i])) {
-                if (siblings[i] === elem) return true;
-                if (adapter.getName(siblings[i]) === adapter.getName(elem)) break;
-            }
-        }
-
-        return false;
-    },
-    "last-of-type": function(elem, adapter) {
-        var siblings = adapter.getSiblings(elem);
-
-        for (var i = siblings.length - 1; i >= 0; i--) {
-            if (adapter.isTag(siblings[i])) {
-                if (siblings[i] === elem) return true;
-                if (adapter.getName(siblings[i]) === adapter.getName(elem)) break;
-            }
-        }
-
-        return false;
-    },
-    "only-of-type": function(elem, adapter) {
-        var siblings = adapter.getSiblings(elem);
-
-        for (var i = 0, j = siblings.length; i < j; i++) {
-            if (adapter.isTag(siblings[i])) {
-                if (siblings[i] === elem) continue;
-                if (adapter.getName(siblings[i]) === adapter.getName(elem)) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    },
-    "only-child": function(elem, adapter) {
-        var siblings = adapter.getSiblings(elem);
-
-        for (var i = 0; i < siblings.length; i++) {
-            if (adapter.isTag(siblings[i]) && siblings[i] !== elem) return false;
-        }
-
-        return true;
-    },
-
-    //:matches(a, area, link)[href]
-    link: function(elem, adapter) {
-        return adapter.hasAttrib(elem, "href");
-    },
-    visited: falseFunc, //Valid implementation
-    //TODO: :any-link once the name is finalized (as an alias of :link)
-
-    //forms
-    //to consider: :target
-
-    //:matches([selected], select:not([multiple]):not(> option[selected]) > option:first-of-type)
-    selected: function(elem, adapter) {
-        if (adapter.hasAttrib(elem, "selected")) return true;
-        else if (adapter.getName(elem) !== "option") return false;
-
-        //the first <option> in a <select> is also selected
-        var parent = adapter.getParent(elem);
-
-        if (!parent || adapter.getName(parent) !== "select" || adapter.hasAttrib(parent, "multiple")) {
-            return false;
-        }
-
-        var siblings = adapter.getChildren(parent);
-        var sawElem = false;
-
-        for (var i = 0; i < siblings.length; i++) {
-            if (adapter.isTag(siblings[i])) {
-                if (siblings[i] === elem) {
-                    sawElem = true;
-                } else if (!sawElem) {
-                    return false;
-                } else if (adapter.hasAttrib(siblings[i], "selected")) {
-                    return false;
-                }
-            }
-        }
-
-        return sawElem;
-    },
-    //https://html.spec.whatwg.org/multipage/scripting.html#disabled-elements
-    //:matches(
-    //  :matches(button, input, select, textarea, menuitem, optgroup, option)[disabled],
-    //  optgroup[disabled] > option),
-    // fieldset[disabled] * //TODO not child of first <legend>
-    //)
-    disabled: function(elem, adapter) {
-        return adapter.hasAttrib(elem, "disabled");
-    },
-    enabled: function(elem, adapter) {
-        return !adapter.hasAttrib(elem, "disabled");
-    },
-    //:matches(:matches(:radio, :checkbox)[checked], :selected) (TODO menuitem)
-    checked: function(elem, adapter) {
-        return adapter.hasAttrib(elem, "checked") || pseudos.selected(elem, adapter);
-    },
-    //:matches(input, select, textarea)[required]
-    required: function(elem, adapter) {
-        return adapter.hasAttrib(elem, "required");
-    },
-    //:matches(input, select, textarea):not([required])
-    optional: function(elem, adapter) {
-        return !adapter.hasAttrib(elem, "required");
-    },
-
-    //jQuery extensions
-
-    //:not(:empty)
-    parent: function(elem, adapter) {
-        return !pseudos.empty(elem, adapter);
-    },
-    //:matches(h1, h2, h3, h4, h5, h6)
-    header: namePseudo(["h1", "h2", "h3", "h4", "h5", "h6"]),
-
-    //:matches(button, input[type=button])
-    button: function(elem, adapter) {
-        var name = adapter.getName(elem);
-        return (
-            name === "button" || (name === "input" && adapter.getAttributeValue(elem, "type") === "button")
-        );
-    },
-    //:matches(input, textarea, select, button)
-    input: namePseudo(["input", "textarea", "select", "button"]),
-    //input:matches(:not([type!='']), [type='text' i])
-    text: function(elem, adapter) {
-        var attr;
-        return (
-            adapter.getName(elem) === "input" &&
-            (!(attr = adapter.getAttributeValue(elem, "type")) || attr.toLowerCase() === "text")
-        );
+    for (var i = siblings.length - 1; i >= 0; i--) {
+      if (siblings[i] === elem) return true;
+      if (adapter.isTag(siblings[i])) break;
     }
+
+    return false;
+  },
+  "first-of-type": function (elem, adapter) {
+    var siblings = adapter.getSiblings(elem);
+
+    for (var i = 0; i < siblings.length; i++) {
+      if (adapter.isTag(siblings[i])) {
+        if (siblings[i] === elem) return true;
+        if (adapter.getName(siblings[i]) === adapter.getName(elem)) break;
+      }
+    }
+
+    return false;
+  },
+  "last-of-type": function (elem, adapter) {
+    var siblings = adapter.getSiblings(elem);
+
+    for (var i = siblings.length - 1; i >= 0; i--) {
+      if (adapter.isTag(siblings[i])) {
+        if (siblings[i] === elem) return true;
+        if (adapter.getName(siblings[i]) === adapter.getName(elem)) break;
+      }
+    }
+
+    return false;
+  },
+  "only-of-type": function (elem, adapter) {
+    var siblings = adapter.getSiblings(elem);
+
+    for (var i = 0, j = siblings.length; i < j; i++) {
+      if (adapter.isTag(siblings[i])) {
+        if (siblings[i] === elem) continue;
+
+        if (adapter.getName(siblings[i]) === adapter.getName(elem)) {
+          return false;
+        }
+      }
+    }
+
+    return true;
+  },
+  "only-child": function (elem, adapter) {
+    var siblings = adapter.getSiblings(elem);
+
+    for (var i = 0; i < siblings.length; i++) {
+      if (adapter.isTag(siblings[i]) && siblings[i] !== elem) return false;
+    }
+
+    return true;
+  },
+  //:matches(a, area, link)[href]
+  link: function (elem, adapter) {
+    return adapter.hasAttrib(elem, "href");
+  },
+  //TODO: :any-link once the name is finalized (as an alias of :link)
+  //forms
+  //to consider: :target
+  //:matches([selected], select:not([multiple]):not(> option[selected]) > option:first-of-type)
+  selected: function (elem, adapter) {
+    if (adapter.hasAttrib(elem, "selected")) return true;else if (adapter.getName(elem) !== "option") return false; //the first <option> in a <select> is also selected
+
+    var parent = adapter.getParent(elem);
+
+    if (!parent || adapter.getName(parent) !== "select" || adapter.hasAttrib(parent, "multiple")) {
+      return false;
+    }
+
+    var siblings = adapter.getChildren(parent);
+    var sawElem = false;
+
+    for (var i = 0; i < siblings.length; i++) {
+      if (adapter.isTag(siblings[i])) {
+        if (siblings[i] === elem) {
+          sawElem = true;
+        } else if (!sawElem) {
+          return false;
+        } else if (adapter.hasAttrib(siblings[i], "selected")) {
+          return false;
+        }
+      }
+    }
+
+    return sawElem;
+  },
+  //https://html.spec.whatwg.org/multipage/scripting.html#disabled-elements
+  //:matches(
+  //  :matches(button, input, select, textarea, menuitem, optgroup, option)[disabled],
+  //  optgroup[disabled] > option),
+  // fieldset[disabled] * //TODO not child of first <legend>
+  //)
+  disabled: function (elem, adapter) {
+    return adapter.hasAttrib(elem, "disabled");
+  },
+  enabled: function (elem, adapter) {
+    return !adapter.hasAttrib(elem, "disabled");
+  },
+  //:matches(:matches(:radio, :checkbox)[checked], :selected) (TODO menuitem)
+  checked: function (elem, adapter) {
+    return adapter.hasAttrib(elem, "checked") || pseudos.selected(elem, adapter);
+  },
+  //:matches(input, select, textarea)[required]
+  required: function (elem, adapter) {
+    return adapter.hasAttrib(elem, "required");
+  },
+  //:matches(input, select, textarea):not([required])
+  optional: function (elem, adapter) {
+    return !adapter.hasAttrib(elem, "required");
+  },
+  //jQuery extensions
+  //:not(:empty)
+  parent: function (elem, adapter) {
+    return !pseudos.empty(elem, adapter);
+  },
+  //:matches(h1, h2, h3, h4, h5, h6)
+  header: namePseudo(["h1", "h2", "h3", "h4", "h5", "h6"]),
+  //:matches(button, input[type=button])
+  button: function (elem, adapter) {
+    var name = adapter.getName(elem);
+    return name === "button" || name === "input" && adapter.getAttributeValue(elem, "type") === "button";
+  },
+  //:matches(input, textarea, select, button)
+  input: namePseudo(["input", "textarea", "select", "button"]),
+  //input:matches(:not([type!='']), [type='text' i])
+  text: function (elem, adapter) {
+    var attr;
+    return adapter.getName(elem) === "input" && (!(attr = adapter.getAttributeValue(elem, "type")) || attr.toLowerCase() === "text");
+  }
 };
 
 function namePseudo(names) {
-    if (typeof Set !== "undefined") {
-        // eslint-disable-next-line no-undef
-        var nameSet = new Set(names);
-
-        return function(elem, adapter) {
-            return nameSet.has(adapter.getName(elem));
-        };
-    }
-
-    return function(elem, adapter) {
-        return names.indexOf(adapter.getName(elem)) >= 0;
+  if (typeof Set !== "undefined") {
+    // eslint-disable-next-line no-undef
+    var nameSet = new Set(names);
+    return function (elem, adapter) {
+      return nameSet.has(adapter.getName(elem));
     };
+  }
+
+  return function (elem, adapter) {
+    return names.indexOf(adapter.getName(elem)) >= 0;
+  };
 }
 
 function verifyArgs(func, name, subselect) {
-    if (subselect === null) {
-        if (func.length > 2 && name !== "scope") {
-            throw new Error("pseudo-selector :" + name + " requires an argument");
-        }
-    } else {
-        if (func.length === 2) {
-            throw new Error("pseudo-selector :" + name + " doesn't have any arguments");
-        }
+  if (subselect === null) {
+    if (func.length > 2 && name !== "scope") {
+      throw new Error("pseudo-selector :" + name + " requires an argument");
     }
-}
+  } else {
+    if (func.length === 2) {
+      throw new Error("pseudo-selector :" + name + " doesn't have any arguments");
+    }
+  }
+} //FIXME this feels hacky
 
-//FIXME this feels hacky
+
 var re_CSS3 = /^(?:(?:nth|last|first|only)-(?:child|of-type)|root|empty|(?:en|dis)abled|checked|not)$/;
-
 module.exports = {
-    compile: function(next, data, options, context) {
-        var name = data.name;
-        var subselect = data.data;
-        var adapter = options.adapter;
+  compile: function (next, data, options, context) {
+    var name = data.name;
+    var subselect = data.data;
+    var adapter = options.adapter;
 
-        if (options && options.strict && !re_CSS3.test(name)) {
-            throw new Error(":" + name + " isn't part of CSS3");
-        }
+    if (options && options.strict && !re_CSS3.test(name)) {
+      throw new Error(":" + name + " isn't part of CSS3");
+    }
 
-        if (typeof filters[name] === "function") {
-            return filters[name](next, subselect, options, context);
-        } else if (typeof pseudos[name] === "function") {
-            var func = pseudos[name];
-            verifyArgs(func, name, subselect);
+    if (typeof filters[name] === "function") {
+      return filters[name](next, subselect, options, context);
+    } else if (typeof pseudos[name] === "function") {
+      var func = pseudos[name];
+      verifyArgs(func, name, subselect);
 
-            if (func === falseFunc) {
-                return func;
-            }
+      if (func === falseFunc) {
+        return func;
+      }
 
-            if (next === trueFunc) {
-                return function pseudoRoot(elem) {
-                    return func(elem, adapter, subselect);
-                };
-            }
+      if (next === trueFunc) {
+        return function pseudoRoot(elem) {
+          return func(elem, adapter, subselect);
+        };
+      }
 
-            return function pseudoArgs(elem) {
-                return func(elem, adapter, subselect) && next(elem);
-            };
-        } else {
-            throw new Error("unmatched pseudo-class :" + name);
-        }
-    },
-    filters: filters,
-    pseudos: pseudos
+      return function pseudoArgs(elem) {
+        return func(elem, adapter, subselect) && next(elem);
+      };
+    } else {
+      throw new Error("unmatched pseudo-class :" + name);
+    }
+  },
+  filters: filters,
+  pseudos: pseudos
 };
 
-
 /***/ }),
-/* 288 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(289),
-    compile = __webpack_require__(290);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-module.exports = function nthCheck(formula){
-	return compile(parse(formula));
+var parse = __webpack_require__(291),
+    compile = __webpack_require__(292);
+
+module.exports = function nthCheck(formula) {
+  return compile(parse(formula));
 };
 
 module.exports.parse = parse;
 module.exports.compile = compile;
 
 /***/ }),
-/* 289 */
-/***/ (function(module, exports) {
+/* 291 */
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = parse;
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-//following http://www.w3.org/TR/css3-selectors/#nth-child-pseudo
-
+module.exports = parse; //following http://www.w3.org/TR/css3-selectors/#nth-child-pseudo
 //[ ['-'|'+']? INTEGER? {N} [ S* ['-'|'+'] S* INTEGER ]?
-var re_nthElement = /^([+\-]?\d*n)?\s*(?:([+\-]?)\s*(\d+))?$/;
 
+var re_nthElement = /^([+\-]?\d*n)?\s*(?:([+\-]?)\s*(\d+))?$/;
 /*
 	parses a nth-check formula, returns an array of two numbers
 */
-function parse(formula){
-	formula = formula.trim().toLowerCase();
 
-	if(formula === "even"){
-		return [2, 0];
-	} else if(formula === "odd"){
-		return [2, 1];
-	} else {
-		var parsed = formula.match(re_nthElement);
+function parse(formula) {
+  formula = formula.trim().toLowerCase();
 
-		if(!parsed){
-			throw new SyntaxError("n-th rule couldn't be parsed ('" + formula + "')");
-		}
+  if (formula === "even") {
+    return [2, 0];
+  } else if (formula === "odd") {
+    return [2, 1];
+  } else {
+    var parsed = formula.match(re_nthElement);
 
-		var a;
+    if (!parsed) {
+      throw new SyntaxError("n-th rule couldn't be parsed ('" + formula + "')");
+    }
 
-		if(parsed[1]){
-			a = parseInt(parsed[1], 10);
-			if(isNaN(a)){
-				if(parsed[1].charAt(0) === "-") a = -1;
-				else a = 1;
-			}
-		} else a = 0;
+    var a;
 
-		return [
-			a,
-			parsed[3] ? parseInt((parsed[2] || "") + parsed[3], 10) : 0
-		];
-	}
+    if (parsed[1]) {
+      a = parseInt(parsed[1], 10);
+
+      if (isNaN(a)) {
+        if (parsed[1].charAt(0) === "-") a = -1;else a = 1;
+      }
+    } else a = 0;
+
+    return [a, parsed[3] ? parseInt((parsed[2] || "") + parsed[3], 10) : 0];
+  }
 }
 
-
 /***/ }),
-/* 290 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 module.exports = compile;
 
 var BaseFuncs = __webpack_require__(280),
-    trueFunc  = BaseFuncs.trueFunc,
+    trueFunc = BaseFuncs.trueFunc,
     falseFunc = BaseFuncs.falseFunc;
-
 /*
 	returns a function that checks if an elements index matches the given rule
 	highly optimized to return the fastest solution
 */
-function compile(parsed){
-	var a = parsed[0],
-	    b = parsed[1] - 1;
 
-	//when b <= 0, a*n won't be possible for any matches when a < 0
-	//besides, the specification says that no element is matched when a and b are 0
-	if(b < 0 && a <= 0) return falseFunc;
 
-	//when a is in the range -1..1, it matches any element (so only b is checked)
-	if(a ===-1) return function(pos){ return pos <= b; };
-	if(a === 0) return function(pos){ return pos === b; };
-	//when b <= 0 and a === 1, they match any element
-	if(a === 1) return b < 0 ? trueFunc : function(pos){ return pos >= b; };
+function compile(parsed) {
+  var a = parsed[0],
+      b = parsed[1] - 1; //when b <= 0, a*n won't be possible for any matches when a < 0
+  //besides, the specification says that no element is matched when a and b are 0
 
-	//when a > 0, modulo can be used to check if there is a match
-	var bMod = b % a;
-	if(bMod < 0) bMod += a;
+  if (b < 0 && a <= 0) return falseFunc; //when a is in the range -1..1, it matches any element (so only b is checked)
 
-	if(a > 1){
-		return function(pos){
-			return pos >= b && pos % a === bMod;
-		};
-	}
+  if (a === -1) return function (pos) {
+    return pos <= b;
+  };
+  if (a === 0) return function (pos) {
+    return pos === b;
+  }; //when b <= 0 and a === 1, they match any element
 
-	a *= -1; //make `a` positive
+  if (a === 1) return b < 0 ? trueFunc : function (pos) {
+    return pos >= b;
+  }; //when a > 0, modulo can be used to check if there is a match
 
-	return function(pos){
-		return pos <= b && pos % a === bMod;
-	};
+  var bMod = b % a;
+  if (bMod < 0) bMod += a;
+
+  if (a > 1) {
+    return function (pos) {
+      return pos >= b && pos % a === bMod;
+    };
+  }
+
+  a *= -1; //make `a` positive
+
+  return function (pos) {
+    return pos <= b && pos % a === bMod;
+  };
 }
 
 /***/ }),
-/* 291 */
+/* 293 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33380,14 +34823,14 @@ class Layer extends _group__WEBPACK_IMPORTED_MODULE_3__["default"] {
 _document__WEBPACK_IMPORTED_MODULE_4__["default"].registerNode(Layer, 'layer');
 
 /***/ }),
-/* 292 */
+/* 294 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SpriteSvg; });
 /* harmony import */ var _sprite__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(231);
-/* harmony import */ var _attribute_spritesvg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(293);
+/* harmony import */ var _attribute_spritesvg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(295);
 /* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(220);
 /* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(259);
 /* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(79);
@@ -33690,7 +35133,7 @@ _defineProperty(SpriteSvg, "Attr", _attribute_spritesvg__WEBPACK_IMPORTED_MODULE
 _document__WEBPACK_IMPORTED_MODULE_2__["default"].registerNode(SpriteSvg, 'spritesvg');
 
 /***/ }),
-/* 293 */
+/* 295 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33739,10 +35182,10 @@ class SpriteSvg extends _sprite__WEBPACK_IMPORTED_MODULE_0__["default"] {
 }
 
 /***/ }),
-/* 294 */,
-/* 295 */,
 /* 296 */,
-/* 297 */
+/* 297 */,
+/* 298 */,
+/* 299 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33803,10 +35246,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_group__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(257);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Group", function() { return _node_group__WEBPACK_IMPORTED_MODULE_16__["default"]; });
 
-/* harmony import */ var _node_layer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(291);
+/* harmony import */ var _node_layer__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(293);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Layer", function() { return _node_layer__WEBPACK_IMPORTED_MODULE_17__["default"]; });
 
-/* harmony import */ var _node_spritesvg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(292);
+/* harmony import */ var _node_spritesvg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(294);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpriteSvg", function() { return _node_spritesvg__WEBPACK_IMPORTED_MODULE_18__["default"]; });
 
 /* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(220);

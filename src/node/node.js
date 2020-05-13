@@ -22,9 +22,11 @@ const _shaderAttrs = Symbol('shaderAttrs');
 const _uniforms = Symbol('uniforms');
 
 export default class Node {
+  // 节点属性
   static Attr = Attr;
 
   constructor(attrs = {}) {
+    // 节点的属性类
     this.attributes = new this.constructor.Attr(this);
     this[_resolution] = {width: 300, height: 150};
     Object.assign(this.attributes, attrs);
@@ -32,10 +34,15 @@ export default class Node {
     //   Object.seal(this.attributes);
     // }
     this[_animations] = new Set();
+    // 初始化事件监听器容器
     this[_eventListeners] = {};
+    // 捕获型
     this[_captureEventListeners] = {};
   }
 
+  /**
+   * 当前节点的祖先
+   */
   get ancestors() {
     let parent = this.parent;
     const ret = [];
@@ -198,10 +205,19 @@ export default class Node {
     }
   }
 
+  /**
+   * 
+   * @param {*} type 事件类型
+   * @param {*} listener 监听器
+   * @param {*} options 选项
+   */
   addEventListener(type, listener, options = {}) {
+    // 捕获或者冒泡
     if(typeof options === 'boolean') options = {capture: options};
     const {capture, once} = options;
+    // 不同类型的事件
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
+    // Symbol值 是否存在这种事件的监听队列
     this[eventListeners][type] = this[eventListeners][type] || [];
     this[eventListeners][type].push({listener, once});
 
@@ -222,8 +238,14 @@ export default class Node {
     return animation;
   }
 
+  /**
+   * 给节点设置属性
+   * @param  {...any} args 参数对象
+   */
   attr(...args) {
+    // 没有设置属性， 返回默认的
     if(args.length === 0) return this.attributes[attributes];
+    // 多余1个属性
     if(args.length > 1) {
       let [key, value] = args;
       if(typeof value === 'function') {
@@ -232,7 +254,9 @@ export default class Node {
       this.setAttribute(key, value);
       return this;
     }
+    // 第一个值为字符串
     if(typeof args[0] === 'string') {
+
       return this.getAttribute(args[0]);
     }
     Object.assign(this.attributes, args[0]);

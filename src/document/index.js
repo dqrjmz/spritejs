@@ -12,10 +12,20 @@ function createElement(nodeName, attrs = {}, children = []) {
 }
 
 const ownerDocument = {
+  /**
+   * 
+   * @param {*} Node 节点类（不是实例
+   * @param {*} nodeName 节点名称
+   * @param {*} nodeType 节点类型
+   */
   registerNode(Node, nodeName, nodeType = 100) {
+    // 将节点名称转换为小写
     nodeName = nodeName.toLowerCase();
+    // 查看节点是否已经被注册
     if(nodeMap.has(nodeName)) throw new TypeError(`Cannot registerNode, ${nodeName} has been taken.`);
+    // 将节点类，记录进缓存
     nodeMap.set(nodeName, Node);
+    // 给节点类原型对象定义属性
     Object.defineProperties(Node.prototype, {
       nodeType: {
         value: nodeType,
@@ -38,6 +48,10 @@ const ownerDocument = {
   createElementNS(uri, name) {
     return createElement(name);
   },
+  /**
+   * 是否是Sprite内部节点
+   * @param {*} nodeName 节点名称
+   */
   isSpriteNode(nodeName) {
     return nodeMap.has(nodeName.toLowerCase());
   },

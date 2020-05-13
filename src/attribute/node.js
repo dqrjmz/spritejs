@@ -115,6 +115,10 @@ export default class Node {
     return attr[changedAttrs];
   }
 
+  /**
+   * 给节点
+   * @param {*} subject 
+   */
   constructor(subject) {
     this[_subject] = subject;
     this[_attr] = {};

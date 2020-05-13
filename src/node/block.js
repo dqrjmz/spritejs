@@ -15,6 +15,7 @@ export default class Block extends Node {
     super(attrs);
   }
 
+  // 内容 + 边框一半
   get borderSize() {
     const {paddingTop, paddingRight, paddingBottom, paddingLeft, borderWidth} = this.attributes;
     const [width, height] = this.contentSize;
@@ -23,6 +24,7 @@ export default class Block extends Node {
   }
 
   // content + padding
+  // 客户端尺寸
   get clientSize() {
     const {paddingTop, paddingRight, paddingBottom, paddingLeft} = this.attributes;
     const [width, height] = this.contentSize;
@@ -30,6 +32,7 @@ export default class Block extends Node {
       paddingTop + height + paddingBottom];
   }
 
+  // 内容尺寸
   get contentSize() {
     let {width, height, boxSizing, paddingTop, paddingRight, paddingBottom, paddingLeft} = this.attributes;
     width = width || 0;
@@ -44,6 +47,7 @@ export default class Block extends Node {
     return [width, height];
   }
 
+  // 是否有边框
   get hasBorder() {
     const borderWidth = this.attributes.borderWidth;
     return borderWidth > 0;
@@ -113,6 +117,7 @@ export default class Block extends Node {
     return [left + padding[0], top + padding[1], width - padding[0] - padding[2], height - padding[1] - padding[3]];
   }
 
+  // 获取元素尺寸信息
   getBoundingClientRect() {
     let boundingBox = null;
     if(this.mesh) {
