@@ -6,6 +6,7 @@ export default class Arc extends Ellipse {
     return super.radiusX;
   }
 
+  // 设置圆心
   set radius(value) {
     value = toNumber(value);
     super.radiusX = value;

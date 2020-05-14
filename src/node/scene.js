@@ -59,6 +59,7 @@ function drawImage(layer, offscreenLayer) {
   layer.renderer.drawImage(offscreenLayer.canvas, -left / displayRatio, -top / displayRatio, width / displayRatio, height / displayRatio);
 }
 
+// 触摸事件捕获的目标对象
 const touchEventCapturedTargets = {};
 function delegateEvents(scene) {
   const events = ['mousedown', 'mouseup', 'mousemove', 'mousewheel', 'wheel',
@@ -85,18 +86,25 @@ function delegateEvents(scene) {
     }
   }, {passive: true});
 
+  // 遍历事件
   events.forEach((eventType) => {
+    // 给容器添加事件
     container.addEventListener(eventType, (event) => {
       const layers = scene.orderedChildren;
+      // 创建触摸事件的事件对象
       const pointerEvents = createPointerEvents(event, {offsetLeft: left, offsetTop: top, displayRatio});
+      // 遍历每个事件对象
       pointerEvents.forEach((evt) => {
         // evt.scene = scene;
         const id = evt.identifier;
         if(evt.type === 'touchmove' || evt.type === 'touchend') {
+          // 事件对象
           const capturedTarget = touchEventCapturedTargets[id];
+          // 
           if(capturedTarget) capturedTarget.dispatchEvent(evt);
           if(evt.type === 'touchend') delete touchEventCapturedTargets[id];
         } else {
+
           for(let i = layers.length - 1; i >= 0; i--) {
             const layer = layers[i];
             if(layer.options.handleEvent !== false) {
@@ -116,8 +124,10 @@ function delegateEvents(scene) {
             }
           }
         }
+        // 当前的手指
         const target = evt.target;
         if(evt.type === 'touchstart') {
+          // 觸摸點的目標對象
           touchEventCapturedTargets[id] = evt.target; // set captured event target
         }
         if(evt.type === 'mousemove') {

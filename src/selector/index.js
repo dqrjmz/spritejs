@@ -4,14 +4,27 @@ import ownerDocument from '../document';
 
 const CSSselect = require('css-select');
 
+/**
+ * 
+ * @param {*} elem 
+ */
 function isTag(elem) {
+  // 节点类型是1，为标签元素 或者是sprite自己的节点
   return elem.nodeType === 1 || ownerDocument.isSpriteNode(elem.nodeName);
 }
 
+/**
+ * 获取元素的子节点
+ * @param {*} elem 
+ */
 function getChildren(elem) {
   return Array.from(elem.childNodes || []);
 }
 
+/**
+ * 获取元素的父节点
+ * @param {*} elem 
+ */
 function getParent(elem) {
   if(ownerDocument.isSpriteNode(elem.nodeName)) {
     return elem.parent || elem.canvas || elem.container;
@@ -19,6 +32,10 @@ function getParent(elem) {
   return elem.parentElement;
 }
 
+/**
+ * 删除子节点集合
+ * @param {*} nodes 
+ */
 function removeSubsets(nodes) {
   let idx = nodes.length,
     node,
@@ -125,6 +142,10 @@ const adapter = {
   },
 };
 
+/**
+ * 
+ * @param {*} query 查询符号
+ */
 function resolveQuery(query) {
   if(typeof query !== 'string') return query;
   let matches = query.match(/\[(bgcolor|fillColor|strokeColor|color)\s*=\s*['"]?\w+['"]?\]/g);
@@ -151,7 +172,11 @@ function resolveQuery(query) {
   }
   return query;
 }
-
+/**
+ * 
+ * @param {*} query 
+ * @param {*} elems 
+ */
 export function querySelectorAll(query, elems) {
   return CSSselect.selectAll(resolveQuery(query), elems, {adapter});
 }

@@ -57,11 +57,19 @@ export function toString(value) {
   return String(value);
 }
 
+/**
+ * 
+ * @param {*} value 数值
+ */
 export function toNumber(value) {
+  // value 不能等于 null undefined
   if(value == null) return value;
+  // 字符串
   if(typeof value === 'string') {
+    // 将尺寸转换位像素
     value = sizeToPixel(value);
   }
+  // 数值非有限数值
   if(!Number.isFinite(value)) throw new TypeError('Invalid value');
   return value;
 }

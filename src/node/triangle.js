@@ -10,5 +10,5 @@ export default class Triangle extends Polyline {
     return sides[0] > 0 && sides[1] > 0 && super.isVisible;
   }
 }
-
+// 三角形
 ownerDocument.registerNode(Triangle, 'triangle');

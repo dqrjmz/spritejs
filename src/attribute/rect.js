@@ -13,9 +13,14 @@ function getPath(attr) {
 }
 
 export default class Rect extends Path {
+  /**
+   * 
+   * @param {*} subject 
+   */
   constructor(subject) {
     super(subject);
 
+    // 基础参数，宽，高
     this[setDefault]({
       width: 0,
       height: 0,
@@ -31,22 +36,28 @@ export default class Rect extends Path {
 
   set d(value) { } // eslint-disable-line no-empty-function
 
+  // 获取元素的宽度
   get width() {
     return this[getAttribute]('width');
   }
 
+  // 设置元素的宽度
   set width(value) {
+    // 将值转换为像素
     value = toNumber(value);
+    // 给元素设置宽度值
     if(this[setAttribute]('width', value)) {
       const d = getPath(this);
       this[setAttribute]('d', d);
     }
   }
 
+  // 获取元素的高度
   get height() {
     return this[getAttribute]('height');
   }
 
+  // 设置元素的高度
   set height(value) {
     value = toNumber(value);
     if(this[setAttribute]('height', value)) {
@@ -55,10 +66,12 @@ export default class Rect extends Path {
     }
   }
 
+  // 获取元素的尺寸，宽，高
   get size() {
     return [this.width, this.height];
   }
 
+  // 设置元素的宽高
   set size(value) {
     value = toArray(value);
     if(!Array.isArray(value)) value = [value, value];

@@ -12,9 +12,15 @@ const _mesh = Symbol('mesh');
 export default class Path extends Node {
   static Attr = Attr;
 
+  /**
+   * 
+   * @param {*} attrs 元素配置属性
+   */
   constructor(attrs = {}) {
+    // 字符串，设置默认值
     if(typeof attrs === 'string') attrs = {d: attrs};
     super(attrs);
+    // 效果
     this.effects = {
       d(from, to, p, s, e) {
         const ep = (p - s) / (e - s);
@@ -31,6 +37,7 @@ export default class Path extends Node {
   }
 
   /* override */
+  // 是否可见
   get isVisible() {
     return !!this.d;
   }
@@ -83,6 +90,7 @@ export default class Path extends Node {
     return null;
   }
 
+  // 原始内容
   get originalContentRect() {
     if(this.path) {
       const boundingBox = this.path.boundingBox;

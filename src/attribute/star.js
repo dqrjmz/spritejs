@@ -21,7 +21,7 @@ function getPoints(attr) {
   return points;
 }
 
-export default class Star extends Polyline {
+export default class  Star extends Polyline {
   constructor(subject) {
     super(subject);
 
@@ -31,7 +31,7 @@ export default class Star extends Polyline {
       outerRadius: 0,
       /* radius */
       offsetAngle: 0,
-      closeType: 'normal',
+      closeType: 'normal', 
     });
   }
 
