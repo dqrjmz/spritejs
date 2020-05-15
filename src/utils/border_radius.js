@@ -1,3 +1,12 @@
+/**
+ * 创建椭圆边框
+ * @param {*} figure 
+ * @param {*} x 
+ * @param {*} y 
+ * @param {*} w 
+ * @param {*} h 
+ * @param {*} pos 
+ */
 function createEllipseBorder(figure, x, y, w, h, pos = 'leftTop') {
   const kappa = 0.5522848,
     ox = (w / 2) * kappa, // control point offset horizontal
@@ -19,6 +28,12 @@ function createEllipseBorder(figure, x, y, w, h, pos = 'leftTop') {
   }
 }
 
+/**
+ * 创建圆角边框
+ * @param {*} figure 
+ * @param {*} param1 
+ * @param {*} radius 
+ */
 export function createRadiusBox(figure, [x, y, w, h], radius) {
   if(!radius || Array.isArray(radius) && radius.every(r => r === 0)) {
     figure.beginPath();

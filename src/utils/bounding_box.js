@@ -1,3 +1,8 @@
+/**
+ * 弹性盒子
+ * @param {*} boundingBox 
+ * @param {*} m 
+ */
 export default function (boundingBox, m) {
   if(!boundingBox) {
     return {

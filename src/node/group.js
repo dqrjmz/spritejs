@@ -16,8 +16,11 @@ export default class Group extends Block {
 
   constructor(attrs = {}) {
     super(attrs);
+    // 子节点
     this[_children] = [];
+    // 有序节点
     this[_ordered] = null;
+    // 
     this[_zOrder] = 0;
   }
 
@@ -29,9 +32,15 @@ export default class Group extends Block {
     return this[_children];
   }
 
+  /**
+   * 获取有序的子节点
+   */
   get orderedChildren() {
+    // 没有有序节点
     if(!this[_ordered]) {
+      // 将子节点赋值给有序节点
       this[_ordered] = [...this[_children]];
+      // 并进行排序根据节点的层级关系
       this[_ordered].sort((a, b) => {
         return a.zIndex - b.zIndex || a.zOrder - b.zOrder;
       });
@@ -39,16 +48,30 @@ export default class Group extends Block {
     return this[_ordered];
   }
 
+  /**
+   * 添加节点作为子节点
+   * @param  {...any} els 
+   */
   append(...els) {
+    // 遍历节点
     return els.map((el) => {
+      // 插入到父节点尾部
       return this.appendChild(el);
     });
   }
 
+  /**
+   * 添加子节点
+   * @param {*} el 
+   */
   appendChild(el) {
+    // 删除节点
     el.remove();
+    // 添加到子节点数组中
     this[_children].push(el);
+    // 
     el.connect(this, this[_zOrder]++);
+    // 存在有序节点（根据节点的层级进行排序 
     if(this[_ordered]) {
       if(this[_ordered].length && el.zIndex < this[_ordered][this[_ordered].length - 1].zIndex) {
         this.reorder();

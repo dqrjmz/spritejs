@@ -86,25 +86,29 @@ function delegateEvents(scene) {
     }
   }, {passive: true});
 
-  // 遍历事件
+  // 遍历事件 变量： 事件类型
   events.forEach((eventType) => {
-    // 给容器添加事件
+    // 给容器添加事件 变量：事件类型 事件对象
     container.addEventListener(eventType, (event) => {
+      // 情景的排序子元素
       const layers = scene.orderedChildren;
-      // 创建触摸事件的事件对象
+      // 对dom事件对象进行包装 变量： 事件对象 场景左边的偏移量 场景上边的偏移量 设备像素比
       const pointerEvents = createPointerEvents(event, {offsetLeft: left, offsetTop: top, displayRatio});
-      // 遍历每个事件对象
+      // 遍历每个事件对象 变量： 
       pointerEvents.forEach((evt) => {
         // evt.scene = scene;
+        // 获取事件的标识符号
         const id = evt.identifier;
+        // 获取事件类型
         if(evt.type === 'touchmove' || evt.type === 'touchend') {
-          // 事件对象
+          // 根据事件表示符id获取被捕获的节点对象
           const capturedTarget = touchEventCapturedTargets[id];
-          // 
+          // 分发事件给节点
           if(capturedTarget) capturedTarget.dispatchEvent(evt);
+          // 触摸结束 删除当前触摸点对象
           if(evt.type === 'touchend') delete touchEventCapturedTargets[id];
         } else {
-
+          // 遍历
           for(let i = layers.length - 1; i >= 0; i--) {
             const layer = layers[i];
             if(layer.options.handleEvent !== false) {
@@ -124,7 +128,7 @@ function delegateEvents(scene) {
             }
           }
         }
-        // 当前的手指
+        // 当前的触摸对象
         const target = evt.target;
         if(evt.type === 'touchstart') {
           // 觸摸點的目標對象

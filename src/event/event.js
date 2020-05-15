@@ -39,18 +39,30 @@ export default class Event {
     this[_originalEvent] = originalEvent;
   }
 
+  /**
+   * 原始的事件
+   */
   get originalEvent() {
     return this[_originalEvent];
   }
 
+  /**
+   * 事件类型
+   */
   get type() {
     return this[_type];
   }
 
+  /**
+   * 事件冒泡
+   */
   get bubbles() {
     return this[_bubbles];
   }
 
+  /**
+   * 事件详情
+   */
   get detail() {
     return this[_detail];
   }

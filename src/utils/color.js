@@ -1,11 +1,17 @@
 import rgba from 'color-rgba';
 
+/**
+ * 渐变
+ */
 export class Gradient {
   constructor({vector, colors}) {
+    // 非数组，数组长度不为4，6，3时
     if(!Array.isArray(vector) || (vector.length !== 4 && vector.length !== 6 && vector.length !== 3)) {
       throw new TypeError('Invalid gradient');
     }
+    // 初始化
     this.vector = vector;
+    // 初始化颜色数组和偏移量
     this.colors = colors.map(({offset, color}) => {
       return {offset, color: parseColor(color)};
     });
@@ -16,19 +22,36 @@ export class Gradient {
   }
 }
 
+/**
+ * 是否试透明颜色
+ * @param {*} color 
+ */
 export function isTransparent(color) {
+  // 非渐变类实例
   if(color instanceof Gradient) return false;
+  // 为undefined 或者 null
   if(color == null) return true;
+  // 
   return rgba(color)[3] === 0;
 }
 
+/**
+ * 解析颜色
+ * @param {*} color 
+ */
 export function parseColor(color) {
   // if(Array.isArray(color)) return color;
+  // 颜色为 null
   if(color == null) return color;
+  // 颜色不存在，即为透明
   if(!color) color = 'transparent';
+  // 颜色即为渐变类实例
   if(color instanceof Gradient) return color;
+  // 颜色解析值
   const ret = rgba(color);
+  // 不存在或者 长度不存在或者为0
   if(!ret || !ret.length) throw new TypeError('Invalid color value.');
+  // 组合颜色
   return `rgba(${ret.join()})`;
 }
 
@@ -135,7 +158,11 @@ export class Color extends Array {
     this[3] = v;
   }
 
+  /**
+   * 获取hex类型颜色
+   */
   get hex() {
+    // 将10进制数组转换为16进制，去16进制数（不带前缀的
     const r = `0${this.r.toString(16)}`.slice(-2);
     const g = `0${this.g.toString(16)}`.slice(-2);
     const b = `0${this.b.toString(16)}`.slice(-2);
@@ -147,13 +174,23 @@ export class Color extends Array {
     return `#${r}${g}${b}${a || ''}`;
   }
 
+  /**
+   * 获取rgba 类型颜色
+   */
   get rgba() {
     return `rgba(${this.r},${this.g},${this.b},${this.a})`;
   }
 
+  /**
+   * 
+   * @param {*} color 
+   */
   fromColor(color) {
+    // 颜色为字符串类型
     if(typeof color === 'string') {
+      // 解析
       color = rgba(color);
+      // 
       color[0] /= 255;
       color[1] /= 255;
       color[2] /= 255;
