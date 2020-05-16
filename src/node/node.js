@@ -6,13 +6,18 @@ import SpriteEvent from '../event/event';
 import {parseFilterString, applyFilters} from '../utils/filter';
 import applyRenderEvent from '../utils/render_event';
 
+// （用户自定义的）修改后的节点的属性
 const changedAttrs = Symbol.for('spritejs_changedAttrs');
+// 默认节点属性
 const attributes = Symbol.for('spritejs_attributes');
-
+// 分辨率
 const _resolution = Symbol('resolution');
+// 动画
 const _animations = Symbol('animations');
 
+// 事件监听器
 const _eventListeners = Symbol('eventListeners');
+// 捕获型的事件监听器
 const _captureEventListeners = Symbol('captureEventListeners');
 const _filters = Symbol('filters');
 const _display = Symbol('display');
@@ -26,13 +31,15 @@ export default class Node {
   static Attr = Attr;
 
   constructor(attrs = {}) {
-    // 节点的属性类
+    // 节点的属性类 初始化默认参数（节点的默认属性
     this.attributes = new this.constructor.Attr(this);
     this[_resolution] = {width: 300, height: 150};
+    // 合并用户选中
     Object.assign(this.attributes, attrs);
     // if(Object.seal) {
     //   Object.seal(this.attributes);
     // }
+    // 初始化一个唯一的动画集合
     this[_animations] = new Set();
     // 初始化事件监听器容器
     this[_eventListeners] = {};
@@ -44,15 +51,22 @@ export default class Node {
    * 当前节点的祖先
    */
   get ancestors() {
+    // 获取节点的父节点
     let parent = this.parent;
+
     const ret = [];
+    // 父节点存在时
     while(parent) {
+      // 将父节点添加到ret数组中
       ret.push(parent);
+      // 获取父节点的父节点
       parent = parent.parent;
     }
+    // 返回获取的父节点数组（祖先节点数组
     return ret;
   }
 
+  // 获取动画
   get animations() {
     return this[_animations];
   }
@@ -79,21 +93,27 @@ export default class Node {
   }
 
   get opacity() {
+    // 获取属性的opacity属性
     let opacity = this.attributes.opacity;
+    // 父节点 && 父节点的opacity属性是否存在
     if(this.parent && this.parent.opacity != null) {
+      // 当前节点乘以父节点的opacity属性的值
       opacity *= this.parent.opacity;
     }
     return opacity;
   }
 
+  // 获取父节点
   get parentNode() {
     return this.parent;
   }
 
+  // 获取下一个兄弟节点
   get nextSibling() {
     return this.getNodeNearBy(1);
   }
 
+  // 获取上一个兄弟节点
   get previousSibling() {
     return this.getNodeNearBy(-1);
   }
@@ -103,7 +123,9 @@ export default class Node {
   }
 
   /* get parent defined by connect method */
-
+  /**
+   * 获取渲染器
+   */
   get renderer() {
     if(this.parent) return this.parent.renderer;
     return null;
@@ -185,10 +207,17 @@ export default class Node {
     return this[_shaderAttrs] || {};
   }
 
+  /**
+   * 激活动画
+   */
   activateAnimations() {
+    // 获取图层节点
     const layer = this.layer;
+    // 图层节点存在
     if(layer) {
+      // 获取动画
       const animations = this[_animations];
+      // 给每一个动画执行执行
       animations.forEach((animation) => {
         animation.baseTimeline = layer.timeline;
         animation.play();
@@ -196,9 +225,11 @@ export default class Node {
           animations.delete(animation);
         });
       });
+      // 获取子节点
       const children = this.children;
       if(children) {
         children.forEach((child) => {
+          // 激活子节点的动画
           if(child.activateAnimations) child.activateAnimations();
         });
       }
@@ -224,8 +255,15 @@ export default class Node {
     return this;
   }
 
+  /**
+   * 
+   * @param {*} frames 帧数
+   * @param {*} timing 动画时间
+   */
   animate(frames, timing) {
+    // 创建一个动画节点
     const animation = new Animation(this, frames, timing);
+    
     if(this.effects) animation.applyEffects(this.effects);
     if(this.layer) {
       animation.baseTimeline = this.layer.timeline;
@@ -263,19 +301,26 @@ export default class Node {
     return this;
   }
 
+  // 克隆节点
   cloneNode() {
+    // 创建一个新节点（利用当前对象的构造函数
     const cloned = new this.constructor();
+    // 获取当前节点的配置属性
     const attrs = this.attributes[changedAttrs];
+    // 重新给克隆节点设置属性
     cloned.attr(attrs);
+    // 返回新节点
     return cloned;
   }
 
   connect(parent, zOrder) {
+    // 当前节点设置父节点
     Object.defineProperty(this, 'parent', {
       value: parent,
       writable: false,
       configurable: true,
     });
+    // 设置层级
     Object.defineProperty(this, 'zOrder', {
       value: zOrder,
       writable: false,
@@ -287,17 +332,26 @@ export default class Node {
     this.dispatchEvent({type: 'append', detail: {parent, zOrder}});
   }
 
+  /**
+   * 判断当前节点到祖先节点中是否存在相同节点
+   * @param {*} node 
+   */
   contains(node) {
     while(node && this !== node) {
       node = node.parent;
     }
     return !!node;
   }
-
+  /**
+   * 废弃动画
+   */
   deactivateAnimations() {
+    // 将动画一次取消
     this[_animations].forEach(animation => animation.cancel());
+    // 获取子节点
     const children = this.children;
     if(children) {
+      // 将子节点的动画一次取消
       children.forEach((child) => {
         if(child.deactivateAnimations) child.deactivateAnimations();
       });
@@ -308,44 +362,73 @@ export default class Node {
     const {parent, zOrder} = this;
     delete this.parent;
     delete this.zOrder;
+    // 废弃动画
     this.deactivateAnimations();
+    // 
     this.dispatchEvent({type: 'remove', detail: {parent, zOrder}});
     if(parent) parent.forceUpdate();
   }
 
+  /**
+   * 分发事件
+   * @param {*} event 事件对象
+   */
   dispatchEvent(event) {
+    // 不是sprite事件对象
     if(!(event instanceof SpriteEvent)) {
+      // 创建sprite事件对象
       event = new SpriteEvent(event);
     }
+    // 添加事件对象的目标对象
     event.target = this;
+    // 获取事件类型
     const type = event.type;
-
+    // 添加目标元素
     const elements = [this];
+    // 获取当前节点的父节点
     let parent = this.parent;
+    // 冒泡事件 && 父节点都在
     while(event.bubbles && parent) {
+      // 将父节点添加到元素中
       elements.push(parent);
+      // 获取父节点的父节点
       parent = parent.parent;
     }
 
     // capture phase
+    // 捕获事件， 从大到小元素
     for(let i = elements.length - 1; i >= 0; i--) {
+      // 取出元素
       const element = elements[i];
+      // 取出监听函数
       const listeners = element[_captureEventListeners] && element[_captureEventListeners][type];
+      // 是否存在
       if(listeners && listeners.length) {
+        // 遍历
         listeners.forEach(({listener, once}) => {
+          // 调用监听函数
           listener.call(this, event);
+          // 只绑定一次的或，调用之后，移除掉
           if(once) elements.removeEventListener(listener);
         });
       }
+      // 不冒泡，直接执行一次退出
       if(!event.bubbles && event.cancelBubble) break;
     }
     // bubbling
+    // 不取消冒泡
     if(!event.cancelBubble) {
+      // 遍历事件涉及的相关元素
       for(let i = 0; i < elements.length; i++) {
+        // 获取相关元素
         const element = elements[i];
+        // 获取元素的监听函数
         const listeners = element[_eventListeners] && element[_eventListeners][type];
+        // 存在监听函数
         if(listeners && listeners.length) {
+          // 遍历监听函数
           listeners.forEach(({listener, once}) => {
+            // 出发监听
             listener.call(this, event);
             if(once) elements.removeEventListener(listener);
           });
@@ -356,6 +439,7 @@ export default class Node {
   }
 
   dispatchPointerEvent(event) {
+    // 获取触摸点的x，y左边
     const {x, y} = event;
     if(this.isPointCollision(x, y)) {
       this.dispatchEvent(event);
@@ -399,15 +483,27 @@ export default class Node {
     if(this.parent) this.parent.forceUpdate();
   }
 
+  /**
+   * 获取节点的属性值
+   * @param {*} key 
+   */
   getAttribute(key) {
     return this.attributes[key];
   }
 
+  /**
+   * 获取节点上的事件监听，区分捕获，冒泡
+   * @param {*} type 
+   * @param {*} param1 
+   */
   getListeners(type, {capture = false} = {}) {
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
     return [...(this[eventListeners][type] || [])];
   }
 
+  /**
+   * 获取下一个当前节点的下一个节点
+   */
   getNodeNearBy(distance = 1) {
     if(!this.parent) return null;
     if(distance === 0) return this;
@@ -580,6 +676,11 @@ export default class Node {
     return this;
   }
 
+  /**
+   * 过渡
+   * @param {*} sec 
+   * @param {*} easing 运动类型
+   */
   transition(sec, easing = 'linear') {
     const that = this,
       _animation = Symbol('animation');

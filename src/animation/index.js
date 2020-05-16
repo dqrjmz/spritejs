@@ -48,6 +48,12 @@ Effects.borderColor = colorEffect;
 Effects.text = stringEffect;
 
 export default class Animation extends Animator {
+  /**
+   * 
+   * @param {*} sprite 节点
+   * @param {*} frames 帧数
+   * @param {*} timing 时间
+   */
   constructor(sprite, frames, timing) {
     const initAttrs = sprite.attr();
 

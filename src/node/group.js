@@ -50,7 +50,7 @@ export default class Group extends Block {
 
   /**
    * 添加节点作为子节点
-   * @param  {...any} els 
+   * @param  {...any} els 子节点 参数：a, b, c, d
    */
   append(...els) {
     // 遍历节点
@@ -69,13 +69,15 @@ export default class Group extends Block {
     el.remove();
     // 添加到子节点数组中
     this[_children].push(el);
-    // 
+    // 新增一个节点，新增一个图层，层级加1
     el.connect(this, this[_zOrder]++);
     // 存在有序节点（根据节点的层级进行排序 
     if(this[_ordered]) {
+      // 排序节点存在 当前节点层级 小于 有序节点数组中最后一个，重新排
       if(this[_ordered].length && el.zIndex < this[_ordered][this[_ordered].length - 1].zIndex) {
         this.reorder();
       } else {
+        // 否则直接添加
         this[_ordered].push(el);
       }
     }
@@ -221,6 +223,7 @@ export default class Group extends Block {
     return null;
   }
 
+  // 将数组清空
   reorder() {
     this[_ordered] = null;
   }

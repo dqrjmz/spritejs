@@ -25,15 +25,20 @@ const _tickers = Symbol('tickers');
 export default class Layer extends Group {
   constructor(options = {}) {
     super();
+    // 没有canvas
     if(!options.canvas) {
       const {width, height} = this.getResolution();
+      // 创建canvas
       const canvas = ENV.createCanvas(width, height, {
         offscreen: !!options.offscreen,
         id: options.id,
         extra: options.extra,
       });
+      // 设置canvas样式
       if(canvas.style) canvas.style.position = 'absolute';
+      // 设置canvas data属性
       if(canvas.dataset) canvas.dataset.layerId = options.id;
+      // 设置上下文类型
       if(canvas.contextType) options.contextType = canvas.contextType;
       options.canvas = canvas;
     }

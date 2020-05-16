@@ -397,21 +397,26 @@ export default class Scene extends Group {
     options = Object.assign({}, this.options, options);
     // 设置id
     options.id = id;
+    // 获取排序过的层
     const layers = this.orderedChildren;
+    // 根据id找到要找的层
     for(let i = 0; i < layers.length; i++) {
       if(layers[i].id === id) return layers[i];
     }
 
+    // 是否在woker中
     const worker = options.worker;
     let layer;
-
+    // 存在woker
     if(worker) {
+      // 实例化woker层
       layer = new LayerWorker(options);
     } else {
+      // 实例化层节点
       layer = new Layer(options);
       // layer.id = id;
     }
-
+    // 将层节点加入到场景中
     this.appendChild(layer);
     return layer;
   }

@@ -69,6 +69,9 @@ function removeSubsets(nodes) {
   return nodes;
 }
 
+/**
+ * 适配器：用在现有接口和不兼容类之间的适配
+ */
 const adapter = {
   isTag,
   existsOne(test, elems) {
