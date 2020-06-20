@@ -26,13 +26,21 @@ const _program = Symbol('program');
 const _shaderAttrs = Symbol('shaderAttrs');
 const _uniforms = Symbol('uniforms');
 
+/**
+ * 所有节点的父类
+ */
 export default class Node {
   // 节点属性
   static Attr = Attr;
 
+  /**
+   * 
+   * @param {Object} attrs 节点初始化的属性集合
+   */
   constructor(attrs = {}) {
     // 节点的属性类 初始化默认参数（节点的默认属性
     this.attributes = new this.constructor.Attr(this);
+    // 默认分辨率
     this[_resolution] = {width: 300, height: 150};
     // 合并用户选中
     Object.assign(this.attributes, attrs);
@@ -41,7 +49,7 @@ export default class Node {
     // }
     // 初始化一个唯一的动画集合
     this[_animations] = new Set();
-    // 初始化事件监听器容器
+    // 冒泡型
     this[_eventListeners] = {};
     // 捕获型
     this[_captureEventListeners] = {};
@@ -71,19 +79,33 @@ export default class Node {
     return this[_animations];
   }
 
+  /**
+   * 过滤器
+   */
   get filters() {
+    // 是否存在过滤器 或者 是否存在父类并且父类是否存在过滤器
     return this[_filters] || (this.parent && this.parent.filters);
   }
 
+  /**
+   * 节点是否可见
+   */
   get isVisible() {
     return false;
   }
 
+  /**
+   * 节点所在层实例
+   */
   get layer() {
+    // 是否存在父类
     if(this.parent) return this.parent.layer;
     return null;
   }
 
+  /**
+   * 本地矩阵
+   */
   get localMatrix() {
     const m = this.transformMatrix;
     const {x, y} = this.attributes;
@@ -92,6 +114,9 @@ export default class Node {
     return m;
   }
 
+  /**
+   * 节点的透明度
+   */
   get opacity() {
     // 获取属性的opacity属性
     let opacity = this.attributes.opacity;
@@ -237,7 +262,7 @@ export default class Node {
   }
 
   /**
-   * 
+   * 给元素添加事件，收集事件监听器
    * @param {*} type 事件类型
    * @param {*} listener 监听器
    * @param {*} options 选项
@@ -245,10 +270,11 @@ export default class Node {
   addEventListener(type, listener, options = {}) {
     // 捕获或者冒泡
     if(typeof options === 'boolean') options = {capture: options};
+    // 捕获， 一次性 
     const {capture, once} = options;
-    // 不同类型的事件
+    // 不同类型的事件， 不是捕获就是冒泡 Symbol类型的属性
     const eventListeners = capture ? _captureEventListeners : _eventListeners;
-    // Symbol值 是否存在这种事件的监听队列
+    // Symbol值 是否存在这种事件的监听队列 （存在某种事件类型的监听器队列，数组类型
     this[eventListeners][type] = this[eventListeners][type] || [];
     this[eventListeners][type].push({listener, once});
 
@@ -256,22 +282,27 @@ export default class Node {
   }
 
   /**
-   * 
+   * 动画函数
    * @param {*} frames 帧数
-   * @param {*} timing 动画时间
+   * @param {*} timing 动画时间 节奏
    */
   animate(frames, timing) {
-    // 创建一个动画节点
+    // 创建一个动画
     const animation = new Animation(this, frames, timing);
-    
+    // 存在效果， 合并效果
     if(this.effects) animation.applyEffects(this.effects);
+    // 存在层
     if(this.layer) {
+      // 
       animation.baseTimeline = this.layer.timeline;
+      // 开始播放动画
       animation.play();
+      // 动画结束
       animation.finished.then(() => {
         this[_animations].delete(animation);
       });
     }
+    // 加入动画容器
     this[_animations].add(animation);
     return animation;
   }
@@ -313,8 +344,13 @@ export default class Node {
     return cloned;
   }
 
+  /**
+   * 
+   * @param {*} parent sprite节点对象
+   * @param {*} zOrder 
+   */
   connect(parent, zOrder) {
-    // 当前节点设置父节点
+    // 当前节点设置父节点属性
     Object.defineProperty(this, 'parent', {
       value: parent,
       writable: false,
@@ -448,6 +484,10 @@ export default class Node {
     return false;
   }
 
+  /**
+   * 绘制2d网格
+   * @param {*} meshes 
+   */
   draw(meshes = []) {
     const mesh = this.mesh;
 
@@ -479,7 +519,11 @@ export default class Node {
     return meshes;
   }
 
+  /**
+   * 强制更新
+   */
   forceUpdate() {
+    // 父节点也进行强制更新
     if(this.parent) this.parent.forceUpdate();
   }
 
@@ -541,6 +585,12 @@ export default class Node {
     return this.mesh.isPointCollision(x, y, which);
   }
 
+  /**
+   * 
+   * @param {*} key 属性名
+   * @param {*} newValue 属性值
+   * @param {*} oldValue 老属性值
+   */
   onPropertyChange(key, newValue, oldValue) {
     if(key !== 'id' && key !== 'name' && key !== 'className' && key !== 'pointerEvents' && key !== 'passEvents') {
       this.forceUpdate();
@@ -584,12 +634,21 @@ export default class Node {
     this.forceUpdate();
   }
 
+  /**
+   * 设置分辨率
+   * @param {*} param0 
+   */
   setResolution({width, height}) {
+    // 获取分辨率
     const {width: w, height: h} = this[_resolution];
+    // 和当前设置的分辨率是否一致
     if(w !== width || h !== height) {
+      // 不一致，重新设置为指定的
       this[_resolution] = {width, height};
       // this.updateContours();
+      // 强制更新
       this.forceUpdate();
+      // 分发分辨率修改事件
       this.dispatchEvent({type: 'resolutionchange', detail: {width, height}});
     }
   }
@@ -613,8 +672,13 @@ export default class Node {
     }
   }
 
+  /**
+   * 删除节点
+   */
   remove() {
+    // 节点存在父级 && 有removeChild方法
     if(this.parent && this.parent.removeChild) {
+      // 将节点删除掉
       this.parent.removeChild(this);
       return true;
     }
@@ -677,9 +741,9 @@ export default class Node {
   }
 
   /**
-   * 过渡
-   * @param {*} sec 
-   * @param {*} easing 运动类型
+   * 过渡动画
+   * @param {*} sec 时间间隔
+   * @param {*} easing 运动类型 ，匀速，匀加速等
    */
   transition(sec, easing = 'linear') {
     const that = this,
@@ -720,8 +784,16 @@ export default class Node {
         }
         return animation.finished;
       },
+      /**
+       * 1. 两个参数时，是值传递一个属性
+       * 2. prop位对象时，是属性集合
+       * @param {*} prop 
+       * @param {*} val 
+       */
       attr(prop, val) {
+        // 结束动画
         this.end();
+        // 整理属性
         if(typeof prop === 'string') {
           prop = {[prop]: val};
         }

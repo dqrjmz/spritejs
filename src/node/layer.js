@@ -1,13 +1,18 @@
+// 为了可视化而生的图形系统
 import {Renderer, ENV, Figure2D, Mesh2D} from '@mesh.js/core';
+// 一个抽象的动画接口的实现
 import {Timeline} from 'sprite-animator';
 import {requestAnimationFrame, cancelAnimationFrame} from '../utils/animation-frame';
 import Group from './group';
 import ownerDocument from '../document';
 import {deleteTexture} from '../utils/texture';
 
+// 默认的参数
 const defaultOptions = {
   antialias: true,
+  // 自定义渲染器
   autoRender: true,
+  // 
   alpha: true, // for wx-miniprogram
 };
 
@@ -22,16 +27,23 @@ const _pass = Symbol('pass');
 const _fbo = Symbol('fbo');
 const _tickers = Symbol('tickers');
 
+// 层节点
 export default class Layer extends Group {
+  /**
+   * 
+   * @param {*} options 初始化时的参数
+   */
   constructor(options = {}) {
+    // 初始化父类
     super();
-    // 没有canvas
+    // 没有canvas,现存的canvas dom对象
     if(!options.canvas) {
+      // 获取分辨率 （父类的获取分辨率方法
       const {width, height} = this.getResolution();
       // 创建canvas
       const canvas = ENV.createCanvas(width, height, {
-        offscreen: !!options.offscreen,
-        id: options.id,
+        offscreen: !!options.offscreen, //是否离屏
+        id: options.id, // 
         extra: options.extra,
       });
       // 设置canvas样式
@@ -42,23 +54,36 @@ export default class Layer extends Group {
       if(canvas.contextType) options.contextType = canvas.contextType;
       options.canvas = canvas;
     }
+    // canvas 获取dom 对象 
     const canvas = options.canvas;
+    // 合并初始化layer参数
     const opts = Object.assign({}, defaultOptions, options);
+    // 存在自动渲染器
     this[_autoRender] = opts.autoRender;
+    // 删除
     delete options.autoRender;
+    // 获取渲染器，创建 2d 图像的渲染器构造函数
     const _Renderer = opts.Renderer || Renderer;
+    // 创建渲染器实例，在_renderer 属性
     this[_renderer] = new _Renderer(canvas, opts);
+    // canvas是否为webgl上下文
     if(canvas.__gl__) {
       // fix blendFunc for node-canvas-webgl
       const gl = canvas.__gl__;
       gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     }
+    // 创建选项参数赋值的属性
     this.options = options;
+    // 获取选项参数中的id ,创建层的标识id
     this.id = options.id;
     this[_pass] = [];
+    // 设置分辨率
     this.setResolution(canvas);
+    // 创建canvas dom 节点的引用属性
     this.canvas = canvas;
+    // 
     this[_timeline] = new Timeline();
+    // 被鼠标捕获的目标
     this.__mouseCapturedTarget = null;
   }
 
@@ -66,6 +91,9 @@ export default class Layer extends Group {
     return this[_autoRender];
   }
 
+  /**
+   * 设备像素比
+   */
   get displayRatio() {
     if(this.parent && this.parent.options) {
       return this.parent.options.displayRatio;
@@ -86,6 +114,9 @@ export default class Layer extends Group {
   }
 
   /* override */
+  /**
+   * 获取节点所在层
+   */
   get layer() {
     return this;
   }
@@ -132,8 +163,11 @@ export default class Layer extends Group {
     if(this.renderer.glRenderer) {
       const {width, height} = this.getResolution();
       const program = this.renderer.createPassProgram({vertex, fragment, options});
+      // 创建2d图形
       const figure = new Figure2D();
+      // 创建方形
       figure.rect(0, 0, width / this.displayRatio, height / this.displayRatio);
+      // 
       const mesh = new Mesh2D(figure);
       mesh.setUniforms(uniforms);
       mesh.setProgram(program);
@@ -151,11 +185,16 @@ export default class Layer extends Group {
 
   /* override */
   dispatchPointerEvent(event) {
+    // 事件类型
     const type = event.type;
+    // 鼠标事件
     if(type === 'mousedown' || type === 'mouseup' || type === 'mousemove') {
+      // 当前捕获目标
       const capturedTarget = this.__mouseCapturedTarget;
       if(capturedTarget) {
+        // 
         if(capturedTarget.layer === this) {
+          // 当前元素分发事件
           capturedTarget.dispatchEvent(event);
           return true;
         }
@@ -167,6 +206,7 @@ export default class Layer extends Group {
 
   /* override */
   forceUpdate() {
+    // 
     if(!this[_prepareRender]) {
       if(this.parent && this.parent.hasOffscreenCanvas) {
         this.parent.forceUpdate();
@@ -239,7 +279,9 @@ export default class Layer extends Group {
     if(fbo) {
       this.renderer.glRenderer.bindFBO(fbo.target);
     }
+    // 清除画布
     if(clear) this[_renderer].clear();
+    // 渲染引擎
     const meshes = this.draw();
     if(meshes && meshes.length) {
       this.renderer.drawMeshes(meshes);
@@ -267,17 +309,24 @@ export default class Layer extends Group {
 
   /* override */
   setResolution({width, height}) {
+    // 获取渲染器
     const renderer = this.renderer;
+    // 渲染矩阵
     const m = renderer.globalTransformMatrix;
     const offsetLeft = m[4];
     const offsetTop = m[5];
     const previousDisplayRatio = m[0];
+    // 获取分辨率大小
     const {width: w, height: h} = this.getResolution();
+    // 根据设置的长，宽，重新设置分辨率
     if(w !== width || h !== height) {
       super.setResolution({width, height});
+      // 获取canvas dom对象
       if(this.canvas) {
+        // 获取canvas dom的 尺寸
         this.canvas.width = width;
         this.canvas.height = height;
+        // 
         if(renderer.updateResolution) renderer.updateResolution();
       }
       this.attributes.size = [width, height];

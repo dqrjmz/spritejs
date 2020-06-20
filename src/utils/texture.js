@@ -9,25 +9,43 @@ const loadedTextures = {};
  * @param {*} alias 
  */
 export function loadTexture(src, alias) {
+  // 纹理的缓存是否存在， 存在就立即返回
   if(loadedTextures[src]) return loadedTextures[src];
+  // 加载图片
   const img = ENV.loadImage(src, {alias, useImageBitmap: false});
+  // 加载成功返回图片实例， 不成功，返回图片地址
   return img != null ? img : src;
 }
 
+/**
+ * 应用纹理
+ * @param {*} node 节点
+ * @param {*} image 图片
+ * @param {*} updateContours 
+ */
 export async function applyTexture(node, image, updateContours) {
+  // 图片
   let textureImage = image;
+  // 字符串，说明是地址
   if(typeof image === 'string') {
+    // 重新加载
     textureImage = loadTexture(image);
   }
+  // 纹理存在 && 是Promise实例
   if(textureImage && typeof textureImage.then === 'function') {
+    // 异步加载
     textureImage = await textureImage;
   }
 
+  // 图片等于节点属性的纹理
   if(image === node.attributes.texture) {
+    // 纹理 并且存在 图片
     if(textureImage && textureImage.image) {
+      // 存在纹理的方形
       if(textureImage.sourceRect) {
         node.attributes.sourceRect = textureImage.sourceRect;
       }
+      // 
       node.textureImageRotated = !!textureImage.rotated;
       textureImage = textureImage.image;
     }
@@ -71,7 +89,13 @@ export function deleteTexture(image, renderer) {
 }
 
 const _textureContext = Symbol('textureContext');
+/**
+ * 
+ * @param {*} node 节点
+ * @param {*} mesh 网格
+ */
 export function drawTexture(node, mesh) {
+  // 
   const textureImage = node.textureImage instanceof String // for wechat miniprogram
     ? String(node.textureImage) : node.textureImage;
   const textureImageRotated = node.textureImageRotated;
@@ -141,6 +165,7 @@ export async function loadFrames(src, frameData) {
     frameData = await response.json();
   }
 
+  // 加载纹理
   const texture = await loadTexture(src);
   const frames = frameData.frames;
 

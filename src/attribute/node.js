@@ -117,7 +117,7 @@ export default class Node {
 
   /**
    * 给节点
-   * @param {*} subject 
+   * @param {*} subject 当前节点对象
    */
   constructor(subject) {
     this[_subject] = subject;

@@ -7,9 +7,15 @@ const setAttribute = Symbol.for('spritejs_setAttribute');
 const getAttribute = Symbol.for('spritejs_getAttribute');
 const declareAlias = Symbol.for('spritejs_declareAlias');
 
+/**
+ * 获取路径
+ * @param {*} attr 
+ */
 function getPath(attr) {
+  // 圆心x,y，开始角度，结束角度，方向
   const {radiusX, radiusY, startAngle, endAngle, direction, closeType} = attr;
   const anticlockwise = direction === 'anitclockwise';
+  // 绘制形状
   const f = new Figure2D();
   if(closeType === 'sector') {
     f.moveTo(0, 0);
@@ -18,6 +24,7 @@ function getPath(attr) {
   if(closeType !== 'none') {
     f.closePath();
   }
+  // 获取形状的路径
   const path = f.path;
   const ret = path.reduce((a, b) => {
     return a + b.join(' ');
@@ -53,6 +60,9 @@ export default class Ellipse extends Path {
     return this[getAttribute]('radiusX');
   }
 
+  /**
+   * 设置
+   */
   set radiusX(value) {
     value = toNumber(value);
     if(this[setAttribute]('radiusX', value)) {

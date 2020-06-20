@@ -11,12 +11,19 @@ import ownerDocument from '../document';
 
 const _enteredTargets = Symbol('enteredTargets');
 
+/**
+ * 包裹图层
+ * @param {*} layer 
+ */
 function wrapLayer(layer) {
   // append dom element
+  // 设置layer唯一id
   layer.id = layer.id || `_layer${Math.random().toString(36).slice(2, 12)}`;
+  // 设置dataset属性
   if(!layer.dataset) {
     layer.dataset = {};
   }
+  // 保存图层id
   layer.dataset.layerId = layer.id;
   // fixed layer replacer
   layer.connect = (parent, zOrder) => {
@@ -30,6 +37,7 @@ function wrapLayer(layer) {
   layer.disconnect = (parent) => {
     delete layer.zOrder;
   };
+  // 图层设置canvas属性
   layer.canvas = layer;
   layer.getResolution = () => { return {width: 0, height: 0} };
   layer.setResolution = () => false;
@@ -59,8 +67,15 @@ function drawImage(layer, offscreenLayer) {
   layer.renderer.drawImage(offscreenLayer.canvas, -left / displayRatio, -top / displayRatio, width / displayRatio, height / displayRatio);
 }
 
-// 触摸事件捕获的目标对象
+/**
+ * Scene 对象代理了 mouse ,touch 事件
+ */
 const touchEventCapturedTargets = {};
+
+/**
+ * 将模拟的事件都委托到container对象上
+ * @param {*} scene Scene 场景实例
+ */
 function delegateEvents(scene) {
   const events = ['mousedown', 'mouseup', 'mousemove', 'mousewheel', 'wheel',
     'touchstart', 'touchend', 'touchmove', 'touchcancel',
@@ -68,7 +83,7 @@ function delegateEvents(scene) {
 
   // 场景容器
   const container = scene.container;
-  // 场景参数
+  // 位置， 分辨率
   const {left, top, displayRatio} = scene.options;
 
   // 给容器添加鼠标事件
@@ -77,10 +92,13 @@ function delegateEvents(scene) {
     const enteredTargets = scene[_enteredTargets];
     // 存在
     if(enteredTargets.size) {
+      // 创建一个 mouseleave
       const leaveEvent = new Event('mouseleave');
+      // 
       leaveEvent.setOriginalEvent(event);
       [...enteredTargets].forEach((target) => {
         target.dispatchEvent(leaveEvent);
+        // 调用每个元素的事件
       });
       scene[_enteredTargets].clear();
     }
@@ -90,11 +108,11 @@ function delegateEvents(scene) {
   events.forEach((eventType) => {
     // 给容器添加事件 变量：事件类型 事件对象
     container.addEventListener(eventType, (event) => {
-      // 情景的排序子元素
+      // 情景的有序的图层
       const layers = scene.orderedChildren;
-      // 对dom事件对象进行包装 变量： 事件对象 场景左边的偏移量 场景上边的偏移量 设备像素比
+      // 对dom事件对象进行包装  参数： 事件对象 场景左边的偏移量 场景上边的偏移量 设备像素比（移动端的touch事件才会有
       const pointerEvents = createPointerEvents(event, {offsetLeft: left, offsetTop: top, displayRatio});
-      // 遍历每个事件对象 变量： 
+      // 遍历每个事件对象 参数： 合成事件对象 
       pointerEvents.forEach((evt) => {
         // evt.scene = scene;
         // 获取事件的标识符号
@@ -108,11 +126,14 @@ function delegateEvents(scene) {
           // 触摸结束 删除当前触摸点对象
           if(evt.type === 'touchend') delete touchEventCapturedTargets[id];
         } else {
-          // 遍历
+          // 遍历scene中的图层
           for(let i = layers.length - 1; i >= 0; i--) {
             const layer = layers[i];
+            // layer 是 Layer实例
             if(layer.options.handleEvent !== false) {
+              // 触发触摸点事件
               const ret = layer.dispatchPointerEvent(evt);
+              // 
               if(ret && evt.target !== layer) break;
               else evt.cancelBubble = false; // prepare passing to next layer
             }
@@ -131,7 +152,7 @@ function delegateEvents(scene) {
         // 当前的触摸对象
         const target = evt.target;
         if(evt.type === 'touchstart') {
-          // 觸摸點的目標對象
+          // 触摸点的目标对象
           touchEventCapturedTargets[id] = evt.target; // set captured event target
         }
         if(evt.type === 'mousemove') {
@@ -187,9 +208,9 @@ function delegateEvents(scene) {
 }
 
 /**
- * 设置视口
+ * 设置视口,根据container的尺寸设置canvas的大小
  * @param {*} options 选项
- * @param {*} canvas 画布
+ * @param {*} canvas HTMLCanvasElement
  */
 function setViewport(options, canvas) {
   // 画布存在， 样式存在
@@ -232,19 +253,20 @@ export default class Scene extends Group {
    */
   constructor(options = {}) {
     super();
-    // 是否传入绘图容器
+    // 没有传入容器对象时
     if(!options.container) {
       // 环境容器属性Container为函数
       if(typeof ENV.Container === 'function') {
-        // 内部创建一个容器对象
+        // 内部创建一个容器对象，创建一个宽300，高150的容器
         options.container = new ENV.Container(options.width || 300, options.height || 150);
       } else {
+        // 没有指定容器
         throw new Error('No container specified.');
       }
     }
-    // 设置容器的引用
+    // 设置canvas对象的引用
     this.container = options.container;
-    // 容器是否存在样式
+    // 存在样式属性时
     if(this.container.style) {
       // 没有设置overflow样式，进行设置
       if(!this.container.style.overflow) {
@@ -257,25 +279,28 @@ export default class Scene extends Group {
     }
     // 这是选项引用
     this.options = options;
-    // 获取展示比率
+    // 获取设备像素比 默认 1:1
     options.displayRatio = options.displayRatio || 1.0;
-    // 获取场景模型
+    // 获取场景模型 （适配模式
     options.mode = options.mode || 'scale';
     // 场景位置（坐标，x,y轴）
     options.left = 0;
     options.top = 0;
-    // 是否自动重新改动尺寸
+    // 画布是否可以自动调整
     options.autoResize = options.autoResize !== false;
-    
+    // 自动调整大小
     if(options.autoResize) {
       // window,web平台下
       if(global.addEventListener) {
         const that = this;
         // 监听视口的大小变动
         global.addEventListener('resize', function listener() {
+          // document对象存在 && document中包含容器
           if(typeof document !== 'undefined' && document.contains(that.container)) {
+            // 调用重新调整
             that.resize();
           } else {
+            // 不能存在document,删除事件
             global.removeEventListener('resize', listener);
           }
         });
@@ -284,6 +309,7 @@ export default class Scene extends Group {
 
     // 初始化目标对象集合
     this[_enteredTargets] = new Set();
+    // 设置分辨率
     this.setResolution(options);
     // 初始化事件系统
     delegateEvents(this);
@@ -344,18 +370,28 @@ export default class Scene extends Group {
   }
 
   /* override */
+  /**
+   * 将层节点作为子节点进行添加
+   * @param {*} layer 
+   */
   appendChild(layer) {
+    // 非Layer 实例 && 也不是LayerWoker实例
     if(!(layer instanceof Layer) && !(layer instanceof LayerWorker)) {
       wrapLayer(layer);
     }
     const ret = super.appendChild(layer);
+    // layer就是一个canvas
     const canvas = layer.canvas;
+    // canvas非离屏幕
     if(!layer.offscreen) {
+      // 直接添加到dom中去
       this.container.appendChild(canvas);
     } else {
       this[_offscreenLayerCount]++;
     }
+    // 设置视口（可是窗口）
     setViewport(this.options, canvas);
+    // 根据分辨率重新设置
     layer.setResolution(this.getResolution());
     return ret;
   }
@@ -388,7 +424,7 @@ export default class Scene extends Group {
   }
 
   /**
-   * 层
+   * 创建层或者找到创建过的层
    * @param {*} id 
    * @param {*} options 
    */
@@ -545,19 +581,20 @@ export default class Scene extends Group {
    * @param {*} param0 
    */
   setResolution({width, height} = {}) {
-    // 容器对象dom
+    // 容器对象
     const container = this.container;
-    // 容器尺寸
+    // 容器元素的尺寸，宽，高
     const {clientWidth, clientHeight} = container;
     // 设置分辨率
     if(width == null || height == null) {
+      // 参数不为null,就使用自身
       width = width == null ? clientWidth : width;
       height = height == null ? clientHeight : height;
     }
 
     // canvas渲染模式 device piexl ratio
     const {mode, displayRatio} = this.options;
-    // 分辨率乘以dpr
+    // 分辨率乘以dpr，真实的尺寸
     width *= displayRatio;
     height *= displayRatio;
 
@@ -568,11 +605,13 @@ export default class Scene extends Group {
     // 根据渲染模式。设置元素的宽高
     if(mode === 'stickyHeight' || mode === 'stickyLeft' || mode === 'stickyRight') {
       const w = width;
+      // 根据比例计算宽度
       width = clientWidth * height / clientHeight;
       if(mode === 'stickyHeight') this.options.left = 0.5 * (width - w);
       if(mode === 'stickyRight') this.options.left = width - w;
     } else if(mode === 'stickyWidth' || mode === 'stickyTop' || mode === 'stickyBottom') {
       const h = height;
+      // 根据比例计算高度
       height = clientHeight * width / clientWidth;
       if(mode === 'stickyWidth') this.options.top = 0.5 * (height - h);
       if(mode === 'stickyBottom') this.options.top = height - h;

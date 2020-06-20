@@ -151,7 +151,12 @@ export default class Animation extends Animator {
     });
   }
 
+  /**
+   * 
+   * @param {*} preserveState 
+   */
   cancel(preserveState = false) {
+    // 取消动画
     cancelAnimationFrame(this.requestId);
     if(preserveState) {
       this.setter(this.frame, this.target);

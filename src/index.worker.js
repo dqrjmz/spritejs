@@ -36,16 +36,27 @@ const isSpriteNode = ownerDocument.isSpriteNode;
 const registerNode = ownerDocument.registerNode;
 
 const layerCreated = new Promise((resolve) => {
+  // 缓存图层实例
   let layer = null;
+  // work线程通过事件传递消息
   self.addEventListener('message', (evt) => {
+    // 根据消息的类型进行不同的处理
     if(evt.data.type === 'create') {
+      // 获取事件对象中携带的数据
       const options = evt.data.options;
+      // 创建一个新图层
       layer = new Layer(options);
+      // 将图层实例返回
       resolve(layer);
+      // 事件
     } else if(layer && evt.data.type === 'event') {
+      // 给图层分发事件
       layer.dispatchPointerEvent(evt.data.event);
+      // 分辨率修改事件
     } else if(evt.data.type === 'resolution_change') {
+      // 事件对象
       const {width, height} = evt.data;
+      // 图层重新设置分辨率
       layer.setResolution({width, height});
     }
   });

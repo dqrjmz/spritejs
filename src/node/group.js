@@ -20,7 +20,7 @@ export default class Group extends Block {
     this[_children] = [];
     // 有序节点
     this[_ordered] = null;
-    // 
+    // 层级
     this[_zOrder] = 0;
   }
 
@@ -50,7 +50,7 @@ export default class Group extends Block {
 
   /**
    * 添加节点作为子节点
-   * @param  {...any} els 子节点 参数：a, b, c, d
+   * @param  {...any} els 子节点 参数：a, b, c, d, 
    */
   append(...els) {
     // 遍历节点
@@ -62,14 +62,14 @@ export default class Group extends Block {
 
   /**
    * 添加子节点
-   * @param {*} el 
+   * @param {*} el sprite节点
    */
   appendChild(el) {
-    // 删除节点
+    // 删除节点（删除相同的节点，后再添加
     el.remove();
     // 添加到子节点数组中
     this[_children].push(el);
-    // 新增一个节点，新增一个图层，层级加1
+    
     el.connect(this, this[_zOrder]++);
     // 存在有序节点（根据节点的层级进行排序 
     if(this[_ordered]) {
@@ -104,8 +104,10 @@ export default class Group extends Block {
   /* override */
   dispatchPointerEvent(event) {
     const children = this.orderedChildren;
+    // 根据顺序决定谁在上层
     for(let i = children.length - 1; i >= 0; i--) {
       const child = children[i];
+      // 触发全部
       if(child.dispatchPointerEvent(event)) return true;
     }
     return super.dispatchPointerEvent(event);
@@ -273,6 +275,7 @@ export default class Group extends Block {
   /* override */
   setResolution({width, height}) {
     super.setResolution({width, height});
+    // 给子元素设置分辨率
     this[_children].forEach((child) => {
       child.setResolution({width, height});
     });

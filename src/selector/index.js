@@ -15,9 +15,10 @@ function isTag(elem) {
 
 /**
  * 获取元素的子节点
- * @param {*} elem 
+ * @param {*} elem 节点
  */
 function getChildren(elem) {
+  // 将子节点转换为数组
   return Array.from(elem.childNodes || []);
 }
 
@@ -26,9 +27,12 @@ function getChildren(elem) {
  * @param {*} elem 
  */
 function getParent(elem) {
+  // 节点是否为sprite自身的节点（通过节点的名称进行判断）
   if(ownerDocument.isSpriteNode(elem.nodeName)) {
+    // 节点的父节点 || canvas节点 || 容器节点
     return elem.parent || elem.canvas || elem.container;
   }
+  // 非sprite自身节点， 返回节点的父节点
   return elem.parentElement;
 }
 
@@ -37,6 +41,7 @@ function getParent(elem) {
  * @param {*} nodes 
  */
 function removeSubsets(nodes) {
+  // 节点的长度
   let idx = nodes.length,
     node,
     ancestor,
@@ -44,19 +49,26 @@ function removeSubsets(nodes) {
 
   // Check if each node (or one of its ancestors) is already contained in the
   // array.
+  // 遍历节点
   while(--idx > -1) {
+    // 祖先节点
     node = ancestor = nodes[idx];
 
     // Temporarily remove the node under consideration
+    // 清除数组中的节点
     nodes[idx] = null;
     replace = true;
 
+    // 获取节点的祖先，当没有父节点时候退出
     while(ancestor) {
+      // 节点数组中存在这个节点
       if(nodes.indexOf(ancestor) > -1) {
         replace = false;
+        // 删除
         nodes.splice(idx, 1);
         break;
       }
+      // 获取父节点
       ancestor = getParent(ancestor);
     }
 
@@ -74,6 +86,11 @@ function removeSubsets(nodes) {
  */
 const adapter = {
   isTag,
+  /**
+   * 
+   * @param {*} test 
+   * @param {*} elems 
+   */
   existsOne(test, elems) {
     return elems.some((elem) => {
       return isTag(elem)
@@ -81,14 +98,23 @@ const adapter = {
         : false;
     });
   },
+  /**
+   * 获取兄弟节点
+   * @param {*} elem 
+   */
   getSiblings(elem) {
+    // 先回去父节点
     const parent = getParent(elem);
+    // 获取父节点的子节点
     return parent && getChildren(parent);
   },
   getChildren,
   getParent,
+  // 获取节点上的，指定属性名的属性值
   getAttributeValue(elem, name) {
+    // 节点类型 && 属性名
     if(elem.nodeType === 1 && name === 'class' || name === 'id') {
+      // 直接返回
       return elem[name];
     }
     if(this.hasAttrib(elem, name)) {

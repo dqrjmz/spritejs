@@ -67,6 +67,9 @@ export default class Event {
     return this[_detail];
   }
 
+  /**
+   * 阻止事件冒泡
+   */
   stopPropagation() {
     this.cancelBubble = true;
   }

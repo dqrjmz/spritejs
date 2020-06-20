@@ -25,18 +25,26 @@ function nowtime() {
 let requestAnimationFrame, // eslint-disable-line import/no-mutable-exports
   cancelAnimationFrame;
 
-  // 全局对象存在
+  // 平台支持requestAnimationFrame函数
 if(typeof global !== 'undefined' && typeof global.requestAnimationFrame === 'function') {
+  // 使用平台函数
   requestAnimationFrame = global.requestAnimationFrame;
   cancelAnimationFrame = global.cancelAnimationFrame;
 } else {
-  // 设置定时器
+  /**
+   * 平台不支持requestAnimationFrame函数，使用setTimout函数替代
+   * 返回定时器的id
+   */
   requestAnimationFrame = function (fn) {
     return setTimeout(() => {
       fn(nowtime());
     }, 16);
   };
+  /**
+   * 取消动画，根据定时器的id
+   */
   cancelAnimationFrame = function (id) {
+    // 清除定时器
     return clearTimeout(id);
   };
 }

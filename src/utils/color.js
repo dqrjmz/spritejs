@@ -4,12 +4,17 @@ import rgba from 'color-rgba';
  * 渐变
  */
 export class Gradient {
+  /**
+   * 矢量 颜色
+   * @param {Array} vector  
+   * @param {Array} colors [{offset,color}]
+   */
   constructor({vector, colors}) {
     // 非数组，数组长度不为4，6，3时
     if(!Array.isArray(vector) || (vector.length !== 4 && vector.length !== 6 && vector.length !== 3)) {
       throw new TypeError('Invalid gradient');
     }
-    // 初始化
+    // 初始化 Array
     this.vector = vector;
     // 初始化颜色数组和偏移量
     this.colors = colors.map(({offset, color}) => {
@@ -17,6 +22,9 @@ export class Gradient {
     });
   }
 
+  /**
+   * @returns {string} 
+   */
   toString() {
     return JSON.stringify({vector: this.vector, colors: this.colors});
   }
@@ -41,7 +49,7 @@ export function isTransparent(color) {
  */
 export function parseColor(color) {
   // if(Array.isArray(color)) return color;
-  // 颜色为 null
+  // 颜色为 null undefined
   if(color == null) return color;
   // 颜色不存在，即为透明
   if(!color) color = 'transparent';
@@ -49,7 +57,7 @@ export function parseColor(color) {
   if(color instanceof Gradient) return color;
   // 颜色解析值
   const ret = rgba(color);
-  // 不存在或者 长度不存在或者为0
+  // 不存在或者 长度不存在或者为0 ret为数组
   if(!ret || !ret.length) throw new TypeError('Invalid color value.');
   // 组合颜色
   return `rgba(${ret.join()})`;
@@ -111,12 +119,26 @@ export function setStrokeColor(mesh,
   });
 }
 
+/**
+ * 颜色类
+ */
 export class Color extends Array {
+  /**
+   * 
+   * @param {*} r red
+   * @param {*} g green
+   * @param {*} b blue 
+   * @param {*} a alpha
+   */
   constructor(r = 0, g = 0, b = 0, a = 0) {
+    // 是否为数组
     if(Array.isArray(r)) {
+      // 通过数组传递也是可以的
       [r, g, b, a] = r;
     }
+    // 通过字符串传递也是可以的
     if(typeof r === 'string') {
+      // 解析颜色字符串，得出每个颜色值
       [r, g, b, a] = rgba(r);
       r /= 255;
       g /= 255;
@@ -126,14 +148,24 @@ export class Color extends Array {
     return this;
   }
 
+  /**
+   * 获取颜色中的红
+   */
   get r() {
+    // 四舍五入
     return Math.round(this[0] * 255);
   }
 
+  /**
+   * 设置颜色中的红
+   */
   set r(v) {
     this[0] = v / 255;
   }
 
+  /**
+   * 获取绿色
+   */
   get g() {
     return Math.round(this[1] * 255);
   }
@@ -142,6 +174,9 @@ export class Color extends Array {
     this[1] = v / 255;
   }
 
+  /**
+   * 获取蓝色值
+   */
   get b() {
     return Math.round(this[2] * 255);
   }
@@ -150,6 +185,9 @@ export class Color extends Array {
     this[2] = v / 255;
   }
 
+  /**
+   * 获取透明度
+   */
   get a() {
     return this[3];
   }
@@ -159,7 +197,7 @@ export class Color extends Array {
   }
 
   /**
-   * 获取hex类型颜色
+   * 获取hex类型颜色 #ffff34
    */
   get hex() {
     // 将10进制数组转换为16进制，去16进制数（不带前缀的
@@ -167,8 +205,11 @@ export class Color extends Array {
     const g = `0${this.g.toString(16)}`.slice(-2);
     const b = `0${this.b.toString(16)}`.slice(-2);
     let a;
+    // 透明度小于1
     if(this.a < 1) {
+      // 设置a
       a = Math.round(this[3] * 255);
+      // 
       a = `0${a.toString(16)}`.slice(-2);
     }
     return `#${r}${g}${b}${a || ''}`;
@@ -188,17 +229,21 @@ export class Color extends Array {
   fromColor(color) {
     // 颜色为字符串类型
     if(typeof color === 'string') {
-      // 解析
+      // 解析颜色值
       color = rgba(color);
-      // 
+      // 颜色
       color[0] /= 255;
       color[1] /= 255;
       color[2] /= 255;
     }
+    /**
+     * 设置颜色组成部分的值
+     */
     this[0] = color[0];
     this[1] = color[1];
     this[2] = color[2];
     this[3] = color[3];
+    // 返回颜色数组
     return this;
   }
 }

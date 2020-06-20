@@ -13,11 +13,10 @@ export default class Path extends Node {
   static Attr = Attr;
 
   /**
-   * 
    * @param {*} attrs 元素配置属性
    */
   constructor(attrs = {}) {
-    // 字符串，设置默认值
+    // 字符串，将属性修改为 svg对应属性
     if(typeof attrs === 'string') attrs = {d: attrs};
     super(attrs);
     // 效果
