@@ -100,6 +100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "version", function() { return version; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "helpers", function() { return helpers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSpriteNode", function() { return isSpriteNode; });
@@ -107,78 +108,78 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ENV", function() { return _mesh_js_core__WEBPACK_IMPORTED_MODULE_0__["ENV"]; });
 
-/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
+/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(88);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "requestAnimationFrame", function() { return _utils_animation_frame__WEBPACK_IMPORTED_MODULE_1__["requestAnimationFrame"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "cancelAnimationFrame", function() { return _utils_animation_frame__WEBPACK_IMPORTED_MODULE_1__["cancelAnimationFrame"]; });
 
-/* harmony import */ var _node_node__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(112);
+/* harmony import */ var _node_node__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(90);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Node", function() { return _node_node__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _node_cloud__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(267);
+/* harmony import */ var _node_cloud__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(245);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Cloud", function() { return _node_cloud__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _node_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(269);
+/* harmony import */ var _node_block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(247);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Block", function() { return _node_block__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _node_sprite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(277);
+/* harmony import */ var _node_sprite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(256);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Sprite", function() { return _node_sprite__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _node_path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(279);
+/* harmony import */ var _node_path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(258);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Path", function() { return _node_path__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
-/* harmony import */ var _node_rect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(282);
+/* harmony import */ var _node_rect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(261);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Rect", function() { return _node_rect__WEBPACK_IMPORTED_MODULE_7__["default"]; });
 
-/* harmony import */ var _node_triangle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(284);
+/* harmony import */ var _node_triangle__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Triangle", function() { return _node_triangle__WEBPACK_IMPORTED_MODULE_8__["default"]; });
 
-/* harmony import */ var _node_parallel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(290);
+/* harmony import */ var _node_parallel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(269);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Parallel", function() { return _node_parallel__WEBPACK_IMPORTED_MODULE_9__["default"]; });
 
-/* harmony import */ var _node_regular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(292);
+/* harmony import */ var _node_regular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(271);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Regular", function() { return _node_regular__WEBPACK_IMPORTED_MODULE_10__["default"]; });
 
-/* harmony import */ var _node_star__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(294);
+/* harmony import */ var _node_star__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(273);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Star", function() { return _node_star__WEBPACK_IMPORTED_MODULE_11__["default"]; });
 
-/* harmony import */ var _node_ellipse__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(296);
+/* harmony import */ var _node_ellipse__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(275);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Ellipse", function() { return _node_ellipse__WEBPACK_IMPORTED_MODULE_12__["default"]; });
 
-/* harmony import */ var _node_arc__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(298);
+/* harmony import */ var _node_arc__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(277);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Arc", function() { return _node_arc__WEBPACK_IMPORTED_MODULE_13__["default"]; });
 
-/* harmony import */ var _node_ring__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(300);
+/* harmony import */ var _node_ring__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(279);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Ring", function() { return _node_ring__WEBPACK_IMPORTED_MODULE_14__["default"]; });
 
-/* harmony import */ var _node_polyline__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(285);
+/* harmony import */ var _node_polyline__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(264);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Polyline", function() { return _node_polyline__WEBPACK_IMPORTED_MODULE_15__["default"]; });
 
-/* harmony import */ var _node_label__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(302);
+/* harmony import */ var _node_label__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(281);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Label", function() { return _node_label__WEBPACK_IMPORTED_MODULE_16__["default"]; });
 
-/* harmony import */ var _node_group__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(304);
+/* harmony import */ var _node_group__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(283);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Group", function() { return _node_group__WEBPACK_IMPORTED_MODULE_17__["default"]; });
 
-/* harmony import */ var _node_layer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(338);
+/* harmony import */ var _node_layer__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(319);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Layer", function() { return _node_layer__WEBPACK_IMPORTED_MODULE_18__["default"]; });
 
-/* harmony import */ var _node_spritesvg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(339);
+/* harmony import */ var _node_spritesvg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(320);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SpriteSvg", function() { return _node_spritesvg__WEBPACK_IMPORTED_MODULE_19__["default"]; });
 
-/* harmony import */ var _node_layer_worker__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(341);
+/* harmony import */ var _node_layer_worker__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(322);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "LayerWorker", function() { return _node_layer_worker__WEBPACK_IMPORTED_MODULE_20__["default"]; });
 
-/* harmony import */ var _node_scene__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(342);
+/* harmony import */ var _node_scene__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(323);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Scene", function() { return _node_scene__WEBPACK_IMPORTED_MODULE_21__["default"]; });
 
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(263);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(271);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(241);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(249);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return _utils_color__WEBPACK_IMPORTED_MODULE_23__["Color"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Gradient", function() { return _utils_color__WEBPACK_IMPORTED_MODULE_23__["Gradient"]; });
 
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(114);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(92);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
@@ -224,6 +225,13 @@ var helpers = {
   toString: _utils_attribute_value__WEBPACK_IMPORTED_MODULE_24__["toString"],
   toNumber: _utils_attribute_value__WEBPACK_IMPORTED_MODULE_24__["toNumber"]
 };
+var spriteVer;
+
+if (true) {
+  spriteVer = "3.7.24"; // eslint-disable-line no-undef
+} else {}
+
+var version = spriteVer;
 
 
 /***/ }),
@@ -287,7 +295,7 @@ var RANDOM = Math.random;
 /**
  * Sets the type of array used when creating new vectors and matrices
  *
- * @param {Type} type Array type, such as Float32Array or Array
+ * @param {Float32ArrayConstructor | ArrayConstructor} type Array type, such as Float32Array or Array
  */
 
 function setMatrixArrayType(type) {
@@ -387,7 +395,7 @@ function create() {
 /**
  * Creates a new mat2 initialized with values from an existing matrix
  *
- * @param {mat2} a matrix to clone
+ * @param {ReadonlyMat2} a matrix to clone
  * @returns {mat2} a new 2x2 matrix
  */
 
@@ -403,7 +411,7 @@ function clone(a) {
  * Copy the values from one mat2 to another
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -468,7 +476,7 @@ function set(out, m00, m01, m10, m11) {
  * Transpose the values of a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -492,7 +500,7 @@ function transpose(out, a) {
  * Inverts a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -519,7 +527,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {mat2} out
  */
 
@@ -535,7 +543,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat2
  *
- * @param {mat2} a the source matrix
+ * @param {ReadonlyMat2} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -546,8 +554,8 @@ function determinant(a) {
  * Multiplies two mat2's
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -570,7 +578,7 @@ function multiply(out, a, b) {
  * Rotates a mat2 by the given angle
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to rotate
+ * @param {ReadonlyMat2} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat2} out
  */
@@ -592,8 +600,8 @@ function rotate(out, a, rad) {
  * Scales the mat2 by the dimensions in the given vec2
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to rotate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat2} a the matrix to rotate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat2} out
  **/
 
@@ -639,7 +647,7 @@ function fromRotation(out, rad) {
  *     mat2.scale(dest, dest, vec);
  *
  * @param {mat2} out mat2 receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat2} out
  */
 
@@ -653,17 +661,17 @@ function fromScaling(out, v) {
 /**
  * Returns a string representation of a mat2
  *
- * @param {mat2} a matrix to represent as a string
+ * @param {ReadonlyMat2} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat2(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "mat2(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Returns Frobenius norm of a mat2
  *
- * @param {mat2} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat2} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -672,10 +680,10 @@ function frob(a) {
 }
 /**
  * Returns L, D and U matrices (Lower triangular, Diagonal and Upper triangular) by factorizing the input matrix
- * @param {mat2} L the lower triangular matrix
- * @param {mat2} D the diagonal matrix
- * @param {mat2} U the upper triangular matrix
- * @param {mat2} a the input matrix to factorize
+ * @param {ReadonlyMat2} L the lower triangular matrix
+ * @param {ReadonlyMat2} D the diagonal matrix
+ * @param {ReadonlyMat2} U the upper triangular matrix
+ * @param {ReadonlyMat2} a the input matrix to factorize
  */
 
 function LDU(L, D, U, a) {
@@ -689,8 +697,8 @@ function LDU(L, D, U, a) {
  * Adds two mat2's
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -705,8 +713,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @returns {mat2} out
  */
 
@@ -720,8 +728,8 @@ function subtract(out, a, b) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat2} a The first matrix.
- * @param {mat2} b The second matrix.
+ * @param {ReadonlyMat2} a The first matrix.
+ * @param {ReadonlyMat2} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -731,8 +739,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat2} a The first matrix.
- * @param {mat2} b The second matrix.
+ * @param {ReadonlyMat2} a The first matrix.
+ * @param {ReadonlyMat2} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -751,7 +759,7 @@ function equals(a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat2} out the receiving matrix
- * @param {mat2} a the matrix to scale
+ * @param {ReadonlyMat2} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat2} out
  */
@@ -767,8 +775,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat2's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat2} out the receiving vector
- * @param {mat2} a the first operand
- * @param {mat2} b the second operand
+ * @param {ReadonlyMat2} a the first operand
+ * @param {ReadonlyMat2} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat2} out
  */
@@ -829,12 +837,12 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * 2x3 Matrix
  * @module mat2d
- *
  * @description
  * A mat2d contains six elements defined as:
  * <pre>
- * [a, b, c,
- *  d, tx, ty]
+ * [a, b,
+ *  c, d,
+ *  tx, ty]
  * </pre>
  * This is a short form for the 3x3 matrix:
  * <pre>
@@ -868,7 +876,7 @@ function create() {
 /**
  * Creates a new mat2d initialized with values from an existing matrix
  *
- * @param {mat2d} a matrix to clone
+ * @param {ReadonlyMat2d} a matrix to clone
  * @returns {mat2d} a new 2x3 matrix
  */
 
@@ -886,7 +894,7 @@ function clone(a) {
  * Copy the values from one mat2d to another
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {mat2d} out
  */
 
@@ -963,7 +971,7 @@ function set(out, a, b, c, d, tx, ty) {
  * Inverts a mat2d
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {mat2d} out
  */
 
@@ -992,7 +1000,7 @@ function invert(out, a) {
 /**
  * Calculates the determinant of a mat2d
  *
- * @param {mat2d} a the source matrix
+ * @param {ReadonlyMat2d} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -1003,8 +1011,8 @@ function determinant(a) {
  * Multiplies two mat2d's
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -1033,7 +1041,7 @@ function multiply(out, a, b) {
  * Rotates a mat2d by the given angle
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to rotate
+ * @param {ReadonlyMat2d} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat2d} out
  */
@@ -1059,8 +1067,8 @@ function rotate(out, a, rad) {
  * Scales the mat2d by the dimensions in the given vec2
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to translate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat2d} a the matrix to translate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat2d} out
  **/
 
@@ -1085,8 +1093,8 @@ function scale(out, a, v) {
  * Translates the mat2d by the dimensions in the given vec2
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to translate
- * @param {vec2} v the vec2 to translate the matrix by
+ * @param {ReadonlyMat2d} a the matrix to translate
+ * @param {ReadonlyVec2} v the vec2 to translate the matrix by
  * @returns {mat2d} out
  **/
 
@@ -1138,7 +1146,7 @@ function fromRotation(out, rad) {
  *     mat2d.scale(dest, dest, vec);
  *
  * @param {mat2d} out mat2d receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat2d} out
  */
 
@@ -1159,7 +1167,7 @@ function fromScaling(out, v) {
  *     mat2d.translate(dest, dest, vec);
  *
  * @param {mat2d} out mat2d receiving operation result
- * @param {vec2} v Translation vector
+ * @param {ReadonlyVec2} v Translation vector
  * @returns {mat2d} out
  */
 
@@ -1175,17 +1183,17 @@ function fromTranslation(out, v) {
 /**
  * Returns a string representation of a mat2d
  *
- * @param {mat2d} a matrix to represent as a string
+ * @param {ReadonlyMat2d} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat2d(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ')';
+  return "mat2d(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ")";
 }
 /**
  * Returns Frobenius norm of a mat2d
  *
- * @param {mat2d} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat2d} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -1196,8 +1204,8 @@ function frob(a) {
  * Adds two mat2d's
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -1214,8 +1222,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @returns {mat2d} out
  */
 
@@ -1232,7 +1240,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat2d} out the receiving matrix
- * @param {mat2d} a the matrix to scale
+ * @param {ReadonlyMat2d} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat2d} out
  */
@@ -1250,8 +1258,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat2d's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat2d} out the receiving vector
- * @param {mat2d} a the first operand
- * @param {mat2d} b the second operand
+ * @param {ReadonlyMat2d} a the first operand
+ * @param {ReadonlyMat2d} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat2d} out
  */
@@ -1268,8 +1276,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat2d} a The first matrix.
- * @param {mat2d} b The second matrix.
+ * @param {ReadonlyMat2d} a The first matrix.
+ * @param {ReadonlyMat2d} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -1279,8 +1287,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat2d} a The first matrix.
- * @param {mat2d} b The second matrix.
+ * @param {ReadonlyMat2d} a The first matrix.
+ * @param {ReadonlyMat2d} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -1384,7 +1392,7 @@ function create() {
  * Copies the upper-left 3x3 values into the given mat3.
  *
  * @param {mat3} out the receiving 3x3 matrix
- * @param {mat4} a   the source 4x4 matrix
+ * @param {ReadonlyMat4} a   the source 4x4 matrix
  * @returns {mat3} out
  */
 
@@ -1403,7 +1411,7 @@ function fromMat4(out, a) {
 /**
  * Creates a new mat3 initialized with values from an existing matrix
  *
- * @param {mat3} a matrix to clone
+ * @param {ReadonlyMat3} a matrix to clone
  * @returns {mat3} a new 3x3 matrix
  */
 
@@ -1424,7 +1432,7 @@ function clone(a) {
  * Copy the values from one mat3 to another
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1519,7 +1527,7 @@ function identity(out) {
  * Transpose the values of a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1553,7 +1561,7 @@ function transpose(out, a) {
  * Inverts a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1593,7 +1601,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {mat3} out
  */
 
@@ -1621,7 +1629,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat3
  *
- * @param {mat3} a the source matrix
+ * @param {ReadonlyMat3} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -1641,8 +1649,8 @@ function determinant(a) {
  * Multiplies two mat3's
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -1680,8 +1688,8 @@ function multiply(out, a, b) {
  * Translate a mat3 by the given vector
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to translate
- * @param {vec2} v vector to translate by
+ * @param {ReadonlyMat3} a the matrix to translate
+ * @param {ReadonlyVec2} v vector to translate by
  * @returns {mat3} out
  */
 
@@ -1712,7 +1720,7 @@ function translate(out, a, v) {
  * Rotates a mat3 by the given angle
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to rotate
+ * @param {ReadonlyMat3} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat3} out
  */
@@ -1740,13 +1748,12 @@ function rotate(out, a, rad) {
   out[8] = a22;
   return out;
 }
-;
 /**
  * Scales the mat3 by the dimensions in the given vec2
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to rotate
- * @param {vec2} v the vec2 to scale the matrix by
+ * @param {ReadonlyMat3} a the matrix to rotate
+ * @param {ReadonlyVec2} v the vec2 to scale the matrix by
  * @returns {mat3} out
  **/
 
@@ -1772,7 +1779,7 @@ function scale(out, a, v) {
  *     mat3.translate(dest, dest, vec);
  *
  * @param {mat3} out mat3 receiving operation result
- * @param {vec2} v Translation vector
+ * @param {ReadonlyVec2} v Translation vector
  * @returns {mat3} out
  */
 
@@ -1822,7 +1829,7 @@ function fromRotation(out, rad) {
  *     mat3.scale(dest, dest, vec);
  *
  * @param {mat3} out mat3 receiving operation result
- * @param {vec2} v Scaling vector
+ * @param {ReadonlyVec2} v Scaling vector
  * @returns {mat3} out
  */
 
@@ -1842,7 +1849,7 @@ function fromScaling(out, v) {
  * Copies the values from a mat2d into a mat3
  *
  * @param {mat3} out the receiving matrix
- * @param {mat2d} a the matrix to copy
+ * @param {ReadonlyMat2d} a the matrix to copy
  * @returns {mat3} out
  **/
 
@@ -1859,13 +1866,13 @@ function fromMat2d(out, a) {
   return out;
 }
 /**
-* Calculates a 3x3 matrix from the given quaternion
-*
-* @param {mat3} out mat3 receiving operation result
-* @param {quat} q Quaternion to create matrix from
-*
-* @returns {mat3} out
-*/
+ * Calculates a 3x3 matrix from the given quaternion
+ *
+ * @param {mat3} out mat3 receiving operation result
+ * @param {ReadonlyQuat} q Quaternion to create matrix from
+ *
+ * @returns {mat3} out
+ */
 
 function fromQuat(out, q) {
   var x = q[0],
@@ -1896,13 +1903,13 @@ function fromQuat(out, q) {
   return out;
 }
 /**
-* Calculates a 3x3 normal matrix (transpose inverse) from the 4x4 matrix
-*
-* @param {mat3} out mat3 receiving operation result
-* @param {mat4} a Mat4 to derive the normal matrix from
-*
-* @returns {mat3} out
-*/
+ * Calculates a 3x3 normal matrix (transpose inverse) from the 4x4 matrix
+ *
+ * @param {mat3} out mat3 receiving operation result
+ * @param {ReadonlyMat4} a Mat4 to derive the normal matrix from
+ *
+ * @returns {mat3} out
+ */
 
 function normalFromMat4(out, a) {
   var a00 = a[0],
@@ -1976,17 +1983,17 @@ function projection(out, width, height) {
 /**
  * Returns a string representation of a mat3
  *
- * @param {mat3} a matrix to represent as a string
+ * @param {ReadonlyMat3} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat3(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ', ' + a[8] + ')';
+  return "mat3(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ", " + a[8] + ")";
 }
 /**
  * Returns Frobenius norm of a mat3
  *
- * @param {mat3} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat3} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
@@ -1997,8 +2004,8 @@ function frob(a) {
  * Adds two mat3's
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -2018,8 +2025,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @returns {mat3} out
  */
 
@@ -2039,7 +2046,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat3} out the receiving matrix
- * @param {mat3} a the matrix to scale
+ * @param {ReadonlyMat3} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat3} out
  */
@@ -2060,8 +2067,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat3's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat3} out the receiving vector
- * @param {mat3} a the first operand
- * @param {mat3} b the second operand
+ * @param {ReadonlyMat3} a the first operand
+ * @param {ReadonlyMat3} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat3} out
  */
@@ -2081,8 +2088,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat3} a The first matrix.
- * @param {mat3} b The second matrix.
+ * @param {ReadonlyMat3} a The first matrix.
+ * @param {ReadonlyMat3} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -2092,8 +2099,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat3} a The first matrix.
- * @param {mat3} b The second matrix.
+ * @param {ReadonlyMat3} a The first matrix.
+ * @param {ReadonlyMat3} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -2224,7 +2231,7 @@ function create() {
 /**
  * Creates a new mat4 initialized with values from an existing matrix
  *
- * @param {mat4} a matrix to clone
+ * @param {ReadonlyMat4} a matrix to clone
  * @returns {mat4} a new 4x4 matrix
  */
 
@@ -2252,7 +2259,7 @@ function clone(a) {
  * Copy the values from one mat4 to another
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2389,7 +2396,7 @@ function identity(out) {
  * Transpose the values of a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2439,7 +2446,7 @@ function transpose(out, a) {
  * Inverts a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2502,7 +2509,7 @@ function invert(out, a) {
  * Calculates the adjugate of a mat4
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {mat4} out
  */
 
@@ -2544,7 +2551,7 @@ function adjoint(out, a) {
 /**
  * Calculates the determinant of a mat4
  *
- * @param {mat4} a the source matrix
+ * @param {ReadonlyMat4} a the source matrix
  * @returns {Number} determinant of a
  */
 
@@ -2584,8 +2591,8 @@ function determinant(a) {
  * Multiplies two mat4s
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -2645,8 +2652,8 @@ function multiply(out, a, b) {
  * Translate a mat4 by the given vector
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to translate
- * @param {vec3} v vector to translate by
+ * @param {ReadonlyMat4} a the matrix to translate
+ * @param {ReadonlyVec3} v vector to translate by
  * @returns {mat4} out
  */
 
@@ -2700,8 +2707,8 @@ function translate(out, a, v) {
  * Scales the mat4 by the dimensions in the given vec3 not using vectorization
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to scale
- * @param {vec3} v the vec3 to scale the matrix by
+ * @param {ReadonlyMat4} a the matrix to scale
+ * @param {ReadonlyVec3} v the vec3 to scale the matrix by
  * @returns {mat4} out
  **/
 
@@ -2731,9 +2738,9 @@ function scale(out, a, v) {
  * Rotates a mat4 by the given angle around the given axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @returns {mat4} out
  */
 
@@ -2811,7 +2818,7 @@ function rotate(out, a, rad, axis) {
  * Rotates a matrix by the given angle around the X axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2855,7 +2862,7 @@ function rotateX(out, a, rad) {
  * Rotates a matrix by the given angle around the Y axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2899,7 +2906,7 @@ function rotateY(out, a, rad) {
  * Rotates a matrix by the given angle around the Z axis
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to rotate
+ * @param {ReadonlyMat4} a the matrix to rotate
  * @param {Number} rad the angle to rotate the matrix by
  * @returns {mat4} out
  */
@@ -2947,7 +2954,7 @@ function rotateZ(out, a, rad) {
  *     mat4.translate(dest, dest, vec);
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {vec3} v Translation vector
+ * @param {ReadonlyVec3} v Translation vector
  * @returns {mat4} out
  */
 
@@ -2978,7 +2985,7 @@ function fromTranslation(out, v) {
  *     mat4.scale(dest, dest, vec);
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {vec3} v Scaling vector
+ * @param {ReadonlyVec3} v Scaling vector
  * @returns {mat4} out
  */
 
@@ -3010,7 +3017,7 @@ function fromScaling(out, v) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {Number} rad the angle to rotate the matrix by
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @returns {mat4} out
  */
 
@@ -3165,7 +3172,7 @@ function fromZRotation(out, rad) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
+ * @param {ReadonlyVec3} v Translation vector
  * @returns {mat4} out
  */
 
@@ -3209,7 +3216,7 @@ function fromRotationTranslation(out, q, v) {
  * Creates a new mat4 from a dual quat.
  *
  * @param {mat4} out Matrix
- * @param {quat2} a Dual Quaternion
+ * @param {ReadonlyQuat2} a Dual Quaternion
  * @returns {mat4} mat4 receiving operation result
  */
 
@@ -3244,7 +3251,7 @@ function fromQuat2(out, a) {
  *  the returned vector will be the same as the translation vector
  *  originally supplied.
  * @param  {vec3} out Vector to receive translation component
- * @param  {mat4} mat Matrix to be decomposed (input)
+ * @param  {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {vec3} out
  */
 
@@ -3261,7 +3268,7 @@ function getTranslation(out, mat) {
  *  the same as the scaling vector
  *  originally supplied.
  * @param  {vec3} out Vector to receive scaling factor component
- * @param  {mat4} mat Matrix to be decomposed (input)
+ * @param  {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {vec3} out
  */
 
@@ -3286,7 +3293,7 @@ function getScaling(out, mat) {
  *  fromRotationTranslation, the returned quaternion will be the
  *  same as the quaternion originally supplied.
  * @param {quat} out Quaternion to receive the rotation component
- * @param {mat4} mat Matrix to be decomposed (input)
+ * @param {ReadonlyMat4} mat Matrix to be decomposed (input)
  * @return {quat} out
  */
 
@@ -3349,8 +3356,8 @@ function getRotation(out, mat) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
- * @param {vec3} s Scaling vector
+ * @param {ReadonlyVec3} v Translation vector
+ * @param {ReadonlyVec3} s Scaling vector
  * @returns {mat4} out
  */
 
@@ -3408,9 +3415,9 @@ function fromRotationTranslationScale(out, q, v, s) {
  *
  * @param {mat4} out mat4 receiving operation result
  * @param {quat4} q Rotation quaternion
- * @param {vec3} v Translation vector
- * @param {vec3} s Scaling vector
- * @param {vec3} o The origin vector around which to scale and rotate
+ * @param {ReadonlyVec3} v Translation vector
+ * @param {ReadonlyVec3} s Scaling vector
+ * @param {ReadonlyVec3} o The origin vector around which to scale and rotate
  * @returns {mat4} out
  */
 
@@ -3469,7 +3476,7 @@ function fromRotationTranslationScaleOrigin(out, q, v, s, o) {
  * Calculates a 4x4 matrix from the given quaternion
  *
  * @param {mat4} out mat4 receiving operation result
- * @param {quat} q Quaternion to create matrix from
+ * @param {ReadonlyQuat} q Quaternion to create matrix from
  *
  * @returns {mat4} out
  */
@@ -3662,9 +3669,9 @@ function ortho(out, left, right, bottom, top, near, far) {
  * If you want a matrix that actually makes an object look at another object, you should use targetTo instead.
  *
  * @param {mat4} out mat4 frustum matrix will be written into
- * @param {vec3} eye Position of the viewer
- * @param {vec3} center Point the viewer is looking at
- * @param {vec3} up vec3 pointing up
+ * @param {ReadonlyVec3} eye Position of the viewer
+ * @param {ReadonlyVec3} center Point the viewer is looking at
+ * @param {ReadonlyVec3} up vec3 pointing up
  * @returns {mat4} out
  */
 
@@ -3745,9 +3752,9 @@ function lookAt(out, eye, center, up) {
  * Generates a matrix that makes something look at something else.
  *
  * @param {mat4} out mat4 frustum matrix will be written into
- * @param {vec3} eye Position of the viewer
- * @param {vec3} center Point the viewer is looking at
- * @param {vec3} up vec3 pointing up
+ * @param {ReadonlyVec3} eye Position of the viewer
+ * @param {ReadonlyVec3} center Point the viewer is looking at
+ * @param {ReadonlyVec3} up vec3 pointing up
  * @returns {mat4} out
  */
 
@@ -3800,33 +3807,32 @@ function targetTo(out, eye, target, up) {
   out[15] = 1;
   return out;
 }
-;
 /**
  * Returns a string representation of a mat4
  *
- * @param {mat4} a matrix to represent as a string
+ * @param {ReadonlyMat4} a matrix to represent as a string
  * @returns {String} string representation of the matrix
  */
 
 function str(a) {
-  return 'mat4(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ', ' + a[8] + ', ' + a[9] + ', ' + a[10] + ', ' + a[11] + ', ' + a[12] + ', ' + a[13] + ', ' + a[14] + ', ' + a[15] + ')';
+  return "mat4(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ", " + a[8] + ", " + a[9] + ", " + a[10] + ", " + a[11] + ", " + a[12] + ", " + a[13] + ", " + a[14] + ", " + a[15] + ")";
 }
 /**
  * Returns Frobenius norm of a mat4
  *
- * @param {mat4} a the matrix to calculate Frobenius norm of
+ * @param {ReadonlyMat4} a the matrix to calculate Frobenius norm of
  * @returns {Number} Frobenius norm
  */
 
 function frob(a) {
-  return Math.hypot(a[0], a[1], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15]);
+  return Math.hypot(a[0], a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10], a[11], a[12], a[13], a[14], a[15]);
 }
 /**
  * Adds two mat4's
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -3853,8 +3859,8 @@ function add(out, a, b) {
  * Subtracts matrix b from matrix a
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @returns {mat4} out
  */
 
@@ -3881,7 +3887,7 @@ function subtract(out, a, b) {
  * Multiply each element of the matrix by a scalar.
  *
  * @param {mat4} out the receiving matrix
- * @param {mat4} a the matrix to scale
+ * @param {ReadonlyMat4} a the matrix to scale
  * @param {Number} b amount to scale the matrix's elements by
  * @returns {mat4} out
  */
@@ -3909,8 +3915,8 @@ function multiplyScalar(out, a, b) {
  * Adds two mat4's after multiplying each element of the second operand by a scalar value.
  *
  * @param {mat4} out the receiving vector
- * @param {mat4} a the first operand
- * @param {mat4} b the second operand
+ * @param {ReadonlyMat4} a the first operand
+ * @param {ReadonlyMat4} b the second operand
  * @param {Number} scale the amount to scale b's elements by before adding
  * @returns {mat4} out
  */
@@ -3937,8 +3943,8 @@ function multiplyScalarAndAdd(out, a, b, scale) {
 /**
  * Returns whether or not the matrices have exactly the same elements in the same position (when compared with ===)
  *
- * @param {mat4} a The first matrix.
- * @param {mat4} b The second matrix.
+ * @param {ReadonlyMat4} a The first matrix.
+ * @param {ReadonlyMat4} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -3948,8 +3954,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the matrices have approximately the same elements in the same position.
  *
- * @param {mat4} a The first matrix.
- * @param {mat4} b The second matrix.
+ * @param {ReadonlyMat4} a The first matrix.
+ * @param {ReadonlyMat4} b The second matrix.
  * @returns {Boolean} True if the matrices are equal, false otherwise.
  */
 
@@ -4096,7 +4102,7 @@ function identity(out) {
  * then returns it.
  *
  * @param {quat} out the receiving quaternion
- * @param {vec3} axis the axis around which to rotate
+ * @param {ReadonlyVec3} axis the axis around which to rotate
  * @param {Number} rad the angle in radians
  * @returns {quat} out
  **/
@@ -4120,7 +4126,7 @@ function setAxisAngle(out, axis, rad) {
  *  angle -90 is the same as the quaternion formed by
  *  [0, 0, 1] and 270. This method favors the latter.
  * @param  {vec3} out_axis  Vector receiving the axis of rotation
- * @param  {quat} q     Quaternion to be decomposed
+ * @param  {ReadonlyQuat} q     Quaternion to be decomposed
  * @return {Number}     Angle, in radians, of the rotation
  */
 
@@ -4144,8 +4150,8 @@ function getAxisAngle(out_axis, q) {
 /**
  * Gets the angular distance between two unit quaternions
  *
- * @param  {quat} a     Origin unit quaternion 
- * @param  {quat} b     Destination unit quaternion
+ * @param  {ReadonlyQuat} a     Origin unit quaternion
+ * @param  {ReadonlyQuat} b     Destination unit quaternion
  * @return {Number}     Angle, in radians, between the two quaternions
  */
 
@@ -4157,8 +4163,8 @@ function getAngle(a, b) {
  * Multiplies two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {quat} out
  */
 
@@ -4181,7 +4187,7 @@ function multiply(out, a, b) {
  * Rotates a quaternion by the given angle about the X axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4204,7 +4210,7 @@ function rotateX(out, a, rad) {
  * Rotates a quaternion by the given angle about the Y axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4227,7 +4233,7 @@ function rotateY(out, a, rad) {
  * Rotates a quaternion by the given angle about the Z axis
  *
  * @param {quat} out quat receiving operation result
- * @param {quat} a quat to rotate
+ * @param {ReadonlyQuat} a quat to rotate
  * @param {number} rad angle (in radians) to rotate
  * @returns {quat} out
  */
@@ -4252,7 +4258,7 @@ function rotateZ(out, a, rad) {
  * Any existing W component will be ignored.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate W component of
+ * @param {ReadonlyQuat} a quat to calculate W component of
  * @returns {quat} out
  */
 
@@ -4270,7 +4276,7 @@ function calculateW(out, a) {
  * Calculate the exponential of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @returns {quat} out
  */
 
@@ -4292,7 +4298,7 @@ function exp(out, a) {
  * Calculate the natural logarithm of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @returns {quat} out
  */
 
@@ -4313,7 +4319,7 @@ function ln(out, a) {
  * Calculate the scalar power of a unit quaternion.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate the exponential of
+ * @param {ReadonlyQuat} a quat to calculate the exponential of
  * @param {Number} b amount to scale the quaternion by
  * @returns {quat} out
  */
@@ -4328,8 +4334,8 @@ function pow(out, a, b) {
  * Performs a spherical linear interpolation between two quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  */
@@ -4380,7 +4386,7 @@ function slerp(out, a, b, t) {
 }
 /**
  * Generates a random unit quaternion
- * 
+ *
  * @param {quat} out the receiving quaternion
  * @returns {quat} out
  */
@@ -4403,7 +4409,7 @@ function random(out) {
  * Calculates the inverse of a quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate inverse of
+ * @param {ReadonlyQuat} a quat to calculate inverse of
  * @returns {quat} out
  */
 
@@ -4426,7 +4432,7 @@ function invert(out, a) {
  * If the quaternion is normalized, this function is faster than quat.inverse and produces the same result.
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quat to calculate conjugate of
+ * @param {ReadonlyQuat} a quat to calculate conjugate of
  * @returns {quat} out
  */
 
@@ -4444,7 +4450,7 @@ function conjugate(out, a) {
  * to renormalize the quaternion yourself where necessary.
  *
  * @param {quat} out the receiving quaternion
- * @param {mat3} m rotation matrix
+ * @param {ReadonlyMat3} m rotation matrix
  * @returns {quat} out
  * @function
  */
@@ -4513,17 +4519,17 @@ function fromEuler(out, x, y, z) {
 /**
  * Returns a string representation of a quatenion
  *
- * @param {quat} a vector to represent as a string
+ * @param {ReadonlyQuat} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'quat(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "quat(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Creates a new quat initialized with values from an existing quaternion
  *
- * @param {quat} a quaternion to clone
+ * @param {ReadonlyQuat} a quaternion to clone
  * @returns {quat} a new quaternion
  * @function
  */
@@ -4545,7 +4551,7 @@ var fromValues = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["fromValues"];
  * Copy the values from one quat to another
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the source quaternion
+ * @param {ReadonlyQuat} a the source quaternion
  * @returns {quat} out
  * @function
  */
@@ -4568,8 +4574,8 @@ var set = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["set"];
  * Adds two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {quat} out
  * @function
  */
@@ -4585,7 +4591,7 @@ var mul = multiply;
  * Scales a quat by a scalar number
  *
  * @param {quat} out the receiving vector
- * @param {quat} a the vector to scale
+ * @param {ReadonlyQuat} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {quat} out
  * @function
@@ -4595,8 +4601,8 @@ var scale = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["scale"];
 /**
  * Calculates the dot product of two quat's
  *
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @returns {Number} dot product of a and b
  * @function
  */
@@ -4606,8 +4612,8 @@ var dot = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["dot"];
  * Performs a linear interpolation between two quat's
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  * @function
@@ -4617,7 +4623,7 @@ var lerp = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["lerp"];
 /**
  * Calculates the length of a quat
  *
- * @param {quat} a vector to calculate length of
+ * @param {ReadonlyQuat} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -4631,7 +4637,7 @@ var len = length;
 /**
  * Calculates the squared length of a quat
  *
- * @param {quat} a vector to calculate squared length of
+ * @param {ReadonlyQuat} a vector to calculate squared length of
  * @returns {Number} squared length of a
  * @function
  */
@@ -4647,7 +4653,7 @@ var sqrLen = squaredLength;
  * Normalize a quat
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a quaternion to normalize
+ * @param {ReadonlyQuat} a quaternion to normalize
  * @returns {quat} out
  * @function
  */
@@ -4656,8 +4662,8 @@ var normalize = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["normalize"];
 /**
  * Returns whether or not the quaternions have exactly the same elements in the same position (when compared with ===)
  *
- * @param {quat} a The first quaternion.
- * @param {quat} b The second quaternion.
+ * @param {ReadonlyQuat} a The first quaternion.
+ * @param {ReadonlyQuat} b The second quaternion.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -4665,8 +4671,8 @@ var exactEquals = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["exactEquals"];
 /**
  * Returns whether or not the quaternions have approximately the same elements in the same position.
  *
- * @param {quat} a The first vector.
- * @param {quat} b The second vector.
+ * @param {ReadonlyQuat} a The first vector.
+ * @param {ReadonlyQuat} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -4678,8 +4684,8 @@ var equals = _vec4_js__WEBPACK_IMPORTED_MODULE_3__["equals"];
  * Both vectors are assumed to be unit length.
  *
  * @param {quat} out the receiving quaternion.
- * @param {vec3} a the initial vector
- * @param {vec3} b the destination vector
+ * @param {ReadonlyVec3} a the initial vector
+ * @param {ReadonlyVec3} b the destination vector
  * @returns {quat} out
  */
 
@@ -4716,10 +4722,10 @@ var rotationTo = function () {
  * Performs a spherical linear interpolation with two control points
  *
  * @param {quat} out the receiving quaternion
- * @param {quat} a the first operand
- * @param {quat} b the second operand
- * @param {quat} c the third operand
- * @param {quat} d the fourth operand
+ * @param {ReadonlyQuat} a the first operand
+ * @param {ReadonlyQuat} b the second operand
+ * @param {ReadonlyQuat} c the third operand
+ * @param {ReadonlyQuat} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat} out
  */
@@ -4739,9 +4745,9 @@ var sqlerp = function () {
  * axes. Each axis is a vec3 and is expected to be unit length and
  * perpendicular to all other specified axes.
  *
- * @param {vec3} view  the vector representing the viewing direction
- * @param {vec3} right the vector representing the local "right" direction
- * @param {vec3} up    the vector representing the local "up" direction
+ * @param {ReadonlyVec3} view  the vector representing the viewing direction
+ * @param {ReadonlyVec3} right the vector representing the local "right" direction
+ * @param {ReadonlyVec3} up    the vector representing the local "up" direction
  * @returns {quat} out
  */
 
@@ -4842,7 +4848,7 @@ function create() {
 /**
  * Creates a new vec3 initialized with values from an existing vector
  *
- * @param {vec3} a vector to clone
+ * @param {ReadonlyVec3} a vector to clone
  * @returns {vec3} a new 3D vector
  */
 
@@ -4856,7 +4862,7 @@ function clone(a) {
 /**
  * Calculates the length of a vec3
  *
- * @param {vec3} a vector to calculate length of
+ * @param {ReadonlyVec3} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -4886,7 +4892,7 @@ function fromValues(x, y, z) {
  * Copy the values from one vec3 to another
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the source vector
+ * @param {ReadonlyVec3} a the source vector
  * @returns {vec3} out
  */
 
@@ -4916,8 +4922,8 @@ function set(out, x, y, z) {
  * Adds two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4931,8 +4937,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4946,8 +4952,8 @@ function subtract(out, a, b) {
  * Multiplies two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4961,8 +4967,8 @@ function multiply(out, a, b) {
  * Divides two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -4976,7 +4982,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to ceil
+ * @param {ReadonlyVec3} a vector to ceil
  * @returns {vec3} out
  */
 
@@ -4990,7 +4996,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to floor
+ * @param {ReadonlyVec3} a vector to floor
  * @returns {vec3} out
  */
 
@@ -5004,8 +5010,8 @@ function floor(out, a) {
  * Returns the minimum of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -5019,8 +5025,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -5034,7 +5040,7 @@ function max(out, a, b) {
  * Math.round the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to round
+ * @param {ReadonlyVec3} a vector to round
  * @returns {vec3} out
  */
 
@@ -5048,7 +5054,7 @@ function round(out, a) {
  * Scales a vec3 by a scalar number
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to scale
+ * @param {ReadonlyVec3} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec3} out
  */
@@ -5063,8 +5069,8 @@ function scale(out, a, b) {
  * Adds two vec3's after scaling the second operand by a scalar value
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec3} out
  */
@@ -5078,8 +5084,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -5092,8 +5098,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -5106,7 +5112,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the squared length of a vec3
  *
- * @param {vec3} a vector to calculate squared length of
+ * @param {ReadonlyVec3} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -5120,7 +5126,7 @@ function squaredLength(a) {
  * Negates the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to negate
+ * @param {ReadonlyVec3} a vector to negate
  * @returns {vec3} out
  */
 
@@ -5134,7 +5140,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to invert
+ * @param {ReadonlyVec3} a vector to invert
  * @returns {vec3} out
  */
 
@@ -5148,7 +5154,7 @@ function inverse(out, a) {
  * Normalize a vec3
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a vector to normalize
+ * @param {ReadonlyVec3} a vector to normalize
  * @returns {vec3} out
  */
 
@@ -5171,8 +5177,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec3's
  *
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -5183,8 +5189,8 @@ function dot(a, b) {
  * Computes the cross product of two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @returns {vec3} out
  */
 
@@ -5204,8 +5210,8 @@ function cross(out, a, b) {
  * Performs a linear interpolation between two vec3's
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5223,10 +5229,10 @@ function lerp(out, a, b, t) {
  * Performs a hermite interpolation with two control points
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
- * @param {vec3} c the third operand
- * @param {vec3} d the fourth operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
+ * @param {ReadonlyVec3} c the third operand
+ * @param {ReadonlyVec3} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5246,10 +5252,10 @@ function hermite(out, a, b, c, d, t) {
  * Performs a bezier interpolation with two control points
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the first operand
- * @param {vec3} b the second operand
- * @param {vec3} c the third operand
- * @param {vec3} d the fourth operand
+ * @param {ReadonlyVec3} a the first operand
+ * @param {ReadonlyVec3} b the second operand
+ * @param {ReadonlyVec3} c the third operand
+ * @param {ReadonlyVec3} d the fourth operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec3} out
  */
@@ -5290,8 +5296,8 @@ function random(out, scale) {
  * 4th vector component is implicitly '1'
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec3} out
  */
 
@@ -5310,8 +5316,8 @@ function transformMat4(out, a, m) {
  * Transforms the vec3 with a mat3.
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {mat3} m the 3x3 matrix to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyMat3} m the 3x3 matrix to transform with
  * @returns {vec3} out
  */
 
@@ -5329,8 +5335,8 @@ function transformMat3(out, a, m) {
  * Can also be used for dual quaternions. (Multiply it with the real part)
  *
  * @param {vec3} out the receiving vector
- * @param {vec3} a the vector to transform
- * @param {quat} q quaternion to transform with
+ * @param {ReadonlyVec3} a the vector to transform
+ * @param {ReadonlyQuat} q quaternion to transform with
  * @returns {vec3} out
  */
 
@@ -5370,13 +5376,13 @@ function transformQuat(out, a, q) {
 /**
  * Rotate a 3D vector around the x-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateX(out, a, b, c) {
+function rotateX(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5385,8 +5391,8 @@ function rotateX(out, a, b, c) {
   p[2] = a[2] - b[2]; //perform rotation
 
   r[0] = p[0];
-  r[1] = p[1] * Math.cos(c) - p[2] * Math.sin(c);
-  r[2] = p[1] * Math.sin(c) + p[2] * Math.cos(c); //translate to correct position
+  r[1] = p[1] * Math.cos(rad) - p[2] * Math.sin(rad);
+  r[2] = p[1] * Math.sin(rad) + p[2] * Math.cos(rad); //translate to correct position
 
   out[0] = r[0] + b[0];
   out[1] = r[1] + b[1];
@@ -5396,13 +5402,13 @@ function rotateX(out, a, b, c) {
 /**
  * Rotate a 3D vector around the y-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateY(out, a, b, c) {
+function rotateY(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5410,9 +5416,9 @@ function rotateY(out, a, b, c) {
   p[1] = a[1] - b[1];
   p[2] = a[2] - b[2]; //perform rotation
 
-  r[0] = p[2] * Math.sin(c) + p[0] * Math.cos(c);
+  r[0] = p[2] * Math.sin(rad) + p[0] * Math.cos(rad);
   r[1] = p[1];
-  r[2] = p[2] * Math.cos(c) - p[0] * Math.sin(c); //translate to correct position
+  r[2] = p[2] * Math.cos(rad) - p[0] * Math.sin(rad); //translate to correct position
 
   out[0] = r[0] + b[0];
   out[1] = r[1] + b[1];
@@ -5422,13 +5428,13 @@ function rotateY(out, a, b, c) {
 /**
  * Rotate a 3D vector around the z-axis
  * @param {vec3} out The receiving vec3
- * @param {vec3} a The vec3 point to rotate
- * @param {vec3} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec3} a The vec3 point to rotate
+ * @param {ReadonlyVec3} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec3} out
  */
 
-function rotateZ(out, a, b, c) {
+function rotateZ(out, a, b, rad) {
   var p = [],
       r = []; //Translate point to the origin
 
@@ -5436,8 +5442,8 @@ function rotateZ(out, a, b, c) {
   p[1] = a[1] - b[1];
   p[2] = a[2] - b[2]; //perform rotation
 
-  r[0] = p[0] * Math.cos(c) - p[1] * Math.sin(c);
-  r[1] = p[0] * Math.sin(c) + p[1] * Math.cos(c);
+  r[0] = p[0] * Math.cos(rad) - p[1] * Math.sin(rad);
+  r[1] = p[0] * Math.sin(rad) + p[1] * Math.cos(rad);
   r[2] = p[2]; //translate to correct position
 
   out[0] = r[0] + b[0];
@@ -5447,25 +5453,23 @@ function rotateZ(out, a, b, c) {
 }
 /**
  * Get the angle between two 3D vectors
- * @param {vec3} a The first operand
- * @param {vec3} b The second operand
+ * @param {ReadonlyVec3} a The first operand
+ * @param {ReadonlyVec3} b The second operand
  * @returns {Number} The angle in radians
  */
 
 function angle(a, b) {
-  var tempA = fromValues(a[0], a[1], a[2]);
-  var tempB = fromValues(b[0], b[1], b[2]);
-  normalize(tempA, tempA);
-  normalize(tempB, tempB);
-  var cosine = dot(tempA, tempB);
-
-  if (cosine > 1.0) {
-    return 0;
-  } else if (cosine < -1.0) {
-    return Math.PI;
-  } else {
-    return Math.acos(cosine);
-  }
+  var ax = a[0],
+      ay = a[1],
+      az = a[2],
+      bx = b[0],
+      by = b[1],
+      bz = b[2],
+      mag1 = Math.sqrt(ax * ax + ay * ay + az * az),
+      mag2 = Math.sqrt(bx * bx + by * by + bz * bz),
+      mag = mag1 * mag2,
+      cosine = mag && dot(a, b) / mag;
+  return Math.acos(Math.min(Math.max(cosine, -1), 1));
 }
 /**
  * Set the components of a vec3 to zero
@@ -5483,18 +5487,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec3} a vector to represent as a string
+ * @param {ReadonlyVec3} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec3(' + a[0] + ', ' + a[1] + ', ' + a[2] + ')';
+  return "vec3(" + a[0] + ", " + a[1] + ", " + a[2] + ")";
 }
 /**
  * Returns whether or not the vectors have exactly the same elements in the same position (when compared with ===)
  *
- * @param {vec3} a The first vector.
- * @param {vec3} b The second vector.
+ * @param {ReadonlyVec3} a The first vector.
+ * @param {ReadonlyVec3} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -5504,8 +5508,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec3} a The first vector.
- * @param {vec3} b The second vector.
+ * @param {ReadonlyVec3} a The first vector.
+ * @param {ReadonlyVec3} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -5681,7 +5685,7 @@ function create() {
 /**
  * Creates a new vec4 initialized with values from an existing vector
  *
- * @param {vec4} a vector to clone
+ * @param {ReadonlyVec4} a vector to clone
  * @returns {vec4} a new 4D vector
  */
 
@@ -5715,7 +5719,7 @@ function fromValues(x, y, z, w) {
  * Copy the values from one vec4 to another
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the source vector
+ * @param {ReadonlyVec4} a the source vector
  * @returns {vec4} out
  */
 
@@ -5748,8 +5752,8 @@ function set(out, x, y, z, w) {
  * Adds two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5764,8 +5768,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5780,8 +5784,8 @@ function subtract(out, a, b) {
  * Multiplies two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5796,8 +5800,8 @@ function multiply(out, a, b) {
  * Divides two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5812,7 +5816,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to ceil
+ * @param {ReadonlyVec4} a vector to ceil
  * @returns {vec4} out
  */
 
@@ -5827,7 +5831,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to floor
+ * @param {ReadonlyVec4} a vector to floor
  * @returns {vec4} out
  */
 
@@ -5842,8 +5846,8 @@ function floor(out, a) {
  * Returns the minimum of two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5858,8 +5862,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {vec4} out
  */
 
@@ -5874,7 +5878,7 @@ function max(out, a, b) {
  * Math.round the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to round
+ * @param {ReadonlyVec4} a vector to round
  * @returns {vec4} out
  */
 
@@ -5889,7 +5893,7 @@ function round(out, a) {
  * Scales a vec4 by a scalar number
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to scale
+ * @param {ReadonlyVec4} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec4} out
  */
@@ -5905,8 +5909,8 @@ function scale(out, a, b) {
  * Adds two vec4's after scaling the second operand by a scalar value
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec4} out
  */
@@ -5921,8 +5925,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -5936,8 +5940,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -5951,7 +5955,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the length of a vec4
  *
- * @param {vec4} a vector to calculate length of
+ * @param {ReadonlyVec4} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -5965,7 +5969,7 @@ function length(a) {
 /**
  * Calculates the squared length of a vec4
  *
- * @param {vec4} a vector to calculate squared length of
+ * @param {ReadonlyVec4} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -5980,7 +5984,7 @@ function squaredLength(a) {
  * Negates the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to negate
+ * @param {ReadonlyVec4} a vector to negate
  * @returns {vec4} out
  */
 
@@ -5995,7 +5999,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to invert
+ * @param {ReadonlyVec4} a vector to invert
  * @returns {vec4} out
  */
 
@@ -6010,7 +6014,7 @@ function inverse(out, a) {
  * Normalize a vec4
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a vector to normalize
+ * @param {ReadonlyVec4} a vector to normalize
  * @returns {vec4} out
  */
 
@@ -6034,8 +6038,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec4's
  *
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -6045,10 +6049,10 @@ function dot(a, b) {
 /**
  * Returns the cross-product of three vectors in a 4-dimensional space
  *
- * @param {vec4} result the receiving vector
- * @param {vec4} U the first vector
- * @param {vec4} V the second vector
- * @param {vec4} W the third vector
+ * @param {ReadonlyVec4} result the receiving vector
+ * @param {ReadonlyVec4} U the first vector
+ * @param {ReadonlyVec4} V the second vector
+ * @param {ReadonlyVec4} W the third vector
  * @returns {vec4} result
  */
 
@@ -6069,13 +6073,12 @@ function cross(out, u, v, w) {
   out[3] = -(G * D) + H * B - I * A;
   return out;
 }
-;
 /**
  * Performs a linear interpolation between two vec4's
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the first operand
- * @param {vec4} b the second operand
+ * @param {ReadonlyVec4} a the first operand
+ * @param {ReadonlyVec4} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec4} out
  */
@@ -6130,8 +6133,8 @@ function random(out, scale) {
  * Transforms the vec4 with a mat4.
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec4} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec4} out
  */
 
@@ -6150,8 +6153,8 @@ function transformMat4(out, a, m) {
  * Transforms the vec4 with a quat
  *
  * @param {vec4} out the receiving vector
- * @param {vec4} a the vector to transform
- * @param {quat} q quaternion to transform with
+ * @param {ReadonlyVec4} a the vector to transform
+ * @param {ReadonlyQuat} q quaternion to transform with
  * @returns {vec4} out
  */
 
@@ -6192,18 +6195,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec4} a vector to represent as a string
+ * @param {ReadonlyVec4} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec4(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ')';
+  return "vec4(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ")";
 }
 /**
  * Returns whether or not the vectors have exactly the same elements in the same position (when compared with ===)
  *
- * @param {vec4} a The first vector.
- * @param {vec4} b The second vector.
+ * @param {ReadonlyVec4} a The first vector.
+ * @param {ReadonlyVec4} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -6213,8 +6216,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec4} a The first vector.
- * @param {vec4} b The second vector.
+ * @param {ReadonlyVec4} a The first vector.
+ * @param {ReadonlyVec4} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -6403,7 +6406,7 @@ function create() {
 /**
  * Creates a new quat initialized with values from an existing quaternion
  *
- * @param {quat2} a dual quaternion to clone
+ * @param {ReadonlyQuat2} a dual quaternion to clone
  * @returns {quat2} new dual quaternion
  * @function
  */
@@ -6479,9 +6482,9 @@ function fromRotationTranslationValues(x1, y1, z1, w1, x2, y2, z2) {
 /**
  * Creates a dual quat from a quaternion and a translation
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {quat} q a normalized quaternion
- * @param {vec3} t tranlation vector
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyQuat} q a normalized quaternion
+ * @param {ReadonlyVec3} t tranlation vector
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6507,8 +6510,8 @@ function fromRotationTranslation(out, q, t) {
 /**
  * Creates a dual quat from a translation
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {vec3} t translation vector
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyVec3} t translation vector
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6527,8 +6530,8 @@ function fromTranslation(out, t) {
 /**
  * Creates a dual quat from a quaternion
  *
- * @param {quat2} dual quaternion receiving operation result
- * @param {quat} q the quaternion
+ * @param {ReadonlyQuat2} dual quaternion receiving operation result
+ * @param {ReadonlyQuat} q the quaternion
  * @returns {quat2} dual quaternion receiving operation result
  * @function
  */
@@ -6548,7 +6551,7 @@ function fromRotation(out, q) {
  * Creates a new dual quat from a matrix (4x4)
  *
  * @param {quat2} out the dual quaternion
- * @param {mat4} a the matrix
+ * @param {ReadonlyMat4} a the matrix
  * @returns {quat2} dual quat receiving operation result
  * @function
  */
@@ -6566,7 +6569,7 @@ function fromMat4(out, a) {
  * Copy the values from one dual quat to another
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the source dual quaternion
+ * @param {ReadonlyQuat2} a the source dual quaternion
  * @returns {quat2} out
  * @function
  */
@@ -6630,7 +6633,7 @@ function set(out, x1, y1, z1, w1, x2, y2, z2, w2) {
 /**
  * Gets the real part of a dual quat
  * @param  {quat} out real part
- * @param  {quat2} a Dual Quaternion
+ * @param  {ReadonlyQuat2} a Dual Quaternion
  * @return {quat} real part
  */
 
@@ -6638,7 +6641,7 @@ var getReal = _quat_js__WEBPACK_IMPORTED_MODULE_1__["copy"];
 /**
  * Gets the dual part of a dual quat
  * @param  {quat} out dual part
- * @param  {quat2} a Dual Quaternion
+ * @param  {ReadonlyQuat2} a Dual Quaternion
  * @return {quat} dual part
  */
 
@@ -6653,7 +6656,7 @@ function getDual(out, a) {
  * Set the real component of a dual quat to the given quaternion
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat} q a quaternion representing the real part
+ * @param {ReadonlyQuat} q a quaternion representing the real part
  * @returns {quat2} out
  * @function
  */
@@ -6663,7 +6666,7 @@ var setReal = _quat_js__WEBPACK_IMPORTED_MODULE_1__["copy"];
  * Set the dual component of a dual quat to the given quaternion
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat} q a quaternion representing the dual part
+ * @param {ReadonlyQuat} q a quaternion representing the dual part
  * @returns {quat2} out
  * @function
  */
@@ -6678,7 +6681,7 @@ function setDual(out, q) {
 /**
  * Gets the translation of a normalized dual quat
  * @param  {vec3} out translation
- * @param  {quat2} a Dual Quaternion to be decomposed
+ * @param  {ReadonlyQuat2} a Dual Quaternion to be decomposed
  * @return {vec3} translation
  */
 
@@ -6700,8 +6703,8 @@ function getTranslation(out, a) {
  * Translates a dual quat by the given vector
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to translate
- * @param {vec3} v vector to translate by
+ * @param {ReadonlyQuat2} a the dual quaternion to translate
+ * @param {ReadonlyVec3} v vector to translate by
  * @returns {quat2} out
  */
 
@@ -6731,7 +6734,7 @@ function translate(out, a, v) {
  * Rotates a dual quat around the X axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6764,7 +6767,7 @@ function rotateX(out, a, rad) {
  * Rotates a dual quat around the Y axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6797,7 +6800,7 @@ function rotateY(out, a, rad) {
  * Rotates a dual quat around the Z axis
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @param {number} rad how far should the rotation be
  * @returns {quat2} out
  */
@@ -6830,8 +6833,8 @@ function rotateZ(out, a, rad) {
  * Rotates a dual quat by a given quaternion (a * q)
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
- * @param {quat} q quaternion to rotate by
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat} q quaternion to rotate by
  * @returns {quat2} out
  */
 
@@ -6862,8 +6865,8 @@ function rotateByQuatAppend(out, a, q) {
  * Rotates a dual quat by a given quaternion (q * a)
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat} q quaternion to rotate by
- * @param {quat2} a the dual quaternion to rotate
+ * @param {ReadonlyQuat} q quaternion to rotate by
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
  * @returns {quat2} out
  */
 
@@ -6894,8 +6897,8 @@ function rotateByQuatPrepend(out, q, a) {
  * Rotates a dual quat around a given axis. Does the normalisation automatically
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the dual quaternion to rotate
- * @param {vec3} axis the axis to rotate around
+ * @param {ReadonlyQuat2} a the dual quaternion to rotate
+ * @param {ReadonlyVec3} axis the axis to rotate around
  * @param {Number} rad how far the rotation should be
  * @returns {quat2} out
  */
@@ -6935,8 +6938,8 @@ function rotateAroundAxis(out, a, axis, rad) {
  * Adds two dual quat's
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {quat2} out
  * @function
  */
@@ -6956,8 +6959,8 @@ function add(out, a, b) {
  * Multiplies two dual quat's
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {quat2} out
  */
 
@@ -6998,7 +7001,7 @@ var mul = multiply;
  * Scales a dual quat by a scalar number
  *
  * @param {quat2} out the receiving dual quat
- * @param {quat2} a the dual quat to scale
+ * @param {ReadonlyQuat2} a the dual quat to scale
  * @param {Number} b amount to scale the dual quat by
  * @returns {quat2} out
  * @function
@@ -7018,8 +7021,8 @@ function scale(out, a, b) {
 /**
  * Calculates the dot product of two dual quat's (The dot product of the real parts)
  *
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @returns {Number} dot product of a and b
  * @function
  */
@@ -7030,8 +7033,8 @@ var dot = _quat_js__WEBPACK_IMPORTED_MODULE_1__["dot"];
  * NOTE: The resulting dual quaternions won't always be normalized (The error is most noticeable when t = 0.5)
  *
  * @param {quat2} out the receiving dual quat
- * @param {quat2} a the first operand
- * @param {quat2} b the second operand
+ * @param {ReadonlyQuat2} a the first operand
+ * @param {ReadonlyQuat2} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {quat2} out
  */
@@ -7053,7 +7056,7 @@ function lerp(out, a, b, t) {
  * Calculates the inverse of a dual quat. If they are normalized, conjugate is cheaper
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a dual quat to calculate inverse of
+ * @param {ReadonlyQuat2} a dual quat to calculate inverse of
  * @returns {quat2} out
  */
 
@@ -7074,7 +7077,7 @@ function invert(out, a) {
  * If the dual quaternion is normalized, this function is faster than quat2.inverse and produces the same result.
  *
  * @param {quat2} out the receiving quaternion
- * @param {quat2} a quat to calculate conjugate of
+ * @param {ReadonlyQuat2} a quat to calculate conjugate of
  * @returns {quat2} out
  */
 
@@ -7092,7 +7095,7 @@ function conjugate(out, a) {
 /**
  * Calculates the length of a dual quat
  *
- * @param {quat2} a dual quat to calculate length of
+ * @param {ReadonlyQuat2} a dual quat to calculate length of
  * @returns {Number} length of a
  * @function
  */
@@ -7107,7 +7110,7 @@ var len = length;
 /**
  * Calculates the squared length of a dual quat
  *
- * @param {quat2} a dual quat to calculate squared length of
+ * @param {ReadonlyQuat2} a dual quat to calculate squared length of
  * @returns {Number} squared length of a
  * @function
  */
@@ -7123,7 +7126,7 @@ var sqrLen = squaredLength;
  * Normalize a dual quat
  *
  * @param {quat2} out the receiving dual quaternion
- * @param {quat2} a dual quaternion to normalize
+ * @param {ReadonlyQuat2} a dual quaternion to normalize
  * @returns {quat2} out
  * @function
  */
@@ -7157,18 +7160,18 @@ function normalize(out, a) {
 /**
  * Returns a string representation of a dual quatenion
  *
- * @param {quat2} a dual quaternion to represent as a string
+ * @param {ReadonlyQuat2} a dual quaternion to represent as a string
  * @returns {String} string representation of the dual quat
  */
 
 function str(a) {
-  return 'quat2(' + a[0] + ', ' + a[1] + ', ' + a[2] + ', ' + a[3] + ', ' + a[4] + ', ' + a[5] + ', ' + a[6] + ', ' + a[7] + ')';
+  return "quat2(" + a[0] + ", " + a[1] + ", " + a[2] + ", " + a[3] + ", " + a[4] + ", " + a[5] + ", " + a[6] + ", " + a[7] + ")";
 }
 /**
  * Returns whether or not the dual quaternions have exactly the same elements in the same position (when compared with ===)
  *
- * @param {quat2} a the first dual quaternion.
- * @param {quat2} b the second dual quaternion.
+ * @param {ReadonlyQuat2} a the first dual quaternion.
+ * @param {ReadonlyQuat2} b the second dual quaternion.
  * @returns {Boolean} true if the dual quaternions are equal, false otherwise.
  */
 
@@ -7178,8 +7181,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the dual quaternions have approximately the same elements in the same position.
  *
- * @param {quat2} a the first dual quat.
- * @param {quat2} b the second dual quat.
+ * @param {ReadonlyQuat2} a the first dual quat.
+ * @param {ReadonlyQuat2} b the second dual quat.
  * @returns {Boolean} true if the dual quats are equal, false otherwise.
  */
 
@@ -7280,7 +7283,7 @@ function create() {
 /**
  * Creates a new vec2 initialized with values from an existing vector
  *
- * @param {vec2} a vector to clone
+ * @param {ReadonlyVec2} a vector to clone
  * @returns {vec2} a new 2D vector
  */
 
@@ -7308,7 +7311,7 @@ function fromValues(x, y) {
  * Copy the values from one vec2 to another
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the source vector
+ * @param {ReadonlyVec2} a the source vector
  * @returns {vec2} out
  */
 
@@ -7335,8 +7338,8 @@ function set(out, x, y) {
  * Adds two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7349,8 +7352,8 @@ function add(out, a, b) {
  * Subtracts vector b from vector a
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7363,8 +7366,8 @@ function subtract(out, a, b) {
  * Multiplies two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7377,8 +7380,8 @@ function multiply(out, a, b) {
  * Divides two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7391,7 +7394,7 @@ function divide(out, a, b) {
  * Math.ceil the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to ceil
+ * @param {ReadonlyVec2} a vector to ceil
  * @returns {vec2} out
  */
 
@@ -7404,7 +7407,7 @@ function ceil(out, a) {
  * Math.floor the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to floor
+ * @param {ReadonlyVec2} a vector to floor
  * @returns {vec2} out
  */
 
@@ -7417,8 +7420,8 @@ function floor(out, a) {
  * Returns the minimum of two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7431,8 +7434,8 @@ function min(out, a, b) {
  * Returns the maximum of two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec2} out
  */
 
@@ -7445,7 +7448,7 @@ function max(out, a, b) {
  * Math.round the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to round
+ * @param {ReadonlyVec2} a vector to round
  * @returns {vec2} out
  */
 
@@ -7458,7 +7461,7 @@ function round(out, a) {
  * Scales a vec2 by a scalar number
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to scale
+ * @param {ReadonlyVec2} a the vector to scale
  * @param {Number} b amount to scale the vector by
  * @returns {vec2} out
  */
@@ -7472,8 +7475,8 @@ function scale(out, a, b) {
  * Adds two vec2's after scaling the second operand by a scalar value
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @param {Number} scale the amount to scale b by before adding
  * @returns {vec2} out
  */
@@ -7486,8 +7489,8 @@ function scaleAndAdd(out, a, b, scale) {
 /**
  * Calculates the euclidian distance between two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} distance between a and b
  */
 
@@ -7499,8 +7502,8 @@ function distance(a, b) {
 /**
  * Calculates the squared euclidian distance between two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} squared distance between a and b
  */
 
@@ -7512,7 +7515,7 @@ function squaredDistance(a, b) {
 /**
  * Calculates the length of a vec2
  *
- * @param {vec2} a vector to calculate length of
+ * @param {ReadonlyVec2} a vector to calculate length of
  * @returns {Number} length of a
  */
 
@@ -7524,7 +7527,7 @@ function length(a) {
 /**
  * Calculates the squared length of a vec2
  *
- * @param {vec2} a vector to calculate squared length of
+ * @param {ReadonlyVec2} a vector to calculate squared length of
  * @returns {Number} squared length of a
  */
 
@@ -7537,7 +7540,7 @@ function squaredLength(a) {
  * Negates the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to negate
+ * @param {ReadonlyVec2} a vector to negate
  * @returns {vec2} out
  */
 
@@ -7550,7 +7553,7 @@ function negate(out, a) {
  * Returns the inverse of the components of a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to invert
+ * @param {ReadonlyVec2} a vector to invert
  * @returns {vec2} out
  */
 
@@ -7563,7 +7566,7 @@ function inverse(out, a) {
  * Normalize a vec2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a vector to normalize
+ * @param {ReadonlyVec2} a vector to normalize
  * @returns {vec2} out
  */
 
@@ -7584,8 +7587,8 @@ function normalize(out, a) {
 /**
  * Calculates the dot product of two vec2's
  *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {Number} dot product of a and b
  */
 
@@ -7597,8 +7600,8 @@ function dot(a, b) {
  * Note that the cross product must by definition produce a 3D vector
  *
  * @param {vec3} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @returns {vec3} out
  */
 
@@ -7612,8 +7615,8 @@ function cross(out, a, b) {
  * Performs a linear interpolation between two vec2's
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
+ * @param {ReadonlyVec2} a the first operand
+ * @param {ReadonlyVec2} b the second operand
  * @param {Number} t interpolation amount, in the range [0-1], between the two inputs
  * @returns {vec2} out
  */
@@ -7644,8 +7647,8 @@ function random(out, scale) {
  * Transforms the vec2 with a mat2
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat2} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat2} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7660,8 +7663,8 @@ function transformMat2(out, a, m) {
  * Transforms the vec2 with a mat2d
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat2d} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat2d} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7677,8 +7680,8 @@ function transformMat2d(out, a, m) {
  * 3rd vector component is implicitly '1'
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat3} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat3} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7695,8 +7698,8 @@ function transformMat3(out, a, m) {
  * 4th vector component is implicitly '1'
  *
  * @param {vec2} out the receiving vector
- * @param {vec2} a the vector to transform
- * @param {mat4} m matrix to transform with
+ * @param {ReadonlyVec2} a the vector to transform
+ * @param {ReadonlyMat4} m matrix to transform with
  * @returns {vec2} out
  */
 
@@ -7710,18 +7713,18 @@ function transformMat4(out, a, m) {
 /**
  * Rotate a 2D vector
  * @param {vec2} out The receiving vec2
- * @param {vec2} a The vec2 point to rotate
- * @param {vec2} b The origin of the rotation
- * @param {Number} c The angle of rotation
+ * @param {ReadonlyVec2} a The vec2 point to rotate
+ * @param {ReadonlyVec2} b The origin of the rotation
+ * @param {Number} rad The angle of rotation in radians
  * @returns {vec2} out
  */
 
-function rotate(out, a, b, c) {
+function rotate(out, a, b, rad) {
   //Translate point to the origin
   var p0 = a[0] - b[0],
       p1 = a[1] - b[1],
-      sinC = Math.sin(c),
-      cosC = Math.cos(c); //perform rotation and translate to correct position
+      sinC = Math.sin(rad),
+      cosC = Math.cos(rad); //perform rotation and translate to correct position
 
   out[0] = p0 * cosC - p1 * sinC + b[0];
   out[1] = p0 * sinC + p1 * cosC + b[1];
@@ -7729,8 +7732,8 @@ function rotate(out, a, b, c) {
 }
 /**
  * Get the angle between two 2D vectors
- * @param {vec2} a The first operand
- * @param {vec2} b The second operand
+ * @param {ReadonlyVec2} a The first operand
+ * @param {ReadonlyVec2} b The second operand
  * @returns {Number} The angle in radians
  */
 
@@ -7738,30 +7741,13 @@ function angle(a, b) {
   var x1 = a[0],
       y1 = a[1],
       x2 = b[0],
-      y2 = b[1];
-  var len1 = x1 * x1 + y1 * y1;
+      y2 = b[1],
+      // mag is the product of the magnitudes of a and b
+  mag = Math.sqrt(x1 * x1 + y1 * y1) * Math.sqrt(x2 * x2 + y2 * y2),
+      // mag &&.. short circuits if mag == 0
+  cosine = mag && (x1 * x2 + y1 * y2) / mag; // Math.min(Math.max(cosine, -1), 1) clamps the cosine between -1 and 1
 
-  if (len1 > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len1 = 1 / Math.sqrt(len1);
-  }
-
-  var len2 = x2 * x2 + y2 * y2;
-
-  if (len2 > 0) {
-    //TODO: evaluate use of glm_invsqrt here?
-    len2 = 1 / Math.sqrt(len2);
-  }
-
-  var cosine = (x1 * x2 + y1 * y2) * len1 * len2;
-
-  if (cosine > 1.0) {
-    return 0;
-  } else if (cosine < -1.0) {
-    return Math.PI;
-  } else {
-    return Math.acos(cosine);
-  }
+  return Math.acos(Math.min(Math.max(cosine, -1), 1));
 }
 /**
  * Set the components of a vec2 to zero
@@ -7778,18 +7764,18 @@ function zero(out) {
 /**
  * Returns a string representation of a vector
  *
- * @param {vec2} a vector to represent as a string
+ * @param {ReadonlyVec2} a vector to represent as a string
  * @returns {String} string representation of the vector
  */
 
 function str(a) {
-  return 'vec2(' + a[0] + ', ' + a[1] + ')';
+  return "vec2(" + a[0] + ", " + a[1] + ")";
 }
 /**
  * Returns whether or not the vectors exactly have the same elements in the same position (when compared with ===)
  *
- * @param {vec2} a The first vector.
- * @param {vec2} b The second vector.
+ * @param {ReadonlyVec2} a The first vector.
+ * @param {ReadonlyVec2} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -7799,8 +7785,8 @@ function exactEquals(a, b) {
 /**
  * Returns whether or not the vectors have approximately the same elements in the same position.
  *
- * @param {vec2} a The first vector.
- * @param {vec2} b The second vector.
+ * @param {ReadonlyVec2} a The first vector.
+ * @param {ReadonlyVec2} b The second vector.
  * @returns {Boolean} True if the vectors are equal, false otherwise.
  */
 
@@ -7906,22 +7892,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Renderer", function() { return _renderer__WEBPACK_IMPORTED_MODULE_0__["default"]; });
 
-/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(72);
+/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(57);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Figure2D", function() { return _figure2d__WEBPACK_IMPORTED_MODULE_1__["default"]; });
 
-/* harmony import */ var _mesh2d__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(89);
+/* harmony import */ var _mesh2d__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(74);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Mesh2D", function() { return _mesh2d__WEBPACK_IMPORTED_MODULE_2__["default"]; });
 
-/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(60);
+/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(46);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "MeshCloud", function() { return _mesh_cloud__WEBPACK_IMPORTED_MODULE_3__["default"]; });
 
-/* harmony import */ var _utils_parse_font__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(54);
+/* harmony import */ var _utils_parse_font__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(40);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseFont", function() { return _utils_parse_font__WEBPACK_IMPORTED_MODULE_4__["default"]; });
 
-/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(63);
+/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(48);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "parseColor", function() { return _utils_parse_color__WEBPACK_IMPORTED_MODULE_5__["default"]; });
 
-/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(51);
+/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(38);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ENV", function() { return _utils_env__WEBPACK_IMPORTED_MODULE_6__["default"]; });
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -7944,29 +7930,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Renderer; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var gl_renderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(24);
+/* harmony import */ var gl_renderer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(26);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
-/* harmony import */ var _canvas_renderer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47);
-/* harmony import */ var _utils_compress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(58);
-/* harmony import */ var _utils_canvas__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(56);
-/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(72);
-/* harmony import */ var _mesh2d__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(89);
-/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(60);
-/* harmony import */ var _utils_transform__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(100);
-/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(51);
-/* harmony import */ var _utils_shader_creator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(105);
+/* harmony import */ var _canvas_renderer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(37);
+/* harmony import */ var _utils_compress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(44);
+/* harmony import */ var _utils_canvas__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(42);
+/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(57);
+/* harmony import */ var _mesh2d__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(74);
+/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(46);
+/* harmony import */ var _utils_transform__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(79);
+/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(38);
+/* harmony import */ var _utils_shader_creator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(83);
 
 
 
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 
@@ -8032,9 +8024,7 @@ function drawFilterContext(renderer, filterContext, width, height) {
   delete filterContext._filter;
 }
 
-var Renderer =
-/*#__PURE__*/
-function () {
+var Renderer = /*#__PURE__*/function () {
   function Renderer(canvas) {
     var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
@@ -8341,9 +8331,9 @@ function () {
           if (clear) gl.clear(gl.COLOR_BUFFER_BIT);
           var hasGlobalTransform = !Object(_utils_transform__WEBPACK_IMPORTED_MODULE_12__["isUnitTransform"])(_this.globalTransformMatrix);
           _this._drawCalls = 0;
-          var _iteratorNormalCompletion = true;
-          var _didIteratorError = false;
-          var _iteratorError = undefined;
+
+          var _iterator = _createForOfIteratorHelper(meshData),
+              _step;
 
           try {
             var _loop = function _loop() {
@@ -8488,22 +8478,13 @@ function () {
               }
             };
 
-            for (var _iterator = meshData[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
               _loop();
             }
           } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
+            _iterator.e(err);
           } finally {
-            try {
-              if (!_iteratorNormalCompletion && _iterator.return != null) {
-                _iterator.return();
-              }
-            } finally {
-              if (_didIteratorError) {
-                throw _iteratorError;
-              }
-            }
+            _iterator.f();
           }
         })();
       } else {
@@ -8693,10 +8674,12 @@ var arrayWithHoles = __webpack_require__(15);
 
 var iterableToArrayLimit = __webpack_require__(16);
 
-var nonIterableRest = __webpack_require__(17);
+var unsupportedIterableToArray = __webpack_require__(17);
+
+var nonIterableRest = __webpack_require__(19);
 
 function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
 }
 
 module.exports = _slicedToArray;
@@ -8716,6 +8699,7 @@ module.exports = _arrayWithHoles;
 /***/ (function(module, exports) {
 
 function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
   var _arr = [];
   var _n = true;
   var _d = false;
@@ -8745,68 +8729,99 @@ module.exports = _iterableToArrayLimit;
 
 /***/ }),
 /* 17 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+var arrayLikeToArray = __webpack_require__(18);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
 }
 
-module.exports = _nonIterableRest;
+module.exports = _unsupportedIterableToArray;
 
 /***/ }),
 /* 18 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var arrayWithoutHoles = __webpack_require__(19);
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
 
-var iterableToArray = __webpack_require__(20);
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
 
-var nonIterableSpread = __webpack_require__(21);
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+  return arr2;
 }
 
-module.exports = _toConsumableArray;
+module.exports = _arrayLikeToArray;
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
 
-    return arr2;
-  }
+module.exports = _nonIterableRest;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithoutHoles = __webpack_require__(21);
+
+var iterableToArray = __webpack_require__(22);
+
+var unsupportedIterableToArray = __webpack_require__(17);
+
+var nonIterableSpread = __webpack_require__(23);
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeToArray = __webpack_require__(18);
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return arrayLikeToArray(arr);
 }
 
 module.exports = _arrayWithoutHoles;
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports) {
 
 function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
 }
 
 module.exports = _iterableToArray;
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports) {
 
 function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 
 module.exports = _nonIterableSpread;
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports) {
 
 function _classCallCheck(instance, Constructor) {
@@ -8818,7 +8833,7 @@ function _classCallCheck(instance, Constructor) {
 module.exports = _classCallCheck;
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports) {
 
 function _defineProperties(target, props) {
@@ -8840,42 +8855,42 @@ function _createClass(Constructor, protoProps, staticProps) {
 module.exports = _createClass;
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(25);
+/* harmony import */ var _renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(27);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
 /* harmony default export */ __webpack_exports__["default"] = (_renderer__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Renderer; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(30);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(29);
+/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(39);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(40);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(41);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(42);
-/* harmony import */ var _default_vert_glsl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(44);
-/* harmony import */ var _default_frag_glsl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(45);
-/* harmony import */ var _default_feeback_vert_glsl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(46);
+/* harmony import */ var _helpers__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(32);
+/* harmony import */ var _default_vert_glsl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(34);
+/* harmony import */ var _default_frag_glsl__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(35);
+/* harmony import */ var _default_feeback_vert_glsl__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(36);
 
 
 
@@ -8946,9 +8961,7 @@ var uniformTypeMap = {
   sampler2DRectShadow: 'sampler2DRectShadow'
 };
 
-var Renderer =
-/*#__PURE__*/
-function () {
+var Renderer = /*#__PURE__*/function () {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5___default()(Renderer, null, [{
     key: "addLibs",
     value: function addLibs() {
@@ -9084,11 +9097,21 @@ function () {
             textureCoord = meshData.textureCoord,
             enableBlend = meshData.enableBlend;
         var gl = _this.gl;
+        var mode = meshData.mode != null ? meshData.mode : gl.TRIANGLES;
+
+        if (typeof mode === 'string') {
+          mode = gl[mode];
+        }
+
         if (enableBlend) gl.enable(gl.BLEND);else gl.disable(gl.BLEND);
         gl.bindBuffer(gl.ARRAY_BUFFER, program._buffers.verticesBuffer);
         gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
-        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, program._buffers.cellsBuffer);
-        gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, cells, gl.STATIC_DRAW);
+
+        if (cells) {
+          gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, program._buffers.cellsBuffer);
+          gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, cells, gl.STATIC_DRAW);
+        }
+
         var locations = [];
 
         if (attributes) {
@@ -9126,6 +9149,13 @@ function () {
           });
         }
 
+        var count;
+
+        if (!cells) {
+          var dimension = program._dimension;
+          count = positions.length / dimension;
+        }
+
         if (program._enableTextures && program._buffers.texCoordBuffer) {
           var texVertexData = textureCoord || mapTextureCoordinate(positions, program._dimension);
           gl.bindBuffer(gl.ARRAY_BUFFER, program._buffers.texCoordBuffer);
@@ -9133,17 +9163,29 @@ function () {
         }
 
         if (instanceCount != null) {
-          if (gl.drawElementsInstanced) {
-            gl.drawElementsInstanced(gl.TRIANGLES, cellsCount, gl.UNSIGNED_SHORT, 0, instanceCount);
-          } else if (_this.aia_ext) {
-            _this.aia_ext.drawElementsInstancedANGLE(gl.TRIANGLES, cellsCount, gl.UNSIGNED_SHORT, 0, instanceCount);
+          if (cells) {
+            if (gl.drawElementsInstanced) {
+              gl.drawElementsInstanced(mode, cellsCount, gl.UNSIGNED_SHORT, 0, instanceCount);
+            } else if (_this.aia_ext) {
+              _this.aia_ext.drawElementsInstancedANGLE(mode, cellsCount, gl.UNSIGNED_SHORT, 0, instanceCount);
+            }
+          } else if (gl.drawArraysInstanced) {
+            gl.drawArraysInstanced(mode, 0, count, instanceCount);
+          } else {
+            _this.aia_ext.drawArraysInstancedANGLE(mode, 0, count, instanceCount);
           }
 
           locations.forEach(function (location) {
-            gl.vertexAttribDivisor(location, null);
+            if (gl.vertexAttribDivisor) {
+              gl.vertexAttribDivisor(location, null);
+            } else if (_this.aia_ext) {
+              _this.aia_ext.vertexAttribDivisorANGLE(location, null);
+            }
           });
+        } else if (cells) {
+          gl.drawElements(mode, cellsCount, gl.UNSIGNED_SHORT, 0);
         } else {
-          gl.drawElements(gl.TRIANGLES, cellsCount, gl.UNSIGNED_SHORT, 0);
+          gl.drawArrays(mode, 0, count);
         }
       });
     }
@@ -9193,7 +9235,8 @@ function () {
 
       var program = this.program;
       program.meshData = data.map(function (_ref4) {
-        var positions = _ref4.positions,
+        var mode = _ref4.mode,
+            positions = _ref4.positions,
             instanceCount = _ref4.instanceCount,
             cells = _ref4.cells,
             cellsCount = _ref4.cellsCount,
@@ -9203,12 +9246,19 @@ function () {
             enableBlend = _ref4.enableBlend;
         var meshData = {
           positions: Renderer.FLOAT(positions),
-          cells: Renderer.USHORT(cells),
           uniforms: uniforms,
           enableBlend: !!enableBlend,
           textureCoord: Renderer.FLOAT(textureCoord)
         };
-        meshData.cellsCount = cellsCount || meshData.cells.length;
+
+        if (cells) {
+          meshData.cells = Renderer.USHORT(cells);
+          meshData.cellsCount = cellsCount || meshData.cells.length;
+        }
+
+        if (mode != null) {
+          meshData.mode = mode;
+        }
 
         if (instanceCount != null) {
           if (!_this2.isWebGL2 && !_this2.aia_ext) throw new Error('Cannot use instanceCount in this rendering context, use webgl2 context instead.');else meshData.instanceCount = instanceCount;
@@ -9473,19 +9523,15 @@ function () {
   }, {
     key: "compile",
     value: function () {
-      var _compile2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(frag, vert) {
+      var _compile2 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(frag, vert) {
         var loaded, _compile, _compile3, fragmentShader, vertexShader, program;
 
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
-                _compile3 = function _ref10() {
-                  _compile3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-                  /*#__PURE__*/
-                  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(content) {
+                _compile3 = function _compile5() {
+                  _compile3 = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(content) {
                     var includes, matched, i, m, _matched, type, name, c, _c;
 
                     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
@@ -9592,7 +9638,7 @@ function () {
                   return _compile3.apply(this, arguments);
                 };
 
-                _compile = function _ref9(_x3) {
+                _compile = function _compile4(_x3) {
                   return _compile3.apply(this, arguments);
                 };
 
@@ -9642,9 +9688,7 @@ function () {
   }, {
     key: "load",
     value: function () {
-      var _load = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(frag) {
+      var _load = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3(frag) {
         var vert,
             _args3 = arguments;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
@@ -9693,15 +9737,15 @@ function () {
 
       var img = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
-      var _ref11 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
-          _ref11$wrapS = _ref11.wrapS,
-          wrapS = _ref11$wrapS === void 0 ? this.gl.CLAMP_TO_EDGE : _ref11$wrapS,
-          _ref11$wrapT = _ref11.wrapT,
-          wrapT = _ref11$wrapT === void 0 ? this.gl.CLAMP_TO_EDGE : _ref11$wrapT,
-          _ref11$minFilter = _ref11.minFilter,
-          minFilter = _ref11$minFilter === void 0 ? this.gl.LINEAR : _ref11$minFilter,
-          _ref11$magFilter = _ref11.magFilter,
-          magFilter = _ref11$magFilter === void 0 ? this.gl.LINEAR : _ref11$magFilter;
+      var _ref9 = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
+          _ref9$wrapS = _ref9.wrapS,
+          wrapS = _ref9$wrapS === void 0 ? this.gl.CLAMP_TO_EDGE : _ref9$wrapS,
+          _ref9$wrapT = _ref9.wrapT,
+          wrapT = _ref9$wrapT === void 0 ? this.gl.CLAMP_TO_EDGE : _ref9$wrapT,
+          _ref9$minFilter = _ref9.minFilter,
+          minFilter = _ref9$minFilter === void 0 ? this.gl.LINEAR : _ref9$minFilter,
+          _ref9$magFilter = _ref9.magFilter,
+          magFilter = _ref9$magFilter === void 0 ? this.gl.LINEAR : _ref9$magFilter;
 
       var gl = this.gl;
       var target = Array.isArray(img) ? gl.TEXTURE_CUBE_MAP : gl.TEXTURE_2D;
@@ -9772,11 +9816,9 @@ function () {
   }, {
     key: "loadTexture",
     value: function () {
-      var _loadTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(source) {
-        var _ref12,
-            _ref12$useImageBitmap,
+      var _loadTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4(source) {
+        var _ref10,
+            _ref10$useImageBitmap,
             useImageBitmap,
             img,
             _args4 = arguments;
@@ -9785,7 +9827,7 @@ function () {
           while (1) {
             switch (_context4.prev = _context4.next) {
               case 0:
-                _ref12 = _args4.length > 1 && _args4[1] !== undefined ? _args4[1] : {}, _ref12$useImageBitmap = _ref12.useImageBitmap, useImageBitmap = _ref12$useImageBitmap === void 0 ? true : _ref12$useImageBitmap;
+                _ref10 = _args4.length > 1 && _args4[1] !== undefined ? _args4[1] : {}, _ref10$useImageBitmap = _ref10.useImageBitmap, useImageBitmap = _ref10$useImageBitmap === void 0 ? true : _ref10$useImageBitmap;
                 _context4.next = 3;
                 return Renderer.loadImage(source, {
                   useImageBitmap: useImageBitmap
@@ -9812,15 +9854,15 @@ function () {
   }, {
     key: "createFBO",
     value: function createFBO() {
-      var _ref13 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-          _ref13$color = _ref13.color,
-          color = _ref13$color === void 0 ? 1 : _ref13$color,
-          _ref13$blend = _ref13.blend,
-          blend = _ref13$blend === void 0 ? false : _ref13$blend,
-          _ref13$depth = _ref13.depth,
-          depth = _ref13$depth === void 0 ? this.options.depth !== false : _ref13$depth,
-          _ref13$stencil = _ref13.stencil,
-          stencil = _ref13$stencil === void 0 ? !!this.options.stencil : _ref13$stencil;
+      var _ref11 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+          _ref11$color = _ref11.color,
+          color = _ref11$color === void 0 ? 1 : _ref11$color,
+          _ref11$blend = _ref11.blend,
+          blend = _ref11$blend === void 0 ? false : _ref11$blend,
+          _ref11$depth = _ref11.depth,
+          depth = _ref11$depth === void 0 ? this.options.depth !== false : _ref11$depth,
+          _ref11$stencil = _ref11.stencil,
+          stencil = _ref11$stencil === void 0 ? !!this.options.stencil : _ref11$stencil;
 
       var gl = this.gl;
       var buffer = gl.createFramebuffer();
@@ -9875,9 +9917,9 @@ function () {
   }, {
     key: "render",
     value: function render() {
-      var _ref14 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
-          _ref14$clearBuffer = _ref14.clearBuffer,
-          clearBuffer = _ref14$clearBuffer === void 0 ? true : _ref14$clearBuffer;
+      var _ref12 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+          _ref12$clearBuffer = _ref12.clearBuffer,
+          clearBuffer = _ref12$clearBuffer === void 0 ? true : _ref12$clearBuffer;
 
       this.startRender = true;
       var gl = this.gl;
@@ -9971,14 +10013,14 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Ren
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(27);
+module.exports = __webpack_require__(29);
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -9998,6 +10040,24 @@ var runtime = (function (exports) {
   var iteratorSymbol = $Symbol.iterator || "@@iterator";
   var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
   var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
+
+  function define(obj, key, value) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+    return obj[key];
+  }
+  try {
+    // IE 8 has a broken Object.defineProperty that only works on DOM objects.
+    define({}, "");
+  } catch (err) {
+    define = function(obj, key, value) {
+      return obj[key] = value;
+    };
+  }
 
   function wrap(innerFn, outerFn, self, tryLocsList) {
     // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
@@ -10069,16 +10129,19 @@ var runtime = (function (exports) {
     Generator.prototype = Object.create(IteratorPrototype);
   GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
   GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
+  GeneratorFunction.displayName = define(
+    GeneratorFunctionPrototype,
+    toStringTagSymbol,
+    "GeneratorFunction"
+  );
 
   // Helper for defining the .next, .throw, and .return methods of the
   // Iterator interface in terms of a single ._invoke method.
   function defineIteratorMethods(prototype) {
     ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
+      define(prototype, method, function(arg) {
         return this._invoke(method, arg);
-      };
+      });
     });
   }
 
@@ -10097,9 +10160,7 @@ var runtime = (function (exports) {
       Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
     } else {
       genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
+      define(genFun, toStringTagSymbol, "GeneratorFunction");
     }
     genFun.prototype = Object.create(Gp);
     return genFun;
@@ -10369,7 +10430,7 @@ var runtime = (function (exports) {
   // unified ._invoke helper method.
   defineIteratorMethods(Gp);
 
-  Gp[toStringTagSymbol] = "Generator";
+  define(Gp, toStringTagSymbol, "Generator");
 
   // A Generator should always return itself as the iterator object when the
   // @@iterator function is called on it. Some browsers' implementations of the
@@ -10713,7 +10774,7 @@ try {
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports) {
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
@@ -10755,195 +10816,7 @@ function _asyncToGenerator(fn) {
 module.exports = _asyncToGenerator;
 
 /***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(30);
-
-var iterableToArrayLimit = __webpack_require__(31);
-
-var unsupportedIterableToArray = __webpack_require__(32);
-
-var nonIterableRest = __webpack_require__(34);
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-
-/***/ }),
 /* 31 */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(33);
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports) {
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-module.exports = _arrayLikeToArray;
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports) {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableRest;
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithoutHoles = __webpack_require__(36);
-
-var iterableToArray = __webpack_require__(37);
-
-var unsupportedIterableToArray = __webpack_require__(32);
-
-var nonIterableSpread = __webpack_require__(38);
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(33);
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
-}
-
-module.exports = _arrayWithoutHoles;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports) {
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-
-/***/ }),
-/* 38 */
-/***/ (function(module, exports) {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableSpread;
-
-/***/ }),
-/* 39 */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-/* 40 */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-/* 41 */
 /***/ (function(module, exports) {
 
 function _defineProperty(obj, key, value) {
@@ -10964,7 +10837,7 @@ function _defineProperty(obj, key, value) {
 module.exports = _defineProperty;
 
 /***/ }),
-/* 42 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10974,11 +10847,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pointsToBuffer", function() { return pointsToBuffer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadImage", function() { return loadImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchShader", function() { return fetchShader; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(30);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(43);
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
 /* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_2__);
 
 
@@ -11147,9 +11020,7 @@ function fetchShader(_x) {
 }
 
 function _fetchShader() {
-  _fetchShader = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(url) {
+  _fetchShader = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(url) {
     var res, content;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
@@ -11196,7 +11067,7 @@ function _fetchShader() {
 }
 
 /***/ }),
-/* 43 */
+/* 33 */
 /***/ (function(module, exports) {
 
 function _typeof(obj) {
@@ -11218,7 +11089,7 @@ function _typeof(obj) {
 module.exports = _typeof;
 
 /***/ }),
-/* 44 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11226,7 +11097,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("attribute vec3 a_vertexPosition;\n\nvoid main() {\n  gl_PointSize = 1.0;\n  gl_Position = vec4(a_vertexPosition, 1);\n}");
 
 /***/ }),
-/* 45 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11234,7 +11105,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("#ifdef GL_ES\nprecision mediump float;\n#endif\n\nvoid main() {\n  gl_FragColor = vec4(0.0, 0.0, 0.0, 0.1);\n}");
 
 /***/ }),
-/* 46 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11242,26 +11113,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("attribute vec4 a_vertexPosition;\nattribute vec2 a_vertexTextureCoord;\nvarying vec2 vTextureCoord;\n\nvoid main() {\n  gl_PointSize = 1.0;\n  gl_Position = a_vertexPosition;\n  vTextureCoord = a_vertexTextureCoord;\n}");
 
 /***/ }),
-/* 47 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CanvasRenderer; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(50);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(30);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(51);
-/* harmony import */ var _utils_canvas__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(56);
+/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(38);
+/* harmony import */ var _utils_canvas__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(42);
 
 
 
@@ -11276,9 +11147,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var _transform = Symbol('transform');
 
-var CanvasRenderer =
-/*#__PURE__*/
-function () {
+var CanvasRenderer = /*#__PURE__*/function () {
   function CanvasRenderer(canvas, options) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_4___default()(this, CanvasRenderer);
 
@@ -11298,9 +11167,7 @@ function () {
   }, {
     key: "loadTexture",
     value: function () {
-      var _loadTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(textureURL) {
+      var _loadTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_3___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.mark(function _callee(textureURL) {
         var image;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -11478,799 +11345,18 @@ function () {
 
 
 /***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(49);
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-var runtime = (function (exports) {
-  "use strict";
-
-  var Op = Object.prototype;
-  var hasOwn = Op.hasOwnProperty;
-  var undefined; // More compressible than void 0.
-  var $Symbol = typeof Symbol === "function" ? Symbol : {};
-  var iteratorSymbol = $Symbol.iterator || "@@iterator";
-  var asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator";
-  var toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag";
-
-  function wrap(innerFn, outerFn, self, tryLocsList) {
-    // If outerFn provided and outerFn.prototype is a Generator, then outerFn.prototype instanceof Generator.
-    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
-    var generator = Object.create(protoGenerator.prototype);
-    var context = new Context(tryLocsList || []);
-
-    // The ._invoke method unifies the implementations of the .next,
-    // .throw, and .return methods.
-    generator._invoke = makeInvokeMethod(innerFn, self, context);
-
-    return generator;
-  }
-  exports.wrap = wrap;
-
-  // Try/catch helper to minimize deoptimizations. Returns a completion
-  // record like context.tryEntries[i].completion. This interface could
-  // have been (and was previously) designed to take a closure to be
-  // invoked without arguments, but in all the cases we care about we
-  // already have an existing method we want to call, so there's no need
-  // to create a new function object. We can even get away with assuming
-  // the method takes exactly one argument, since that happens to be true
-  // in every case, so we don't have to touch the arguments object. The
-  // only additional allocation required is the completion record, which
-  // has a stable shape and so hopefully should be cheap to allocate.
-  function tryCatch(fn, obj, arg) {
-    try {
-      return { type: "normal", arg: fn.call(obj, arg) };
-    } catch (err) {
-      return { type: "throw", arg: err };
-    }
-  }
-
-  var GenStateSuspendedStart = "suspendedStart";
-  var GenStateSuspendedYield = "suspendedYield";
-  var GenStateExecuting = "executing";
-  var GenStateCompleted = "completed";
-
-  // Returning this object from the innerFn has the same effect as
-  // breaking out of the dispatch switch statement.
-  var ContinueSentinel = {};
-
-  // Dummy constructor functions that we use as the .constructor and
-  // .constructor.prototype properties for functions that return Generator
-  // objects. For full spec compliance, you may wish to configure your
-  // minifier not to mangle the names of these two functions.
-  function Generator() {}
-  function GeneratorFunction() {}
-  function GeneratorFunctionPrototype() {}
-
-  // This is a polyfill for %IteratorPrototype% for environments that
-  // don't natively support it.
-  var IteratorPrototype = {};
-  IteratorPrototype[iteratorSymbol] = function () {
-    return this;
-  };
-
-  var getProto = Object.getPrototypeOf;
-  var NativeIteratorPrototype = getProto && getProto(getProto(values([])));
-  if (NativeIteratorPrototype &&
-      NativeIteratorPrototype !== Op &&
-      hasOwn.call(NativeIteratorPrototype, iteratorSymbol)) {
-    // This environment has a native %IteratorPrototype%; use it instead
-    // of the polyfill.
-    IteratorPrototype = NativeIteratorPrototype;
-  }
-
-  var Gp = GeneratorFunctionPrototype.prototype =
-    Generator.prototype = Object.create(IteratorPrototype);
-  GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
-  GeneratorFunctionPrototype.constructor = GeneratorFunction;
-  GeneratorFunctionPrototype[toStringTagSymbol] =
-    GeneratorFunction.displayName = "GeneratorFunction";
-
-  // Helper for defining the .next, .throw, and .return methods of the
-  // Iterator interface in terms of a single ._invoke method.
-  function defineIteratorMethods(prototype) {
-    ["next", "throw", "return"].forEach(function(method) {
-      prototype[method] = function(arg) {
-        return this._invoke(method, arg);
-      };
-    });
-  }
-
-  exports.isGeneratorFunction = function(genFun) {
-    var ctor = typeof genFun === "function" && genFun.constructor;
-    return ctor
-      ? ctor === GeneratorFunction ||
-        // For the native GeneratorFunction constructor, the best we can
-        // do is to check its .name property.
-        (ctor.displayName || ctor.name) === "GeneratorFunction"
-      : false;
-  };
-
-  exports.mark = function(genFun) {
-    if (Object.setPrototypeOf) {
-      Object.setPrototypeOf(genFun, GeneratorFunctionPrototype);
-    } else {
-      genFun.__proto__ = GeneratorFunctionPrototype;
-      if (!(toStringTagSymbol in genFun)) {
-        genFun[toStringTagSymbol] = "GeneratorFunction";
-      }
-    }
-    genFun.prototype = Object.create(Gp);
-    return genFun;
-  };
-
-  // Within the body of any async function, `await x` is transformed to
-  // `yield regeneratorRuntime.awrap(x)`, so that the runtime can test
-  // `hasOwn.call(value, "__await")` to determine if the yielded value is
-  // meant to be awaited.
-  exports.awrap = function(arg) {
-    return { __await: arg };
-  };
-
-  function AsyncIterator(generator) {
-    function invoke(method, arg, resolve, reject) {
-      var record = tryCatch(generator[method], generator, arg);
-      if (record.type === "throw") {
-        reject(record.arg);
-      } else {
-        var result = record.arg;
-        var value = result.value;
-        if (value &&
-            typeof value === "object" &&
-            hasOwn.call(value, "__await")) {
-          return Promise.resolve(value.__await).then(function(value) {
-            invoke("next", value, resolve, reject);
-          }, function(err) {
-            invoke("throw", err, resolve, reject);
-          });
-        }
-
-        return Promise.resolve(value).then(function(unwrapped) {
-          // When a yielded Promise is resolved, its final value becomes
-          // the .value of the Promise<{value,done}> result for the
-          // current iteration.
-          result.value = unwrapped;
-          resolve(result);
-        }, function(error) {
-          // If a rejected Promise was yielded, throw the rejection back
-          // into the async generator function so it can be handled there.
-          return invoke("throw", error, resolve, reject);
-        });
-      }
-    }
-
-    var previousPromise;
-
-    function enqueue(method, arg) {
-      function callInvokeWithMethodAndArg() {
-        return new Promise(function(resolve, reject) {
-          invoke(method, arg, resolve, reject);
-        });
-      }
-
-      return previousPromise =
-        // If enqueue has been called before, then we want to wait until
-        // all previous Promises have been resolved before calling invoke,
-        // so that results are always delivered in the correct order. If
-        // enqueue has not been called before, then it is important to
-        // call invoke immediately, without waiting on a callback to fire,
-        // so that the async generator function has the opportunity to do
-        // any necessary setup in a predictable way. This predictability
-        // is why the Promise constructor synchronously invokes its
-        // executor callback, and why async functions synchronously
-        // execute code before the first await. Since we implement simple
-        // async functions in terms of async generators, it is especially
-        // important to get this right, even though it requires care.
-        previousPromise ? previousPromise.then(
-          callInvokeWithMethodAndArg,
-          // Avoid propagating failures to Promises returned by later
-          // invocations of the iterator.
-          callInvokeWithMethodAndArg
-        ) : callInvokeWithMethodAndArg();
-    }
-
-    // Define the unified helper method that is used to implement .next,
-    // .throw, and .return (see defineIteratorMethods).
-    this._invoke = enqueue;
-  }
-
-  defineIteratorMethods(AsyncIterator.prototype);
-  AsyncIterator.prototype[asyncIteratorSymbol] = function () {
-    return this;
-  };
-  exports.AsyncIterator = AsyncIterator;
-
-  // Note that simple async functions are implemented on top of
-  // AsyncIterator objects; they just return a Promise for the value of
-  // the final result produced by the iterator.
-  exports.async = function(innerFn, outerFn, self, tryLocsList) {
-    var iter = new AsyncIterator(
-      wrap(innerFn, outerFn, self, tryLocsList)
-    );
-
-    return exports.isGeneratorFunction(outerFn)
-      ? iter // If outerFn is a generator, return the full iterator.
-      : iter.next().then(function(result) {
-          return result.done ? result.value : iter.next();
-        });
-  };
-
-  function makeInvokeMethod(innerFn, self, context) {
-    var state = GenStateSuspendedStart;
-
-    return function invoke(method, arg) {
-      if (state === GenStateExecuting) {
-        throw new Error("Generator is already running");
-      }
-
-      if (state === GenStateCompleted) {
-        if (method === "throw") {
-          throw arg;
-        }
-
-        // Be forgiving, per 25.3.3.3.3 of the spec:
-        // https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generatorresume
-        return doneResult();
-      }
-
-      context.method = method;
-      context.arg = arg;
-
-      while (true) {
-        var delegate = context.delegate;
-        if (delegate) {
-          var delegateResult = maybeInvokeDelegate(delegate, context);
-          if (delegateResult) {
-            if (delegateResult === ContinueSentinel) continue;
-            return delegateResult;
-          }
-        }
-
-        if (context.method === "next") {
-          // Setting context._sent for legacy support of Babel's
-          // function.sent implementation.
-          context.sent = context._sent = context.arg;
-
-        } else if (context.method === "throw") {
-          if (state === GenStateSuspendedStart) {
-            state = GenStateCompleted;
-            throw context.arg;
-          }
-
-          context.dispatchException(context.arg);
-
-        } else if (context.method === "return") {
-          context.abrupt("return", context.arg);
-        }
-
-        state = GenStateExecuting;
-
-        var record = tryCatch(innerFn, self, context);
-        if (record.type === "normal") {
-          // If an exception is thrown from innerFn, we leave state ===
-          // GenStateExecuting and loop back for another invocation.
-          state = context.done
-            ? GenStateCompleted
-            : GenStateSuspendedYield;
-
-          if (record.arg === ContinueSentinel) {
-            continue;
-          }
-
-          return {
-            value: record.arg,
-            done: context.done
-          };
-
-        } else if (record.type === "throw") {
-          state = GenStateCompleted;
-          // Dispatch the exception by looping back around to the
-          // context.dispatchException(context.arg) call above.
-          context.method = "throw";
-          context.arg = record.arg;
-        }
-      }
-    };
-  }
-
-  // Call delegate.iterator[context.method](context.arg) and handle the
-  // result, either by returning a { value, done } result from the
-  // delegate iterator, or by modifying context.method and context.arg,
-  // setting context.delegate to null, and returning the ContinueSentinel.
-  function maybeInvokeDelegate(delegate, context) {
-    var method = delegate.iterator[context.method];
-    if (method === undefined) {
-      // A .throw or .return when the delegate iterator has no .throw
-      // method always terminates the yield* loop.
-      context.delegate = null;
-
-      if (context.method === "throw") {
-        // Note: ["return"] must be used for ES3 parsing compatibility.
-        if (delegate.iterator["return"]) {
-          // If the delegate iterator has a return method, give it a
-          // chance to clean up.
-          context.method = "return";
-          context.arg = undefined;
-          maybeInvokeDelegate(delegate, context);
-
-          if (context.method === "throw") {
-            // If maybeInvokeDelegate(context) changed context.method from
-            // "return" to "throw", let that override the TypeError below.
-            return ContinueSentinel;
-          }
-        }
-
-        context.method = "throw";
-        context.arg = new TypeError(
-          "The iterator does not provide a 'throw' method");
-      }
-
-      return ContinueSentinel;
-    }
-
-    var record = tryCatch(method, delegate.iterator, context.arg);
-
-    if (record.type === "throw") {
-      context.method = "throw";
-      context.arg = record.arg;
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    var info = record.arg;
-
-    if (! info) {
-      context.method = "throw";
-      context.arg = new TypeError("iterator result is not an object");
-      context.delegate = null;
-      return ContinueSentinel;
-    }
-
-    if (info.done) {
-      // Assign the result of the finished delegate to the temporary
-      // variable specified by delegate.resultName (see delegateYield).
-      context[delegate.resultName] = info.value;
-
-      // Resume execution at the desired location (see delegateYield).
-      context.next = delegate.nextLoc;
-
-      // If context.method was "throw" but the delegate handled the
-      // exception, let the outer generator proceed normally. If
-      // context.method was "next", forget context.arg since it has been
-      // "consumed" by the delegate iterator. If context.method was
-      // "return", allow the original .return call to continue in the
-      // outer generator.
-      if (context.method !== "return") {
-        context.method = "next";
-        context.arg = undefined;
-      }
-
-    } else {
-      // Re-yield the result returned by the delegate method.
-      return info;
-    }
-
-    // The delegate iterator is finished, so forget it and continue with
-    // the outer generator.
-    context.delegate = null;
-    return ContinueSentinel;
-  }
-
-  // Define Generator.prototype.{next,throw,return} in terms of the
-  // unified ._invoke helper method.
-  defineIteratorMethods(Gp);
-
-  Gp[toStringTagSymbol] = "Generator";
-
-  // A Generator should always return itself as the iterator object when the
-  // @@iterator function is called on it. Some browsers' implementations of the
-  // iterator prototype chain incorrectly implement this, causing the Generator
-  // object to not be returned from this call. This ensures that doesn't happen.
-  // See https://github.com/facebook/regenerator/issues/274 for more details.
-  Gp[iteratorSymbol] = function() {
-    return this;
-  };
-
-  Gp.toString = function() {
-    return "[object Generator]";
-  };
-
-  function pushTryEntry(locs) {
-    var entry = { tryLoc: locs[0] };
-
-    if (1 in locs) {
-      entry.catchLoc = locs[1];
-    }
-
-    if (2 in locs) {
-      entry.finallyLoc = locs[2];
-      entry.afterLoc = locs[3];
-    }
-
-    this.tryEntries.push(entry);
-  }
-
-  function resetTryEntry(entry) {
-    var record = entry.completion || {};
-    record.type = "normal";
-    delete record.arg;
-    entry.completion = record;
-  }
-
-  function Context(tryLocsList) {
-    // The root entry object (effectively a try statement without a catch
-    // or a finally block) gives us a place to store values thrown from
-    // locations where there is no enclosing try statement.
-    this.tryEntries = [{ tryLoc: "root" }];
-    tryLocsList.forEach(pushTryEntry, this);
-    this.reset(true);
-  }
-
-  exports.keys = function(object) {
-    var keys = [];
-    for (var key in object) {
-      keys.push(key);
-    }
-    keys.reverse();
-
-    // Rather than returning an object with a next method, we keep
-    // things simple and return the next function itself.
-    return function next() {
-      while (keys.length) {
-        var key = keys.pop();
-        if (key in object) {
-          next.value = key;
-          next.done = false;
-          return next;
-        }
-      }
-
-      // To avoid creating an additional object, we just hang the .value
-      // and .done properties off the next function object itself. This
-      // also ensures that the minifier will not anonymize the function.
-      next.done = true;
-      return next;
-    };
-  };
-
-  function values(iterable) {
-    if (iterable) {
-      var iteratorMethod = iterable[iteratorSymbol];
-      if (iteratorMethod) {
-        return iteratorMethod.call(iterable);
-      }
-
-      if (typeof iterable.next === "function") {
-        return iterable;
-      }
-
-      if (!isNaN(iterable.length)) {
-        var i = -1, next = function next() {
-          while (++i < iterable.length) {
-            if (hasOwn.call(iterable, i)) {
-              next.value = iterable[i];
-              next.done = false;
-              return next;
-            }
-          }
-
-          next.value = undefined;
-          next.done = true;
-
-          return next;
-        };
-
-        return next.next = next;
-      }
-    }
-
-    // Return an iterator with no values.
-    return { next: doneResult };
-  }
-  exports.values = values;
-
-  function doneResult() {
-    return { value: undefined, done: true };
-  }
-
-  Context.prototype = {
-    constructor: Context,
-
-    reset: function(skipTempReset) {
-      this.prev = 0;
-      this.next = 0;
-      // Resetting context._sent for legacy support of Babel's
-      // function.sent implementation.
-      this.sent = this._sent = undefined;
-      this.done = false;
-      this.delegate = null;
-
-      this.method = "next";
-      this.arg = undefined;
-
-      this.tryEntries.forEach(resetTryEntry);
-
-      if (!skipTempReset) {
-        for (var name in this) {
-          // Not sure about the optimal order of these conditions:
-          if (name.charAt(0) === "t" &&
-              hasOwn.call(this, name) &&
-              !isNaN(+name.slice(1))) {
-            this[name] = undefined;
-          }
-        }
-      }
-    },
-
-    stop: function() {
-      this.done = true;
-
-      var rootEntry = this.tryEntries[0];
-      var rootRecord = rootEntry.completion;
-      if (rootRecord.type === "throw") {
-        throw rootRecord.arg;
-      }
-
-      return this.rval;
-    },
-
-    dispatchException: function(exception) {
-      if (this.done) {
-        throw exception;
-      }
-
-      var context = this;
-      function handle(loc, caught) {
-        record.type = "throw";
-        record.arg = exception;
-        context.next = loc;
-
-        if (caught) {
-          // If the dispatched exception was caught by a catch block,
-          // then let that catch block handle the exception normally.
-          context.method = "next";
-          context.arg = undefined;
-        }
-
-        return !! caught;
-      }
-
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        var record = entry.completion;
-
-        if (entry.tryLoc === "root") {
-          // Exception thrown outside of any try block that could handle
-          // it, so set the completion value of the entire function to
-          // throw the exception.
-          return handle("end");
-        }
-
-        if (entry.tryLoc <= this.prev) {
-          var hasCatch = hasOwn.call(entry, "catchLoc");
-          var hasFinally = hasOwn.call(entry, "finallyLoc");
-
-          if (hasCatch && hasFinally) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            } else if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else if (hasCatch) {
-            if (this.prev < entry.catchLoc) {
-              return handle(entry.catchLoc, true);
-            }
-
-          } else if (hasFinally) {
-            if (this.prev < entry.finallyLoc) {
-              return handle(entry.finallyLoc);
-            }
-
-          } else {
-            throw new Error("try statement without catch or finally");
-          }
-        }
-      }
-    },
-
-    abrupt: function(type, arg) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc <= this.prev &&
-            hasOwn.call(entry, "finallyLoc") &&
-            this.prev < entry.finallyLoc) {
-          var finallyEntry = entry;
-          break;
-        }
-      }
-
-      if (finallyEntry &&
-          (type === "break" ||
-           type === "continue") &&
-          finallyEntry.tryLoc <= arg &&
-          arg <= finallyEntry.finallyLoc) {
-        // Ignore the finally entry if control is not jumping to a
-        // location outside the try/catch block.
-        finallyEntry = null;
-      }
-
-      var record = finallyEntry ? finallyEntry.completion : {};
-      record.type = type;
-      record.arg = arg;
-
-      if (finallyEntry) {
-        this.method = "next";
-        this.next = finallyEntry.finallyLoc;
-        return ContinueSentinel;
-      }
-
-      return this.complete(record);
-    },
-
-    complete: function(record, afterLoc) {
-      if (record.type === "throw") {
-        throw record.arg;
-      }
-
-      if (record.type === "break" ||
-          record.type === "continue") {
-        this.next = record.arg;
-      } else if (record.type === "return") {
-        this.rval = this.arg = record.arg;
-        this.method = "return";
-        this.next = "end";
-      } else if (record.type === "normal" && afterLoc) {
-        this.next = afterLoc;
-      }
-
-      return ContinueSentinel;
-    },
-
-    finish: function(finallyLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.finallyLoc === finallyLoc) {
-          this.complete(entry.completion, entry.afterLoc);
-          resetTryEntry(entry);
-          return ContinueSentinel;
-        }
-      }
-    },
-
-    "catch": function(tryLoc) {
-      for (var i = this.tryEntries.length - 1; i >= 0; --i) {
-        var entry = this.tryEntries[i];
-        if (entry.tryLoc === tryLoc) {
-          var record = entry.completion;
-          if (record.type === "throw") {
-            var thrown = record.arg;
-            resetTryEntry(entry);
-          }
-          return thrown;
-        }
-      }
-
-      // The context.catch method must only be called with a location
-      // argument that corresponds to a known catch block.
-      throw new Error("illegal catch attempt");
-    },
-
-    delegateYield: function(iterable, resultName, nextLoc) {
-      this.delegate = {
-        iterator: values(iterable),
-        resultName: resultName,
-        nextLoc: nextLoc
-      };
-
-      if (this.method === "next") {
-        // Deliberately forget the last sent value so that we don't
-        // accidentally pass it on to the delegate.
-        this.arg = undefined;
-      }
-
-      return ContinueSentinel;
-    }
-  };
-
-  // Regardless of whether this script is executing as a CommonJS module
-  // or not, return the runtime object so that we can declare the variable
-  // regeneratorRuntime in the outer scope, which allows this module to be
-  // injected easily by `bin/regenerator --include-runtime script.js`.
-  return exports;
-
-}(
-  // If this script is executing as a CommonJS module, use module.exports
-  // as the regeneratorRuntime namespace. Otherwise create a new empty
-  // object. Either way, the resulting object will be used to initialize
-  // the regeneratorRuntime variable at the top of this file.
-   true ? module.exports : undefined
-));
-
-try {
-  regeneratorRuntime = runtime;
-} catch (accidentalStrictMode) {
-  // This module should not be running in strict mode, so the above
-  // assignment should always work unless something is misconfigured. Just
-  // in case runtime.js accidentally runs in strict mode, we can escape
-  // strict mode using a global Function call. This could conceivably fail
-  // if a Content Security Policy forbids using Function, but in that case
-  // the proper solution is to fix the accidental strict mode problem. If
-  // you've misconfigured your bundler to force strict mode and applied a
-  // CSP to forbid Function, and you're not willing to fix either of those
-  // problems, please detail your unique predicament in a GitHub issue.
-  Function("r", "regeneratorRuntime = r")(runtime);
-}
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports) {
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
-  try {
-    var info = gen[key](arg);
-    var value = info.value;
-  } catch (error) {
-    reject(error);
-    return;
-  }
-
-  if (info.done) {
-    resolve(value);
-  } else {
-    Promise.resolve(value).then(_next, _throw);
-  }
-}
-
-function _asyncToGenerator(fn) {
-  return function () {
-    var self = this,
-        args = arguments;
-    return new Promise(function (resolve, reject) {
-      var gen = fn.apply(self, args);
-
-      function _next(value) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
-      }
-
-      function _throw(err) {
-        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
-      }
-
-      _next(undefined);
-    });
-  };
-}
-
-module.exports = _asyncToGenerator;
-
-/***/ }),
-/* 51 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33);
 /* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gl_renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
-/* harmony import */ var _parse_font__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(54);
-/* harmony import */ var _vector_to_rgba__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(55);
+/* harmony import */ var gl_renderer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(26);
+/* harmony import */ var _parse_font__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(40);
+/* harmony import */ var _vector_to_rgba__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(41);
 
 
 
@@ -12442,10 +11528,10 @@ var ENV = {
   loadImage: gl_renderer__WEBPACK_IMPORTED_MODULE_2__["default"].loadImage
 };
 /* harmony default export */ __webpack_exports__["default"] = (ENV);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(39)))
 
 /***/ }),
-/* 52 */
+/* 39 */
 /***/ (function(module, exports) {
 
 var g;
@@ -12471,29 +11557,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 53 */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-/* 54 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12637,7 +11701,7 @@ function parseFont(str, defaultHeight) {
 }
 
 /***/ }),
-/* 55 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12653,19 +11717,19 @@ function vectorToRGBA(vector) {
 }
 
 /***/ }),
-/* 56 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyFilter", function() { return applyFilter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "drawMesh2D", function() { return drawMesh2D; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
-/* harmony import */ var _vector_to_rgba__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(55);
-/* harmony import */ var _parse_font__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(54);
-/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(57);
+/* harmony import */ var _vector_to_rgba__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(41);
+/* harmony import */ var _parse_font__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(40);
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -12941,7 +12005,7 @@ function drawMesh2D(mesh, context) {
 }
 
 /***/ }),
-/* 57 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12978,23 +12042,21 @@ function transformPoint(p, m) {
 }
 
 /***/ }),
-/* 58 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return compress; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _flatten_meshes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(59);
-/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(60);
+/* harmony import */ var _flatten_meshes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45);
+/* harmony import */ var _mesh_cloud__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(46);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
-var _marked =
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(compress);
+var _marked = /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(compress);
 
 
 
@@ -13213,13 +12275,13 @@ function compress(renderer, meshes) {
 }
 
 /***/ }),
-/* 59 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return flattenMeshes; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
@@ -13541,26 +12603,26 @@ function flattenMeshes(meshes, bufferCache) {
 }
 
 /***/ }),
-/* 60 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
-/* harmony import */ var _utils_color_matrix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(62);
-/* harmony import */ var _utils_math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(57);
-/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(63);
+/* harmony import */ var _utils_color_matrix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(47);
+/* harmony import */ var _utils_math__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(43);
+/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(48);
 
 
 
@@ -13571,7 +12633,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -13637,9 +12699,7 @@ function createBuffer(buffer) {
   };
 }
 
-var _default =
-/*#__PURE__*/
-function () {
+var _default = /*#__PURE__*/function () {
   function _default(mesh) {
     var amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
@@ -14196,28 +13256,7 @@ function () {
 
 
 /***/ }),
-/* 61 */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-
-/***/ }),
-/* 62 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14231,7 +13270,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sepia", function() { return sepia; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "opacity", function() { return opacity; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hueRotate", function() { return hueRotate; });
-/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(57);
+/* harmony import */ var _math__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(43);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
@@ -14355,13 +13394,13 @@ function hueRotate(deg) {
 }
 
 /***/ }),
-/* 63 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return parseColor; });
-/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(64);
+/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 /* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(color_rgba__WEBPACK_IMPORTED_MODULE_0__);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
@@ -14373,7 +13412,7 @@ function parseColor(colorStr) {
 }
 
 /***/ }),
-/* 64 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14381,9 +13420,9 @@ function parseColor(colorStr) {
 
 
 
-var parse = __webpack_require__(65)
-var hsl = __webpack_require__(69)
-var clamp = __webpack_require__(71)
+var parse = __webpack_require__(50)
+var hsl = __webpack_require__(54)
+var clamp = __webpack_require__(56)
 
 module.exports = function rgba (color) {
 	var values, i, l
@@ -14409,7 +13448,7 @@ module.exports = function rgba (color) {
 
 
 /***/ }),
-/* 65 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14419,9 +13458,9 @@ module.exports = function rgba (color) {
 
 
 
-var names = __webpack_require__(66)
-var isObject = __webpack_require__(67)
-var defined = __webpack_require__(68)
+var names = __webpack_require__(51)
+var isObject = __webpack_require__(52)
+var defined = __webpack_require__(53)
 
 module.exports = parse
 
@@ -14589,10 +13628,10 @@ function parse (cstr) {
 	}
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(39)))
 
 /***/ }),
-/* 66 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14751,7 +13790,7 @@ module.exports = {
 
 
 /***/ }),
-/* 67 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14765,7 +13804,7 @@ module.exports = function (x) {
 
 
 /***/ }),
-/* 68 */
+/* 53 */
 /***/ (function(module, exports) {
 
 module.exports = function () {
@@ -14776,7 +13815,7 @@ module.exports = function () {
 
 
 /***/ }),
-/* 69 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14785,7 +13824,7 @@ module.exports = function () {
  */
 
 
-var rgb = __webpack_require__(70);
+var rgb = __webpack_require__(55);
 
 module.exports = {
 	name: 'hsl',
@@ -14890,7 +13929,7 @@ rgb.hsl = function(rgb) {
 
 
 /***/ }),
-/* 70 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14911,7 +13950,7 @@ module.exports = {
 
 
 /***/ }),
-/* 71 */
+/* 56 */
 /***/ (function(module, exports) {
 
 module.exports = clamp
@@ -14924,31 +13963,31 @@ function clamp(value, min, max) {
 
 
 /***/ }),
-/* 72 */
+/* 57 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Figure2D; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(73);
+/* harmony import */ var _babel_runtime_helpers_toArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(58);
 /* harmony import */ var _babel_runtime_helpers_toArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var parse_svg_path__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(74);
+/* harmony import */ var parse_svg_path__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(59);
 /* harmony import */ var parse_svg_path__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(parse_svg_path__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(75);
+/* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(60);
 /* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(bound_points__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var abs_svg_path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(76);
+/* harmony import */ var abs_svg_path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
 /* harmony import */ var abs_svg_path__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(abs_svg_path__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _normalize_svg_path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(77);
-/* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(79);
+/* harmony import */ var _normalize_svg_path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(62);
+/* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(64);
 /* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_svg_path_contours__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _utils_contours__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(86);
-/* harmony import */ var _utils_ellipse__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(88);
+/* harmony import */ var _utils_contours__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(71);
+/* harmony import */ var _utils_ellipse__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(73);
 
 
 
@@ -14972,9 +14011,9 @@ var _simplify = Symbol('simplify');
 
 var _scale = Symbol('scale');
 
-var Figure2D =
-/*#__PURE__*/
-function () {
+var PI2 = 2 * Math.PI;
+
+var Figure2D = /*#__PURE__*/function () {
   function Figure2D() {
     var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -14985,7 +14024,7 @@ function () {
     };
     if (options.path) this[_path] = parse_svg_path__WEBPACK_IMPORTED_MODULE_4___default()(options.path);else this[_path] = [];
     this[_contours] = null;
-    this[_simplify] = options.simplify != null ? options.simplify : 0.05;
+    this[_simplify] = options.simplify != null ? options.simplify : 0;
     this[_scale] = options.scale != null ? options.scale : 2;
   }
 
@@ -15065,7 +14104,6 @@ function () {
       startAngle += rotation;
       endAngle += rotation;
       if (radiusX <= 0 || radiusY <= 0 || endAngle === startAngle) return;
-      var PI2 = 2 * Math.PI;
 
       if (endAngle < startAngle) {
         endAngle = startAngle + PI2 + (endAngle - startAngle) % PI2;
@@ -15076,18 +14114,17 @@ function () {
       }
 
       var delta = endAngle - startAngle;
+
+      if (delta >= PI2) {
+        endAngle -= 1e-3;
+      }
+
       var path = this[_path].length > 0 && delta < PI2 ? 'L' : 'M';
-      var direction = anticlockwise ? -1 : 1;
       var startPoint = Object(_utils_ellipse__WEBPACK_IMPORTED_MODULE_10__["getPoint"])(x, y, radiusX, radiusY, startAngle);
       var endPoint = Object(_utils_ellipse__WEBPACK_IMPORTED_MODULE_10__["getPoint"])(x, y, radiusX, radiusY, endAngle);
       var sweepFlag = Number(!anticlockwise);
       var largeArcFlag = delta > Math.PI ? 1 : 0;
       if (anticlockwise) largeArcFlag = 1 - largeArcFlag;
-
-      if (delta >= PI2) {
-        endPoint[1] -= direction * 1e-2;
-      }
-
       path += startPoint.join(' ');
       path += "A".concat(radiusX, " ").concat(radiusY, " 0 ").concat(largeArcFlag, " ").concat(sweepFlag, " ").concat(endPoint.join(' '));
 
@@ -15227,23 +14264,25 @@ function () {
 
 
 /***/ }),
-/* 73 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayWithHoles = __webpack_require__(15);
 
-var iterableToArray = __webpack_require__(20);
+var iterableToArray = __webpack_require__(22);
 
-var nonIterableRest = __webpack_require__(17);
+var unsupportedIterableToArray = __webpack_require__(17);
+
+var nonIterableRest = __webpack_require__(19);
 
 function _toArray(arr) {
-  return arrayWithHoles(arr) || iterableToArray(arr) || nonIterableRest();
+  return arrayWithHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableRest();
 }
 
 module.exports = _toArray;
 
 /***/ }),
-/* 74 */
+/* 59 */
 /***/ (function(module, exports) {
 
 
@@ -15306,7 +14345,7 @@ function parseValues(args) {
 
 
 /***/ }),
-/* 75 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15334,7 +14373,7 @@ function findBounds(points) {
 }
 
 /***/ }),
-/* 76 */
+/* 61 */
 /***/ (function(module, exports) {
 
 
@@ -15407,7 +14446,7 @@ function absolutize(path){
 
 
 /***/ }),
-/* 77 */
+/* 62 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15415,7 +14454,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalize; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _a2c__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(78);
+/* harmony import */ var _a2c__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(63);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -15558,7 +14597,7 @@ function quadratic(x1, y1, cx, cy, x2, y2) {
 /* eslint-enable */
 
 /***/ }),
-/* 78 */
+/* 63 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15740,7 +14779,7 @@ function a2c(x1, y1, x2, y2, fa, fs, rx, ry, phi) {
 }
 
 /***/ }),
-/* 79 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -15748,11 +14787,12 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 // https://github.com/mattdesl/svg-path-contours
 
 /* eslint-disable */
-var bezier = __webpack_require__(80);
+var bezier = __webpack_require__(65);
 
-var vec2 = __webpack_require__(82);
+var _require = __webpack_require__(67),
+    copy = _require.copy;
 
-var simplify = __webpack_require__(83);
+var simplify = __webpack_require__(68);
 
 function set(out, x, y) {
   out[0] = x;
@@ -15774,7 +14814,7 @@ module.exports = function contours(svg, scale, simp) {
   var pen = [0, 0];
   svg.forEach(function (segment, i, self) {
     if (segment[0] === 'M') {
-      vec2.copy(pen, segment.slice(1));
+      copy(pen, segment.slice(1));
 
       if (points.length > 0) {
         paths.push(points);
@@ -15794,13 +14834,13 @@ module.exports = function contours(svg, scale, simp) {
 };
 
 /***/ }),
-/* 80 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(81)()
+module.exports = __webpack_require__(66)()
 
 /***/ }),
-/* 81 */
+/* 66 */
 /***/ (function(module, exports) {
 
 function clone(point) { //TODO: use gl-vec2 for this
@@ -16003,7 +15043,7 @@ module.exports = function createBezierBuilder(opt) {
 
 
 /***/ }),
-/* 82 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16017,6 +15057,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "cross", function() { return cross; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return sub; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return add; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "computeMiter", function() { return computeMiter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "normal", function() { return normal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "direction", function() { return direction; });
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
@@ -16037,14 +15080,42 @@ var rotate = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].rotate;
 var cross = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].cross;
 var sub = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].sub;
 var add = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].add;
+var normalize = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].normalize;
+var set = gl_matrix__WEBPACK_IMPORTED_MODULE_0__["vec2"].set;
+var tmp = create();
+
+function computeMiter(tangent, miter, lineA, lineB, halfThick) {
+  // get tangent line
+  add(tangent, lineA, lineB);
+  normalize(tangent, tangent); // get miter as a unit vector
+
+  set(miter, -tangent[1], tangent[0]);
+  set(tmp, -lineA[1], lineA[0]); // get the necessary length of our miter
+
+  return halfThick / dot(miter, tmp);
+}
+
+function normal(out, dir) {
+  // get perpendicular
+  set(out, -dir[1], dir[0]);
+  return out;
+}
+
+function direction(out, a, b) {
+  // get unit dir of two lines
+  sub(out, a, b);
+  normalize(out, out);
+  return out;
+}
+
 
 
 /***/ }),
-/* 83 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var simplifyRadialDist = __webpack_require__(84)
-var simplifyDouglasPeucker = __webpack_require__(85)
+var simplifyRadialDist = __webpack_require__(69)
+var simplifyDouglasPeucker = __webpack_require__(70)
 
 //simplifies using both algorithms
 module.exports = function simplify(points, tolerance) {
@@ -16057,7 +15128,7 @@ module.exports.radialDistance = simplifyRadialDist;
 module.exports.douglasPeucker = simplifyDouglasPeucker;
 
 /***/ }),
-/* 84 */
+/* 69 */
 /***/ (function(module, exports) {
 
 function getSqDist(p1, p2) {
@@ -16093,7 +15164,7 @@ module.exports = function simplifyRadialDist(points, tolerance) {
 }
 
 /***/ }),
-/* 85 */
+/* 70 */
 /***/ (function(module, exports) {
 
 // square distance from a point to a segment
@@ -16161,7 +15232,7 @@ module.exports = function simplifyDouglasPeucker(points, tolerance) {
 
 
 /***/ }),
-/* 86 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16169,9 +15240,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getTotalLength", function() { return getTotalLength; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getPointAtLength", function() { return getPointAtLength; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDashContours", function() { return getDashContours; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _positions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(87);
+/* harmony import */ var _positions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(72);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -16330,13 +15401,13 @@ function getDashContours(contours, lineDash, lineDashOffset) {
     idx = -1;
 
     do {
-      lineDashOffset += lineDash[idx % lineDashLen + lineDashLen];
+      lineDashOffset += lineDash[idx % lineDashLen + lineDashLen - 1];
       idx--;
     } while (lineDashOffset < 0);
 
-    if (lineDashOffset > 0) {
+    if (lineDashOffset >= 0) {
       idx++;
-      dash = lineDash[idx % lineDashLen + lineDashLen] - lineDashOffset;
+      dash = lineDash[idx % lineDashLen + lineDashLen - 1] - lineDashOffset;
     }
   }
 
@@ -16353,7 +15424,7 @@ function getDashContours(contours, lineDash, lineDashOffset) {
 }
 
 /***/ }),
-/* 87 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16399,7 +15470,7 @@ function distance(_ref3, _ref4) {
 }
 
 /***/ }),
-/* 88 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16435,38 +15506,38 @@ function getPoint(x0, y0, a, b, theta) {
 }
 
 /***/ }),
-/* 89 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Mesh2D; });
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(90);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(75);
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1);
-/* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(75);
+/* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(60);
 /* harmony import */ var bound_points__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(bound_points__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _extrude_polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
-/* harmony import */ var _utils_flatten_meshes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(59);
-/* harmony import */ var _utils_vector_to_rgba__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(55);
-/* harmony import */ var _utils_color_matrix__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(62);
-/* harmony import */ var _utils_transform__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(100);
-/* harmony import */ var _utils_contours__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(86);
-/* harmony import */ var _triangulate_contours__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(101);
+/* harmony import */ var _extrude_contours__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(77);
+/* harmony import */ var _utils_flatten_meshes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(45);
+/* harmony import */ var _utils_vector_to_rgba__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(41);
+/* harmony import */ var _utils_color_matrix__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(47);
+/* harmony import */ var _utils_transform__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(79);
+/* harmony import */ var _utils_contours__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(71);
+/* harmony import */ var _triangulate_contours__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(80);
 /* harmony import */ var _triangulate_contours__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_triangulate_contours__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(79);
+/* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(64);
 /* harmony import */ var _svg_path_contours__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_svg_path_contours__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(63);
-/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(72);
-/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(51);
+/* harmony import */ var _utils_parse_color__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(48);
+/* harmony import */ var _figure2d__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(57);
+/* harmony import */ var _utils_env__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(38);
 
 
 
@@ -16502,6 +15573,8 @@ var _strokeColor = Symbol('strokeColor');
 var _fillColor = Symbol('fillColor');
 
 var _transform = Symbol('transform');
+
+var _invertTransform = Symbol('invertTransform');
 
 var _uniforms = Symbol('uniforms');
 
@@ -16586,9 +15659,7 @@ function _accurate(path, scale, simplify) {
   return contours;
 }
 
-var Mesh2D =
-/*#__PURE__*/
-function () {
+var Mesh2D = /*#__PURE__*/function () {
   function Mesh2D(figure) {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Mesh2D);
 
@@ -16673,14 +15744,14 @@ function () {
 
         var _this$boundingBox = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default()(this.boundingBox, 2),
             _this$boundingBox$ = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default()(_this$boundingBox[0], 2),
-            x = _this$boundingBox$[0],
+            _x = _this$boundingBox$[0],
             y = _this$boundingBox$[1],
             _this$boundingBox$2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default()(_this$boundingBox[1], 2),
             w = _this$boundingBox$2[0],
             h = _this$boundingBox$2[1];
 
         if (w && h) {
-          this[_clipContext].width = w - x;
+          this[_clipContext].width = w - _x;
           this[_clipContext].height = h - y;
         }
 
@@ -16689,7 +15760,7 @@ function () {
         var path = new Path2D(this.clipPath);
         context.clearRect(0, 0, this[_clipContext].width, this[_clipContext].height);
         context.save();
-        context.translate(-x, -y);
+        context.translate(-_x, -y);
         context.fillStyle = 'white';
         context.fill(path);
         context.restore();
@@ -16747,12 +15818,12 @@ function () {
 
       for (var i = 0; i < positions.length; i++) {
         var _p$i = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default()(p[i], 2),
-            x = _p$i[0],
+            _x2 = _p$i[0],
             y = _p$i[1];
 
         var position = positions[i];
-        position[0] = x * m[0] + y * m[2] + m[4];
-        position[1] = x * m[1] + y * m[3] + m[5];
+        position[0] = _x2 * m[0] + y * m[2] + m[4];
+        position[1] = _x2 * m[1] + y * m[3] + m[5];
       }
 
       this._updateMatrix = false;
@@ -16867,7 +15938,7 @@ function () {
   }, {
     key: "canIgnore",
     value: function canIgnore() {
-      var noStroke = this[_stroke] == null || this[_stroke].thickness === 0 || this[_strokeColor][3] === 0;
+      var noStroke = this[_stroke] == null || this[_stroke].lineWidth === 0 || this[_strokeColor][3] === 0;
       var noFill = this[_fill] == null || this[_fillColor][3] === 0;
       var noGradient = this[_uniforms].u_radialGradientVector == null;
       var noTexture = this[_uniforms].u_texSampler == null;
@@ -16899,10 +15970,10 @@ function () {
           roundSegments = _ref8$roundSegments === void 0 ? 20 : _ref8$roundSegments;
 
       this[_mesh] = null;
-      this[_stroke] = Object(_extrude_polyline__WEBPACK_IMPORTED_MODULE_7__["default"])({
-        thickness: thickness,
-        cap: cap,
-        join: join,
+      this[_stroke] = new _extrude_contours__WEBPACK_IMPORTED_MODULE_7__["default"]({
+        lineWidth: thickness,
+        lineCap: cap,
+        lineJoin: join,
         miterLimit: miterLimit,
         roundSegments: roundSegments
       });
@@ -16917,7 +15988,7 @@ function () {
     value: function setFill() {
       var _ref9 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
           _ref9$rule = _ref9.rule,
-          rule = _ref9$rule === void 0 ? 'nonzero' : _ref9$rule,
+          rule = _ref9$rule === void 0 ? this.fillRule : _ref9$rule,
           _ref9$color = _ref9.color,
           color = _ref9$color === void 0 ? [0, 0, 0, 0] : _ref9$color;
 
@@ -17098,6 +16169,7 @@ function () {
 
       if (!gl_matrix__WEBPACK_IMPORTED_MODULE_5__["mat2d"].equals(m, transform)) {
         this[_transform] = m;
+        delete this[_invertTransform];
         this._updateMatrix = true;
       }
 
@@ -17113,6 +16185,7 @@ function () {
       }
 
       this[_transform] = gl_matrix__WEBPACK_IMPORTED_MODULE_5__["mat2d"].multiply(Array.of(0, 0, 0, 0, 0, 0), transform, m);
+      delete this[_invertTransform];
       this._updateMatrix = true;
       return this;
     }
@@ -17321,6 +16394,14 @@ function () {
       var meshData = this.meshData;
       var positions = meshData.positions,
           cells = meshData.cells;
+      var m = this.invertMatrix;
+      var x0 = m[0] * x + m[2] * y + m[4];
+      var y0 = m[1] * x + m[3] * y + m[5];
+      var box = this.boundingBox;
+
+      if (x0 < box[0][0] || x0 > box[1][0] || y0 < box[0][1] || y0 > box[1][1]) {
+        return false;
+      }
 
       function projectionOn(_ref22, _ref23, _ref24) {
         var _ref25 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_4___default()(_ref22, 2),
@@ -17481,7 +16562,7 @@ function () {
     key: "lineWidth",
     get: function get() {
       if (this[_stroke]) {
-        return this[_stroke].thickness;
+        return this[_stroke].lineWidth;
       }
 
       return 0;
@@ -17490,7 +16571,7 @@ function () {
     key: "lineCap",
     get: function get() {
       if (this[_stroke]) {
-        return this[_stroke].cap;
+        return this[_stroke].lineCap;
       }
 
       return '';
@@ -17499,7 +16580,7 @@ function () {
     key: "lineJoin",
     get: function get() {
       if (this[_stroke]) {
-        return this[_stroke].join;
+        return this[_stroke].lineJoin;
       }
 
       return '';
@@ -17588,6 +16669,16 @@ function () {
       return this[_transform];
     }
   }, {
+    key: "invertMatrix",
+    get: function get() {
+      if (!this[_invertTransform]) {
+        var m = gl_matrix__WEBPACK_IMPORTED_MODULE_5__["mat2d"].invert(Array.of(0, 0, 0, 0, 0, 0), this[_transform]);
+        this[_invertTransform] = m;
+      }
+
+      return this[_invertTransform];
+    }
+  }, {
     key: "transformScale",
     get: function get() {
       var m = this[_transform];
@@ -17660,7 +16751,10 @@ function () {
 
             var _meshes = strokeContours.map(function (lines, i) {
               var closed = lines.length > 1 && gl_matrix__WEBPACK_IMPORTED_MODULE_5__["vec2"].equals(lines[0], lines[lines.length - 1]);
-              return _this[_stroke].build(lines, closed);
+
+              var points = _this[_stroke].build(lines, closed);
+
+              return _triangulate_contours__WEBPACK_IMPORTED_MODULE_13___default()([points]);
             });
 
             _meshes.forEach(function (mesh) {
@@ -17737,10 +16831,10 @@ function () {
 
 
 /***/ }),
-/* 90 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var objectWithoutPropertiesLoose = __webpack_require__(91);
+var objectWithoutPropertiesLoose = __webpack_require__(76);
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
@@ -17764,7 +16858,7 @@ function _objectWithoutProperties(source, excluded) {
 module.exports = _objectWithoutProperties;
 
 /***/ }),
-/* 91 */
+/* 76 */
 /***/ (function(module, exports) {
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -17785,491 +16879,280 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 92 */
+/* 77 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var as_number__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(93);
-/* harmony import */ var as_number__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(as_number__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _vecutil__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(82);
+/* harmony import */ var _stroke__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(78);
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+
+/* harmony default export */ __webpack_exports__["default"] = (_stroke__WEBPACK_IMPORTED_MODULE_0__["Stroke"]);
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Stroke", function() { return Stroke; });
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(67);
+
 
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
-
-var tmp = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-var capEnd = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-var lineA = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-var lineB = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-var tangent = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-var miter = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-
-var util = __webpack_require__(94);
-
-var computeMiter = util.computeMiter,
-    normal = util.normal,
-    direction = util.direction;
+var tmp = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+var lineA = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+var lineB = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+var tangent = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+var miter = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
 var MAX_MITER_VALUE = 1e20; // infinity * 0 cause NaN, fix #7
 
-function Stroke(opt) {
-  if (!(this instanceof Stroke)) return new Stroke(opt);
-  opt = opt || {};
-  this.miterLimit = as_number__WEBPACK_IMPORTED_MODULE_2___default()(opt.miterLimit, 10);
-  this.thickness = as_number__WEBPACK_IMPORTED_MODULE_2___default()(opt.thickness, 1);
-  this.join = opt.join || 'miter';
-  this.cap = opt.cap || 'butt';
-  this.roundSegments = opt.roundSegments || 20;
-  this._normal = null;
-  this._lastFlip = -1;
-  this._started = false;
-}
+var Stroke = /*#__PURE__*/function () {
+  function Stroke() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$lineWidth = _ref.lineWidth,
+        lineWidth = _ref$lineWidth === void 0 ? 1 : _ref$lineWidth,
+        _ref$lineJoin = _ref.lineJoin,
+        lineJoin = _ref$lineJoin === void 0 ? 'miter' : _ref$lineJoin,
+        _ref$miterLimit = _ref.miterLimit,
+        miterLimit = _ref$miterLimit === void 0 ? 10 : _ref$miterLimit,
+        _ref$lineCap = _ref.lineCap,
+        lineCap = _ref$lineCap === void 0 ? 'butt' : _ref$lineCap,
+        _ref$roundSegments = _ref.roundSegments,
+        roundSegments = _ref$roundSegments === void 0 ? 20 : _ref$roundSegments;
 
-Stroke.prototype.mapThickness = function (point, i, points) {
-  return this.thickness;
-};
+    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Stroke);
 
-Stroke.prototype.build = function (points) {
-  var closed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-  points = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(points);
-  var complex = {
-    positions: [],
-    cells: []
-  };
-  if (points.length <= 1) return complex;
-  var closeNext = null;
-
-  if (closed) {
-    var _points = points,
-        _points2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_points, 2),
-        a = _points2[0],
-        b = _points2[1];
-
-    var v = [b[0] - a[0], b[1] - a[1]];
-    closeNext = _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](_vecutil__WEBPACK_IMPORTED_MODULE_3__["create"](), a, v, 1e-7);
-    points.unshift(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default()(points[points.length - 2]));
+    this.lineWidth = lineWidth;
+    this.lineJoin = lineJoin;
+    this.miterLimit = miterLimit;
+    this.lineCap = lineCap;
+    this.roundSegments = roundSegments;
+    this._normal = null;
   }
 
-  var total = points.length; // clear flags
+  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default()(Stroke, [{
+    key: "build",
+    value: function build(points) {
+      var closed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var total = points.length;
+      points = _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(points);
+      if (total < 2) return points;
 
-  this._lastFlip = -1;
-  this._started = false;
-  this._normal = null; // join each segment
-
-  for (var i = 1, count = 0; i < total; i++) {
-    var last = points[i - 1];
-    var cur = points[i];
-    var next = i < points.length - 1 ? points[i + 1] : null;
-    var nextnext = i < points.length - 2 ? points[i + 2] : null;
-    var thickness = this.mapThickness(cur, i, points);
-
-    this._seg(complex, count, last, cur, next, nextnext, thickness / 2, closed, closeNext);
-
-    count = complex.positions.length - 2;
-  }
-
-  if (closed) {
-    complex.positions = complex.positions.slice(2);
-    complex.cells = complex.cells.slice(2).map(function (_ref) {
-      var _ref2 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_ref, 3),
-          a = _ref2[0],
-          b = _ref2[1],
-          c = _ref2[2];
-
-      return [a - 2, b - 2, c - 2];
-    });
-  }
-
-  return complex;
-};
-
-Stroke.prototype._seg = function (complex, index, last, cur, next, nextnext, halfThick, closed, closeNext) {
-  var cap = arguments.length > 9 && arguments[9] !== undefined ? arguments[9] : this.cap;
-  // eslint-disable-line complexity
-  var cells = complex.cells;
-  var positions = complex.positions;
-  var capSquare = cap === 'square';
-  var capRound = cap === 'round';
-  var capRoundStart = cap === 'roundStart';
-  var capRoundEnd = cap === 'roundEnd';
-  var joinBevel = this.join === 'bevel';
-  var joinRound = this.join === 'round'; // get unit direction of line
-
-  direction(lineA, cur, last); // if we don't yet have a normal from previous join,
-  // compute based on line start - end
-
-  if (!this._normal) {
-    this._normal = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-    normal(this._normal, lineA);
-  } // if we haven't started yet, add the first two points
-
-
-  if (!this._started) {
-    this._started = true; // if the end cap is type square, we can just push the verts out a bit
-
-    if (capSquare) {
-      _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](capEnd, last, lineA, -halfThick);
-      last = capEnd;
-    }
-
-    if (capRound || capRoundStart) {
-      round(complex, last, this._normal, halfThick, -1, this.roundSegments);
-
-      for (var i = 1; i <= this.roundSegments; i++) {
-        cells.push([index, index + i, index + i + 1]);
-      }
-
-      index += this.roundSegments + 2;
-    }
-
-    extrusions(complex, last, this._normal, halfThick);
-  }
-
-  cells.push([index + 0, index + 1, index + 2]);
-  /*
-    // now determine the type of join with next segment
-     - round (TODO)
-    - bevel
-    - miter
-    - none (i.e. no next segment, use normal)
-     */
-
-  if (!closed && !next) {
-    // no next segment, simple extrusion
-    // now reset normal to finish cap
-    normal(this._normal, lineA); // push square end cap out a bit
-
-    if (capSquare) {
-      _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](capEnd, cur, lineA, halfThick);
-      cur = capEnd;
-    }
-
-    extrusions(complex, cur, this._normal, halfThick);
-    cells.push(this._lastFlip === 1 ? [index, index + 2, index + 3] : [index + 2, index + 1, index + 3]);
-
-    if (capRound || capRoundEnd) {
-      var idx = complex.positions.length;
-      round(complex, cur, this._normal, halfThick, 1, this.roundSegments);
-
-      for (var _i = 1; _i <= this.roundSegments; _i++) {
-        cells.push([idx, idx + _i, idx + _i + 1]);
-      }
-
-      index += this.roundSegments + 2;
-    }
-  } else {
-    // we have a next segment, start with miter
-    // get unit dir of next line
-    if (!next) direction(lineB, closeNext, cur);else direction(lineB, next, cur); // stores tangent & miter
-
-    var miterLen = computeMiter(tangent, miter, lineA, lineB, halfThick); // infinity * 0 cause NaN, fix #7
-
-    miterLen = Math.min(miterLen, MAX_MITER_VALUE); // normal(tmp, lineA)
-    // get orientation
-
-    var flip = _vecutil__WEBPACK_IMPORTED_MODULE_3__["dot"](tangent, this._normal) < 0 ? -1 : 1;
-    var bevel = joinBevel || joinRound;
-
-    if (!bevel && this.join === 'miter') {
-      var limit = miterLen / halfThick;
-
-      if (limit > this.miterLimit) {
-        miterLen = this.miterLimit * halfThick;
-        bevel = true;
-      }
-    }
-
-    var len = Infinity;
-    if (next && !nextnext) len = Math.hypot(next[0] - cur[0], next[1] - cur[1]);
-
-    if (bevel) {
-      // next two points in our first segment
-      _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, cur, this._normal, -halfThick * flip);
-      positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-      positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](cur)); // vec.scaleAndAdd(tmp, cur, miter, miterLen * flip);
-      // positions.push(vec.clone(tmp));
-
-      cells.push(this._lastFlip !== -flip ? [index, index + 2, index + 3] : [index + 2, index + 1, index + 3]);
-
-      if (len < miterLen) {
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](next));
-      } else {
-        _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, cur, miter, miterLen * flip);
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-      }
-
-      if (!joinRound) {
-        cells.push(this._lastFlip !== -flip ? [index, index + 3, index + 4] : [index + 3, index + 1, index + 4]);
-      }
-
-      if (next) {
-        normal(tmp, lineB);
-        _vecutil__WEBPACK_IMPORTED_MODULE_3__["copy"](this._normal, tmp); // store normal for next round
-
-        _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, cur, tmp, -halfThick * flip);
-        var pE2 = _vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp); // now add the bevel triangle
-
-        if (!joinRound) {
-          cells.push([index + 2, index + 3, index + 5]);
-        } else {
-          // join round
-          var pEnd = positions.pop();
-          var o = positions[index + 3];
-          var p1 = _vecutil__WEBPACK_IMPORTED_MODULE_3__["sub"](_vecutil__WEBPACK_IMPORTED_MODULE_3__["create"](), positions[index + 2], o);
-          var p2 = _vecutil__WEBPACK_IMPORTED_MODULE_3__["sub"](_vecutil__WEBPACK_IMPORTED_MODULE_3__["create"](), pE2, o);
-          var delta = Math.PI / this.roundSegments;
-
-          for (var _i2 = 0; _i2 < this.roundSegments; _i2++) {
-            _vecutil__WEBPACK_IMPORTED_MODULE_3__["rotate"](p1, p1, [0, 0], flip * delta); // console.log(p1, p2, vec.cross([], p1, p2)[2]);
-
-            if (_i2 > 0 && Math.sign(_vecutil__WEBPACK_IMPORTED_MODULE_3__["cross"](tmp, p1, p2)[2]) !== flip) {
-              _vecutil__WEBPACK_IMPORTED_MODULE_3__["add"](tmp, p2, o);
-              positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-
-              if (_i2 === 0) {
-                cells.push([index + 3, index + 2, index + 5]);
-              } else {
-                cells.push([index + 3, index + 5 + _i2 - 1, index + 5 + _i2]);
-              }
-
-              break;
-            } else {
-              _vecutil__WEBPACK_IMPORTED_MODULE_3__["add"](tmp, p1, o);
-              positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-
-              if (_i2 === 0) {
-                cells.push([index + 3, index + 2, index + 5]);
-              } else {
-                cells.push([index + 3, index + 5 + _i2 - 1, index + 5 + _i2]);
-              }
-            }
-          } // console.log(index, positions.length);
-
-
-          cells.push(this._lastFlip !== -flip ? [index, index + 3, positions.length] : [index + 3, index + 1, positions.length]);
-          positions.push(pEnd);
+      if (closed) {
+        if (points[0][0] !== points[total - 1][0] || points[0][1] !== points[total - 1][1]) {
+          points.push(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(points[0]));
         }
 
-        positions.push(pE2);
+        points.push(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(points[1]));
       }
 
-      if (!next || !joinRound) {
-        cells.push([index + 3, index + 4, index + 5]);
-      }
-    } else {
-      // miter
-      // next two points for our miter join
-      // extrusions(complex, cur, miter, miterLen);
-      if (flip === -1 && len < miterLen) {
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](next));
-      } else {
-        _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, cur, miter, -miterLen);
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
+      total = points.length; // clear flags
+
+      this._normal = null;
+      var contours = {
+        left: [],
+        right: []
+      };
+      var halfThick = this.lineWidth / 2;
+      var cap = this.lineCap;
+
+      if (!closed && cap === 'square') {
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["direction"])(lineA, points[0], points[1]);
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(points[0], points[0], lineA, halfThick);
+        var idx = points.length - 1;
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["direction"])(lineA, points[idx], points[idx - 1]);
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(points[idx], points[idx], lineA, halfThick);
+      } // join each segment
+
+
+      for (var i = 1; i < total; i++) {
+        var last = points[i - 1];
+        var cur = points[i];
+        var next = points[i + 1];
+
+        this._seg(contours, last, cur, next, halfThick, closed);
       }
 
-      if (flip === 1 && len < miterLen) {
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](next));
-      } else {
-        _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, cur, miter, miterLen);
-        positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
+      if (!closed && cap === 'round') {
+        capRound(contours, this.roundSegments);
       }
 
-      cells.push(this._lastFlip === 1 ? [index, index + 2, index + 3] : [index + 2, index + 1, index + 3]);
-      flip = -1; // the miter is now the normal for our next join
-
-      _vecutil__WEBPACK_IMPORTED_MODULE_3__["copy"](this._normal, miter);
+      var ret = [].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(contours.left), _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default()(contours.right.reverse()));
+      return ret;
     }
+  }, {
+    key: "_seg",
+    value: function _seg(contours, last, cur, next, halfThick, closed) {
+      var joinBevel = this.lineJoin === 'bevel';
+      var joinRound = this.lineJoin === 'round'; // get unit direction of line
 
-    this._lastFlip = flip;
-  }
-};
+      Object(_utils__WEBPACK_IMPORTED_MODULE_3__["direction"])(lineA, cur, last); // if we don't yet have a normal from previous join,
+      // compute based on line start - end
 
-function extrusions(complex, point, normal, scale) {
-  var positions = complex.positions; // next two points to end our segment
+      if (!this._normal) {
+        this._normal = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["normal"])(this._normal, lineA);
+      }
 
-  _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, point, normal, -scale);
-  positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-  _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, point, normal, scale);
-  positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-}
+      if (!contours.left.length) {
+        // start
+        extrusions(contours, last, this._normal, halfThick);
+      }
 
-function round(complex, point, normal, scale) {
-  var dir = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 1;
-  var roundSegments = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : 20;
-  var positions = complex.positions; // const positions = [];
+      if (!next) {
+        // no next segment, simple extrusion
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["normal"])(this._normal, lineA);
 
-  var t = _vecutil__WEBPACK_IMPORTED_MODULE_3__["create"]();
-  positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](point));
+        if (!closed) {
+          extrusions(contours, cur, this._normal, halfThick);
+        } else {
+          extrusions(contours, last, this._normal, halfThick);
+        }
+      } else {
+        // we have a next segment, start with miter
+        // get unit dir of next line
+        Object(_utils__WEBPACK_IMPORTED_MODULE_3__["direction"])(lineB, next, cur); // stores tangent & miter
 
-  for (var i = 0; i <= roundSegments; i++) {
-    var rad = dir * Math.PI * i / roundSegments;
-    _vecutil__WEBPACK_IMPORTED_MODULE_3__["rotate"](t, normal, [0, 0], rad);
-    _vecutil__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"](tmp, point, t, -scale);
-    positions.push(_vecutil__WEBPACK_IMPORTED_MODULE_3__["clone"](tmp));
-  }
-}
+        var miterLen = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["computeMiter"])(tangent, miter, lineA, lineB, halfThick); // infinity * 0 cause NaN, fix #7
 
-/* harmony default export */ __webpack_exports__["default"] = (Stroke);
+        miterLen = Math.min(miterLen, MAX_MITER_VALUE); // get orientation
 
-/***/ }),
-/* 93 */
-/***/ (function(module, exports) {
+        var flip = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["dot"])(tangent, this._normal) < 0 ? -1 : 1;
+        var bevel = joinBevel || joinRound;
 
-module.exports = function numtype(num, def) {
-	return typeof num === 'number'
-		? num 
-		: (typeof def === 'number' ? def : 0)
-}
+        if (!bevel && this.lineJoin === 'miter') {
+          var limit = miterLen / halfThick;
 
-/***/ }),
-/* 94 */
-/***/ (function(module, exports, __webpack_require__) {
+          if (limit > this.miterLimit) {
+            // miterLen = this.miterLimit * halfThick;
+            bevel = true;
+          }
+        } // let len = Infinity;
+        // if(next && !nextnext) len = Math.hypot(next[0] - cur[0], next[1] - cur[1]);
 
-var add = __webpack_require__(95)
-var set = __webpack_require__(96)
-var normalize = __webpack_require__(97)
-var subtract = __webpack_require__(98)
-var dot = __webpack_require__(99)
 
-var tmp = [0, 0]
+        if (bevel) {
+          // next two points in our first segment
+          Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(tmp, cur, this._normal, -halfThick * flip);
+          addPoint(contours, tmp, flip);
+          var maxLen = Infinity;
 
-module.exports.computeMiter = function computeMiter(tangent, miter, lineA, lineB, halfThick) {
-    //get tangent line
-    add(tangent, lineA, lineB)
-    normalize(tangent, tangent)
+          if (last) {
+            maxLen = Math.min(maxLen, Math.hypot(cur[0] - last[0], cur[1] - last[1]));
+          }
 
-    //get miter as a unit vector
-    set(miter, -tangent[1], tangent[0])
-    set(tmp, -lineA[1], lineA[0])
+          if (next) {
+            maxLen = Math.min(maxLen, Math.hypot(next[0] - cur[0], next[1] - cur[1]));
+          }
 
-    //get the necessary length of our miter
-    return halfThick / dot(miter, tmp)
-}
+          var len = Math.max(halfThick, Math.min(miterLen, maxLen));
+          Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(tmp, cur, miter, len * flip);
+          addPoint(contours, tmp, -flip);
 
-module.exports.normal = function normal(out, dir) {
-    //get perpendicular
-    set(out, -dir[1], dir[0])
-    return out
-}
+          if (next) {
+            Object(_utils__WEBPACK_IMPORTED_MODULE_3__["normal"])(tmp, lineB);
+            Object(_utils__WEBPACK_IMPORTED_MODULE_3__["copy"])(this._normal, tmp); // store normal for next round
 
-module.exports.direction = function direction(out, a, b) {
-    //get unit dir of two lines
-    subtract(out, a, b)
-    normalize(out, out)
-    return out
-}
+            Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(tmp, cur, tmp, -halfThick * flip);
 
-/***/ }),
-/* 95 */
-/***/ (function(module, exports) {
+            if (joinRound) {
+              var pEnd = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(tmp);
+              var pStart = flip > 0 ? contours.left[contours.left.length - 1] : contours.right[contours.right.length - 1];
+              var o = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(cur);
+              var p1 = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["sub"])(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])(), pStart, o);
+              var p2 = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["sub"])(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])(), pEnd, o);
+              var delta = Math.PI / this.roundSegments;
 
-module.exports = add
+              for (var i = 0; i < this.roundSegments; i++) {
+                Object(_utils__WEBPACK_IMPORTED_MODULE_3__["rotate"])(p1, p1, [0, 0], flip * delta);
 
-/**
- * Adds two vec2's
- *
- * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
- * @returns {vec2} out
- */
-function add(out, a, b) {
-    out[0] = a[0] + b[0]
-    out[1] = a[1] + b[1]
-    return out
-}
+                if (Math.sign(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["cross"])(tmp, p1, p2)[2]) !== flip) {
+                  break;
+                } else {
+                  Object(_utils__WEBPACK_IMPORTED_MODULE_3__["add"])(tmp, p1, o);
+                }
 
-/***/ }),
-/* 96 */
-/***/ (function(module, exports) {
+                addPoint(contours, tmp, flip);
+              }
 
-module.exports = set
-
-/**
- * Set the components of a vec2 to the given values
- *
- * @param {vec2} out the receiving vector
- * @param {Number} x X component
- * @param {Number} y Y component
- * @returns {vec2} out
- */
-function set(out, x, y) {
-    out[0] = x
-    out[1] = y
-    return out
-}
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports) {
-
-module.exports = normalize
-
-/**
- * Normalize a vec2
- *
- * @param {vec2} out the receiving vector
- * @param {vec2} a vector to normalize
- * @returns {vec2} out
- */
-function normalize(out, a) {
-    var x = a[0],
-        y = a[1]
-    var len = x*x + y*y
-    if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
-        len = 1 / Math.sqrt(len)
-        out[0] = a[0] * len
-        out[1] = a[1] * len
+              addPoint(contours, pEnd, flip);
+            } else {
+              addPoint(contours, tmp, flip);
+            }
+          }
+        } else {
+          extrusions(contours, cur, miter, miterLen);
+          Object(_utils__WEBPACK_IMPORTED_MODULE_3__["copy"])(this._normal, miter);
+        }
+      }
     }
-    return out
+  }]);
+
+  return Stroke;
+}();
+
+function addPoint(contours, point, flip) {
+  if (flip > 0) {
+    contours.left.push(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(point));
+  } else {
+    contours.right.push(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(point));
+  }
+}
+
+function extrusions(contours, point, normal, scale) {
+  var flip = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : -1;
+  // next two points to end our segment
+  Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(tmp, point, normal, -scale);
+  addPoint(contours, tmp, -flip);
+  Object(_utils__WEBPACK_IMPORTED_MODULE_3__["scaleAndAdd"])(tmp, point, normal, scale);
+  addPoint(contours, tmp, flip);
+}
+
+function capRound(_ref2, roundSegments) {
+  var left = _ref2.left,
+      right = _ref2.right;
+  var t = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+  var normal = Object(_utils__WEBPACK_IMPORTED_MODULE_3__["create"])();
+  var pStart = left[0];
+  var pEnd = right[0];
+  var center = [0.5 * (pStart[0] + pEnd[0]), 0.5 * (pStart[1] + pEnd[1])];
+  Object(_utils__WEBPACK_IMPORTED_MODULE_3__["sub"])(normal, pStart, center);
+
+  for (var i = 1; i <= roundSegments; i++) {
+    var rad = -1 * Math.PI * i / roundSegments;
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["rotate"])(t, normal, [0, 0], rad);
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["add"])(tmp, center, t);
+    left.unshift(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(tmp));
+  }
+
+  pStart = right[right.length - 1];
+  pEnd = left[left.length - 1];
+  center = [0.5 * (pStart[0] + pEnd[0]), 0.5 * (pStart[1] + pEnd[1])];
+  Object(_utils__WEBPACK_IMPORTED_MODULE_3__["sub"])(normal, pStart, center);
+
+  for (var _i = 1; _i <= roundSegments; _i++) {
+    var _rad = -1 * Math.PI * _i / roundSegments;
+
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["rotate"])(t, normal, [0, 0], _rad);
+    Object(_utils__WEBPACK_IMPORTED_MODULE_3__["add"])(tmp, center, t);
+    right.push(Object(_utils__WEBPACK_IMPORTED_MODULE_3__["clone"])(tmp));
+  }
 }
 
 /***/ }),
-/* 98 */
-/***/ (function(module, exports) {
-
-module.exports = subtract
-
-/**
- * Subtracts vector b from vector a
- *
- * @param {vec2} out the receiving vector
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
- * @returns {vec2} out
- */
-function subtract(out, a, b) {
-    out[0] = a[0] - b[0]
-    out[1] = a[1] - b[1]
-    return out
-}
-
-/***/ }),
-/* 99 */
-/***/ (function(module, exports) {
-
-module.exports = dot
-
-/**
- * Calculates the dot product of two vec2's
- *
- * @param {vec2} a the first operand
- * @param {vec2} b the second operand
- * @returns {Number} dot product of a and b
- */
-function dot(a, b) {
-    return a[0] * b[0] + a[1] * b[1]
-}
-
-/***/ }),
-/* 100 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18282,7 +17165,7 @@ function isUnitTransform(m) {
 }
 
 /***/ }),
-/* 101 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -18290,9 +17173,9 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 // https://github.com/mattdesl/triangulate-contours
 
 /* eslint-disable */
-var Tess2 = __webpack_require__(102);
+var Tess2 = __webpack_require__(81);
 
-var xtend = __webpack_require__(104);
+var xtend = __webpack_require__(82);
 
 module.exports = function (contours, opt) {
   opt = opt || {};
@@ -18347,16 +17230,12 @@ module.exports = function (contours, opt) {
 };
 
 /***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(103);
-
-/***/ }),
-/* 103 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+/* eslint-disabled */
+
 /*
 ** SGI FREE SOFTWARE LICENSE B (Version 2.0, Sept. 18, 2008) 
 ** Copyright (C) [dates of first publication] Silicon Graphics, Inc.
@@ -18384,3407 +17263,3667 @@ module.exports = __webpack_require__(103);
 ** be used in advertising or otherwise to promote the sale, use or other dealings in
 ** this Software without prior written authorization from Silicon Graphics, Inc.
 */
+
 /*
 ** Author: Mikko Mononen, Aug 2013.
 ** The code is based on GLU libtess by Eric Veach, July 1994
 */
 
-	
-
-	/* Public API */
-
-	var Tess2 = {};
-
-	module.exports = Tess2;
-	
-	Tess2.WINDING_ODD = 0;
-	Tess2.WINDING_NONZERO = 1;
-	Tess2.WINDING_POSITIVE = 2;
-	Tess2.WINDING_NEGATIVE = 3;
-	Tess2.WINDING_ABS_GEQ_TWO = 4;
-
-	Tess2.POLYGONS = 0;
-	Tess2.CONNECTED_POLYGONS = 1;
-	Tess2.BOUNDARY_CONTOURS = 2;
-
-	Tess2.tesselate = function(opts) {
-		var debug =  opts.debug || false;
-		var tess = new Tesselator();
-		for (var i = 0; i < opts.contours.length; i++) {
-			tess.addContour(opts.vertexSize || 2, opts.contours[i]);
-		}
-		tess.tesselate(opts.windingRule || Tess2.WINDING_ODD,
-					   opts.elementType || Tess2.POLYGONS,
-					   opts.polySize || 3,
-					   opts.vertexSize || 2,
-					   opts.normal || [0,0,1]);
-		return {
-			vertices: tess.vertices,
-			vertexIndices: tess.vertexIndices,
-			vertexCount: tess.vertexCount,
-			elements: tess.elements,
-			elementCount: tess.elementCount,
-			mesh: debug ? tess.mesh : undefined
-		};
-	};
-
-	/* Internal */
-
-	var assert = function(cond) {
-		if (!cond) {
-			throw "Assertion Failed!";
-		}
-	}
-
-	/* The mesh structure is similar in spirit, notation, and operations
-	* to the "quad-edge" structure (see L. Guibas and J. Stolfi, Primitives
-	* for the manipulation of general subdivisions and the computation of
-	* Voronoi diagrams, ACM Transactions on Graphics, 4(2):74-123, April 1985).
-	* For a simplified description, see the course notes for CS348a,
-	* "Mathematical Foundations of Computer Graphics", available at the
-	* Stanford bookstore (and taught during the fall quarter).
-	* The implementation also borrows a tiny subset of the graph-based approach
-	* use in Mantyla's Geometric Work Bench (see M. Mantyla, An Introduction
-	* to Sold Modeling, Computer Science Press, Rockville, Maryland, 1988).
-	*
-	* The fundamental data structure is the "half-edge".  Two half-edges
-	* go together to make an edge, but they point in opposite directions.
-	* Each half-edge has a pointer to its mate (the "symmetric" half-edge Sym),
-	* its origin vertex (Org), the face on its left side (Lface), and the
-	* adjacent half-edges in the CCW direction around the origin vertex
-	* (Onext) and around the left face (Lnext).  There is also a "next"
-	* pointer for the global edge list (see below).
-	*
-	* The notation used for mesh navigation:
-	*  Sym   = the mate of a half-edge (same edge, but opposite direction)
-	*  Onext = edge CCW around origin vertex (keep same origin)
-	*  Dnext = edge CCW around destination vertex (keep same dest)
-	*  Lnext = edge CCW around left face (dest becomes new origin)
-	*  Rnext = edge CCW around right face (origin becomes new dest)
-	*
-	* "prev" means to substitute CW for CCW in the definitions above.
-	*
-	* The mesh keeps global lists of all vertices, faces, and edges,
-	* stored as doubly-linked circular lists with a dummy header node.
-	* The mesh stores pointers to these dummy headers (vHead, fHead, eHead).
-	*
-	* The circular edge list is special; since half-edges always occur
-	* in pairs (e and e->Sym), each half-edge stores a pointer in only
-	* one direction.  Starting at eHead and following the e->next pointers
-	* will visit each *edge* once (ie. e or e->Sym, but not both).
-	* e->Sym stores a pointer in the opposite direction, thus it is
-	* always true that e->Sym->next->Sym->next == e.
-	*
-	* Each vertex has a pointer to next and previous vertices in the
-	* circular list, and a pointer to a half-edge with this vertex as
-	* the origin (NULL if this is the dummy header).  There is also a
-	* field "data" for client data.
-	*
-	* Each face has a pointer to the next and previous faces in the
-	* circular list, and a pointer to a half-edge with this face as
-	* the left face (NULL if this is the dummy header).  There is also
-	* a field "data" for client data.
-	*
-	* Note that what we call a "face" is really a loop; faces may consist
-	* of more than one loop (ie. not simply connected), but there is no
-	* record of this in the data structure.  The mesh may consist of
-	* several disconnected regions, so it may not be possible to visit
-	* the entire mesh by starting at a half-edge and traversing the edge
-	* structure.
-	*
-	* The mesh does NOT support isolated vertices; a vertex is deleted along
-	* with its last edge.  Similarly when two faces are merged, one of the
-	* faces is deleted (see tessMeshDelete below).  For mesh operations,
-	* all face (loop) and vertex pointers must not be NULL.  However, once
-	* mesh manipulation is finished, TESSmeshZapFace can be used to delete
-	* faces of the mesh, one at a time.  All external faces can be "zapped"
-	* before the mesh is returned to the client; then a NULL face indicates
-	* a region which is not part of the output polygon.
-	*/
-
-	function TESSvertex() {
-		this.next = null;	/* next vertex (never NULL) */
-		this.prev = null;	/* previous vertex (never NULL) */
-		this.anEdge = null;	/* a half-edge with this origin */
-
-		/* Internal data (keep hidden) */
-		this.coords = [0,0,0];	/* vertex location in 3D */
-		this.s = 0.0;
-		this.t = 0.0;			/* projection onto the sweep plane */
-		this.pqHandle = 0;		/* to allow deletion from priority queue */
-		this.n = 0;				/* to allow identify unique vertices */
-		this.idx = 0;			/* to allow map result to original verts */
-	} 
-
-	function TESSface() {
-		this.next = null;		/* next face (never NULL) */
-		this.prev = null;		/* previous face (never NULL) */
-		this.anEdge = null;		/* a half edge with this left face */
-
-		/* Internal data (keep hidden) */
-		this.trail = null;		/* "stack" for conversion to strips */
-		this.n = 0;				/* to allow identiy unique faces */
-		this.marked = false;	/* flag for conversion to strips */
-		this.inside = false;	/* this face is in the polygon interior */
-	};
-
-	function TESShalfEdge(side) {
-		this.next = null;		/* doubly-linked list (prev==Sym->next) */
-		this.Sym = null;		/* same edge, opposite direction */
-		this.Onext = null;		/* next edge CCW around origin */
-		this.Lnext = null;		/* next edge CCW around left face */
-		this.Org = null;		/* origin vertex (Overtex too long) */
-		this.Lface = null;		/* left face */
-
-		/* Internal data (keep hidden) */
-		this.activeRegion = null;	/* a region with this upper edge (sweep.c) */
-		this.winding = 0;			/* change in winding number when crossing
-									   from the right face to the left face */
-		this.side = side;
-	};
-
-	TESShalfEdge.prototype = {
-		get Rface() { return this.Sym.Lface; },
-		set Rface(v) { this.Sym.Lface = v; },
-		get Dst() { return this.Sym.Org; },
-		set Dst(v) { this.Sym.Org = v; },
-		get Oprev() { return this.Sym.Lnext; },
-		set Oprev(v) { this.Sym.Lnext = v; },
-		get Lprev() { return this.Onext.Sym; },
-		set Lprev(v) { this.Onext.Sym = v; },
-		get Dprev() { return this.Lnext.Sym; },
-		set Dprev(v) { this.Lnext.Sym = v; },
-		get Rprev() { return this.Sym.Onext; },
-		set Rprev(v) { this.Sym.Onext = v; },
-		get Dnext() { return /*this.Rprev*/this.Sym.Onext.Sym; },  /* 3 pointers */
-		set Dnext(v) { /*this.Rprev*/this.Sym.Onext.Sym = v; },  /* 3 pointers */
-		get Rnext() { return /*this.Oprev*/this.Sym.Lnext.Sym; },  /* 3 pointers */
-		set Rnext(v) { /*this.Oprev*/this.Sym.Lnext.Sym = v; },  /* 3 pointers */
-	};
-
-
-
-	function TESSmesh() {
-		var v = new TESSvertex();
-		var f = new TESSface();
-		var e = new TESShalfEdge(0);
-		var eSym = new TESShalfEdge(1);
-
-		v.next = v.prev = v;
-		v.anEdge = null;
-
-		f.next = f.prev = f;
-		f.anEdge = null;
-		f.trail = null;
-		f.marked = false;
-		f.inside = false;
-
-		e.next = e;
-		e.Sym = eSym;
-		e.Onext = null;
-		e.Lnext = null;
-		e.Org = null;
-		e.Lface = null;
-		e.winding = 0;
-		e.activeRegion = null;
-
-		eSym.next = eSym;
-		eSym.Sym = e;
-		eSym.Onext = null;
-		eSym.Lnext = null;
-		eSym.Org = null;
-		eSym.Lface = null;
-		eSym.winding = 0;
-		eSym.activeRegion = null;
-
-		this.vHead = v;		/* dummy header for vertex list */
-		this.fHead = f;		/* dummy header for face list */
-		this.eHead = e;		/* dummy header for edge list */
-		this.eHeadSym = eSym;	/* and its symmetric counterpart */
-	};
-
-	/* The mesh operations below have three motivations: completeness,
-	* convenience, and efficiency.  The basic mesh operations are MakeEdge,
-	* Splice, and Delete.  All the other edge operations can be implemented
-	* in terms of these.  The other operations are provided for convenience
-	* and/or efficiency.
-	*
-	* When a face is split or a vertex is added, they are inserted into the
-	* global list *before* the existing vertex or face (ie. e->Org or e->Lface).
-	* This makes it easier to process all vertices or faces in the global lists
-	* without worrying about processing the same data twice.  As a convenience,
-	* when a face is split, the "inside" flag is copied from the old face.
-	* Other internal data (v->data, v->activeRegion, f->data, f->marked,
-	* f->trail, e->winding) is set to zero.
-	*
-	* ********************** Basic Edge Operations **************************
-	*
-	* tessMeshMakeEdge( mesh ) creates one edge, two vertices, and a loop.
-	* The loop (face) consists of the two new half-edges.
-	*
-	* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
-	* mesh connectivity and topology.  It changes the mesh so that
-	*  eOrg->Onext <- OLD( eDst->Onext )
-	*  eDst->Onext <- OLD( eOrg->Onext )
-	* where OLD(...) means the value before the meshSplice operation.
-	*
-	* This can have two effects on the vertex structure:
-	*  - if eOrg->Org != eDst->Org, the two vertices are merged together
-	*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
-	* In both cases, eDst->Org is changed and eOrg->Org is untouched.
-	*
-	* Similarly (and independently) for the face structure,
-	*  - if eOrg->Lface == eDst->Lface, one loop is split into two
-	*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
-	* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
-	*
-	* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
-	* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
-	* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
-	* the newly created loop will contain eDel->Dst.  If the deletion of eDel
-	* would create isolated vertices, those are deleted as well.
-	*
-	* ********************** Other Edge Operations **************************
-	*
-	* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
-	* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
-	* eOrg and eNew will have the same left face.
-	*
-	* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
-	* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
-	* eOrg and eNew will have the same left face.
-	*
-	* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
-	* to eDst->Org, and returns the corresponding half-edge eNew.
-	* If eOrg->Lface == eDst->Lface, this splits one loop into two,
-	* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
-	* loops are merged into one, and the loop eDst->Lface is destroyed.
-	*
-	* ************************ Other Operations *****************************
-	*
-	* tessMeshNewMesh() creates a new mesh with no edges, no vertices,
-	* and no loops (what we usually call a "face").
-	*
-	* tessMeshUnion( mesh1, mesh2 ) forms the union of all structures in
-	* both meshes, and returns the new mesh (the old meshes are destroyed).
-	*
-	* tessMeshDeleteMesh( mesh ) will free all storage for any valid mesh.
-	*
-	* tessMeshZapFace( fZap ) destroys a face and removes it from the
-	* global face list.  All edges of fZap will have a NULL pointer as their
-	* left face.  Any edges which also have a NULL pointer as their right face
-	* are deleted entirely (along with any isolated vertices this produces).
-	* An entire mesh can be deleted by zapping its faces, one at a time,
-	* in any order.  Zapped faces cannot be used in further mesh operations!
-	*
-	* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
-	*/
-
-	TESSmesh.prototype = {
-
-		/* MakeEdge creates a new pair of half-edges which form their own loop.
-		* No vertex or face structures are allocated, but these must be assigned
-		* before the current edge operation is completed.
-		*/
-		//static TESShalfEdge *MakeEdge( TESSmesh* mesh, TESShalfEdge *eNext )
-		makeEdge_: function(eNext) {
-			var e = new TESShalfEdge(0);
-			var eSym = new TESShalfEdge(1);
-
-			/* Make sure eNext points to the first edge of the edge pair */
-			if( eNext.Sym.side < eNext.side ) { eNext = eNext.Sym; }
-
-			/* Insert in circular doubly-linked list before eNext.
-			* Note that the prev pointer is stored in Sym->next.
-			*/
-			var ePrev = eNext.Sym.next;
-			eSym.next = ePrev;
-			ePrev.Sym.next = e;
-			e.next = eNext;
-			eNext.Sym.next = eSym;
-
-			e.Sym = eSym;
-			e.Onext = e;
-			e.Lnext = eSym;
-			e.Org = null;
-			e.Lface = null;
-			e.winding = 0;
-			e.activeRegion = null;
-
-			eSym.Sym = e;
-			eSym.Onext = eSym;
-			eSym.Lnext = e;
-			eSym.Org = null;
-			eSym.Lface = null;
-			eSym.winding = 0;
-			eSym.activeRegion = null;
-
-			return e;
-		},
-
-		/* Splice( a, b ) is best described by the Guibas/Stolfi paper or the
-		* CS348a notes (see mesh.h).  Basically it modifies the mesh so that
-		* a->Onext and b->Onext are exchanged.  This can have various effects
-		* depending on whether a and b belong to different face or vertex rings.
-		* For more explanation see tessMeshSplice() below.
-		*/
-		// static void Splice( TESShalfEdge *a, TESShalfEdge *b )
-		splice_: function(a, b) {
-			var aOnext = a.Onext;
-			var bOnext = b.Onext;
-			aOnext.Sym.Lnext = b;
-			bOnext.Sym.Lnext = a;
-			a.Onext = bOnext;
-			b.Onext = aOnext;
-		},
-
-		/* MakeVertex( newVertex, eOrig, vNext ) attaches a new vertex and makes it the
-		* origin of all edges in the vertex loop to which eOrig belongs. "vNext" gives
-		* a place to insert the new vertex in the global vertex list.  We insert
-		* the new vertex *before* vNext so that algorithms which walk the vertex
-		* list will not see the newly created vertices.
-		*/
-		//static void MakeVertex( TESSvertex *newVertex, TESShalfEdge *eOrig, TESSvertex *vNext )
-		makeVertex_: function(newVertex, eOrig, vNext) {
-			var vNew = newVertex;
-			assert(vNew !== null);
-
-			/* insert in circular doubly-linked list before vNext */
-			var vPrev = vNext.prev;
-			vNew.prev = vPrev;
-			vPrev.next = vNew;
-			vNew.next = vNext;
-			vNext.prev = vNew;
-
-			vNew.anEdge = eOrig;
-			/* leave coords, s, t undefined */
-
-			/* fix other edges on this vertex loop */
-			var e = eOrig;
-			do {
-				e.Org = vNew;
-				e = e.Onext;
-			} while(e !== eOrig);
-		},
-
-		/* MakeFace( newFace, eOrig, fNext ) attaches a new face and makes it the left
-		* face of all edges in the face loop to which eOrig belongs.  "fNext" gives
-		* a place to insert the new face in the global face list.  We insert
-		* the new face *before* fNext so that algorithms which walk the face
-		* list will not see the newly created faces.
-		*/
-		// static void MakeFace( TESSface *newFace, TESShalfEdge *eOrig, TESSface *fNext )
-		makeFace_: function(newFace, eOrig, fNext) {
-			var fNew = newFace;
-			assert(fNew !== null); 
-
-			/* insert in circular doubly-linked list before fNext */
-			var fPrev = fNext.prev;
-			fNew.prev = fPrev;
-			fPrev.next = fNew;
-			fNew.next = fNext;
-			fNext.prev = fNew;
-
-			fNew.anEdge = eOrig;
-			fNew.trail = null;
-			fNew.marked = false;
-
-			/* The new face is marked "inside" if the old one was.  This is a
-			* convenience for the common case where a face has been split in two.
-			*/
-			fNew.inside = fNext.inside;
-
-			/* fix other edges on this face loop */
-			var e = eOrig;
-			do {
-				e.Lface = fNew;
-				e = e.Lnext;
-			} while(e !== eOrig);
-		},
-
-		/* KillEdge( eDel ) destroys an edge (the half-edges eDel and eDel->Sym),
-		* and removes from the global edge list.
-		*/
-		//static void KillEdge( TESSmesh *mesh, TESShalfEdge *eDel )
-		killEdge_: function(eDel) {
-			/* Half-edges are allocated in pairs, see EdgePair above */
-			if( eDel.Sym.side < eDel.side ) { eDel = eDel.Sym; }
-
-			/* delete from circular doubly-linked list */
-			var eNext = eDel.next;
-			var ePrev = eDel.Sym.next;
-			eNext.Sym.next = ePrev;
-			ePrev.Sym.next = eNext;
-		},
-
-
-		/* KillVertex( vDel ) destroys a vertex and removes it from the global
-		* vertex list.  It updates the vertex loop to point to a given new vertex.
-		*/
-		//static void KillVertex( TESSmesh *mesh, TESSvertex *vDel, TESSvertex *newOrg )
-		killVertex_: function(vDel, newOrg) {
-			var eStart = vDel.anEdge;
-			/* change the origin of all affected edges */
-			var e = eStart;
-			do {
-				e.Org = newOrg;
-				e = e.Onext;
-			} while(e !== eStart);
-
-			/* delete from circular doubly-linked list */
-			var vPrev = vDel.prev;
-			var vNext = vDel.next;
-			vNext.prev = vPrev;
-			vPrev.next = vNext;
-		},
-
-		/* KillFace( fDel ) destroys a face and removes it from the global face
-		* list.  It updates the face loop to point to a given new face.
-		*/
-		//static void KillFace( TESSmesh *mesh, TESSface *fDel, TESSface *newLface )
-		killFace_: function(fDel, newLface) {
-			var eStart = fDel.anEdge;
-
-			/* change the left face of all affected edges */
-			var e = eStart;
-			do {
-				e.Lface = newLface;
-				e = e.Lnext;
-			} while(e !== eStart);
-
-			/* delete from circular doubly-linked list */
-			var fPrev = fDel.prev;
-			var fNext = fDel.next;
-			fNext.prev = fPrev;
-			fPrev.next = fNext;
-		},
-
-		/****************** Basic Edge Operations **********************/
-
-		/* tessMeshMakeEdge creates one edge, two vertices, and a loop (face).
-		* The loop consists of the two new half-edges.
-		*/
-		//TESShalfEdge *tessMeshMakeEdge( TESSmesh *mesh )
-		makeEdge: function() {
-			var newVertex1 = new TESSvertex();
-			var newVertex2 = new TESSvertex();
-			var newFace = new TESSface();
-			var e = this.makeEdge_( this.eHead);
-			this.makeVertex_( newVertex1, e, this.vHead );
-			this.makeVertex_( newVertex2, e.Sym, this.vHead );
-			this.makeFace_( newFace, e, this.fHead );
-			return e;
-		},
-
-		/* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
-		* mesh connectivity and topology.  It changes the mesh so that
-		*	eOrg->Onext <- OLD( eDst->Onext )
-		*	eDst->Onext <- OLD( eOrg->Onext )
-		* where OLD(...) means the value before the meshSplice operation.
-		*
-		* This can have two effects on the vertex structure:
-		*  - if eOrg->Org != eDst->Org, the two vertices are merged together
-		*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
-		* In both cases, eDst->Org is changed and eOrg->Org is untouched.
-		*
-		* Similarly (and independently) for the face structure,
-		*  - if eOrg->Lface == eDst->Lface, one loop is split into two
-		*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
-		* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
-		*
-		* Some special cases:
-		* If eDst == eOrg, the operation has no effect.
-		* If eDst == eOrg->Lnext, the new face will have a single edge.
-		* If eDst == eOrg->Lprev, the old face will have a single edge.
-		* If eDst == eOrg->Onext, the new vertex will have a single edge.
-		* If eDst == eOrg->Oprev, the old vertex will have a single edge.
-		*/
-		//int tessMeshSplice( TESSmesh* mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst )
-		splice: function(eOrg, eDst) {
-			var joiningLoops = false;
-			var joiningVertices = false;
-
-			if( eOrg === eDst ) return;
-
-			if( eDst.Org !== eOrg.Org ) {
-				/* We are merging two disjoint vertices -- destroy eDst->Org */
-				joiningVertices = true;
-				this.killVertex_( eDst.Org, eOrg.Org );
-			}
-			if( eDst.Lface !== eOrg.Lface ) {
-				/* We are connecting two disjoint loops -- destroy eDst->Lface */
-				joiningLoops = true;
-				this.killFace_( eDst.Lface, eOrg.Lface );
-			}
-
-			/* Change the edge structure */
-			this.splice_( eDst, eOrg );
-
-			if( ! joiningVertices ) {
-				var newVertex = new TESSvertex();
-
-				/* We split one vertex into two -- the new vertex is eDst->Org.
-				* Make sure the old vertex points to a valid half-edge.
-				*/
-				this.makeVertex_( newVertex, eDst, eOrg.Org );
-				eOrg.Org.anEdge = eOrg;
-			}
-			if( ! joiningLoops ) {
-				var newFace = new TESSface();  
-
-				/* We split one loop into two -- the new loop is eDst->Lface.
-				* Make sure the old face points to a valid half-edge.
-				*/
-				this.makeFace_( newFace, eDst, eOrg.Lface );
-				eOrg.Lface.anEdge = eOrg;
-			}
-		},
-
-		/* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
-		* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
-		* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
-		* the newly created loop will contain eDel->Dst.  If the deletion of eDel
-		* would create isolated vertices, those are deleted as well.
-		*
-		* This function could be implemented as two calls to tessMeshSplice
-		* plus a few calls to memFree, but this would allocate and delete
-		* unnecessary vertices and faces.
-		*/
-		//int tessMeshDelete( TESSmesh *mesh, TESShalfEdge *eDel )
-		delete: function(eDel) {
-			var eDelSym = eDel.Sym;
-			var joiningLoops = false;
-
-			/* First step: disconnect the origin vertex eDel->Org.  We make all
-			* changes to get a consistent mesh in this "intermediate" state.
-			*/
-			if( eDel.Lface !== eDel.Rface ) {
-				/* We are joining two loops into one -- remove the left face */
-				joiningLoops = true;
-				this.killFace_( eDel.Lface, eDel.Rface );
-			}
-
-			if( eDel.Onext === eDel ) {
-				this.killVertex_( eDel.Org, null );
-			} else {
-				/* Make sure that eDel->Org and eDel->Rface point to valid half-edges */
-				eDel.Rface.anEdge = eDel.Oprev;
-				eDel.Org.anEdge = eDel.Onext;
-
-				this.splice_( eDel, eDel.Oprev );
-				if( ! joiningLoops ) {
-					var newFace = new TESSface();
-
-					/* We are splitting one loop into two -- create a new loop for eDel. */
-					this.makeFace_( newFace, eDel, eDel.Lface );
-				}
-			}
-
-			/* Claim: the mesh is now in a consistent state, except that eDel->Org
-			* may have been deleted.  Now we disconnect eDel->Dst.
-			*/
-			if( eDelSym.Onext === eDelSym ) {
-				this.killVertex_( eDelSym.Org, null );
-				this.killFace_( eDelSym.Lface, null );
-			} else {
-				/* Make sure that eDel->Dst and eDel->Lface point to valid half-edges */
-				eDel.Lface.anEdge = eDelSym.Oprev;
-				eDelSym.Org.anEdge = eDelSym.Onext;
-				this.splice_( eDelSym, eDelSym.Oprev );
-			}
-
-			/* Any isolated vertices or faces have already been freed. */
-			this.killEdge_( eDel );
-		},
-
-		/******************** Other Edge Operations **********************/
-
-		/* All these routines can be implemented with the basic edge
-		* operations above.  They are provided for convenience and efficiency.
-		*/
-
-
-		/* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
-		* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
-		* eOrg and eNew will have the same left face.
-		*/
-		// TESShalfEdge *tessMeshAddEdgeVertex( TESSmesh *mesh, TESShalfEdge *eOrg );
-		addEdgeVertex: function(eOrg) {
-			var eNew = this.makeEdge_( eOrg );
-			var eNewSym = eNew.Sym;
-
-			/* Connect the new edge appropriately */
-			this.splice_( eNew, eOrg.Lnext );
-
-			/* Set the vertex and face information */
-			eNew.Org = eOrg.Dst;
-
-			var newVertex = new TESSvertex();
-			this.makeVertex_( newVertex, eNewSym, eNew.Org );
-
-			eNew.Lface = eNewSym.Lface = eOrg.Lface;
-
-			return eNew;
-		},
-
-
-		/* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
-		* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
-		* eOrg and eNew will have the same left face.
-		*/
-		// TESShalfEdge *tessMeshSplitEdge( TESSmesh *mesh, TESShalfEdge *eOrg );
-		splitEdge: function(eOrg, eDst) {
-			var tempHalfEdge = this.addEdgeVertex( eOrg );
-			var eNew = tempHalfEdge.Sym;
-
-			/* Disconnect eOrg from eOrg->Dst and connect it to eNew->Org */
-			this.splice_( eOrg.Sym, eOrg.Sym.Oprev );
-			this.splice_( eOrg.Sym, eNew );
-
-			/* Set the vertex and face information */
-			eOrg.Dst = eNew.Org;
-			eNew.Dst.anEdge = eNew.Sym;	/* may have pointed to eOrg->Sym */
-			eNew.Rface = eOrg.Rface;
-			eNew.winding = eOrg.winding;	/* copy old winding information */
-			eNew.Sym.winding = eOrg.Sym.winding;
-
-			return eNew;
-		},
-
-
-		/* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
-		* to eDst->Org, and returns the corresponding half-edge eNew.
-		* If eOrg->Lface == eDst->Lface, this splits one loop into two,
-		* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
-		* loops are merged into one, and the loop eDst->Lface is destroyed.
-		*
-		* If (eOrg == eDst), the new face will have only two edges.
-		* If (eOrg->Lnext == eDst), the old face is reduced to a single edge.
-		* If (eOrg->Lnext->Lnext == eDst), the old face is reduced to two edges.
-		*/
-
-		// TESShalfEdge *tessMeshConnect( TESSmesh *mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst );
-		connect: function(eOrg, eDst) {
-			var joiningLoops = false;  
-			var eNew = this.makeEdge_( eOrg );
-			var eNewSym = eNew.Sym;
-
-			if( eDst.Lface !== eOrg.Lface ) {
-				/* We are connecting two disjoint loops -- destroy eDst->Lface */
-				joiningLoops = true;
-				this.killFace_( eDst.Lface, eOrg.Lface );
-			}
-
-			/* Connect the new edge appropriately */
-			this.splice_( eNew, eOrg.Lnext );
-			this.splice_( eNewSym, eDst );
-
-			/* Set the vertex and face information */
-			eNew.Org = eOrg.Dst;
-			eNewSym.Org = eDst.Org;
-			eNew.Lface = eNewSym.Lface = eOrg.Lface;
-
-			/* Make sure the old face points to a valid half-edge */
-			eOrg.Lface.anEdge = eNewSym;
-
-			if( ! joiningLoops ) {
-				var newFace = new TESSface();
-				/* We split one loop into two -- the new loop is eNew->Lface */
-				this.makeFace_( newFace, eNew, eOrg.Lface );
-			}
-			return eNew;
-		},
-
-		/* tessMeshZapFace( fZap ) destroys a face and removes it from the
-		* global face list.  All edges of fZap will have a NULL pointer as their
-		* left face.  Any edges which also have a NULL pointer as their right face
-		* are deleted entirely (along with any isolated vertices this produces).
-		* An entire mesh can be deleted by zapping its faces, one at a time,
-		* in any order.  Zapped faces cannot be used in further mesh operations!
-		*/
-		zapFace: function( fZap )
-		{
-			var eStart = fZap.anEdge;
-			var e, eNext, eSym;
-			var fPrev, fNext;
-
-			/* walk around face, deleting edges whose right face is also NULL */
-			eNext = eStart.Lnext;
-			do {
-				e = eNext;
-				eNext = e.Lnext;
-
-				e.Lface = null;
-				if( e.Rface === null ) {
-					/* delete the edge -- see TESSmeshDelete above */
-
-					if( e.Onext === e ) {
-						this.killVertex_( e.Org, null );
-					} else {
-						/* Make sure that e->Org points to a valid half-edge */
-						e.Org.anEdge = e.Onext;
-						this.splice_( e, e.Oprev );
-					}
-					eSym = e.Sym;
-					if( eSym.Onext === eSym ) {
-						this.killVertex_( eSym.Org, null );
-					} else {
-						/* Make sure that eSym->Org points to a valid half-edge */
-						eSym.Org.anEdge = eSym.Onext;
-						this.splice_( eSym, eSym.Oprev );
-					}
-					this.killEdge_( e );
-				}
-			} while( e != eStart );
-
-			/* delete from circular doubly-linked list */
-			fPrev = fZap.prev;
-			fNext = fZap.next;
-			fNext.prev = fPrev;
-			fPrev.next = fNext;
-		},
-
-		countFaceVerts_: function(f) {
-			var eCur = f.anEdge;
-			var n = 0;
-			do
-			{
-				n++;
-				eCur = eCur.Lnext;
-			}
-			while (eCur !== f.anEdge);
-			return n;
-		},
-
-		//int tessMeshMergeConvexFaces( TESSmesh *mesh, int maxVertsPerFace )
-		mergeConvexFaces: function(maxVertsPerFace) {
-			var f;
-			var eCur, eNext, eSym;
-			var vStart;
-			var curNv, symNv;
-
-			for( f = this.fHead.next; f !== this.fHead; f = f.next )
-			{
-				// Skip faces which are outside the result.
-				if( !f.inside )
-					continue;
-
-				eCur = f.anEdge;
-				vStart = eCur.Org;
-					
-				while (true)
-				{
-					eNext = eCur.Lnext;
-					eSym = eCur.Sym;
-
-					// Try to merge if the neighbour face is valid.
-					if( eSym && eSym.Lface && eSym.Lface.inside )
-					{
-						// Try to merge the neighbour faces if the resulting polygons
-						// does not exceed maximum number of vertices.
-						curNv = this.countFaceVerts_( f );
-						symNv = this.countFaceVerts_( eSym.Lface );
-						if( (curNv+symNv-2) <= maxVertsPerFace )
-						{
-							// Merge if the resulting poly is convex.
-							if( Geom.vertCCW( eCur.Lprev.Org, eCur.Org, eSym.Lnext.Lnext.Org ) &&
-								Geom.vertCCW( eSym.Lprev.Org, eSym.Org, eCur.Lnext.Lnext.Org ) )
-							{
-								eNext = eSym.Lnext;
-								this.delete( eSym );
-								eCur = null;
-								eSym = null;
-							}
-						}
-					}
-					
-					if( eCur && eCur.Lnext.Org === vStart )
-						break;
-						
-					// Continue to next edge.
-					eCur = eNext;
-				}
-			}
-			
-			return true;
-		},
-
-		/* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
-		*/
-		check: function() {
-			var fHead = this.fHead;
-			var vHead = this.vHead;
-			var eHead = this.eHead;
-			var f, fPrev, v, vPrev, e, ePrev;
-
-			fPrev = fHead;
-			for( fPrev = fHead ; (f = fPrev.next) !== fHead; fPrev = f) {
-				assert( f.prev === fPrev );
-				e = f.anEdge;
-				do {
-					assert( e.Sym !== e );
-					assert( e.Sym.Sym === e );
-					assert( e.Lnext.Onext.Sym === e );
-					assert( e.Onext.Sym.Lnext === e );
-					assert( e.Lface === f );
-					e = e.Lnext;
-				} while( e !== f.anEdge );
-			}
-			assert( f.prev === fPrev && f.anEdge === null );
-
-			vPrev = vHead;
-			for( vPrev = vHead ; (v = vPrev.next) !== vHead; vPrev = v) {
-				assert( v.prev === vPrev );
-				e = v.anEdge;
-				do {
-					assert( e.Sym !== e );
-					assert( e.Sym.Sym === e );
-					assert( e.Lnext.Onext.Sym === e );
-					assert( e.Onext.Sym.Lnext === e );
-					assert( e.Org === v );
-					e = e.Onext;
-				} while( e !== v.anEdge );
-			}
-			assert( v.prev === vPrev && v.anEdge === null );
-
-			ePrev = eHead;
-			for( ePrev = eHead ; (e = ePrev.next) !== eHead; ePrev = e) {
-				assert( e.Sym.next === ePrev.Sym );
-				assert( e.Sym !== e );
-				assert( e.Sym.Sym === e );
-				assert( e.Org !== null );
-				assert( e.Dst !== null );
-				assert( e.Lnext.Onext.Sym === e );
-				assert( e.Onext.Sym.Lnext === e );
-			}
-			assert( e.Sym.next === ePrev.Sym
-				&& e.Sym === this.eHeadSym
-				&& e.Sym.Sym === e
-				&& e.Org === null && e.Dst === null
-				&& e.Lface === null && e.Rface === null );
-		}
-
-	};
-
-	var Geom = {};
-
-	Geom.vertEq = function(u,v) {
-		return (u.s === v.s && u.t === v.t);
-	};
-
-	/* Returns TRUE if u is lexicographically <= v. */
-	Geom.vertLeq = function(u,v) {
-		return ((u.s < v.s) || (u.s === v.s && u.t <= v.t));
-	};
-
-	/* Versions of VertLeq, EdgeSign, EdgeEval with s and t transposed. */
-	Geom.transLeq = function(u,v) {
-		return ((u.t < v.t) || (u.t === v.t && u.s <= v.s));
-	};
-
-	Geom.edgeGoesLeft = function(e) {
-		return Geom.vertLeq( e.Dst, e.Org );
-	};
-
-	Geom.edgeGoesRight = function(e) {
-		return Geom.vertLeq( e.Org, e.Dst );
-	};
-
-	Geom.vertL1dist = function(u,v) {
-		return (Math.abs(u.s - v.s) + Math.abs(u.t - v.t));
-	};
-
-	//TESSreal tesedgeEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.edgeEval = function( u, v, w ) {
-		/* Given three vertices u,v,w such that VertLeq(u,v) && VertLeq(v,w),
-		* evaluates the t-coord of the edge uw at the s-coord of the vertex v.
-		* Returns v->t - (uw)(v->s), ie. the signed distance from uw to v.
-		* If uw is vertical (and thus passes thru v), the result is zero.
-		*
-		* The calculation is extremely accurate and stable, even when v
-		* is very close to u or w.  In particular if we set v->t = 0 and
-		* let r be the negated result (this evaluates (uw)(v->s)), then
-		* r is guaranteed to satisfy MIN(u->t,w->t) <= r <= MAX(u->t,w->t).
-		*/
-		assert( Geom.vertLeq( u, v ) && Geom.vertLeq( v, w ));
-
-		var gapL = v.s - u.s;
-		var gapR = w.s - v.s;
-
-		if( gapL + gapR > 0.0 ) {
-			if( gapL < gapR ) {
-				return (v.t - u.t) + (u.t - w.t) * (gapL / (gapL + gapR));
-			} else {
-				return (v.t - w.t) + (w.t - u.t) * (gapR / (gapL + gapR));
-			}
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-	//TESSreal tesedgeSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.edgeSign = function( u, v, w ) {
-		/* Returns a number whose sign matches EdgeEval(u,v,w) but which
-		* is cheaper to evaluate.  Returns > 0, == 0 , or < 0
-		* as v is above, on, or below the edge uw.
-		*/
-		assert( Geom.vertLeq( u, v ) && Geom.vertLeq( v, w ));
-
-		var gapL = v.s - u.s;
-		var gapR = w.s - v.s;
-
-		if( gapL + gapR > 0.0 ) {
-			return (v.t - w.t) * gapL + (v.t - u.t) * gapR;
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-
-	/***********************************************************************
-	* Define versions of EdgeSign, EdgeEval with s and t transposed.
-	*/
-
-	//TESSreal testransEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.transEval = function( u, v, w ) {
-		/* Given three vertices u,v,w such that TransLeq(u,v) && TransLeq(v,w),
-		* evaluates the t-coord of the edge uw at the s-coord of the vertex v.
-		* Returns v->s - (uw)(v->t), ie. the signed distance from uw to v.
-		* If uw is vertical (and thus passes thru v), the result is zero.
-		*
-		* The calculation is extremely accurate and stable, even when v
-		* is very close to u or w.  In particular if we set v->s = 0 and
-		* let r be the negated result (this evaluates (uw)(v->t)), then
-		* r is guaranteed to satisfy MIN(u->s,w->s) <= r <= MAX(u->s,w->s).
-		*/
-		assert( Geom.transLeq( u, v ) && Geom.transLeq( v, w ));
-
-		var gapL = v.t - u.t;
-		var gapR = w.t - v.t;
-
-		if( gapL + gapR > 0.0 ) {
-			if( gapL < gapR ) {
-				return (v.s - u.s) + (u.s - w.s) * (gapL / (gapL + gapR));
-			} else {
-				return (v.s - w.s) + (w.s - u.s) * (gapR / (gapL + gapR));
-			}
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-	//TESSreal testransSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.transSign = function( u, v, w ) {
-		/* Returns a number whose sign matches TransEval(u,v,w) but which
-		* is cheaper to evaluate.  Returns > 0, == 0 , or < 0
-		* as v is above, on, or below the edge uw.
-		*/
-		assert( Geom.transLeq( u, v ) && Geom.transLeq( v, w ));
-
-		var gapL = v.t - u.t;
-		var gapR = w.t - v.t;
-
-		if( gapL + gapR > 0.0 ) {
-			return (v.s - w.s) * gapL + (v.s - u.s) * gapR;
-		}
-		/* vertical line */
-		return 0.0;
-	};
-
-
-	//int tesvertCCW( TESSvertex *u, TESSvertex *v, TESSvertex *w )
-	Geom.vertCCW = function( u, v, w ) {
-		/* For almost-degenerate situations, the results are not reliable.
-		* Unless the floating-point arithmetic can be performed without
-		* rounding errors, *any* implementation will give incorrect results
-		* on some degenerate inputs, so the client must have some way to
-		* handle this situation.
-		*/
-		return (u.s*(v.t - w.t) + v.s*(w.t - u.t) + w.s*(u.t - v.t)) >= 0.0;
-	};
-
-	/* Given parameters a,x,b,y returns the value (b*x+a*y)/(a+b),
-	* or (x+y)/2 if a==b==0.  It requires that a,b >= 0, and enforces
-	* this in the rare case that one argument is slightly negative.
-	* The implementation is extremely stable numerically.
-	* In particular it guarantees that the result r satisfies
-	* MIN(x,y) <= r <= MAX(x,y), and the results are very accurate
-	* even when a and b differ greatly in magnitude.
-	*/
-	Geom.interpolate = function(a,x,b,y) {
-		return (a = (a < 0) ? 0 : a, b = (b < 0) ? 0 : b, ((a <= b) ? ((b == 0) ? ((x+y) / 2) : (x + (y-x) * (a/(a+b)))) : (y + (x-y) * (b/(a+b)))));
-	};
-
-	/*
-	#ifndef FOR_TRITE_TEST_PROGRAM
-	#define Interpolate(a,x,b,y)	RealInterpolate(a,x,b,y)
-	#else
-
-	// Claim: the ONLY property the sweep algorithm relies on is that
-	// MIN(x,y) <= r <= MAX(x,y).  This is a nasty way to test that.
-	#include <stdlib.h>
-	extern int RandomInterpolate;
-
-	double Interpolate( double a, double x, double b, double y)
-	{
-		printf("*********************%d\n",RandomInterpolate);
-		if( RandomInterpolate ) {
-			a = 1.2 * drand48() - 0.1;
-			a = (a < 0) ? 0 : ((a > 1) ? 1 : a);
-			b = 1.0 - a;
-		}
-		return RealInterpolate(a,x,b,y);
-	}
-	#endif*/
-
-	Geom.intersect = function( o1, d1, o2, d2, v ) {
-		/* Given edges (o1,d1) and (o2,d2), compute their point of intersection.
-		* The computed point is guaranteed to lie in the intersection of the
-		* bounding rectangles defined by each edge.
-		*/
-		var z1, z2;
-		var t;
-
-		/* This is certainly not the most efficient way to find the intersection
-		* of two line segments, but it is very numerically stable.
-		*
-		* Strategy: find the two middle vertices in the VertLeq ordering,
-		* and interpolate the intersection s-value from these.  Then repeat
-		* using the TransLeq ordering to find the intersection t-value.
-		*/
-
-		if( ! Geom.vertLeq( o1, d1 )) { t = o1; o1 = d1; d1 = t; } //swap( o1, d1 ); }
-		if( ! Geom.vertLeq( o2, d2 )) { t = o2; o2 = d2; d2 = t; } //swap( o2, d2 ); }
-		if( ! Geom.vertLeq( o1, o2 )) { t = o1; o1 = o2; o2 = t; t = d1; d1 = d2; d2 = t; }//swap( o1, o2 ); swap( d1, d2 ); }
-
-		if( ! Geom.vertLeq( o2, d1 )) {
-			/* Technically, no intersection -- do our best */
-			v.s = (o2.s + d1.s) / 2;
-		} else if( Geom.vertLeq( d1, d2 )) {
-			/* Interpolate between o2 and d1 */
-			z1 = Geom.edgeEval( o1, o2, d1 );
-			z2 = Geom.edgeEval( o2, d1, d2 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.s = Geom.interpolate( z1, o2.s, z2, d1.s );
-		} else {
-			/* Interpolate between o2 and d2 */
-			z1 = Geom.edgeSign( o1, o2, d1 );
-			z2 = -Geom.edgeSign( o1, d2, d1 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.s = Geom.interpolate( z1, o2.s, z2, d2.s );
-		}
-
-		/* Now repeat the process for t */
-
-		if( ! Geom.transLeq( o1, d1 )) { t = o1; o1 = d1; d1 = t; } //swap( o1, d1 ); }
-		if( ! Geom.transLeq( o2, d2 )) { t = o2; o2 = d2; d2 = t; } //swap( o2, d2 ); }
-		if( ! Geom.transLeq( o1, o2 )) { t = o1; o1 = o2; o2 = t; t = d1; d1 = d2; d2 = t; } //swap( o1, o2 ); swap( d1, d2 ); }
-
-		if( ! Geom.transLeq( o2, d1 )) {
-			/* Technically, no intersection -- do our best */
-			v.t = (o2.t + d1.t) / 2;
-		} else if( Geom.transLeq( d1, d2 )) {
-			/* Interpolate between o2 and d1 */
-			z1 = Geom.transEval( o1, o2, d1 );
-			z2 = Geom.transEval( o2, d1, d2 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.t = Geom.interpolate( z1, o2.t, z2, d1.t );
-		} else {
-			/* Interpolate between o2 and d2 */
-			z1 = Geom.transSign( o1, o2, d1 );
-			z2 = -Geom.transSign( o1, d2, d1 );
-			if( z1+z2 < 0 ) { z1 = -z1; z2 = -z2; }
-			v.t = Geom.interpolate( z1, o2.t, z2, d2.t );
-		}
-	};
-
-
-
-	function DictNode() {
-		this.key = null;
-		this.next = null;
-		this.prev = null;
-	};
-
-	function Dict(frame, leq) {
-		this.head = new DictNode();
-		this.head.next = this.head;
-		this.head.prev = this.head;
-		this.frame = frame;
-		this.leq = leq;
-	};
-
-	Dict.prototype = {
-		min: function() {
-			return this.head.next;
-		},
-
-		max: function() {
-			return this.head.prev;
-		},
-
-		insert: function(k) {
-			return this.insertBefore(this.head, k);
-		},
-
-		search: function(key) {
-			/* Search returns the node with the smallest key greater than or equal
-			* to the given key.  If there is no such key, returns a node whose
-			* key is NULL.  Similarly, Succ(Max(d)) has a NULL key, etc.
-			*/
-			var node = this.head;
-			do {
-				node = node.next;
-			} while( node.key !== null && ! this.leq(this.frame, key, node.key));
-
-			return node;
-		},
-
-		insertBefore: function(node, key) {
-			do {
-				node = node.prev;
-			} while( node.key !== null && ! this.leq(this.frame, node.key, key));
-
-			var newNode = new DictNode();
-			newNode.key = key;
-			newNode.next = node.next;
-			node.next.prev = newNode;
-			newNode.prev = node;
-			node.next = newNode;
-
-			return newNode;
-		},
-
-		delete: function(node) {
-			node.next.prev = node.prev;
-			node.prev.next = node.next;
-		}
-	};
-
-
-	function PQnode() {
-		this.handle = null;
-	}
-
-	function PQhandleElem() {
-		this.key = null;
-		this.node = null;
-	}
-
-	function PriorityQ(size, leq) {
-		this.size = 0;
-		this.max = size;
-
-		this.nodes = [];
-		this.nodes.length = size+1;
-		for (var i = 0; i < this.nodes.length; i++)
-			this.nodes[i] = new PQnode();
-
-		this.handles = [];
-		this.handles.length = size+1;
-		for (var i = 0; i < this.handles.length; i++)
-			this.handles[i] = new PQhandleElem();
-
-		this.initialized = false;
-		this.freeList = 0;
-		this.leq = leq;
-
-		this.nodes[1].handle = 1;	/* so that Minimum() returns NULL */
-		this.handles[1].key = null;
-	};
-
-	PriorityQ.prototype = {
-
-		floatDown_: function( curr )
-		{
-			var n = this.nodes;
-			var h = this.handles;
-			var hCurr, hChild;
-			var child;
-
-			hCurr = n[curr].handle;
-			for( ;; ) {
-				child = curr << 1;
-				if( child < this.size && this.leq( h[n[child+1].handle].key, h[n[child].handle].key )) {
-					++child;
-				}
-
-				assert(child <= this.max);
-
-				hChild = n[child].handle;
-				if( child > this.size || this.leq( h[hCurr].key, h[hChild].key )) {
-					n[curr].handle = hCurr;
-					h[hCurr].node = curr;
-					break;
-				}
-				n[curr].handle = hChild;
-				h[hChild].node = curr;
-				curr = child;
-			}
-		},
-
-		floatUp_: function( curr )
-		{
-			var n = this.nodes;
-			var h = this.handles;
-			var hCurr, hParent;
-			var parent;
-
-			hCurr = n[curr].handle;
-			for( ;; ) {
-				parent = curr >> 1;
-				hParent = n[parent].handle;
-				if( parent == 0 || this.leq( h[hParent].key, h[hCurr].key )) {
-					n[curr].handle = hCurr;
-					h[hCurr].node = curr;
-					break;
-				}
-				n[curr].handle = hParent;
-				h[hParent].node = curr;
-				curr = parent;
-			}
-		},
-
-		init: function() {
-			/* This method of building a heap is O(n), rather than O(n lg n). */
-			for( var i = this.size; i >= 1; --i ) {
-				this.floatDown_( i );
-			}
-			this.initialized = true;
-		},
-
-		min: function() {
-			return this.handles[this.nodes[1].handle].key;
-		},
-
-		isEmpty: function() {
-			this.size === 0;
-		},
-
-		/* really pqHeapInsert */
-		/* returns INV_HANDLE iff out of memory */
-		//PQhandle pqHeapInsert( TESSalloc* alloc, PriorityQHeap *pq, PQkey keyNew )
-		insert: function(keyNew)
-		{
-			var curr;
-			var free;
-
-			curr = ++this.size;
-			if( (curr*2) > this.max ) {
-				this.max *= 2;
-				var s;
-				s = this.nodes.length;
-				this.nodes.length = this.max+1;
-				for (var i = s; i < this.nodes.length; i++)
-					this.nodes[i] = new PQnode();
-
-				s = this.handles.length;
-				this.handles.length = this.max+1;
-				for (var i = s; i < this.handles.length; i++)
-					this.handles[i] = new PQhandleElem();
-			}
-
-			if( this.freeList === 0 ) {
-				free = curr;
-			} else {
-				free = this.freeList;
-				this.freeList = this.handles[free].node;
-			}
-
-			this.nodes[curr].handle = free;
-			this.handles[free].node = curr;
-			this.handles[free].key = keyNew;
-
-			if( this.initialized ) {
-				this.floatUp_( curr );
-			}
-			return free;
-		},
-
-		//PQkey pqHeapExtractMin( PriorityQHeap *pq )
-		extractMin: function() {
-			var n = this.nodes;
-			var h = this.handles;
-			var hMin = n[1].handle;
-			var min = h[hMin].key;
-
-			if( this.size > 0 ) {
-				n[1].handle = n[this.size].handle;
-				h[n[1].handle].node = 1;
-
-				h[hMin].key = null;
-				h[hMin].node = this.freeList;
-				this.freeList = hMin;
-
-				--this.size;
-				if( this.size > 0 ) {
-					this.floatDown_( 1 );
-				}
-			}
-			return min;
-		},
-
-		delete: function( hCurr ) {
-			var n = this.nodes;
-			var h = this.handles;
-			var curr;
-
-			assert( hCurr >= 1 && hCurr <= this.max && h[hCurr].key !== null );
-
-			curr = h[hCurr].node;
-			n[curr].handle = n[this.size].handle;
-			h[n[curr].handle].node = curr;
-
-			--this.size;
-			if( curr <= this.size ) {
-				if( curr <= 1 || this.leq( h[n[curr>>1].handle].key, h[n[curr].handle].key )) {
-					this.floatDown_( curr );
-				} else {
-					this.floatUp_( curr );
-				}
-			}
-			h[hCurr].key = null;
-			h[hCurr].node = this.freeList;
-			this.freeList = hCurr;
-		}
-	};
-
-
-	/* For each pair of adjacent edges crossing the sweep line, there is
-	* an ActiveRegion to represent the region between them.  The active
-	* regions are kept in sorted order in a dynamic dictionary.  As the
-	* sweep line crosses each vertex, we update the affected regions.
-	*/
-
-	function ActiveRegion() {
-		this.eUp = null;		/* upper edge, directed right to left */
-		this.nodeUp = null;	/* dictionary node corresponding to eUp */
-		this.windingNumber = 0;	/* used to determine which regions are
-								* inside the polygon */
-		this.inside = false;		/* is this region inside the polygon? */
-		this.sentinel = false;	/* marks fake edges at t = +/-infinity */
-		this.dirty = false;		/* marks regions where the upper or lower
-						* edge has changed, but we haven't checked
-						* whether they intersect yet */
-		this.fixUpperEdge = false;	/* marks temporary edges introduced when
-							* we process a "right vertex" (one without
-							* any edges leaving to the right) */
-	};
-
-	var Sweep = {};
-
-	Sweep.regionBelow = function(r) {
-		return r.nodeUp.prev.key;
-	}
-
-	Sweep.regionAbove = function(r) {
-		return r.nodeUp.next.key;
-	}
-
-	Sweep.debugEvent = function( tess ) {
-		// empty
-	}
-
-
-	/*
-	* Invariants for the Edge Dictionary.
-	* - each pair of adjacent edges e2=Succ(e1) satisfies EdgeLeq(e1,e2)
-	*   at any valid location of the sweep event
-	* - if EdgeLeq(e2,e1) as well (at any valid sweep event), then e1 and e2
-	*   share a common endpoint
-	* - for each e, e->Dst has been processed, but not e->Org
-	* - each edge e satisfies VertLeq(e->Dst,event) && VertLeq(event,e->Org)
-	*   where "event" is the current sweep line event.
-	* - no edge e has zero length
-	*
-	* Invariants for the Mesh (the processed portion).
-	* - the portion of the mesh left of the sweep line is a planar graph,
-	*   ie. there is *some* way to embed it in the plane
-	* - no processed edge has zero length
-	* - no two processed vertices have identical coordinates
-	* - each "inside" region is monotone, ie. can be broken into two chains
-	*   of monotonically increasing vertices according to VertLeq(v1,v2)
-	*   - a non-invariant: these chains may intersect (very slightly)
-	*
-	* Invariants for the Sweep.
-	* - if none of the edges incident to the event vertex have an activeRegion
-	*   (ie. none of these edges are in the edge dictionary), then the vertex
-	*   has only right-going edges.
-	* - if an edge is marked "fixUpperEdge" (it is a temporary edge introduced
-	*   by ConnectRightVertex), then it is the only right-going edge from
-	*   its associated vertex.  (This says that these edges exist only
-	*   when it is necessary.)
-	*/
-
-	/* When we merge two edges into one, we need to compute the combined
-	* winding of the new edge.
-	*/
-	Sweep.addWinding = function(eDst,eSrc) {
-		eDst.winding += eSrc.winding;
-		eDst.Sym.winding += eSrc.Sym.winding;
-	}
-
-
-	//static int EdgeLeq( TESStesselator *tess, ActiveRegion *reg1, ActiveRegion *reg2 )
-	Sweep.edgeLeq = function( tess, reg1, reg2 ) {
-		/*
-		* Both edges must be directed from right to left (this is the canonical
-		* direction for the upper edge of each region).
-		*
-		* The strategy is to evaluate a "t" value for each edge at the
-		* current sweep line position, given by tess->event.  The calculations
-		* are designed to be very stable, but of course they are not perfect.
-		*
-		* Special case: if both edge destinations are at the sweep event,
-		* we sort the edges by slope (they would otherwise compare equally).
-		*/
-		var ev = tess.event;
-		var t1, t2;
-
-		var e1 = reg1.eUp;
-		var e2 = reg2.eUp;
-
-		if( e1.Dst === ev ) {
-			if( e2.Dst === ev ) {
-				/* Two edges right of the sweep line which meet at the sweep event.
-				* Sort them by slope.
-				*/
-				if( Geom.vertLeq( e1.Org, e2.Org )) {
-					return Geom.edgeSign( e2.Dst, e1.Org, e2.Org ) <= 0;
-				}
-				return Geom.edgeSign( e1.Dst, e2.Org, e1.Org ) >= 0;
-			}
-			return Geom.edgeSign( e2.Dst, ev, e2.Org ) <= 0;
-		}
-		if( e2.Dst === ev ) {
-			return Geom.edgeSign( e1.Dst, ev, e1.Org ) >= 0;
-		}
-
-		/* General case - compute signed distance *from* e1, e2 to event */
-		var t1 = Geom.edgeEval( e1.Dst, ev, e1.Org );
-		var t2 = Geom.edgeEval( e2.Dst, ev, e2.Org );
-		return (t1 >= t2);
-	}
-
-
-	//static void DeleteRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.deleteRegion = function( tess, reg ) {
-		if( reg.fixUpperEdge ) {
-			/* It was created with zero winding number, so it better be
-			* deleted with zero winding number (ie. it better not get merged
-			* with a real edge).
-			*/
-			assert( reg.eUp.winding === 0 );
-		}
-		reg.eUp.activeRegion = null;
-		tess.dict.delete( reg.nodeUp );
-	}
-
-	//static int FixUpperEdge( TESStesselator *tess, ActiveRegion *reg, TESShalfEdge *newEdge )
-	Sweep.fixUpperEdge = function( tess, reg, newEdge ) {
-		/*
-		* Replace an upper edge which needs fixing (see ConnectRightVertex).
-		*/
-		assert( reg.fixUpperEdge );
-		tess.mesh.delete( reg.eUp );
-		reg.fixUpperEdge = false;
-		reg.eUp = newEdge;
-		newEdge.activeRegion = reg;
-	}
-
-	//static ActiveRegion *TopLeftRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.topLeftRegion = function( tess, reg ) {
-		var org = reg.eUp.Org;
-		var e;
-
-		/* Find the region above the uppermost edge with the same origin */
-		do {
-			reg = Sweep.regionAbove( reg );
-		} while( reg.eUp.Org === org );
-
-		/* If the edge above was a temporary edge introduced by ConnectRightVertex,
-		* now is the time to fix it.
-		*/
-		if( reg.fixUpperEdge ) {
-			e = tess.mesh.connect( Sweep.regionBelow(reg).eUp.Sym, reg.eUp.Lnext );
-			if (e === null) return null;
-			Sweep.fixUpperEdge( tess, reg, e );
-			reg = Sweep.regionAbove( reg );
-		}
-		return reg;
-	}
-
-	//static ActiveRegion *TopRightRegion( ActiveRegion *reg )
-	Sweep.topRightRegion = function( reg )
-	{
-		var dst = reg.eUp.Dst;
-		var reg = null;
-		/* Find the region above the uppermost edge with the same destination */
-		do {
-			reg = Sweep.regionAbove( reg );
-		} while( reg.eUp.Dst === dst );
-		return reg;
-	}
-
-	//static ActiveRegion *AddRegionBelow( TESStesselator *tess, ActiveRegion *regAbove, TESShalfEdge *eNewUp )
-	Sweep.addRegionBelow = function( tess, regAbove, eNewUp ) {
-		/*
-		* Add a new active region to the sweep line, *somewhere* below "regAbove"
-		* (according to where the new edge belongs in the sweep-line dictionary).
-		* The upper edge of the new region will be "eNewUp".
-		* Winding number and "inside" flag are not updated.
-		*/
-		var regNew = new ActiveRegion();
-		regNew.eUp = eNewUp;
-		regNew.nodeUp = tess.dict.insertBefore( regAbove.nodeUp, regNew );
-	//	if (regNew->nodeUp == NULL) longjmp(tess->env,1);
-		regNew.fixUpperEdge = false;
-		regNew.sentinel = false;
-		regNew.dirty = false;
-
-		eNewUp.activeRegion = regNew;
-		return regNew;
-	}
-
-	//static int IsWindingInside( TESStesselator *tess, int n )
-	Sweep.isWindingInside = function( tess, n ) {
-		switch( tess.windingRule ) {
-			case Tess2.WINDING_ODD:
-				return (n & 1) != 0;
-			case Tess2.WINDING_NONZERO:
-				return (n != 0);
-			case Tess2.WINDING_POSITIVE:
-				return (n > 0);
-			case Tess2.WINDING_NEGATIVE:
-				return (n < 0);
-			case Tess2.WINDING_ABS_GEQ_TWO:
-				return (n >= 2) || (n <= -2);
-		}
-		assert( false );
-		return false;
-	}
-
-	//static void ComputeWinding( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.computeWinding = function( tess, reg ) {
-		reg.windingNumber = Sweep.regionAbove(reg).windingNumber + reg.eUp.winding;
-		reg.inside = Sweep.isWindingInside( tess, reg.windingNumber );
-	}
-
-
-	//static void FinishRegion( TESStesselator *tess, ActiveRegion *reg )
-	Sweep.finishRegion = function( tess, reg ) {
-		/*
-		* Delete a region from the sweep line.  This happens when the upper
-		* and lower chains of a region meet (at a vertex on the sweep line).
-		* The "inside" flag is copied to the appropriate mesh face (we could
-		* not do this before -- since the structure of the mesh is always
-		* changing, this face may not have even existed until now).
-		*/
-		var e = reg.eUp;
-		var f = e.Lface;
-
-		f.inside = reg.inside;
-		f.anEdge = e;   /* optimization for tessMeshTessellateMonoRegion() */
-		Sweep.deleteRegion( tess, reg );
-	}
-
-
-	//static TESShalfEdge *FinishLeftRegions( TESStesselator *tess, ActiveRegion *regFirst, ActiveRegion *regLast )
-	Sweep.finishLeftRegions = function( tess, regFirst, regLast ) {
-		/*
-		* We are given a vertex with one or more left-going edges.  All affected
-		* edges should be in the edge dictionary.  Starting at regFirst->eUp,
-		* we walk down deleting all regions where both edges have the same
-		* origin vOrg.  At the same time we copy the "inside" flag from the
-		* active region to the face, since at this point each face will belong
-		* to at most one region (this was not necessarily true until this point
-		* in the sweep).  The walk stops at the region above regLast; if regLast
-		* is NULL we walk as far as possible.  At the same time we relink the
-		* mesh if necessary, so that the ordering of edges around vOrg is the
-		* same as in the dictionary.
-		*/
-		var e, ePrev;
-		var reg = null;
-		var regPrev = regFirst;
-		var ePrev = regFirst.eUp;
-		while( regPrev !== regLast ) {
-			regPrev.fixUpperEdge = false;	/* placement was OK */
-			reg = Sweep.regionBelow( regPrev );
-			e = reg.eUp;
-			if( e.Org != ePrev.Org ) {
-				if( ! reg.fixUpperEdge ) {
-					/* Remove the last left-going edge.  Even though there are no further
-					* edges in the dictionary with this origin, there may be further
-					* such edges in the mesh (if we are adding left edges to a vertex
-					* that has already been processed).  Thus it is important to call
-					* FinishRegion rather than just DeleteRegion.
-					*/
-					Sweep.finishRegion( tess, regPrev );
-					break;
-				}
-				/* If the edge below was a temporary edge introduced by
-				* ConnectRightVertex, now is the time to fix it.
-				*/
-				e = tess.mesh.connect( ePrev.Lprev, e.Sym );
-	//			if (e == NULL) longjmp(tess->env,1);
-				Sweep.fixUpperEdge( tess, reg, e );
-			}
-
-			/* Relink edges so that ePrev->Onext == e */
-			if( ePrev.Onext !== e ) {
-				tess.mesh.splice( e.Oprev, e );
-				tess.mesh.splice( ePrev, e );
-			}
-			Sweep.finishRegion( tess, regPrev );	/* may change reg->eUp */
-			ePrev = reg.eUp;
-			regPrev = reg;
-		}
-		return ePrev;
-	}
-
-
-	//static void AddRightEdges( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eFirst, TESShalfEdge *eLast, TESShalfEdge *eTopLeft, int cleanUp )
-	Sweep.addRightEdges = function( tess, regUp, eFirst, eLast, eTopLeft, cleanUp ) {
-		/*
-		* Purpose: insert right-going edges into the edge dictionary, and update
-		* winding numbers and mesh connectivity appropriately.  All right-going
-		* edges share a common origin vOrg.  Edges are inserted CCW starting at
-		* eFirst; the last edge inserted is eLast->Oprev.  If vOrg has any
-		* left-going edges already processed, then eTopLeft must be the edge
-		* such that an imaginary upward vertical segment from vOrg would be
-		* contained between eTopLeft->Oprev and eTopLeft; otherwise eTopLeft
-		* should be NULL.
-		*/
-		var reg, regPrev;
-		var e, ePrev;
-		var firstTime = true;
-
-		/* Insert the new right-going edges in the dictionary */
-		e = eFirst;
-		do {
-			assert( Geom.vertLeq( e.Org, e.Dst ));
-			Sweep.addRegionBelow( tess, regUp, e.Sym );
-			e = e.Onext;
-		} while ( e !== eLast );
-
-		/* Walk *all* right-going edges from e->Org, in the dictionary order,
-		* updating the winding numbers of each region, and re-linking the mesh
-		* edges to match the dictionary ordering (if necessary).
-		*/
-		if( eTopLeft === null ) {
-			eTopLeft = Sweep.regionBelow( regUp ).eUp.Rprev;
-		}
-		regPrev = regUp;
-		ePrev = eTopLeft;
-		for( ;; ) {
-			reg = Sweep.regionBelow( regPrev );
-			e = reg.eUp.Sym;
-			if( e.Org !== ePrev.Org ) break;
-
-			if( e.Onext !== ePrev ) {
-				/* Unlink e from its current position, and relink below ePrev */
-				tess.mesh.splice( e.Oprev, e );
-				tess.mesh.splice( ePrev.Oprev, e );
-			}
-			/* Compute the winding number and "inside" flag for the new regions */
-			reg.windingNumber = regPrev.windingNumber - e.winding;
-			reg.inside = Sweep.isWindingInside( tess, reg.windingNumber );
-
-			/* Check for two outgoing edges with same slope -- process these
-			* before any intersection tests (see example in tessComputeInterior).
-			*/
-			regPrev.dirty = true;
-			if( ! firstTime && Sweep.checkForRightSplice( tess, regPrev )) {
-				Sweep.addWinding( e, ePrev );
-				Sweep.deleteRegion( tess, regPrev );
-				tess.mesh.delete( ePrev );
-			}
-			firstTime = false;
-			regPrev = reg;
-			ePrev = e;
-		}
-		regPrev.dirty = true;
-		assert( regPrev.windingNumber - e.winding === reg.windingNumber );
-
-		if( cleanUp ) {
-			/* Check for intersections between newly adjacent edges. */
-			Sweep.walkDirtyRegions( tess, regPrev );
-		}
-	}
-
-
-	//static void SpliceMergeVertices( TESStesselator *tess, TESShalfEdge *e1, TESShalfEdge *e2 )
-	Sweep.spliceMergeVertices = function( tess, e1, e2 ) {
-		/*
-		* Two vertices with idential coordinates are combined into one.
-		* e1->Org is kept, while e2->Org is discarded.
-		*/
-		tess.mesh.splice( e1, e2 ); 
-	}
-
-	//static void VertexWeights( TESSvertex *isect, TESSvertex *org, TESSvertex *dst, TESSreal *weights )
-	Sweep.vertexWeights = function( isect, org, dst ) {
-		/*
-		* Find some weights which describe how the intersection vertex is
-		* a linear combination of "org" and "dest".  Each of the two edges
-		* which generated "isect" is allocated 50% of the weight; each edge
-		* splits the weight between its org and dst according to the
-		* relative distance to "isect".
-		*/
-		var t1 = Geom.vertL1dist( org, isect );
-		var t2 = Geom.vertL1dist( dst, isect );
-		var w0 = 0.5 * t2 / (t1 + t2);
-		var w1 = 0.5 * t1 / (t1 + t2);
-		isect.coords[0] += w0*org.coords[0] + w1*dst.coords[0];
-		isect.coords[1] += w0*org.coords[1] + w1*dst.coords[1];
-		isect.coords[2] += w0*org.coords[2] + w1*dst.coords[2];
-	}
-
-
-	//static void GetIntersectData( TESStesselator *tess, TESSvertex *isect, TESSvertex *orgUp, TESSvertex *dstUp, TESSvertex *orgLo, TESSvertex *dstLo )
-	Sweep.getIntersectData = function( tess, isect, orgUp, dstUp, orgLo, dstLo ) {
-		 /*
-		 * We've computed a new intersection point, now we need a "data" pointer
-		 * from the user so that we can refer to this new vertex in the
-		 * rendering callbacks.
-		 */
-		isect.coords[0] = isect.coords[1] = isect.coords[2] = 0;
-		isect.idx = -1;
-		Sweep.vertexWeights( isect, orgUp, dstUp );
-		Sweep.vertexWeights( isect, orgLo, dstLo );
-	}
-
-	//static int CheckForRightSplice( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForRightSplice = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edge of "regUp", to make sure that the
-		* eUp->Org is above eLo, or eLo->Org is below eUp (depending on which
-		* origin is leftmost).
-		*
-		* The main purpose is to splice right-going edges with the same
-		* dest vertex and nearly identical slopes (ie. we can't distinguish
-		* the slopes numerically).  However the splicing can also help us
-		* to recover from numerical errors.  For example, suppose at one
-		* point we checked eUp and eLo, and decided that eUp->Org is barely
-		* above eLo.  Then later, we split eLo into two edges (eg. from
-		* a splice operation like this one).  This can change the result of
-		* our test so that now eUp->Org is incident to eLo, or barely below it.
-		* We must correct this condition to maintain the dictionary invariants.
-		*
-		* One possibility is to check these edges for intersection again
-		* (ie. CheckForIntersect).  This is what we do if possible.  However
-		* CheckForIntersect requires that tess->event lies between eUp and eLo,
-		* so that it has something to fall back on when the intersection
-		* calculation gives us an unusable answer.  So, for those cases where
-		* we can't check for intersection, this routine fixes the problem
-		* by just splicing the offending vertex into the other edge.
-		* This is a guaranteed solution, no matter how degenerate things get.
-		* Basically this is a combinatorial solution to a numerical problem.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-
-		if( Geom.vertLeq( eUp.Org, eLo.Org )) {
-			if( Geom.edgeSign( eLo.Dst, eUp.Org, eLo.Org ) > 0 ) return false;
-
-			/* eUp->Org appears to be below eLo */
-			if( ! Geom.vertEq( eUp.Org, eLo.Org )) {
-				/* Splice eUp->Org into eLo */
-				tess.mesh.splitEdge( eLo.Sym );
-				tess.mesh.splice( eUp, eLo.Oprev );
-				regUp.dirty = regLo.dirty = true;
-
-			} else if( eUp.Org !== eLo.Org ) {
-				/* merge the two vertices, discarding eUp->Org */
-				tess.pq.delete( eUp.Org.pqHandle );
-				Sweep.spliceMergeVertices( tess, eLo.Oprev, eUp );
-			}
-		} else {
-			if( Geom.edgeSign( eUp.Dst, eLo.Org, eUp.Org ) < 0 ) return false;
-
-			/* eLo->Org appears to be above eUp, so splice eLo->Org into eUp */
-			Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-			tess.mesh.splitEdge( eUp.Sym );
-			tess.mesh.splice( eLo.Oprev, eUp );
-		}
-		return true;
-	}
-
-	//static int CheckForLeftSplice( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForLeftSplice = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edge of "regUp", to make sure that the
-		* eUp->Dst is above eLo, or eLo->Dst is below eUp (depending on which
-		* destination is rightmost).
-		*
-		* Theoretically, this should always be true.  However, splitting an edge
-		* into two pieces can change the results of previous tests.  For example,
-		* suppose at one point we checked eUp and eLo, and decided that eUp->Dst
-		* is barely above eLo.  Then later, we split eLo into two edges (eg. from
-		* a splice operation like this one).  This can change the result of
-		* the test so that now eUp->Dst is incident to eLo, or barely below it.
-		* We must correct this condition to maintain the dictionary invariants
-		* (otherwise new edges might get inserted in the wrong place in the
-		* dictionary, and bad stuff will happen).
-		*
-		* We fix the problem by just splicing the offending vertex into the
-		* other edge.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var e;
-
-		assert( ! Geom.vertEq( eUp.Dst, eLo.Dst ));
-
-		if( Geom.vertLeq( eUp.Dst, eLo.Dst )) {
-			if( Geom.edgeSign( eUp.Dst, eLo.Dst, eUp.Org ) < 0 ) return false;
-
-			/* eLo->Dst is above eUp, so splice eLo->Dst into eUp */
-			Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-			e = tess.mesh.splitEdge( eUp );
-			tess.mesh.splice( eLo.Sym, e );
-			e.Lface.inside = regUp.inside;
-		} else {
-			if( Geom.edgeSign( eLo.Dst, eUp.Dst, eLo.Org ) > 0 ) return false;
-
-			/* eUp->Dst is below eLo, so splice eUp->Dst into eLo */
-			regUp.dirty = regLo.dirty = true;
-			e = tess.mesh.splitEdge( eLo );
-			tess.mesh.splice( eUp.Lnext, eLo.Sym );
-			e.Rface.inside = regUp.inside;
-		}
-		return true;
-	}
-
-
-	//static int CheckForIntersect( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.checkForIntersect = function( tess, regUp ) {
-		/*
-		* Check the upper and lower edges of the given region to see if
-		* they intersect.  If so, create the intersection and add it
-		* to the data structures.
-		*
-		* Returns TRUE if adding the new intersection resulted in a recursive
-		* call to AddRightEdges(); in this case all "dirty" regions have been
-		* checked for intersections, and possibly regUp has been deleted.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var orgUp = eUp.Org;
-		var orgLo = eLo.Org;
-		var dstUp = eUp.Dst;
-		var dstLo = eLo.Dst;
-		var tMinUp, tMaxLo;
-		var isect = new TESSvertex, orgMin;
-		var e;
-
-		assert( ! Geom.vertEq( dstLo, dstUp ));
-		assert( Geom.edgeSign( dstUp, tess.event, orgUp ) <= 0 );
-		assert( Geom.edgeSign( dstLo, tess.event, orgLo ) >= 0 );
-		assert( orgUp !== tess.event && orgLo !== tess.event );
-		assert( ! regUp.fixUpperEdge && ! regLo.fixUpperEdge );
-
-		if( orgUp === orgLo ) return false;	/* right endpoints are the same */
-
-		tMinUp = Math.min( orgUp.t, dstUp.t );
-		tMaxLo = Math.max( orgLo.t, dstLo.t );
-		if( tMinUp > tMaxLo ) return false;	/* t ranges do not overlap */
-
-		if( Geom.vertLeq( orgUp, orgLo )) {
-			if( Geom.edgeSign( dstLo, orgUp, orgLo ) > 0 ) return false;
-		} else {
-			if( Geom.edgeSign( dstUp, orgLo, orgUp ) < 0 ) return false;
-		}
-
-		/* At this point the edges intersect, at least marginally */
-		Sweep.debugEvent( tess );
-
-		Geom.intersect( dstUp, orgUp, dstLo, orgLo, isect );
-		/* The following properties are guaranteed: */
-		assert( Math.min( orgUp.t, dstUp.t ) <= isect.t );
-		assert( isect.t <= Math.max( orgLo.t, dstLo.t ));
-		assert( Math.min( dstLo.s, dstUp.s ) <= isect.s );
-		assert( isect.s <= Math.max( orgLo.s, orgUp.s ));
-
-		if( Geom.vertLeq( isect, tess.event )) {
-			/* The intersection point lies slightly to the left of the sweep line,
-			* so move it until it''s slightly to the right of the sweep line.
-			* (If we had perfect numerical precision, this would never happen
-			* in the first place).  The easiest and safest thing to do is
-			* replace the intersection by tess->event.
-			*/
-			isect.s = tess.event.s;
-			isect.t = tess.event.t;
-		}
-		/* Similarly, if the computed intersection lies to the right of the
-		* rightmost origin (which should rarely happen), it can cause
-		* unbelievable inefficiency on sufficiently degenerate inputs.
-		* (If you have the test program, try running test54.d with the
-		* "X zoom" option turned on).
-		*/
-		orgMin = Geom.vertLeq( orgUp, orgLo ) ? orgUp : orgLo;
-		if( Geom.vertLeq( orgMin, isect )) {
-			isect.s = orgMin.s;
-			isect.t = orgMin.t;
-		}
-
-		if( Geom.vertEq( isect, orgUp ) || Geom.vertEq( isect, orgLo )) {
-			/* Easy case -- intersection at one of the right endpoints */
-			Sweep.checkForRightSplice( tess, regUp );
-			return false;
-		}
-
-		if(    (! Geom.vertEq( dstUp, tess.event )
-			&& Geom.edgeSign( dstUp, tess.event, isect ) >= 0)
-			|| (! Geom.vertEq( dstLo, tess.event )
-			&& Geom.edgeSign( dstLo, tess.event, isect ) <= 0 ))
-		{
-			/* Very unusual -- the new upper or lower edge would pass on the
-			* wrong side of the sweep event, or through it.  This can happen
-			* due to very small numerical errors in the intersection calculation.
-			*/
-			if( dstLo === tess.event ) {
-				/* Splice dstLo into eUp, and process the new region(s) */
-				tess.mesh.splitEdge( eUp.Sym );
-				tess.mesh.splice( eLo.Sym, eUp );
-				regUp = Sweep.topLeftRegion( tess, regUp );
-	//			if (regUp == NULL) longjmp(tess->env,1);
-				eUp = Sweep.regionBelow(regUp).eUp;
-				Sweep.finishLeftRegions( tess, Sweep.regionBelow(regUp), regLo );
-				Sweep.addRightEdges( tess, regUp, eUp.Oprev, eUp, eUp, true );
-				return TRUE;
-			}
-			if( dstUp === tess.event ) {
-				/* Splice dstUp into eLo, and process the new region(s) */
-				tess.mesh.splitEdge( eLo.Sym );
-				tess.mesh.splice( eUp.Lnext, eLo.Oprev ); 
-				regLo = regUp;
-				regUp = Sweep.topRightRegion( regUp );
-				e = Sweep.regionBelow(regUp).eUp.Rprev;
-				regLo.eUp = eLo.Oprev;
-				eLo = Sweep.finishLeftRegions( tess, regLo, null );
-				Sweep.addRightEdges( tess, regUp, eLo.Onext, eUp.Rprev, e, true );
-				return true;
-			}
-			/* Special case: called from ConnectRightVertex.  If either
-			* edge passes on the wrong side of tess->event, split it
-			* (and wait for ConnectRightVertex to splice it appropriately).
-			*/
-			if( Geom.edgeSign( dstUp, tess.event, isect ) >= 0 ) {
-				Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
-				tess.mesh.splitEdge( eUp.Sym );
-				eUp.Org.s = tess.event.s;
-				eUp.Org.t = tess.event.t;
-			}
-			if( Geom.edgeSign( dstLo, tess.event, isect ) <= 0 ) {
-				regUp.dirty = regLo.dirty = true;
-				tess.mesh.splitEdge( eLo.Sym );
-				eLo.Org.s = tess.event.s;
-				eLo.Org.t = tess.event.t;
-			}
-			/* leave the rest for ConnectRightVertex */
-			return false;
-		}
-
-		/* General case -- split both edges, splice into new vertex.
-		* When we do the splice operation, the order of the arguments is
-		* arbitrary as far as correctness goes.  However, when the operation
-		* creates a new face, the work done is proportional to the size of
-		* the new face.  We expect the faces in the processed part of
-		* the mesh (ie. eUp->Lface) to be smaller than the faces in the
-		* unprocessed original contours (which will be eLo->Oprev->Lface).
-		*/
-		tess.mesh.splitEdge( eUp.Sym );
-		tess.mesh.splitEdge( eLo.Sym );
-		tess.mesh.splice( eLo.Oprev, eUp );
-		eUp.Org.s = isect.s;
-		eUp.Org.t = isect.t;
-		eUp.Org.pqHandle = tess.pq.insert( eUp.Org );
-		Sweep.getIntersectData( tess, eUp.Org, orgUp, dstUp, orgLo, dstLo );
-		Sweep.regionAbove(regUp).dirty = regUp.dirty = regLo.dirty = true;
-		return false;
-	}
-
-	//static void WalkDirtyRegions( TESStesselator *tess, ActiveRegion *regUp )
-	Sweep.walkDirtyRegions = function( tess, regUp ) {
-		/*
-		* When the upper or lower edge of any region changes, the region is
-		* marked "dirty".  This routine walks through all the dirty regions
-		* and makes sure that the dictionary invariants are satisfied
-		* (see the comments at the beginning of this file).  Of course
-		* new dirty regions can be created as we make changes to restore
-		* the invariants.
-		*/
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp, eLo;
-
-		for( ;; ) {
-			/* Find the lowest dirty region (we walk from the bottom up). */
-			while( regLo.dirty ) {
-				regUp = regLo;
-				regLo = Sweep.regionBelow(regLo);
-			}
-			if( ! regUp.dirty ) {
-				regLo = regUp;
-				regUp = Sweep.regionAbove( regUp );
-				if( regUp == null || ! regUp.dirty ) {
-					/* We've walked all the dirty regions */
-					return;
-				}
-			}
-			regUp.dirty = false;
-			eUp = regUp.eUp;
-			eLo = regLo.eUp;
-
-			if( eUp.Dst !== eLo.Dst ) {
-				/* Check that the edge ordering is obeyed at the Dst vertices. */
-				if( Sweep.checkForLeftSplice( tess, regUp )) {
-
-					/* If the upper or lower edge was marked fixUpperEdge, then
-					* we no longer need it (since these edges are needed only for
-					* vertices which otherwise have no right-going edges).
-					*/
-					if( regLo.fixUpperEdge ) {
-						Sweep.deleteRegion( tess, regLo );
-						tess.mesh.delete( eLo );
-						regLo = Sweep.regionBelow( regUp );
-						eLo = regLo.eUp;
-					} else if( regUp.fixUpperEdge ) {
-						Sweep.deleteRegion( tess, regUp );
-						tess.mesh.delete( eUp );
-						regUp = Sweep.regionAbove( regLo );
-						eUp = regUp.eUp;
-					}
-				}
-			}
-			if( eUp.Org !== eLo.Org ) {
-				if(    eUp.Dst !== eLo.Dst
-					&& ! regUp.fixUpperEdge && ! regLo.fixUpperEdge
-					&& (eUp.Dst === tess.event || eLo.Dst === tess.event) )
-				{
-					/* When all else fails in CheckForIntersect(), it uses tess->event
-					* as the intersection location.  To make this possible, it requires
-					* that tess->event lie between the upper and lower edges, and also
-					* that neither of these is marked fixUpperEdge (since in the worst
-					* case it might splice one of these edges into tess->event, and
-					* violate the invariant that fixable edges are the only right-going
-					* edge from their associated vertex).
-					*/
-					if( Sweep.checkForIntersect( tess, regUp )) {
-						/* WalkDirtyRegions() was called recursively; we're done */
-						return;
-					}
-				} else {
-					/* Even though we can't use CheckForIntersect(), the Org vertices
-					* may violate the dictionary edge ordering.  Check and correct this.
-					*/
-					Sweep.checkForRightSplice( tess, regUp );
-				}
-			}
-			if( eUp.Org === eLo.Org && eUp.Dst === eLo.Dst ) {
-				/* A degenerate loop consisting of only two edges -- delete it. */
-				Sweep.addWinding( eLo, eUp );
-				Sweep.deleteRegion( tess, regUp );
-				tess.mesh.delete( eUp );
-				regUp = Sweep.regionAbove( regLo );
-			}
-		}
-	}
-
-
-	//static void ConnectRightVertex( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eBottomLeft )
-	Sweep.connectRightVertex = function( tess, regUp, eBottomLeft ) {
-		/*
-		* Purpose: connect a "right" vertex vEvent (one where all edges go left)
-		* to the unprocessed portion of the mesh.  Since there are no right-going
-		* edges, two regions (one above vEvent and one below) are being merged
-		* into one.  "regUp" is the upper of these two regions.
-		*
-		* There are two reasons for doing this (adding a right-going edge):
-		*  - if the two regions being merged are "inside", we must add an edge
-		*    to keep them separated (the combined region would not be monotone).
-		*  - in any case, we must leave some record of vEvent in the dictionary,
-		*    so that we can merge vEvent with features that we have not seen yet.
-		*    For example, maybe there is a vertical edge which passes just to
-		*    the right of vEvent; we would like to splice vEvent into this edge.
-		*
-		* However, we don't want to connect vEvent to just any vertex.  We don''t
-		* want the new edge to cross any other edges; otherwise we will create
-		* intersection vertices even when the input data had no self-intersections.
-		* (This is a bad thing; if the user's input data has no intersections,
-		* we don't want to generate any false intersections ourselves.)
-		*
-		* Our eventual goal is to connect vEvent to the leftmost unprocessed
-		* vertex of the combined region (the union of regUp and regLo).
-		* But because of unseen vertices with all right-going edges, and also
-		* new vertices which may be created by edge intersections, we don''t
-		* know where that leftmost unprocessed vertex is.  In the meantime, we
-		* connect vEvent to the closest vertex of either chain, and mark the region
-		* as "fixUpperEdge".  This flag says to delete and reconnect this edge
-		* to the next processed vertex on the boundary of the combined region.
-		* Quite possibly the vertex we connected to will turn out to be the
-		* closest one, in which case we won''t need to make any changes.
-		*/
-		var eNew;
-		var eTopLeft = eBottomLeft.Onext;
-		var regLo = Sweep.regionBelow(regUp);
-		var eUp = regUp.eUp;
-		var eLo = regLo.eUp;
-		var degenerate = false;
-
-		if( eUp.Dst !== eLo.Dst ) {
-			Sweep.checkForIntersect( tess, regUp );
-		}
-
-		/* Possible new degeneracies: upper or lower edge of regUp may pass
-		* through vEvent, or may coincide with new intersection vertex
-		*/
-		if( Geom.vertEq( eUp.Org, tess.event )) {
-			tess.mesh.splice( eTopLeft.Oprev, eUp );
-			regUp = Sweep.topLeftRegion( tess, regUp );
-			eTopLeft = Sweep.regionBelow( regUp ).eUp;
-			Sweep.finishLeftRegions( tess, Sweep.regionBelow(regUp), regLo );
-			degenerate = true;
-		}
-		if( Geom.vertEq( eLo.Org, tess.event )) {
-			tess.mesh.splice( eBottomLeft, eLo.Oprev );
-			eBottomLeft = Sweep.finishLeftRegions( tess, regLo, null );
-			degenerate = true;
-		}
-		if( degenerate ) {
-			Sweep.addRightEdges( tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true );
-			return;
-		}
-
-		/* Non-degenerate situation -- need to add a temporary, fixable edge.
-		* Connect to the closer of eLo->Org, eUp->Org.
-		*/
-		if( Geom.vertLeq( eLo.Org, eUp.Org )) {
-			eNew = eLo.Oprev;
-		} else {
-			eNew = eUp;
-		}
-		eNew = tess.mesh.connect( eBottomLeft.Lprev, eNew );
-
-		/* Prevent cleanup, otherwise eNew might disappear before we've even
-		* had a chance to mark it as a temporary edge.
-		*/
-		Sweep.addRightEdges( tess, regUp, eNew, eNew.Onext, eNew.Onext, false );
-		eNew.Sym.activeRegion.fixUpperEdge = true;
-		Sweep.walkDirtyRegions( tess, regUp );
-	}
-
-	/* Because vertices at exactly the same location are merged together
-	* before we process the sweep event, some degenerate cases can't occur.
-	* However if someone eventually makes the modifications required to
-	* merge features which are close together, the cases below marked
-	* TOLERANCE_NONZERO will be useful.  They were debugged before the
-	* code to merge identical vertices in the main loop was added.
-	*/
-	//#define TOLERANCE_NONZERO	FALSE
-
-	//static void ConnectLeftDegenerate( TESStesselator *tess, ActiveRegion *regUp, TESSvertex *vEvent )
-	Sweep.connectLeftDegenerate = function( tess, regUp, vEvent ) {
-		/*
-		* The event vertex lies exacty on an already-processed edge or vertex.
-		* Adding the new vertex involves splicing it into the already-processed
-		* part of the mesh.
-		*/
-		var e, eTopLeft, eTopRight, eLast;
-		var reg;
-
-		e = regUp.eUp;
-		if( Geom.vertEq( e.Org, vEvent )) {
-			/* e->Org is an unprocessed vertex - just combine them, and wait
-			* for e->Org to be pulled from the queue
-			*/
-			assert( false /*TOLERANCE_NONZERO*/ );
-			Sweep.spliceMergeVertices( tess, e, vEvent.anEdge );
-			return;
-		}
-
-		if( ! Geom.vertEq( e.Dst, vEvent )) {
-			/* General case -- splice vEvent into edge e which passes through it */
-			tess.mesh.splitEdge( e.Sym );
-			if( regUp.fixUpperEdge ) {
-				/* This edge was fixable -- delete unused portion of original edge */
-				tess.mesh.delete( e.Onext );
-				regUp.fixUpperEdge = false;
-			}
-			tess.mesh.splice( vEvent.anEdge, e );
-			Sweep.sweepEvent( tess, vEvent );	/* recurse */
-			return;
-		}
-
-		/* vEvent coincides with e->Dst, which has already been processed.
-		* Splice in the additional right-going edges.
-		*/
-		assert( false /*TOLERANCE_NONZERO*/ );
-		regUp = Sweep.topRightRegion( regUp );
-		reg = Sweep.regionBelow( regUp );
-		eTopRight = reg.eUp.Sym;
-		eTopLeft = eLast = eTopRight.Onext;
-		if( reg.fixUpperEdge ) {
-			/* Here e->Dst has only a single fixable edge going right.
-			* We can delete it since now we have some real right-going edges.
-			*/
-			assert( eTopLeft !== eTopRight );   /* there are some left edges too */
-			Sweep.deleteRegion( tess, reg );
-			tess.mesh.delete( eTopRight );
-			eTopRight = eTopLeft.Oprev;
-		}
-		tess.mesh.splice( vEvent.anEdge, eTopRight );
-		if( ! Geom.edgeGoesLeft( eTopLeft )) {
-			/* e->Dst had no left-going edges -- indicate this to AddRightEdges() */
-			eTopLeft = null;
-		}
-		Sweep.addRightEdges( tess, regUp, eTopRight.Onext, eLast, eTopLeft, true );
-	}
-
-
-	//static void ConnectLeftVertex( TESStesselator *tess, TESSvertex *vEvent )
-	Sweep.connectLeftVertex = function( tess, vEvent ) {
-		/*
-		* Purpose: connect a "left" vertex (one where both edges go right)
-		* to the processed portion of the mesh.  Let R be the active region
-		* containing vEvent, and let U and L be the upper and lower edge
-		* chains of R.  There are two possibilities:
-		*
-		* - the normal case: split R into two regions, by connecting vEvent to
-		*   the rightmost vertex of U or L lying to the left of the sweep line
-		*
-		* - the degenerate case: if vEvent is close enough to U or L, we
-		*   merge vEvent into that edge chain.  The subcases are:
-		*	- merging with the rightmost vertex of U or L
-		*	- merging with the active edge of U or L
-		*	- merging with an already-processed portion of U or L
-		*/
-		var regUp, regLo, reg;
-		var eUp, eLo, eNew;
-		var tmp = new ActiveRegion();
-
-		/* assert( vEvent->anEdge->Onext->Onext == vEvent->anEdge ); */
-
-		/* Get a pointer to the active region containing vEvent */
-		tmp.eUp = vEvent.anEdge.Sym;
-		/* __GL_DICTLISTKEY */ /* tessDictListSearch */
-		regUp = tess.dict.search( tmp ).key;
-		regLo = Sweep.regionBelow( regUp );
-		if( !regLo ) {
-			// This may happen if the input polygon is coplanar.
-			return;
-		}
-		eUp = regUp.eUp;
-		eLo = regLo.eUp;
-
-		/* Try merging with U or L first */
-		if( Geom.edgeSign( eUp.Dst, vEvent, eUp.Org ) === 0.0 ) {
-			Sweep.connectLeftDegenerate( tess, regUp, vEvent );
-			return;
-		}
-
-		/* Connect vEvent to rightmost processed vertex of either chain.
-		* e->Dst is the vertex that we will connect to vEvent.
-		*/
-		reg = Geom.vertLeq( eLo.Dst, eUp.Dst ) ? regUp : regLo;
-
-		if( regUp.inside || reg.fixUpperEdge) {
-			if( reg === regUp ) {
-				eNew = tess.mesh.connect( vEvent.anEdge.Sym, eUp.Lnext );
-			} else {
-				var tempHalfEdge = tess.mesh.connect( eLo.Dnext, vEvent.anEdge);
-				eNew = tempHalfEdge.Sym;
-			}
-			if( reg.fixUpperEdge ) {
-				Sweep.fixUpperEdge( tess, reg, eNew );
-			} else {
-				Sweep.computeWinding( tess, Sweep.addRegionBelow( tess, regUp, eNew ));
-			}
-			Sweep.sweepEvent( tess, vEvent );
-		} else {
-			/* The new vertex is in a region which does not belong to the polygon.
-			* We don''t need to connect this vertex to the rest of the mesh.
-			*/
-			Sweep.addRightEdges( tess, regUp, vEvent.anEdge, vEvent.anEdge, null, true );
-		}
-	};
-
-
-	//static void SweepEvent( TESStesselator *tess, TESSvertex *vEvent )
-	Sweep.sweepEvent = function( tess, vEvent ) {
-		/*
-		* Does everything necessary when the sweep line crosses a vertex.
-		* Updates the mesh and the edge dictionary.
-		*/
-
-		tess.event = vEvent;		/* for access in EdgeLeq() */
-		Sweep.debugEvent( tess );
-
-		/* Check if this vertex is the right endpoint of an edge that is
-		* already in the dictionary.  In this case we don't need to waste
-		* time searching for the location to insert new edges.
-		*/
-		var e = vEvent.anEdge;
-		while( e.activeRegion === null ) {
-			e = e.Onext;
-			if( e == vEvent.anEdge ) {
-				/* All edges go right -- not incident to any processed edges */
-				Sweep.connectLeftVertex( tess, vEvent );
-				return;
-			}
-		}
-
-		/* Processing consists of two phases: first we "finish" all the
-		* active regions where both the upper and lower edges terminate
-		* at vEvent (ie. vEvent is closing off these regions).
-		* We mark these faces "inside" or "outside" the polygon according
-		* to their winding number, and delete the edges from the dictionary.
-		* This takes care of all the left-going edges from vEvent.
-		*/
-		var regUp = Sweep.topLeftRegion( tess, e.activeRegion );
-		assert( regUp !== null );
-	//	if (regUp == NULL) longjmp(tess->env,1);
-		var reg = Sweep.regionBelow( regUp );
-		var eTopLeft = reg.eUp;
-		var eBottomLeft = Sweep.finishLeftRegions( tess, reg, null );
-
-		/* Next we process all the right-going edges from vEvent.  This
-		* involves adding the edges to the dictionary, and creating the
-		* associated "active regions" which record information about the
-		* regions between adjacent dictionary edges.
-		*/
-		if( eBottomLeft.Onext === eTopLeft ) {
-			/* No right-going edges -- add a temporary "fixable" edge */
-			Sweep.connectRightVertex( tess, regUp, eBottomLeft );
-		} else {
-			Sweep.addRightEdges( tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true );
-		}
-	};
-
-
-	/* Make the sentinel coordinates big enough that they will never be
-	* merged with real input features.
-	*/
-
-	//static void AddSentinel( TESStesselator *tess, TESSreal smin, TESSreal smax, TESSreal t )
-	Sweep.addSentinel = function( tess, smin, smax, t ) {
-		/*
-		* We add two sentinel edges above and below all other edges,
-		* to avoid special cases at the top and bottom.
-		*/
-		var reg = new ActiveRegion();
-		var e = tess.mesh.makeEdge();
-	//	if (e == NULL) longjmp(tess->env,1);
-
-		e.Org.s = smax;
-		e.Org.t = t;
-		e.Dst.s = smin;
-		e.Dst.t = t;
-		tess.event = e.Dst;		/* initialize it */
-
-		reg.eUp = e;
-		reg.windingNumber = 0;
-		reg.inside = false;
-		reg.fixUpperEdge = false;
-		reg.sentinel = true;
-		reg.dirty = false;
-		reg.nodeUp = tess.dict.insert( reg );
-	//	if (reg->nodeUp == NULL) longjmp(tess->env,1);
-	}
-
-
-	//static void InitEdgeDict( TESStesselator *tess )
-	Sweep.initEdgeDict = function( tess ) {
-		/*
-		* We maintain an ordering of edge intersections with the sweep line.
-		* This order is maintained in a dynamic dictionary.
-		*/
-		tess.dict = new Dict( tess, Sweep.edgeLeq );
-	//	if (tess->dict == NULL) longjmp(tess->env,1);
-
-		var w = (tess.bmax[0] - tess.bmin[0]);
-		var h = (tess.bmax[1] - tess.bmin[1]);
-
-		var smin = tess.bmin[0] - w;
-		var smax = tess.bmax[0] + w;
-		var tmin = tess.bmin[1] - h;
-		var tmax = tess.bmax[1] + h;
-
-		Sweep.addSentinel( tess, smin, smax, tmin );
-		Sweep.addSentinel( tess, smin, smax, tmax );
-	}
-
-
-	Sweep.doneEdgeDict = function( tess )
-	{
-		var reg;
-		var fixedEdges = 0;
-
-		while( (reg = tess.dict.min().key) !== null ) {
-			/*
-			* At the end of all processing, the dictionary should contain
-			* only the two sentinel edges, plus at most one "fixable" edge
-			* created by ConnectRightVertex().
-			*/
-			if( ! reg.sentinel ) {
-				assert( reg.fixUpperEdge );
-				assert( ++fixedEdges == 1 );
-			}
-			assert( reg.windingNumber == 0 );
-			Sweep.deleteRegion( tess, reg );
-			/*    tessMeshDelete( reg->eUp );*/
-		}
-	//	dictDeleteDict( &tess->alloc, tess->dict );
-	}
-
-
-	Sweep.removeDegenerateEdges = function( tess ) {
-		/*
-		* Remove zero-length edges, and contours with fewer than 3 vertices.
-		*/
-		var e, eNext, eLnext;
-		var eHead = tess.mesh.eHead;
-
-		/*LINTED*/
-		for( e = eHead.next; e !== eHead; e = eNext ) {
-			eNext = e.next;
-			eLnext = e.Lnext;
-
-			if( Geom.vertEq( e.Org, e.Dst ) && e.Lnext.Lnext !== e ) {
-				/* Zero-length edge, contour has at least 3 edges */
-				Sweep.spliceMergeVertices( tess, eLnext, e );	/* deletes e->Org */
-				tess.mesh.delete( e ); /* e is a self-loop */
-				e = eLnext;
-				eLnext = e.Lnext;
-			}
-			if( eLnext.Lnext === e ) {
-				/* Degenerate contour (one or two edges) */
-				if( eLnext !== e ) {
-					if( eLnext === eNext || eLnext === eNext.Sym ) { eNext = eNext.next; }
-					tess.mesh.delete( eLnext );
-				}
-				if( e === eNext || e === eNext.Sym ) { eNext = eNext.next; }
-				tess.mesh.delete( e );
-			}
-		}
-	}
-
-	Sweep.initPriorityQ = function( tess ) {
-		/*
-		* Insert all vertices into the priority queue which determines the
-		* order in which vertices cross the sweep line.
-		*/
-		var pq;
-		var v, vHead;
-		var vertexCount = 0;
-		
-		vHead = tess.mesh.vHead;
-		for( v = vHead.next; v !== vHead; v = v.next ) {
-			vertexCount++;
-		}
-		/* Make sure there is enough space for sentinels. */
-		vertexCount += 8; //MAX( 8, tess->alloc.extraVertices );
-		
-		pq = tess.pq = new PriorityQ( vertexCount, Geom.vertLeq );
-	//	if (pq == NULL) return 0;
-
-		vHead = tess.mesh.vHead;
-		for( v = vHead.next; v !== vHead; v = v.next ) {
-			v.pqHandle = pq.insert( v );
-	//		if (v.pqHandle == INV_HANDLE)
-	//			break;
-		}
-
-		if (v !== vHead) {
-			return false;
-		}
-
-		pq.init();
-
-		return true;
-	}
-
-
-	Sweep.donePriorityQ = function( tess ) {
-		tess.pq = null;
-	}
-
-
-	Sweep.removeDegenerateFaces = function( tess, mesh ) {
-		/*
-		* Delete any degenerate faces with only two edges.  WalkDirtyRegions()
-		* will catch almost all of these, but it won't catch degenerate faces
-		* produced by splice operations on already-processed edges.
-		* The two places this can happen are in FinishLeftRegions(), when
-		* we splice in a "temporary" edge produced by ConnectRightVertex(),
-		* and in CheckForLeftSplice(), where we splice already-processed
-		* edges to ensure that our dictionary invariants are not violated
-		* by numerical errors.
-		*
-		* In both these cases it is *very* dangerous to delete the offending
-		* edge at the time, since one of the routines further up the stack
-		* will sometimes be keeping a pointer to that edge.
-		*/
-		var f, fNext;
-		var e;
-
-		/*LINTED*/
-		for( f = mesh.fHead.next; f !== mesh.fHead; f = fNext ) {
-			fNext = f.next;
-			e = f.anEdge;
-			assert( e.Lnext !== e );
-
-			if( e.Lnext.Lnext === e ) {
-				/* A face with only two edges */
-				Sweep.addWinding( e.Onext, e );
-				tess.mesh.delete( e );
-			}
-		}
-		return true;
-	}
-
-	Sweep.computeInterior = function( tess ) {
-		/*
-		* tessComputeInterior( tess ) computes the planar arrangement specified
-		* by the given contours, and further subdivides this arrangement
-		* into regions.  Each region is marked "inside" if it belongs
-		* to the polygon, according to the rule given by tess->windingRule.
-		* Each interior region is guaranteed be monotone.
-		*/
-		var v, vNext;
-
-		/* Each vertex defines an event for our sweep line.  Start by inserting
-		* all the vertices in a priority queue.  Events are processed in
-		* lexicographic order, ie.
-		*
-		*	e1 < e2  iff  e1.x < e2.x || (e1.x == e2.x && e1.y < e2.y)
-		*/
-		Sweep.removeDegenerateEdges( tess );
-		if ( !Sweep.initPriorityQ( tess ) ) return false; /* if error */
-		Sweep.initEdgeDict( tess );
-
-		while( (v = tess.pq.extractMin()) !== null ) {
-			for( ;; ) {
-				vNext = tess.pq.min();
-				if( vNext === null || ! Geom.vertEq( vNext, v )) break;
-
-				/* Merge together all vertices at exactly the same location.
-				* This is more efficient than processing them one at a time,
-				* simplifies the code (see ConnectLeftDegenerate), and is also
-				* important for correct handling of certain degenerate cases.
-				* For example, suppose there are two identical edges A and B
-				* that belong to different contours (so without this code they would
-				* be processed by separate sweep events).  Suppose another edge C
-				* crosses A and B from above.  When A is processed, we split it
-				* at its intersection point with C.  However this also splits C,
-				* so when we insert B we may compute a slightly different
-				* intersection point.  This might leave two edges with a small
-				* gap between them.  This kind of error is especially obvious
-				* when using boundary extraction (TESS_BOUNDARY_ONLY).
-				*/
-				vNext = tess.pq.extractMin();
-				Sweep.spliceMergeVertices( tess, v.anEdge, vNext.anEdge );
-			}
-			Sweep.sweepEvent( tess, v );
-		}
-
-		/* Set tess->event for debugging purposes */
-		tess.event = tess.dict.min().key.eUp.Org;
-		Sweep.debugEvent( tess );
-		Sweep.doneEdgeDict( tess );
-		Sweep.donePriorityQ( tess );
-
-		if ( !Sweep.removeDegenerateFaces( tess, tess.mesh ) ) return false;
-		tess.mesh.check();
-
-		return true;
-	}
-
-
-	function Tesselator() {
-
-		/*** state needed for collecting the input data ***/
-		this.mesh = null;		/* stores the input contours, and eventually
-							the tessellation itself */
-
-		/*** state needed for projecting onto the sweep plane ***/
-
-		this.normal = [0.0, 0.0, 0.0];	/* user-specified normal (if provided) */
-		this.sUnit = [0.0, 0.0, 0.0];	/* unit vector in s-direction (debugging) */
-		this.tUnit = [0.0, 0.0, 0.0];	/* unit vector in t-direction (debugging) */
-
-		this.bmin = [0.0, 0.0];
-		this.bmax = [0.0, 0.0];
-
-		/*** state needed for the line sweep ***/
-		this.windingRule = Tess2.WINDING_ODD;	/* rule for determining polygon interior */
-
-		this.dict = null;		/* edge dictionary for sweep line */
-		this.pq = null;		/* priority queue of vertex events */
-		this.event = null;		/* current sweep event being processed */
-
-		this.vertexIndexCounter = 0;
-		
-		this.vertices = [];
-		this.vertexIndices = [];
-		this.vertexCount = 0;
-		this.elements = [];
-		this.elementCount = 0;
-	};
-
-	Tesselator.prototype = {
-
-		dot_: function(u, v) {
-			return (u[0]*v[0] + u[1]*v[1] + u[2]*v[2]);
-		},
-
-		normalize_: function( v ) {
-			var len = v[0]*v[0] + v[1]*v[1] + v[2]*v[2];
-			assert( len > 0.0 );
-			len = Math.sqrt( len );
-			v[0] /= len;
-			v[1] /= len;
-			v[2] /= len;
-		},
-
-		longAxis_: function( v ) {
-			var i = 0;
-			if( Math.abs(v[1]) > Math.abs(v[0]) ) { i = 1; }
-			if( Math.abs(v[2]) > Math.abs(v[i]) ) { i = 2; }
-			return i;
-		},
-
-		computeNormal_: function( norm )
-		{
-			var v, v1, v2;
-			var c, tLen2, maxLen2;
-			var maxVal = [0,0,0], minVal = [0,0,0], d1 = [0,0,0], d2 = [0,0,0], tNorm = [0,0,0];
-			var maxVert = [null,null,null], minVert = [null,null,null];
-			var vHead = this.mesh.vHead;
-			var i;
-
-			v = vHead.next;
-			for( i = 0; i < 3; ++i ) {
-				c = v.coords[i];
-				minVal[i] = c;
-				minVert[i] = v;
-				maxVal[i] = c;
-				maxVert[i] = v;
-			}
-
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				for( i = 0; i < 3; ++i ) {
-					c = v.coords[i];
-					if( c < minVal[i] ) { minVal[i] = c; minVert[i] = v; }
-					if( c > maxVal[i] ) { maxVal[i] = c; maxVert[i] = v; }
-				}
-			}
-
-			/* Find two vertices separated by at least 1/sqrt(3) of the maximum
-			* distance between any two vertices
-			*/
-			i = 0;
-			if( maxVal[1] - minVal[1] > maxVal[0] - minVal[0] ) { i = 1; }
-			if( maxVal[2] - minVal[2] > maxVal[i] - minVal[i] ) { i = 2; }
-			if( minVal[i] >= maxVal[i] ) {
-				/* All vertices are the same -- normal doesn't matter */
-				norm[0] = 0; norm[1] = 0; norm[2] = 1;
-				return;
-			}
-
-			/* Look for a third vertex which forms the triangle with maximum area
-			* (Length of normal == twice the triangle area)
-			*/
-			maxLen2 = 0;
-			v1 = minVert[i];
-			v2 = maxVert[i];
-			d1[0] = v1.coords[0] - v2.coords[0];
-			d1[1] = v1.coords[1] - v2.coords[1];
-			d1[2] = v1.coords[2] - v2.coords[2];
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				d2[0] = v.coords[0] - v2.coords[0];
-				d2[1] = v.coords[1] - v2.coords[1];
-				d2[2] = v.coords[2] - v2.coords[2];
-				tNorm[0] = d1[1]*d2[2] - d1[2]*d2[1];
-				tNorm[1] = d1[2]*d2[0] - d1[0]*d2[2];
-				tNorm[2] = d1[0]*d2[1] - d1[1]*d2[0];
-				tLen2 = tNorm[0]*tNorm[0] + tNorm[1]*tNorm[1] + tNorm[2]*tNorm[2];
-				if( tLen2 > maxLen2 ) {
-					maxLen2 = tLen2;
-					norm[0] = tNorm[0];
-					norm[1] = tNorm[1];
-					norm[2] = tNorm[2];
-				}
-			}
-
-			if( maxLen2 <= 0 ) {
-				/* All points lie on a single line -- any decent normal will do */
-				norm[0] = norm[1] = norm[2] = 0;
-				norm[this.longAxis_(d1)] = 1;
-			}
-		},
-
-		checkOrientation_: function() {
-			var area;
-			var f, fHead = this.mesh.fHead;
-			var v, vHead = this.mesh.vHead;
-			var e;
-
-			/* When we compute the normal automatically, we choose the orientation
-			* so that the the sum of the signed areas of all contours is non-negative.
-			*/
-			area = 0;
-			for( f = fHead.next; f !== fHead; f = f.next ) {
-				e = f.anEdge;
-				if( e.winding <= 0 ) continue;
-				do {
-					area += (e.Org.s - e.Dst.s) * (e.Org.t + e.Dst.t);
-					e = e.Lnext;
-				} while( e !== f.anEdge );
-			}
-			if( area < 0 ) {
-				/* Reverse the orientation by flipping all the t-coordinates */
-				for( v = vHead.next; v !== vHead; v = v.next ) {
-					v.t = - v.t;
-				}
-				this.tUnit[0] = - this.tUnit[0];
-				this.tUnit[1] = - this.tUnit[1];
-				this.tUnit[2] = - this.tUnit[2];
-			}
-		},
-
-	/*	#ifdef FOR_TRITE_TEST_PROGRAM
-		#include <stdlib.h>
-		extern int RandomSweep;
-		#define S_UNIT_X	(RandomSweep ? (2*drand48()-1) : 1.0)
-		#define S_UNIT_Y	(RandomSweep ? (2*drand48()-1) : 0.0)
-		#else
-		#if defined(SLANTED_SWEEP) */
-		/* The "feature merging" is not intended to be complete.  There are
-		* special cases where edges are nearly parallel to the sweep line
-		* which are not implemented.  The algorithm should still behave
-		* robustly (ie. produce a reasonable tesselation) in the presence
-		* of such edges, however it may miss features which could have been
-		* merged.  We could minimize this effect by choosing the sweep line
-		* direction to be something unusual (ie. not parallel to one of the
-		* coordinate axes).
-		*/
-	/*	#define S_UNIT_X	(TESSreal)0.50941539564955385	// Pre-normalized
-		#define S_UNIT_Y	(TESSreal)0.86052074622010633
-		#else
-		#define S_UNIT_X	(TESSreal)1.0
-		#define S_UNIT_Y	(TESSreal)0.0
-		#endif
-		#endif*/
-
-		/* Determine the polygon normal and project vertices onto the plane
-		* of the polygon.
-		*/
-		projectPolygon_: function() {
-			var v, vHead = this.mesh.vHead;
-			var norm = [0,0,0];
-			var sUnit, tUnit;
-			var i, first, computedNormal = false;
-
-			norm[0] = this.normal[0];
-			norm[1] = this.normal[1];
-			norm[2] = this.normal[2];
-			if( norm[0] === 0.0 && norm[1] === 0.0 && norm[2] === 0.0 ) {
-				this.computeNormal_( norm );
-				computedNormal = true;
-			}
-			sUnit = this.sUnit;
-			tUnit = this.tUnit;
-			i = this.longAxis_( norm );
-
-	/*	#if defined(FOR_TRITE_TEST_PROGRAM) || defined(TRUE_PROJECT)
-			// Choose the initial sUnit vector to be approximately perpendicular
-			// to the normal.
-			
-			Normalize( norm );
-
-			sUnit[i] = 0;
-			sUnit[(i+1)%3] = S_UNIT_X;
-			sUnit[(i+2)%3] = S_UNIT_Y;
-
-			// Now make it exactly perpendicular 
-			w = Dot( sUnit, norm );
-			sUnit[0] -= w * norm[0];
-			sUnit[1] -= w * norm[1];
-			sUnit[2] -= w * norm[2];
-			Normalize( sUnit );
-
-			// Choose tUnit so that (sUnit,tUnit,norm) form a right-handed frame 
-			tUnit[0] = norm[1]*sUnit[2] - norm[2]*sUnit[1];
-			tUnit[1] = norm[2]*sUnit[0] - norm[0]*sUnit[2];
-			tUnit[2] = norm[0]*sUnit[1] - norm[1]*sUnit[0];
-			Normalize( tUnit );
-		#else*/
-			/* Project perpendicular to a coordinate axis -- better numerically */
-			sUnit[i] = 0;
-			sUnit[(i+1)%3] = 1.0;
-			sUnit[(i+2)%3] = 0.0;
-
-			tUnit[i] = 0;
-			tUnit[(i+1)%3] = 0.0;
-			tUnit[(i+2)%3] = (norm[i] > 0) ? 1.0 : -1.0;
-	//	#endif
-
-			/* Project the vertices onto the sweep plane */
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				v.s = this.dot_( v.coords, sUnit );
-				v.t = this.dot_( v.coords, tUnit );
-			}
-			if( computedNormal ) {
-				this.checkOrientation_();
-			}
-
-			/* Compute ST bounds. */
-			first = true;
-			for( v = vHead.next; v !== vHead; v = v.next ) {
-				if (first) {
-					this.bmin[0] = this.bmax[0] = v.s;
-					this.bmin[1] = this.bmax[1] = v.t;
-					first = false;
-				} else {
-					if (v.s < this.bmin[0]) this.bmin[0] = v.s;
-					if (v.s > this.bmax[0]) this.bmax[0] = v.s;
-					if (v.t < this.bmin[1]) this.bmin[1] = v.t;
-					if (v.t > this.bmax[1]) this.bmax[1] = v.t;
-				}
-			}
-		},
-
-		addWinding_: function(eDst,eSrc) {
-			eDst.winding += eSrc.winding;
-			eDst.Sym.winding += eSrc.Sym.winding;
-		},
-		
-		/* tessMeshTessellateMonoRegion( face ) tessellates a monotone region
-		* (what else would it do??)  The region must consist of a single
-		* loop of half-edges (see mesh.h) oriented CCW.  "Monotone" in this
-		* case means that any vertical line intersects the interior of the
-		* region in a single interval.  
-		*
-		* Tessellation consists of adding interior edges (actually pairs of
-		* half-edges), to split the region into non-overlapping triangles.
-		*
-		* The basic idea is explained in Preparata and Shamos (which I don''t
-		* have handy right now), although their implementation is more
-		* complicated than this one.  The are two edge chains, an upper chain
-		* and a lower chain.  We process all vertices from both chains in order,
-		* from right to left.
-		*
-		* The algorithm ensures that the following invariant holds after each
-		* vertex is processed: the untessellated region consists of two
-		* chains, where one chain (say the upper) is a single edge, and
-		* the other chain is concave.  The left vertex of the single edge
-		* is always to the left of all vertices in the concave chain.
-		*
-		* Each step consists of adding the rightmost unprocessed vertex to one
-		* of the two chains, and forming a fan of triangles from the rightmost
-		* of two chain endpoints.  Determining whether we can add each triangle
-		* to the fan is a simple orientation test.  By making the fan as large
-		* as possible, we restore the invariant (check it yourself).
-		*/
-	//	int tessMeshTessellateMonoRegion( TESSmesh *mesh, TESSface *face )
-		tessellateMonoRegion_: function( mesh, face ) {
-			var up, lo;
-
-			/* All edges are oriented CCW around the boundary of the region.
-			* First, find the half-edge whose origin vertex is rightmost.
-			* Since the sweep goes from left to right, face->anEdge should
-			* be close to the edge we want.
-			*/
-			up = face.anEdge;
-			assert( up.Lnext !== up && up.Lnext.Lnext !== up );
-
-			for( ; Geom.vertLeq( up.Dst, up.Org ); up = up.Lprev )
-				;
-			for( ; Geom.vertLeq( up.Org, up.Dst ); up = up.Lnext )
-				;
-			lo = up.Lprev;
-
-			while( up.Lnext !== lo ) {
-				if( Geom.vertLeq( up.Dst, lo.Org )) {
-					/* up->Dst is on the left.  It is safe to form triangles from lo->Org.
-					* The EdgeGoesLeft test guarantees progress even when some triangles
-					* are CW, given that the upper and lower chains are truly monotone.
-					*/
-					while( lo.Lnext !== up && (Geom.edgeGoesLeft( lo.Lnext )
-						|| Geom.edgeSign( lo.Org, lo.Dst, lo.Lnext.Dst ) <= 0.0 )) {
-							var tempHalfEdge = mesh.connect( lo.Lnext, lo );
-							//if (tempHalfEdge == NULL) return 0;
-							lo = tempHalfEdge.Sym;
-					}
-					lo = lo.Lprev;
-				} else {
-					/* lo->Org is on the left.  We can make CCW triangles from up->Dst. */
-					while( lo.Lnext != up && (Geom.edgeGoesRight( up.Lprev )
-						|| Geom.edgeSign( up.Dst, up.Org, up.Lprev.Org ) >= 0.0 )) {
-							var tempHalfEdge = mesh.connect( up, up.Lprev );
-							//if (tempHalfEdge == NULL) return 0;
-							up = tempHalfEdge.Sym;
-					}
-					up = up.Lnext;
-				}
-			}
-
-			/* Now lo->Org == up->Dst == the leftmost vertex.  The remaining region
-			* can be tessellated in a fan from this leftmost vertex.
-			*/
-			assert( lo.Lnext !== up );
-			while( lo.Lnext.Lnext !== up ) {
-				var tempHalfEdge = mesh.connect( lo.Lnext, lo );
-				//if (tempHalfEdge == NULL) return 0;
-				lo = tempHalfEdge.Sym;
-			}
-
-			return true;
-		},
-
-
-		/* tessMeshTessellateInterior( mesh ) tessellates each region of
-		* the mesh which is marked "inside" the polygon.  Each such region
-		* must be monotone.
-		*/
-		//int tessMeshTessellateInterior( TESSmesh *mesh )
-		tessellateInterior_: function( mesh ) {
-			var f, next;
-
-			/*LINTED*/
-			for( f = mesh.fHead.next; f !== mesh.fHead; f = next ) {
-				/* Make sure we don''t try to tessellate the new triangles. */
-				next = f.next;
-				if( f.inside ) {
-					if ( !this.tessellateMonoRegion_( mesh, f ) ) return false;
-				}
-			}
-
-			return true;
-		},
-
-
-		/* tessMeshDiscardExterior( mesh ) zaps (ie. sets to NULL) all faces
-		* which are not marked "inside" the polygon.  Since further mesh operations
-		* on NULL faces are not allowed, the main purpose is to clean up the
-		* mesh so that exterior loops are not represented in the data structure.
-		*/
-		//void tessMeshDiscardExterior( TESSmesh *mesh )
-		discardExterior_: function( mesh ) {
-			var f, next;
-
-			/*LINTED*/
-			for( f = mesh.fHead.next; f !== mesh.fHead; f = next ) {
-				/* Since f will be destroyed, save its next pointer. */
-				next = f.next;
-				if( ! f.inside ) {
-					mesh.zapFace( f );
-				}
-			}
-		},
-
-		/* tessMeshSetWindingNumber( mesh, value, keepOnlyBoundary ) resets the
-		* winding numbers on all edges so that regions marked "inside" the
-		* polygon have a winding number of "value", and regions outside
-		* have a winding number of 0.
-		*
-		* If keepOnlyBoundary is TRUE, it also deletes all edges which do not
-		* separate an interior region from an exterior one.
-		*/
-	//	int tessMeshSetWindingNumber( TESSmesh *mesh, int value, int keepOnlyBoundary )
-		setWindingNumber_: function( mesh, value, keepOnlyBoundary ) {
-			var e, eNext;
-
-			for( e = mesh.eHead.next; e !== mesh.eHead; e = eNext ) {
-				eNext = e.next;
-				if( e.Rface.inside !== e.Lface.inside ) {
-
-					/* This is a boundary edge (one side is interior, one is exterior). */
-					e.winding = (e.Lface.inside) ? value : -value;
-				} else {
-
-					/* Both regions are interior, or both are exterior. */
-					if( ! keepOnlyBoundary ) {
-						e.winding = 0;
-					} else {
-						mesh.delete( e );
-					}
-				}
-			}
-		},
-
-		getNeighbourFace_: function(edge)
-		{
-			if (!edge.Rface)
-				return -1;
-			if (!edge.Rface.inside)
-				return -1;
-			return edge.Rface.n;
-		},
-
-		outputPolymesh_: function( mesh, elementType, polySize, vertexSize ) {
-			var v;
-			var f;
-			var edge;
-			var maxFaceCount = 0;
-			var maxVertexCount = 0;
-			var faceVerts, i;
-			var elements = 0;
-			var vert;
-
-			// Assume that the input data is triangles now.
-			// Try to merge as many polygons as possible
-			if (polySize > 3)
-			{
-				mesh.mergeConvexFaces( polySize );
-			}
-
-			// Mark unused
-			for ( v = mesh.vHead.next; v !== mesh.vHead; v = v.next )
-				v.n = -1;
-
-			// Create unique IDs for all vertices and faces.
-			for ( f = mesh.fHead.next; f != mesh.fHead; f = f.next )
-			{
-				f.n = -1;
-				if( !f.inside ) continue;
-
-				edge = f.anEdge;
-				faceVerts = 0;
-				do
-				{
-					v = edge.Org;
-					if ( v.n === -1 )
-					{
-						v.n = maxVertexCount;
-						maxVertexCount++;
-					}
-					faceVerts++;
-					edge = edge.Lnext;
-				}
-				while (edge !== f.anEdge);
-				
-				assert( faceVerts <= polySize );
-
-				f.n = maxFaceCount;
-				++maxFaceCount;
-			}
-
-			this.elementCount = maxFaceCount;
-			if (elementType == Tess2.CONNECTED_POLYGONS)
-				maxFaceCount *= 2;
-	/*		tess.elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSindex) * maxFaceCount * polySize );
-			if (!tess->elements)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.elements = [];
-			this.elements.length = maxFaceCount * polySize;
-			
-			this.vertexCount = maxVertexCount;
-	/*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
-															 sizeof(TESSreal) * tess->vertexCount * vertexSize );
-			if (!tess->vertices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertices = [];
-			this.vertices.length = maxVertexCount * vertexSize;
-
-	/*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-																    sizeof(TESSindex) * tess->vertexCount );
-			if (!tess->vertexIndices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertexIndices = [];
-			this.vertexIndices.length = maxVertexCount;
-
-			
-			// Output vertices.
-			for ( v = mesh.vHead.next; v !== mesh.vHead; v = v.next )
-			{
-				if ( v.n != -1 )
-				{
-					// Store coordinate
-					var idx = v.n * vertexSize;
-					this.vertices[idx+0] = v.coords[0];
-					this.vertices[idx+1] = v.coords[1];
-					if ( vertexSize > 2 )
-						this.vertices[idx+2] = v.coords[2];
-					// Store vertex index.
-					this.vertexIndices[v.n] = v.idx;
-				}
-			}
-
-			// Output indices.
-			var nel = 0;
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-				
-				// Store polygon
-				edge = f.anEdge;
-				faceVerts = 0;
-				do
-				{
-					v = edge.Org;
-					this.elements[nel++] = v.n;
-					faceVerts++;
-					edge = edge.Lnext;
-				}
-				while (edge !== f.anEdge);
-				// Fill unused.
-				for (i = faceVerts; i < polySize; ++i)
-					this.elements[nel++] = -1;
-
-				// Store polygon connectivity
-				if ( elementType == Tess2.CONNECTED_POLYGONS )
-				{
-					edge = f.anEdge;
-					do
-					{
-						this.elements[nel++] = this.getNeighbourFace_( edge );
-						edge = edge.Lnext;
-					}
-					while (edge !== f.anEdge);
-					// Fill unused.
-					for (i = faceVerts; i < polySize; ++i)
-						this.elements[nel++] = -1;
-				}
-			}
-		},
-
-	//	void OutputContours( TESStesselator *tess, TESSmesh *mesh, int vertexSize )
-		outputContours_: function( mesh, vertexSize ) {
-			var f;
-			var edge;
-			var start;
-			var verts;
-			var elements;
-			var vertInds;
-			var startVert = 0;
-			var vertCount = 0;
-
-			this.vertexCount = 0;
-			this.elementCount = 0;
-
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-
-				start = edge = f.anEdge;
-				do
-				{
-					this.vertexCount++;
-					edge = edge.Lnext;
-				}
-				while ( edge !== start );
-
-				this.elementCount++;
-			}
-
-	/*		tess->elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSindex) * tess->elementCount * 2 );
-			if (!tess->elements)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.elements = [];
-			this.elements.length = this.elementCount * 2;
-			
-	/*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
-															  sizeof(TESSreal) * tess->vertexCount * vertexSize );
-			if (!tess->vertices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertices = [];
-			this.vertices.length = this.vertexCount * vertexSize;
-
-	/*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
-																    sizeof(TESSindex) * tess->vertexCount );
-			if (!tess->vertexIndices)
-			{
-				tess->outOfMemory = 1;
-				return;
-			}*/
-			this.vertexIndices = [];
-			this.vertexIndices.length = this.vertexCount;
-
-			var nv = 0;
-			var nvi = 0;
-			var nel = 0;
-			startVert = 0;
-
-			for ( f = mesh.fHead.next; f !== mesh.fHead; f = f.next )
-			{
-				if ( !f.inside ) continue;
-
-				vertCount = 0;
-				start = edge = f.anEdge;
-				do
-				{
-					this.vertices[nv++] = edge.Org.coords[0];
-					this.vertices[nv++] = edge.Org.coords[1];
-					if ( vertexSize > 2 )
-						this.vertices[nv++] = edge.Org.coords[2];
-					this.vertexIndices[nvi++] = edge.Org.idx;
-					vertCount++;
-					edge = edge.Lnext;
-				}
-				while ( edge !== start );
-
-				this.elements[nel++] = startVert;
-				this.elements[nel++] = vertCount;
-
-				startVert += vertCount;
-			}
-		},
-
-		addContour: function( size, vertices )
-		{
-			var e;
-			var i;
-
-			if ( this.mesh === null )
-			  	this.mesh = new TESSmesh();
-	/*	 	if ( tess->mesh == NULL ) {
-				tess->outOfMemory = 1;
-				return;
-			}*/
-
-			if ( size < 2 )
-				size = 2;
-			if ( size > 3 )
-				size = 3;
-
-			e = null;
-
-			for( i = 0; i < vertices.length; i += size )
-			{
-				if( e == null ) {
-					/* Make a self-loop (one vertex, one edge). */
-					e = this.mesh.makeEdge();
-	/*				if ( e == NULL ) {
-						tess->outOfMemory = 1;
-						return;
-					}*/
-					this.mesh.splice( e, e.Sym );
-				} else {
-					/* Create a new vertex and edge which immediately follow e
-					* in the ordering around the left face.
-					*/
-					this.mesh.splitEdge( e );
-					e = e.Lnext;
-				}
-
-				/* The new vertex is now e->Org. */
-				e.Org.coords[0] = vertices[i+0];
-				e.Org.coords[1] = vertices[i+1];
-				if ( size > 2 )
-					e.Org.coords[2] = vertices[i+2];
-				else
-					e.Org.coords[2] = 0.0;
-				/* Store the insertion number so that the vertex can be later recognized. */
-				e.Org.idx = this.vertexIndexCounter++;
-
-				/* The winding of an edge says how the winding number changes as we
-				* cross from the edge''s right face to its left face.  We add the
-				* vertices in such an order that a CCW contour will add +1 to
-				* the winding number of the region inside the contour.
-				*/
-				e.winding = 1;
-				e.Sym.winding = -1;
-			}
-		},
-
-	//	int tessTesselate( TESStesselator *tess, int windingRule, int elementType, int polySize, int vertexSize, const TESSreal* normal )
-		tesselate: function( windingRule, elementType, polySize, vertexSize, normal ) {
-			this.vertices = [];
-			this.elements = [];
-			this.vertexIndices = [];
-
-			this.vertexIndexCounter = 0;
-			
-			if (normal)
-			{
-				this.normal[0] = normal[0];
-				this.normal[1] = normal[1];
-				this.normal[2] = normal[2];
-			}
-
-			this.windingRule = windingRule;
-
-			if (vertexSize < 2)
-				vertexSize = 2;
-			if (vertexSize > 3)
-				vertexSize = 3;
-
-	/*		if (setjmp(tess->env) != 0) { 
-				// come back here if out of memory
-				return 0;
-			}*/
-
-			if (!this.mesh)
-			{
-				return false;
-			}
-
-			/* Determine the polygon normal and project vertices onto the plane
-			* of the polygon.
-			*/
-			this.projectPolygon_();
-
-			/* tessComputeInterior( tess ) computes the planar arrangement specified
-			* by the given contours, and further subdivides this arrangement
-			* into regions.  Each region is marked "inside" if it belongs
-			* to the polygon, according to the rule given by tess->windingRule.
-			* Each interior region is guaranteed be monotone.
-			*/
-			Sweep.computeInterior( this );
-
-			var mesh = this.mesh;
-
-			/* If the user wants only the boundary contours, we throw away all edges
-			* except those which separate the interior from the exterior.
-			* Otherwise we tessellate all the regions marked "inside".
-			*/
-			if (elementType == Tess2.BOUNDARY_CONTOURS) {
-				this.setWindingNumber_( mesh, 1, true );
-			} else {
-				this.tessellateInterior_( mesh ); 
-			}
-	//		if (rc == 0) longjmp(tess->env,1);  /* could've used a label */
-
-			mesh.check();
-
-			if (elementType == Tess2.BOUNDARY_CONTOURS) {
-				this.outputContours_( mesh, vertexSize );     /* output contours */
-			}
-			else
-			{
-				this.outputPolymesh_( mesh, elementType, polySize, vertexSize );     /* output polygons */
-			}
-
-//			tess.mesh = null;
-
-			return true;
-		}
-	};
+/* Public API */
+
+__webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+var Tess2 = {};
+var Geom = {};
+module.exports = Tess2;
+Tess2.WINDING_ODD = 0;
+Tess2.WINDING_NONZERO = 1;
+Tess2.WINDING_POSITIVE = 2;
+Tess2.WINDING_NEGATIVE = 3;
+Tess2.WINDING_ABS_GEQ_TWO = 4;
+Tess2.POLYGONS = 0;
+Tess2.CONNECTED_POLYGONS = 1;
+Tess2.BOUNDARY_CONTOURS = 2;
+
+Tess2.tesselate = function (opts) {
+  var debug = opts.debug || false;
+  var tess = new Tesselator();
+
+  for (var i = 0; i < opts.contours.length; i++) {
+    tess.addContour(opts.vertexSize || 2, opts.contours[i]);
+  }
+
+  tess.tesselate(opts.windingRule || Tess2.WINDING_ODD, opts.elementType || Tess2.POLYGONS, opts.polySize || 3, opts.vertexSize || 2, opts.normal || [0, 0, 1]);
+  return {
+    vertices: tess.vertices,
+    vertexIndices: tess.vertexIndices,
+    vertexCount: tess.vertexCount,
+    elements: tess.elements,
+    elementCount: tess.elementCount,
+    mesh: debug ? tess.mesh : undefined
+  };
+};
+/* Internal */
+
+
+var assert = function assert(cond) {
+  if (!cond) {
+    throw "Assertion Failed!";
+  }
+};
+/* The mesh structure is similar in spirit, notation, and operations
+* to the "quad-edge" structure (see L. Guibas and J. Stolfi, Primitives
+* for the manipulation of general subdivisions and the computation of
+* Voronoi diagrams, ACM Transactions on Graphics, 4(2):74-123, April 1985).
+* For a simplified description, see the course notes for CS348a,
+* "Mathematical Foundations of Computer Graphics", available at the
+* Stanford bookstore (and taught during the fall quarter).
+* The implementation also borrows a tiny subset of the graph-based approach
+* use in Mantyla's Geometric Work Bench (see M. Mantyla, An Introduction
+* to Sold Modeling, Computer Science Press, Rockville, Maryland, 1988).
+*
+* The fundamental data structure is the "half-edge".  Two half-edges
+* go together to make an edge, but they point in opposite directions.
+* Each half-edge has a pointer to its mate (the "symmetric" half-edge Sym),
+* its origin vertex (Org), the face on its left side (Lface), and the
+* adjacent half-edges in the CCW direction around the origin vertex
+* (Onext) and around the left face (Lnext).  There is also a "next"
+* pointer for the global edge list (see below).
+*
+* The notation used for mesh navigation:
+*  Sym   = the mate of a half-edge (same edge, but opposite direction)
+*  Onext = edge CCW around origin vertex (keep same origin)
+*  Dnext = edge CCW around destination vertex (keep same dest)
+*  Lnext = edge CCW around left face (dest becomes new origin)
+*  Rnext = edge CCW around right face (origin becomes new dest)
+*
+* "prev" means to substitute CW for CCW in the definitions above.
+*
+* The mesh keeps global lists of all vertices, faces, and edges,
+* stored as doubly-linked circular lists with a dummy header node.
+* The mesh stores pointers to these dummy headers (vHead, fHead, eHead).
+*
+* The circular edge list is special; since half-edges always occur
+* in pairs (e and e->Sym), each half-edge stores a pointer in only
+* one direction.  Starting at eHead and following the e->next pointers
+* will visit each *edge* once (ie. e or e->Sym, but not both).
+* e->Sym stores a pointer in the opposite direction, thus it is
+* always true that e->Sym->next->Sym->next == e.
+*
+* Each vertex has a pointer to next and previous vertices in the
+* circular list, and a pointer to a half-edge with this vertex as
+* the origin (NULL if this is the dummy header).  There is also a
+* field "data" for client data.
+*
+* Each face has a pointer to the next and previous faces in the
+* circular list, and a pointer to a half-edge with this face as
+* the left face (NULL if this is the dummy header).  There is also
+* a field "data" for client data.
+*
+* Note that what we call a "face" is really a loop; faces may consist
+* of more than one loop (ie. not simply connected), but there is no
+* record of this in the data structure.  The mesh may consist of
+* several disconnected regions, so it may not be possible to visit
+* the entire mesh by starting at a half-edge and traversing the edge
+* structure.
+*
+* The mesh does NOT support isolated vertices; a vertex is deleted along
+* with its last edge.  Similarly when two faces are merged, one of the
+* faces is deleted (see tessMeshDelete below).  For mesh operations,
+* all face (loop) and vertex pointers must not be NULL.  However, once
+* mesh manipulation is finished, TESSmeshZapFace can be used to delete
+* faces of the mesh, one at a time.  All external faces can be "zapped"
+* before the mesh is returned to the client; then a NULL face indicates
+* a region which is not part of the output polygon.
+*/
+
+
+function TESSvertex() {
+  this.next = null;
+  /* next vertex (never NULL) */
+
+  this.prev = null;
+  /* previous vertex (never NULL) */
+
+  this.anEdge = null;
+  /* a half-edge with this origin */
+
+  /* Internal data (keep hidden) */
+
+  this.coords = [0, 0, 0];
+  /* vertex location in 3D */
+
+  this.s = 0.0;
+  this.t = 0.0;
+  /* projection onto the sweep plane */
+
+  this.pqHandle = 0;
+  /* to allow deletion from priority queue */
+
+  this.n = 0;
+  /* to allow identify unique vertices */
+
+  this.idx = 0;
+  /* to allow map result to original verts */
+}
+
+function TESSface() {
+  this.next = null;
+  /* next face (never NULL) */
+
+  this.prev = null;
+  /* previous face (never NULL) */
+
+  this.anEdge = null;
+  /* a half edge with this left face */
+
+  /* Internal data (keep hidden) */
+
+  this.trail = null;
+  /* "stack" for conversion to strips */
+
+  this.n = 0;
+  /* to allow identiy unique faces */
+
+  this.marked = false;
+  /* flag for conversion to strips */
+
+  this.inside = false;
+  /* this face is in the polygon interior */
+}
+
+;
+
+function TESShalfEdge(side) {
+  this.next = null;
+  /* doubly-linked list (prev==Sym->next) */
+
+  this.Sym = null;
+  /* same edge, opposite direction */
+
+  this.Onext = null;
+  /* next edge CCW around origin */
+
+  this.Lnext = null;
+  /* next edge CCW around left face */
+
+  this.Org = null;
+  /* origin vertex (Overtex too long) */
+
+  this.Lface = null;
+  /* left face */
+
+  /* Internal data (keep hidden) */
+
+  this.activeRegion = null;
+  /* a region with this upper edge (sweep.c) */
+
+  this.winding = 0;
+  /* change in winding number when crossing
+  from the right face to the left face */
+
+  this.side = side;
+}
+
+;
+TESShalfEdge.prototype = {
+  get Rface() {
+    return this.Sym.Lface;
+  },
+
+  set Rface(v) {
+    this.Sym.Lface = v;
+  },
+
+  get Dst() {
+    return this.Sym.Org;
+  },
+
+  set Dst(v) {
+    this.Sym.Org = v;
+  },
+
+  get Oprev() {
+    return this.Sym.Lnext;
+  },
+
+  set Oprev(v) {
+    this.Sym.Lnext = v;
+  },
+
+  get Lprev() {
+    return this.Onext.Sym;
+  },
+
+  set Lprev(v) {
+    this.Onext.Sym = v;
+  },
+
+  get Dprev() {
+    return this.Lnext.Sym;
+  },
+
+  set Dprev(v) {
+    this.Lnext.Sym = v;
+  },
+
+  get Rprev() {
+    return this.Sym.Onext;
+  },
+
+  set Rprev(v) {
+    this.Sym.Onext = v;
+  },
+
+  get Dnext() {
+    return (
+      /*this.Rprev*/
+      this.Sym.Onext.Sym
+    );
+  },
+
+  /* 3 pointers */
+  set Dnext(v) {
+    /*this.Rprev*/
+    this.Sym.Onext.Sym = v;
+  },
+
+  /* 3 pointers */
+  get Rnext() {
+    return (
+      /*this.Oprev*/
+      this.Sym.Lnext.Sym
+    );
+  },
+
+  /* 3 pointers */
+  set Rnext(v) {
+    /*this.Oprev*/
+    this.Sym.Lnext.Sym = v;
+  }
+  /* 3 pointers */
+
+
+};
+
+function TESSmesh() {
+  var v = new TESSvertex();
+  var f = new TESSface();
+  var e = new TESShalfEdge(0);
+  var eSym = new TESShalfEdge(1);
+  v.next = v.prev = v;
+  v.anEdge = null;
+  f.next = f.prev = f;
+  f.anEdge = null;
+  f.trail = null;
+  f.marked = false;
+  f.inside = false;
+  e.next = e;
+  e.Sym = eSym;
+  e.Onext = null;
+  e.Lnext = null;
+  e.Org = null;
+  e.Lface = null;
+  e.winding = 0;
+  e.activeRegion = null;
+  eSym.next = eSym;
+  eSym.Sym = e;
+  eSym.Onext = null;
+  eSym.Lnext = null;
+  eSym.Org = null;
+  eSym.Lface = null;
+  eSym.winding = 0;
+  eSym.activeRegion = null;
+  this.vHead = v;
+  /* dummy header for vertex list */
+
+  this.fHead = f;
+  /* dummy header for face list */
+
+  this.eHead = e;
+  /* dummy header for edge list */
+
+  this.eHeadSym = eSym;
+  /* and its symmetric counterpart */
+}
+
+;
+/* The mesh operations below have three motivations: completeness,
+* convenience, and efficiency.  The basic mesh operations are MakeEdge,
+* Splice, and Delete.  All the other edge operations can be implemented
+* in terms of these.  The other operations are provided for convenience
+* and/or efficiency.
+*
+* When a face is split or a vertex is added, they are inserted into the
+* global list *before* the existing vertex or face (ie. e->Org or e->Lface).
+* This makes it easier to process all vertices or faces in the global lists
+* without worrying about processing the same data twice.  As a convenience,
+* when a face is split, the "inside" flag is copied from the old face.
+* Other internal data (v->data, v->activeRegion, f->data, f->marked,
+* f->trail, e->winding) is set to zero.
+*
+* ********************** Basic Edge Operations **************************
+*
+* tessMeshMakeEdge( mesh ) creates one edge, two vertices, and a loop.
+* The loop (face) consists of the two new half-edges.
+*
+* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
+* mesh connectivity and topology.  It changes the mesh so that
+*  eOrg->Onext <- OLD( eDst->Onext )
+*  eDst->Onext <- OLD( eOrg->Onext )
+* where OLD(...) means the value before the meshSplice operation.
+*
+* This can have two effects on the vertex structure:
+*  - if eOrg->Org != eDst->Org, the two vertices are merged together
+*  - if eOrg->Org == eDst->Org, the origin is split into two vertices
+* In both cases, eDst->Org is changed and eOrg->Org is untouched.
+*
+* Similarly (and independently) for the face structure,
+*  - if eOrg->Lface == eDst->Lface, one loop is split into two
+*  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
+* In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
+*
+* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
+* if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
+* eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
+* the newly created loop will contain eDel->Dst.  If the deletion of eDel
+* would create isolated vertices, those are deleted as well.
+*
+* ********************** Other Edge Operations **************************
+*
+* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
+* eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
+* eOrg and eNew will have the same left face.
+*
+* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
+* such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
+* eOrg and eNew will have the same left face.
+*
+* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
+* to eDst->Org, and returns the corresponding half-edge eNew.
+* If eOrg->Lface == eDst->Lface, this splits one loop into two,
+* and the newly created loop is eNew->Lface.  Otherwise, two disjoint
+* loops are merged into one, and the loop eDst->Lface is destroyed.
+*
+* ************************ Other Operations *****************************
+*
+* tessMeshNewMesh() creates a new mesh with no edges, no vertices,
+* and no loops (what we usually call a "face").
+*
+* tessMeshUnion( mesh1, mesh2 ) forms the union of all structures in
+* both meshes, and returns the new mesh (the old meshes are destroyed).
+*
+* tessMeshDeleteMesh( mesh ) will free all storage for any valid mesh.
+*
+* tessMeshZapFace( fZap ) destroys a face and removes it from the
+* global face list.  All edges of fZap will have a NULL pointer as their
+* left face.  Any edges which also have a NULL pointer as their right face
+* are deleted entirely (along with any isolated vertices this produces).
+* An entire mesh can be deleted by zapping its faces, one at a time,
+* in any order.  Zapped faces cannot be used in further mesh operations!
+*
+* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
+*/
+
+TESSmesh.prototype = {
+  /* MakeEdge creates a new pair of half-edges which form their own loop.
+  * No vertex or face structures are allocated, but these must be assigned
+  * before the current edge operation is completed.
+  */
+  //static TESShalfEdge *MakeEdge( TESSmesh* mesh, TESShalfEdge *eNext )
+  makeEdge_: function makeEdge_(eNext) {
+    var e = new TESShalfEdge(0);
+    var eSym = new TESShalfEdge(1);
+    /* Make sure eNext points to the first edge of the edge pair */
+
+    if (eNext.Sym.side < eNext.side) {
+      eNext = eNext.Sym;
+    }
+    /* Insert in circular doubly-linked list before eNext.
+    * Note that the prev pointer is stored in Sym->next.
+    */
+
+
+    var ePrev = eNext.Sym.next;
+    eSym.next = ePrev;
+    ePrev.Sym.next = e;
+    e.next = eNext;
+    eNext.Sym.next = eSym;
+    e.Sym = eSym;
+    e.Onext = e;
+    e.Lnext = eSym;
+    e.Org = null;
+    e.Lface = null;
+    e.winding = 0;
+    e.activeRegion = null;
+    eSym.Sym = e;
+    eSym.Onext = eSym;
+    eSym.Lnext = e;
+    eSym.Org = null;
+    eSym.Lface = null;
+    eSym.winding = 0;
+    eSym.activeRegion = null;
+    return e;
+  },
+
+  /* Splice( a, b ) is best described by the Guibas/Stolfi paper or the
+  * CS348a notes (see mesh.h).  Basically it modifies the mesh so that
+  * a->Onext and b->Onext are exchanged.  This can have various effects
+  * depending on whether a and b belong to different face or vertex rings.
+  * For more explanation see tessMeshSplice() below.
+  */
+  // static void Splice( TESShalfEdge *a, TESShalfEdge *b )
+  splice_: function splice_(a, b) {
+    var aOnext = a.Onext;
+    var bOnext = b.Onext;
+    aOnext.Sym.Lnext = b;
+    bOnext.Sym.Lnext = a;
+    a.Onext = bOnext;
+    b.Onext = aOnext;
+  },
+
+  /* MakeVertex( newVertex, eOrig, vNext ) attaches a new vertex and makes it the
+  * origin of all edges in the vertex loop to which eOrig belongs. "vNext" gives
+  * a place to insert the new vertex in the global vertex list.  We insert
+  * the new vertex *before* vNext so that algorithms which walk the vertex
+  * list will not see the newly created vertices.
+  */
+  //static void MakeVertex( TESSvertex *newVertex, TESShalfEdge *eOrig, TESSvertex *vNext )
+  makeVertex_: function makeVertex_(newVertex, eOrig, vNext) {
+    var vNew = newVertex;
+    assert(vNew !== null);
+    /* insert in circular doubly-linked list before vNext */
+
+    var vPrev = vNext.prev;
+    vNew.prev = vPrev;
+    vPrev.next = vNew;
+    vNew.next = vNext;
+    vNext.prev = vNew;
+    vNew.anEdge = eOrig;
+    /* leave coords, s, t undefined */
+
+    /* fix other edges on this vertex loop */
+
+    var e = eOrig;
+
+    do {
+      e.Org = vNew;
+      e = e.Onext;
+    } while (e !== eOrig);
+  },
+
+  /* MakeFace( newFace, eOrig, fNext ) attaches a new face and makes it the left
+  * face of all edges in the face loop to which eOrig belongs.  "fNext" gives
+  * a place to insert the new face in the global face list.  We insert
+  * the new face *before* fNext so that algorithms which walk the face
+  * list will not see the newly created faces.
+  */
+  // static void MakeFace( TESSface *newFace, TESShalfEdge *eOrig, TESSface *fNext )
+  makeFace_: function makeFace_(newFace, eOrig, fNext) {
+    var fNew = newFace;
+    assert(fNew !== null);
+    /* insert in circular doubly-linked list before fNext */
+
+    var fPrev = fNext.prev;
+    fNew.prev = fPrev;
+    fPrev.next = fNew;
+    fNew.next = fNext;
+    fNext.prev = fNew;
+    fNew.anEdge = eOrig;
+    fNew.trail = null;
+    fNew.marked = false;
+    /* The new face is marked "inside" if the old one was.  This is a
+    * convenience for the common case where a face has been split in two.
+    */
+
+    fNew.inside = fNext.inside;
+    /* fix other edges on this face loop */
+
+    var e = eOrig;
+
+    do {
+      e.Lface = fNew;
+      e = e.Lnext;
+    } while (e !== eOrig);
+  },
+
+  /* KillEdge( eDel ) destroys an edge (the half-edges eDel and eDel->Sym),
+  * and removes from the global edge list.
+  */
+  //static void KillEdge( TESSmesh *mesh, TESShalfEdge *eDel )
+  killEdge_: function killEdge_(eDel) {
+    /* Half-edges are allocated in pairs, see EdgePair above */
+    if (eDel.Sym.side < eDel.side) {
+      eDel = eDel.Sym;
+    }
+    /* delete from circular doubly-linked list */
+
+
+    var eNext = eDel.next;
+    var ePrev = eDel.Sym.next;
+    eNext.Sym.next = ePrev;
+    ePrev.Sym.next = eNext;
+  },
+
+  /* KillVertex( vDel ) destroys a vertex and removes it from the global
+  * vertex list.  It updates the vertex loop to point to a given new vertex.
+  */
+  //static void KillVertex( TESSmesh *mesh, TESSvertex *vDel, TESSvertex *newOrg )
+  killVertex_: function killVertex_(vDel, newOrg) {
+    var eStart = vDel.anEdge;
+    /* change the origin of all affected edges */
+
+    var e = eStart;
+
+    do {
+      e.Org = newOrg;
+      e = e.Onext;
+    } while (e !== eStart);
+    /* delete from circular doubly-linked list */
+
+
+    var vPrev = vDel.prev;
+    var vNext = vDel.next;
+    vNext.prev = vPrev;
+    vPrev.next = vNext;
+  },
+
+  /* KillFace( fDel ) destroys a face and removes it from the global face
+  * list.  It updates the face loop to point to a given new face.
+  */
+  //static void KillFace( TESSmesh *mesh, TESSface *fDel, TESSface *newLface )
+  killFace_: function killFace_(fDel, newLface) {
+    var eStart = fDel.anEdge;
+    /* change the left face of all affected edges */
+
+    var e = eStart;
+
+    do {
+      e.Lface = newLface;
+      e = e.Lnext;
+    } while (e !== eStart);
+    /* delete from circular doubly-linked list */
+
+
+    var fPrev = fDel.prev;
+    var fNext = fDel.next;
+    fNext.prev = fPrev;
+    fPrev.next = fNext;
+  },
+
+  /****************** Basic Edge Operations **********************/
+
+  /* tessMeshMakeEdge creates one edge, two vertices, and a loop (face).
+  * The loop consists of the two new half-edges.
+  */
+  //TESShalfEdge *tessMeshMakeEdge( TESSmesh *mesh )
+  makeEdge: function makeEdge() {
+    var newVertex1 = new TESSvertex();
+    var newVertex2 = new TESSvertex();
+    var newFace = new TESSface();
+    var e = this.makeEdge_(this.eHead);
+    this.makeVertex_(newVertex1, e, this.vHead);
+    this.makeVertex_(newVertex2, e.Sym, this.vHead);
+    this.makeFace_(newFace, e, this.fHead);
+    return e;
+  },
+
+  /* tessMeshSplice( eOrg, eDst ) is the basic operation for changing the
+  * mesh connectivity and topology.  It changes the mesh so that
+  *	eOrg->Onext <- OLD( eDst->Onext )
+  *	eDst->Onext <- OLD( eOrg->Onext )
+  * where OLD(...) means the value before the meshSplice operation.
+  *
+  * This can have two effects on the vertex structure:
+  *  - if eOrg->Org != eDst->Org, the two vertices are merged together
+  *  - if eOrg->Org == eDst->Org, the origin is split into two vertices
+  * In both cases, eDst->Org is changed and eOrg->Org is untouched.
+  *
+  * Similarly (and independently) for the face structure,
+  *  - if eOrg->Lface == eDst->Lface, one loop is split into two
+  *  - if eOrg->Lface != eDst->Lface, two distinct loops are joined into one
+  * In both cases, eDst->Lface is changed and eOrg->Lface is unaffected.
+  *
+  * Some special cases:
+  * If eDst == eOrg, the operation has no effect.
+  * If eDst == eOrg->Lnext, the new face will have a single edge.
+  * If eDst == eOrg->Lprev, the old face will have a single edge.
+  * If eDst == eOrg->Onext, the new vertex will have a single edge.
+  * If eDst == eOrg->Oprev, the old vertex will have a single edge.
+  */
+  //int tessMeshSplice( TESSmesh* mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst )
+  splice: function splice(eOrg, eDst) {
+    var joiningLoops = false;
+    var joiningVertices = false;
+    if (eOrg === eDst) return;
+
+    if (eDst.Org !== eOrg.Org) {
+      /* We are merging two disjoint vertices -- destroy eDst->Org */
+      joiningVertices = true;
+      this.killVertex_(eDst.Org, eOrg.Org);
+    }
+
+    if (eDst.Lface !== eOrg.Lface) {
+      /* We are connecting two disjoint loops -- destroy eDst->Lface */
+      joiningLoops = true;
+      this.killFace_(eDst.Lface, eOrg.Lface);
+    }
+    /* Change the edge structure */
+
+
+    this.splice_(eDst, eOrg);
+
+    if (!joiningVertices) {
+      var newVertex = new TESSvertex();
+      /* We split one vertex into two -- the new vertex is eDst->Org.
+      * Make sure the old vertex points to a valid half-edge.
+      */
+
+      this.makeVertex_(newVertex, eDst, eOrg.Org);
+      eOrg.Org.anEdge = eOrg;
+    }
+
+    if (!joiningLoops) {
+      var newFace = new TESSface();
+      /* We split one loop into two -- the new loop is eDst->Lface.
+      * Make sure the old face points to a valid half-edge.
+      */
+
+      this.makeFace_(newFace, eDst, eOrg.Lface);
+      eOrg.Lface.anEdge = eOrg;
+    }
+  },
+
+  /* tessMeshDelete( eDel ) removes the edge eDel.  There are several cases:
+  * if (eDel->Lface != eDel->Rface), we join two loops into one; the loop
+  * eDel->Lface is deleted.  Otherwise, we are splitting one loop into two;
+  * the newly created loop will contain eDel->Dst.  If the deletion of eDel
+  * would create isolated vertices, those are deleted as well.
+  *
+  * This function could be implemented as two calls to tessMeshSplice
+  * plus a few calls to memFree, but this would allocate and delete
+  * unnecessary vertices and faces.
+  */
+  //int tessMeshDelete( TESSmesh *mesh, TESShalfEdge *eDel )
+  delete: function _delete(eDel) {
+    var eDelSym = eDel.Sym;
+    var joiningLoops = false;
+    /* First step: disconnect the origin vertex eDel->Org.  We make all
+    * changes to get a consistent mesh in this "intermediate" state.
+    */
+
+    if (eDel.Lface !== eDel.Rface) {
+      /* We are joining two loops into one -- remove the left face */
+      joiningLoops = true;
+      this.killFace_(eDel.Lface, eDel.Rface);
+    }
+
+    if (eDel.Onext === eDel) {
+      this.killVertex_(eDel.Org, null);
+    } else {
+      /* Make sure that eDel->Org and eDel->Rface point to valid half-edges */
+      eDel.Rface.anEdge = eDel.Oprev;
+      eDel.Org.anEdge = eDel.Onext;
+      this.splice_(eDel, eDel.Oprev);
+
+      if (!joiningLoops) {
+        var newFace = new TESSface();
+        /* We are splitting one loop into two -- create a new loop for eDel. */
+
+        this.makeFace_(newFace, eDel, eDel.Lface);
+      }
+    }
+    /* Claim: the mesh is now in a consistent state, except that eDel->Org
+    * may have been deleted.  Now we disconnect eDel->Dst.
+    */
+
+
+    if (eDelSym.Onext === eDelSym) {
+      this.killVertex_(eDelSym.Org, null);
+      this.killFace_(eDelSym.Lface, null);
+    } else {
+      /* Make sure that eDel->Dst and eDel->Lface point to valid half-edges */
+      eDel.Lface.anEdge = eDelSym.Oprev;
+      eDelSym.Org.anEdge = eDelSym.Onext;
+      this.splice_(eDelSym, eDelSym.Oprev);
+    }
+    /* Any isolated vertices or faces have already been freed. */
+
+
+    this.killEdge_(eDel);
+  },
+
+  /******************** Other Edge Operations **********************/
+
+  /* All these routines can be implemented with the basic edge
+  * operations above.  They are provided for convenience and efficiency.
+  */
+
+  /* tessMeshAddEdgeVertex( eOrg ) creates a new edge eNew such that
+  * eNew == eOrg->Lnext, and eNew->Dst is a newly created vertex.
+  * eOrg and eNew will have the same left face.
+  */
+  // TESShalfEdge *tessMeshAddEdgeVertex( TESSmesh *mesh, TESShalfEdge *eOrg );
+  addEdgeVertex: function addEdgeVertex(eOrg) {
+    var eNew = this.makeEdge_(eOrg);
+    var eNewSym = eNew.Sym;
+    /* Connect the new edge appropriately */
+
+    this.splice_(eNew, eOrg.Lnext);
+    /* Set the vertex and face information */
+
+    eNew.Org = eOrg.Dst;
+    var newVertex = new TESSvertex();
+    this.makeVertex_(newVertex, eNewSym, eNew.Org);
+    eNew.Lface = eNewSym.Lface = eOrg.Lface;
+    return eNew;
+  },
+
+  /* tessMeshSplitEdge( eOrg ) splits eOrg into two edges eOrg and eNew,
+  * such that eNew == eOrg->Lnext.  The new vertex is eOrg->Dst == eNew->Org.
+  * eOrg and eNew will have the same left face.
+  */
+  // TESShalfEdge *tessMeshSplitEdge( TESSmesh *mesh, TESShalfEdge *eOrg );
+  splitEdge: function splitEdge(eOrg, eDst) {
+    var tempHalfEdge = this.addEdgeVertex(eOrg);
+    var eNew = tempHalfEdge.Sym;
+    /* Disconnect eOrg from eOrg->Dst and connect it to eNew->Org */
+
+    this.splice_(eOrg.Sym, eOrg.Sym.Oprev);
+    this.splice_(eOrg.Sym, eNew);
+    /* Set the vertex and face information */
+
+    eOrg.Dst = eNew.Org;
+    eNew.Dst.anEdge = eNew.Sym;
+    /* may have pointed to eOrg->Sym */
+
+    eNew.Rface = eOrg.Rface;
+    eNew.winding = eOrg.winding;
+    /* copy old winding information */
+
+    eNew.Sym.winding = eOrg.Sym.winding;
+    return eNew;
+  },
+
+  /* tessMeshConnect( eOrg, eDst ) creates a new edge from eOrg->Dst
+  * to eDst->Org, and returns the corresponding half-edge eNew.
+  * If eOrg->Lface == eDst->Lface, this splits one loop into two,
+  * and the newly created loop is eNew->Lface.  Otherwise, two disjoint
+  * loops are merged into one, and the loop eDst->Lface is destroyed.
+  *
+  * If (eOrg == eDst), the new face will have only two edges.
+  * If (eOrg->Lnext == eDst), the old face is reduced to a single edge.
+  * If (eOrg->Lnext->Lnext == eDst), the old face is reduced to two edges.
+  */
+  // TESShalfEdge *tessMeshConnect( TESSmesh *mesh, TESShalfEdge *eOrg, TESShalfEdge *eDst );
+  connect: function connect(eOrg, eDst) {
+    var joiningLoops = false;
+    var eNew = this.makeEdge_(eOrg);
+    var eNewSym = eNew.Sym;
+
+    if (eDst.Lface !== eOrg.Lface) {
+      /* We are connecting two disjoint loops -- destroy eDst->Lface */
+      joiningLoops = true;
+      this.killFace_(eDst.Lface, eOrg.Lface);
+    }
+    /* Connect the new edge appropriately */
+
+
+    this.splice_(eNew, eOrg.Lnext);
+    this.splice_(eNewSym, eDst);
+    /* Set the vertex and face information */
+
+    eNew.Org = eOrg.Dst;
+    eNewSym.Org = eDst.Org;
+    eNew.Lface = eNewSym.Lface = eOrg.Lface;
+    /* Make sure the old face points to a valid half-edge */
+
+    eOrg.Lface.anEdge = eNewSym;
+
+    if (!joiningLoops) {
+      var newFace = new TESSface();
+      /* We split one loop into two -- the new loop is eNew->Lface */
+
+      this.makeFace_(newFace, eNew, eOrg.Lface);
+    }
+
+    return eNew;
+  },
+
+  /* tessMeshZapFace( fZap ) destroys a face and removes it from the
+  * global face list.  All edges of fZap will have a NULL pointer as their
+  * left face.  Any edges which also have a NULL pointer as their right face
+  * are deleted entirely (along with any isolated vertices this produces).
+  * An entire mesh can be deleted by zapping its faces, one at a time,
+  * in any order.  Zapped faces cannot be used in further mesh operations!
+  */
+  zapFace: function zapFace(fZap) {
+    var eStart = fZap.anEdge;
+    var e, eNext, eSym;
+    var fPrev, fNext;
+    /* walk around face, deleting edges whose right face is also NULL */
+
+    eNext = eStart.Lnext;
+
+    do {
+      e = eNext;
+      eNext = e.Lnext;
+      e.Lface = null;
+
+      if (e.Rface === null) {
+        /* delete the edge -- see TESSmeshDelete above */
+        if (e.Onext === e) {
+          this.killVertex_(e.Org, null);
+        } else {
+          /* Make sure that e->Org points to a valid half-edge */
+          e.Org.anEdge = e.Onext;
+          this.splice_(e, e.Oprev);
+        }
+
+        eSym = e.Sym;
+
+        if (eSym.Onext === eSym) {
+          this.killVertex_(eSym.Org, null);
+        } else {
+          /* Make sure that eSym->Org points to a valid half-edge */
+          eSym.Org.anEdge = eSym.Onext;
+          this.splice_(eSym, eSym.Oprev);
+        }
+
+        this.killEdge_(e);
+      }
+    } while (e != eStart);
+    /* delete from circular doubly-linked list */
+
+
+    fPrev = fZap.prev;
+    fNext = fZap.next;
+    fNext.prev = fPrev;
+    fPrev.next = fNext;
+  },
+  countFaceVerts_: function countFaceVerts_(f) {
+    var eCur = f.anEdge;
+    var n = 0;
+
+    do {
+      n++;
+      eCur = eCur.Lnext;
+    } while (eCur !== f.anEdge);
+
+    return n;
+  },
+  //int tessMeshMergeConvexFaces( TESSmesh *mesh, int maxVertsPerFace )
+  mergeConvexFaces: function mergeConvexFaces(maxVertsPerFace) {
+    var f;
+    var eCur, eNext, eSym;
+    var vStart;
+    var curNv, symNv;
+
+    for (f = this.fHead.next; f !== this.fHead; f = f.next) {
+      // Skip faces which are outside the result.
+      if (!f.inside) continue;
+      eCur = f.anEdge;
+      vStart = eCur.Org;
+
+      while (true) {
+        eNext = eCur.Lnext;
+        eSym = eCur.Sym; // Try to merge if the neighbour face is valid.
+
+        if (eSym && eSym.Lface && eSym.Lface.inside) {
+          // Try to merge the neighbour faces if the resulting polygons
+          // does not exceed maximum number of vertices.
+          curNv = this.countFaceVerts_(f);
+          symNv = this.countFaceVerts_(eSym.Lface);
+
+          if (curNv + symNv - 2 <= maxVertsPerFace) {
+            // Merge if the resulting poly is convex.
+            if (Geom.vertCCW(eCur.Lprev.Org, eCur.Org, eSym.Lnext.Lnext.Org) && Geom.vertCCW(eSym.Lprev.Org, eSym.Org, eCur.Lnext.Lnext.Org)) {
+              eNext = eSym.Lnext;
+              this.delete(eSym);
+              eCur = null;
+              eSym = null;
+            }
+          }
+        }
+
+        if (eCur && eCur.Lnext.Org === vStart) break; // Continue to next edge.
+
+        eCur = eNext;
+      }
+    }
+
+    return true;
+  },
+
+  /* tessMeshCheckMesh( mesh ) checks a mesh for self-consistency.
+  */
+  check: function check() {
+    var fHead = this.fHead;
+    var vHead = this.vHead;
+    var eHead = this.eHead;
+    var f, fPrev, v, vPrev, e, ePrev;
+    fPrev = fHead;
+
+    for (fPrev = fHead; (f = fPrev.next) !== fHead; fPrev = f) {
+      assert(f.prev === fPrev);
+      e = f.anEdge;
+
+      do {
+        assert(e.Sym !== e);
+        assert(e.Sym.Sym === e);
+        assert(e.Lnext.Onext.Sym === e);
+        assert(e.Onext.Sym.Lnext === e);
+        assert(e.Lface === f);
+        e = e.Lnext;
+      } while (e !== f.anEdge);
+    }
+
+    assert(f.prev === fPrev && f.anEdge === null);
+    vPrev = vHead;
+
+    for (vPrev = vHead; (v = vPrev.next) !== vHead; vPrev = v) {
+      assert(v.prev === vPrev);
+      e = v.anEdge;
+
+      do {
+        assert(e.Sym !== e);
+        assert(e.Sym.Sym === e);
+        assert(e.Lnext.Onext.Sym === e);
+        assert(e.Onext.Sym.Lnext === e);
+        assert(e.Org === v);
+        e = e.Onext;
+      } while (e !== v.anEdge);
+    }
+
+    assert(v.prev === vPrev && v.anEdge === null);
+    ePrev = eHead;
+
+    for (ePrev = eHead; (e = ePrev.next) !== eHead; ePrev = e) {
+      assert(e.Sym.next === ePrev.Sym);
+      assert(e.Sym !== e);
+      assert(e.Sym.Sym === e);
+      assert(e.Org !== null);
+      assert(e.Dst !== null);
+      assert(e.Lnext.Onext.Sym === e);
+      assert(e.Onext.Sym.Lnext === e);
+    }
+
+    assert(e.Sym.next === ePrev.Sym && e.Sym === this.eHeadSym && e.Sym.Sym === e && e.Org === null && e.Dst === null && e.Lface === null && e.Rface === null);
+  }
+};
+
+Geom.vertEq = function (u, v) {
+  return u.s === v.s && u.t === v.t;
+};
+/* Returns TRUE if u is lexicographically <= v. */
+
+
+Geom.vertLeq = function (u, v) {
+  return u.s < v.s || u.s === v.s && u.t <= v.t;
+};
+/* Versions of VertLeq, EdgeSign, EdgeEval with s and t transposed. */
+
+
+Geom.transLeq = function (u, v) {
+  return u.t < v.t || u.t === v.t && u.s <= v.s;
+};
+
+Geom.edgeGoesLeft = function (e) {
+  return Geom.vertLeq(e.Dst, e.Org);
+};
+
+Geom.edgeGoesRight = function (e) {
+  return Geom.vertLeq(e.Org, e.Dst);
+};
+
+Geom.vertL1dist = function (u, v) {
+  return Math.abs(u.s - v.s) + Math.abs(u.t - v.t);
+}; //TESSreal tesedgeEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.edgeEval = function (u, v, w) {
+  /* Given three vertices u,v,w such that VertLeq(u,v) && VertLeq(v,w),
+  * evaluates the t-coord of the edge uw at the s-coord of the vertex v.
+  * Returns v->t - (uw)(v->s), ie. the signed distance from uw to v.
+  * If uw is vertical (and thus passes thru v), the result is zero.
+  *
+  * The calculation is extremely accurate and stable, even when v
+  * is very close to u or w.  In particular if we set v->t = 0 and
+  * let r be the negated result (this evaluates (uw)(v->s)), then
+  * r is guaranteed to satisfy MIN(u->t,w->t) <= r <= MAX(u->t,w->t).
+  */
+  assert(Geom.vertLeq(u, v) && Geom.vertLeq(v, w));
+  var gapL = v.s - u.s;
+  var gapR = w.s - v.s;
+
+  if (gapL + gapR > 0.0) {
+    if (gapL < gapR) {
+      return v.t - u.t + (u.t - w.t) * (gapL / (gapL + gapR));
+    } else {
+      return v.t - w.t + (w.t - u.t) * (gapR / (gapL + gapR));
+    }
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //TESSreal tesedgeSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.edgeSign = function (u, v, w) {
+  /* Returns a number whose sign matches EdgeEval(u,v,w) but which
+  * is cheaper to evaluate.  Returns > 0, == 0 , or < 0
+  * as v is above, on, or below the edge uw.
+  */
+  assert(Geom.vertLeq(u, v) && Geom.vertLeq(v, w));
+  var gapL = v.s - u.s;
+  var gapR = w.s - v.s;
+
+  if (gapL + gapR > 0.0) {
+    return (v.t - w.t) * gapL + (v.t - u.t) * gapR;
+  }
+  /* vertical line */
+
+
+  return 0.0;
+};
+/***********************************************************************
+* Define versions of EdgeSign, EdgeEval with s and t transposed.
+*/
+//TESSreal testransEval( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.transEval = function (u, v, w) {
+  /* Given three vertices u,v,w such that TransLeq(u,v) && TransLeq(v,w),
+  * evaluates the t-coord of the edge uw at the s-coord of the vertex v.
+  * Returns v->s - (uw)(v->t), ie. the signed distance from uw to v.
+  * If uw is vertical (and thus passes thru v), the result is zero.
+  *
+  * The calculation is extremely accurate and stable, even when v
+  * is very close to u or w.  In particular if we set v->s = 0 and
+  * let r be the negated result (this evaluates (uw)(v->t)), then
+  * r is guaranteed to satisfy MIN(u->s,w->s) <= r <= MAX(u->s,w->s).
+  */
+  assert(Geom.transLeq(u, v) && Geom.transLeq(v, w));
+  var gapL = v.t - u.t;
+  var gapR = w.t - v.t;
+
+  if (gapL + gapR > 0.0) {
+    if (gapL < gapR) {
+      return v.s - u.s + (u.s - w.s) * (gapL / (gapL + gapR));
+    } else {
+      return v.s - w.s + (w.s - u.s) * (gapR / (gapL + gapR));
+    }
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //TESSreal testransSign( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.transSign = function (u, v, w) {
+  /* Returns a number whose sign matches TransEval(u,v,w) but which
+  * is cheaper to evaluate.  Returns > 0, == 0 , or < 0
+  * as v is above, on, or below the edge uw.
+  */
+  assert(Geom.transLeq(u, v) && Geom.transLeq(v, w));
+  var gapL = v.t - u.t;
+  var gapR = w.t - v.t;
+
+  if (gapL + gapR > 0.0) {
+    return (v.s - w.s) * gapL + (v.s - u.s) * gapR;
+  }
+  /* vertical line */
+
+
+  return 0.0;
+}; //int tesvertCCW( TESSvertex *u, TESSvertex *v, TESSvertex *w )
+
+
+Geom.vertCCW = function (u, v, w) {
+  /* For almost-degenerate situations, the results are not reliable.
+  * Unless the floating-point arithmetic can be performed without
+  * rounding errors, *any* implementation will give incorrect results
+  * on some degenerate inputs, so the client must have some way to
+  * handle this situation.
+  */
+  return u.s * (v.t - w.t) + v.s * (w.t - u.t) + w.s * (u.t - v.t) >= 0.0;
+};
+/* Given parameters a,x,b,y returns the value (b*x+a*y)/(a+b),
+* or (x+y)/2 if a==b==0.  It requires that a,b >= 0, and enforces
+* this in the rare case that one argument is slightly negative.
+* The implementation is extremely stable numerically.
+* In particular it guarantees that the result r satisfies
+* MIN(x,y) <= r <= MAX(x,y), and the results are very accurate
+* even when a and b differ greatly in magnitude.
+*/
+
+
+Geom.interpolate = function (a, x, b, y) {
+  return a = a < 0 ? 0 : a, b = b < 0 ? 0 : b, a <= b ? b === 0 ? (x + y) / 2 : x + (y - x) * (a / (a + b)) : y + (x - y) * (b / (a + b));
+};
+/*
+#ifndef FOR_TRITE_TEST_PROGRAM
+#define Interpolate(a,x,b,y)	RealInterpolate(a,x,b,y)
+#else
+
+// Claim: the ONLY property the sweep algorithm relies on is that
+// MIN(x,y) <= r <= MAX(x,y).  This is a nasty way to test that.
+#include <stdlib.h>
+extern int RandomInterpolate;
+
+double Interpolate( double a, double x, double b, double y)
+{
+  printf("*********************%d\n",RandomInterpolate);
+  if( RandomInterpolate ) {
+    a = 1.2 * drand48() - 0.1;
+    a = (a < 0) ? 0 : ((a > 1) ? 1 : a);
+    b = 1.0 - a;
+  }
+  return RealInterpolate(a,x,b,y);
+}
+#endif*/
+
+
+Geom.intersect = function (o1, d1, o2, d2, v) {
+  /* Given edges (o1,d1) and (o2,d2), compute their point of intersection.
+  * The computed point is guaranteed to lie in the intersection of the
+  * bounding rectangles defined by each edge.
+  */
+  var z1, z2;
+  var t;
+  /* This is certainly not the most efficient way to find the intersection
+  * of two line segments, but it is very numerically stable.
+  *
+  * Strategy: find the two middle vertices in the VertLeq ordering,
+  * and interpolate the intersection s-value from these.  Then repeat
+  * using the TransLeq ordering to find the intersection t-value.
+  */
+
+  if (!Geom.vertLeq(o1, d1)) {
+    t = o1;
+    o1 = d1;
+    d1 = t;
+  } //swap( o1, d1 ); }
+
+
+  if (!Geom.vertLeq(o2, d2)) {
+    t = o2;
+    o2 = d2;
+    d2 = t;
+  } //swap( o2, d2 ); }
+
+
+  if (!Geom.vertLeq(o1, o2)) {
+    t = o1;
+    o1 = o2;
+    o2 = t;
+    t = d1;
+    d1 = d2;
+    d2 = t;
+  } //swap( o1, o2 ); swap( d1, d2 ); }
+
+
+  if (!Geom.vertLeq(o2, d1)) {
+    /* Technically, no intersection -- do our best */
+    v.s = (o2.s + d1.s) / 2;
+  } else if (Geom.vertLeq(d1, d2)) {
+    /* Interpolate between o2 and d1 */
+    z1 = Geom.edgeEval(o1, o2, d1);
+    z2 = Geom.edgeEval(o2, d1, d2);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.s = Geom.interpolate(z1, o2.s, z2, d1.s);
+  } else {
+    /* Interpolate between o2 and d2 */
+    z1 = Geom.edgeSign(o1, o2, d1);
+    z2 = -Geom.edgeSign(o1, d2, d1);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.s = Geom.interpolate(z1, o2.s, z2, d2.s);
+  }
+  /* Now repeat the process for t */
+
+
+  if (!Geom.transLeq(o1, d1)) {
+    t = o1;
+    o1 = d1;
+    d1 = t;
+  } //swap( o1, d1 ); }
+
+
+  if (!Geom.transLeq(o2, d2)) {
+    t = o2;
+    o2 = d2;
+    d2 = t;
+  } //swap( o2, d2 ); }
+
+
+  if (!Geom.transLeq(o1, o2)) {
+    t = o1;
+    o1 = o2;
+    o2 = t;
+    t = d1;
+    d1 = d2;
+    d2 = t;
+  } //swap( o1, o2 ); swap( d1, d2 ); }
+
+
+  if (!Geom.transLeq(o2, d1)) {
+    /* Technically, no intersection -- do our best */
+    v.t = (o2.t + d1.t) / 2;
+  } else if (Geom.transLeq(d1, d2)) {
+    /* Interpolate between o2 and d1 */
+    z1 = Geom.transEval(o1, o2, d1);
+    z2 = Geom.transEval(o2, d1, d2);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.t = Geom.interpolate(z1, o2.t, z2, d1.t);
+  } else {
+    /* Interpolate between o2 and d2 */
+    z1 = Geom.transSign(o1, o2, d1);
+    z2 = -Geom.transSign(o1, d2, d1);
+
+    if (z1 + z2 < 0) {
+      z1 = -z1;
+      z2 = -z2;
+    }
+
+    v.t = Geom.interpolate(z1, o2.t, z2, d2.t);
+  }
+};
+
+function DictNode() {
+  this.key = null;
+  this.next = null;
+  this.prev = null;
+}
+
+;
+
+function Dict(frame, leq) {
+  this.head = new DictNode();
+  this.head.next = this.head;
+  this.head.prev = this.head;
+  this.frame = frame;
+  this.leq = leq;
+}
+
+;
+Dict.prototype = {
+  min: function min() {
+    return this.head.next;
+  },
+  max: function max() {
+    return this.head.prev;
+  },
+  insert: function insert(k) {
+    return this.insertBefore(this.head, k);
+  },
+  search: function search(key) {
+    /* Search returns the node with the smallest key greater than or equal
+    * to the given key.  If there is no such key, returns a node whose
+    * key is NULL.  Similarly, Succ(Max(d)) has a NULL key, etc.
+    */
+    var node = this.head;
+
+    do {
+      node = node.next;
+    } while (node.key !== null && !this.leq(this.frame, key, node.key));
+
+    return node;
+  },
+  insertBefore: function insertBefore(node, key) {
+    do {
+      node = node.prev;
+    } while (node.key !== null && !this.leq(this.frame, node.key, key));
+
+    var newNode = new DictNode();
+    newNode.key = key;
+    newNode.next = node.next;
+    node.next.prev = newNode;
+    newNode.prev = node;
+    node.next = newNode;
+    return newNode;
+  },
+  delete: function _delete(node) {
+    node.next.prev = node.prev;
+    node.prev.next = node.next;
+  }
+};
+
+function PQnode() {
+  this.handle = null;
+}
+
+function PQhandleElem() {
+  this.key = null;
+  this.node = null;
+}
+
+function PriorityQ(size, leq) {
+  this.size = 0;
+  this.max = size;
+  this.nodes = [];
+  this.nodes.length = size + 1;
+  var i;
+
+  for (i = 0; i < this.nodes.length; i++) {
+    this.nodes[i] = new PQnode();
+  }
+
+  this.handles = [];
+  this.handles.length = size + 1;
+
+  for (i = 0; i < this.handles.length; i++) {
+    this.handles[i] = new PQhandleElem();
+  }
+
+  this.initialized = false;
+  this.freeList = 0;
+  this.leq = leq;
+  this.nodes[1].handle = 1;
+  /* so that Minimum() returns NULL */
+
+  this.handles[1].key = null;
+}
+
+;
+PriorityQ.prototype = {
+  floatDown_: function floatDown_(curr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var hCurr, hChild;
+    var child;
+    hCurr = n[curr].handle;
+
+    for (;;) {
+      child = curr << 1;
+
+      if (child < this.size && this.leq(h[n[child + 1].handle].key, h[n[child].handle].key)) {
+        ++child;
+      }
+
+      assert(child <= this.max);
+      hChild = n[child].handle;
+
+      if (child > this.size || this.leq(h[hCurr].key, h[hChild].key)) {
+        n[curr].handle = hCurr;
+        h[hCurr].node = curr;
+        break;
+      }
+
+      n[curr].handle = hChild;
+      h[hChild].node = curr;
+      curr = child;
+    }
+  },
+  floatUp_: function floatUp_(curr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var hCurr, hParent;
+    var parent;
+    hCurr = n[curr].handle;
+
+    for (;;) {
+      parent = curr >> 1;
+      hParent = n[parent].handle;
+
+      if (parent === 0 || this.leq(h[hParent].key, h[hCurr].key)) {
+        n[curr].handle = hCurr;
+        h[hCurr].node = curr;
+        break;
+      }
+
+      n[curr].handle = hParent;
+      h[hParent].node = curr;
+      curr = parent;
+    }
+  },
+  init: function init() {
+    /* This method of building a heap is O(n), rather than O(n lg n). */
+    for (var i = this.size; i >= 1; --i) {
+      this.floatDown_(i);
+    }
+
+    this.initialized = true;
+  },
+  min: function min() {
+    return this.handles[this.nodes[1].handle].key;
+  },
+
+  /* really pqHeapInsert */
+
+  /* returns INV_HANDLE iff out of memory */
+  //PQhandle pqHeapInsert( TESSalloc* alloc, PriorityQHeap *pq, PQkey keyNew )
+  insert: function insert(keyNew) {
+    var curr;
+    var free;
+    curr = ++this.size;
+
+    if (curr * 2 > this.max) {
+      this.max *= 2;
+      var i;
+      var s;
+      s = this.nodes.length;
+      this.nodes.length = this.max + 1;
+
+      for (i = s; i < this.nodes.length; i++) {
+        this.nodes[i] = new PQnode();
+      }
+
+      s = this.handles.length;
+      this.handles.length = this.max + 1;
+
+      for (i = s; i < this.handles.length; i++) {
+        this.handles[i] = new PQhandleElem();
+      }
+    }
+
+    if (this.freeList === 0) {
+      free = curr;
+    } else {
+      free = this.freeList;
+      this.freeList = this.handles[free].node;
+    }
+
+    this.nodes[curr].handle = free;
+    this.handles[free].node = curr;
+    this.handles[free].key = keyNew;
+
+    if (this.initialized) {
+      this.floatUp_(curr);
+    }
+
+    return free;
+  },
+  //PQkey pqHeapExtractMin( PriorityQHeap *pq )
+  extractMin: function extractMin() {
+    var n = this.nodes;
+    var h = this.handles;
+    var hMin = n[1].handle;
+    var min = h[hMin].key;
+
+    if (this.size > 0) {
+      n[1].handle = n[this.size].handle;
+      h[n[1].handle].node = 1;
+      h[hMin].key = null;
+      h[hMin].node = this.freeList;
+      this.freeList = hMin;
+      --this.size;
+
+      if (this.size > 0) {
+        this.floatDown_(1);
+      }
+    }
+
+    return min;
+  },
+  delete: function _delete(hCurr) {
+    var n = this.nodes;
+    var h = this.handles;
+    var curr;
+    assert(hCurr >= 1 && hCurr <= this.max && h[hCurr].key !== null);
+    curr = h[hCurr].node;
+    n[curr].handle = n[this.size].handle;
+    h[n[curr].handle].node = curr;
+    --this.size;
+
+    if (curr <= this.size) {
+      if (curr <= 1 || this.leq(h[n[curr >> 1].handle].key, h[n[curr].handle].key)) {
+        this.floatDown_(curr);
+      } else {
+        this.floatUp_(curr);
+      }
+    }
+
+    h[hCurr].key = null;
+    h[hCurr].node = this.freeList;
+    this.freeList = hCurr;
+  }
+};
+/* For each pair of adjacent edges crossing the sweep line, there is
+* an ActiveRegion to represent the region between them.  The active
+* regions are kept in sorted order in a dynamic dictionary.  As the
+* sweep line crosses each vertex, we update the affected regions.
+*/
+
+function ActiveRegion() {
+  this.eUp = null;
+  /* upper edge, directed right to left */
+
+  this.nodeUp = null;
+  /* dictionary node corresponding to eUp */
+
+  this.windingNumber = 0;
+  /* used to determine which regions are
+  * inside the polygon */
+
+  this.inside = false;
+  /* is this region inside the polygon? */
+
+  this.sentinel = false;
+  /* marks fake edges at t = +/-infinity */
+
+  this.dirty = false;
+  /* marks regions where the upper or lower
+  * edge has changed, but we haven't checked
+  * whether they intersect yet */
+
+  this.fixUpperEdge = false;
+  /* marks temporary edges introduced when
+  * we process a "right vertex" (one without
+  * any edges leaving to the right) */
+}
+
+;
+var Sweep = {};
+
+Sweep.regionBelow = function (r) {
+  return r.nodeUp.prev.key;
+};
+
+Sweep.regionAbove = function (r) {
+  return r.nodeUp.next.key;
+};
+
+Sweep.debugEvent = function (tess) {// empty
+};
+/*
+* Invariants for the Edge Dictionary.
+* - each pair of adjacent edges e2=Succ(e1) satisfies EdgeLeq(e1,e2)
+*   at any valid location of the sweep event
+* - if EdgeLeq(e2,e1) as well (at any valid sweep event), then e1 and e2
+*   share a common endpoint
+* - for each e, e->Dst has been processed, but not e->Org
+* - each edge e satisfies VertLeq(e->Dst,event) && VertLeq(event,e->Org)
+*   where "event" is the current sweep line event.
+* - no edge e has zero length
+*
+* Invariants for the Mesh (the processed portion).
+* - the portion of the mesh left of the sweep line is a planar graph,
+*   ie. there is *some* way to embed it in the plane
+* - no processed edge has zero length
+* - no two processed vertices have identical coordinates
+* - each "inside" region is monotone, ie. can be broken into two chains
+*   of monotonically increasing vertices according to VertLeq(v1,v2)
+*   - a non-invariant: these chains may intersect (very slightly)
+*
+* Invariants for the Sweep.
+* - if none of the edges incident to the event vertex have an activeRegion
+*   (ie. none of these edges are in the edge dictionary), then the vertex
+*   has only right-going edges.
+* - if an edge is marked "fixUpperEdge" (it is a temporary edge introduced
+*   by ConnectRightVertex), then it is the only right-going edge from
+*   its associated vertex.  (This says that these edges exist only
+*   when it is necessary.)
+*/
+
+/* When we merge two edges into one, we need to compute the combined
+* winding of the new edge.
+*/
+
+
+Sweep.addWinding = function (eDst, eSrc) {
+  eDst.winding += eSrc.winding;
+  eDst.Sym.winding += eSrc.Sym.winding;
+}; //static int EdgeLeq( TESStesselator *tess, ActiveRegion *reg1, ActiveRegion *reg2 )
+
+
+Sweep.edgeLeq = function (tess, reg1, reg2) {
+  /*
+  * Both edges must be directed from right to left (this is the canonical
+  * direction for the upper edge of each region).
+  *
+  * The strategy is to evaluate a "t" value for each edge at the
+  * current sweep line position, given by tess->event.  The calculations
+  * are designed to be very stable, but of course they are not perfect.
+  *
+  * Special case: if both edge destinations are at the sweep event,
+  * we sort the edges by slope (they would otherwise compare equally).
+  */
+  var ev = tess.event;
+  var t1, t2;
+  var e1 = reg1.eUp;
+  var e2 = reg2.eUp;
+
+  if (e1.Dst === ev) {
+    if (e2.Dst === ev) {
+      /* Two edges right of the sweep line which meet at the sweep event.
+      * Sort them by slope.
+      */
+      if (Geom.vertLeq(e1.Org, e2.Org)) {
+        return Geom.edgeSign(e2.Dst, e1.Org, e2.Org) <= 0;
+      }
+
+      return Geom.edgeSign(e1.Dst, e2.Org, e1.Org) >= 0;
+    }
+
+    return Geom.edgeSign(e2.Dst, ev, e2.Org) <= 0;
+  }
+
+  if (e2.Dst === ev) {
+    return Geom.edgeSign(e1.Dst, ev, e1.Org) >= 0;
+  }
+  /* General case - compute signed distance *from* e1, e2 to event */
+
+
+  var t1 = Geom.edgeEval(e1.Dst, ev, e1.Org);
+  var t2 = Geom.edgeEval(e2.Dst, ev, e2.Org);
+  return t1 >= t2;
+}; //static void DeleteRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.deleteRegion = function (tess, reg) {
+  if (reg.fixUpperEdge) {
+    /* It was created with zero winding number, so it better be
+    * deleted with zero winding number (ie. it better not get merged
+    * with a real edge).
+    */
+    assert(reg.eUp.winding === 0);
+  }
+
+  reg.eUp.activeRegion = null;
+  tess.dict.delete(reg.nodeUp);
+}; //static int FixUpperEdge( TESStesselator *tess, ActiveRegion *reg, TESShalfEdge *newEdge )
+
+
+Sweep.fixUpperEdge = function (tess, reg, newEdge) {
+  /*
+  * Replace an upper edge which needs fixing (see ConnectRightVertex).
+  */
+  assert(reg.fixUpperEdge);
+  tess.mesh.delete(reg.eUp);
+  reg.fixUpperEdge = false;
+  reg.eUp = newEdge;
+  newEdge.activeRegion = reg;
+}; //static ActiveRegion *TopLeftRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.topLeftRegion = function (tess, reg) {
+  var org = reg.eUp.Org;
+  var e;
+  /* Find the region above the uppermost edge with the same origin */
+
+  do {
+    reg = Sweep.regionAbove(reg);
+  } while (reg.eUp.Org === org);
+  /* If the edge above was a temporary edge introduced by ConnectRightVertex,
+  * now is the time to fix it.
+  */
+
+
+  if (reg.fixUpperEdge) {
+    e = tess.mesh.connect(Sweep.regionBelow(reg).eUp.Sym, reg.eUp.Lnext);
+    if (e === null) return null;
+    Sweep.fixUpperEdge(tess, reg, e);
+    reg = Sweep.regionAbove(reg);
+  }
+
+  return reg;
+}; //static ActiveRegion *TopRightRegion( ActiveRegion *reg )
+
+
+Sweep.topRightRegion = function (reg) {
+  var dst = reg.eUp.Dst;
+  /* Find the region above the uppermost edge with the same destination */
+
+  do {
+    reg = Sweep.regionAbove(reg);
+  } while (reg.eUp.Dst === dst);
+
+  return reg;
+}; //static ActiveRegion *AddRegionBelow( TESStesselator *tess, ActiveRegion *regAbove, TESShalfEdge *eNewUp )
+
+
+Sweep.addRegionBelow = function (tess, regAbove, eNewUp) {
+  /*
+  * Add a new active region to the sweep line, *somewhere* below "regAbove"
+  * (according to where the new edge belongs in the sweep-line dictionary).
+  * The upper edge of the new region will be "eNewUp".
+  * Winding number and "inside" flag are not updated.
+  */
+  var regNew = new ActiveRegion();
+  regNew.eUp = eNewUp;
+  regNew.nodeUp = tess.dict.insertBefore(regAbove.nodeUp, regNew); //	if (regNew->nodeUp == NULL) longjmp(tess->env,1);
+
+  regNew.fixUpperEdge = false;
+  regNew.sentinel = false;
+  regNew.dirty = false;
+  eNewUp.activeRegion = regNew;
+  return regNew;
+}; //static int IsWindingInside( TESStesselator *tess, int n )
+
+
+Sweep.isWindingInside = function (tess, n) {
+  switch (tess.windingRule) {
+    case Tess2.WINDING_ODD:
+      return (n & 1) !== 0;
+
+    case Tess2.WINDING_NONZERO:
+      return n !== 0;
+
+    case Tess2.WINDING_POSITIVE:
+      return n > 0;
+
+    case Tess2.WINDING_NEGATIVE:
+      return n < 0;
+
+    case Tess2.WINDING_ABS_GEQ_TWO:
+      return n >= 2 || n <= -2;
+  }
+
+  assert(false);
+  return false;
+}; //static void ComputeWinding( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.computeWinding = function (tess, reg) {
+  reg.windingNumber = Sweep.regionAbove(reg).windingNumber + reg.eUp.winding;
+  reg.inside = Sweep.isWindingInside(tess, reg.windingNumber);
+}; //static void FinishRegion( TESStesselator *tess, ActiveRegion *reg )
+
+
+Sweep.finishRegion = function (tess, reg) {
+  /*
+  * Delete a region from the sweep line.  This happens when the upper
+  * and lower chains of a region meet (at a vertex on the sweep line).
+  * The "inside" flag is copied to the appropriate mesh face (we could
+  * not do this before -- since the structure of the mesh is always
+  * changing, this face may not have even existed until now).
+  */
+  var e = reg.eUp;
+  var f = e.Lface;
+  f.inside = reg.inside;
+  f.anEdge = e;
+  /* optimization for tessMeshTessellateMonoRegion() */
+
+  Sweep.deleteRegion(tess, reg);
+}; //static TESShalfEdge *FinishLeftRegions( TESStesselator *tess, ActiveRegion *regFirst, ActiveRegion *regLast )
+
+
+Sweep.finishLeftRegions = function (tess, regFirst, regLast) {
+  /*
+  * We are given a vertex with one or more left-going edges.  All affected
+  * edges should be in the edge dictionary.  Starting at regFirst->eUp,
+  * we walk down deleting all regions where both edges have the same
+  * origin vOrg.  At the same time we copy the "inside" flag from the
+  * active region to the face, since at this point each face will belong
+  * to at most one region (this was not necessarily true until this point
+  * in the sweep).  The walk stops at the region above regLast; if regLast
+  * is NULL we walk as far as possible.  At the same time we relink the
+  * mesh if necessary, so that the ordering of edges around vOrg is the
+  * same as in the dictionary.
+  */
+  var e, ePrev;
+  var reg = null;
+  var regPrev = regFirst;
+  var ePrev = regFirst.eUp;
+
+  while (regPrev !== regLast) {
+    regPrev.fixUpperEdge = false;
+    /* placement was OK */
+
+    reg = Sweep.regionBelow(regPrev);
+    e = reg.eUp;
+
+    if (e.Org != ePrev.Org) {
+      if (!reg.fixUpperEdge) {
+        /* Remove the last left-going edge.  Even though there are no further
+        * edges in the dictionary with this origin, there may be further
+        * such edges in the mesh (if we are adding left edges to a vertex
+        * that has already been processed).  Thus it is important to call
+        * FinishRegion rather than just DeleteRegion.
+        */
+        Sweep.finishRegion(tess, regPrev);
+        break;
+      }
+      /* If the edge below was a temporary edge introduced by
+      * ConnectRightVertex, now is the time to fix it.
+      */
+
+
+      e = tess.mesh.connect(ePrev.Lprev, e.Sym); //			if (e == NULL) longjmp(tess->env,1);
+
+      Sweep.fixUpperEdge(tess, reg, e);
+    }
+    /* Relink edges so that ePrev->Onext == e */
+
+
+    if (ePrev.Onext !== e) {
+      tess.mesh.splice(e.Oprev, e);
+      tess.mesh.splice(ePrev, e);
+    }
+
+    Sweep.finishRegion(tess, regPrev);
+    /* may change reg->eUp */
+
+    ePrev = reg.eUp;
+    regPrev = reg;
+  }
+
+  return ePrev;
+}; //static void AddRightEdges( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eFirst, TESShalfEdge *eLast, TESShalfEdge *eTopLeft, int cleanUp )
+
+
+Sweep.addRightEdges = function (tess, regUp, eFirst, eLast, eTopLeft, cleanUp) {
+  /*
+  * Purpose: insert right-going edges into the edge dictionary, and update
+  * winding numbers and mesh connectivity appropriately.  All right-going
+  * edges share a common origin vOrg.  Edges are inserted CCW starting at
+  * eFirst; the last edge inserted is eLast->Oprev.  If vOrg has any
+  * left-going edges already processed, then eTopLeft must be the edge
+  * such that an imaginary upward vertical segment from vOrg would be
+  * contained between eTopLeft->Oprev and eTopLeft; otherwise eTopLeft
+  * should be NULL.
+  */
+  var reg, regPrev;
+  var e, ePrev;
+  var firstTime = true;
+  /* Insert the new right-going edges in the dictionary */
+
+  e = eFirst;
+
+  do {
+    assert(Geom.vertLeq(e.Org, e.Dst));
+    Sweep.addRegionBelow(tess, regUp, e.Sym);
+    e = e.Onext;
+  } while (e !== eLast);
+  /* Walk *all* right-going edges from e->Org, in the dictionary order,
+  * updating the winding numbers of each region, and re-linking the mesh
+  * edges to match the dictionary ordering (if necessary).
+  */
+
+
+  if (eTopLeft === null) {
+    eTopLeft = Sweep.regionBelow(regUp).eUp.Rprev;
+  }
+
+  regPrev = regUp;
+  ePrev = eTopLeft;
+
+  for (;;) {
+    reg = Sweep.regionBelow(regPrev);
+    e = reg.eUp.Sym;
+    if (e.Org !== ePrev.Org) break;
+
+    if (e.Onext !== ePrev) {
+      /* Unlink e from its current position, and relink below ePrev */
+      tess.mesh.splice(e.Oprev, e);
+      tess.mesh.splice(ePrev.Oprev, e);
+    }
+    /* Compute the winding number and "inside" flag for the new regions */
+
+
+    reg.windingNumber = regPrev.windingNumber - e.winding;
+    reg.inside = Sweep.isWindingInside(tess, reg.windingNumber);
+    /* Check for two outgoing edges with same slope -- process these
+    * before any intersection tests (see example in tessComputeInterior).
+    */
+
+    regPrev.dirty = true;
+
+    if (!firstTime && Sweep.checkForRightSplice(tess, regPrev)) {
+      Sweep.addWinding(e, ePrev);
+      Sweep.deleteRegion(tess, regPrev);
+      tess.mesh.delete(ePrev);
+    }
+
+    firstTime = false;
+    regPrev = reg;
+    ePrev = e;
+  }
+
+  regPrev.dirty = true;
+  assert(regPrev.windingNumber - e.winding === reg.windingNumber);
+
+  if (cleanUp) {
+    /* Check for intersections between newly adjacent edges. */
+    Sweep.walkDirtyRegions(tess, regPrev);
+  }
+}; //static void SpliceMergeVertices( TESStesselator *tess, TESShalfEdge *e1, TESShalfEdge *e2 )
+
+
+Sweep.spliceMergeVertices = function (tess, e1, e2) {
+  /*
+  * Two vertices with idential coordinates are combined into one.
+  * e1->Org is kept, while e2->Org is discarded.
+  */
+  tess.mesh.splice(e1, e2);
+}; //static void VertexWeights( TESSvertex *isect, TESSvertex *org, TESSvertex *dst, TESSreal *weights )
+
+
+Sweep.vertexWeights = function (isect, org, dst) {
+  /*
+  * Find some weights which describe how the intersection vertex is
+  * a linear combination of "org" and "dest".  Each of the two edges
+  * which generated "isect" is allocated 50% of the weight; each edge
+  * splits the weight between its org and dst according to the
+  * relative distance to "isect".
+  */
+  var t1 = Geom.vertL1dist(org, isect);
+  var t2 = Geom.vertL1dist(dst, isect);
+  var w0 = 0.5 * t2 / (t1 + t2);
+  var w1 = 0.5 * t1 / (t1 + t2);
+  isect.coords[0] += w0 * org.coords[0] + w1 * dst.coords[0];
+  isect.coords[1] += w0 * org.coords[1] + w1 * dst.coords[1];
+  isect.coords[2] += w0 * org.coords[2] + w1 * dst.coords[2];
+}; //static void GetIntersectData( TESStesselator *tess, TESSvertex *isect, TESSvertex *orgUp, TESSvertex *dstUp, TESSvertex *orgLo, TESSvertex *dstLo )
+
+
+Sweep.getIntersectData = function (tess, isect, orgUp, dstUp, orgLo, dstLo) {
+  /*
+  * We've computed a new intersection point, now we need a "data" pointer
+  * from the user so that we can refer to this new vertex in the
+  * rendering callbacks.
+  */
+  isect.coords[0] = isect.coords[1] = isect.coords[2] = 0;
+  isect.idx = -1;
+  Sweep.vertexWeights(isect, orgUp, dstUp);
+  Sweep.vertexWeights(isect, orgLo, dstLo);
+}; //static int CheckForRightSplice( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForRightSplice = function (tess, regUp) {
+  /*
+  * Check the upper and lower edge of "regUp", to make sure that the
+  * eUp->Org is above eLo, or eLo->Org is below eUp (depending on which
+  * origin is leftmost).
+  *
+  * The main purpose is to splice right-going edges with the same
+  * dest vertex and nearly identical slopes (ie. we can't distinguish
+  * the slopes numerically).  However the splicing can also help us
+  * to recover from numerical errors.  For example, suppose at one
+  * point we checked eUp and eLo, and decided that eUp->Org is barely
+  * above eLo.  Then later, we split eLo into two edges (eg. from
+  * a splice operation like this one).  This can change the result of
+  * our test so that now eUp->Org is incident to eLo, or barely below it.
+  * We must correct this condition to maintain the dictionary invariants.
+  *
+  * One possibility is to check these edges for intersection again
+  * (ie. CheckForIntersect).  This is what we do if possible.  However
+  * CheckForIntersect requires that tess->event lies between eUp and eLo,
+  * so that it has something to fall back on when the intersection
+  * calculation gives us an unusable answer.  So, for those cases where
+  * we can't check for intersection, this routine fixes the problem
+  * by just splicing the offending vertex into the other edge.
+  * This is a guaranteed solution, no matter how degenerate things get.
+  * Basically this is a combinatorial solution to a numerical problem.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+
+  if (Geom.vertLeq(eUp.Org, eLo.Org)) {
+    if (Geom.edgeSign(eLo.Dst, eUp.Org, eLo.Org) > 0) return false;
+    /* eUp->Org appears to be below eLo */
+
+    if (!Geom.vertEq(eUp.Org, eLo.Org)) {
+      /* Splice eUp->Org into eLo */
+      tess.mesh.splitEdge(eLo.Sym);
+      tess.mesh.splice(eUp, eLo.Oprev);
+      regUp.dirty = regLo.dirty = true;
+    } else if (eUp.Org !== eLo.Org) {
+      /* merge the two vertices, discarding eUp->Org */
+      tess.pq.delete(eUp.Org.pqHandle);
+      Sweep.spliceMergeVertices(tess, eLo.Oprev, eUp);
+    }
+  } else {
+    if (Geom.edgeSign(eUp.Dst, eLo.Org, eUp.Org) < 0) return false;
+    /* eLo->Org appears to be above eUp, so splice eLo->Org into eUp */
+
+    Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+    tess.mesh.splitEdge(eUp.Sym);
+    tess.mesh.splice(eLo.Oprev, eUp);
+  }
+
+  return true;
+}; //static int CheckForLeftSplice( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForLeftSplice = function (tess, regUp) {
+  /*
+  * Check the upper and lower edge of "regUp", to make sure that the
+  * eUp->Dst is above eLo, or eLo->Dst is below eUp (depending on which
+  * destination is rightmost).
+  *
+  * Theoretically, this should always be true.  However, splitting an edge
+  * into two pieces can change the results of previous tests.  For example,
+  * suppose at one point we checked eUp and eLo, and decided that eUp->Dst
+  * is barely above eLo.  Then later, we split eLo into two edges (eg. from
+  * a splice operation like this one).  This can change the result of
+  * the test so that now eUp->Dst is incident to eLo, or barely below it.
+  * We must correct this condition to maintain the dictionary invariants
+  * (otherwise new edges might get inserted in the wrong place in the
+  * dictionary, and bad stuff will happen).
+  *
+  * We fix the problem by just splicing the offending vertex into the
+  * other edge.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var e;
+  assert(!Geom.vertEq(eUp.Dst, eLo.Dst));
+
+  if (Geom.vertLeq(eUp.Dst, eLo.Dst)) {
+    if (Geom.edgeSign(eUp.Dst, eLo.Dst, eUp.Org) < 0) return false;
+    /* eLo->Dst is above eUp, so splice eLo->Dst into eUp */
+
+    Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+    e = tess.mesh.splitEdge(eUp);
+    tess.mesh.splice(eLo.Sym, e);
+    e.Lface.inside = regUp.inside;
+  } else {
+    if (Geom.edgeSign(eLo.Dst, eUp.Dst, eLo.Org) > 0) return false;
+    /* eUp->Dst is below eLo, so splice eUp->Dst into eLo */
+
+    regUp.dirty = regLo.dirty = true;
+    e = tess.mesh.splitEdge(eLo);
+    tess.mesh.splice(eUp.Lnext, eLo.Sym);
+    e.Rface.inside = regUp.inside;
+  }
+
+  return true;
+}; //static int CheckForIntersect( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.checkForIntersect = function (tess, regUp) {
+  /*
+  * Check the upper and lower edges of the given region to see if
+  * they intersect.  If so, create the intersection and add it
+  * to the data structures.
+  *
+  * Returns TRUE if adding the new intersection resulted in a recursive
+  * call to AddRightEdges(); in this case all "dirty" regions have been
+  * checked for intersections, and possibly regUp has been deleted.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var orgUp = eUp.Org;
+  var orgLo = eLo.Org;
+  var dstUp = eUp.Dst;
+  var dstLo = eLo.Dst;
+  var tMinUp, tMaxLo;
+  var isect = new TESSvertex(),
+      orgMin;
+  var e;
+  assert(!Geom.vertEq(dstLo, dstUp));
+  assert(Geom.edgeSign(dstUp, tess.event, orgUp) <= 0);
+  assert(Geom.edgeSign(dstLo, tess.event, orgLo) >= 0);
+  assert(orgUp !== tess.event && orgLo !== tess.event);
+  assert(!regUp.fixUpperEdge && !regLo.fixUpperEdge);
+  if (orgUp === orgLo) return false;
+  /* right endpoints are the same */
+
+  tMinUp = Math.min(orgUp.t, dstUp.t);
+  tMaxLo = Math.max(orgLo.t, dstLo.t);
+  if (tMinUp > tMaxLo) return false;
+  /* t ranges do not overlap */
+
+  if (Geom.vertLeq(orgUp, orgLo)) {
+    if (Geom.edgeSign(dstLo, orgUp, orgLo) > 0) return false;
+  } else {
+    if (Geom.edgeSign(dstUp, orgLo, orgUp) < 0) return false;
+  }
+  /* At this point the edges intersect, at least marginally */
+
+
+  Sweep.debugEvent(tess);
+  Geom.intersect(dstUp, orgUp, dstLo, orgLo, isect);
+  /* The following properties are guaranteed: */
+
+  assert(Math.min(orgUp.t, dstUp.t) <= isect.t);
+  assert(isect.t <= Math.max(orgLo.t, dstLo.t));
+  assert(Math.min(dstLo.s, dstUp.s) <= isect.s);
+  assert(isect.s <= Math.max(orgLo.s, orgUp.s));
+
+  if (Geom.vertLeq(isect, tess.event)) {
+    /* The intersection point lies slightly to the left of the sweep line,
+    * so move it until it''s slightly to the right of the sweep line.
+    * (If we had perfect numerical precision, this would never happen
+    * in the first place).  The easiest and safest thing to do is
+    * replace the intersection by tess->event.
+    */
+    isect.s = tess.event.s;
+    isect.t = tess.event.t;
+  }
+  /* Similarly, if the computed intersection lies to the right of the
+  * rightmost origin (which should rarely happen), it can cause
+  * unbelievable inefficiency on sufficiently degenerate inputs.
+  * (If you have the test program, try running test54.d with the
+  * "X zoom" option turned on).
+  */
+
+
+  orgMin = Geom.vertLeq(orgUp, orgLo) ? orgUp : orgLo;
+
+  if (Geom.vertLeq(orgMin, isect)) {
+    isect.s = orgMin.s;
+    isect.t = orgMin.t;
+  }
+
+  if (Geom.vertEq(isect, orgUp) || Geom.vertEq(isect, orgLo)) {
+    /* Easy case -- intersection at one of the right endpoints */
+    Sweep.checkForRightSplice(tess, regUp);
+    return false;
+  }
+
+  if (!Geom.vertEq(dstUp, tess.event) && Geom.edgeSign(dstUp, tess.event, isect) >= 0 || !Geom.vertEq(dstLo, tess.event) && Geom.edgeSign(dstLo, tess.event, isect) <= 0) {
+    /* Very unusual -- the new upper or lower edge would pass on the
+    * wrong side of the sweep event, or through it.  This can happen
+    * due to very small numerical errors in the intersection calculation.
+    */
+    if (dstLo === tess.event) {
+      /* Splice dstLo into eUp, and process the new region(s) */
+      tess.mesh.splitEdge(eUp.Sym);
+      tess.mesh.splice(eLo.Sym, eUp);
+      regUp = Sweep.topLeftRegion(tess, regUp); //			if (regUp == NULL) longjmp(tess->env,1);
+
+      eUp = Sweep.regionBelow(regUp).eUp;
+      Sweep.finishLeftRegions(tess, Sweep.regionBelow(regUp), regLo);
+      Sweep.addRightEdges(tess, regUp, eUp.Oprev, eUp, eUp, true);
+      return true;
+    }
+
+    if (dstUp === tess.event) {
+      /* Splice dstUp into eLo, and process the new region(s) */
+      tess.mesh.splitEdge(eLo.Sym);
+      tess.mesh.splice(eUp.Lnext, eLo.Oprev);
+      regLo = regUp;
+      regUp = Sweep.topRightRegion(regUp);
+      e = Sweep.regionBelow(regUp).eUp.Rprev;
+      regLo.eUp = eLo.Oprev;
+      eLo = Sweep.finishLeftRegions(tess, regLo, null);
+      Sweep.addRightEdges(tess, regUp, eLo.Onext, eUp.Rprev, e, true);
+      return true;
+    }
+    /* Special case: called from ConnectRightVertex.  If either
+    * edge passes on the wrong side of tess->event, split it
+    * (and wait for ConnectRightVertex to splice it appropriately).
+    */
+
+
+    if (Geom.edgeSign(dstUp, tess.event, isect) >= 0) {
+      Sweep.regionAbove(regUp).dirty = regUp.dirty = true;
+      tess.mesh.splitEdge(eUp.Sym);
+      eUp.Org.s = tess.event.s;
+      eUp.Org.t = tess.event.t;
+    }
+
+    if (Geom.edgeSign(dstLo, tess.event, isect) <= 0) {
+      regUp.dirty = regLo.dirty = true;
+      tess.mesh.splitEdge(eLo.Sym);
+      eLo.Org.s = tess.event.s;
+      eLo.Org.t = tess.event.t;
+    }
+    /* leave the rest for ConnectRightVertex */
+
+
+    return false;
+  }
+  /* General case -- split both edges, splice into new vertex.
+  * When we do the splice operation, the order of the arguments is
+  * arbitrary as far as correctness goes.  However, when the operation
+  * creates a new face, the work done is proportional to the size of
+  * the new face.  We expect the faces in the processed part of
+  * the mesh (ie. eUp->Lface) to be smaller than the faces in the
+  * unprocessed original contours (which will be eLo->Oprev->Lface).
+  */
+
+
+  tess.mesh.splitEdge(eUp.Sym);
+  tess.mesh.splitEdge(eLo.Sym);
+  tess.mesh.splice(eLo.Oprev, eUp);
+  eUp.Org.s = isect.s;
+  eUp.Org.t = isect.t;
+  eUp.Org.pqHandle = tess.pq.insert(eUp.Org);
+  Sweep.getIntersectData(tess, eUp.Org, orgUp, dstUp, orgLo, dstLo);
+  Sweep.regionAbove(regUp).dirty = regUp.dirty = regLo.dirty = true;
+  return false;
+}; //static void WalkDirtyRegions( TESStesselator *tess, ActiveRegion *regUp )
+
+
+Sweep.walkDirtyRegions = function (tess, regUp) {
+  /*
+  * When the upper or lower edge of any region changes, the region is
+  * marked "dirty".  This routine walks through all the dirty regions
+  * and makes sure that the dictionary invariants are satisfied
+  * (see the comments at the beginning of this file).  Of course
+  * new dirty regions can be created as we make changes to restore
+  * the invariants.
+  */
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp, eLo;
+
+  for (;;) {
+    /* Find the lowest dirty region (we walk from the bottom up). */
+    while (regLo.dirty) {
+      regUp = regLo;
+      regLo = Sweep.regionBelow(regLo);
+    }
+
+    if (!regUp.dirty) {
+      regLo = regUp;
+      regUp = Sweep.regionAbove(regUp);
+
+      if (regUp === null || !regUp.dirty) {
+        /* We've walked all the dirty regions */
+        return;
+      }
+    }
+
+    regUp.dirty = false;
+    eUp = regUp.eUp;
+    eLo = regLo.eUp;
+
+    if (eUp.Dst !== eLo.Dst) {
+      /* Check that the edge ordering is obeyed at the Dst vertices. */
+      if (Sweep.checkForLeftSplice(tess, regUp)) {
+        /* If the upper or lower edge was marked fixUpperEdge, then
+        * we no longer need it (since these edges are needed only for
+        * vertices which otherwise have no right-going edges).
+        */
+        if (regLo.fixUpperEdge) {
+          Sweep.deleteRegion(tess, regLo);
+          tess.mesh.delete(eLo);
+          regLo = Sweep.regionBelow(regUp);
+          eLo = regLo.eUp;
+        } else if (regUp.fixUpperEdge) {
+          Sweep.deleteRegion(tess, regUp);
+          tess.mesh.delete(eUp);
+          regUp = Sweep.regionAbove(regLo);
+          eUp = regUp.eUp;
+        }
+      }
+    }
+
+    if (eUp.Org !== eLo.Org) {
+      if (eUp.Dst !== eLo.Dst && !regUp.fixUpperEdge && !regLo.fixUpperEdge && (eUp.Dst === tess.event || eLo.Dst === tess.event)) {
+        /* When all else fails in CheckForIntersect(), it uses tess->event
+        * as the intersection location.  To make this possible, it requires
+        * that tess->event lie between the upper and lower edges, and also
+        * that neither of these is marked fixUpperEdge (since in the worst
+        * case it might splice one of these edges into tess->event, and
+        * violate the invariant that fixable edges are the only right-going
+        * edge from their associated vertex).
+        */
+        if (Sweep.checkForIntersect(tess, regUp)) {
+          /* WalkDirtyRegions() was called recursively; we're done */
+          return;
+        }
+      } else {
+        /* Even though we can't use CheckForIntersect(), the Org vertices
+        * may violate the dictionary edge ordering.  Check and correct this.
+        */
+        Sweep.checkForRightSplice(tess, regUp);
+      }
+    }
+
+    if (eUp.Org === eLo.Org && eUp.Dst === eLo.Dst) {
+      /* A degenerate loop consisting of only two edges -- delete it. */
+      Sweep.addWinding(eLo, eUp);
+      Sweep.deleteRegion(tess, regUp);
+      tess.mesh.delete(eUp);
+      regUp = Sweep.regionAbove(regLo);
+    }
+  }
+}; //static void ConnectRightVertex( TESStesselator *tess, ActiveRegion *regUp, TESShalfEdge *eBottomLeft )
+
+
+Sweep.connectRightVertex = function (tess, regUp, eBottomLeft) {
+  /*
+  * Purpose: connect a "right" vertex vEvent (one where all edges go left)
+  * to the unprocessed portion of the mesh.  Since there are no right-going
+  * edges, two regions (one above vEvent and one below) are being merged
+  * into one.  "regUp" is the upper of these two regions.
+  *
+  * There are two reasons for doing this (adding a right-going edge):
+  *  - if the two regions being merged are "inside", we must add an edge
+  *    to keep them separated (the combined region would not be monotone).
+  *  - in any case, we must leave some record of vEvent in the dictionary,
+  *    so that we can merge vEvent with features that we have not seen yet.
+  *    For example, maybe there is a vertical edge which passes just to
+  *    the right of vEvent; we would like to splice vEvent into this edge.
+  *
+  * However, we don't want to connect vEvent to just any vertex.  We don''t
+  * want the new edge to cross any other edges; otherwise we will create
+  * intersection vertices even when the input data had no self-intersections.
+  * (This is a bad thing; if the user's input data has no intersections,
+  * we don't want to generate any false intersections ourselves.)
+  *
+  * Our eventual goal is to connect vEvent to the leftmost unprocessed
+  * vertex of the combined region (the union of regUp and regLo).
+  * But because of unseen vertices with all right-going edges, and also
+  * new vertices which may be created by edge intersections, we don''t
+  * know where that leftmost unprocessed vertex is.  In the meantime, we
+  * connect vEvent to the closest vertex of either chain, and mark the region
+  * as "fixUpperEdge".  This flag says to delete and reconnect this edge
+  * to the next processed vertex on the boundary of the combined region.
+  * Quite possibly the vertex we connected to will turn out to be the
+  * closest one, in which case we won''t need to make any changes.
+  */
+  var eNew;
+  var eTopLeft = eBottomLeft.Onext;
+  var regLo = Sweep.regionBelow(regUp);
+  var eUp = regUp.eUp;
+  var eLo = regLo.eUp;
+  var degenerate = false;
+
+  if (eUp.Dst !== eLo.Dst) {
+    Sweep.checkForIntersect(tess, regUp);
+  }
+  /* Possible new degeneracies: upper or lower edge of regUp may pass
+  * through vEvent, or may coincide with new intersection vertex
+  */
+
+
+  if (Geom.vertEq(eUp.Org, tess.event)) {
+    tess.mesh.splice(eTopLeft.Oprev, eUp);
+    regUp = Sweep.topLeftRegion(tess, regUp);
+    eTopLeft = Sweep.regionBelow(regUp).eUp;
+    Sweep.finishLeftRegions(tess, Sweep.regionBelow(regUp), regLo);
+    degenerate = true;
+  }
+
+  if (Geom.vertEq(eLo.Org, tess.event)) {
+    tess.mesh.splice(eBottomLeft, eLo.Oprev);
+    eBottomLeft = Sweep.finishLeftRegions(tess, regLo, null);
+    degenerate = true;
+  }
+
+  if (degenerate) {
+    Sweep.addRightEdges(tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true);
+    return;
+  }
+  /* Non-degenerate situation -- need to add a temporary, fixable edge.
+  * Connect to the closer of eLo->Org, eUp->Org.
+  */
+
+
+  if (Geom.vertLeq(eLo.Org, eUp.Org)) {
+    eNew = eLo.Oprev;
+  } else {
+    eNew = eUp;
+  }
+
+  eNew = tess.mesh.connect(eBottomLeft.Lprev, eNew);
+  /* Prevent cleanup, otherwise eNew might disappear before we've even
+  * had a chance to mark it as a temporary edge.
+  */
+
+  Sweep.addRightEdges(tess, regUp, eNew, eNew.Onext, eNew.Onext, false);
+  eNew.Sym.activeRegion.fixUpperEdge = true;
+  Sweep.walkDirtyRegions(tess, regUp);
+};
+/* Because vertices at exactly the same location are merged together
+* before we process the sweep event, some degenerate cases can't occur.
+* However if someone eventually makes the modifications required to
+* merge features which are close together, the cases below marked
+* TOLERANCE_NONZERO will be useful.  They were debugged before the
+* code to merge identical vertices in the main loop was added.
+*/
+//#define TOLERANCE_NONZERO	FALSE
+//static void ConnectLeftDegenerate( TESStesselator *tess, ActiveRegion *regUp, TESSvertex *vEvent )
+
+
+Sweep.connectLeftDegenerate = function (tess, regUp, vEvent) {
+  /*
+  * The event vertex lies exacty on an already-processed edge or vertex.
+  * Adding the new vertex involves splicing it into the already-processed
+  * part of the mesh.
+  */
+  var e, eTopLeft, eTopRight, eLast;
+  var reg;
+  e = regUp.eUp;
+
+  if (Geom.vertEq(e.Org, vEvent)) {
+    /* e->Org is an unprocessed vertex - just combine them, and wait
+    * for e->Org to be pulled from the queue
+    */
+    assert(false
+    /*TOLERANCE_NONZERO*/
+    );
+    Sweep.spliceMergeVertices(tess, e, vEvent.anEdge);
+    return;
+  }
+
+  if (!Geom.vertEq(e.Dst, vEvent)) {
+    /* General case -- splice vEvent into edge e which passes through it */
+    tess.mesh.splitEdge(e.Sym);
+
+    if (regUp.fixUpperEdge) {
+      /* This edge was fixable -- delete unused portion of original edge */
+      tess.mesh.delete(e.Onext);
+      regUp.fixUpperEdge = false;
+    }
+
+    tess.mesh.splice(vEvent.anEdge, e);
+    Sweep.sweepEvent(tess, vEvent);
+    /* recurse */
+
+    return;
+  }
+  /* vEvent coincides with e->Dst, which has already been processed.
+  * Splice in the additional right-going edges.
+  */
+
+
+  assert(false
+  /*TOLERANCE_NONZERO*/
+  );
+  regUp = Sweep.topRightRegion(regUp);
+  reg = Sweep.regionBelow(regUp);
+  eTopRight = reg.eUp.Sym;
+  eTopLeft = eLast = eTopRight.Onext;
+
+  if (reg.fixUpperEdge) {
+    /* Here e->Dst has only a single fixable edge going right.
+    * We can delete it since now we have some real right-going edges.
+    */
+    assert(eTopLeft !== eTopRight);
+    /* there are some left edges too */
+
+    Sweep.deleteRegion(tess, reg);
+    tess.mesh.delete(eTopRight);
+    eTopRight = eTopLeft.Oprev;
+  }
+
+  tess.mesh.splice(vEvent.anEdge, eTopRight);
+
+  if (!Geom.edgeGoesLeft(eTopLeft)) {
+    /* e->Dst had no left-going edges -- indicate this to AddRightEdges() */
+    eTopLeft = null;
+  }
+
+  Sweep.addRightEdges(tess, regUp, eTopRight.Onext, eLast, eTopLeft, true);
+}; //static void ConnectLeftVertex( TESStesselator *tess, TESSvertex *vEvent )
+
+
+Sweep.connectLeftVertex = function (tess, vEvent) {
+  /*
+  * Purpose: connect a "left" vertex (one where both edges go right)
+  * to the processed portion of the mesh.  Let R be the active region
+  * containing vEvent, and let U and L be the upper and lower edge
+  * chains of R.  There are two possibilities:
+  *
+  * - the normal case: split R into two regions, by connecting vEvent to
+  *   the rightmost vertex of U or L lying to the left of the sweep line
+  *
+  * - the degenerate case: if vEvent is close enough to U or L, we
+  *   merge vEvent into that edge chain.  The subcases are:
+  *	- merging with the rightmost vertex of U or L
+  *	- merging with the active edge of U or L
+  *	- merging with an already-processed portion of U or L
+  */
+  var regUp, regLo, reg;
+  var eUp, eLo, eNew;
+  var tmp = new ActiveRegion();
+  /* assert( vEvent->anEdge->Onext->Onext == vEvent->anEdge ); */
+
+  /* Get a pointer to the active region containing vEvent */
+
+  tmp.eUp = vEvent.anEdge.Sym;
+  /* __GL_DICTLISTKEY */
+
+  /* tessDictListSearch */
+
+  regUp = tess.dict.search(tmp).key;
+  regLo = Sweep.regionBelow(regUp);
+
+  if (!regLo) {
+    // This may happen if the input polygon is coplanar.
+    return;
+  }
+
+  eUp = regUp.eUp;
+  eLo = regLo.eUp;
+  /* Try merging with U or L first */
+
+  if (Geom.edgeSign(eUp.Dst, vEvent, eUp.Org) === 0.0) {
+    Sweep.connectLeftDegenerate(tess, regUp, vEvent);
+    return;
+  }
+  /* Connect vEvent to rightmost processed vertex of either chain.
+  * e->Dst is the vertex that we will connect to vEvent.
+  */
+
+
+  reg = Geom.vertLeq(eLo.Dst, eUp.Dst) ? regUp : regLo;
+
+  if (regUp.inside || reg.fixUpperEdge) {
+    if (reg === regUp) {
+      eNew = tess.mesh.connect(vEvent.anEdge.Sym, eUp.Lnext);
+    } else {
+      var tempHalfEdge = tess.mesh.connect(eLo.Dnext, vEvent.anEdge);
+      eNew = tempHalfEdge.Sym;
+    }
+
+    if (reg.fixUpperEdge) {
+      Sweep.fixUpperEdge(tess, reg, eNew);
+    } else {
+      Sweep.computeWinding(tess, Sweep.addRegionBelow(tess, regUp, eNew));
+    }
+
+    Sweep.sweepEvent(tess, vEvent);
+  } else {
+    /* The new vertex is in a region which does not belong to the polygon.
+    * We don''t need to connect this vertex to the rest of the mesh.
+    */
+    Sweep.addRightEdges(tess, regUp, vEvent.anEdge, vEvent.anEdge, null, true);
+  }
+}; //static void SweepEvent( TESStesselator *tess, TESSvertex *vEvent )
+
+
+Sweep.sweepEvent = function (tess, vEvent) {
+  /*
+  * Does everything necessary when the sweep line crosses a vertex.
+  * Updates the mesh and the edge dictionary.
+  */
+  tess.event = vEvent;
+  /* for access in EdgeLeq() */
+
+  Sweep.debugEvent(tess);
+  /* Check if this vertex is the right endpoint of an edge that is
+  * already in the dictionary.  In this case we don't need to waste
+  * time searching for the location to insert new edges.
+  */
+
+  var e = vEvent.anEdge;
+
+  while (e.activeRegion === null) {
+    e = e.Onext;
+
+    if (e === vEvent.anEdge) {
+      /* All edges go right -- not incident to any processed edges */
+      Sweep.connectLeftVertex(tess, vEvent);
+      return;
+    }
+  }
+  /* Processing consists of two phases: first we "finish" all the
+  * active regions where both the upper and lower edges terminate
+  * at vEvent (ie. vEvent is closing off these regions).
+  * We mark these faces "inside" or "outside" the polygon according
+  * to their winding number, and delete the edges from the dictionary.
+  * This takes care of all the left-going edges from vEvent.
+  */
+
+
+  var regUp = Sweep.topLeftRegion(tess, e.activeRegion);
+  assert(regUp !== null); //	if (regUp == NULL) longjmp(tess->env,1);
+
+  var reg = Sweep.regionBelow(regUp);
+  var eTopLeft = reg.eUp;
+  var eBottomLeft = Sweep.finishLeftRegions(tess, reg, null);
+  /* Next we process all the right-going edges from vEvent.  This
+  * involves adding the edges to the dictionary, and creating the
+  * associated "active regions" which record information about the
+  * regions between adjacent dictionary edges.
+  */
+
+  if (eBottomLeft.Onext === eTopLeft) {
+    /* No right-going edges -- add a temporary "fixable" edge */
+    Sweep.connectRightVertex(tess, regUp, eBottomLeft);
+  } else {
+    Sweep.addRightEdges(tess, regUp, eBottomLeft.Onext, eTopLeft, eTopLeft, true);
+  }
+};
+/* Make the sentinel coordinates big enough that they will never be
+* merged with real input features.
+*/
+//static void AddSentinel( TESStesselator *tess, TESSreal smin, TESSreal smax, TESSreal t )
+
+
+Sweep.addSentinel = function (tess, smin, smax, t) {
+  /*
+  * We add two sentinel edges above and below all other edges,
+  * to avoid special cases at the top and bottom.
+  */
+  var reg = new ActiveRegion();
+  var e = tess.mesh.makeEdge(); //	if (e == NULL) longjmp(tess->env,1);
+
+  e.Org.s = smax;
+  e.Org.t = t;
+  e.Dst.s = smin;
+  e.Dst.t = t;
+  tess.event = e.Dst;
+  /* initialize it */
+
+  reg.eUp = e;
+  reg.windingNumber = 0;
+  reg.inside = false;
+  reg.fixUpperEdge = false;
+  reg.sentinel = true;
+  reg.dirty = false;
+  reg.nodeUp = tess.dict.insert(reg); //	if (reg->nodeUp == NULL) longjmp(tess->env,1);
+}; //static void InitEdgeDict( TESStesselator *tess )
+
+
+Sweep.initEdgeDict = function (tess) {
+  /*
+  * We maintain an ordering of edge intersections with the sweep line.
+  * This order is maintained in a dynamic dictionary.
+  */
+  tess.dict = new Dict(tess, Sweep.edgeLeq); //	if (tess->dict == NULL) longjmp(tess->env,1);
+
+  var w = tess.bmax[0] - tess.bmin[0];
+  var h = tess.bmax[1] - tess.bmin[1];
+  var smin = tess.bmin[0] - w;
+  var smax = tess.bmax[0] + w;
+  var tmin = tess.bmin[1] - h;
+  var tmax = tess.bmax[1] + h;
+  Sweep.addSentinel(tess, smin, smax, tmin);
+  Sweep.addSentinel(tess, smin, smax, tmax);
+};
+
+Sweep.doneEdgeDict = function (tess) {
+  var reg;
+  var fixedEdges = 0;
+
+  while ((reg = tess.dict.min().key) !== null) {
+    /*
+    * At the end of all processing, the dictionary should contain
+    * only the two sentinel edges, plus at most one "fixable" edge
+    * created by ConnectRightVertex().
+    */
+    if (!reg.sentinel) {
+      assert(reg.fixUpperEdge);
+      assert(++fixedEdges === 1);
+    }
+
+    assert(reg.windingNumber === 0);
+    Sweep.deleteRegion(tess, reg);
+    /*    tessMeshDelete( reg->eUp );*/
+  } //	dictDeleteDict( &tess->alloc, tess->dict );
+
+};
+
+Sweep.removeDegenerateEdges = function (tess) {
+  /*
+  * Remove zero-length edges, and contours with fewer than 3 vertices.
+  */
+  var e, eNext, eLnext;
+  var eHead = tess.mesh.eHead;
+  /*LINTED*/
+
+  for (e = eHead.next; e !== eHead; e = eNext) {
+    eNext = e.next;
+    eLnext = e.Lnext;
+
+    if (Geom.vertEq(e.Org, e.Dst) && e.Lnext.Lnext !== e) {
+      /* Zero-length edge, contour has at least 3 edges */
+      Sweep.spliceMergeVertices(tess, eLnext, e);
+      /* deletes e->Org */
+
+      tess.mesh.delete(e);
+      /* e is a self-loop */
+
+      e = eLnext;
+      eLnext = e.Lnext;
+    }
+
+    if (eLnext.Lnext === e) {
+      /* Degenerate contour (one or two edges) */
+      if (eLnext !== e) {
+        if (eLnext === eNext || eLnext === eNext.Sym) {
+          eNext = eNext.next;
+        }
+
+        tess.mesh.delete(eLnext);
+      }
+
+      if (e === eNext || e === eNext.Sym) {
+        eNext = eNext.next;
+      }
+
+      tess.mesh.delete(e);
+    }
+  }
+};
+
+Sweep.initPriorityQ = function (tess) {
+  /*
+  * Insert all vertices into the priority queue which determines the
+  * order in which vertices cross the sweep line.
+  */
+  var pq;
+  var v, vHead;
+  var vertexCount = 0;
+  vHead = tess.mesh.vHead;
+
+  for (v = vHead.next; v !== vHead; v = v.next) {
+    vertexCount++;
+  }
+  /* Make sure there is enough space for sentinels. */
+
+
+  vertexCount += 8; //MAX( 8, tess->alloc.extraVertices );
+
+  pq = tess.pq = new PriorityQ(vertexCount, Geom.vertLeq); //	if (pq == NULL) return 0;
+
+  vHead = tess.mesh.vHead;
+
+  for (v = vHead.next; v !== vHead; v = v.next) {
+    v.pqHandle = pq.insert(v); //		if (v.pqHandle == INV_HANDLE)
+    //			break;
+  }
+
+  if (v !== vHead) {
+    return false;
+  }
+
+  pq.init();
+  return true;
+};
+
+Sweep.donePriorityQ = function (tess) {
+  tess.pq = null;
+};
+
+Sweep.removeDegenerateFaces = function (tess, mesh) {
+  /*
+  * Delete any degenerate faces with only two edges.  WalkDirtyRegions()
+  * will catch almost all of these, but it won't catch degenerate faces
+  * produced by splice operations on already-processed edges.
+  * The two places this can happen are in FinishLeftRegions(), when
+  * we splice in a "temporary" edge produced by ConnectRightVertex(),
+  * and in CheckForLeftSplice(), where we splice already-processed
+  * edges to ensure that our dictionary invariants are not violated
+  * by numerical errors.
+  *
+  * In both these cases it is *very* dangerous to delete the offending
+  * edge at the time, since one of the routines further up the stack
+  * will sometimes be keeping a pointer to that edge.
+  */
+  var f, fNext;
+  var e;
+  /*LINTED*/
+
+  for (f = mesh.fHead.next; f !== mesh.fHead; f = fNext) {
+    fNext = f.next;
+    e = f.anEdge;
+    assert(e.Lnext !== e);
+
+    if (e.Lnext.Lnext === e) {
+      /* A face with only two edges */
+      Sweep.addWinding(e.Onext, e);
+      tess.mesh.delete(e);
+    }
+  }
+
+  return true;
+};
+
+Sweep.computeInterior = function (tess) {
+  /*
+  * tessComputeInterior( tess ) computes the planar arrangement specified
+  * by the given contours, and further subdivides this arrangement
+  * into regions.  Each region is marked "inside" if it belongs
+  * to the polygon, according to the rule given by tess->windingRule.
+  * Each interior region is guaranteed be monotone.
+  */
+  var v, vNext;
+  /* Each vertex defines an event for our sweep line.  Start by inserting
+  * all the vertices in a priority queue.  Events are processed in
+  * lexicographic order, ie.
+  *
+  *	e1 < e2  iff  e1.x < e2.x || (e1.x == e2.x && e1.y < e2.y)
+  */
+
+  Sweep.removeDegenerateEdges(tess);
+  if (!Sweep.initPriorityQ(tess)) return false;
+  /* if error */
+
+  Sweep.initEdgeDict(tess);
+
+  while ((v = tess.pq.extractMin()) !== null) {
+    for (;;) {
+      vNext = tess.pq.min();
+      if (vNext === null || !Geom.vertEq(vNext, v)) break;
+      /* Merge together all vertices at exactly the same location.
+      * This is more efficient than processing them one at a time,
+      * simplifies the code (see ConnectLeftDegenerate), and is also
+      * important for correct handling of certain degenerate cases.
+      * For example, suppose there are two identical edges A and B
+      * that belong to different contours (so without this code they would
+      * be processed by separate sweep events).  Suppose another edge C
+      * crosses A and B from above.  When A is processed, we split it
+      * at its intersection point with C.  However this also splits C,
+      * so when we insert B we may compute a slightly different
+      * intersection point.  This might leave two edges with a small
+      * gap between them.  This kind of error is especially obvious
+      * when using boundary extraction (TESS_BOUNDARY_ONLY).
+      */
+
+      vNext = tess.pq.extractMin();
+      Sweep.spliceMergeVertices(tess, v.anEdge, vNext.anEdge);
+    }
+
+    Sweep.sweepEvent(tess, v);
+  }
+  /* Set tess->event for debugging purposes */
+
+
+  tess.event = tess.dict.min().key.eUp.Org;
+  Sweep.debugEvent(tess);
+  Sweep.doneEdgeDict(tess);
+  Sweep.donePriorityQ(tess);
+  if (!Sweep.removeDegenerateFaces(tess, tess.mesh)) return false;
+  tess.mesh.check();
+  return true;
+};
+
+function Tesselator() {
+  /*** state needed for collecting the input data ***/
+  this.mesh = null;
+  /* stores the input contours, and eventually
+  the tessellation itself */
+
+  /*** state needed for projecting onto the sweep plane ***/
+
+  this.normal = [0.0, 0.0, 0.0];
+  /* user-specified normal (if provided) */
+
+  this.sUnit = [0.0, 0.0, 0.0];
+  /* unit vector in s-direction (debugging) */
+
+  this.tUnit = [0.0, 0.0, 0.0];
+  /* unit vector in t-direction (debugging) */
+
+  this.bmin = [0.0, 0.0];
+  this.bmax = [0.0, 0.0];
+  /*** state needed for the line sweep ***/
+
+  this.windingRule = Tess2.WINDING_ODD;
+  /* rule for determining polygon interior */
+
+  this.dict = null;
+  /* edge dictionary for sweep line */
+
+  this.pq = null;
+  /* priority queue of vertex events */
+
+  this.event = null;
+  /* current sweep event being processed */
+
+  this.vertexIndexCounter = 0;
+  this.vertices = [];
+  this.vertexIndices = [];
+  this.vertexCount = 0;
+  this.elements = [];
+  this.elementCount = 0;
+}
+
+;
+Tesselator.prototype = {
+  dot_: function dot_(u, v) {
+    return u[0] * v[0] + u[1] * v[1] + u[2] * v[2];
+  },
+  normalize_: function normalize_(v) {
+    var len = v[0] * v[0] + v[1] * v[1] + v[2] * v[2];
+    assert(len > 0.0);
+    len = Math.sqrt(len);
+    v[0] /= len;
+    v[1] /= len;
+    v[2] /= len;
+  },
+  longAxis_: function longAxis_(v) {
+    var i = 0;
+
+    if (Math.abs(v[1]) > Math.abs(v[0])) {
+      i = 1;
+    }
+
+    if (Math.abs(v[2]) > Math.abs(v[i])) {
+      i = 2;
+    }
+
+    return i;
+  },
+  computeNormal_: function computeNormal_(norm) {
+    var v, v1, v2;
+    var c, tLen2, maxLen2;
+    var maxVal = [0, 0, 0],
+        minVal = [0, 0, 0],
+        d1 = [0, 0, 0],
+        d2 = [0, 0, 0],
+        tNorm = [0, 0, 0];
+    var maxVert = [null, null, null],
+        minVert = [null, null, null];
+    var vHead = this.mesh.vHead;
+    var i;
+    v = vHead.next;
+
+    for (i = 0; i < 3; ++i) {
+      c = v.coords[i];
+      minVal[i] = c;
+      minVert[i] = v;
+      maxVal[i] = c;
+      maxVert[i] = v;
+    }
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      for (i = 0; i < 3; ++i) {
+        c = v.coords[i];
+
+        if (c < minVal[i]) {
+          minVal[i] = c;
+          minVert[i] = v;
+        }
+
+        if (c > maxVal[i]) {
+          maxVal[i] = c;
+          maxVert[i] = v;
+        }
+      }
+    }
+    /* Find two vertices separated by at least 1/sqrt(3) of the maximum
+    * distance between any two vertices
+    */
+
+
+    i = 0;
+
+    if (maxVal[1] - minVal[1] > maxVal[0] - minVal[0]) {
+      i = 1;
+    }
+
+    if (maxVal[2] - minVal[2] > maxVal[i] - minVal[i]) {
+      i = 2;
+    }
+
+    if (minVal[i] >= maxVal[i]) {
+      /* All vertices are the same -- normal doesn't matter */
+      norm[0] = 0;
+      norm[1] = 0;
+      norm[2] = 1;
+      return;
+    }
+    /* Look for a third vertex which forms the triangle with maximum area
+    * (Length of normal == twice the triangle area)
+    */
+
+
+    maxLen2 = 0;
+    v1 = minVert[i];
+    v2 = maxVert[i];
+    d1[0] = v1.coords[0] - v2.coords[0];
+    d1[1] = v1.coords[1] - v2.coords[1];
+    d1[2] = v1.coords[2] - v2.coords[2];
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      d2[0] = v.coords[0] - v2.coords[0];
+      d2[1] = v.coords[1] - v2.coords[1];
+      d2[2] = v.coords[2] - v2.coords[2];
+      tNorm[0] = d1[1] * d2[2] - d1[2] * d2[1];
+      tNorm[1] = d1[2] * d2[0] - d1[0] * d2[2];
+      tNorm[2] = d1[0] * d2[1] - d1[1] * d2[0];
+      tLen2 = tNorm[0] * tNorm[0] + tNorm[1] * tNorm[1] + tNorm[2] * tNorm[2];
+
+      if (tLen2 > maxLen2) {
+        maxLen2 = tLen2;
+        norm[0] = tNorm[0];
+        norm[1] = tNorm[1];
+        norm[2] = tNorm[2];
+      }
+    }
+
+    if (maxLen2 <= 0) {
+      /* All points lie on a single line -- any decent normal will do */
+      norm[0] = norm[1] = norm[2] = 0;
+      norm[this.longAxis_(d1)] = 1;
+    }
+  },
+  checkOrientation_: function checkOrientation_() {
+    var area;
+    var f,
+        fHead = this.mesh.fHead;
+    var v,
+        vHead = this.mesh.vHead;
+    var e;
+    /* When we compute the normal automatically, we choose the orientation
+    * so that the the sum of the signed areas of all contours is non-negative.
+    */
+
+    area = 0;
+
+    for (f = fHead.next; f !== fHead; f = f.next) {
+      e = f.anEdge;
+      if (e.winding <= 0) continue;
+
+      do {
+        area += (e.Org.s - e.Dst.s) * (e.Org.t + e.Dst.t);
+        e = e.Lnext;
+      } while (e !== f.anEdge);
+    }
+
+    if (area < 0) {
+      /* Reverse the orientation by flipping all the t-coordinates */
+      for (v = vHead.next; v !== vHead; v = v.next) {
+        v.t = -v.t;
+      }
+
+      this.tUnit[0] = -this.tUnit[0];
+      this.tUnit[1] = -this.tUnit[1];
+      this.tUnit[2] = -this.tUnit[2];
+    }
+  },
+
+  /*	#ifdef FOR_TRITE_TEST_PROGRAM
+    #include <stdlib.h>
+    extern int RandomSweep;
+    #define S_UNIT_X	(RandomSweep ? (2*drand48()-1) : 1.0)
+    #define S_UNIT_Y	(RandomSweep ? (2*drand48()-1) : 0.0)
+    #else
+    #if defined(SLANTED_SWEEP) */
+
+  /* The "feature merging" is not intended to be complete.  There are
+  * special cases where edges are nearly parallel to the sweep line
+  * which are not implemented.  The algorithm should still behave
+  * robustly (ie. produce a reasonable tesselation) in the presence
+  * of such edges, however it may miss features which could have been
+  * merged.  We could minimize this effect by choosing the sweep line
+  * direction to be something unusual (ie. not parallel to one of the
+  * coordinate axes).
+  */
+
+  /*	#define S_UNIT_X	(TESSreal)0.50941539564955385	// Pre-normalized
+    #define S_UNIT_Y	(TESSreal)0.86052074622010633
+    #else
+    #define S_UNIT_X	(TESSreal)1.0
+    #define S_UNIT_Y	(TESSreal)0.0
+    #endif
+    #endif*/
+
+  /* Determine the polygon normal and project vertices onto the plane
+  * of the polygon.
+  */
+  projectPolygon_: function projectPolygon_() {
+    var v,
+        vHead = this.mesh.vHead;
+    var norm = [0, 0, 0];
+    var sUnit, tUnit;
+    var i,
+        first,
+        computedNormal = false;
+    norm[0] = this.normal[0];
+    norm[1] = this.normal[1];
+    norm[2] = this.normal[2];
+
+    if (norm[0] === 0.0 && norm[1] === 0.0 && norm[2] === 0.0) {
+      this.computeNormal_(norm);
+      computedNormal = true;
+    }
+
+    sUnit = this.sUnit;
+    tUnit = this.tUnit;
+    i = this.longAxis_(norm);
+    /*	#if defined(FOR_TRITE_TEST_PROGRAM) || defined(TRUE_PROJECT)
+        // Choose the initial sUnit vector to be approximately perpendicular
+        // to the normal.
+        
+        Normalize( norm );
+    
+        sUnit[i] = 0;
+        sUnit[(i+1)%3] = S_UNIT_X;
+        sUnit[(i+2)%3] = S_UNIT_Y;
+    
+        // Now make it exactly perpendicular 
+        w = Dot( sUnit, norm );
+        sUnit[0] -= w * norm[0];
+        sUnit[1] -= w * norm[1];
+        sUnit[2] -= w * norm[2];
+        Normalize( sUnit );
+    
+        // Choose tUnit so that (sUnit,tUnit,norm) form a right-handed frame 
+        tUnit[0] = norm[1]*sUnit[2] - norm[2]*sUnit[1];
+        tUnit[1] = norm[2]*sUnit[0] - norm[0]*sUnit[2];
+        tUnit[2] = norm[0]*sUnit[1] - norm[1]*sUnit[0];
+        Normalize( tUnit );
+      #else*/
+
+    /* Project perpendicular to a coordinate axis -- better numerically */
+
+    sUnit[i] = 0;
+    sUnit[(i + 1) % 3] = 1.0;
+    sUnit[(i + 2) % 3] = 0.0;
+    tUnit[i] = 0;
+    tUnit[(i + 1) % 3] = 0.0;
+    tUnit[(i + 2) % 3] = norm[i] > 0 ? 1.0 : -1.0; //	#endif
+
+    /* Project the vertices onto the sweep plane */
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      v.s = this.dot_(v.coords, sUnit);
+      v.t = this.dot_(v.coords, tUnit);
+    }
+
+    if (computedNormal) {
+      this.checkOrientation_();
+    }
+    /* Compute ST bounds. */
+
+
+    first = true;
+
+    for (v = vHead.next; v !== vHead; v = v.next) {
+      if (first) {
+        this.bmin[0] = this.bmax[0] = v.s;
+        this.bmin[1] = this.bmax[1] = v.t;
+        first = false;
+      } else {
+        if (v.s < this.bmin[0]) this.bmin[0] = v.s;
+        if (v.s > this.bmax[0]) this.bmax[0] = v.s;
+        if (v.t < this.bmin[1]) this.bmin[1] = v.t;
+        if (v.t > this.bmax[1]) this.bmax[1] = v.t;
+      }
+    }
+  },
+  addWinding_: function addWinding_(eDst, eSrc) {
+    eDst.winding += eSrc.winding;
+    eDst.Sym.winding += eSrc.Sym.winding;
+  },
+
+  /* tessMeshTessellateMonoRegion( face ) tessellates a monotone region
+  * (what else would it do??)  The region must consist of a single
+  * loop of half-edges (see mesh.h) oriented CCW.  "Monotone" in this
+  * case means that any vertical line intersects the interior of the
+  * region in a single interval.  
+  *
+  * Tessellation consists of adding interior edges (actually pairs of
+  * half-edges), to split the region into non-overlapping triangles.
+  *
+  * The basic idea is explained in Preparata and Shamos (which I don''t
+  * have handy right now), although their implementation is more
+  * complicated than this one.  The are two edge chains, an upper chain
+  * and a lower chain.  We process all vertices from both chains in order,
+  * from right to left.
+  *
+  * The algorithm ensures that the following invariant holds after each
+  * vertex is processed: the untessellated region consists of two
+  * chains, where one chain (say the upper) is a single edge, and
+  * the other chain is concave.  The left vertex of the single edge
+  * is always to the left of all vertices in the concave chain.
+  *
+  * Each step consists of adding the rightmost unprocessed vertex to one
+  * of the two chains, and forming a fan of triangles from the rightmost
+  * of two chain endpoints.  Determining whether we can add each triangle
+  * to the fan is a simple orientation test.  By making the fan as large
+  * as possible, we restore the invariant (check it yourself).
+  */
+  //	int tessMeshTessellateMonoRegion( TESSmesh *mesh, TESSface *face )
+  tessellateMonoRegion_: function tessellateMonoRegion_(mesh, face) {
+    var up, lo;
+    /* All edges are oriented CCW around the boundary of the region.
+    * First, find the half-edge whose origin vertex is rightmost.
+    * Since the sweep goes from left to right, face->anEdge should
+    * be close to the edge we want.
+    */
+
+    up = face.anEdge;
+    assert(up.Lnext !== up && up.Lnext.Lnext !== up);
+
+    for (; Geom.vertLeq(up.Dst, up.Org); up = up.Lprev) {
+      ;
+    }
+
+    for (; Geom.vertLeq(up.Org, up.Dst); up = up.Lnext) {
+      ;
+    }
+
+    lo = up.Lprev;
+
+    while (up.Lnext !== lo) {
+      if (Geom.vertLeq(up.Dst, lo.Org)) {
+        /* up->Dst is on the left.  It is safe to form triangles from lo->Org.
+        * The EdgeGoesLeft test guarantees progress even when some triangles
+        * are CW, given that the upper and lower chains are truly monotone.
+        */
+        while (lo.Lnext !== up && (Geom.edgeGoesLeft(lo.Lnext) || Geom.edgeSign(lo.Org, lo.Dst, lo.Lnext.Dst) <= 0.0)) {
+          var tempHalfEdge = mesh.connect(lo.Lnext, lo); //if (tempHalfEdge == NULL) return 0;
+
+          lo = tempHalfEdge.Sym;
+        }
+
+        lo = lo.Lprev;
+      } else {
+        /* lo->Org is on the left.  We can make CCW triangles from up->Dst. */
+        while (lo.Lnext !== up && (Geom.edgeGoesRight(up.Lprev) || Geom.edgeSign(up.Dst, up.Org, up.Lprev.Org) >= 0.0)) {
+          var tempHalfEdge = mesh.connect(up, up.Lprev); //if (tempHalfEdge == NULL) return 0;
+
+          up = tempHalfEdge.Sym;
+        }
+
+        up = up.Lnext;
+      }
+    }
+    /* Now lo->Org == up->Dst == the leftmost vertex.  The remaining region
+    * can be tessellated in a fan from this leftmost vertex.
+    */
+
+
+    assert(lo.Lnext !== up);
+
+    while (lo.Lnext.Lnext !== up) {
+      var tempHalfEdge = mesh.connect(lo.Lnext, lo); //if (tempHalfEdge == NULL) return 0;
+
+      lo = tempHalfEdge.Sym;
+    }
+
+    return true;
+  },
+
+  /* tessMeshTessellateInterior( mesh ) tessellates each region of
+  * the mesh which is marked "inside" the polygon.  Each such region
+  * must be monotone.
+  */
+  //int tessMeshTessellateInterior( TESSmesh *mesh )
+  tessellateInterior_: function tessellateInterior_(mesh) {
+    var f, next;
+    /*LINTED*/
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = next) {
+      /* Make sure we don''t try to tessellate the new triangles. */
+      next = f.next;
+
+      if (f.inside) {
+        if (!this.tessellateMonoRegion_(mesh, f)) return false;
+      }
+    }
+
+    return true;
+  },
+
+  /* tessMeshDiscardExterior( mesh ) zaps (ie. sets to NULL) all faces
+  * which are not marked "inside" the polygon.  Since further mesh operations
+  * on NULL faces are not allowed, the main purpose is to clean up the
+  * mesh so that exterior loops are not represented in the data structure.
+  */
+  //void tessMeshDiscardExterior( TESSmesh *mesh )
+  discardExterior_: function discardExterior_(mesh) {
+    var f, next;
+    /*LINTED*/
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = next) {
+      /* Since f will be destroyed, save its next pointer. */
+      next = f.next;
+
+      if (!f.inside) {
+        mesh.zapFace(f);
+      }
+    }
+  },
+
+  /* tessMeshSetWindingNumber( mesh, value, keepOnlyBoundary ) resets the
+  * winding numbers on all edges so that regions marked "inside" the
+  * polygon have a winding number of "value", and regions outside
+  * have a winding number of 0.
+  *
+  * If keepOnlyBoundary is TRUE, it also deletes all edges which do not
+  * separate an interior region from an exterior one.
+  */
+  //	int tessMeshSetWindingNumber( TESSmesh *mesh, int value, int keepOnlyBoundary )
+  setWindingNumber_: function setWindingNumber_(mesh, value, keepOnlyBoundary) {
+    var e, eNext;
+
+    for (e = mesh.eHead.next; e !== mesh.eHead; e = eNext) {
+      eNext = e.next;
+
+      if (e.Rface.inside !== e.Lface.inside) {
+        /* This is a boundary edge (one side is interior, one is exterior). */
+        e.winding = e.Lface.inside ? value : -value;
+      } else {
+        /* Both regions are interior, or both are exterior. */
+        if (!keepOnlyBoundary) {
+          e.winding = 0;
+        } else {
+          mesh.delete(e);
+        }
+      }
+    }
+  },
+  getNeighbourFace_: function getNeighbourFace_(edge) {
+    if (!edge.Rface) return -1;
+    if (!edge.Rface.inside) return -1;
+    return edge.Rface.n;
+  },
+  outputPolymesh_: function outputPolymesh_(mesh, elementType, polySize, vertexSize) {
+    var v;
+    var f;
+    var edge;
+    var maxFaceCount = 0;
+    var maxVertexCount = 0;
+    var faceVerts, i;
+    var elements = 0;
+    var vert; // Assume that the input data is triangles now.
+    // Try to merge as many polygons as possible
+
+    if (polySize > 3) {
+      mesh.mergeConvexFaces(polySize);
+    } // Mark unused
+
+
+    for (v = mesh.vHead.next; v !== mesh.vHead; v = v.next) {
+      v.n = -1;
+    } // Create unique IDs for all vertices and faces.
+
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      f.n = -1;
+      if (!f.inside) continue;
+      edge = f.anEdge;
+      faceVerts = 0;
+
+      do {
+        v = edge.Org;
+
+        if (v.n === -1) {
+          v.n = maxVertexCount;
+          maxVertexCount++;
+        }
+
+        faceVerts++;
+        edge = edge.Lnext;
+      } while (edge !== f.anEdge);
+
+      assert(faceVerts <= polySize);
+      f.n = maxFaceCount;
+      ++maxFaceCount;
+    }
+
+    this.elementCount = maxFaceCount;
+    if (elementType === Tess2.CONNECTED_POLYGONS) maxFaceCount *= 2;
+    /*		tess.elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+                                  sizeof(TESSindex) * maxFaceCount * polySize );
+        if (!tess->elements)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    this.elements = [];
+    this.elements.length = maxFaceCount * polySize;
+    this.vertexCount = maxVertexCount;
+    /*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
+                                 sizeof(TESSreal) * tess->vertexCount * vertexSize );
+        if (!tess->vertices)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    this.vertices = [];
+    this.vertices.length = maxVertexCount * vertexSize;
+    /*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+                                      sizeof(TESSindex) * tess->vertexCount );
+        if (!tess->vertexIndices)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    this.vertexIndices = [];
+    this.vertexIndices.length = maxVertexCount; // Output vertices.
+
+    for (v = mesh.vHead.next; v !== mesh.vHead; v = v.next) {
+      if (v.n !== -1) {
+        // Store coordinate
+        var idx = v.n * vertexSize;
+        this.vertices[idx + 0] = v.coords[0];
+        this.vertices[idx + 1] = v.coords[1];
+        if (vertexSize > 2) this.vertices[idx + 2] = v.coords[2]; // Store vertex index.
+
+        this.vertexIndices[v.n] = v.idx;
+      }
+    } // Output indices.
+
+
+    var nel = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue; // Store polygon
+
+      edge = f.anEdge;
+      faceVerts = 0;
+
+      do {
+        v = edge.Org;
+        this.elements[nel++] = v.n;
+        faceVerts++;
+        edge = edge.Lnext;
+      } while (edge !== f.anEdge); // Fill unused.
+
+
+      for (i = faceVerts; i < polySize; ++i) {
+        this.elements[nel++] = -1;
+      } // Store polygon connectivity
+
+
+      if (elementType === Tess2.CONNECTED_POLYGONS) {
+        edge = f.anEdge;
+
+        do {
+          this.elements[nel++] = this.getNeighbourFace_(edge);
+          edge = edge.Lnext;
+        } while (edge !== f.anEdge); // Fill unused.
+
+
+        for (i = faceVerts; i < polySize; ++i) {
+          this.elements[nel++] = -1;
+        }
+      }
+    }
+  },
+  //	void OutputContours( TESStesselator *tess, TESSmesh *mesh, int vertexSize )
+  outputContours_: function outputContours_(mesh, vertexSize) {
+    var f;
+    var edge;
+    var start;
+    var verts;
+    var elements;
+    var vertInds;
+    var startVert = 0;
+    var vertCount = 0;
+    this.vertexCount = 0;
+    this.elementCount = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue;
+      start = edge = f.anEdge;
+
+      do {
+        this.vertexCount++;
+        edge = edge.Lnext;
+      } while (edge !== start);
+
+      this.elementCount++;
+    }
+    /*		tess->elements = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+                                  sizeof(TESSindex) * tess->elementCount * 2 );
+        if (!tess->elements)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+
+    this.elements = [];
+    this.elements.length = this.elementCount * 2;
+    /*		tess->vertices = (TESSreal*)tess->alloc.memalloc( tess->alloc.userData,
+                                  sizeof(TESSreal) * tess->vertexCount * vertexSize );
+        if (!tess->vertices)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    this.vertices = [];
+    this.vertices.length = this.vertexCount * vertexSize;
+    /*		tess->vertexIndices = (TESSindex*)tess->alloc.memalloc( tess->alloc.userData,
+                                      sizeof(TESSindex) * tess->vertexCount );
+        if (!tess->vertexIndices)
+        {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    this.vertexIndices = [];
+    this.vertexIndices.length = this.vertexCount;
+    var nv = 0;
+    var nvi = 0;
+    var nel = 0;
+    startVert = 0;
+
+    for (f = mesh.fHead.next; f !== mesh.fHead; f = f.next) {
+      if (!f.inside) continue;
+      vertCount = 0;
+      start = edge = f.anEdge;
+
+      do {
+        this.vertices[nv++] = edge.Org.coords[0];
+        this.vertices[nv++] = edge.Org.coords[1];
+        if (vertexSize > 2) this.vertices[nv++] = edge.Org.coords[2];
+        this.vertexIndices[nvi++] = edge.Org.idx;
+        vertCount++;
+        edge = edge.Lnext;
+      } while (edge !== start);
+
+      this.elements[nel++] = startVert;
+      this.elements[nel++] = vertCount;
+      startVert += vertCount;
+    }
+  },
+  addContour: function addContour(size, vertices) {
+    var e;
+    var i;
+    if (this.mesh === null) this.mesh = new TESSmesh();
+    /*	 	if ( tess->mesh == NULL ) {
+          tess->outOfMemory = 1;
+          return;
+        }*/
+
+    if (size < 2) size = 2;
+    if (size > 3) size = 3;
+    e = null;
+
+    for (i = 0; i < vertices.length; i += size) {
+      if (e === null) {
+        /* Make a self-loop (one vertex, one edge). */
+        e = this.mesh.makeEdge();
+        /*				if ( e == NULL ) {
+                  tess->outOfMemory = 1;
+                  return;
+                }*/
+
+        this.mesh.splice(e, e.Sym);
+      } else {
+        /* Create a new vertex and edge which immediately follow e
+        * in the ordering around the left face.
+        */
+        this.mesh.splitEdge(e);
+        e = e.Lnext;
+      }
+      /* The new vertex is now e->Org. */
+
+
+      e.Org.coords[0] = vertices[i + 0];
+      e.Org.coords[1] = vertices[i + 1];
+      if (size > 2) e.Org.coords[2] = vertices[i + 2];else e.Org.coords[2] = 0.0;
+      /* Store the insertion number so that the vertex can be later recognized. */
+
+      e.Org.idx = this.vertexIndexCounter++;
+      /* The winding of an edge says how the winding number changes as we
+      * cross from the edge''s right face to its left face.  We add the
+      * vertices in such an order that a CCW contour will add +1 to
+      * the winding number of the region inside the contour.
+      */
+
+      e.winding = 1;
+      e.Sym.winding = -1;
+    }
+  },
+  //	int tessTesselate( TESStesselator *tess, int windingRule, int elementType, int polySize, int vertexSize, const TESSreal* normal )
+  tesselate: function tesselate(windingRule, elementType, polySize, vertexSize, normal) {
+    this.vertices = [];
+    this.elements = [];
+    this.vertexIndices = [];
+    this.vertexIndexCounter = 0;
+
+    if (normal) {
+      this.normal[0] = normal[0];
+      this.normal[1] = normal[1];
+      this.normal[2] = normal[2];
+    }
+
+    this.windingRule = windingRule;
+    if (vertexSize < 2) vertexSize = 2;
+    if (vertexSize > 3) vertexSize = 3;
+    /*		if (setjmp(tess->env) != 0) { 
+          // come back here if out of memory
+          return 0;
+        }*/
+
+    if (!this.mesh) {
+      return false;
+    }
+    /* Determine the polygon normal and project vertices onto the plane
+    * of the polygon.
+    */
+
+
+    this.projectPolygon_();
+    /* tessComputeInterior( tess ) computes the planar arrangement specified
+    * by the given contours, and further subdivides this arrangement
+    * into regions.  Each region is marked "inside" if it belongs
+    * to the polygon, according to the rule given by tess->windingRule.
+    * Each interior region is guaranteed be monotone.
+    */
+
+    Sweep.computeInterior(this);
+    var mesh = this.mesh;
+    /* If the user wants only the boundary contours, we throw away all edges
+    * except those which separate the interior from the exterior.
+    * Otherwise we tessellate all the regions marked "inside".
+    */
+
+    if (elementType === Tess2.BOUNDARY_CONTOURS) {
+      this.setWindingNumber_(mesh, 1, true);
+    } else {
+      this.tessellateInterior_(mesh);
+    } //		if (rc == 0) longjmp(tess->env,1);  /* could've used a label */
+
+
+    mesh.check();
+
+    if (elementType === Tess2.BOUNDARY_CONTOURS) {
+      this.outputContours_(mesh, vertexSize);
+      /* output contours */
+    } else {
+      this.outputPolymesh_(mesh, elementType, polySize, vertexSize);
+      /* output polygons */
+    } //			tess.mesh = null;
+
+
+    return true;
+  }
+};
 
 /***/ }),
-/* 104 */
+/* 82 */
 /***/ (function(module, exports) {
 
 module.exports = extend
@@ -21809,7 +20948,7 @@ function extend() {
 
 
 /***/ }),
-/* 105 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21818,12 +20957,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyShader", function() { return applyShader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createCloudShaders", function() { return createCloudShaders; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyCloudShader", function() { return applyCloudShader; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _shader_vert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(106);
-/* harmony import */ var _shader_frag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(107);
-/* harmony import */ var _shader_cloud_vert__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(108);
-/* harmony import */ var _shader_cloud_frag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(109);
+/* harmony import */ var _shader_vert__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(84);
+/* harmony import */ var _shader_frag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(85);
+/* harmony import */ var _shader_cloud_vert__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(86);
+/* harmony import */ var _shader_cloud_frag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(87);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -21971,7 +21110,7 @@ function applyCloudShader(renderer) {
 }
 
 /***/ }),
-/* 106 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21979,7 +21118,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("attribute vec3 a_vertexPosition;\nattribute vec4 a_color;\nvarying vec4 vColor;\nvarying float flagBackground;\nuniform vec2 u_resolution;\nuniform mat3 viewMatrix;\nuniform mat3 projectionMatrix;\n\n#ifdef TEXTURE\nattribute vec3 a_vertexTextureCoord;\nvarying vec3 vTextureCoord;\nattribute vec4 a_sourceRect;\nvarying vec4 vSourceRect;\n#endif\n\n#ifdef CLIPPATH\nattribute vec2 a_clipUV;\nvarying vec2 vClipUV;\n#endif\n\n#ifdef GRADIENT\nuniform float u_radialGradientVector[6];\nvarying vec3 vGradientVector1;\nvarying vec3 vGradientVector2;\n#endif\n\nvoid main() {\n  gl_PointSize = 1.0;\n\n  vec3 pos = projectionMatrix * viewMatrix * vec3(a_vertexPosition.xy, 1.0);\n  gl_Position = vec4(pos.xy, 1.0, 1.0);\n\n#ifdef GRADIENT\n  vec3 vg1 = viewMatrix * vec3(u_radialGradientVector[0], u_radialGradientVector[1], 1.0);\n  vec3 vg2 = viewMatrix * vec3(u_radialGradientVector[3], u_radialGradientVector[4], 1.0);\n  float h = u_resolution.y;\n  vg1.y = h - vg1.y;\n  vg2.y = h - vg2.y;\n  vGradientVector1 = vec3(vg1.xy, u_radialGradientVector[2]);\n  vGradientVector2 = vec3(vg2.xy, u_radialGradientVector[5]);\n#endif\n  \n  flagBackground = a_vertexPosition.z;\n  vColor = a_color;\n\n#ifdef TEXTURE\n  vTextureCoord = a_vertexTextureCoord;\n  vSourceRect = a_sourceRect;\n#endif\n\n#ifdef CLIPPATH\n  vClipUV = a_clipUV;\n#endif\n}");
 
 /***/ }),
-/* 107 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21987,7 +21126,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("precision mediump float;\n\nvarying vec4 vColor;\nvarying float flagBackground;\n\n#ifdef TEXTURE\nvarying vec3 vTextureCoord;\nvarying vec4 vSourceRect;\n#endif\n\n#ifdef CLIPPATH\nvarying vec2 vClipUV;\n#endif\n\n#ifdef FILTER\nuniform int u_filterFlag;\nuniform float u_colorMatrix[20];\n#endif\n\n#ifdef GRADIENT\nvarying vec3 vGradientVector1;\nvarying vec3 vGradientVector2;\nuniform float u_colorSteps[40];\nuniform int u_gradientType;\n// uniform float u_radialGradientVector[6];\n\nvoid gradient(inout vec4 color, vec3 gv1, vec3 gv2, float colorSteps[40]) {\n  float t;\n  // center circle radius\n  float cr = gv1.z;\n  // focal circle radius\n  float fr = gv2.z;\n\n  if(cr > 0.0 || fr > 0.0) {\n    // radial gradient\n    vec2 center = gv1.xy;\n    vec2 focal = gv2.xy;\n    float x = focal.x - gl_FragCoord.x;\n    float y = focal.y - gl_FragCoord.y;\n    float dx = focal.x - center.x;\n    float dy = focal.y - center.y;\n    float dr = cr - fr;\n    float a = dx * dx + dy * dy - dr * dr;\n    float b = -2.0 * (y * dy + x * dx + fr * dr);\n    float c = x * x + y * y - fr * fr;\n    t = 1.0 - 0.5 * (1.0 / a) * (-b + sqrt(b * b - 4.0 * a * c));\n  } else {\n    // linear gradient\n    vec2 v1 = gl_FragCoord.xy - gv1.xy;\n    vec2 v2 = gv2.xy - gv1.xy;\n    t = (v1.x * v2.x + v1.y * v2.y) / (v2.x * v2.x + v2.y * v2.y);\n  }\n\n  vec4 colors[8];\n  colors[0] = vec4(colorSteps[1], colorSteps[2], colorSteps[3], colorSteps[4]);\n  colors[1] = vec4(colorSteps[6], colorSteps[7], colorSteps[8], colorSteps[9]);\n  colors[2] = vec4(colorSteps[11], colorSteps[12], colorSteps[13], colorSteps[14]);\n  colors[3] = vec4(colorSteps[16], colorSteps[17], colorSteps[18], colorSteps[19]);\n  colors[4] = vec4(colorSteps[21], colorSteps[22], colorSteps[23], colorSteps[24]);\n  colors[5] = vec4(colorSteps[26], colorSteps[27], colorSteps[28], colorSteps[29]);\n  colors[6] = vec4(colorSteps[31], colorSteps[32], colorSteps[33], colorSteps[34]);\n  colors[7] = vec4(colorSteps[36], colorSteps[37], colorSteps[38], colorSteps[39]);\n  \n  float steps[8];\n  steps[0] = colorSteps[0];\n  steps[1] = colorSteps[5];\n  steps[2] = colorSteps[10];\n  steps[3] = colorSteps[15];\n  steps[4] = colorSteps[20];\n  steps[5] = colorSteps[25];\n  steps[6] = colorSteps[30];\n  steps[7] = colorSteps[35];\n\n  color = colors[0];\n  for (int i = 1; i < 8; i++) {\n    if (steps[i] < 0.0 || steps[i] > 1.0) {\n      break;\n    }\n    if(steps[i] == steps[i - 1]) {\n      color = colors[i];\n    } else {\n      color = mix(color, colors[i], clamp((t - steps[i - 1]) / (steps[i] - steps[i - 1]), 0.0, 1.0));\n    }\n    if (steps[i] >= t) {\n      break;\n    }\n  }\n}\n#endif\n\n#ifdef FILTER\nvoid transformColor(inout vec4 color, in float colorMatrix[20]) {\n  float r = color.r, g = color.g, b = color.b, a = color.a;\n  color[0] = colorMatrix[0] * r + colorMatrix[1] * g + colorMatrix[2] * b + colorMatrix[3] * a + colorMatrix[4];\n  color[1] = colorMatrix[5] * r + colorMatrix[6] * g + colorMatrix[7] * b + colorMatrix[8] * a + colorMatrix[9];\n  color[2] = colorMatrix[10] * r + colorMatrix[11] * g + colorMatrix[12] * b + colorMatrix[13] * a + colorMatrix[14];\n  color[3] = colorMatrix[15] * r + colorMatrix[16] * g + colorMatrix[17] * b + colorMatrix[18] * a + colorMatrix[19];\n}\n#endif\n\nvoid main() {\n  vec4 color = vColor;\n  float opacity = abs(flagBackground);\n\n#ifdef GRADIENT\n  if(u_gradientType > 0 && flagBackground > 0.0 || u_gradientType == 0 && flagBackground <= 0.0) {\n    gradient(color, vGradientVector1, vGradientVector2, u_colorSteps);\n  }\n#endif\n\n  if(opacity < 1.0) {\n    color.a *= opacity;\n  }\n\n#ifdef TEXTURE\n  if(flagBackground > 0.0) {\n    vec3 texCoord = vTextureCoord;\n\n    if(texCoord.z == 1.0) {\n      texCoord = fract(texCoord);\n    }\n\n    if(texCoord.x <= 1.0 && texCoord.x >= 0.0\n      && texCoord.y <= 1.0 && texCoord.y >= 0.0) {\n      if(vSourceRect.z > 0.0) {\n        texCoord.x = vSourceRect.x + texCoord.x * vSourceRect.z;\n        texCoord.y = 1.0 - (vSourceRect.y + (1.0 - texCoord.y) * vSourceRect.w);\n      }\n      vec4 texColor = texture2D(u_texSampler, texCoord.xy);\n      float alpha = texColor.a;\n      if(opacity < 1.0) {\n        texColor.a *= opacity;\n        alpha *= mix(0.465, 1.0, opacity);\n      }\n      // color = mix(color, texColor, texColor.a);\n      color.rgb = mix(color.rgb, texColor.rgb, alpha);\n      // color.rgb = mix(texColor.rgb, color.rgb, color.a);\n      color.rgb = mix(texColor.rgb, color.rgb, clamp(color.a / max(0.0001, texColor.a), 0.0, 1.0));\n      color.a = texColor.a + (1.0 - texColor.a) * color.a;\n    }\n  }\n#endif\n\n#ifdef FILTER\n  if(u_filterFlag > 0) {\n    transformColor(color, u_colorMatrix);\n  }\n#endif\n\n#ifdef CLIPPATH\n  float clip = texture2D(u_clipSampler, vClipUV).r;\n  color *= clip;\n#endif\n\n  gl_FragColor = color;\n}");
 
 /***/ }),
-/* 108 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21995,7 +21134,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("attribute vec3 a_vertexPosition;\nattribute vec4 a_color;\nvarying vec4 vColor;\nvarying float flagBackground;\nattribute vec3 a_transform0;\nattribute vec3 a_transform1;\nuniform vec2 u_resolution;\nuniform mat3 viewMatrix;\nuniform mat3 projectionMatrix;\n\n#ifdef TEXTURE\nattribute vec3 a_vertexTextureCoord;\nvarying vec3 vTextureCoord;\nattribute float a_frameIndex;\nvarying float frameIndex;\nattribute vec4 a_sourceRect;\nvarying vec4 vSourceRect;\n#endif\n\n#ifdef CLIPPATH\nattribute vec2 a_clipUV;\nvarying vec2 vClipUV;\n#endif\n\n#ifdef CLOUDFILTER\nattribute vec4 a_colorCloud0;\nattribute vec4 a_colorCloud1;\nattribute vec4 a_colorCloud2;\nattribute vec4 a_colorCloud3;\nattribute vec4 a_colorCloud4;\nvarying vec4 colorCloud0;\nvarying vec4 colorCloud1;\nvarying vec4 colorCloud2;\nvarying vec4 colorCloud3;\nvarying vec4 colorCloud4;\n#endif\n\n#ifdef CLOUDCOLOR\nattribute vec4 a_fillCloudColor;\nattribute vec4 a_strokeCloudColor;\n#endif\n\n#ifdef GRADIENT\nuniform float u_radialGradientVector[6];\nvarying vec3 vGradientVector1;\nvarying vec3 vGradientVector2;\n#endif\n\nvoid main() {\n  gl_PointSize = 1.0;\n\n  mat3 modelMatrix = mat3(\n    a_transform0.x, a_transform1.x, 0, \n    a_transform0.y, a_transform1.y, 0,\n    a_transform0.z, a_transform1.z, 1\n  );\n\n  vec3 pos = projectionMatrix * viewMatrix * modelMatrix * vec3(a_vertexPosition.xy, 1.0);\n  gl_Position = vec4(pos.xy, 1.0, 1.0);\n\n#ifdef GRADIENT\n  vec3 vg1 = viewMatrix * vec3(u_radialGradientVector[0], u_radialGradientVector[1], 1.0);\n  vec3 vg2 = viewMatrix * vec3(u_radialGradientVector[3], u_radialGradientVector[4], 1.0);\n  float h = u_resolution.y;\n  vg1.y = h - vg1.y;\n  vg2.y = h - vg2.y;\n  vGradientVector1 = vec3(vg1.xy, u_radialGradientVector[2]);\n  vGradientVector2 = vec3(vg2.xy, u_radialGradientVector[5]);\n#endif\n  \n  flagBackground = a_vertexPosition.z;\n\n#ifdef CLOUDCOLOR\n  if(flagBackground > 0.0) {\n    vColor = mix(a_color, a_fillCloudColor, a_fillCloudColor.a);\n  } else {\n    vColor = mix(a_color, a_strokeCloudColor, a_strokeCloudColor.a);\n  }\n#else\n  vColor = a_color;\n#endif\n\n#ifdef TEXTURE\n  vTextureCoord = a_vertexTextureCoord;\n  frameIndex = a_frameIndex;\n  vSourceRect = a_sourceRect;\n#endif\n\n#ifdef CLIPPATH\n  vClipUV = a_clipUV;\n#endif\n\n#ifdef CLOUDFILTER\n  colorCloud0 = a_colorCloud0;\n  colorCloud1 = a_colorCloud1;\n  colorCloud2 = a_colorCloud2;\n  colorCloud3 = a_colorCloud3;\n  colorCloud4 = a_colorCloud4;\n#endif\n}");
 
 /***/ }),
-/* 109 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22003,7 +21142,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("precision mediump float;\n\nvarying vec4 vColor;\nvarying float flagBackground;\n\n#ifdef TEXTURE\nvarying float frameIndex;\nvarying vec3 vTextureCoord;\nvarying vec4 vSourceRect;\n#endif\n\n#ifdef CLIPPATH\nvarying vec2 vClipUV;\n#endif\n\n#ifdef FILTER\nuniform int u_filterFlag;\nuniform float u_colorMatrix[20];\n#endif\n\n#ifdef CLOUDFILTER\nvarying vec4 colorCloud0;\nvarying vec4 colorCloud1;\nvarying vec4 colorCloud2;\nvarying vec4 colorCloud3;\nvarying vec4 colorCloud4;\n#endif\n\n#ifdef GRADIENT\nvarying vec3 vGradientVector1;\nvarying vec3 vGradientVector2;\nuniform float u_colorSteps[40];\nuniform int u_gradientType;\n\nvoid gradient(inout vec4 color, vec3 gv1, vec3 gv2, float colorSteps[40]) {\n  float t;\n  // center circle radius\n  float cr = gv1.z;\n  // focal circle radius\n  float fr = gv2.z;\n\n  if(cr > 0.0 || fr > 0.0) {\n    // radial gradient\n    vec2 center = gv1.xy;\n    vec2 focal = gv2.xy;\n    float x = focal.x - gl_FragCoord.x;\n    float y = focal.y - gl_FragCoord.y;\n    float dx = focal.x - center.x;\n    float dy = focal.y - center.y;\n    float dr = cr - fr;\n    float a = dx * dx + dy * dy - dr * dr;\n    float b = -2.0 * (y * dy + x * dx + fr * dr);\n    float c = x * x + y * y - fr * fr;\n    t = 1.0 - 0.5 * (1.0 / a) * (-b + sqrt(b * b - 4.0 * a * c));\n  } else {\n    // linear gradient\n    vec2 v1 = gl_FragCoord.xy - gv1.xy;\n    vec2 v2 = gv2.xy - gv1.xy;\n    t = (v1.x * v2.x + v1.y * v2.y) / (v2.x * v2.x + v2.y * v2.y);\n  }\n\n  vec4 colors[8];\n  colors[0] = vec4(colorSteps[1], colorSteps[2], colorSteps[3], colorSteps[4]);\n  colors[1] = vec4(colorSteps[6], colorSteps[7], colorSteps[8], colorSteps[9]);\n  colors[2] = vec4(colorSteps[11], colorSteps[12], colorSteps[13], colorSteps[14]);\n  colors[3] = vec4(colorSteps[16], colorSteps[17], colorSteps[18], colorSteps[19]);\n  colors[4] = vec4(colorSteps[21], colorSteps[22], colorSteps[23], colorSteps[24]);\n  colors[5] = vec4(colorSteps[26], colorSteps[27], colorSteps[28], colorSteps[29]);\n  colors[6] = vec4(colorSteps[31], colorSteps[32], colorSteps[33], colorSteps[34]);\n  colors[7] = vec4(colorSteps[36], colorSteps[37], colorSteps[38], colorSteps[39]);\n  \n  float steps[8];\n  steps[0] = colorSteps[0];\n  steps[1] = colorSteps[5];\n  steps[2] = colorSteps[10];\n  steps[3] = colorSteps[15];\n  steps[4] = colorSteps[20];\n  steps[5] = colorSteps[25];\n  steps[6] = colorSteps[30];\n  steps[7] = colorSteps[35];\n\n  color = colors[0];\n  for (int i = 1; i < 8; i++) {\n    if (steps[i] < 0.0 || steps[i] > 1.0) {\n      break;\n    }\n    if(steps[i] == steps[i - 1]) {\n      color = colors[i];\n    } else {\n      color = mix(color, colors[i], clamp((t - steps[i - 1]) / (steps[i] - steps[i - 1]), 0.0, 1.0));\n    }\n    if (steps[i] >= t) {\n      break;\n    }\n  }\n}\n#endif\n\nvoid transformColor(inout vec4 color, in float colorMatrix[20]) {\n  float r = color.r, g = color.g, b = color.b, a = color.a;\n  color[0] = colorMatrix[0] * r + colorMatrix[1] * g + colorMatrix[2] * b + colorMatrix[3] * a + colorMatrix[4];\n  color[1] = colorMatrix[5] * r + colorMatrix[6] * g + colorMatrix[7] * b + colorMatrix[8] * a + colorMatrix[9];\n  color[2] = colorMatrix[10] * r + colorMatrix[11] * g + colorMatrix[12] * b + colorMatrix[13] * a + colorMatrix[14];\n  color[3] = colorMatrix[15] * r + colorMatrix[16] * g + colorMatrix[17] * b + colorMatrix[18] * a + colorMatrix[19];\n}\n\n#ifdef CLOUDFILTER\nvoid buildCloudColor(inout float colorCloudMatrix[20]) {\n  colorCloudMatrix[0] = colorCloud0[0];\n  colorCloudMatrix[1] = colorCloud1[0];\n  colorCloudMatrix[2] = colorCloud2[0];\n  colorCloudMatrix[3] = colorCloud3[0];\n  colorCloudMatrix[4] = colorCloud4[0];\n\n  colorCloudMatrix[5] = colorCloud0[1];\n  colorCloudMatrix[6] = colorCloud1[1];\n  colorCloudMatrix[7] = colorCloud2[1];\n  colorCloudMatrix[8] = colorCloud3[1];\n  colorCloudMatrix[9] = colorCloud4[1];\n\n  colorCloudMatrix[10] = colorCloud0[2];\n  colorCloudMatrix[11] = colorCloud1[2];\n  colorCloudMatrix[12] = colorCloud2[2];\n  colorCloudMatrix[13] = colorCloud3[2];\n  colorCloudMatrix[14] = colorCloud4[2];\n\n  colorCloudMatrix[15] = colorCloud0[3];\n  colorCloudMatrix[16] = colorCloud1[3];\n  colorCloudMatrix[17] = colorCloud2[3];\n  colorCloudMatrix[18] = colorCloud3[3];\n  colorCloudMatrix[19] = colorCloud4[3];\n}\n#endif\n\nvoid main() {\n  vec4 color = vColor;\n  float opacity = abs(flagBackground);\n\n#ifdef GRADIENT\n  if(u_gradientType > 0 && flagBackground > 0.0 || u_gradientType == 0 && flagBackground <= 0.0) {\n    gradient(color, vGradientVector1, vGradientVector2, u_colorSteps);\n  }\n#endif\n\n  if(opacity < 1.0) {\n    color.a *= opacity;\n  }\n\n#ifdef TEXTURE\n  if(flagBackground > 0.0) {\n    vec3 texCoord = vTextureCoord;\n\n    if(texCoord.z == 1.0) {\n      texCoord = fract(texCoord);\n    }\n\n    if(texCoord.x <= 1.0 && texCoord.x >= 0.0\n      && texCoord.y <= 1.0 && texCoord.y >= 0.0) {\n      if(vSourceRect.z > 0.0) {\n        texCoord.x = vSourceRect.x + texCoord.x * vSourceRect.z;\n        texCoord.y = 1.0 - (vSourceRect.y + (1.0 - texCoord.y) * vSourceRect.w);\n      }\n      if(frameIndex < 0.0) {\n        vec4 texColor = texture2D(u_texSampler, texCoord.xy);\n        color = mix(color, texColor, texColor.a);\n      } else {\n        int index = int(floor(clamp(0.0, 11.0, frameIndex)));\n        vec4 texColor;\n        if(index == 0) texColor = texture2D(u_texFrame0, texCoord.xy);\n        else if(index == 1) texColor = texture2D(u_texFrame1, texCoord.xy);\n        else if(index == 2) texColor = texture2D(u_texFrame2, texCoord.xy);\n        else if(index == 3) texColor = texture2D(u_texFrame3, texCoord.xy);\n        else if(index == 4) texColor = texture2D(u_texFrame4, texCoord.xy);\n        else if(index == 5) texColor = texture2D(u_texFrame5, texCoord.xy);\n        else if(index == 6) texColor = texture2D(u_texFrame6, texCoord.xy);\n        else if(index == 7) texColor = texture2D(u_texFrame7, texCoord.xy);\n        else if(index == 8) texColor = texture2D(u_texFrame8, texCoord.xy);\n        else if(index == 9) texColor = texture2D(u_texFrame9, texCoord.xy);\n        else if(index == 10) texColor = texture2D(u_texFrame10, texCoord.xy);\n        else texColor = texture2D(u_texFrame11, texCoord.xy);\n        float alpha = texColor.a;\n        if(opacity < 1.0) {\n          texColor.a *= opacity;\n          alpha *= mix(0.465, 1.0, opacity);\n        }\n        // color = mix(color, texColor, texColor.a);\n        color.rgb = mix(color.rgb, texColor.rgb, alpha);\n        // color.rgb = mix(texColor.rgb, color.rgb, color.a);\n        color.rgb = mix(texColor.rgb, color.rgb, clamp(color.a / max(0.0001, texColor.a), 0.0, 1.0));\n        color.a = texColor.a + (1.0 - texColor.a) * color.a;\n      }\n    }\n  }\n#endif\n\n#ifdef FILTER\n  if(u_filterFlag > 0) {\n    transformColor(color, u_colorMatrix);\n  }\n#endif\n\n#ifdef CLOUDFILTER\n  float colorCloudMatrix[20];\n  buildCloudColor(colorCloudMatrix);\n  transformColor(color, colorCloudMatrix);\n#endif\n\n#ifdef CLIPPATH\n  float clip = texture2D(u_clipSampler, vClipUV).r;\n  color *= clip;\n#endif\n\n  gl_FragColor = color;\n}");
 
 /***/ }),
-/* 110 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22052,10 +21191,10 @@ if (typeof global !== 'undefined' && typeof global.requestAnimationFrame === 'fu
 }
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(111), __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(89), __webpack_require__(39)))
 
 /***/ }),
-/* 111 */
+/* 89 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -22245,31 +21384,31 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 112 */
+/* 90 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Node; });
-/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(53);
+/* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(33);
 /* harmony import */ var _babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_typeof__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1);
-/* harmony import */ var _attribute_node__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(113);
-/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(115);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(263);
-/* harmony import */ var _event_event__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(264);
-/* harmony import */ var _utils_filter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(265);
-/* harmony import */ var _utils_render_event__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(266);
+/* harmony import */ var _attribute_node__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(91);
+/* harmony import */ var _animation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(93);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(241);
+/* harmony import */ var _event_event__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(242);
+/* harmony import */ var _utils_filter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(243);
+/* harmony import */ var _utils_render_event__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(244);
 
 
 
@@ -22281,7 +21420,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -22311,9 +21450,7 @@ var _shaderAttrs = Symbol('shaderAttrs');
 
 var _uniforms = Symbol('uniforms');
 
-var Node =
-/*#__PURE__*/
-function () {
+var Node = /*#__PURE__*/function () {
   function Node() {
     var attrs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -23089,23 +22226,23 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_5___default()(Nod
 _document__WEBPACK_IMPORTED_MODULE_9__["default"].registerNode(Node, 'node');
 
 /***/ }),
-/* 113 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Node; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var gl_matrix__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(114);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(92);
 
 
 
@@ -23244,9 +22381,7 @@ function updateOffset(attr) {
 } // 规范：属性只能是原始类型或元素是原始类型的数组
 
 
-var Node =
-/*#__PURE__*/
-function () {
+var Node = /*#__PURE__*/function () {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Node, null, [{
     key: "setDefault",
     value: function setDefault(attr) {
@@ -23689,7 +22824,7 @@ function () {
 
 
 /***/ }),
-/* 114 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -23808,34 +22943,34 @@ function compareValue(oldValue, newValue) {
 }
 
 /***/ }),
-/* 115 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Animation; });
-/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(116);
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(94);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(124);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(102);
 /* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sprite_animator__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(64);
+/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(49);
 /* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(color_rgba__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(110);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(114);
+/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(88);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(92);
 
 
 
@@ -23846,6 +22981,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -23897,10 +23036,10 @@ sprite_animator__WEBPACK_IMPORTED_MODULE_8__["Effects"].bgcolor = colorEffect;
 sprite_animator__WEBPACK_IMPORTED_MODULE_8__["Effects"].borderColor = colorEffect;
 sprite_animator__WEBPACK_IMPORTED_MODULE_8__["Effects"].text = stringEffect;
 
-var Animation =
-/*#__PURE__*/
-function (_Animator) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(Animation, _Animator);
+var Animation = /*#__PURE__*/function (_Animator) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Animation, _Animator);
+
+  var _super = _createSuper(Animation);
 
   function Animation(sprite, frames, timing) {
     var _this;
@@ -23928,7 +23067,7 @@ function (_Animator) {
       });
       return ret;
     });
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation).call(this, initAttrs, frames, timing));
+    _this = _super.call(this, initAttrs, frames, timing);
     _this.target = sprite;
 
     _this.setter = function (frame, target) {
@@ -23942,7 +23081,7 @@ function (_Animator) {
     key: "finish",
     value: function finish() {
       // finish should change attrs synchronously
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "finish", this).call(this);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "finish", this).call(this);
 
       Object(_utils_animation_frame__WEBPACK_IMPORTED_MODULE_10__["cancelAnimationFrame"])(this.requestId);
       this.setter(this.frame, this.target);
@@ -23954,7 +23093,7 @@ function (_Animator) {
         return;
       }
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "play", this).call(this);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "play", this).call(this);
 
       this.setter(this.frame, this.target);
       var that = this;
@@ -23995,9 +23134,9 @@ function (_Animator) {
       if (preserveState) {
         this.setter(this.frame, this.target);
 
-        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "cancel", this).call(this);
+        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "cancel", this).call(this);
       } else {
-        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "cancel", this).call(this);
+        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "cancel", this).call(this);
 
         this.setter(this.frame, this.target);
       }
@@ -24009,7 +23148,7 @@ function (_Animator) {
         return 'idle';
       }
 
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "playState", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "playState", this);
     }
   }, {
     key: "finished",
@@ -24020,7 +23159,7 @@ function (_Animator) {
       // because while the web page is not focused
       // requestAnimationFrame will not trigger while deferTime of
       // the animator is still running
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Animation.prototype), "finished", this).then(function () {
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Animation.prototype), "finished", this).then(function () {
         var that = _this2;
         return new Promise(function (resolve) {
           function update() {
@@ -24047,7 +23186,7 @@ function (_Animator) {
 
 
 /***/ }),
-/* 116 */
+/* 94 */
 /***/ (function(module, exports) {
 
 function _extends() {
@@ -24071,55 +23210,10 @@ function _extends() {
 module.exports = _extends;
 
 /***/ }),
-/* 117 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _typeof = __webpack_require__(53);
-
-var assertThisInitialized = __webpack_require__(118);
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-/* 118 */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-
-/***/ }),
-/* 119 */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-/* 120 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var superPropBase = __webpack_require__(121);
+var superPropBase = __webpack_require__(96);
 
 function _get(target, property, receiver) {
   if (typeof Reflect !== "undefined" && Reflect.get) {
@@ -24144,10 +23238,10 @@ function _get(target, property, receiver) {
 module.exports = _get;
 
 /***/ }),
-/* 121 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getPrototypeOf = __webpack_require__(119);
+var getPrototypeOf = __webpack_require__(97);
 
 function _superPropBase(object, property) {
   while (!Object.prototype.hasOwnProperty.call(object, property)) {
@@ -24161,10 +23255,23 @@ function _superPropBase(object, property) {
 module.exports = _superPropBase;
 
 /***/ }),
-/* 122 */
+/* 97 */
+/***/ (function(module, exports) {
+
+function _getPrototypeOf(o) {
+  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+    return o.__proto__ || Object.getPrototypeOf(o);
+  };
+  return _getPrototypeOf(o);
+}
+
+module.exports = _getPrototypeOf;
+
+/***/ }),
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var setPrototypeOf = __webpack_require__(123);
+var setPrototypeOf = __webpack_require__(99);
 
 function _inherits(subClass, superClass) {
   if (typeof superClass !== "function" && superClass !== null) {
@@ -24184,7 +23291,7 @@ function _inherits(subClass, superClass) {
 module.exports = _inherits;
 
 /***/ }),
-/* 123 */
+/* 99 */
 /***/ (function(module, exports) {
 
 function _setPrototypeOf(o, p) {
@@ -24199,7 +23306,39 @@ function _setPrototypeOf(o, p) {
 module.exports = _setPrototypeOf;
 
 /***/ }),
-/* 124 */
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _typeof = __webpack_require__(33);
+
+var assertThisInitialized = __webpack_require__(101);
+
+function _possibleConstructorReturn(self, call) {
+  if (call && (_typeof(call) === "object" || typeof call === "function")) {
+    return call;
+  }
+
+  return assertThisInitialized(self);
+}
+
+module.exports = _possibleConstructorReturn;
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports) {
+
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+
+module.exports = _assertThisInitialized;
+
+/***/ }),
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24210,17 +23349,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Timeline = exports.Effects = exports.Easings = exports.Animator = undefined;
 
-var _spriteTimeline = __webpack_require__(125);
+var _spriteTimeline = __webpack_require__(103);
 
 var _spriteTimeline2 = _interopRequireDefault(_spriteTimeline);
 
-var _effect = __webpack_require__(237);
+var _effect = __webpack_require__(215);
 
 var _effect2 = _interopRequireDefault(_effect);
 
-var _easing = __webpack_require__(238);
+var _easing = __webpack_require__(216);
 
-var _animator = __webpack_require__(240);
+var _animator = __webpack_require__(218);
 
 var _animator2 = _interopRequireDefault(_animator);
 
@@ -24232,7 +23371,7 @@ exports.Effects = _effect2.default;
 exports.Timeline = _spriteTimeline2.default;
 
 /***/ }),
-/* 125 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24242,35 +23381,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _slicedToArray2 = __webpack_require__(126);
+var _slicedToArray2 = __webpack_require__(104);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-var _toConsumableArray2 = __webpack_require__(183);
+var _toConsumableArray2 = __webpack_require__(161);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-var _map = __webpack_require__(191);
+var _map = __webpack_require__(169);
 
 var _map2 = _interopRequireDefault(_map);
 
-var _assign = __webpack_require__(214);
+var _assign = __webpack_require__(192);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _classCallCheck2 = __webpack_require__(220);
+var _classCallCheck2 = __webpack_require__(198);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(221);
+var _createClass2 = __webpack_require__(199);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _symbol = __webpack_require__(225);
+var _symbol = __webpack_require__(203);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
-var _utils = __webpack_require__(236);
+var _utils = __webpack_require__(214);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24694,7 +23833,7 @@ var Timeline = function () {
 exports.default = Timeline;
 
 /***/ }),
-/* 126 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -24702,11 +23841,11 @@ exports.default = Timeline;
 
 exports.__esModule = true;
 
-var _isIterable2 = __webpack_require__(127);
+var _isIterable2 = __webpack_require__(105);
 
 var _isIterable3 = _interopRequireDefault(_isIterable2);
 
-var _getIterator2 = __webpack_require__(179);
+var _getIterator2 = __webpack_require__(157);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
@@ -24751,29 +23890,29 @@ exports.default = function () {
 }();
 
 /***/ }),
-/* 127 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(128), __esModule: true };
+module.exports = { "default": __webpack_require__(106), __esModule: true };
 
 /***/ }),
-/* 128 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(129);
-__webpack_require__(175);
-module.exports = __webpack_require__(177);
+__webpack_require__(107);
+__webpack_require__(153);
+module.exports = __webpack_require__(155);
 
 
 /***/ }),
-/* 129 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(130);
-var global = __webpack_require__(141);
-var hide = __webpack_require__(145);
-var Iterators = __webpack_require__(133);
-var TO_STRING_TAG = __webpack_require__(172)('toStringTag');
+__webpack_require__(108);
+var global = __webpack_require__(119);
+var hide = __webpack_require__(123);
+var Iterators = __webpack_require__(111);
+var TO_STRING_TAG = __webpack_require__(150)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
   'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
@@ -24791,21 +23930,21 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 130 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(131);
-var step = __webpack_require__(132);
-var Iterators = __webpack_require__(133);
-var toIObject = __webpack_require__(134);
+var addToUnscopables = __webpack_require__(109);
+var step = __webpack_require__(110);
+var Iterators = __webpack_require__(111);
+var toIObject = __webpack_require__(112);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(138)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(116)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -24832,14 +23971,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 131 */
+/* 109 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 132 */
+/* 110 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -24848,30 +23987,30 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 133 */
+/* 111 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 
 /***/ }),
-/* 134 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(135);
-var defined = __webpack_require__(137);
+var IObject = __webpack_require__(113);
+var defined = __webpack_require__(115);
 module.exports = function (it) {
   return IObject(defined(it));
 };
 
 
 /***/ }),
-/* 135 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(136);
+var cof = __webpack_require__(114);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -24879,7 +24018,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 136 */
+/* 114 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -24890,7 +24029,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 137 */
+/* 115 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -24901,20 +24040,20 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 138 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(139);
-var $export = __webpack_require__(140);
-var redefine = __webpack_require__(156);
-var hide = __webpack_require__(145);
-var Iterators = __webpack_require__(133);
-var $iterCreate = __webpack_require__(157);
-var setToStringTag = __webpack_require__(171);
-var getPrototypeOf = __webpack_require__(173);
-var ITERATOR = __webpack_require__(172)('iterator');
+var LIBRARY = __webpack_require__(117);
+var $export = __webpack_require__(118);
+var redefine = __webpack_require__(134);
+var hide = __webpack_require__(123);
+var Iterators = __webpack_require__(111);
+var $iterCreate = __webpack_require__(135);
+var setToStringTag = __webpack_require__(149);
+var getPrototypeOf = __webpack_require__(151);
+var ITERATOR = __webpack_require__(150)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
 var KEYS = 'keys';
@@ -24977,21 +24116,21 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 139 */
+/* 117 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 
 /***/ }),
-/* 140 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(141);
-var core = __webpack_require__(142);
-var ctx = __webpack_require__(143);
-var hide = __webpack_require__(145);
-var has = __webpack_require__(155);
+var global = __webpack_require__(119);
+var core = __webpack_require__(120);
+var ctx = __webpack_require__(121);
+var hide = __webpack_require__(123);
+var has = __webpack_require__(133);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -25052,7 +24191,7 @@ module.exports = $export;
 
 
 /***/ }),
-/* 141 */
+/* 119 */
 /***/ (function(module, exports) {
 
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -25064,7 +24203,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 142 */
+/* 120 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.6.11' };
@@ -25072,11 +24211,11 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 143 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(144);
+var aFunction = __webpack_require__(122);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -25098,7 +24237,7 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 144 */
+/* 122 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -25108,12 +24247,12 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 145 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(146);
-var createDesc = __webpack_require__(154);
-module.exports = __webpack_require__(150) ? function (object, key, value) {
+var dP = __webpack_require__(124);
+var createDesc = __webpack_require__(132);
+module.exports = __webpack_require__(128) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
   object[key] = value;
@@ -25122,15 +24261,15 @@ module.exports = __webpack_require__(150) ? function (object, key, value) {
 
 
 /***/ }),
-/* 146 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(147);
-var IE8_DOM_DEFINE = __webpack_require__(149);
-var toPrimitive = __webpack_require__(153);
+var anObject = __webpack_require__(125);
+var IE8_DOM_DEFINE = __webpack_require__(127);
+var toPrimitive = __webpack_require__(131);
 var dP = Object.defineProperty;
 
-exports.f = __webpack_require__(150) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+exports.f = __webpack_require__(128) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPrimitive(P, true);
   anObject(Attributes);
@@ -25144,10 +24283,10 @@ exports.f = __webpack_require__(150) ? Object.defineProperty : function definePr
 
 
 /***/ }),
-/* 147 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(148);
+var isObject = __webpack_require__(126);
 module.exports = function (it) {
   if (!isObject(it)) throw TypeError(it + ' is not an object!');
   return it;
@@ -25155,7 +24294,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 148 */
+/* 126 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -25164,26 +24303,26 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 149 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(150) && !__webpack_require__(151)(function () {
-  return Object.defineProperty(__webpack_require__(152)('div'), 'a', { get: function () { return 7; } }).a != 7;
+module.exports = !__webpack_require__(128) && !__webpack_require__(129)(function () {
+  return Object.defineProperty(__webpack_require__(130)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 150 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(151)(function () {
+module.exports = !__webpack_require__(129)(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 151 */
+/* 129 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -25196,11 +24335,11 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 152 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(148);
-var document = __webpack_require__(141).document;
+var isObject = __webpack_require__(126);
+var document = __webpack_require__(119).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -25209,11 +24348,11 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 153 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(148);
+var isObject = __webpack_require__(126);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function (it, S) {
@@ -25227,7 +24366,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 154 */
+/* 132 */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -25241,7 +24380,7 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 155 */
+/* 133 */
 /***/ (function(module, exports) {
 
 var hasOwnProperty = {}.hasOwnProperty;
@@ -25251,25 +24390,25 @@ module.exports = function (it, key) {
 
 
 /***/ }),
-/* 156 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(145);
+module.exports = __webpack_require__(123);
 
 
 /***/ }),
-/* 157 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var create = __webpack_require__(158);
-var descriptor = __webpack_require__(154);
-var setToStringTag = __webpack_require__(171);
+var create = __webpack_require__(136);
+var descriptor = __webpack_require__(132);
+var setToStringTag = __webpack_require__(149);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(145)(IteratorPrototype, __webpack_require__(172)('iterator'), function () { return this; });
+__webpack_require__(123)(IteratorPrototype, __webpack_require__(150)('iterator'), function () { return this; });
 
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
@@ -25278,27 +24417,27 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 158 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject = __webpack_require__(147);
-var dPs = __webpack_require__(159);
-var enumBugKeys = __webpack_require__(169);
-var IE_PROTO = __webpack_require__(166)('IE_PROTO');
+var anObject = __webpack_require__(125);
+var dPs = __webpack_require__(137);
+var enumBugKeys = __webpack_require__(147);
+var IE_PROTO = __webpack_require__(144)('IE_PROTO');
 var Empty = function () { /* empty */ };
 var PROTOTYPE = 'prototype';
 
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(152)('iframe');
+  var iframe = __webpack_require__(130)('iframe');
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(170).appendChild(iframe);
+  __webpack_require__(148).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -25325,14 +24464,14 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 /***/ }),
-/* 159 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(146);
-var anObject = __webpack_require__(147);
-var getKeys = __webpack_require__(160);
+var dP = __webpack_require__(124);
+var anObject = __webpack_require__(125);
+var getKeys = __webpack_require__(138);
 
-module.exports = __webpack_require__(150) ? Object.defineProperties : function defineProperties(O, Properties) {
+module.exports = __webpack_require__(128) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var keys = getKeys(Properties);
   var length = keys.length;
@@ -25344,12 +24483,12 @@ module.exports = __webpack_require__(150) ? Object.defineProperties : function d
 
 
 /***/ }),
-/* 160 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(161);
-var enumBugKeys = __webpack_require__(169);
+var $keys = __webpack_require__(139);
+var enumBugKeys = __webpack_require__(147);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -25357,13 +24496,13 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 161 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has = __webpack_require__(155);
-var toIObject = __webpack_require__(134);
-var arrayIndexOf = __webpack_require__(162)(false);
-var IE_PROTO = __webpack_require__(166)('IE_PROTO');
+var has = __webpack_require__(133);
+var toIObject = __webpack_require__(112);
+var arrayIndexOf = __webpack_require__(140)(false);
+var IE_PROTO = __webpack_require__(144)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -25380,14 +24519,14 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 162 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
-var toIObject = __webpack_require__(134);
-var toLength = __webpack_require__(163);
-var toAbsoluteIndex = __webpack_require__(165);
+var toIObject = __webpack_require__(112);
+var toLength = __webpack_require__(141);
+var toAbsoluteIndex = __webpack_require__(143);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -25409,11 +24548,11 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 163 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(164);
+var toInteger = __webpack_require__(142);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -25421,7 +24560,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 164 */
+/* 142 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -25433,10 +24572,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 165 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(164);
+var toInteger = __webpack_require__(142);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -25446,22 +24585,22 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 166 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(167)('keys');
-var uid = __webpack_require__(168);
+var shared = __webpack_require__(145)('keys');
+var uid = __webpack_require__(146);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 167 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(142);
-var global = __webpack_require__(141);
+var core = __webpack_require__(120);
+var global = __webpack_require__(119);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 
@@ -25469,13 +24608,13 @@ var store = global[SHARED] || (global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: core.version,
-  mode: __webpack_require__(139) ? 'pure' : 'global',
+  mode: __webpack_require__(117) ? 'pure' : 'global',
   copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
 });
 
 
 /***/ }),
-/* 168 */
+/* 146 */
 /***/ (function(module, exports) {
 
 var id = 0;
@@ -25486,7 +24625,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 169 */
+/* 147 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -25496,20 +24635,20 @@ module.exports = (
 
 
 /***/ }),
-/* 170 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(141).document;
+var document = __webpack_require__(119).document;
 module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 171 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var def = __webpack_require__(146).f;
-var has = __webpack_require__(155);
-var TAG = __webpack_require__(172)('toStringTag');
+var def = __webpack_require__(124).f;
+var has = __webpack_require__(133);
+var TAG = __webpack_require__(150)('toStringTag');
 
 module.exports = function (it, tag, stat) {
   if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
@@ -25517,12 +24656,12 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 172 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(167)('wks');
-var uid = __webpack_require__(168);
-var Symbol = __webpack_require__(141).Symbol;
+var store = __webpack_require__(145)('wks');
+var uid = __webpack_require__(146);
+var Symbol = __webpack_require__(119).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
 
 var $exports = module.exports = function (name) {
@@ -25534,13 +24673,13 @@ $exports.store = store;
 
 
 /***/ }),
-/* 173 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(155);
-var toObject = __webpack_require__(174);
-var IE_PROTO = __webpack_require__(166)('IE_PROTO');
+var has = __webpack_require__(133);
+var toObject = __webpack_require__(152);
+var IE_PROTO = __webpack_require__(144)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -25553,26 +24692,26 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 174 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(137);
+var defined = __webpack_require__(115);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 175 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var $at = __webpack_require__(176)(true);
+var $at = __webpack_require__(154)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(138)(String, 'String', function (iterated) {
+__webpack_require__(116)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -25588,11 +24727,11 @@ __webpack_require__(138)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 176 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(164);
-var defined = __webpack_require__(137);
+var toInteger = __webpack_require__(142);
+var defined = __webpack_require__(115);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -25611,13 +24750,13 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 177 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(178);
-var ITERATOR = __webpack_require__(172)('iterator');
-var Iterators = __webpack_require__(133);
-module.exports = __webpack_require__(142).isIterable = function (it) {
+var classof = __webpack_require__(156);
+var ITERATOR = __webpack_require__(150)('iterator');
+var Iterators = __webpack_require__(111);
+module.exports = __webpack_require__(120).isIterable = function (it) {
   var O = Object(it);
   return O[ITERATOR] !== undefined
     || '@@iterator' in O
@@ -25627,12 +24766,12 @@ module.exports = __webpack_require__(142).isIterable = function (it) {
 
 
 /***/ }),
-/* 178 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(136);
-var TAG = __webpack_require__(172)('toStringTag');
+var cof = __webpack_require__(114);
+var TAG = __webpack_require__(150)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
 
@@ -25656,27 +24795,27 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 179 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(180), __esModule: true };
+module.exports = { "default": __webpack_require__(158), __esModule: true };
 
 /***/ }),
-/* 180 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(129);
-__webpack_require__(175);
-module.exports = __webpack_require__(181);
+__webpack_require__(107);
+__webpack_require__(153);
+module.exports = __webpack_require__(159);
 
 
 /***/ }),
-/* 181 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(147);
-var get = __webpack_require__(182);
-module.exports = __webpack_require__(142).getIterator = function (it) {
+var anObject = __webpack_require__(125);
+var get = __webpack_require__(160);
+module.exports = __webpack_require__(120).getIterator = function (it) {
   var iterFn = get(it);
   if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
   return anObject(iterFn.call(it));
@@ -25684,13 +24823,13 @@ module.exports = __webpack_require__(142).getIterator = function (it) {
 
 
 /***/ }),
-/* 182 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(178);
-var ITERATOR = __webpack_require__(172)('iterator');
-var Iterators = __webpack_require__(133);
-module.exports = __webpack_require__(142).getIteratorMethod = function (it) {
+var classof = __webpack_require__(156);
+var ITERATOR = __webpack_require__(150)('iterator');
+var Iterators = __webpack_require__(111);
+module.exports = __webpack_require__(120).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
     || Iterators[classof(it)];
@@ -25698,7 +24837,7 @@ module.exports = __webpack_require__(142).getIteratorMethod = function (it) {
 
 
 /***/ }),
-/* 183 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25706,7 +24845,7 @@ module.exports = __webpack_require__(142).getIteratorMethod = function (it) {
 
 exports.__esModule = true;
 
-var _from = __webpack_require__(184);
+var _from = __webpack_require__(162);
 
 var _from2 = _interopRequireDefault(_from);
 
@@ -25725,36 +24864,36 @@ exports.default = function (arr) {
 };
 
 /***/ }),
-/* 184 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(185), __esModule: true };
+module.exports = { "default": __webpack_require__(163), __esModule: true };
 
 /***/ }),
-/* 185 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(175);
-__webpack_require__(186);
-module.exports = __webpack_require__(142).Array.from;
+__webpack_require__(153);
+__webpack_require__(164);
+module.exports = __webpack_require__(120).Array.from;
 
 
 /***/ }),
-/* 186 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ctx = __webpack_require__(143);
-var $export = __webpack_require__(140);
-var toObject = __webpack_require__(174);
-var call = __webpack_require__(187);
-var isArrayIter = __webpack_require__(188);
-var toLength = __webpack_require__(163);
-var createProperty = __webpack_require__(189);
-var getIterFn = __webpack_require__(182);
+var ctx = __webpack_require__(121);
+var $export = __webpack_require__(118);
+var toObject = __webpack_require__(152);
+var call = __webpack_require__(165);
+var isArrayIter = __webpack_require__(166);
+var toLength = __webpack_require__(141);
+var createProperty = __webpack_require__(167);
+var getIterFn = __webpack_require__(160);
 
-$export($export.S + $export.F * !__webpack_require__(190)(function (iter) { Array.from(iter); }), 'Array', {
+$export($export.S + $export.F * !__webpack_require__(168)(function (iter) { Array.from(iter); }), 'Array', {
   // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
   from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
     var O = toObject(arrayLike);
@@ -25784,11 +24923,11 @@ $export($export.S + $export.F * !__webpack_require__(190)(function (iter) { Arra
 
 
 /***/ }),
-/* 187 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // call something on iterator step with safe closing on error
-var anObject = __webpack_require__(147);
+var anObject = __webpack_require__(125);
 module.exports = function (iterator, fn, value, entries) {
   try {
     return entries ? fn(anObject(value)[0], value[1]) : fn(value);
@@ -25802,12 +24941,12 @@ module.exports = function (iterator, fn, value, entries) {
 
 
 /***/ }),
-/* 188 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators = __webpack_require__(133);
-var ITERATOR = __webpack_require__(172)('iterator');
+var Iterators = __webpack_require__(111);
+var ITERATOR = __webpack_require__(150)('iterator');
 var ArrayProto = Array.prototype;
 
 module.exports = function (it) {
@@ -25816,13 +24955,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 189 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var $defineProperty = __webpack_require__(146);
-var createDesc = __webpack_require__(154);
+var $defineProperty = __webpack_require__(124);
+var createDesc = __webpack_require__(132);
 
 module.exports = function (object, index, value) {
   if (index in object) $defineProperty.f(object, index, createDesc(0, value));
@@ -25831,10 +24970,10 @@ module.exports = function (object, index, value) {
 
 
 /***/ }),
-/* 190 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ITERATOR = __webpack_require__(172)('iterator');
+var ITERATOR = __webpack_require__(150)('iterator');
 var SAFE_CLOSING = false;
 
 try {
@@ -25859,43 +24998,43 @@ module.exports = function (exec, skipClosing) {
 
 
 /***/ }),
-/* 191 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(192), __esModule: true };
+module.exports = { "default": __webpack_require__(170), __esModule: true };
 
 /***/ }),
-/* 192 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(193);
-__webpack_require__(175);
-__webpack_require__(129);
-__webpack_require__(194);
-__webpack_require__(207);
-__webpack_require__(210);
-__webpack_require__(212);
-module.exports = __webpack_require__(142).Map;
+__webpack_require__(171);
+__webpack_require__(153);
+__webpack_require__(107);
+__webpack_require__(172);
+__webpack_require__(185);
+__webpack_require__(188);
+__webpack_require__(190);
+module.exports = __webpack_require__(120).Map;
 
 
 /***/ }),
-/* 193 */
+/* 171 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 194 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strong = __webpack_require__(195);
-var validate = __webpack_require__(201);
+var strong = __webpack_require__(173);
+var validate = __webpack_require__(179);
 var MAP = 'Map';
 
 // 23.1 Map Objects
-module.exports = __webpack_require__(202)(MAP, function (get) {
+module.exports = __webpack_require__(180)(MAP, function (get) {
   return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
 }, {
   // 23.1.3.6 Map.prototype.get(key)
@@ -25911,23 +25050,23 @@ module.exports = __webpack_require__(202)(MAP, function (get) {
 
 
 /***/ }),
-/* 195 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var dP = __webpack_require__(146).f;
-var create = __webpack_require__(158);
-var redefineAll = __webpack_require__(196);
-var ctx = __webpack_require__(143);
-var anInstance = __webpack_require__(197);
-var forOf = __webpack_require__(198);
-var $iterDefine = __webpack_require__(138);
-var step = __webpack_require__(132);
-var setSpecies = __webpack_require__(199);
-var DESCRIPTORS = __webpack_require__(150);
-var fastKey = __webpack_require__(200).fastKey;
-var validate = __webpack_require__(201);
+var dP = __webpack_require__(124).f;
+var create = __webpack_require__(136);
+var redefineAll = __webpack_require__(174);
+var ctx = __webpack_require__(121);
+var anInstance = __webpack_require__(175);
+var forOf = __webpack_require__(176);
+var $iterDefine = __webpack_require__(116);
+var step = __webpack_require__(110);
+var setSpecies = __webpack_require__(177);
+var DESCRIPTORS = __webpack_require__(128);
+var fastKey = __webpack_require__(178).fastKey;
+var validate = __webpack_require__(179);
 var SIZE = DESCRIPTORS ? '_s' : 'size';
 
 var getEntry = function (that, key) {
@@ -26062,10 +25201,10 @@ module.exports = {
 
 
 /***/ }),
-/* 196 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hide = __webpack_require__(145);
+var hide = __webpack_require__(123);
 module.exports = function (target, src, safe) {
   for (var key in src) {
     if (safe && target[key]) target[key] = src[key];
@@ -26075,7 +25214,7 @@ module.exports = function (target, src, safe) {
 
 
 /***/ }),
-/* 197 */
+/* 175 */
 /***/ (function(module, exports) {
 
 module.exports = function (it, Constructor, name, forbiddenField) {
@@ -26086,15 +25225,15 @@ module.exports = function (it, Constructor, name, forbiddenField) {
 
 
 /***/ }),
-/* 198 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(143);
-var call = __webpack_require__(187);
-var isArrayIter = __webpack_require__(188);
-var anObject = __webpack_require__(147);
-var toLength = __webpack_require__(163);
-var getIterFn = __webpack_require__(182);
+var ctx = __webpack_require__(121);
+var call = __webpack_require__(165);
+var isArrayIter = __webpack_require__(166);
+var anObject = __webpack_require__(125);
+var toLength = __webpack_require__(141);
+var getIterFn = __webpack_require__(160);
 var BREAK = {};
 var RETURN = {};
 var exports = module.exports = function (iterable, entries, fn, that, ITERATOR) {
@@ -26117,16 +25256,16 @@ exports.RETURN = RETURN;
 
 
 /***/ }),
-/* 199 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(141);
-var core = __webpack_require__(142);
-var dP = __webpack_require__(146);
-var DESCRIPTORS = __webpack_require__(150);
-var SPECIES = __webpack_require__(172)('species');
+var global = __webpack_require__(119);
+var core = __webpack_require__(120);
+var dP = __webpack_require__(124);
+var DESCRIPTORS = __webpack_require__(128);
+var SPECIES = __webpack_require__(150)('species');
 
 module.exports = function (KEY) {
   var C = typeof core[KEY] == 'function' ? core[KEY] : global[KEY];
@@ -26138,18 +25277,18 @@ module.exports = function (KEY) {
 
 
 /***/ }),
-/* 200 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(168)('meta');
-var isObject = __webpack_require__(148);
-var has = __webpack_require__(155);
-var setDesc = __webpack_require__(146).f;
+var META = __webpack_require__(146)('meta');
+var isObject = __webpack_require__(126);
+var has = __webpack_require__(133);
+var setDesc = __webpack_require__(124).f;
 var id = 0;
 var isExtensible = Object.isExtensible || function () {
   return true;
 };
-var FREEZE = !__webpack_require__(151)(function () {
+var FREEZE = !__webpack_require__(129)(function () {
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function (it) {
@@ -26197,10 +25336,10 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 201 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(148);
+var isObject = __webpack_require__(126);
 module.exports = function (it, TYPE) {
   if (!isObject(it) || it._t !== TYPE) throw TypeError('Incompatible receiver, ' + TYPE + ' required!');
   return it;
@@ -26208,24 +25347,24 @@ module.exports = function (it, TYPE) {
 
 
 /***/ }),
-/* 202 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(141);
-var $export = __webpack_require__(140);
-var meta = __webpack_require__(200);
-var fails = __webpack_require__(151);
-var hide = __webpack_require__(145);
-var redefineAll = __webpack_require__(196);
-var forOf = __webpack_require__(198);
-var anInstance = __webpack_require__(197);
-var isObject = __webpack_require__(148);
-var setToStringTag = __webpack_require__(171);
-var dP = __webpack_require__(146).f;
-var each = __webpack_require__(203)(0);
-var DESCRIPTORS = __webpack_require__(150);
+var global = __webpack_require__(119);
+var $export = __webpack_require__(118);
+var meta = __webpack_require__(178);
+var fails = __webpack_require__(129);
+var hide = __webpack_require__(123);
+var redefineAll = __webpack_require__(174);
+var forOf = __webpack_require__(176);
+var anInstance = __webpack_require__(175);
+var isObject = __webpack_require__(126);
+var setToStringTag = __webpack_require__(149);
+var dP = __webpack_require__(124).f;
+var each = __webpack_require__(181)(0);
+var DESCRIPTORS = __webpack_require__(128);
 
 module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
   var Base = global[NAME];
@@ -26274,7 +25413,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 
 
 /***/ }),
-/* 203 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 0 -> Array#forEach
@@ -26284,11 +25423,11 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 // 4 -> Array#every
 // 5 -> Array#find
 // 6 -> Array#findIndex
-var ctx = __webpack_require__(143);
-var IObject = __webpack_require__(135);
-var toObject = __webpack_require__(174);
-var toLength = __webpack_require__(163);
-var asc = __webpack_require__(204);
+var ctx = __webpack_require__(121);
+var IObject = __webpack_require__(113);
+var toObject = __webpack_require__(152);
+var toLength = __webpack_require__(141);
+var asc = __webpack_require__(182);
 module.exports = function (TYPE, $create) {
   var IS_MAP = TYPE == 1;
   var IS_FILTER = TYPE == 2;
@@ -26324,11 +25463,11 @@ module.exports = function (TYPE, $create) {
 
 
 /***/ }),
-/* 204 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 9.4.2.3 ArraySpeciesCreate(originalArray, length)
-var speciesConstructor = __webpack_require__(205);
+var speciesConstructor = __webpack_require__(183);
 
 module.exports = function (original, length) {
   return new (speciesConstructor(original))(length);
@@ -26336,12 +25475,12 @@ module.exports = function (original, length) {
 
 
 /***/ }),
-/* 205 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(148);
-var isArray = __webpack_require__(206);
-var SPECIES = __webpack_require__(172)('species');
+var isObject = __webpack_require__(126);
+var isArray = __webpack_require__(184);
+var SPECIES = __webpack_require__(150)('species');
 
 module.exports = function (original) {
   var C;
@@ -26358,33 +25497,33 @@ module.exports = function (original) {
 
 
 /***/ }),
-/* 206 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(136);
+var cof = __webpack_require__(114);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 207 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var $export = __webpack_require__(140);
+var $export = __webpack_require__(118);
 
-$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(208)('Map') });
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__(186)('Map') });
 
 
 /***/ }),
-/* 208 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/DavidBruant/Map-Set.prototype.toJSON
-var classof = __webpack_require__(178);
-var from = __webpack_require__(209);
+var classof = __webpack_require__(156);
+var from = __webpack_require__(187);
 module.exports = function (NAME) {
   return function toJSON() {
     if (classof(this) != NAME) throw TypeError(NAME + "#toJSON isn't generic");
@@ -26394,10 +25533,10 @@ module.exports = function (NAME) {
 
 
 /***/ }),
-/* 209 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var forOf = __webpack_require__(198);
+var forOf = __webpack_require__(176);
 
 module.exports = function (iter, ITERATOR) {
   var result = [];
@@ -26407,21 +25546,21 @@ module.exports = function (iter, ITERATOR) {
 
 
 /***/ }),
-/* 210 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
-__webpack_require__(211)('Map');
+__webpack_require__(189)('Map');
 
 
 /***/ }),
-/* 211 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-setmap-offrom/
-var $export = __webpack_require__(140);
+var $export = __webpack_require__(118);
 
 module.exports = function (COLLECTION) {
   $export($export.S, COLLECTION, { of: function of() {
@@ -26434,24 +25573,24 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 212 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
-__webpack_require__(213)('Map');
+__webpack_require__(191)('Map');
 
 
 /***/ }),
-/* 213 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://tc39.github.io/proposal-setmap-offrom/
-var $export = __webpack_require__(140);
-var aFunction = __webpack_require__(144);
-var ctx = __webpack_require__(143);
-var forOf = __webpack_require__(198);
+var $export = __webpack_require__(118);
+var aFunction = __webpack_require__(122);
+var ctx = __webpack_require__(121);
+var forOf = __webpack_require__(176);
 
 module.exports = function (COLLECTION) {
   $export($export.S, COLLECTION, { from: function from(source /* , mapFn, thisArg */) {
@@ -26477,46 +25616,46 @@ module.exports = function (COLLECTION) {
 
 
 /***/ }),
-/* 214 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(215), __esModule: true };
+module.exports = { "default": __webpack_require__(193), __esModule: true };
 
 /***/ }),
-/* 215 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(216);
-module.exports = __webpack_require__(142).Object.assign;
+__webpack_require__(194);
+module.exports = __webpack_require__(120).Object.assign;
 
 
 /***/ }),
-/* 216 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(140);
+var $export = __webpack_require__(118);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(217) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(195) });
 
 
 /***/ }),
-/* 217 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var DESCRIPTORS = __webpack_require__(150);
-var getKeys = __webpack_require__(160);
-var gOPS = __webpack_require__(218);
-var pIE = __webpack_require__(219);
-var toObject = __webpack_require__(174);
-var IObject = __webpack_require__(135);
+var DESCRIPTORS = __webpack_require__(128);
+var getKeys = __webpack_require__(138);
+var gOPS = __webpack_require__(196);
+var pIE = __webpack_require__(197);
+var toObject = __webpack_require__(152);
+var IObject = __webpack_require__(113);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(151)(function () {
+module.exports = !$assign || __webpack_require__(129)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -26546,21 +25685,21 @@ module.exports = !$assign || __webpack_require__(151)(function () {
 
 
 /***/ }),
-/* 218 */
+/* 196 */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 219 */
+/* 197 */
 /***/ (function(module, exports) {
 
 exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 220 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26575,7 +25714,7 @@ exports.default = function (instance, Constructor) {
 };
 
 /***/ }),
-/* 221 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26583,7 +25722,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(222);
+var _defineProperty = __webpack_require__(200);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -26608,82 +25747,82 @@ exports.default = function () {
 }();
 
 /***/ }),
-/* 222 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(223), __esModule: true };
+module.exports = { "default": __webpack_require__(201), __esModule: true };
 
 /***/ }),
-/* 223 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(224);
-var $Object = __webpack_require__(142).Object;
+__webpack_require__(202);
+var $Object = __webpack_require__(120).Object;
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
 
 
 /***/ }),
-/* 224 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(140);
+var $export = __webpack_require__(118);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(150), 'Object', { defineProperty: __webpack_require__(146).f });
+$export($export.S + $export.F * !__webpack_require__(128), 'Object', { defineProperty: __webpack_require__(124).f });
 
 
 /***/ }),
-/* 225 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(226), __esModule: true };
+module.exports = { "default": __webpack_require__(204), __esModule: true };
 
 /***/ }),
-/* 226 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(227);
-__webpack_require__(193);
-__webpack_require__(234);
-__webpack_require__(235);
-module.exports = __webpack_require__(142).Symbol;
+__webpack_require__(205);
+__webpack_require__(171);
+__webpack_require__(212);
+__webpack_require__(213);
+module.exports = __webpack_require__(120).Symbol;
 
 
 /***/ }),
-/* 227 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global = __webpack_require__(141);
-var has = __webpack_require__(155);
-var DESCRIPTORS = __webpack_require__(150);
-var $export = __webpack_require__(140);
-var redefine = __webpack_require__(156);
-var META = __webpack_require__(200).KEY;
-var $fails = __webpack_require__(151);
-var shared = __webpack_require__(167);
-var setToStringTag = __webpack_require__(171);
-var uid = __webpack_require__(168);
-var wks = __webpack_require__(172);
-var wksExt = __webpack_require__(228);
-var wksDefine = __webpack_require__(229);
-var enumKeys = __webpack_require__(230);
-var isArray = __webpack_require__(206);
-var anObject = __webpack_require__(147);
-var isObject = __webpack_require__(148);
-var toObject = __webpack_require__(174);
-var toIObject = __webpack_require__(134);
-var toPrimitive = __webpack_require__(153);
-var createDesc = __webpack_require__(154);
-var _create = __webpack_require__(158);
-var gOPNExt = __webpack_require__(231);
-var $GOPD = __webpack_require__(233);
-var $GOPS = __webpack_require__(218);
-var $DP = __webpack_require__(146);
-var $keys = __webpack_require__(160);
+var global = __webpack_require__(119);
+var has = __webpack_require__(133);
+var DESCRIPTORS = __webpack_require__(128);
+var $export = __webpack_require__(118);
+var redefine = __webpack_require__(134);
+var META = __webpack_require__(178).KEY;
+var $fails = __webpack_require__(129);
+var shared = __webpack_require__(145);
+var setToStringTag = __webpack_require__(149);
+var uid = __webpack_require__(146);
+var wks = __webpack_require__(150);
+var wksExt = __webpack_require__(206);
+var wksDefine = __webpack_require__(207);
+var enumKeys = __webpack_require__(208);
+var isArray = __webpack_require__(184);
+var anObject = __webpack_require__(125);
+var isObject = __webpack_require__(126);
+var toObject = __webpack_require__(152);
+var toIObject = __webpack_require__(112);
+var toPrimitive = __webpack_require__(131);
+var createDesc = __webpack_require__(132);
+var _create = __webpack_require__(136);
+var gOPNExt = __webpack_require__(209);
+var $GOPD = __webpack_require__(211);
+var $GOPS = __webpack_require__(196);
+var $DP = __webpack_require__(124);
+var $keys = __webpack_require__(138);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -26806,11 +25945,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(232).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(219).f = $propertyIsEnumerable;
+  __webpack_require__(210).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(197).f = $propertyIsEnumerable;
   $GOPS.f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(139)) {
+  if (DESCRIPTORS && !__webpack_require__(117)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -26894,7 +26033,7 @@ $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
 });
 
 // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(145)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(123)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 // 19.4.3.5 Symbol.prototype[@@toStringTag]
 setToStringTag($Symbol, 'Symbol');
 // 20.2.1.9 Math[@@toStringTag]
@@ -26904,21 +26043,21 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 228 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(172);
+exports.f = __webpack_require__(150);
 
 
 /***/ }),
-/* 229 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(141);
-var core = __webpack_require__(142);
-var LIBRARY = __webpack_require__(139);
-var wksExt = __webpack_require__(228);
-var defineProperty = __webpack_require__(146).f;
+var global = __webpack_require__(119);
+var core = __webpack_require__(120);
+var LIBRARY = __webpack_require__(117);
+var wksExt = __webpack_require__(206);
+var defineProperty = __webpack_require__(124).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
@@ -26926,13 +26065,13 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 230 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(160);
-var gOPS = __webpack_require__(218);
-var pIE = __webpack_require__(219);
+var getKeys = __webpack_require__(138);
+var gOPS = __webpack_require__(196);
+var pIE = __webpack_require__(197);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -26947,12 +26086,12 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 231 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(134);
-var gOPN = __webpack_require__(232).f;
+var toIObject = __webpack_require__(112);
+var gOPN = __webpack_require__(210).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -26972,12 +26111,12 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 232 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(161);
-var hiddenKeys = __webpack_require__(169).concat('length', 'prototype');
+var $keys = __webpack_require__(139);
+var hiddenKeys = __webpack_require__(147).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -26985,18 +26124,18 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 233 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(219);
-var createDesc = __webpack_require__(154);
-var toIObject = __webpack_require__(134);
-var toPrimitive = __webpack_require__(153);
-var has = __webpack_require__(155);
-var IE8_DOM_DEFINE = __webpack_require__(149);
+var pIE = __webpack_require__(197);
+var createDesc = __webpack_require__(132);
+var toIObject = __webpack_require__(112);
+var toPrimitive = __webpack_require__(131);
+var has = __webpack_require__(133);
+var IE8_DOM_DEFINE = __webpack_require__(127);
 var gOPD = Object.getOwnPropertyDescriptor;
 
-exports.f = __webpack_require__(150) ? gOPD : function getOwnPropertyDescriptor(O, P) {
+exports.f = __webpack_require__(128) ? gOPD : function getOwnPropertyDescriptor(O, P) {
   O = toIObject(O);
   P = toPrimitive(P, true);
   if (IE8_DOM_DEFINE) try {
@@ -27007,21 +26146,21 @@ exports.f = __webpack_require__(150) ? gOPD : function getOwnPropertyDescriptor(
 
 
 /***/ }),
-/* 234 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(229)('asyncIterator');
+__webpack_require__(207)('asyncIterator');
 
 
 /***/ }),
-/* 235 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(229)('observable');
+__webpack_require__(207)('observable');
 
 
 /***/ }),
-/* 236 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27061,7 +26200,7 @@ function formatDelay(delay) {
 }
 
 /***/ }),
-/* 237 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27085,7 +26224,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 238 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27096,21 +26235,21 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.parseEasing = exports.Easings = undefined;
 
-var _slicedToArray2 = __webpack_require__(126);
+var _slicedToArray2 = __webpack_require__(104);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-var _toConsumableArray2 = __webpack_require__(183);
+var _toConsumableArray2 = __webpack_require__(161);
 
 var _toConsumableArray3 = _interopRequireDefault(_toConsumableArray2);
 
-var _map = __webpack_require__(191);
+var _map = __webpack_require__(169);
 
 var _map2 = _interopRequireDefault(_map);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var BezierEasing = __webpack_require__(239);
+var BezierEasing = __webpack_require__(217);
 var bezierFuncCache = new _map2.default();
 
 function getBezierEasing() {
@@ -27240,7 +26379,7 @@ exports.Easings = Easings;
 exports.parseEasing = parseEasing;
 
 /***/ }),
-/* 239 */
+/* 217 */
 /***/ (function(module, exports) {
 
 /**
@@ -27353,7 +26492,7 @@ module.exports = function bezier (mX1, mY1, mX2, mY2) {
 
 
 /***/ }),
-/* 240 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27363,37 +26502,37 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _promise = __webpack_require__(241);
+var _promise = __webpack_require__(219);
 
 var _promise2 = _interopRequireDefault(_promise);
 
-var _keys = __webpack_require__(254);
+var _keys = __webpack_require__(232);
 
 var _keys2 = _interopRequireDefault(_keys);
 
-var _assign = __webpack_require__(214);
+var _assign = __webpack_require__(192);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _classCallCheck2 = __webpack_require__(220);
+var _classCallCheck2 = __webpack_require__(198);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(221);
+var _createClass2 = __webpack_require__(199);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _symbol = __webpack_require__(225);
+var _symbol = __webpack_require__(203);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
-var _spriteTimeline = __webpack_require__(125);
+var _spriteTimeline = __webpack_require__(103);
 
 var _spriteTimeline2 = _interopRequireDefault(_spriteTimeline);
 
-var _utils = __webpack_require__(258);
+var _utils = __webpack_require__(236);
 
-var _easing = __webpack_require__(238);
+var _easing = __webpack_require__(216);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27769,46 +26908,46 @@ var _class = function () {
 exports.default = _class;
 
 /***/ }),
-/* 241 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(242), __esModule: true };
+module.exports = { "default": __webpack_require__(220), __esModule: true };
 
 /***/ }),
-/* 242 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(193);
-__webpack_require__(175);
-__webpack_require__(129);
-__webpack_require__(243);
-__webpack_require__(252);
-__webpack_require__(253);
-module.exports = __webpack_require__(142).Promise;
+__webpack_require__(171);
+__webpack_require__(153);
+__webpack_require__(107);
+__webpack_require__(221);
+__webpack_require__(230);
+__webpack_require__(231);
+module.exports = __webpack_require__(120).Promise;
 
 
 /***/ }),
-/* 243 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(139);
-var global = __webpack_require__(141);
-var ctx = __webpack_require__(143);
-var classof = __webpack_require__(178);
-var $export = __webpack_require__(140);
-var isObject = __webpack_require__(148);
-var aFunction = __webpack_require__(144);
-var anInstance = __webpack_require__(197);
-var forOf = __webpack_require__(198);
-var speciesConstructor = __webpack_require__(244);
-var task = __webpack_require__(245).set;
-var microtask = __webpack_require__(247)();
-var newPromiseCapabilityModule = __webpack_require__(248);
-var perform = __webpack_require__(249);
-var userAgent = __webpack_require__(250);
-var promiseResolve = __webpack_require__(251);
+var LIBRARY = __webpack_require__(117);
+var global = __webpack_require__(119);
+var ctx = __webpack_require__(121);
+var classof = __webpack_require__(156);
+var $export = __webpack_require__(118);
+var isObject = __webpack_require__(126);
+var aFunction = __webpack_require__(122);
+var anInstance = __webpack_require__(175);
+var forOf = __webpack_require__(176);
+var speciesConstructor = __webpack_require__(222);
+var task = __webpack_require__(223).set;
+var microtask = __webpack_require__(225)();
+var newPromiseCapabilityModule = __webpack_require__(226);
+var perform = __webpack_require__(227);
+var userAgent = __webpack_require__(228);
+var promiseResolve = __webpack_require__(229);
 var PROMISE = 'Promise';
 var TypeError = global.TypeError;
 var process = global.process;
@@ -27824,7 +26963,7 @@ var USE_NATIVE = !!function () {
   try {
     // correct subclassing with @@species support
     var promise = $Promise.resolve(1);
-    var FakePromise = (promise.constructor = {})[__webpack_require__(172)('species')] = function (exec) {
+    var FakePromise = (promise.constructor = {})[__webpack_require__(150)('species')] = function (exec) {
       exec(empty, empty);
     };
     // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
@@ -27983,7 +27122,7 @@ if (!USE_NATIVE) {
     this._h = 0;              // <- rejection state, 0 - default, 1 - handled, 2 - unhandled
     this._n = false;          // <- notify
   };
-  Internal.prototype = __webpack_require__(196)($Promise.prototype, {
+  Internal.prototype = __webpack_require__(174)($Promise.prototype, {
     // 25.4.5.3 Promise.prototype.then(onFulfilled, onRejected)
     then: function then(onFulfilled, onRejected) {
       var reaction = newPromiseCapability(speciesConstructor(this, $Promise));
@@ -28014,9 +27153,9 @@ if (!USE_NATIVE) {
 }
 
 $export($export.G + $export.W + $export.F * !USE_NATIVE, { Promise: $Promise });
-__webpack_require__(171)($Promise, PROMISE);
-__webpack_require__(199)(PROMISE);
-Wrapper = __webpack_require__(142)[PROMISE];
+__webpack_require__(149)($Promise, PROMISE);
+__webpack_require__(177)(PROMISE);
+Wrapper = __webpack_require__(120)[PROMISE];
 
 // statics
 $export($export.S + $export.F * !USE_NATIVE, PROMISE, {
@@ -28034,7 +27173,7 @@ $export($export.S + $export.F * (LIBRARY || !USE_NATIVE), PROMISE, {
     return promiseResolve(LIBRARY && this === Wrapper ? $Promise : this, x);
   }
 });
-$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(190)(function (iter) {
+$export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(168)(function (iter) {
   $Promise.all(iter)['catch'](empty);
 })), PROMISE, {
   // 25.4.4.1 Promise.all(iterable)
@@ -28081,13 +27220,13 @@ $export($export.S + $export.F * !(USE_NATIVE && __webpack_require__(190)(functio
 
 
 /***/ }),
-/* 244 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.3.20 SpeciesConstructor(O, defaultConstructor)
-var anObject = __webpack_require__(147);
-var aFunction = __webpack_require__(144);
-var SPECIES = __webpack_require__(172)('species');
+var anObject = __webpack_require__(125);
+var aFunction = __webpack_require__(122);
+var SPECIES = __webpack_require__(150)('species');
 module.exports = function (O, D) {
   var C = anObject(O).constructor;
   var S;
@@ -28096,14 +27235,14 @@ module.exports = function (O, D) {
 
 
 /***/ }),
-/* 245 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ctx = __webpack_require__(143);
-var invoke = __webpack_require__(246);
-var html = __webpack_require__(170);
-var cel = __webpack_require__(152);
-var global = __webpack_require__(141);
+var ctx = __webpack_require__(121);
+var invoke = __webpack_require__(224);
+var html = __webpack_require__(148);
+var cel = __webpack_require__(130);
+var global = __webpack_require__(119);
 var process = global.process;
 var setTask = global.setImmediate;
 var clearTask = global.clearImmediate;
@@ -28142,7 +27281,7 @@ if (!setTask || !clearTask) {
     delete queue[id];
   };
   // Node.js 0.8-
-  if (__webpack_require__(136)(process) == 'process') {
+  if (__webpack_require__(114)(process) == 'process') {
     defer = function (id) {
       process.nextTick(ctx(run, id, 1));
     };
@@ -28186,7 +27325,7 @@ module.exports = {
 
 
 /***/ }),
-/* 246 */
+/* 224 */
 /***/ (function(module, exports) {
 
 // fast apply, http://jsperf.lnkit.com/fast-apply/5
@@ -28208,15 +27347,15 @@ module.exports = function (fn, args, that) {
 
 
 /***/ }),
-/* 247 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(141);
-var macrotask = __webpack_require__(245).set;
+var global = __webpack_require__(119);
+var macrotask = __webpack_require__(223).set;
 var Observer = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
 var Promise = global.Promise;
-var isNode = __webpack_require__(136)(process) == 'process';
+var isNode = __webpack_require__(114)(process) == 'process';
 
 module.exports = function () {
   var head, last, notify;
@@ -28283,13 +27422,13 @@ module.exports = function () {
 
 
 /***/ }),
-/* 248 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 25.4.1.5 NewPromiseCapability(C)
-var aFunction = __webpack_require__(144);
+var aFunction = __webpack_require__(122);
 
 function PromiseCapability(C) {
   var resolve, reject;
@@ -28308,7 +27447,7 @@ module.exports.f = function (C) {
 
 
 /***/ }),
-/* 249 */
+/* 227 */
 /***/ (function(module, exports) {
 
 module.exports = function (exec) {
@@ -28321,22 +27460,22 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 250 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(141);
+var global = __webpack_require__(119);
 var navigator = global.navigator;
 
 module.exports = navigator && navigator.userAgent || '';
 
 
 /***/ }),
-/* 251 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(147);
-var isObject = __webpack_require__(148);
-var newPromiseCapability = __webpack_require__(248);
+var anObject = __webpack_require__(125);
+var isObject = __webpack_require__(126);
+var newPromiseCapability = __webpack_require__(226);
 
 module.exports = function (C, x) {
   anObject(C);
@@ -28349,17 +27488,17 @@ module.exports = function (C, x) {
 
 
 /***/ }),
-/* 252 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 // https://github.com/tc39/proposal-promise-finally
 
-var $export = __webpack_require__(140);
-var core = __webpack_require__(142);
-var global = __webpack_require__(141);
-var speciesConstructor = __webpack_require__(244);
-var promiseResolve = __webpack_require__(251);
+var $export = __webpack_require__(118);
+var core = __webpack_require__(120);
+var global = __webpack_require__(119);
+var speciesConstructor = __webpack_require__(222);
+var promiseResolve = __webpack_require__(229);
 
 $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
   var C = speciesConstructor(this, core.Promise || global.Promise);
@@ -28376,15 +27515,15 @@ $export($export.P + $export.R, 'Promise', { 'finally': function (onFinally) {
 
 
 /***/ }),
-/* 253 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // https://github.com/tc39/proposal-promise-try
-var $export = __webpack_require__(140);
-var newPromiseCapability = __webpack_require__(248);
-var perform = __webpack_require__(249);
+var $export = __webpack_require__(118);
+var newPromiseCapability = __webpack_require__(226);
+var perform = __webpack_require__(227);
 
 $export($export.S, 'Promise', { 'try': function (callbackfn) {
   var promiseCapability = newPromiseCapability.f(this);
@@ -28395,28 +27534,28 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 
 /***/ }),
-/* 254 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(255), __esModule: true };
+module.exports = { "default": __webpack_require__(233), __esModule: true };
 
 /***/ }),
-/* 255 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(256);
-module.exports = __webpack_require__(142).Object.keys;
+__webpack_require__(234);
+module.exports = __webpack_require__(120).Object.keys;
 
 
 /***/ }),
-/* 256 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 Object.keys(O)
-var toObject = __webpack_require__(174);
-var $keys = __webpack_require__(160);
+var toObject = __webpack_require__(152);
+var $keys = __webpack_require__(138);
 
-__webpack_require__(257)('keys', function () {
+__webpack_require__(235)('keys', function () {
   return function keys(it) {
     return $keys(toObject(it));
   };
@@ -28424,13 +27563,13 @@ __webpack_require__(257)('keys', function () {
 
 
 /***/ }),
-/* 257 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // most Object methods by ES6 should accept primitives
-var $export = __webpack_require__(140);
-var core = __webpack_require__(142);
-var fails = __webpack_require__(151);
+var $export = __webpack_require__(118);
+var core = __webpack_require__(120);
+var fails = __webpack_require__(129);
 module.exports = function (KEY, exec) {
   var fn = (core.Object || {})[KEY] || Object[KEY];
   var exp = {};
@@ -28440,7 +27579,7 @@ module.exports = function (KEY, exec) {
 
 
 /***/ }),
-/* 258 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28450,19 +27589,19 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _slicedToArray2 = __webpack_require__(126);
+var _slicedToArray2 = __webpack_require__(104);
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
-var _entries = __webpack_require__(259);
+var _entries = __webpack_require__(237);
 
 var _entries2 = _interopRequireDefault(_entries);
 
-var _assign = __webpack_require__(214);
+var _assign = __webpack_require__(192);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _promise = __webpack_require__(241);
+var _promise = __webpack_require__(219);
 
 var _promise2 = _interopRequireDefault(_promise);
 
@@ -28472,9 +27611,9 @@ exports.calculateFramesOffset = calculateFramesOffset;
 exports.getProgress = getProgress;
 exports.getCurrentFrame = getCurrentFrame;
 
-var _easing2 = __webpack_require__(238);
+var _easing2 = __webpack_require__(216);
 
-var _effect = __webpack_require__(237);
+var _effect = __webpack_require__(215);
 
 var _effect2 = _interopRequireDefault(_effect);
 
@@ -28626,26 +27765,26 @@ function getCurrentFrame(timing, keyframes, effects, p) {
 }
 
 /***/ }),
-/* 259 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(260), __esModule: true };
+module.exports = { "default": __webpack_require__(238), __esModule: true };
 
 /***/ }),
-/* 260 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(261);
-module.exports = __webpack_require__(142).Object.entries;
+__webpack_require__(239);
+module.exports = __webpack_require__(120).Object.entries;
 
 
 /***/ }),
-/* 261 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
-var $export = __webpack_require__(140);
-var $entries = __webpack_require__(262)(true);
+var $export = __webpack_require__(118);
+var $entries = __webpack_require__(240)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -28655,13 +27794,13 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 262 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DESCRIPTORS = __webpack_require__(150);
-var getKeys = __webpack_require__(160);
-var toIObject = __webpack_require__(134);
-var isEnum = __webpack_require__(219).f;
+var DESCRIPTORS = __webpack_require__(128);
+var getKeys = __webpack_require__(138);
+var toIObject = __webpack_require__(112);
+var isEnum = __webpack_require__(197).f;
 module.exports = function (isEntries) {
   return function (it) {
     var O = toIObject(it);
@@ -28682,7 +27821,7 @@ module.exports = function (isEntries) {
 
 
 /***/ }),
-/* 263 */
+/* 241 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28739,15 +27878,15 @@ var ownerDocument = {
 /* harmony default export */ __webpack_exports__["default"] = (ownerDocument);
 
 /***/ }),
-/* 264 */
+/* 242 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Event; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
 
 
@@ -28762,9 +27901,7 @@ var _originalEvent = Symbol('originalEvent');
 
 var _detail = Symbol('detail');
 
-var Event =
-/*#__PURE__*/
-function () {
+var Event = /*#__PURE__*/function () {
   function Event(originalEvent) {
     var _ref = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {},
         _ref$bubbles = _ref.bubbles,
@@ -28827,18 +27964,18 @@ function () {
 
 
 /***/ }),
-/* 265 */
+/* 243 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parseFilterString", function() { return parseFilterString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyFilters", function() { return applyFilters; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _attribute_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(114);
+/* harmony import */ var _attribute_value__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(92);
 
 
 
@@ -28848,8 +27985,8 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 function parseFilterString(filterStr) {
   filterStr = filterStr.trim();
   if (!filterStr || filterStr === 'none') return null;
-  var filterReg = /^(?:(url|blur|brightness|contrast|drop-shadow|grayscale|hue-rotate|invert|opacity|saturate|sepia)\(([^()]+)\))+$/i;
-  var filters = filterStr.match(/^(?:(url|blur|brightness|contrast|drop-shadow|grayscale|hue-rotate|invert|opacity|saturate|sepia)\(([^()]+)\))+$/ig);
+  var filterReg = /^(?:(url|blur|brightness|contrast|drop-shadow|grayscale|hue-rotate|invert|opacity|saturate|sepia)\(([^()]*(?:\(.*\))*[^()]*)\))+$/i;
+  var filters = filterStr.match(/(?:(url|blur|brightness|contrast|drop-shadow|grayscale|hue-rotate|invert|opacity|saturate|sepia)\(([^()]*(?:\(.*\))*[^()]*)\))+?/ig);
   var ret = [];
 
   if (filters) {
@@ -28861,7 +27998,8 @@ function parseFilterString(filterStr) {
           type = _matched[1],
           args = _matched[2];
 
-      args = args.trim().split(/\s+/g).map(function (n, i) {
+      type = type.toLowerCase();
+      args = args.trim().match(/([^( )]+|([^( )]+\(.*\)))(?=\s|$)/g).map(function (n, i) {
         var value;
 
         if (type === 'url' || type === 'drop-shadow' && i === 3) {
@@ -28900,7 +28038,7 @@ function applyFilters(mesh, filters) {
 }
 
 /***/ }),
-/* 266 */
+/* 244 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28941,34 +28079,34 @@ function applyRenderEvent(target, mesh) {
 }
 
 /***/ }),
-/* 267 */
+/* 245 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cloud; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(118);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(101);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(268);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(112);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(263);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(246);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(90);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(241);
 
 
 
@@ -28981,6 +28119,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -28990,10 +28132,10 @@ var _amount = Symbol('amount');
 
 var _meshCloud = Symbol('meshCloud');
 
-var Cloud =
-/*#__PURE__*/
-function (_Node) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default()(Cloud, _Node);
+var Cloud = /*#__PURE__*/function (_Node) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Cloud, _Node);
+
+  var _super = _createSuper(Cloud);
 
   function Cloud(node) {
     var _this;
@@ -29002,9 +28144,9 @@ function (_Node) {
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Cloud);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Cloud).call(this));
+    _this = _super.call(this);
     _this.meshNode = node;
-    node.connect(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    node.connect(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this[_amount] = amount;
     _this[_meshCloud] = null;
     return _this;
@@ -29044,7 +28186,7 @@ function (_Node) {
 
       var meshes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Cloud.prototype), "draw", this).call(this, meshes);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Cloud.prototype), "draw", this).call(this, meshes);
 
       if (this.meshCloud) {
         if (this.program) {
@@ -29234,7 +28376,7 @@ function (_Node) {
       var width = _ref11.width,
           height = _ref11.height;
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Cloud.prototype), "setResolution", this).call(this, {
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Cloud.prototype), "setResolution", this).call(this, {
         width: width,
         height: height
       });
@@ -29371,7 +28513,7 @@ function (_Node) {
 _document__WEBPACK_IMPORTED_MODULE_12__["default"].registerNode(Cloud, 'cloud');
 
 /***/ }),
-/* 268 */
+/* 246 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29384,12 +28526,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadFrames", function() { return loadFrames; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(48);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(30);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(12);
-/* harmony import */ var _attribute_value__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(114);
+/* harmony import */ var _attribute_value__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(92);
 
 
 
@@ -29412,9 +28554,7 @@ function applyTexture(_x, _x2, _x3) {
 }
 
 function _applyTexture() {
-  _applyTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(node, image, updateContours) {
+  _applyTexture = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee(node, image, updateContours) {
     var textureImage, _node$attributes, width, height, textureRect, oldImage;
 
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee$(_context) {
@@ -29483,7 +28623,7 @@ function createTexture(image, renderer) {
 
   var texture = renderer.createTexture(image);
 
-  if (!/^blob:/.test(image.src)) {
+  if (!/^blob:/.test(image.src) && typeof image.getContext !== 'function') {
     // no cache blobs
     renderer[_textureMap].set(image, texture);
   }
@@ -29511,13 +28651,13 @@ function drawTexture(node, mesh) {
   ? String(node.textureImage) : node.textureImage;
   var textureImageRotated = node.textureImageRotated;
   var texture = mesh.texture;
+  var renderer = node.renderer;
 
   if (textureImage) {
     var contentRect = node.originalContentRect;
     var textureRect = node.attributes.textureRect;
     var textureRepeat = node.attributes.textureRepeat;
     var sourceRect = node.attributes.sourceRect;
-    var renderer = node.renderer;
 
     if (!texture || node[_textureContext] && node[_textureContext] !== renderer || texture.image !== textureImage || texture.options.repeat !== textureRepeat || !Object(_attribute_value__WEBPACK_IMPORTED_MODULE_4__["compareValue"])(texture.options.rect, textureRect) || !Object(_attribute_value__WEBPACK_IMPORTED_MODULE_4__["compareValue"])(texture.options.srcRect, sourceRect)) {
       var newTexture = createTexture(textureImage, renderer);
@@ -29531,7 +28671,7 @@ function drawTexture(node, mesh) {
 
       var oldTexture = null;
 
-      if (texture && !renderer[_textureMap].has(texture.image)) {
+      if (texture && !renderer[_textureMap].has(texture.image) && (!texture.options || !texture.options.hidden)) {
         oldTexture = mesh.uniforms.u_texSampler;
       }
 
@@ -29549,7 +28689,17 @@ function drawTexture(node, mesh) {
       node[_textureContext] = renderer;
     }
   } else if (texture) {
-    mesh.setTexture(null);
+    var _oldTexture = null;
+
+    if (!renderer[_textureMap].has(texture.image) && (!texture.options || !texture.options.hidden)) {
+      _oldTexture = mesh.uniforms.u_texSampler;
+    }
+
+    mesh.setTexture(null); // delete uncached texture
+
+    if (_oldTexture && _oldTexture.delete) {
+      _oldTexture.delete();
+    }
   }
 }
 /**
@@ -29572,9 +28722,7 @@ function loadFrames(_x4, _x5) {
 }
 
 function _loadFrames() {
-  _loadFrames = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()(
-  /*#__PURE__*/
-  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(src, frameData) {
+  _loadFrames = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.mark(function _callee2(src, frameData) {
     var response, texture, frames;
     return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default.a.wrap(function _callee2$(_context2) {
       while (1) {
@@ -29643,7 +28791,7 @@ function _loadFrames() {
 }
 
 /***/ }),
-/* 269 */
+/* 247 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29651,29 +28799,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Block; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(12);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(112);
-/* harmony import */ var _attribute_block__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(270);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(271);
-/* harmony import */ var _utils_border_radius__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(275);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(263);
-/* harmony import */ var _utils_bounding_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(276);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(90);
+/* harmony import */ var _attribute_block__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(248);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(249);
+/* harmony import */ var _utils_border_radius__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(254);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(241);
+/* harmony import */ var _utils_bounding_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(255);
 
 
 
@@ -29686,6 +28834,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -29696,17 +28848,17 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var _mesh = Symbol('mesh');
 
-var Block =
-/*#__PURE__*/
-function (_Node) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(Block, _Node);
+var Block = /*#__PURE__*/function (_Node) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Block, _Node);
+
+  var _super = _createSuper(Block);
 
   function Block() {
     var attrs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Block);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Block).call(this, attrs));
+    return _super.call(this, attrs);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(Block, [{
@@ -29738,7 +28890,7 @@ function (_Node) {
     key: "onPropertyChange",
     value: function onPropertyChange(key, newValue, oldValue) {
       // eslint-disable-line complexity
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Block.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Block.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
 
       if (key === 'anchorX' || key === 'anchorY' || key === 'boxSizing' || key === 'width' || key === 'height' || key === 'borderWidth' || key === 'paddingLeft' || key === 'paddingRight' || key === 'paddingTop' || key === 'paddingBottom' || /^border(TopLeft|TopRight|BottomRight|BottomLeft)Radius$/.test(key)) {
         this.updateContours();
@@ -29989,27 +29141,27 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(Blo
 _document__WEBPACK_IMPORTED_MODULE_14__["default"].registerNode(Block, 'block');
 
 /***/ }),
-/* 270 */
+/* 248 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Block; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(113);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(114);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(271);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(91);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(249);
 
 
 
@@ -30019,6 +29171,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -30027,17 +29183,17 @@ var getAttribute = Symbol.for('spritejs_getAttribute');
 var setDefault = Symbol.for('spritejs_setAttributeDefault');
 var declareAlias = Symbol.for('spritejs_declareAlias');
 
-var Block =
-/*#__PURE__*/
-function (_Node) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Block, _Node);
+var Block = /*#__PURE__*/function (_Node) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Block, _Node);
+
+  var _super = _createSuper(Block);
 
   function Block(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Block);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Block).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       anchorX: 0,
@@ -30317,7 +29473,7 @@ function (_Node) {
 
 
 /***/ }),
-/* 271 */
+/* 249 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30330,21 +29486,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Color", function() { return Color; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(118);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(272);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(101);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(250);
 /* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(64);
+/* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(49);
 /* harmony import */ var color_rgba__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(color_rgba__WEBPACK_IMPORTED_MODULE_8__);
 
 
@@ -30357,10 +29513,12 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
 
-var Gradient =
-/*#__PURE__*/
-function () {
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+
+var Gradient = /*#__PURE__*/function () {
   function Gradient(_ref) {
     var vector = _ref.vector,
         colors = _ref.colors;
@@ -30485,10 +29643,10 @@ function setStrokeColor(mesh, _ref4) {
     roundSegments: roundSegments
   });
 }
-var Color =
-/*#__PURE__*/
-function (_Array) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Color, _Array);
+var Color = /*#__PURE__*/function (_Array) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Color, _Array);
+
+  var _super = _createSuper(Color);
 
   function Color() {
     var _this;
@@ -30525,8 +29683,8 @@ function (_Array) {
       b /= 255;
     }
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Color).call(this, r, g, b, a));
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(_this, _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3___default()(_this));
+    _this = _super.call(this, r, g, b, a);
+    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(_this, _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_1___default()(_this));
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default()(Color, [{
@@ -30600,19 +29758,19 @@ function (_Array) {
   }]);
 
   return Color;
-}(_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5___default()(Array));
+}( /*#__PURE__*/_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_5___default()(Array));
 
 /***/ }),
-/* 272 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getPrototypeOf = __webpack_require__(119);
+var getPrototypeOf = __webpack_require__(97);
 
-var setPrototypeOf = __webpack_require__(123);
+var setPrototypeOf = __webpack_require__(99);
 
-var isNativeFunction = __webpack_require__(273);
+var isNativeFunction = __webpack_require__(251);
 
-var construct = __webpack_require__(274);
+var construct = __webpack_require__(252);
 
 function _wrapNativeSuper(Class) {
   var _cache = typeof Map === "function" ? new Map() : undefined;
@@ -30651,7 +29809,7 @@ function _wrapNativeSuper(Class) {
 module.exports = _wrapNativeSuper;
 
 /***/ }),
-/* 273 */
+/* 251 */
 /***/ (function(module, exports) {
 
 function _isNativeFunction(fn) {
@@ -30661,23 +29819,12 @@ function _isNativeFunction(fn) {
 module.exports = _isNativeFunction;
 
 /***/ }),
-/* 274 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var setPrototypeOf = __webpack_require__(123);
+var setPrototypeOf = __webpack_require__(99);
 
-function isNativeReflectConstruct() {
-  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
-  if (Reflect.construct.sham) return false;
-  if (typeof Proxy === "function") return true;
-
-  try {
-    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
-    return true;
-  } catch (e) {
-    return false;
-  }
-}
+var isNativeReflectConstruct = __webpack_require__(253);
 
 function _construct(Parent, args, Class) {
   if (isNativeReflectConstruct()) {
@@ -30699,7 +29846,26 @@ function _construct(Parent, args, Class) {
 module.exports = _construct;
 
 /***/ }),
-/* 275 */
+/* 253 */
+/***/ (function(module, exports) {
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Date.prototype.toString.call(Reflect.construct(Date, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+module.exports = _isNativeReflectConstruct;
+
+/***/ }),
+/* 254 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30783,7 +29949,7 @@ function createRadiusBox(figure, _ref, radius) {
 }
 
 /***/ }),
-/* 276 */
+/* 255 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30841,7 +30007,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 });
 
 /***/ }),
-/* 277 */
+/* 256 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30849,24 +30015,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sprite; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(268);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(269);
-/* harmony import */ var _attribute_sprite__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(278);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(263);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(246);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(247);
+/* harmony import */ var _attribute_sprite__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(257);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(241);
 
 
 
@@ -30878,6 +30044,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -30885,10 +30055,10 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var _textureTask = Symbol('textureTask');
 
-var Sprite =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Sprite, _Block);
+var Sprite = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Sprite, _Block);
+
+  var _super = _createSuper(Sprite);
 
   function Sprite() {
     var attrs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -30898,7 +30068,7 @@ function (_Block) {
     if (typeof attrs === 'string') attrs = {
       texture: attrs
     };
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Sprite).call(this, attrs));
+    return _super.call(this, attrs);
   }
   /* override */
 
@@ -30910,7 +30080,7 @@ function (_Block) {
     value: function draw() {
       var meshes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Sprite.prototype), "draw", this).call(this, meshes);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Sprite.prototype), "draw", this).call(this, meshes);
 
       var mesh = this.mesh;
 
@@ -30925,7 +30095,7 @@ function (_Block) {
   }, {
     key: "onPropertyChange",
     value: function onPropertyChange(key, newValue, oldValue) {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Sprite.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Sprite.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
 
       if (key === 'texture') {
         this[_textureTask] = Object(_utils_texture__WEBPACK_IMPORTED_MODULE_8__["applyTexture"])(this, newValue, true); // this.setTexture(newValue);
@@ -30944,7 +30114,7 @@ function (_Block) {
   }, {
     key: "contentSize",
     get: function get() {
-      var _get2 = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Sprite.prototype), "contentSize", this),
+      var _get2 = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Sprite.prototype), "contentSize", this),
           _get3 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_get2, 2),
           w = _get3[0],
           h = _get3[1];
@@ -30991,23 +30161,23 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(Spr
 _document__WEBPACK_IMPORTED_MODULE_11__["default"].registerNode(Sprite, 'sprite');
 
 /***/ }),
-/* 278 */
+/* 257 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sprite; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(270);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(248);
 
 
 
@@ -31016,22 +30186,26 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 var setDefault = Symbol.for('spritejs_setAttributeDefault');
 var setAttribute = Symbol.for('spritejs_setAttribute');
 var getAttribute = Symbol.for('spritejs_getAttribute');
 
-var Sprite =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Sprite, _Block);
+var Sprite = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Sprite, _Block);
+
+  var _super = _createSuper(Sprite);
 
   function Sprite(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Sprite);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Sprite).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       texture: undefined,
@@ -31083,37 +30257,37 @@ function (_Block) {
 
 
 /***/ }),
-/* 279 */
+/* 258 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Path; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var pasition__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(280);
+/* harmony import */ var pasition__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(259);
 /* harmony import */ var pasition__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(pasition__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(112);
-/* harmony import */ var _attribute_path__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(281);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(271);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(268);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(263);
-/* harmony import */ var _utils_bounding_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(276);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(90);
+/* harmony import */ var _attribute_path__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(260);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(249);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(246);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(241);
+/* harmony import */ var _utils_bounding_box__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(255);
 
 
 
@@ -31124,6 +30298,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -31136,10 +30314,10 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 var _mesh = Symbol('mesh');
 
-var Path =
-/*#__PURE__*/
-function (_Node) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Path, _Node);
+var Path = /*#__PURE__*/function (_Node) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Path, _Node);
+
+  var _super = _createSuper(Path);
 
   function Path() {
     var _this;
@@ -31151,7 +30329,7 @@ function (_Node) {
     if (typeof attrs === 'string') attrs = {
       d: attrs
     };
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Path).call(this, attrs));
+    _this = _super.call(this, attrs);
     _this.effects = {
       d: function d(from, to, p, s, e) {
         var ep = (p - s) / (e - s);
@@ -31180,7 +30358,7 @@ function (_Node) {
     value: function draw() {
       var meshes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Path.prototype), "draw", this).call(this, meshes);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Path.prototype), "draw", this).call(this, meshes);
 
       var mesh = this.mesh;
 
@@ -31224,7 +30402,7 @@ function (_Node) {
   }, {
     key: "onPropertyChange",
     value: function onPropertyChange(key, newValue, oldValue) {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Path.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Path.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
 
       if (key === 'd' || key === 'normalize') {
         this.updateContours();
@@ -31416,11 +30594,11 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(Pat
 _document__WEBPACK_IMPORTED_MODULE_14__["default"].registerNode(Path, 'path');
 
 /***/ }),
-/* 280 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
- * pasition v1.0.1 By dntzhang
+ * pasition v1.0.2 By dntzhang
  * Github: https://github.com/AlloyTeam/pasition
  * MIT Licensed.
  */
@@ -32154,7 +31332,7 @@ pasition._splitCurves = function (curves, count) {
     }
 };
 
-pasition._upShapes = function (shapes, count) {
+function sync(shapes, count) {
     var _loop = function _loop(i) {
         var shape = shapes[shapes.length - 1];
         var newShape = [];
@@ -32168,25 +31346,7 @@ pasition._upShapes = function (shapes, count) {
     for (var i = 0; i < count; i++) {
         _loop(i);
     }
-};
-
-pasition._subShapes = function (shapes, count) {
-    var _loop2 = function _loop2(i) {
-        var shape = shapes[shapes.length - 1];
-        var newShape = [];
-        var x = shape[0][0],
-            y = shape[0][1];
-        shape.forEach(function () {
-            newShape.push([x, y, x, y, x, y, x, y]);
-        });
-
-        shapes.push(newShape);
-    };
-
-    for (var i = 0; i < count; i++) {
-        _loop2(i);
-    }
-};
+}
 
 pasition.lerp = function (pathA, pathB, t) {
     return pasition._lerp(pasition.path2shapes(pathA), pasition.path2shapes(pathB), t);
@@ -32202,9 +31362,9 @@ pasition._preprocessing = function (pathA, pathB) {
         clonePathB = JSON.parse(JSON.stringify(pathB));
 
     if (lenA > lenB) {
-        pasition._subShapes(clonePathB, lenA - lenB);
+        sync(clonePathB, lenA - lenB);
     } else if (lenA < lenB) {
-        pasition._upShapes(clonePathA, lenB - lenA);
+        sync(clonePathA, lenB - lenA);
     }
 
     clonePathA = sort(clonePathA, clonePathB);
@@ -32292,25 +31452,25 @@ return pasition;
 
 
 /***/ }),
-/* 281 */
+/* 260 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Path; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(113);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(271);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(114);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(91);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(249);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
 
 
 
@@ -32319,6 +31479,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 
 
@@ -32326,17 +31490,17 @@ var setDefault = Symbol.for('spritejs_setAttributeDefault');
 var setAttribute = Symbol.for('spritejs_setAttribute');
 var getAttribute = Symbol.for('spritejs_getAttribute');
 
-var Path =
-/*#__PURE__*/
-function (_Node) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Path, _Node);
+var Path = /*#__PURE__*/function (_Node) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Path, _Node);
+
+  var _super = _createSuper(Path);
 
   function Path(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Path);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Path).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       d: '',
@@ -32513,29 +31677,29 @@ function (_Node) {
 
 
 /***/ }),
-/* 282 */
+/* 261 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Rect; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(279);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_rect__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(283);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(258);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_rect__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(262);
 
 
 
@@ -32546,19 +31710,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Rect =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Rect, _Path);
+
+var Rect = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Rect, _Path);
+
+  var _super = _createSuper(Rect);
 
   function Rect() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Rect);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Rect).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Rect, [{
@@ -32569,7 +31737,7 @@ function (_Path) {
       var _this$attributes = this.attributes,
           width = _this$attributes.width,
           height = _this$attributes.height;
-      return width > 0 && height > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Rect.prototype), "isVisible", this);
+      return width > 0 && height > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Rect.prototype), "isVisible", this);
     }
   }]);
 
@@ -32582,24 +31750,24 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Rec
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Rect, 'rect');
 
 /***/ }),
-/* 283 */
+/* 262 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Rect; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(281);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(114);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(260);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(92);
 
 
 
@@ -32607,6 +31775,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -32621,17 +31793,17 @@ function getPath(attr) {
   return "M".concat(0, " ", 0, "L", width, " ", 0, "L").concat(width, " ").concat(height, "L", 0, " ").concat(height, "Z");
 }
 
-var Rect =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Rect, _Path);
+var Rect = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Rect, _Path);
+
+  var _super = _createSuper(Rect);
 
   function Rect(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Rect);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Rect).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       width: 0,
@@ -32698,29 +31870,29 @@ function (_Path) {
 
 
 /***/ }),
-/* 284 */
+/* 263 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Triangle; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(285);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_triangle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(288);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(264);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_triangle__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(267);
 
 
 
@@ -32731,26 +31903,30 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Triangle =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Triangle, _Polyline);
+
+var Triangle = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Triangle, _Polyline);
+
+  var _super = _createSuper(Triangle);
 
   function Triangle() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Triangle);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Triangle).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Triangle, [{
     key: "isVisible",
     get: function get() {
       var sides = this.attributes.sides;
-      return sides[0] > 0 && sides[1] > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Triangle.prototype), "isVisible", this);
+      return sides[0] > 0 && sides[1] > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Triangle.prototype), "isVisible", this);
     }
   }]);
 
@@ -32763,29 +31939,29 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Tri
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Triangle, 'triangle');
 
 /***/ }),
-/* 285 */
+/* 264 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Polyline; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(279);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_polyline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(286);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(258);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_polyline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(265);
 
 
 
@@ -32796,19 +31972,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Polyline =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Polyline, _Path);
+
+var Polyline = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Polyline, _Path);
+
+  var _super = _createSuper(Polyline);
 
   function Polyline() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Polyline);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Polyline).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Polyline, [{
@@ -32817,7 +31997,7 @@ function (_Path) {
     /* override */
     get: function get() {
       var points = this.attributes.points;
-      return points.length > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Polyline.prototype), "isVisible", this);
+      return points.length > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Polyline.prototype), "isVisible", this);
     }
   }]);
 
@@ -32830,27 +32010,27 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Pol
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Polyline, 'polyline');
 
 /***/ }),
-/* 286 */
+/* 265 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Polyline; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(281);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(114);
-/* harmony import */ var _utils_smooth_curve__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(287);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(260);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
+/* harmony import */ var _utils_smooth_curve__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(266);
 
 
 
@@ -32859,6 +32039,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -32899,17 +32083,17 @@ function getPath(attr) {
   return d;
 }
 
-var Polyline =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Polyline, _Path);
+var Polyline = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Polyline, _Path);
+
+  var _super = _createSuper(Polyline);
 
   function Polyline(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Polyline);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Polyline).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       points: [],
@@ -33015,7 +32199,7 @@ function (_Path) {
 
 
 /***/ }),
-/* 287 */
+/* 266 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -33117,30 +32301,30 @@ function makeSmoothCurveLine(points) {
 }
 
 /***/ }),
-/* 288 */
+/* 267 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Triangle; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(289);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(268);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(286);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(114);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(265);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(92);
 
 
 
@@ -33151,6 +32335,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -33169,17 +32357,17 @@ function getPoints(attr) {
   return [0, 0, a, 0, b * Math.cos(angle), b * Math.sin(angle)];
 }
 
-var Triangle =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Triangle, _Polyline);
+var Triangle = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Triangle, _Polyline);
+
+  var _super = _createSuper(Triangle);
 
   function Triangle(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Triangle);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Triangle).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       sides: [0, 0],
@@ -33194,7 +32382,7 @@ function (_Polyline) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Triangle, [{
     key: "points",
     get: function get() {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Triangle.prototype), "points", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Triangle.prototype), "points", this);
     },
     set: function set(value) {} // eslint-disable-line no-empty-function
 
@@ -33210,7 +32398,7 @@ function (_Polyline) {
       if (this[setAttribute]('sides', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Triangle.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Triangle.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33224,7 +32412,7 @@ function (_Polyline) {
       if (this[setAttribute]('angle', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Triangle.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Triangle.prototype), "points", points, this, true);
       }
     }
   }]);
@@ -33235,12 +32423,12 @@ function (_Polyline) {
 
 
 /***/ }),
-/* 289 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var superPropBase = __webpack_require__(121);
+var superPropBase = __webpack_require__(96);
 
-var defineProperty = __webpack_require__(61);
+var defineProperty = __webpack_require__(31);
 
 function set(target, property, value, receiver) {
   if (typeof Reflect !== "undefined" && Reflect.set) {
@@ -33294,29 +32482,29 @@ function _set(target, property, value, receiver, isStrict) {
 module.exports = _set;
 
 /***/ }),
-/* 290 */
+/* 269 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Parallel; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(285);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_parallel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(291);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(264);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_parallel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(270);
 
 
 
@@ -33327,19 +32515,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Parallel =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Parallel, _Polyline);
+
+var Parallel = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Parallel, _Polyline);
+
+  var _super = _createSuper(Parallel);
 
   function Parallel() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Parallel);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Parallel).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Parallel, [{
@@ -33348,7 +32540,7 @@ function (_Polyline) {
     /* override */
     get: function get() {
       var sides = this.attributes.sides;
-      return sides[0] > 0 && sides[1] > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Parallel.prototype), "isVisible", this);
+      return sides[0] > 0 && sides[1] > 0 && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Parallel.prototype), "isVisible", this);
     }
   }]);
 
@@ -33361,30 +32553,30 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Par
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Parallel, 'parallel');
 
 /***/ }),
-/* 291 */
+/* 270 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Parallel; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(289);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(268);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(286);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(114);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(265);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(92);
 
 
 
@@ -33395,6 +32587,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 // 平行四边形
 
@@ -33416,17 +32612,17 @@ function getPoints(attr) {
   return [0, 0, a, 0, x1 + a, y1, x1, y1];
 }
 
-var Parallel =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Parallel, _Polyline);
+var Parallel = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Parallel, _Polyline);
+
+  var _super = _createSuper(Parallel);
 
   function Parallel(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Parallel);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Parallel).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       sides: [0, 0],
@@ -33441,7 +32637,7 @@ function (_Polyline) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Parallel, [{
     key: "points",
     get: function get() {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Parallel.prototype), "points", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Parallel.prototype), "points", this);
     },
     set: function set(value) {} // eslint-disable-line no-empty-function
 
@@ -33457,7 +32653,7 @@ function (_Polyline) {
       if (this[setAttribute]('sides', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Parallel.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Parallel.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33471,7 +32667,7 @@ function (_Polyline) {
       if (this[setAttribute]('angle', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Parallel.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Parallel.prototype), "points", points, this, true);
       }
     }
   }]);
@@ -33482,25 +32678,25 @@ function (_Polyline) {
 
 
 /***/ }),
-/* 292 */
+/* 271 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Regular; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(285);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(263);
-/* harmony import */ var _attribute_regular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(293);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(264);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(241);
+/* harmony import */ var _attribute_regular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(272);
 
 
 
@@ -33509,19 +32705,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Regular =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Regular, _Polyline);
+
+var Regular = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(Regular, _Polyline);
+
+  var _super = _createSuper(Regular);
 
   function Regular() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Regular);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Regular).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   return Regular;
@@ -33533,28 +32733,28 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(Reg
 _document__WEBPACK_IMPORTED_MODULE_6__["default"].registerNode(Regular, 'regular');
 
 /***/ }),
-/* 293 */
+/* 272 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Regular; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(289);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(286);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(114);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(268);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(265);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(92);
 
 
 
@@ -33564,6 +32764,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 // 正多边形
 
@@ -33590,17 +32794,17 @@ function getPoints(attr) {
   return points;
 }
 
-var Regular =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Regular, _Polyline);
+var Regular = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Regular, _Polyline);
+
+  var _super = _createSuper(Regular);
 
   function Regular(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Regular);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Regular).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       edges: 3,
@@ -33616,7 +32820,7 @@ function (_Polyline) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Regular, [{
     key: "points",
     get: function get() {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Regular.prototype), "points", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Regular.prototype), "points", this);
     },
     set: function set(value) {} // eslint-disable-line no-empty-function
 
@@ -33631,7 +32835,7 @@ function (_Polyline) {
       if (this[setAttribute]('edges', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Regular.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Regular.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33645,7 +32849,7 @@ function (_Polyline) {
       if (this[setAttribute]('radius', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Regular.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Regular.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33659,7 +32863,7 @@ function (_Polyline) {
       if (this[setAttribute]('offsetAngle', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Regular.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Regular.prototype), "points", points, this, true);
       }
     }
   }]);
@@ -33670,25 +32874,25 @@ function (_Polyline) {
 
 
 /***/ }),
-/* 294 */
+/* 273 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Star; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(285);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(263);
-/* harmony import */ var _attribute_star__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(295);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(264);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(241);
+/* harmony import */ var _attribute_star__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(274);
 
 
 
@@ -33697,19 +32901,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Star =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Star, _Polyline);
+
+var Star = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(Star, _Polyline);
+
+  var _super = _createSuper(Star);
 
   function Star() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Star);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Star).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   return Star;
@@ -33721,28 +32929,28 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(Sta
 _document__WEBPACK_IMPORTED_MODULE_6__["default"].registerNode(Star, 'star');
 
 /***/ }),
-/* 295 */
+/* 274 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Star; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(289);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(286);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(114);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(268);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _polyline__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(265);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(92);
 
 
 
@@ -33752,6 +32960,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 // 多角星
 
@@ -33780,17 +32992,17 @@ function getPoints(attr) {
   return points;
 }
 
-var Star =
-/*#__PURE__*/
-function (_Polyline) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Star, _Polyline);
+var Star = /*#__PURE__*/function (_Polyline) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Star, _Polyline);
+
+  var _super = _createSuper(Star);
 
   function Star(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Star);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       angles: 5,
@@ -33809,7 +33021,7 @@ function (_Polyline) {
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Star, [{
     key: "points",
     get: function get() {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star.prototype), "points", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Star.prototype), "points", this);
     },
     set: function set(value) {} // eslint-disable-line no-empty-function
 
@@ -33824,7 +33036,7 @@ function (_Polyline) {
       if (this[setAttribute]('angles', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Star.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33838,7 +33050,7 @@ function (_Polyline) {
       if (this[setAttribute]('innerRadius', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Star.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33852,7 +33064,7 @@ function (_Polyline) {
       if (this[setAttribute]('outerRadius', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Star.prototype), "points", points, this, true);
       }
     }
   }, {
@@ -33877,7 +33089,7 @@ function (_Polyline) {
       if (this[setAttribute]('offsetAngle', value)) {
         var points = getPoints(this);
 
-        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Star.prototype), "points", points, this, true);
+        _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Star.prototype), "points", points, this, true);
       }
     }
   }]);
@@ -33888,29 +33100,29 @@ function (_Polyline) {
 
 
 /***/ }),
-/* 296 */
+/* 275 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ellipse; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(279);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_ellipse__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(297);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(258);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_ellipse__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(276);
 
 
 
@@ -33921,19 +33133,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Ellipse =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Ellipse, _Path);
+
+var Ellipse = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Ellipse, _Path);
+
+  var _super = _createSuper(Ellipse);
 
   function Ellipse() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Ellipse);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ellipse).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Ellipse, [{
@@ -33946,7 +33162,7 @@ function (_Path) {
           radiusY = _this$attributes.radiusY,
           startAngle = _this$attributes.startAngle,
           endAngle = _this$attributes.endAngle;
-      return radiusX > 0 && radiusY > 0 && startAngle !== endAngle && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ellipse.prototype), "isVisible", this);
+      return radiusX > 0 && radiusY > 0 && startAngle !== endAngle && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Ellipse.prototype), "isVisible", this);
     }
   }]);
 
@@ -33959,25 +33175,25 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Ell
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Ellipse, 'ellipse');
 
 /***/ }),
-/* 297 */
+/* 276 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ellipse; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(281);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(114);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(260);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
 
 
 
@@ -33985,6 +33201,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -34021,17 +33241,17 @@ function getPath(attr) {
   return ret;
 }
 
-var Ellipse =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Ellipse, _Path);
+var Ellipse = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Ellipse, _Path);
+
+  var _super = _createSuper(Ellipse);
 
   function Ellipse(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Ellipse);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ellipse).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       radiusX: 0,
@@ -34165,25 +33385,25 @@ function (_Path) {
 
 
 /***/ }),
-/* 298 */
+/* 277 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Arc; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _ellipse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(296);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(263);
-/* harmony import */ var _attribute_arc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(299);
+/* harmony import */ var _ellipse__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(275);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(241);
+/* harmony import */ var _attribute_arc__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(278);
 
 
 
@@ -34192,19 +33412,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Arc =
-/*#__PURE__*/
-function (_Ellipse) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Arc, _Ellipse);
+
+var Arc = /*#__PURE__*/function (_Ellipse) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(Arc, _Ellipse);
+
+  var _super = _createSuper(Arc);
 
   function Arc() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Arc);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Arc).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   return Arc;
@@ -34216,28 +33440,28 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_4___default()(Arc
 _document__WEBPACK_IMPORTED_MODULE_6__["default"].registerNode(Arc, 'arc');
 
 /***/ }),
-/* 299 */
+/* 278 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Arc; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(289);
-/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _ellipse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(297);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(114);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(268);
+/* harmony import */ var _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _ellipse__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(276);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(92);
 
 
 
@@ -34248,31 +33472,35 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
-var Arc =
-/*#__PURE__*/
-function (_Ellipse) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Arc, _Ellipse);
+
+var Arc = /*#__PURE__*/function (_Ellipse) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Arc, _Ellipse);
+
+  var _super = _createSuper(Arc);
 
   function Arc() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Arc);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Arc).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Arc, [{
     key: "radius",
     get: function get() {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Arc.prototype), "radiusX", this);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Arc.prototype), "radiusX", this);
     },
     set: function set(value) {
       value = Object(_utils_attribute_value__WEBPACK_IMPORTED_MODULE_8__["toNumber"])(value);
 
-      _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Arc.prototype), "radiusX", value, this, true);
+      _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Arc.prototype), "radiusX", value, this, true);
 
-      _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Arc.prototype), "radiusY", value, this, true);
+      _babel_runtime_helpers_set__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Arc.prototype), "radiusY", value, this, true);
     }
   }]);
 
@@ -34282,29 +33510,29 @@ function (_Ellipse) {
 
 
 /***/ }),
-/* 300 */
+/* 279 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ring; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(279);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(263);
-/* harmony import */ var _attribute_ring__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(301);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(258);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(241);
+/* harmony import */ var _attribute_ring__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(280);
 
 
 
@@ -34315,19 +33543,23 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
 
-var Ring =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Ring, _Path);
+
+var Ring = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Ring, _Path);
+
+  var _super = _createSuper(Ring);
 
   function Ring() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Ring);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ring).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default()(Ring, [{
@@ -34340,7 +33572,7 @@ function (_Path) {
           outerRadius = _this$attributes.outerRadius,
           startAngle = _this$attributes.startAngle,
           endAngle = _this$attributes.endAngle;
-      return (innerRadius > 0 || outerRadius > 0) && startAngle !== endAngle && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ring.prototype), "isVisible", this);
+      return (innerRadius > 0 || outerRadius > 0) && startAngle !== endAngle && _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_2___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Ring.prototype), "isVisible", this);
     }
   }]);
 
@@ -34353,25 +33585,25 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(Rin
 _document__WEBPACK_IMPORTED_MODULE_8__["default"].registerNode(Ring, 'ring');
 
 /***/ }),
-/* 301 */
+/* 280 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Ring; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
-/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(281);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(114);
+/* harmony import */ var _path__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(260);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(92);
 
 
 
@@ -34379,6 +33611,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -34431,17 +33667,17 @@ function getPath(attr) {
   return ret;
 }
 
-var Ring =
-/*#__PURE__*/
-function (_Path) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Ring, _Path);
+var Ring = /*#__PURE__*/function (_Path) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Ring, _Path);
+
+  var _super = _createSuper(Ring);
 
   function Ring(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Ring);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Ring).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       innerRadius: 0,
@@ -34549,7 +33785,7 @@ function (_Path) {
 
 
 /***/ }),
-/* 302 */
+/* 281 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -34557,25 +33793,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Label; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(268);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(269);
-/* harmony import */ var _attribute_label__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(303);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(263);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(246);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(247);
+/* harmony import */ var _attribute_label__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(282);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(241);
 
 
 
@@ -34586,6 +33822,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -34603,10 +33843,10 @@ var _updateTextureRect = Symbol('updateTextureRect');
 
 var _textCanvas = Symbol('textCanvas');
 
-var Label =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Label, _Block);
+var Label = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Label, _Block);
+
+  var _super = _createSuper(Label);
 
   function Label() {
     var attrs = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -34616,7 +33856,7 @@ function (_Block) {
     if (typeof attrs === 'string') attrs = {
       text: attrs
     };
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Label).call(this, attrs));
+    return _super.call(this, attrs);
   }
   /* override */
 
@@ -34626,7 +33866,7 @@ function (_Block) {
 
     /* override */
     value: function draw(meshes) {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Label.prototype), "draw", this).call(this, meshes);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Label.prototype), "draw", this).call(this, meshes);
 
       var mesh = this.mesh;
 
@@ -34709,7 +33949,7 @@ function (_Block) {
           this[_updateTextureRect] = true;
         }
 
-        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Label.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Label.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
       }
     }
     /* override */
@@ -34717,7 +33957,7 @@ function (_Block) {
   }, {
     key: "updateContours",
     value: function updateContours() {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Label.prototype), "updateContours", this).call(this);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Label.prototype), "updateContours", this).call(this);
 
       this[_updateTextureRect] = true;
     }
@@ -34759,7 +33999,7 @@ function (_Block) {
   }, {
     key: "contentSize",
     get: function get() {
-      var _get2 = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Label.prototype), "contentSize", this),
+      var _get2 = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Label.prototype), "contentSize", this),
           _get3 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default()(_get2, 2),
           w = _get3[0],
           h = _get3[1];
@@ -34796,6 +34036,11 @@ function (_Block) {
       this.attributes.text = value;
     }
   }, {
+    key: "textImage",
+    get: function get() {
+      return this[_textImage] || {};
+    }
+  }, {
     key: "textImageReady",
     get: function get() {
       return this[_textImageTask] || Promise.resolve();
@@ -34811,26 +34056,26 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(Lab
 _document__WEBPACK_IMPORTED_MODULE_12__["default"].registerNode(Label, 'label');
 
 /***/ }),
-/* 303 */
+/* 282 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Label; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(12);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(114);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(271);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(270);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(92);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(249);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(248);
 
 
 
@@ -34838,6 +34083,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -34848,17 +34097,17 @@ var setAttribute = Symbol.for('spritejs_setAttribute');
 var getAttribute = Symbol.for('spritejs_getAttribute');
 var declareAlias = Symbol.for('spritejs_declareAlias');
 
-var Label =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Label, _Block);
+var Label = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(Label, _Block);
+
+  var _super = _createSuper(Label);
 
   function Label(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Label);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Label).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       text: '',
@@ -35031,33 +34280,33 @@ function (_Block) {
 
 
 /***/ }),
-/* 304 */
+/* 283 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Group; });
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(269);
-/* harmony import */ var _attribute_group__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(305);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(263);
-/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(306);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(247);
+/* harmony import */ var _attribute_group__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(284);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(241);
+/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(285);
 
 
 
@@ -35068,6 +34317,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -35083,10 +34336,10 @@ var _children = Symbol('children');
 
 var _sealed = Symbol('sealed');
 
-var Group =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Group, _Block);
+var Group = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(Group, _Block);
+
+  var _super = _createSuper(Group);
 
   function Group() {
     var _this;
@@ -35095,7 +34348,7 @@ function (_Block) {
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default()(this, Group);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group).call(this, attrs));
+    _this = _super.call(this, attrs);
     _this[_children] = [];
     _this[_ordered] = null;
     _this[_zOrder] = 0;
@@ -35146,7 +34399,7 @@ function (_Block) {
     value: function cloneNode() {
       var deep = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
-      var node = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group.prototype), "cloneNode", this).call(this);
+      var node = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Group.prototype), "cloneNode", this).call(this);
 
       if (deep) {
         this[_children].forEach(function (child) {
@@ -35169,7 +34422,7 @@ function (_Block) {
         if (child.dispatchPointerEvent(event)) return true;
       }
 
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group.prototype), "dispatchPointerEvent", this).call(this, event);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Group.prototype), "dispatchPointerEvent", this).call(this, event);
     }
     /* override */
 
@@ -35179,7 +34432,7 @@ function (_Block) {
       var meshes = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
       this.__cacheRenderMatrix = this.renderMatrix;
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group.prototype), "draw", this).call(this, meshes);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Group.prototype), "draw", this).call(this, meshes);
 
       if (!this[_sealed] && this.attributes.display !== 'none') {
         var children = this.orderedChildren;
@@ -35386,7 +34639,7 @@ function (_Block) {
       var width = _ref.width,
           height = _ref.height;
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group.prototype), "setResolution", this).call(this, {
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Group.prototype), "setResolution", this).call(this, {
         width: width,
         height: height
       });
@@ -35403,7 +34656,7 @@ function (_Block) {
   }, {
     key: "updateContours",
     value: function updateContours() {
-      if (!this[_sealed]) _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Group.prototype), "updateContours", this).call(this);
+      if (!this[_sealed]) _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_3___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Group.prototype), "updateContours", this).call(this);
     }
   }, {
     key: "childNodes",
@@ -35439,21 +34692,21 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_7___default()(Gro
 _document__WEBPACK_IMPORTED_MODULE_11__["default"].registerNode(Group, 'group');
 
 /***/ }),
-/* 305 */
+/* 284 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Group; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(270);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(248);
 
 
 
@@ -35461,17 +34714,21 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
  // const setDefault = Symbol.for('spritejs_setAttributeDefault');
 
-var Group =
-/*#__PURE__*/
-function (_Block) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(Group, _Block);
+var Group = /*#__PURE__*/function (_Block) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(Group, _Block);
+
+  var _super = _createSuper(Group);
 
   function Group() {
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, Group);
 
-    return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_1___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_2___default()(Group).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   return Group;
@@ -35480,7 +34737,7 @@ function (_Block) {
 
 
 /***/ }),
-/* 306 */
+/* 285 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -35491,8 +34748,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compile", function() { return compile; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(271);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(263);
+/* harmony import */ var _utils_color__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(249);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(241);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
@@ -35501,7 +34758,7 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 
 
-var CSSselect = __webpack_require__(307);
+var CSSselect = __webpack_require__(286);
 
 function isTag(elem) {
   return elem.nodeType === 1 || _document__WEBPACK_IMPORTED_MODULE_2__["default"].isSpriteNode(elem.nodeName);
@@ -35688,7 +34945,7 @@ function compile(query) {
 }
 
 /***/ }),
-/* 307 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35696,9 +34953,9 @@ function compile(query) {
 
 module.exports = CSSselect;
 
-var DomUtils = __webpack_require__(308);
-var falseFunc = __webpack_require__(327).falseFunc;
-var compileRaw = __webpack_require__(328);
+var DomUtils = __webpack_require__(287);
+var falseFunc = __webpack_require__(306).falseFunc;
+var compileRaw = __webpack_require__(307);
 
 function wrapCompile(func) {
     return function addAdapter(selector, options, context) {
@@ -35789,18 +35046,18 @@ CSSselect._compileToken = compileRaw.compileToken;
 
 
 /***/ }),
-/* 308 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var DomUtils = module.exports;
 
 [
-	__webpack_require__(309),
-	__webpack_require__(322),
-	__webpack_require__(323),
-	__webpack_require__(324),
-	__webpack_require__(325),
-	__webpack_require__(326)
+	__webpack_require__(288),
+	__webpack_require__(301),
+	__webpack_require__(302),
+	__webpack_require__(303),
+	__webpack_require__(304),
+	__webpack_require__(305)
 ].forEach(function(ext){
 	Object.keys(ext).forEach(function(key){
 		DomUtils[key] = ext[key].bind(DomUtils);
@@ -35809,11 +35066,11 @@ var DomUtils = module.exports;
 
 
 /***/ }),
-/* 309 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ElementType = __webpack_require__(310),
-    getOuterHTML = __webpack_require__(311),
+var ElementType = __webpack_require__(289),
+    getOuterHTML = __webpack_require__(290),
     isTag = ElementType.isTag;
 
 module.exports = {
@@ -35838,7 +35095,7 @@ function getText(elem){
 
 
 /***/ }),
-/* 310 */
+/* 289 */
 /***/ (function(module, exports) {
 
 //Types of elements found in the DOM
@@ -35859,20 +35116,20 @@ module.exports = {
 
 
 /***/ }),
-/* 311 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
   Module dependencies
 */
-var ElementType = __webpack_require__(312);
-var entities = __webpack_require__(313);
+var ElementType = __webpack_require__(291);
+var entities = __webpack_require__(292);
 
 /* mixed-case SVG and MathML tags & attributes
    recognized by the HTML parser, see
    https://html.spec.whatwg.org/multipage/parsing.html#parsing-main-inforeign
 */
-var foreignNames = __webpack_require__(321);
+var foreignNames = __webpack_require__(300);
 foreignNames.elementNames.__proto__ = null; /* use as a simple dictionary */
 foreignNames.attributeNames.__proto__ = null;
 
@@ -35969,7 +35226,7 @@ var render = (module.exports = function(dom, opts) {
   return output;
 });
 
-const foreignModeIntegrationPoints = [
+var foreignModeIntegrationPoints = [
   'mi',
   'mo',
   'mn',
@@ -36048,7 +35305,7 @@ function renderComment(elem) {
 
 
 /***/ }),
-/* 312 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36077,47 +35334,66 @@ exports.Doctype = "doctype" /* Doctype */;
 
 
 /***/ }),
-/* 313 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var decode_1 = __webpack_require__(314);
-var encode_1 = __webpack_require__(320);
+exports.encode = exports.decodeStrict = exports.decode = void 0;
+var decode_1 = __webpack_require__(293);
+var encode_1 = __webpack_require__(299);
+/**
+ * Decodes a string with entities.
+ *
+ * @param data String to decode.
+ * @param level Optional level to decode at. 0 = XML, 1 = HTML. Default is 0.
+ */
 function decode(data, level) {
     return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTML)(data);
 }
 exports.decode = decode;
+/**
+ * Decodes a string with entities. Does not allow missing trailing semicolons for entities.
+ *
+ * @param data String to decode.
+ * @param level Optional level to decode at. 0 = XML, 1 = HTML. Default is 0.
+ */
 function decodeStrict(data, level) {
     return (!level || level <= 0 ? decode_1.decodeXML : decode_1.decodeHTMLStrict)(data);
 }
 exports.decodeStrict = decodeStrict;
+/**
+ * Encodes a string with entities.
+ *
+ * @param data String to encode.
+ * @param level Optional level to encode at. 0 = XML, 1 = HTML. Default is 0.
+ */
 function encode(data, level) {
     return (!level || level <= 0 ? encode_1.encodeXML : encode_1.encodeHTML)(data);
 }
 exports.encode = encode;
-var encode_2 = __webpack_require__(320);
-exports.encodeXML = encode_2.encodeXML;
-exports.encodeHTML = encode_2.encodeHTML;
-exports.escape = encode_2.escape;
+var encode_2 = __webpack_require__(299);
+Object.defineProperty(exports, "encodeXML", { enumerable: true, get: function () { return encode_2.encodeXML; } });
+Object.defineProperty(exports, "encodeHTML", { enumerable: true, get: function () { return encode_2.encodeHTML; } });
+Object.defineProperty(exports, "escape", { enumerable: true, get: function () { return encode_2.escape; } });
 // Legacy aliases
-exports.encodeHTML4 = encode_2.encodeHTML;
-exports.encodeHTML5 = encode_2.encodeHTML;
-var decode_2 = __webpack_require__(314);
-exports.decodeXML = decode_2.decodeXML;
-exports.decodeHTML = decode_2.decodeHTML;
-exports.decodeHTMLStrict = decode_2.decodeHTMLStrict;
+Object.defineProperty(exports, "encodeHTML4", { enumerable: true, get: function () { return encode_2.encodeHTML; } });
+Object.defineProperty(exports, "encodeHTML5", { enumerable: true, get: function () { return encode_2.encodeHTML; } });
+var decode_2 = __webpack_require__(293);
+Object.defineProperty(exports, "decodeXML", { enumerable: true, get: function () { return decode_2.decodeXML; } });
+Object.defineProperty(exports, "decodeHTML", { enumerable: true, get: function () { return decode_2.decodeHTML; } });
+Object.defineProperty(exports, "decodeHTMLStrict", { enumerable: true, get: function () { return decode_2.decodeHTMLStrict; } });
 // Legacy aliases
-exports.decodeHTML4 = decode_2.decodeHTML;
-exports.decodeHTML5 = decode_2.decodeHTML;
-exports.decodeHTML4Strict = decode_2.decodeHTMLStrict;
-exports.decodeHTML5Strict = decode_2.decodeHTMLStrict;
-exports.decodeXMLStrict = decode_2.decodeXML;
+Object.defineProperty(exports, "decodeHTML4", { enumerable: true, get: function () { return decode_2.decodeHTML; } });
+Object.defineProperty(exports, "decodeHTML5", { enumerable: true, get: function () { return decode_2.decodeHTML; } });
+Object.defineProperty(exports, "decodeHTML4Strict", { enumerable: true, get: function () { return decode_2.decodeHTMLStrict; } });
+Object.defineProperty(exports, "decodeHTML5Strict", { enumerable: true, get: function () { return decode_2.decodeHTMLStrict; } });
+Object.defineProperty(exports, "decodeXMLStrict", { enumerable: true, get: function () { return decode_2.decodeXML; } });
 
 
 /***/ }),
-/* 314 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36126,10 +35402,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var entities_json_1 = __importDefault(__webpack_require__(315));
-var legacy_json_1 = __importDefault(__webpack_require__(316));
-var xml_json_1 = __importDefault(__webpack_require__(317));
-var decode_codepoint_1 = __importDefault(__webpack_require__(318));
+exports.decodeHTML = exports.decodeHTMLStrict = exports.decodeXML = void 0;
+var entities_json_1 = __importDefault(__webpack_require__(294));
+var legacy_json_1 = __importDefault(__webpack_require__(295));
+var xml_json_1 = __importDefault(__webpack_require__(296));
+var decode_codepoint_1 = __importDefault(__webpack_require__(297));
 exports.decodeXML = getStrictDecoder(xml_json_1.default);
 exports.decodeHTMLStrict = getStrictDecoder(entities_json_1.default);
 function getStrictDecoder(map) {
@@ -36160,14 +35437,13 @@ exports.decodeHTML = (function () {
         return replace(str);
     }
     //TODO consider creating a merged map
-    return function (str) {
-        return String(str).replace(re, replacer);
-    };
+    return function (str) { return String(str).replace(re, replacer); };
 })();
 function getReplacer(map) {
     return function replace(str) {
         if (str.charAt(1) === "#") {
-            if (str.charAt(2) === "X" || str.charAt(2) === "x") {
+            var secondChar = str.charAt(2);
+            if (secondChar === "X" || secondChar === "x") {
                 return decode_codepoint_1.default(parseInt(str.substr(3), 16));
             }
             return decode_codepoint_1.default(parseInt(str.substr(2), 10));
@@ -36178,25 +35454,25 @@ function getReplacer(map) {
 
 
 /***/ }),
-/* 315 */
+/* 294 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"Aacute\":\"Á\",\"aacute\":\"á\",\"Abreve\":\"Ă\",\"abreve\":\"ă\",\"ac\":\"∾\",\"acd\":\"∿\",\"acE\":\"∾̳\",\"Acirc\":\"Â\",\"acirc\":\"â\",\"acute\":\"´\",\"Acy\":\"А\",\"acy\":\"а\",\"AElig\":\"Æ\",\"aelig\":\"æ\",\"af\":\"⁡\",\"Afr\":\"𝔄\",\"afr\":\"𝔞\",\"Agrave\":\"À\",\"agrave\":\"à\",\"alefsym\":\"ℵ\",\"aleph\":\"ℵ\",\"Alpha\":\"Α\",\"alpha\":\"α\",\"Amacr\":\"Ā\",\"amacr\":\"ā\",\"amalg\":\"⨿\",\"amp\":\"&\",\"AMP\":\"&\",\"andand\":\"⩕\",\"And\":\"⩓\",\"and\":\"∧\",\"andd\":\"⩜\",\"andslope\":\"⩘\",\"andv\":\"⩚\",\"ang\":\"∠\",\"ange\":\"⦤\",\"angle\":\"∠\",\"angmsdaa\":\"⦨\",\"angmsdab\":\"⦩\",\"angmsdac\":\"⦪\",\"angmsdad\":\"⦫\",\"angmsdae\":\"⦬\",\"angmsdaf\":\"⦭\",\"angmsdag\":\"⦮\",\"angmsdah\":\"⦯\",\"angmsd\":\"∡\",\"angrt\":\"∟\",\"angrtvb\":\"⊾\",\"angrtvbd\":\"⦝\",\"angsph\":\"∢\",\"angst\":\"Å\",\"angzarr\":\"⍼\",\"Aogon\":\"Ą\",\"aogon\":\"ą\",\"Aopf\":\"𝔸\",\"aopf\":\"𝕒\",\"apacir\":\"⩯\",\"ap\":\"≈\",\"apE\":\"⩰\",\"ape\":\"≊\",\"apid\":\"≋\",\"apos\":\"'\",\"ApplyFunction\":\"⁡\",\"approx\":\"≈\",\"approxeq\":\"≊\",\"Aring\":\"Å\",\"aring\":\"å\",\"Ascr\":\"𝒜\",\"ascr\":\"𝒶\",\"Assign\":\"≔\",\"ast\":\"*\",\"asymp\":\"≈\",\"asympeq\":\"≍\",\"Atilde\":\"Ã\",\"atilde\":\"ã\",\"Auml\":\"Ä\",\"auml\":\"ä\",\"awconint\":\"∳\",\"awint\":\"⨑\",\"backcong\":\"≌\",\"backepsilon\":\"϶\",\"backprime\":\"‵\",\"backsim\":\"∽\",\"backsimeq\":\"⋍\",\"Backslash\":\"∖\",\"Barv\":\"⫧\",\"barvee\":\"⊽\",\"barwed\":\"⌅\",\"Barwed\":\"⌆\",\"barwedge\":\"⌅\",\"bbrk\":\"⎵\",\"bbrktbrk\":\"⎶\",\"bcong\":\"≌\",\"Bcy\":\"Б\",\"bcy\":\"б\",\"bdquo\":\"„\",\"becaus\":\"∵\",\"because\":\"∵\",\"Because\":\"∵\",\"bemptyv\":\"⦰\",\"bepsi\":\"϶\",\"bernou\":\"ℬ\",\"Bernoullis\":\"ℬ\",\"Beta\":\"Β\",\"beta\":\"β\",\"beth\":\"ℶ\",\"between\":\"≬\",\"Bfr\":\"𝔅\",\"bfr\":\"𝔟\",\"bigcap\":\"⋂\",\"bigcirc\":\"◯\",\"bigcup\":\"⋃\",\"bigodot\":\"⨀\",\"bigoplus\":\"⨁\",\"bigotimes\":\"⨂\",\"bigsqcup\":\"⨆\",\"bigstar\":\"★\",\"bigtriangledown\":\"▽\",\"bigtriangleup\":\"△\",\"biguplus\":\"⨄\",\"bigvee\":\"⋁\",\"bigwedge\":\"⋀\",\"bkarow\":\"⤍\",\"blacklozenge\":\"⧫\",\"blacksquare\":\"▪\",\"blacktriangle\":\"▴\",\"blacktriangledown\":\"▾\",\"blacktriangleleft\":\"◂\",\"blacktriangleright\":\"▸\",\"blank\":\"␣\",\"blk12\":\"▒\",\"blk14\":\"░\",\"blk34\":\"▓\",\"block\":\"█\",\"bne\":\"=⃥\",\"bnequiv\":\"≡⃥\",\"bNot\":\"⫭\",\"bnot\":\"⌐\",\"Bopf\":\"𝔹\",\"bopf\":\"𝕓\",\"bot\":\"⊥\",\"bottom\":\"⊥\",\"bowtie\":\"⋈\",\"boxbox\":\"⧉\",\"boxdl\":\"┐\",\"boxdL\":\"╕\",\"boxDl\":\"╖\",\"boxDL\":\"╗\",\"boxdr\":\"┌\",\"boxdR\":\"╒\",\"boxDr\":\"╓\",\"boxDR\":\"╔\",\"boxh\":\"─\",\"boxH\":\"═\",\"boxhd\":\"┬\",\"boxHd\":\"╤\",\"boxhD\":\"╥\",\"boxHD\":\"╦\",\"boxhu\":\"┴\",\"boxHu\":\"╧\",\"boxhU\":\"╨\",\"boxHU\":\"╩\",\"boxminus\":\"⊟\",\"boxplus\":\"⊞\",\"boxtimes\":\"⊠\",\"boxul\":\"┘\",\"boxuL\":\"╛\",\"boxUl\":\"╜\",\"boxUL\":\"╝\",\"boxur\":\"└\",\"boxuR\":\"╘\",\"boxUr\":\"╙\",\"boxUR\":\"╚\",\"boxv\":\"│\",\"boxV\":\"║\",\"boxvh\":\"┼\",\"boxvH\":\"╪\",\"boxVh\":\"╫\",\"boxVH\":\"╬\",\"boxvl\":\"┤\",\"boxvL\":\"╡\",\"boxVl\":\"╢\",\"boxVL\":\"╣\",\"boxvr\":\"├\",\"boxvR\":\"╞\",\"boxVr\":\"╟\",\"boxVR\":\"╠\",\"bprime\":\"‵\",\"breve\":\"˘\",\"Breve\":\"˘\",\"brvbar\":\"¦\",\"bscr\":\"𝒷\",\"Bscr\":\"ℬ\",\"bsemi\":\"⁏\",\"bsim\":\"∽\",\"bsime\":\"⋍\",\"bsolb\":\"⧅\",\"bsol\":\"\\\\\",\"bsolhsub\":\"⟈\",\"bull\":\"•\",\"bullet\":\"•\",\"bump\":\"≎\",\"bumpE\":\"⪮\",\"bumpe\":\"≏\",\"Bumpeq\":\"≎\",\"bumpeq\":\"≏\",\"Cacute\":\"Ć\",\"cacute\":\"ć\",\"capand\":\"⩄\",\"capbrcup\":\"⩉\",\"capcap\":\"⩋\",\"cap\":\"∩\",\"Cap\":\"⋒\",\"capcup\":\"⩇\",\"capdot\":\"⩀\",\"CapitalDifferentialD\":\"ⅅ\",\"caps\":\"∩︀\",\"caret\":\"⁁\",\"caron\":\"ˇ\",\"Cayleys\":\"ℭ\",\"ccaps\":\"⩍\",\"Ccaron\":\"Č\",\"ccaron\":\"č\",\"Ccedil\":\"Ç\",\"ccedil\":\"ç\",\"Ccirc\":\"Ĉ\",\"ccirc\":\"ĉ\",\"Cconint\":\"∰\",\"ccups\":\"⩌\",\"ccupssm\":\"⩐\",\"Cdot\":\"Ċ\",\"cdot\":\"ċ\",\"cedil\":\"¸\",\"Cedilla\":\"¸\",\"cemptyv\":\"⦲\",\"cent\":\"¢\",\"centerdot\":\"·\",\"CenterDot\":\"·\",\"cfr\":\"𝔠\",\"Cfr\":\"ℭ\",\"CHcy\":\"Ч\",\"chcy\":\"ч\",\"check\":\"✓\",\"checkmark\":\"✓\",\"Chi\":\"Χ\",\"chi\":\"χ\",\"circ\":\"ˆ\",\"circeq\":\"≗\",\"circlearrowleft\":\"↺\",\"circlearrowright\":\"↻\",\"circledast\":\"⊛\",\"circledcirc\":\"⊚\",\"circleddash\":\"⊝\",\"CircleDot\":\"⊙\",\"circledR\":\"®\",\"circledS\":\"Ⓢ\",\"CircleMinus\":\"⊖\",\"CirclePlus\":\"⊕\",\"CircleTimes\":\"⊗\",\"cir\":\"○\",\"cirE\":\"⧃\",\"cire\":\"≗\",\"cirfnint\":\"⨐\",\"cirmid\":\"⫯\",\"cirscir\":\"⧂\",\"ClockwiseContourIntegral\":\"∲\",\"CloseCurlyDoubleQuote\":\"”\",\"CloseCurlyQuote\":\"’\",\"clubs\":\"♣\",\"clubsuit\":\"♣\",\"colon\":\":\",\"Colon\":\"∷\",\"Colone\":\"⩴\",\"colone\":\"≔\",\"coloneq\":\"≔\",\"comma\":\",\",\"commat\":\"@\",\"comp\":\"∁\",\"compfn\":\"∘\",\"complement\":\"∁\",\"complexes\":\"ℂ\",\"cong\":\"≅\",\"congdot\":\"⩭\",\"Congruent\":\"≡\",\"conint\":\"∮\",\"Conint\":\"∯\",\"ContourIntegral\":\"∮\",\"copf\":\"𝕔\",\"Copf\":\"ℂ\",\"coprod\":\"∐\",\"Coproduct\":\"∐\",\"copy\":\"©\",\"COPY\":\"©\",\"copysr\":\"℗\",\"CounterClockwiseContourIntegral\":\"∳\",\"crarr\":\"↵\",\"cross\":\"✗\",\"Cross\":\"⨯\",\"Cscr\":\"𝒞\",\"cscr\":\"𝒸\",\"csub\":\"⫏\",\"csube\":\"⫑\",\"csup\":\"⫐\",\"csupe\":\"⫒\",\"ctdot\":\"⋯\",\"cudarrl\":\"⤸\",\"cudarrr\":\"⤵\",\"cuepr\":\"⋞\",\"cuesc\":\"⋟\",\"cularr\":\"↶\",\"cularrp\":\"⤽\",\"cupbrcap\":\"⩈\",\"cupcap\":\"⩆\",\"CupCap\":\"≍\",\"cup\":\"∪\",\"Cup\":\"⋓\",\"cupcup\":\"⩊\",\"cupdot\":\"⊍\",\"cupor\":\"⩅\",\"cups\":\"∪︀\",\"curarr\":\"↷\",\"curarrm\":\"⤼\",\"curlyeqprec\":\"⋞\",\"curlyeqsucc\":\"⋟\",\"curlyvee\":\"⋎\",\"curlywedge\":\"⋏\",\"curren\":\"¤\",\"curvearrowleft\":\"↶\",\"curvearrowright\":\"↷\",\"cuvee\":\"⋎\",\"cuwed\":\"⋏\",\"cwconint\":\"∲\",\"cwint\":\"∱\",\"cylcty\":\"⌭\",\"dagger\":\"†\",\"Dagger\":\"‡\",\"daleth\":\"ℸ\",\"darr\":\"↓\",\"Darr\":\"↡\",\"dArr\":\"⇓\",\"dash\":\"‐\",\"Dashv\":\"⫤\",\"dashv\":\"⊣\",\"dbkarow\":\"⤏\",\"dblac\":\"˝\",\"Dcaron\":\"Ď\",\"dcaron\":\"ď\",\"Dcy\":\"Д\",\"dcy\":\"д\",\"ddagger\":\"‡\",\"ddarr\":\"⇊\",\"DD\":\"ⅅ\",\"dd\":\"ⅆ\",\"DDotrahd\":\"⤑\",\"ddotseq\":\"⩷\",\"deg\":\"°\",\"Del\":\"∇\",\"Delta\":\"Δ\",\"delta\":\"δ\",\"demptyv\":\"⦱\",\"dfisht\":\"⥿\",\"Dfr\":\"𝔇\",\"dfr\":\"𝔡\",\"dHar\":\"⥥\",\"dharl\":\"⇃\",\"dharr\":\"⇂\",\"DiacriticalAcute\":\"´\",\"DiacriticalDot\":\"˙\",\"DiacriticalDoubleAcute\":\"˝\",\"DiacriticalGrave\":\"`\",\"DiacriticalTilde\":\"˜\",\"diam\":\"⋄\",\"diamond\":\"⋄\",\"Diamond\":\"⋄\",\"diamondsuit\":\"♦\",\"diams\":\"♦\",\"die\":\"¨\",\"DifferentialD\":\"ⅆ\",\"digamma\":\"ϝ\",\"disin\":\"⋲\",\"div\":\"÷\",\"divide\":\"÷\",\"divideontimes\":\"⋇\",\"divonx\":\"⋇\",\"DJcy\":\"Ђ\",\"djcy\":\"ђ\",\"dlcorn\":\"⌞\",\"dlcrop\":\"⌍\",\"dollar\":\"$\",\"Dopf\":\"𝔻\",\"dopf\":\"𝕕\",\"Dot\":\"¨\",\"dot\":\"˙\",\"DotDot\":\"⃜\",\"doteq\":\"≐\",\"doteqdot\":\"≑\",\"DotEqual\":\"≐\",\"dotminus\":\"∸\",\"dotplus\":\"∔\",\"dotsquare\":\"⊡\",\"doublebarwedge\":\"⌆\",\"DoubleContourIntegral\":\"∯\",\"DoubleDot\":\"¨\",\"DoubleDownArrow\":\"⇓\",\"DoubleLeftArrow\":\"⇐\",\"DoubleLeftRightArrow\":\"⇔\",\"DoubleLeftTee\":\"⫤\",\"DoubleLongLeftArrow\":\"⟸\",\"DoubleLongLeftRightArrow\":\"⟺\",\"DoubleLongRightArrow\":\"⟹\",\"DoubleRightArrow\":\"⇒\",\"DoubleRightTee\":\"⊨\",\"DoubleUpArrow\":\"⇑\",\"DoubleUpDownArrow\":\"⇕\",\"DoubleVerticalBar\":\"∥\",\"DownArrowBar\":\"⤓\",\"downarrow\":\"↓\",\"DownArrow\":\"↓\",\"Downarrow\":\"⇓\",\"DownArrowUpArrow\":\"⇵\",\"DownBreve\":\"̑\",\"downdownarrows\":\"⇊\",\"downharpoonleft\":\"⇃\",\"downharpoonright\":\"⇂\",\"DownLeftRightVector\":\"⥐\",\"DownLeftTeeVector\":\"⥞\",\"DownLeftVectorBar\":\"⥖\",\"DownLeftVector\":\"↽\",\"DownRightTeeVector\":\"⥟\",\"DownRightVectorBar\":\"⥗\",\"DownRightVector\":\"⇁\",\"DownTeeArrow\":\"↧\",\"DownTee\":\"⊤\",\"drbkarow\":\"⤐\",\"drcorn\":\"⌟\",\"drcrop\":\"⌌\",\"Dscr\":\"𝒟\",\"dscr\":\"𝒹\",\"DScy\":\"Ѕ\",\"dscy\":\"ѕ\",\"dsol\":\"⧶\",\"Dstrok\":\"Đ\",\"dstrok\":\"đ\",\"dtdot\":\"⋱\",\"dtri\":\"▿\",\"dtrif\":\"▾\",\"duarr\":\"⇵\",\"duhar\":\"⥯\",\"dwangle\":\"⦦\",\"DZcy\":\"Џ\",\"dzcy\":\"џ\",\"dzigrarr\":\"⟿\",\"Eacute\":\"É\",\"eacute\":\"é\",\"easter\":\"⩮\",\"Ecaron\":\"Ě\",\"ecaron\":\"ě\",\"Ecirc\":\"Ê\",\"ecirc\":\"ê\",\"ecir\":\"≖\",\"ecolon\":\"≕\",\"Ecy\":\"Э\",\"ecy\":\"э\",\"eDDot\":\"⩷\",\"Edot\":\"Ė\",\"edot\":\"ė\",\"eDot\":\"≑\",\"ee\":\"ⅇ\",\"efDot\":\"≒\",\"Efr\":\"𝔈\",\"efr\":\"𝔢\",\"eg\":\"⪚\",\"Egrave\":\"È\",\"egrave\":\"è\",\"egs\":\"⪖\",\"egsdot\":\"⪘\",\"el\":\"⪙\",\"Element\":\"∈\",\"elinters\":\"⏧\",\"ell\":\"ℓ\",\"els\":\"⪕\",\"elsdot\":\"⪗\",\"Emacr\":\"Ē\",\"emacr\":\"ē\",\"empty\":\"∅\",\"emptyset\":\"∅\",\"EmptySmallSquare\":\"◻\",\"emptyv\":\"∅\",\"EmptyVerySmallSquare\":\"▫\",\"emsp13\":\" \",\"emsp14\":\" \",\"emsp\":\" \",\"ENG\":\"Ŋ\",\"eng\":\"ŋ\",\"ensp\":\" \",\"Eogon\":\"Ę\",\"eogon\":\"ę\",\"Eopf\":\"𝔼\",\"eopf\":\"𝕖\",\"epar\":\"⋕\",\"eparsl\":\"⧣\",\"eplus\":\"⩱\",\"epsi\":\"ε\",\"Epsilon\":\"Ε\",\"epsilon\":\"ε\",\"epsiv\":\"ϵ\",\"eqcirc\":\"≖\",\"eqcolon\":\"≕\",\"eqsim\":\"≂\",\"eqslantgtr\":\"⪖\",\"eqslantless\":\"⪕\",\"Equal\":\"⩵\",\"equals\":\"=\",\"EqualTilde\":\"≂\",\"equest\":\"≟\",\"Equilibrium\":\"⇌\",\"equiv\":\"≡\",\"equivDD\":\"⩸\",\"eqvparsl\":\"⧥\",\"erarr\":\"⥱\",\"erDot\":\"≓\",\"escr\":\"ℯ\",\"Escr\":\"ℰ\",\"esdot\":\"≐\",\"Esim\":\"⩳\",\"esim\":\"≂\",\"Eta\":\"Η\",\"eta\":\"η\",\"ETH\":\"Ð\",\"eth\":\"ð\",\"Euml\":\"Ë\",\"euml\":\"ë\",\"euro\":\"€\",\"excl\":\"!\",\"exist\":\"∃\",\"Exists\":\"∃\",\"expectation\":\"ℰ\",\"exponentiale\":\"ⅇ\",\"ExponentialE\":\"ⅇ\",\"fallingdotseq\":\"≒\",\"Fcy\":\"Ф\",\"fcy\":\"ф\",\"female\":\"♀\",\"ffilig\":\"ﬃ\",\"fflig\":\"ﬀ\",\"ffllig\":\"ﬄ\",\"Ffr\":\"𝔉\",\"ffr\":\"𝔣\",\"filig\":\"ﬁ\",\"FilledSmallSquare\":\"◼\",\"FilledVerySmallSquare\":\"▪\",\"fjlig\":\"fj\",\"flat\":\"♭\",\"fllig\":\"ﬂ\",\"fltns\":\"▱\",\"fnof\":\"ƒ\",\"Fopf\":\"𝔽\",\"fopf\":\"𝕗\",\"forall\":\"∀\",\"ForAll\":\"∀\",\"fork\":\"⋔\",\"forkv\":\"⫙\",\"Fouriertrf\":\"ℱ\",\"fpartint\":\"⨍\",\"frac12\":\"½\",\"frac13\":\"⅓\",\"frac14\":\"¼\",\"frac15\":\"⅕\",\"frac16\":\"⅙\",\"frac18\":\"⅛\",\"frac23\":\"⅔\",\"frac25\":\"⅖\",\"frac34\":\"¾\",\"frac35\":\"⅗\",\"frac38\":\"⅜\",\"frac45\":\"⅘\",\"frac56\":\"⅚\",\"frac58\":\"⅝\",\"frac78\":\"⅞\",\"frasl\":\"⁄\",\"frown\":\"⌢\",\"fscr\":\"𝒻\",\"Fscr\":\"ℱ\",\"gacute\":\"ǵ\",\"Gamma\":\"Γ\",\"gamma\":\"γ\",\"Gammad\":\"Ϝ\",\"gammad\":\"ϝ\",\"gap\":\"⪆\",\"Gbreve\":\"Ğ\",\"gbreve\":\"ğ\",\"Gcedil\":\"Ģ\",\"Gcirc\":\"Ĝ\",\"gcirc\":\"ĝ\",\"Gcy\":\"Г\",\"gcy\":\"г\",\"Gdot\":\"Ġ\",\"gdot\":\"ġ\",\"ge\":\"≥\",\"gE\":\"≧\",\"gEl\":\"⪌\",\"gel\":\"⋛\",\"geq\":\"≥\",\"geqq\":\"≧\",\"geqslant\":\"⩾\",\"gescc\":\"⪩\",\"ges\":\"⩾\",\"gesdot\":\"⪀\",\"gesdoto\":\"⪂\",\"gesdotol\":\"⪄\",\"gesl\":\"⋛︀\",\"gesles\":\"⪔\",\"Gfr\":\"𝔊\",\"gfr\":\"𝔤\",\"gg\":\"≫\",\"Gg\":\"⋙\",\"ggg\":\"⋙\",\"gimel\":\"ℷ\",\"GJcy\":\"Ѓ\",\"gjcy\":\"ѓ\",\"gla\":\"⪥\",\"gl\":\"≷\",\"glE\":\"⪒\",\"glj\":\"⪤\",\"gnap\":\"⪊\",\"gnapprox\":\"⪊\",\"gne\":\"⪈\",\"gnE\":\"≩\",\"gneq\":\"⪈\",\"gneqq\":\"≩\",\"gnsim\":\"⋧\",\"Gopf\":\"𝔾\",\"gopf\":\"𝕘\",\"grave\":\"`\",\"GreaterEqual\":\"≥\",\"GreaterEqualLess\":\"⋛\",\"GreaterFullEqual\":\"≧\",\"GreaterGreater\":\"⪢\",\"GreaterLess\":\"≷\",\"GreaterSlantEqual\":\"⩾\",\"GreaterTilde\":\"≳\",\"Gscr\":\"𝒢\",\"gscr\":\"ℊ\",\"gsim\":\"≳\",\"gsime\":\"⪎\",\"gsiml\":\"⪐\",\"gtcc\":\"⪧\",\"gtcir\":\"⩺\",\"gt\":\">\",\"GT\":\">\",\"Gt\":\"≫\",\"gtdot\":\"⋗\",\"gtlPar\":\"⦕\",\"gtquest\":\"⩼\",\"gtrapprox\":\"⪆\",\"gtrarr\":\"⥸\",\"gtrdot\":\"⋗\",\"gtreqless\":\"⋛\",\"gtreqqless\":\"⪌\",\"gtrless\":\"≷\",\"gtrsim\":\"≳\",\"gvertneqq\":\"≩︀\",\"gvnE\":\"≩︀\",\"Hacek\":\"ˇ\",\"hairsp\":\" \",\"half\":\"½\",\"hamilt\":\"ℋ\",\"HARDcy\":\"Ъ\",\"hardcy\":\"ъ\",\"harrcir\":\"⥈\",\"harr\":\"↔\",\"hArr\":\"⇔\",\"harrw\":\"↭\",\"Hat\":\"^\",\"hbar\":\"ℏ\",\"Hcirc\":\"Ĥ\",\"hcirc\":\"ĥ\",\"hearts\":\"♥\",\"heartsuit\":\"♥\",\"hellip\":\"…\",\"hercon\":\"⊹\",\"hfr\":\"𝔥\",\"Hfr\":\"ℌ\",\"HilbertSpace\":\"ℋ\",\"hksearow\":\"⤥\",\"hkswarow\":\"⤦\",\"hoarr\":\"⇿\",\"homtht\":\"∻\",\"hookleftarrow\":\"↩\",\"hookrightarrow\":\"↪\",\"hopf\":\"𝕙\",\"Hopf\":\"ℍ\",\"horbar\":\"―\",\"HorizontalLine\":\"─\",\"hscr\":\"𝒽\",\"Hscr\":\"ℋ\",\"hslash\":\"ℏ\",\"Hstrok\":\"Ħ\",\"hstrok\":\"ħ\",\"HumpDownHump\":\"≎\",\"HumpEqual\":\"≏\",\"hybull\":\"⁃\",\"hyphen\":\"‐\",\"Iacute\":\"Í\",\"iacute\":\"í\",\"ic\":\"⁣\",\"Icirc\":\"Î\",\"icirc\":\"î\",\"Icy\":\"И\",\"icy\":\"и\",\"Idot\":\"İ\",\"IEcy\":\"Е\",\"iecy\":\"е\",\"iexcl\":\"¡\",\"iff\":\"⇔\",\"ifr\":\"𝔦\",\"Ifr\":\"ℑ\",\"Igrave\":\"Ì\",\"igrave\":\"ì\",\"ii\":\"ⅈ\",\"iiiint\":\"⨌\",\"iiint\":\"∭\",\"iinfin\":\"⧜\",\"iiota\":\"℩\",\"IJlig\":\"Ĳ\",\"ijlig\":\"ĳ\",\"Imacr\":\"Ī\",\"imacr\":\"ī\",\"image\":\"ℑ\",\"ImaginaryI\":\"ⅈ\",\"imagline\":\"ℐ\",\"imagpart\":\"ℑ\",\"imath\":\"ı\",\"Im\":\"ℑ\",\"imof\":\"⊷\",\"imped\":\"Ƶ\",\"Implies\":\"⇒\",\"incare\":\"℅\",\"in\":\"∈\",\"infin\":\"∞\",\"infintie\":\"⧝\",\"inodot\":\"ı\",\"intcal\":\"⊺\",\"int\":\"∫\",\"Int\":\"∬\",\"integers\":\"ℤ\",\"Integral\":\"∫\",\"intercal\":\"⊺\",\"Intersection\":\"⋂\",\"intlarhk\":\"⨗\",\"intprod\":\"⨼\",\"InvisibleComma\":\"⁣\",\"InvisibleTimes\":\"⁢\",\"IOcy\":\"Ё\",\"iocy\":\"ё\",\"Iogon\":\"Į\",\"iogon\":\"į\",\"Iopf\":\"𝕀\",\"iopf\":\"𝕚\",\"Iota\":\"Ι\",\"iota\":\"ι\",\"iprod\":\"⨼\",\"iquest\":\"¿\",\"iscr\":\"𝒾\",\"Iscr\":\"ℐ\",\"isin\":\"∈\",\"isindot\":\"⋵\",\"isinE\":\"⋹\",\"isins\":\"⋴\",\"isinsv\":\"⋳\",\"isinv\":\"∈\",\"it\":\"⁢\",\"Itilde\":\"Ĩ\",\"itilde\":\"ĩ\",\"Iukcy\":\"І\",\"iukcy\":\"і\",\"Iuml\":\"Ï\",\"iuml\":\"ï\",\"Jcirc\":\"Ĵ\",\"jcirc\":\"ĵ\",\"Jcy\":\"Й\",\"jcy\":\"й\",\"Jfr\":\"𝔍\",\"jfr\":\"𝔧\",\"jmath\":\"ȷ\",\"Jopf\":\"𝕁\",\"jopf\":\"𝕛\",\"Jscr\":\"𝒥\",\"jscr\":\"𝒿\",\"Jsercy\":\"Ј\",\"jsercy\":\"ј\",\"Jukcy\":\"Є\",\"jukcy\":\"є\",\"Kappa\":\"Κ\",\"kappa\":\"κ\",\"kappav\":\"ϰ\",\"Kcedil\":\"Ķ\",\"kcedil\":\"ķ\",\"Kcy\":\"К\",\"kcy\":\"к\",\"Kfr\":\"𝔎\",\"kfr\":\"𝔨\",\"kgreen\":\"ĸ\",\"KHcy\":\"Х\",\"khcy\":\"х\",\"KJcy\":\"Ќ\",\"kjcy\":\"ќ\",\"Kopf\":\"𝕂\",\"kopf\":\"𝕜\",\"Kscr\":\"𝒦\",\"kscr\":\"𝓀\",\"lAarr\":\"⇚\",\"Lacute\":\"Ĺ\",\"lacute\":\"ĺ\",\"laemptyv\":\"⦴\",\"lagran\":\"ℒ\",\"Lambda\":\"Λ\",\"lambda\":\"λ\",\"lang\":\"⟨\",\"Lang\":\"⟪\",\"langd\":\"⦑\",\"langle\":\"⟨\",\"lap\":\"⪅\",\"Laplacetrf\":\"ℒ\",\"laquo\":\"«\",\"larrb\":\"⇤\",\"larrbfs\":\"⤟\",\"larr\":\"←\",\"Larr\":\"↞\",\"lArr\":\"⇐\",\"larrfs\":\"⤝\",\"larrhk\":\"↩\",\"larrlp\":\"↫\",\"larrpl\":\"⤹\",\"larrsim\":\"⥳\",\"larrtl\":\"↢\",\"latail\":\"⤙\",\"lAtail\":\"⤛\",\"lat\":\"⪫\",\"late\":\"⪭\",\"lates\":\"⪭︀\",\"lbarr\":\"⤌\",\"lBarr\":\"⤎\",\"lbbrk\":\"❲\",\"lbrace\":\"{\",\"lbrack\":\"[\",\"lbrke\":\"⦋\",\"lbrksld\":\"⦏\",\"lbrkslu\":\"⦍\",\"Lcaron\":\"Ľ\",\"lcaron\":\"ľ\",\"Lcedil\":\"Ļ\",\"lcedil\":\"ļ\",\"lceil\":\"⌈\",\"lcub\":\"{\",\"Lcy\":\"Л\",\"lcy\":\"л\",\"ldca\":\"⤶\",\"ldquo\":\"“\",\"ldquor\":\"„\",\"ldrdhar\":\"⥧\",\"ldrushar\":\"⥋\",\"ldsh\":\"↲\",\"le\":\"≤\",\"lE\":\"≦\",\"LeftAngleBracket\":\"⟨\",\"LeftArrowBar\":\"⇤\",\"leftarrow\":\"←\",\"LeftArrow\":\"←\",\"Leftarrow\":\"⇐\",\"LeftArrowRightArrow\":\"⇆\",\"leftarrowtail\":\"↢\",\"LeftCeiling\":\"⌈\",\"LeftDoubleBracket\":\"⟦\",\"LeftDownTeeVector\":\"⥡\",\"LeftDownVectorBar\":\"⥙\",\"LeftDownVector\":\"⇃\",\"LeftFloor\":\"⌊\",\"leftharpoondown\":\"↽\",\"leftharpoonup\":\"↼\",\"leftleftarrows\":\"⇇\",\"leftrightarrow\":\"↔\",\"LeftRightArrow\":\"↔\",\"Leftrightarrow\":\"⇔\",\"leftrightarrows\":\"⇆\",\"leftrightharpoons\":\"⇋\",\"leftrightsquigarrow\":\"↭\",\"LeftRightVector\":\"⥎\",\"LeftTeeArrow\":\"↤\",\"LeftTee\":\"⊣\",\"LeftTeeVector\":\"⥚\",\"leftthreetimes\":\"⋋\",\"LeftTriangleBar\":\"⧏\",\"LeftTriangle\":\"⊲\",\"LeftTriangleEqual\":\"⊴\",\"LeftUpDownVector\":\"⥑\",\"LeftUpTeeVector\":\"⥠\",\"LeftUpVectorBar\":\"⥘\",\"LeftUpVector\":\"↿\",\"LeftVectorBar\":\"⥒\",\"LeftVector\":\"↼\",\"lEg\":\"⪋\",\"leg\":\"⋚\",\"leq\":\"≤\",\"leqq\":\"≦\",\"leqslant\":\"⩽\",\"lescc\":\"⪨\",\"les\":\"⩽\",\"lesdot\":\"⩿\",\"lesdoto\":\"⪁\",\"lesdotor\":\"⪃\",\"lesg\":\"⋚︀\",\"lesges\":\"⪓\",\"lessapprox\":\"⪅\",\"lessdot\":\"⋖\",\"lesseqgtr\":\"⋚\",\"lesseqqgtr\":\"⪋\",\"LessEqualGreater\":\"⋚\",\"LessFullEqual\":\"≦\",\"LessGreater\":\"≶\",\"lessgtr\":\"≶\",\"LessLess\":\"⪡\",\"lesssim\":\"≲\",\"LessSlantEqual\":\"⩽\",\"LessTilde\":\"≲\",\"lfisht\":\"⥼\",\"lfloor\":\"⌊\",\"Lfr\":\"𝔏\",\"lfr\":\"𝔩\",\"lg\":\"≶\",\"lgE\":\"⪑\",\"lHar\":\"⥢\",\"lhard\":\"↽\",\"lharu\":\"↼\",\"lharul\":\"⥪\",\"lhblk\":\"▄\",\"LJcy\":\"Љ\",\"ljcy\":\"љ\",\"llarr\":\"⇇\",\"ll\":\"≪\",\"Ll\":\"⋘\",\"llcorner\":\"⌞\",\"Lleftarrow\":\"⇚\",\"llhard\":\"⥫\",\"lltri\":\"◺\",\"Lmidot\":\"Ŀ\",\"lmidot\":\"ŀ\",\"lmoustache\":\"⎰\",\"lmoust\":\"⎰\",\"lnap\":\"⪉\",\"lnapprox\":\"⪉\",\"lne\":\"⪇\",\"lnE\":\"≨\",\"lneq\":\"⪇\",\"lneqq\":\"≨\",\"lnsim\":\"⋦\",\"loang\":\"⟬\",\"loarr\":\"⇽\",\"lobrk\":\"⟦\",\"longleftarrow\":\"⟵\",\"LongLeftArrow\":\"⟵\",\"Longleftarrow\":\"⟸\",\"longleftrightarrow\":\"⟷\",\"LongLeftRightArrow\":\"⟷\",\"Longleftrightarrow\":\"⟺\",\"longmapsto\":\"⟼\",\"longrightarrow\":\"⟶\",\"LongRightArrow\":\"⟶\",\"Longrightarrow\":\"⟹\",\"looparrowleft\":\"↫\",\"looparrowright\":\"↬\",\"lopar\":\"⦅\",\"Lopf\":\"𝕃\",\"lopf\":\"𝕝\",\"loplus\":\"⨭\",\"lotimes\":\"⨴\",\"lowast\":\"∗\",\"lowbar\":\"_\",\"LowerLeftArrow\":\"↙\",\"LowerRightArrow\":\"↘\",\"loz\":\"◊\",\"lozenge\":\"◊\",\"lozf\":\"⧫\",\"lpar\":\"(\",\"lparlt\":\"⦓\",\"lrarr\":\"⇆\",\"lrcorner\":\"⌟\",\"lrhar\":\"⇋\",\"lrhard\":\"⥭\",\"lrm\":\"‎\",\"lrtri\":\"⊿\",\"lsaquo\":\"‹\",\"lscr\":\"𝓁\",\"Lscr\":\"ℒ\",\"lsh\":\"↰\",\"Lsh\":\"↰\",\"lsim\":\"≲\",\"lsime\":\"⪍\",\"lsimg\":\"⪏\",\"lsqb\":\"[\",\"lsquo\":\"‘\",\"lsquor\":\"‚\",\"Lstrok\":\"Ł\",\"lstrok\":\"ł\",\"ltcc\":\"⪦\",\"ltcir\":\"⩹\",\"lt\":\"<\",\"LT\":\"<\",\"Lt\":\"≪\",\"ltdot\":\"⋖\",\"lthree\":\"⋋\",\"ltimes\":\"⋉\",\"ltlarr\":\"⥶\",\"ltquest\":\"⩻\",\"ltri\":\"◃\",\"ltrie\":\"⊴\",\"ltrif\":\"◂\",\"ltrPar\":\"⦖\",\"lurdshar\":\"⥊\",\"luruhar\":\"⥦\",\"lvertneqq\":\"≨︀\",\"lvnE\":\"≨︀\",\"macr\":\"¯\",\"male\":\"♂\",\"malt\":\"✠\",\"maltese\":\"✠\",\"Map\":\"⤅\",\"map\":\"↦\",\"mapsto\":\"↦\",\"mapstodown\":\"↧\",\"mapstoleft\":\"↤\",\"mapstoup\":\"↥\",\"marker\":\"▮\",\"mcomma\":\"⨩\",\"Mcy\":\"М\",\"mcy\":\"м\",\"mdash\":\"—\",\"mDDot\":\"∺\",\"measuredangle\":\"∡\",\"MediumSpace\":\" \",\"Mellintrf\":\"ℳ\",\"Mfr\":\"𝔐\",\"mfr\":\"𝔪\",\"mho\":\"℧\",\"micro\":\"µ\",\"midast\":\"*\",\"midcir\":\"⫰\",\"mid\":\"∣\",\"middot\":\"·\",\"minusb\":\"⊟\",\"minus\":\"−\",\"minusd\":\"∸\",\"minusdu\":\"⨪\",\"MinusPlus\":\"∓\",\"mlcp\":\"⫛\",\"mldr\":\"…\",\"mnplus\":\"∓\",\"models\":\"⊧\",\"Mopf\":\"𝕄\",\"mopf\":\"𝕞\",\"mp\":\"∓\",\"mscr\":\"𝓂\",\"Mscr\":\"ℳ\",\"mstpos\":\"∾\",\"Mu\":\"Μ\",\"mu\":\"μ\",\"multimap\":\"⊸\",\"mumap\":\"⊸\",\"nabla\":\"∇\",\"Nacute\":\"Ń\",\"nacute\":\"ń\",\"nang\":\"∠⃒\",\"nap\":\"≉\",\"napE\":\"⩰̸\",\"napid\":\"≋̸\",\"napos\":\"ŉ\",\"napprox\":\"≉\",\"natural\":\"♮\",\"naturals\":\"ℕ\",\"natur\":\"♮\",\"nbsp\":\" \",\"nbump\":\"≎̸\",\"nbumpe\":\"≏̸\",\"ncap\":\"⩃\",\"Ncaron\":\"Ň\",\"ncaron\":\"ň\",\"Ncedil\":\"Ņ\",\"ncedil\":\"ņ\",\"ncong\":\"≇\",\"ncongdot\":\"⩭̸\",\"ncup\":\"⩂\",\"Ncy\":\"Н\",\"ncy\":\"н\",\"ndash\":\"–\",\"nearhk\":\"⤤\",\"nearr\":\"↗\",\"neArr\":\"⇗\",\"nearrow\":\"↗\",\"ne\":\"≠\",\"nedot\":\"≐̸\",\"NegativeMediumSpace\":\"​\",\"NegativeThickSpace\":\"​\",\"NegativeThinSpace\":\"​\",\"NegativeVeryThinSpace\":\"​\",\"nequiv\":\"≢\",\"nesear\":\"⤨\",\"nesim\":\"≂̸\",\"NestedGreaterGreater\":\"≫\",\"NestedLessLess\":\"≪\",\"NewLine\":\"\\n\",\"nexist\":\"∄\",\"nexists\":\"∄\",\"Nfr\":\"𝔑\",\"nfr\":\"𝔫\",\"ngE\":\"≧̸\",\"nge\":\"≱\",\"ngeq\":\"≱\",\"ngeqq\":\"≧̸\",\"ngeqslant\":\"⩾̸\",\"nges\":\"⩾̸\",\"nGg\":\"⋙̸\",\"ngsim\":\"≵\",\"nGt\":\"≫⃒\",\"ngt\":\"≯\",\"ngtr\":\"≯\",\"nGtv\":\"≫̸\",\"nharr\":\"↮\",\"nhArr\":\"⇎\",\"nhpar\":\"⫲\",\"ni\":\"∋\",\"nis\":\"⋼\",\"nisd\":\"⋺\",\"niv\":\"∋\",\"NJcy\":\"Њ\",\"njcy\":\"њ\",\"nlarr\":\"↚\",\"nlArr\":\"⇍\",\"nldr\":\"‥\",\"nlE\":\"≦̸\",\"nle\":\"≰\",\"nleftarrow\":\"↚\",\"nLeftarrow\":\"⇍\",\"nleftrightarrow\":\"↮\",\"nLeftrightarrow\":\"⇎\",\"nleq\":\"≰\",\"nleqq\":\"≦̸\",\"nleqslant\":\"⩽̸\",\"nles\":\"⩽̸\",\"nless\":\"≮\",\"nLl\":\"⋘̸\",\"nlsim\":\"≴\",\"nLt\":\"≪⃒\",\"nlt\":\"≮\",\"nltri\":\"⋪\",\"nltrie\":\"⋬\",\"nLtv\":\"≪̸\",\"nmid\":\"∤\",\"NoBreak\":\"⁠\",\"NonBreakingSpace\":\" \",\"nopf\":\"𝕟\",\"Nopf\":\"ℕ\",\"Not\":\"⫬\",\"not\":\"¬\",\"NotCongruent\":\"≢\",\"NotCupCap\":\"≭\",\"NotDoubleVerticalBar\":\"∦\",\"NotElement\":\"∉\",\"NotEqual\":\"≠\",\"NotEqualTilde\":\"≂̸\",\"NotExists\":\"∄\",\"NotGreater\":\"≯\",\"NotGreaterEqual\":\"≱\",\"NotGreaterFullEqual\":\"≧̸\",\"NotGreaterGreater\":\"≫̸\",\"NotGreaterLess\":\"≹\",\"NotGreaterSlantEqual\":\"⩾̸\",\"NotGreaterTilde\":\"≵\",\"NotHumpDownHump\":\"≎̸\",\"NotHumpEqual\":\"≏̸\",\"notin\":\"∉\",\"notindot\":\"⋵̸\",\"notinE\":\"⋹̸\",\"notinva\":\"∉\",\"notinvb\":\"⋷\",\"notinvc\":\"⋶\",\"NotLeftTriangleBar\":\"⧏̸\",\"NotLeftTriangle\":\"⋪\",\"NotLeftTriangleEqual\":\"⋬\",\"NotLess\":\"≮\",\"NotLessEqual\":\"≰\",\"NotLessGreater\":\"≸\",\"NotLessLess\":\"≪̸\",\"NotLessSlantEqual\":\"⩽̸\",\"NotLessTilde\":\"≴\",\"NotNestedGreaterGreater\":\"⪢̸\",\"NotNestedLessLess\":\"⪡̸\",\"notni\":\"∌\",\"notniva\":\"∌\",\"notnivb\":\"⋾\",\"notnivc\":\"⋽\",\"NotPrecedes\":\"⊀\",\"NotPrecedesEqual\":\"⪯̸\",\"NotPrecedesSlantEqual\":\"⋠\",\"NotReverseElement\":\"∌\",\"NotRightTriangleBar\":\"⧐̸\",\"NotRightTriangle\":\"⋫\",\"NotRightTriangleEqual\":\"⋭\",\"NotSquareSubset\":\"⊏̸\",\"NotSquareSubsetEqual\":\"⋢\",\"NotSquareSuperset\":\"⊐̸\",\"NotSquareSupersetEqual\":\"⋣\",\"NotSubset\":\"⊂⃒\",\"NotSubsetEqual\":\"⊈\",\"NotSucceeds\":\"⊁\",\"NotSucceedsEqual\":\"⪰̸\",\"NotSucceedsSlantEqual\":\"⋡\",\"NotSucceedsTilde\":\"≿̸\",\"NotSuperset\":\"⊃⃒\",\"NotSupersetEqual\":\"⊉\",\"NotTilde\":\"≁\",\"NotTildeEqual\":\"≄\",\"NotTildeFullEqual\":\"≇\",\"NotTildeTilde\":\"≉\",\"NotVerticalBar\":\"∤\",\"nparallel\":\"∦\",\"npar\":\"∦\",\"nparsl\":\"⫽⃥\",\"npart\":\"∂̸\",\"npolint\":\"⨔\",\"npr\":\"⊀\",\"nprcue\":\"⋠\",\"nprec\":\"⊀\",\"npreceq\":\"⪯̸\",\"npre\":\"⪯̸\",\"nrarrc\":\"⤳̸\",\"nrarr\":\"↛\",\"nrArr\":\"⇏\",\"nrarrw\":\"↝̸\",\"nrightarrow\":\"↛\",\"nRightarrow\":\"⇏\",\"nrtri\":\"⋫\",\"nrtrie\":\"⋭\",\"nsc\":\"⊁\",\"nsccue\":\"⋡\",\"nsce\":\"⪰̸\",\"Nscr\":\"𝒩\",\"nscr\":\"𝓃\",\"nshortmid\":\"∤\",\"nshortparallel\":\"∦\",\"nsim\":\"≁\",\"nsime\":\"≄\",\"nsimeq\":\"≄\",\"nsmid\":\"∤\",\"nspar\":\"∦\",\"nsqsube\":\"⋢\",\"nsqsupe\":\"⋣\",\"nsub\":\"⊄\",\"nsubE\":\"⫅̸\",\"nsube\":\"⊈\",\"nsubset\":\"⊂⃒\",\"nsubseteq\":\"⊈\",\"nsubseteqq\":\"⫅̸\",\"nsucc\":\"⊁\",\"nsucceq\":\"⪰̸\",\"nsup\":\"⊅\",\"nsupE\":\"⫆̸\",\"nsupe\":\"⊉\",\"nsupset\":\"⊃⃒\",\"nsupseteq\":\"⊉\",\"nsupseteqq\":\"⫆̸\",\"ntgl\":\"≹\",\"Ntilde\":\"Ñ\",\"ntilde\":\"ñ\",\"ntlg\":\"≸\",\"ntriangleleft\":\"⋪\",\"ntrianglelefteq\":\"⋬\",\"ntriangleright\":\"⋫\",\"ntrianglerighteq\":\"⋭\",\"Nu\":\"Ν\",\"nu\":\"ν\",\"num\":\"#\",\"numero\":\"№\",\"numsp\":\" \",\"nvap\":\"≍⃒\",\"nvdash\":\"⊬\",\"nvDash\":\"⊭\",\"nVdash\":\"⊮\",\"nVDash\":\"⊯\",\"nvge\":\"≥⃒\",\"nvgt\":\">⃒\",\"nvHarr\":\"⤄\",\"nvinfin\":\"⧞\",\"nvlArr\":\"⤂\",\"nvle\":\"≤⃒\",\"nvlt\":\"<⃒\",\"nvltrie\":\"⊴⃒\",\"nvrArr\":\"⤃\",\"nvrtrie\":\"⊵⃒\",\"nvsim\":\"∼⃒\",\"nwarhk\":\"⤣\",\"nwarr\":\"↖\",\"nwArr\":\"⇖\",\"nwarrow\":\"↖\",\"nwnear\":\"⤧\",\"Oacute\":\"Ó\",\"oacute\":\"ó\",\"oast\":\"⊛\",\"Ocirc\":\"Ô\",\"ocirc\":\"ô\",\"ocir\":\"⊚\",\"Ocy\":\"О\",\"ocy\":\"о\",\"odash\":\"⊝\",\"Odblac\":\"Ő\",\"odblac\":\"ő\",\"odiv\":\"⨸\",\"odot\":\"⊙\",\"odsold\":\"⦼\",\"OElig\":\"Œ\",\"oelig\":\"œ\",\"ofcir\":\"⦿\",\"Ofr\":\"𝔒\",\"ofr\":\"𝔬\",\"ogon\":\"˛\",\"Ograve\":\"Ò\",\"ograve\":\"ò\",\"ogt\":\"⧁\",\"ohbar\":\"⦵\",\"ohm\":\"Ω\",\"oint\":\"∮\",\"olarr\":\"↺\",\"olcir\":\"⦾\",\"olcross\":\"⦻\",\"oline\":\"‾\",\"olt\":\"⧀\",\"Omacr\":\"Ō\",\"omacr\":\"ō\",\"Omega\":\"Ω\",\"omega\":\"ω\",\"Omicron\":\"Ο\",\"omicron\":\"ο\",\"omid\":\"⦶\",\"ominus\":\"⊖\",\"Oopf\":\"𝕆\",\"oopf\":\"𝕠\",\"opar\":\"⦷\",\"OpenCurlyDoubleQuote\":\"“\",\"OpenCurlyQuote\":\"‘\",\"operp\":\"⦹\",\"oplus\":\"⊕\",\"orarr\":\"↻\",\"Or\":\"⩔\",\"or\":\"∨\",\"ord\":\"⩝\",\"order\":\"ℴ\",\"orderof\":\"ℴ\",\"ordf\":\"ª\",\"ordm\":\"º\",\"origof\":\"⊶\",\"oror\":\"⩖\",\"orslope\":\"⩗\",\"orv\":\"⩛\",\"oS\":\"Ⓢ\",\"Oscr\":\"𝒪\",\"oscr\":\"ℴ\",\"Oslash\":\"Ø\",\"oslash\":\"ø\",\"osol\":\"⊘\",\"Otilde\":\"Õ\",\"otilde\":\"õ\",\"otimesas\":\"⨶\",\"Otimes\":\"⨷\",\"otimes\":\"⊗\",\"Ouml\":\"Ö\",\"ouml\":\"ö\",\"ovbar\":\"⌽\",\"OverBar\":\"‾\",\"OverBrace\":\"⏞\",\"OverBracket\":\"⎴\",\"OverParenthesis\":\"⏜\",\"para\":\"¶\",\"parallel\":\"∥\",\"par\":\"∥\",\"parsim\":\"⫳\",\"parsl\":\"⫽\",\"part\":\"∂\",\"PartialD\":\"∂\",\"Pcy\":\"П\",\"pcy\":\"п\",\"percnt\":\"%\",\"period\":\".\",\"permil\":\"‰\",\"perp\":\"⊥\",\"pertenk\":\"‱\",\"Pfr\":\"𝔓\",\"pfr\":\"𝔭\",\"Phi\":\"Φ\",\"phi\":\"φ\",\"phiv\":\"ϕ\",\"phmmat\":\"ℳ\",\"phone\":\"☎\",\"Pi\":\"Π\",\"pi\":\"π\",\"pitchfork\":\"⋔\",\"piv\":\"ϖ\",\"planck\":\"ℏ\",\"planckh\":\"ℎ\",\"plankv\":\"ℏ\",\"plusacir\":\"⨣\",\"plusb\":\"⊞\",\"pluscir\":\"⨢\",\"plus\":\"+\",\"plusdo\":\"∔\",\"plusdu\":\"⨥\",\"pluse\":\"⩲\",\"PlusMinus\":\"±\",\"plusmn\":\"±\",\"plussim\":\"⨦\",\"plustwo\":\"⨧\",\"pm\":\"±\",\"Poincareplane\":\"ℌ\",\"pointint\":\"⨕\",\"popf\":\"𝕡\",\"Popf\":\"ℙ\",\"pound\":\"£\",\"prap\":\"⪷\",\"Pr\":\"⪻\",\"pr\":\"≺\",\"prcue\":\"≼\",\"precapprox\":\"⪷\",\"prec\":\"≺\",\"preccurlyeq\":\"≼\",\"Precedes\":\"≺\",\"PrecedesEqual\":\"⪯\",\"PrecedesSlantEqual\":\"≼\",\"PrecedesTilde\":\"≾\",\"preceq\":\"⪯\",\"precnapprox\":\"⪹\",\"precneqq\":\"⪵\",\"precnsim\":\"⋨\",\"pre\":\"⪯\",\"prE\":\"⪳\",\"precsim\":\"≾\",\"prime\":\"′\",\"Prime\":\"″\",\"primes\":\"ℙ\",\"prnap\":\"⪹\",\"prnE\":\"⪵\",\"prnsim\":\"⋨\",\"prod\":\"∏\",\"Product\":\"∏\",\"profalar\":\"⌮\",\"profline\":\"⌒\",\"profsurf\":\"⌓\",\"prop\":\"∝\",\"Proportional\":\"∝\",\"Proportion\":\"∷\",\"propto\":\"∝\",\"prsim\":\"≾\",\"prurel\":\"⊰\",\"Pscr\":\"𝒫\",\"pscr\":\"𝓅\",\"Psi\":\"Ψ\",\"psi\":\"ψ\",\"puncsp\":\" \",\"Qfr\":\"𝔔\",\"qfr\":\"𝔮\",\"qint\":\"⨌\",\"qopf\":\"𝕢\",\"Qopf\":\"ℚ\",\"qprime\":\"⁗\",\"Qscr\":\"𝒬\",\"qscr\":\"𝓆\",\"quaternions\":\"ℍ\",\"quatint\":\"⨖\",\"quest\":\"?\",\"questeq\":\"≟\",\"quot\":\"\\\"\",\"QUOT\":\"\\\"\",\"rAarr\":\"⇛\",\"race\":\"∽̱\",\"Racute\":\"Ŕ\",\"racute\":\"ŕ\",\"radic\":\"√\",\"raemptyv\":\"⦳\",\"rang\":\"⟩\",\"Rang\":\"⟫\",\"rangd\":\"⦒\",\"range\":\"⦥\",\"rangle\":\"⟩\",\"raquo\":\"»\",\"rarrap\":\"⥵\",\"rarrb\":\"⇥\",\"rarrbfs\":\"⤠\",\"rarrc\":\"⤳\",\"rarr\":\"→\",\"Rarr\":\"↠\",\"rArr\":\"⇒\",\"rarrfs\":\"⤞\",\"rarrhk\":\"↪\",\"rarrlp\":\"↬\",\"rarrpl\":\"⥅\",\"rarrsim\":\"⥴\",\"Rarrtl\":\"⤖\",\"rarrtl\":\"↣\",\"rarrw\":\"↝\",\"ratail\":\"⤚\",\"rAtail\":\"⤜\",\"ratio\":\"∶\",\"rationals\":\"ℚ\",\"rbarr\":\"⤍\",\"rBarr\":\"⤏\",\"RBarr\":\"⤐\",\"rbbrk\":\"❳\",\"rbrace\":\"}\",\"rbrack\":\"]\",\"rbrke\":\"⦌\",\"rbrksld\":\"⦎\",\"rbrkslu\":\"⦐\",\"Rcaron\":\"Ř\",\"rcaron\":\"ř\",\"Rcedil\":\"Ŗ\",\"rcedil\":\"ŗ\",\"rceil\":\"⌉\",\"rcub\":\"}\",\"Rcy\":\"Р\",\"rcy\":\"р\",\"rdca\":\"⤷\",\"rdldhar\":\"⥩\",\"rdquo\":\"”\",\"rdquor\":\"”\",\"rdsh\":\"↳\",\"real\":\"ℜ\",\"realine\":\"ℛ\",\"realpart\":\"ℜ\",\"reals\":\"ℝ\",\"Re\":\"ℜ\",\"rect\":\"▭\",\"reg\":\"®\",\"REG\":\"®\",\"ReverseElement\":\"∋\",\"ReverseEquilibrium\":\"⇋\",\"ReverseUpEquilibrium\":\"⥯\",\"rfisht\":\"⥽\",\"rfloor\":\"⌋\",\"rfr\":\"𝔯\",\"Rfr\":\"ℜ\",\"rHar\":\"⥤\",\"rhard\":\"⇁\",\"rharu\":\"⇀\",\"rharul\":\"⥬\",\"Rho\":\"Ρ\",\"rho\":\"ρ\",\"rhov\":\"ϱ\",\"RightAngleBracket\":\"⟩\",\"RightArrowBar\":\"⇥\",\"rightarrow\":\"→\",\"RightArrow\":\"→\",\"Rightarrow\":\"⇒\",\"RightArrowLeftArrow\":\"⇄\",\"rightarrowtail\":\"↣\",\"RightCeiling\":\"⌉\",\"RightDoubleBracket\":\"⟧\",\"RightDownTeeVector\":\"⥝\",\"RightDownVectorBar\":\"⥕\",\"RightDownVector\":\"⇂\",\"RightFloor\":\"⌋\",\"rightharpoondown\":\"⇁\",\"rightharpoonup\":\"⇀\",\"rightleftarrows\":\"⇄\",\"rightleftharpoons\":\"⇌\",\"rightrightarrows\":\"⇉\",\"rightsquigarrow\":\"↝\",\"RightTeeArrow\":\"↦\",\"RightTee\":\"⊢\",\"RightTeeVector\":\"⥛\",\"rightthreetimes\":\"⋌\",\"RightTriangleBar\":\"⧐\",\"RightTriangle\":\"⊳\",\"RightTriangleEqual\":\"⊵\",\"RightUpDownVector\":\"⥏\",\"RightUpTeeVector\":\"⥜\",\"RightUpVectorBar\":\"⥔\",\"RightUpVector\":\"↾\",\"RightVectorBar\":\"⥓\",\"RightVector\":\"⇀\",\"ring\":\"˚\",\"risingdotseq\":\"≓\",\"rlarr\":\"⇄\",\"rlhar\":\"⇌\",\"rlm\":\"‏\",\"rmoustache\":\"⎱\",\"rmoust\":\"⎱\",\"rnmid\":\"⫮\",\"roang\":\"⟭\",\"roarr\":\"⇾\",\"robrk\":\"⟧\",\"ropar\":\"⦆\",\"ropf\":\"𝕣\",\"Ropf\":\"ℝ\",\"roplus\":\"⨮\",\"rotimes\":\"⨵\",\"RoundImplies\":\"⥰\",\"rpar\":\")\",\"rpargt\":\"⦔\",\"rppolint\":\"⨒\",\"rrarr\":\"⇉\",\"Rrightarrow\":\"⇛\",\"rsaquo\":\"›\",\"rscr\":\"𝓇\",\"Rscr\":\"ℛ\",\"rsh\":\"↱\",\"Rsh\":\"↱\",\"rsqb\":\"]\",\"rsquo\":\"’\",\"rsquor\":\"’\",\"rthree\":\"⋌\",\"rtimes\":\"⋊\",\"rtri\":\"▹\",\"rtrie\":\"⊵\",\"rtrif\":\"▸\",\"rtriltri\":\"⧎\",\"RuleDelayed\":\"⧴\",\"ruluhar\":\"⥨\",\"rx\":\"℞\",\"Sacute\":\"Ś\",\"sacute\":\"ś\",\"sbquo\":\"‚\",\"scap\":\"⪸\",\"Scaron\":\"Š\",\"scaron\":\"š\",\"Sc\":\"⪼\",\"sc\":\"≻\",\"sccue\":\"≽\",\"sce\":\"⪰\",\"scE\":\"⪴\",\"Scedil\":\"Ş\",\"scedil\":\"ş\",\"Scirc\":\"Ŝ\",\"scirc\":\"ŝ\",\"scnap\":\"⪺\",\"scnE\":\"⪶\",\"scnsim\":\"⋩\",\"scpolint\":\"⨓\",\"scsim\":\"≿\",\"Scy\":\"С\",\"scy\":\"с\",\"sdotb\":\"⊡\",\"sdot\":\"⋅\",\"sdote\":\"⩦\",\"searhk\":\"⤥\",\"searr\":\"↘\",\"seArr\":\"⇘\",\"searrow\":\"↘\",\"sect\":\"§\",\"semi\":\";\",\"seswar\":\"⤩\",\"setminus\":\"∖\",\"setmn\":\"∖\",\"sext\":\"✶\",\"Sfr\":\"𝔖\",\"sfr\":\"𝔰\",\"sfrown\":\"⌢\",\"sharp\":\"♯\",\"SHCHcy\":\"Щ\",\"shchcy\":\"щ\",\"SHcy\":\"Ш\",\"shcy\":\"ш\",\"ShortDownArrow\":\"↓\",\"ShortLeftArrow\":\"←\",\"shortmid\":\"∣\",\"shortparallel\":\"∥\",\"ShortRightArrow\":\"→\",\"ShortUpArrow\":\"↑\",\"shy\":\"­\",\"Sigma\":\"Σ\",\"sigma\":\"σ\",\"sigmaf\":\"ς\",\"sigmav\":\"ς\",\"sim\":\"∼\",\"simdot\":\"⩪\",\"sime\":\"≃\",\"simeq\":\"≃\",\"simg\":\"⪞\",\"simgE\":\"⪠\",\"siml\":\"⪝\",\"simlE\":\"⪟\",\"simne\":\"≆\",\"simplus\":\"⨤\",\"simrarr\":\"⥲\",\"slarr\":\"←\",\"SmallCircle\":\"∘\",\"smallsetminus\":\"∖\",\"smashp\":\"⨳\",\"smeparsl\":\"⧤\",\"smid\":\"∣\",\"smile\":\"⌣\",\"smt\":\"⪪\",\"smte\":\"⪬\",\"smtes\":\"⪬︀\",\"SOFTcy\":\"Ь\",\"softcy\":\"ь\",\"solbar\":\"⌿\",\"solb\":\"⧄\",\"sol\":\"/\",\"Sopf\":\"𝕊\",\"sopf\":\"𝕤\",\"spades\":\"♠\",\"spadesuit\":\"♠\",\"spar\":\"∥\",\"sqcap\":\"⊓\",\"sqcaps\":\"⊓︀\",\"sqcup\":\"⊔\",\"sqcups\":\"⊔︀\",\"Sqrt\":\"√\",\"sqsub\":\"⊏\",\"sqsube\":\"⊑\",\"sqsubset\":\"⊏\",\"sqsubseteq\":\"⊑\",\"sqsup\":\"⊐\",\"sqsupe\":\"⊒\",\"sqsupset\":\"⊐\",\"sqsupseteq\":\"⊒\",\"square\":\"□\",\"Square\":\"□\",\"SquareIntersection\":\"⊓\",\"SquareSubset\":\"⊏\",\"SquareSubsetEqual\":\"⊑\",\"SquareSuperset\":\"⊐\",\"SquareSupersetEqual\":\"⊒\",\"SquareUnion\":\"⊔\",\"squarf\":\"▪\",\"squ\":\"□\",\"squf\":\"▪\",\"srarr\":\"→\",\"Sscr\":\"𝒮\",\"sscr\":\"𝓈\",\"ssetmn\":\"∖\",\"ssmile\":\"⌣\",\"sstarf\":\"⋆\",\"Star\":\"⋆\",\"star\":\"☆\",\"starf\":\"★\",\"straightepsilon\":\"ϵ\",\"straightphi\":\"ϕ\",\"strns\":\"¯\",\"sub\":\"⊂\",\"Sub\":\"⋐\",\"subdot\":\"⪽\",\"subE\":\"⫅\",\"sube\":\"⊆\",\"subedot\":\"⫃\",\"submult\":\"⫁\",\"subnE\":\"⫋\",\"subne\":\"⊊\",\"subplus\":\"⪿\",\"subrarr\":\"⥹\",\"subset\":\"⊂\",\"Subset\":\"⋐\",\"subseteq\":\"⊆\",\"subseteqq\":\"⫅\",\"SubsetEqual\":\"⊆\",\"subsetneq\":\"⊊\",\"subsetneqq\":\"⫋\",\"subsim\":\"⫇\",\"subsub\":\"⫕\",\"subsup\":\"⫓\",\"succapprox\":\"⪸\",\"succ\":\"≻\",\"succcurlyeq\":\"≽\",\"Succeeds\":\"≻\",\"SucceedsEqual\":\"⪰\",\"SucceedsSlantEqual\":\"≽\",\"SucceedsTilde\":\"≿\",\"succeq\":\"⪰\",\"succnapprox\":\"⪺\",\"succneqq\":\"⪶\",\"succnsim\":\"⋩\",\"succsim\":\"≿\",\"SuchThat\":\"∋\",\"sum\":\"∑\",\"Sum\":\"∑\",\"sung\":\"♪\",\"sup1\":\"¹\",\"sup2\":\"²\",\"sup3\":\"³\",\"sup\":\"⊃\",\"Sup\":\"⋑\",\"supdot\":\"⪾\",\"supdsub\":\"⫘\",\"supE\":\"⫆\",\"supe\":\"⊇\",\"supedot\":\"⫄\",\"Superset\":\"⊃\",\"SupersetEqual\":\"⊇\",\"suphsol\":\"⟉\",\"suphsub\":\"⫗\",\"suplarr\":\"⥻\",\"supmult\":\"⫂\",\"supnE\":\"⫌\",\"supne\":\"⊋\",\"supplus\":\"⫀\",\"supset\":\"⊃\",\"Supset\":\"⋑\",\"supseteq\":\"⊇\",\"supseteqq\":\"⫆\",\"supsetneq\":\"⊋\",\"supsetneqq\":\"⫌\",\"supsim\":\"⫈\",\"supsub\":\"⫔\",\"supsup\":\"⫖\",\"swarhk\":\"⤦\",\"swarr\":\"↙\",\"swArr\":\"⇙\",\"swarrow\":\"↙\",\"swnwar\":\"⤪\",\"szlig\":\"ß\",\"Tab\":\"\\t\",\"target\":\"⌖\",\"Tau\":\"Τ\",\"tau\":\"τ\",\"tbrk\":\"⎴\",\"Tcaron\":\"Ť\",\"tcaron\":\"ť\",\"Tcedil\":\"Ţ\",\"tcedil\":\"ţ\",\"Tcy\":\"Т\",\"tcy\":\"т\",\"tdot\":\"⃛\",\"telrec\":\"⌕\",\"Tfr\":\"𝔗\",\"tfr\":\"𝔱\",\"there4\":\"∴\",\"therefore\":\"∴\",\"Therefore\":\"∴\",\"Theta\":\"Θ\",\"theta\":\"θ\",\"thetasym\":\"ϑ\",\"thetav\":\"ϑ\",\"thickapprox\":\"≈\",\"thicksim\":\"∼\",\"ThickSpace\":\"  \",\"ThinSpace\":\" \",\"thinsp\":\" \",\"thkap\":\"≈\",\"thksim\":\"∼\",\"THORN\":\"Þ\",\"thorn\":\"þ\",\"tilde\":\"˜\",\"Tilde\":\"∼\",\"TildeEqual\":\"≃\",\"TildeFullEqual\":\"≅\",\"TildeTilde\":\"≈\",\"timesbar\":\"⨱\",\"timesb\":\"⊠\",\"times\":\"×\",\"timesd\":\"⨰\",\"tint\":\"∭\",\"toea\":\"⤨\",\"topbot\":\"⌶\",\"topcir\":\"⫱\",\"top\":\"⊤\",\"Topf\":\"𝕋\",\"topf\":\"𝕥\",\"topfork\":\"⫚\",\"tosa\":\"⤩\",\"tprime\":\"‴\",\"trade\":\"™\",\"TRADE\":\"™\",\"triangle\":\"▵\",\"triangledown\":\"▿\",\"triangleleft\":\"◃\",\"trianglelefteq\":\"⊴\",\"triangleq\":\"≜\",\"triangleright\":\"▹\",\"trianglerighteq\":\"⊵\",\"tridot\":\"◬\",\"trie\":\"≜\",\"triminus\":\"⨺\",\"TripleDot\":\"⃛\",\"triplus\":\"⨹\",\"trisb\":\"⧍\",\"tritime\":\"⨻\",\"trpezium\":\"⏢\",\"Tscr\":\"𝒯\",\"tscr\":\"𝓉\",\"TScy\":\"Ц\",\"tscy\":\"ц\",\"TSHcy\":\"Ћ\",\"tshcy\":\"ћ\",\"Tstrok\":\"Ŧ\",\"tstrok\":\"ŧ\",\"twixt\":\"≬\",\"twoheadleftarrow\":\"↞\",\"twoheadrightarrow\":\"↠\",\"Uacute\":\"Ú\",\"uacute\":\"ú\",\"uarr\":\"↑\",\"Uarr\":\"↟\",\"uArr\":\"⇑\",\"Uarrocir\":\"⥉\",\"Ubrcy\":\"Ў\",\"ubrcy\":\"ў\",\"Ubreve\":\"Ŭ\",\"ubreve\":\"ŭ\",\"Ucirc\":\"Û\",\"ucirc\":\"û\",\"Ucy\":\"У\",\"ucy\":\"у\",\"udarr\":\"⇅\",\"Udblac\":\"Ű\",\"udblac\":\"ű\",\"udhar\":\"⥮\",\"ufisht\":\"⥾\",\"Ufr\":\"𝔘\",\"ufr\":\"𝔲\",\"Ugrave\":\"Ù\",\"ugrave\":\"ù\",\"uHar\":\"⥣\",\"uharl\":\"↿\",\"uharr\":\"↾\",\"uhblk\":\"▀\",\"ulcorn\":\"⌜\",\"ulcorner\":\"⌜\",\"ulcrop\":\"⌏\",\"ultri\":\"◸\",\"Umacr\":\"Ū\",\"umacr\":\"ū\",\"uml\":\"¨\",\"UnderBar\":\"_\",\"UnderBrace\":\"⏟\",\"UnderBracket\":\"⎵\",\"UnderParenthesis\":\"⏝\",\"Union\":\"⋃\",\"UnionPlus\":\"⊎\",\"Uogon\":\"Ų\",\"uogon\":\"ų\",\"Uopf\":\"𝕌\",\"uopf\":\"𝕦\",\"UpArrowBar\":\"⤒\",\"uparrow\":\"↑\",\"UpArrow\":\"↑\",\"Uparrow\":\"⇑\",\"UpArrowDownArrow\":\"⇅\",\"updownarrow\":\"↕\",\"UpDownArrow\":\"↕\",\"Updownarrow\":\"⇕\",\"UpEquilibrium\":\"⥮\",\"upharpoonleft\":\"↿\",\"upharpoonright\":\"↾\",\"uplus\":\"⊎\",\"UpperLeftArrow\":\"↖\",\"UpperRightArrow\":\"↗\",\"upsi\":\"υ\",\"Upsi\":\"ϒ\",\"upsih\":\"ϒ\",\"Upsilon\":\"Υ\",\"upsilon\":\"υ\",\"UpTeeArrow\":\"↥\",\"UpTee\":\"⊥\",\"upuparrows\":\"⇈\",\"urcorn\":\"⌝\",\"urcorner\":\"⌝\",\"urcrop\":\"⌎\",\"Uring\":\"Ů\",\"uring\":\"ů\",\"urtri\":\"◹\",\"Uscr\":\"𝒰\",\"uscr\":\"𝓊\",\"utdot\":\"⋰\",\"Utilde\":\"Ũ\",\"utilde\":\"ũ\",\"utri\":\"▵\",\"utrif\":\"▴\",\"uuarr\":\"⇈\",\"Uuml\":\"Ü\",\"uuml\":\"ü\",\"uwangle\":\"⦧\",\"vangrt\":\"⦜\",\"varepsilon\":\"ϵ\",\"varkappa\":\"ϰ\",\"varnothing\":\"∅\",\"varphi\":\"ϕ\",\"varpi\":\"ϖ\",\"varpropto\":\"∝\",\"varr\":\"↕\",\"vArr\":\"⇕\",\"varrho\":\"ϱ\",\"varsigma\":\"ς\",\"varsubsetneq\":\"⊊︀\",\"varsubsetneqq\":\"⫋︀\",\"varsupsetneq\":\"⊋︀\",\"varsupsetneqq\":\"⫌︀\",\"vartheta\":\"ϑ\",\"vartriangleleft\":\"⊲\",\"vartriangleright\":\"⊳\",\"vBar\":\"⫨\",\"Vbar\":\"⫫\",\"vBarv\":\"⫩\",\"Vcy\":\"В\",\"vcy\":\"в\",\"vdash\":\"⊢\",\"vDash\":\"⊨\",\"Vdash\":\"⊩\",\"VDash\":\"⊫\",\"Vdashl\":\"⫦\",\"veebar\":\"⊻\",\"vee\":\"∨\",\"Vee\":\"⋁\",\"veeeq\":\"≚\",\"vellip\":\"⋮\",\"verbar\":\"|\",\"Verbar\":\"‖\",\"vert\":\"|\",\"Vert\":\"‖\",\"VerticalBar\":\"∣\",\"VerticalLine\":\"|\",\"VerticalSeparator\":\"❘\",\"VerticalTilde\":\"≀\",\"VeryThinSpace\":\" \",\"Vfr\":\"𝔙\",\"vfr\":\"𝔳\",\"vltri\":\"⊲\",\"vnsub\":\"⊂⃒\",\"vnsup\":\"⊃⃒\",\"Vopf\":\"𝕍\",\"vopf\":\"𝕧\",\"vprop\":\"∝\",\"vrtri\":\"⊳\",\"Vscr\":\"𝒱\",\"vscr\":\"𝓋\",\"vsubnE\":\"⫋︀\",\"vsubne\":\"⊊︀\",\"vsupnE\":\"⫌︀\",\"vsupne\":\"⊋︀\",\"Vvdash\":\"⊪\",\"vzigzag\":\"⦚\",\"Wcirc\":\"Ŵ\",\"wcirc\":\"ŵ\",\"wedbar\":\"⩟\",\"wedge\":\"∧\",\"Wedge\":\"⋀\",\"wedgeq\":\"≙\",\"weierp\":\"℘\",\"Wfr\":\"𝔚\",\"wfr\":\"𝔴\",\"Wopf\":\"𝕎\",\"wopf\":\"𝕨\",\"wp\":\"℘\",\"wr\":\"≀\",\"wreath\":\"≀\",\"Wscr\":\"𝒲\",\"wscr\":\"𝓌\",\"xcap\":\"⋂\",\"xcirc\":\"◯\",\"xcup\":\"⋃\",\"xdtri\":\"▽\",\"Xfr\":\"𝔛\",\"xfr\":\"𝔵\",\"xharr\":\"⟷\",\"xhArr\":\"⟺\",\"Xi\":\"Ξ\",\"xi\":\"ξ\",\"xlarr\":\"⟵\",\"xlArr\":\"⟸\",\"xmap\":\"⟼\",\"xnis\":\"⋻\",\"xodot\":\"⨀\",\"Xopf\":\"𝕏\",\"xopf\":\"𝕩\",\"xoplus\":\"⨁\",\"xotime\":\"⨂\",\"xrarr\":\"⟶\",\"xrArr\":\"⟹\",\"Xscr\":\"𝒳\",\"xscr\":\"𝓍\",\"xsqcup\":\"⨆\",\"xuplus\":\"⨄\",\"xutri\":\"△\",\"xvee\":\"⋁\",\"xwedge\":\"⋀\",\"Yacute\":\"Ý\",\"yacute\":\"ý\",\"YAcy\":\"Я\",\"yacy\":\"я\",\"Ycirc\":\"Ŷ\",\"ycirc\":\"ŷ\",\"Ycy\":\"Ы\",\"ycy\":\"ы\",\"yen\":\"¥\",\"Yfr\":\"𝔜\",\"yfr\":\"𝔶\",\"YIcy\":\"Ї\",\"yicy\":\"ї\",\"Yopf\":\"𝕐\",\"yopf\":\"𝕪\",\"Yscr\":\"𝒴\",\"yscr\":\"𝓎\",\"YUcy\":\"Ю\",\"yucy\":\"ю\",\"yuml\":\"ÿ\",\"Yuml\":\"Ÿ\",\"Zacute\":\"Ź\",\"zacute\":\"ź\",\"Zcaron\":\"Ž\",\"zcaron\":\"ž\",\"Zcy\":\"З\",\"zcy\":\"з\",\"Zdot\":\"Ż\",\"zdot\":\"ż\",\"zeetrf\":\"ℨ\",\"ZeroWidthSpace\":\"​\",\"Zeta\":\"Ζ\",\"zeta\":\"ζ\",\"zfr\":\"𝔷\",\"Zfr\":\"ℨ\",\"ZHcy\":\"Ж\",\"zhcy\":\"ж\",\"zigrarr\":\"⇝\",\"zopf\":\"𝕫\",\"Zopf\":\"ℤ\",\"Zscr\":\"𝒵\",\"zscr\":\"𝓏\",\"zwj\":\"‍\",\"zwnj\":\"‌\"}");
 
 /***/ }),
-/* 316 */
+/* 295 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"Aacute\":\"Á\",\"aacute\":\"á\",\"Acirc\":\"Â\",\"acirc\":\"â\",\"acute\":\"´\",\"AElig\":\"Æ\",\"aelig\":\"æ\",\"Agrave\":\"À\",\"agrave\":\"à\",\"amp\":\"&\",\"AMP\":\"&\",\"Aring\":\"Å\",\"aring\":\"å\",\"Atilde\":\"Ã\",\"atilde\":\"ã\",\"Auml\":\"Ä\",\"auml\":\"ä\",\"brvbar\":\"¦\",\"Ccedil\":\"Ç\",\"ccedil\":\"ç\",\"cedil\":\"¸\",\"cent\":\"¢\",\"copy\":\"©\",\"COPY\":\"©\",\"curren\":\"¤\",\"deg\":\"°\",\"divide\":\"÷\",\"Eacute\":\"É\",\"eacute\":\"é\",\"Ecirc\":\"Ê\",\"ecirc\":\"ê\",\"Egrave\":\"È\",\"egrave\":\"è\",\"ETH\":\"Ð\",\"eth\":\"ð\",\"Euml\":\"Ë\",\"euml\":\"ë\",\"frac12\":\"½\",\"frac14\":\"¼\",\"frac34\":\"¾\",\"gt\":\">\",\"GT\":\">\",\"Iacute\":\"Í\",\"iacute\":\"í\",\"Icirc\":\"Î\",\"icirc\":\"î\",\"iexcl\":\"¡\",\"Igrave\":\"Ì\",\"igrave\":\"ì\",\"iquest\":\"¿\",\"Iuml\":\"Ï\",\"iuml\":\"ï\",\"laquo\":\"«\",\"lt\":\"<\",\"LT\":\"<\",\"macr\":\"¯\",\"micro\":\"µ\",\"middot\":\"·\",\"nbsp\":\" \",\"not\":\"¬\",\"Ntilde\":\"Ñ\",\"ntilde\":\"ñ\",\"Oacute\":\"Ó\",\"oacute\":\"ó\",\"Ocirc\":\"Ô\",\"ocirc\":\"ô\",\"Ograve\":\"Ò\",\"ograve\":\"ò\",\"ordf\":\"ª\",\"ordm\":\"º\",\"Oslash\":\"Ø\",\"oslash\":\"ø\",\"Otilde\":\"Õ\",\"otilde\":\"õ\",\"Ouml\":\"Ö\",\"ouml\":\"ö\",\"para\":\"¶\",\"plusmn\":\"±\",\"pound\":\"£\",\"quot\":\"\\\"\",\"QUOT\":\"\\\"\",\"raquo\":\"»\",\"reg\":\"®\",\"REG\":\"®\",\"sect\":\"§\",\"shy\":\"­\",\"sup1\":\"¹\",\"sup2\":\"²\",\"sup3\":\"³\",\"szlig\":\"ß\",\"THORN\":\"Þ\",\"thorn\":\"þ\",\"times\":\"×\",\"Uacute\":\"Ú\",\"uacute\":\"ú\",\"Ucirc\":\"Û\",\"ucirc\":\"û\",\"Ugrave\":\"Ù\",\"ugrave\":\"ù\",\"uml\":\"¨\",\"Uuml\":\"Ü\",\"uuml\":\"ü\",\"Yacute\":\"Ý\",\"yacute\":\"ý\",\"yen\":\"¥\",\"yuml\":\"ÿ\"}");
 
 /***/ }),
-/* 317 */
+/* 296 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"amp\":\"&\",\"apos\":\"'\",\"gt\":\">\",\"lt\":\"<\",\"quot\":\"\\\"\"}");
 
 /***/ }),
-/* 318 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36205,14 +35481,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var decode_json_1 = __importDefault(__webpack_require__(319));
+var decode_json_1 = __importDefault(__webpack_require__(298));
 // modified version of https://github.com/mathiasbynens/he/blob/master/src/he.js#L94-L119
 function decodeCodePoint(codePoint) {
     if ((codePoint >= 0xd800 && codePoint <= 0xdfff) || codePoint > 0x10ffff) {
         return "\uFFFD";
     }
     if (codePoint in decode_json_1.default) {
-        // @ts-ignore
         codePoint = decode_json_1.default[codePoint];
     }
     var output = "";
@@ -36228,13 +35503,13 @@ exports.default = decodeCodePoint;
 
 
 /***/ }),
-/* 319 */
+/* 298 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"0\":65533,\"128\":8364,\"130\":8218,\"131\":402,\"132\":8222,\"133\":8230,\"134\":8224,\"135\":8225,\"136\":710,\"137\":8240,\"138\":352,\"139\":8249,\"140\":338,\"142\":381,\"145\":8216,\"146\":8217,\"147\":8220,\"148\":8221,\"149\":8226,\"150\":8211,\"151\":8212,\"152\":732,\"153\":8482,\"154\":353,\"155\":8250,\"156\":339,\"158\":382,\"159\":376}");
 
 /***/ }),
-/* 320 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36243,11 +35518,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var xml_json_1 = __importDefault(__webpack_require__(317));
+exports.escape = exports.encodeHTML = exports.encodeXML = void 0;
+var xml_json_1 = __importDefault(__webpack_require__(296));
 var inverseXML = getInverseObj(xml_json_1.default);
 var xmlReplacer = getInverseReplacer(inverseXML);
 exports.encodeXML = getInverse(inverseXML, xmlReplacer);
-var entities_json_1 = __importDefault(__webpack_require__(315));
+var entities_json_1 = __importDefault(__webpack_require__(294));
 var inverseHTML = getInverseObj(entities_json_1.default);
 var htmlReplacer = getInverseReplacer(inverseHTML);
 exports.encodeHTML = getInverse(inverseHTML, htmlReplacer);
@@ -36262,38 +35538,44 @@ function getInverseObj(obj) {
 function getInverseReplacer(inverse) {
     var single = [];
     var multiple = [];
-    Object.keys(inverse).forEach(function (k) {
-        return k.length === 1
-            ? // Add value to single array
-                single.push("\\" + k)
-            : // Add value to multiple array
-                multiple.push(k);
-    });
-    //TODO add ranges
+    for (var _i = 0, _a = Object.keys(inverse); _i < _a.length; _i++) {
+        var k = _a[_i];
+        if (k.length === 1) {
+            // Add value to single array
+            single.push("\\" + k);
+        }
+        else {
+            // Add value to multiple array
+            multiple.push(k);
+        }
+    }
+    // Add ranges to single characters.
+    single.sort();
+    for (var start = 0; start < single.length - 1; start++) {
+        // Find the end of a run of characters
+        var end = start;
+        while (end < single.length - 1 &&
+            single[end].charCodeAt(1) + 1 === single[end + 1].charCodeAt(1)) {
+            end += 1;
+        }
+        var count = 1 + end - start;
+        // We want to replace at least three characters
+        if (count < 3)
+            continue;
+        single.splice(start, count, single[start] + "-" + single[end]);
+    }
     multiple.unshift("[" + single.join("") + "]");
     return new RegExp(multiple.join("|"), "g");
 }
-var reNonASCII = /[^\0-\x7F]/g;
-var reAstralSymbols = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
+var reNonASCII = /(?:[\x80-\uD7FF\uE000-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])/g;
 function singleCharReplacer(c) {
-    return "&#x" + c
-        .charCodeAt(0)
-        .toString(16)
-        .toUpperCase() + ";";
-}
-// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
-function astralReplacer(c, _) {
-    // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-    var high = c.charCodeAt(0);
-    var low = c.charCodeAt(1);
-    var codePoint = (high - 0xd800) * 0x400 + low - 0xdc00 + 0x10000;
-    return "&#x" + codePoint.toString(16).toUpperCase() + ";";
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return "&#x" + c.codePointAt(0).toString(16).toUpperCase() + ";";
 }
 function getInverse(inverse, re) {
     return function (data) {
         return data
             .replace(re, function (name) { return inverse[name]; })
-            .replace(reAstralSymbols, astralReplacer)
             .replace(reNonASCII, singleCharReplacer);
     };
 }
@@ -36301,20 +35583,19 @@ var reXmlChars = getInverseReplacer(inverseXML);
 function escape(data) {
     return data
         .replace(reXmlChars, singleCharReplacer)
-        .replace(reAstralSymbols, astralReplacer)
         .replace(reNonASCII, singleCharReplacer);
 }
 exports.escape = escape;
 
 
 /***/ }),
-/* 321 */
+/* 300 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"elementNames\":{\"altglyph\":\"altGlyph\",\"altglyphdef\":\"altGlyphDef\",\"altglyphitem\":\"altGlyphItem\",\"animatecolor\":\"animateColor\",\"animatemotion\":\"animateMotion\",\"animatetransform\":\"animateTransform\",\"clippath\":\"clipPath\",\"feblend\":\"feBlend\",\"fecolormatrix\":\"feColorMatrix\",\"fecomponenttransfer\":\"feComponentTransfer\",\"fecomposite\":\"feComposite\",\"feconvolvematrix\":\"feConvolveMatrix\",\"fediffuselighting\":\"feDiffuseLighting\",\"fedisplacementmap\":\"feDisplacementMap\",\"fedistantlight\":\"feDistantLight\",\"fedropshadow\":\"feDropShadow\",\"feflood\":\"feFlood\",\"fefunca\":\"feFuncA\",\"fefuncb\":\"feFuncB\",\"fefuncg\":\"feFuncG\",\"fefuncr\":\"feFuncR\",\"fegaussianblur\":\"feGaussianBlur\",\"feimage\":\"feImage\",\"femerge\":\"feMerge\",\"femergenode\":\"feMergeNode\",\"femorphology\":\"feMorphology\",\"feoffset\":\"feOffset\",\"fepointlight\":\"fePointLight\",\"fespecularlighting\":\"feSpecularLighting\",\"fespotlight\":\"feSpotLight\",\"fetile\":\"feTile\",\"feturbulence\":\"feTurbulence\",\"foreignobject\":\"foreignObject\",\"glyphref\":\"glyphRef\",\"lineargradient\":\"linearGradient\",\"radialgradient\":\"radialGradient\",\"textpath\":\"textPath\"},\"attributeNames\":{\"definitionurl\":\"definitionURL\",\"attributename\":\"attributeName\",\"attributetype\":\"attributeType\",\"basefrequency\":\"baseFrequency\",\"baseprofile\":\"baseProfile\",\"calcmode\":\"calcMode\",\"clippathunits\":\"clipPathUnits\",\"diffuseconstant\":\"diffuseConstant\",\"edgemode\":\"edgeMode\",\"filterunits\":\"filterUnits\",\"glyphref\":\"glyphRef\",\"gradienttransform\":\"gradientTransform\",\"gradientunits\":\"gradientUnits\",\"kernelmatrix\":\"kernelMatrix\",\"kernelunitlength\":\"kernelUnitLength\",\"keypoints\":\"keyPoints\",\"keysplines\":\"keySplines\",\"keytimes\":\"keyTimes\",\"lengthadjust\":\"lengthAdjust\",\"limitingconeangle\":\"limitingConeAngle\",\"markerheight\":\"markerHeight\",\"markerunits\":\"markerUnits\",\"markerwidth\":\"markerWidth\",\"maskcontentunits\":\"maskContentUnits\",\"maskunits\":\"maskUnits\",\"numoctaves\":\"numOctaves\",\"pathlength\":\"pathLength\",\"patterncontentunits\":\"patternContentUnits\",\"patterntransform\":\"patternTransform\",\"patternunits\":\"patternUnits\",\"pointsatx\":\"pointsAtX\",\"pointsaty\":\"pointsAtY\",\"pointsatz\":\"pointsAtZ\",\"preservealpha\":\"preserveAlpha\",\"preserveaspectratio\":\"preserveAspectRatio\",\"primitiveunits\":\"primitiveUnits\",\"refx\":\"refX\",\"refy\":\"refY\",\"repeatcount\":\"repeatCount\",\"repeatdur\":\"repeatDur\",\"requiredextensions\":\"requiredExtensions\",\"requiredfeatures\":\"requiredFeatures\",\"specularconstant\":\"specularConstant\",\"specularexponent\":\"specularExponent\",\"spreadmethod\":\"spreadMethod\",\"startoffset\":\"startOffset\",\"stddeviation\":\"stdDeviation\",\"stitchtiles\":\"stitchTiles\",\"surfacescale\":\"surfaceScale\",\"systemlanguage\":\"systemLanguage\",\"tablevalues\":\"tableValues\",\"targetx\":\"targetX\",\"targety\":\"targetY\",\"textlength\":\"textLength\",\"viewbox\":\"viewBox\",\"viewtarget\":\"viewTarget\",\"xchannelselector\":\"xChannelSelector\",\"ychannelselector\":\"yChannelSelector\",\"zoomandpan\":\"zoomAndPan\"}}");
 
 /***/ }),
-/* 322 */
+/* 301 */
 /***/ (function(module, exports) {
 
 var getChildren = exports.getChildren = function(elem){
@@ -36344,7 +35625,7 @@ exports.getName = function(elem){
 
 
 /***/ }),
-/* 323 */
+/* 302 */
 /***/ (function(module, exports) {
 
 exports.removeElement = function(elem){
@@ -36427,10 +35708,10 @@ exports.prepend = function(elem, prev){
 
 
 /***/ }),
-/* 324 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isTag = __webpack_require__(310).isTag;
+var isTag = __webpack_require__(289).isTag;
 
 module.exports = {
 	filter: filter,
@@ -36528,10 +35809,10 @@ function findAll(test, rootElems){
 
 
 /***/ }),
-/* 325 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ElementType = __webpack_require__(310);
+var ElementType = __webpack_require__(289);
 var isTag = exports.isTag = ElementType.isTag;
 
 exports.testElement = function(options, element){
@@ -36621,7 +35902,7 @@ exports.getElementsByTagType = function(type, element, recurse, limit){
 
 
 /***/ }),
-/* 326 */
+/* 305 */
 /***/ (function(module, exports) {
 
 // removeSubsets
@@ -36768,7 +36049,7 @@ exports.uniqueSort = function(nodes) {
 
 
 /***/ }),
-/* 327 */
+/* 306 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -36781,7 +36062,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 328 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -36790,12 +36071,12 @@ module.exports = {
 
 module.exports = compile;
 
-var parse = __webpack_require__(329);
-var BaseFuncs = __webpack_require__(327);
-var sortRules = __webpack_require__(330);
-var procedure = __webpack_require__(331);
-var Rules = __webpack_require__(332);
-var Pseudos = __webpack_require__(334);
+var parse = __webpack_require__(308).parse;
+var BaseFuncs = __webpack_require__(306);
+var sortRules = __webpack_require__(311);
+var procedure = __webpack_require__(312);
+var Rules = __webpack_require__(313);
+var Pseudos = __webpack_require__(315);
 var trueFunc = BaseFuncs.trueFunc;
 var falseFunc = BaseFuncs.falseFunc;
 
@@ -36851,7 +36132,7 @@ function absolutize(token, options, context) {
     token.forEach(function(t) {
         if (t.length > 0 && isTraversal(t[0]) && t[0].type !== "descendant") {
             //don't return in else branch
-        } else if (hasContext && !includesScopePseudo(t)) {
+        } else if (hasContext && !(Array.isArray(t) ? t.some(includesScopePseudo) : includesScopePseudo(t))) {
             t.unshift(DESCENDANT_TOKEN);
         } else {
             return;
@@ -37006,288 +36287,344 @@ compile.Pseudos = Pseudos;
 
 
 /***/ }),
-/* 329 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(__webpack_require__(309), exports);
+var parse_1 = __webpack_require__(309);
+Object.defineProperty(exports, "parse", { enumerable: true, get: function () { return parse_1.default; } });
+var stringify_1 = __webpack_require__(310);
+Object.defineProperty(exports, "stringify", { enumerable: true, get: function () { return stringify_1.default; } });
 
-module.exports = parse;
 
-var re_name = /^(?:\\.|[\w\-\u00b0-\uFFFF])+/,
-    re_escape = /\\([\da-f]{1,6}\s?|(\s)|.)/ig,
-    //modified version of https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L87
-    re_attr = /^\s*((?:\\.|[\w\u00b0-\uFFFF\-])+)\s*(?:(\S?)=\s*(?:(['"])([^]*?)\3|(#?(?:\\.|[\w\u00b0-\uFFFF\-])*)|)|)\s*(i)?\]/;
+/***/ }),
+/* 309 */
+/***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = parse;
+var reName = /^[^\\]?(?:\\(?:[\da-f]{1,6}\s?|.)|[\w\-\u00b0-\uFFFF])+/;
+var reEscape = /\\([\da-f]{1,6}\s?|(\s)|.)/gi;
+//modified version of https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L87
+var reAttr = /^\s*((?:\\.|[\w\u00b0-\uFFFF-])+)\s*(?:(\S?)=\s*(?:(['"])([^]*?)\3|(#?(?:\\.|[\w\u00b0-\uFFFF-])*)|)|)\s*(i)?\]/;
 var actionTypes = {
-	__proto__: null,
-	"undefined": "exists",
-	"":  "equals",
-	"~": "element",
-	"^": "start",
-	"$": "end",
-	"*": "any",
-	"!": "not",
-	"|": "hyphen"
+    undefined: "exists",
+    "": "equals",
+    "~": "element",
+    "^": "start",
+    $: "end",
+    "*": "any",
+    "!": "not",
+    "|": "hyphen",
 };
-
-var simpleSelectors = {
-	__proto__: null,
-	">": "child",
-	"<": "parent",
-	"~": "sibling",
-	"+": "adjacent"
+var Traversals = {
+    ">": "child",
+    "<": "parent",
+    "~": "sibling",
+    "+": "adjacent",
 };
-
 var attribSelectors = {
-	__proto__: null,
-	"#": ["id", "equals"],
-	".": ["class", "element"]
+    "#": ["id", "equals"],
+    ".": ["class", "element"],
 };
-
 //pseudos, whose data-property is parsed as well
-var unpackPseudos = {
-	__proto__: null,
-	"has": true,
-	"not": true,
-	"matches": true
-};
-
-var stripQuotesFromPseudos = {
-	__proto__: null,
-	"contains": true,
-	"icontains": true
-};
-
-var quotes = {
-	__proto__: null,
-	"\"": true,
-	"'": true
-};
-
-//unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L139
-function funescape( _, escaped, escapedWhitespace ) {
-	var high = "0x" + escaped - 0x10000;
-	// NaN means non-codepoint
-	// Support: Firefox
-	// Workaround erroneous numeric interpretation of +"0x"
-	return high !== high || escapedWhitespace ?
-		escaped :
-		// BMP codepoint
-		high < 0 ?
-			String.fromCharCode( high + 0x10000 ) :
-			// Supplemental Plane codepoint (surrogate pair)
-			String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
+var unpackPseudos = new Set(["has", "not", "matches"]);
+var stripQuotesFromPseudos = new Set(["contains", "icontains"]);
+var quotes = new Set(['"', "'"]);
+//unescape function taken from https://github.com/jquery/sizzle/blob/master/src/sizzle.js#L152
+function funescape(_, escaped, escapedWhitespace) {
+    var high = parseInt(escaped, 16) - 0x10000;
+    // NaN means non-codepoint
+    return high !== high || escapedWhitespace
+        ? escaped
+        : high < 0
+            ? // BMP codepoint
+                String.fromCharCode(high + 0x10000)
+            : // Supplemental Plane codepoint (surrogate pair)
+                String.fromCharCode((high >> 10) | 0xd800, (high & 0x3ff) | 0xdc00);
 }
-
-function unescapeCSS(str){
-	return str.replace(re_escape, funescape);
+function unescapeCSS(str) {
+    return str.replace(reEscape, funescape);
 }
-
-function isWhitespace(c){
-	return c === " " || c === "\n" || c === "\t" || c === "\f" || c === "\r";
+function isWhitespace(c) {
+    return c === " " || c === "\n" || c === "\t" || c === "\f" || c === "\r";
 }
-
-function parse(selector, options){
-	var subselects = [];
-
-	selector = parseSelector(subselects, selector + "", options);
-
-	if(selector !== ""){
-		throw new SyntaxError("Unmatched selector: " + selector);
-	}
-
-	return subselects;
+function parse(selector, options) {
+    var subselects = [];
+    selector = parseSelector(subselects, "" + selector, options);
+    if (selector !== "") {
+        throw new Error("Unmatched selector: " + selector);
+    }
+    return subselects;
 }
-
-function parseSelector(subselects, selector, options){
-	var tokens = [],
-		sawWS = false,
-		data, firstChar, name, quot;
-
-	function getName(){
-		var sub = selector.match(re_name)[0];
-		selector = selector.substr(sub.length);
-		return unescapeCSS(sub);
-	}
-
-	function stripWhitespace(start){
-		while(isWhitespace(selector.charAt(start))) start++;
-		selector = selector.substr(start);
-	}
-
-	function isEscaped(pos) {
-		var slashCount = 0;
-
-		while (selector.charAt(--pos) === "\\") slashCount++;
-		return (slashCount & 1) === 1;
-	}
-
-	stripWhitespace(0);
-
-	while(selector !== ""){
-		firstChar = selector.charAt(0);
-
-		if(isWhitespace(firstChar)){
-			sawWS = true;
-			stripWhitespace(1);
-		} else if(firstChar in simpleSelectors){
-			tokens.push({type: simpleSelectors[firstChar]});
-			sawWS = false;
-
-			stripWhitespace(1);
-		} else if(firstChar === ","){
-			if(tokens.length === 0){
-				throw new SyntaxError("empty sub-selector");
-			}
-			subselects.push(tokens);
-			tokens = [];
-			sawWS = false;
-			stripWhitespace(1);
-		} else {
-			if(sawWS){
-				if(tokens.length > 0){
-					tokens.push({type: "descendant"});
-				}
-				sawWS = false;
-			}
-
-			if(firstChar === "*"){
-				selector = selector.substr(1);
-				tokens.push({type: "universal"});
-			} else if(firstChar in attribSelectors){
-				selector = selector.substr(1);
-				tokens.push({
-					type: "attribute",
-					name: attribSelectors[firstChar][0],
-					action: attribSelectors[firstChar][1],
-					value: getName(),
-					ignoreCase: false
-				});
-			} else if(firstChar === "["){
-				selector = selector.substr(1);
-				data = selector.match(re_attr);
-				if(!data){
-					throw new SyntaxError("Malformed attribute selector: " + selector);
-				}
-				selector = selector.substr(data[0].length);
-				name = unescapeCSS(data[1]);
-
-				if(
-					!options || (
-						"lowerCaseAttributeNames" in options ?
-							options.lowerCaseAttributeNames :
-							!options.xmlMode
-					)
-				){
-					name = name.toLowerCase();
-				}
-
-				tokens.push({
-					type: "attribute",
-					name: name,
-					action: actionTypes[data[2]],
-					value: unescapeCSS(data[4] || data[5] || ""),
-					ignoreCase: !!data[6]
-				});
-
-			} else if(firstChar === ":"){
-				if(selector.charAt(1) === ":"){
-					selector = selector.substr(2);
-					tokens.push({type: "pseudo-element", name: getName().toLowerCase()});
-					continue;
-				}
-
-				selector = selector.substr(1);
-
-				name = getName().toLowerCase();
-				data = null;
-
-				if(selector.charAt(0) === "("){
-					if(name in unpackPseudos){
-						quot = selector.charAt(1);
-						var quoted = quot in quotes;
-
-						selector = selector.substr(quoted + 1);
-
-						data = [];
-						selector = parseSelector(data, selector, options);
-
-						if(quoted){
-							if(selector.charAt(0) !== quot){
-								throw new SyntaxError("unmatched quotes in :" + name);
-							} else {
-								selector = selector.substr(1);
-							}
-						}
-
-						if(selector.charAt(0) !== ")"){
-							throw new SyntaxError("missing closing parenthesis in :" + name + " " + selector);
-						}
-
-						selector = selector.substr(1);
-					} else {
-						var pos = 1, counter = 1;
-
-						for(; counter > 0 && pos < selector.length; pos++){
-							if(selector.charAt(pos) === "(" && !isEscaped(pos)) counter++;
-							else if(selector.charAt(pos) === ")" && !isEscaped(pos)) counter--;
-						}
-
-						if(counter){
-							throw new SyntaxError("parenthesis not matched");
-						}
-
-						data = selector.substr(1, pos - 2);
-						selector = selector.substr(pos);
-
-						if(name in stripQuotesFromPseudos){
-							quot = data.charAt(0);
-
-							if(quot === data.slice(-1) && quot in quotes){
-								data = data.slice(1, -1);
-							}
-
-							data = unescapeCSS(data);
-						}
-					}
-				}
-
-				tokens.push({type: "pseudo", name: name, data: data});
-			} else if(re_name.test(selector)){
-				name = getName();
-
-				if(!options || ("lowerCaseTags" in options ? options.lowerCaseTags : !options.xmlMode)){
-					name = name.toLowerCase();
-				}
-
-				tokens.push({type: "tag", name: name});
-			} else {
-				if(tokens.length && tokens[tokens.length - 1].type === "descendant"){
-					tokens.pop();
-				}
-				addToken(subselects, tokens);
-				return selector;
-			}
-		}
-	}
-
-	addToken(subselects, tokens);
-
-	return selector;
+function parseSelector(subselects, selector, options) {
+    var tokens = [];
+    var sawWS = false;
+    function getName() {
+        var match = selector.match(reName);
+        if (!match) {
+            throw new Error("Expected name, found " + selector);
+        }
+        var sub = match[0];
+        selector = selector.substr(sub.length);
+        return unescapeCSS(sub);
+    }
+    function stripWhitespace(start) {
+        while (isWhitespace(selector.charAt(start)))
+            start++;
+        selector = selector.substr(start);
+    }
+    function isEscaped(pos) {
+        var slashCount = 0;
+        while (selector.charAt(--pos) === "\\")
+            slashCount++;
+        return (slashCount & 1) === 1;
+    }
+    stripWhitespace(0);
+    while (selector !== "") {
+        var firstChar = selector.charAt(0);
+        if (isWhitespace(firstChar)) {
+            sawWS = true;
+            stripWhitespace(1);
+        }
+        else if (firstChar in Traversals) {
+            tokens.push({ type: Traversals[firstChar] });
+            sawWS = false;
+            stripWhitespace(1);
+        }
+        else if (firstChar === ",") {
+            if (tokens.length === 0) {
+                throw new Error("Empty sub-selector");
+            }
+            subselects.push(tokens);
+            tokens = [];
+            sawWS = false;
+            stripWhitespace(1);
+        }
+        else {
+            if (sawWS) {
+                if (tokens.length > 0) {
+                    tokens.push({ type: "descendant" });
+                }
+                sawWS = false;
+            }
+            if (firstChar === "*") {
+                selector = selector.substr(1);
+                tokens.push({ type: "universal" });
+            }
+            else if (firstChar in attribSelectors) {
+                var _a = attribSelectors[firstChar], name_1 = _a[0], action = _a[1];
+                selector = selector.substr(1);
+                tokens.push({
+                    type: "attribute",
+                    name: name_1,
+                    action: action,
+                    value: getName(),
+                    ignoreCase: false,
+                });
+            }
+            else if (firstChar === "[") {
+                selector = selector.substr(1);
+                var data = selector.match(reAttr);
+                if (!data) {
+                    throw new Error("Malformed attribute selector: " + selector);
+                }
+                selector = selector.substr(data[0].length);
+                var name_2 = unescapeCSS(data[1]);
+                if (!options ||
+                    ("lowerCaseAttributeNames" in options
+                        ? options.lowerCaseAttributeNames
+                        : !options.xmlMode)) {
+                    name_2 = name_2.toLowerCase();
+                }
+                tokens.push({
+                    type: "attribute",
+                    name: name_2,
+                    action: actionTypes[data[2]],
+                    value: unescapeCSS(data[4] || data[5] || ""),
+                    ignoreCase: !!data[6],
+                });
+            }
+            else if (firstChar === ":") {
+                if (selector.charAt(1) === ":") {
+                    selector = selector.substr(2);
+                    tokens.push({
+                        type: "pseudo-element",
+                        name: getName().toLowerCase(),
+                    });
+                    continue;
+                }
+                selector = selector.substr(1);
+                var name_3 = getName().toLowerCase();
+                var data = null;
+                if (selector.charAt(0) === "(") {
+                    if (unpackPseudos.has(name_3)) {
+                        var quot = selector.charAt(1);
+                        var quoted = quotes.has(quot);
+                        selector = selector.substr(quoted ? 2 : 1);
+                        data = [];
+                        selector = parseSelector(data, selector, options);
+                        if (quoted) {
+                            if (selector.charAt(0) !== quot) {
+                                throw new Error("Unmatched quotes in :" + name_3);
+                            }
+                            else {
+                                selector = selector.substr(1);
+                            }
+                        }
+                        if (selector.charAt(0) !== ")") {
+                            throw new Error("Missing closing parenthesis in :" + name_3 + " (" + selector + ")");
+                        }
+                        selector = selector.substr(1);
+                    }
+                    else {
+                        var pos = 1;
+                        var counter = 1;
+                        for (; counter > 0 && pos < selector.length; pos++) {
+                            if (selector.charAt(pos) === "(" && !isEscaped(pos))
+                                counter++;
+                            else if (selector.charAt(pos) === ")" &&
+                                !isEscaped(pos))
+                                counter--;
+                        }
+                        if (counter) {
+                            throw new Error("Parenthesis not matched");
+                        }
+                        data = selector.substr(1, pos - 2);
+                        selector = selector.substr(pos);
+                        if (stripQuotesFromPseudos.has(name_3)) {
+                            var quot = data.charAt(0);
+                            if (quot === data.slice(-1) && quotes.has(quot)) {
+                                data = data.slice(1, -1);
+                            }
+                            data = unescapeCSS(data);
+                        }
+                    }
+                }
+                tokens.push({ type: "pseudo", name: name_3, data: data });
+            }
+            else if (reName.test(selector)) {
+                var name_4 = getName();
+                if (!options ||
+                    ("lowerCaseTags" in options
+                        ? options.lowerCaseTags
+                        : !options.xmlMode)) {
+                    name_4 = name_4.toLowerCase();
+                }
+                tokens.push({ type: "tag", name: name_4 });
+            }
+            else {
+                if (tokens.length &&
+                    tokens[tokens.length - 1].type === "descendant") {
+                    tokens.pop();
+                }
+                addToken(subselects, tokens);
+                return selector;
+            }
+        }
+    }
+    addToken(subselects, tokens);
+    return selector;
 }
-
-function addToken(subselects, tokens){
-	if(subselects.length > 0 && tokens.length === 0){
-		throw new SyntaxError("empty sub-selector");
-	}
-
-	subselects.push(tokens);
+function addToken(subselects, tokens) {
+    if (subselects.length > 0 && tokens.length === 0) {
+        throw new Error("Empty sub-selector");
+    }
+    subselects.push(tokens);
 }
 
 
 /***/ }),
-/* 330 */
+/* 310 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var actionTypes = {
+    equals: "",
+    element: "~",
+    start: "^",
+    end: "$",
+    any: "*",
+    not: "!",
+    hyphen: "|",
+};
+function stringify(token) {
+    return token.map(stringifySubselector).join(", ");
+}
+exports.default = stringify;
+function stringifySubselector(token) {
+    return token.map(stringifyToken).join("");
+}
+function stringifyToken(token) {
+    switch (token.type) {
+        // Simple types
+        case "child":
+            return " > ";
+        case "parent":
+            return " < ";
+        case "sibling":
+            return " ~ ";
+        case "adjacent":
+            return " + ";
+        case "descendant":
+            return " ";
+        case "universal":
+            return "*";
+        case "tag":
+            return escapeName(token.name);
+        case "pseudo-element":
+            return "::" + escapeName(token.name);
+        case "pseudo":
+            if (token.data === null)
+                return ":" + escapeName(token.name);
+            if (typeof token.data === "string") {
+                return ":" + escapeName(token.name) + "(" + token.data + ")";
+            }
+            return ":" + escapeName(token.name) + "(" + stringify(token.data) + ")";
+        case "attribute":
+            if (token.action === "exists") {
+                return "[" + escapeName(token.name) + "]";
+            }
+            if (token.name === "id" &&
+                token.action === "equals" &&
+                !token.ignoreCase) {
+                return "#" + escapeName(token.value);
+            }
+            if (token.name === "class" &&
+                token.action === "element" &&
+                !token.ignoreCase) {
+                return "." + escapeName(token.value);
+            }
+            return "[" + escapeName(token.name) + actionTypes[token.action] + "='" + escapeName(token.value) + "'" + (token.ignoreCase ? "i" : "") + "]";
+        default:
+            throw new Error("Unknown type");
+    }
+}
+function escapeName(str) {
+    //TODO
+    return str;
+}
+
+
+/***/ }),
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = sortByProcedure;
@@ -37298,7 +36635,7 @@ module.exports = sortByProcedure;
 	(some types of selectors are faster than others)
 */
 
-var procedure = __webpack_require__(331);
+var procedure = __webpack_require__(312);
 
 var attributes = {
     __proto__: null,
@@ -37373,17 +36710,17 @@ function getProcedure(token) {
 
 
 /***/ }),
-/* 331 */
+/* 312 */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"universal\":50,\"tag\":30,\"attribute\":1,\"pseudo\":0,\"descendant\":-1,\"child\":-1,\"parent\":-1,\"sibling\":-1,\"adjacent\":-1}");
 
 /***/ }),
-/* 332 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var attributes = __webpack_require__(333);
-var Pseudos = __webpack_require__(334);
+var attributes = __webpack_require__(314);
+var Pseudos = __webpack_require__(315);
 
 /*
 	all available rules
@@ -37502,10 +36839,10 @@ module.exports = {
 
 
 /***/ }),
-/* 333 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var falseFunc = __webpack_require__(327).falseFunc;
+var falseFunc = __webpack_require__(306).falseFunc;
 
 //https://github.com/slevithan/XRegExp/blob/master/src/xregexp.js#L469
 var reChars = /[-[\]{}()*+?.,\\^$|#\s]/g;
@@ -37698,7 +37035,7 @@ module.exports = {
 
 
 /***/ }),
-/* 334 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -37714,9 +37051,9 @@ module.exports = {
 	  they need to return a boolean
 */
 
-var getNCheck = __webpack_require__(335);
-var BaseFuncs = __webpack_require__(327);
-var attributes = __webpack_require__(333);
+var getNCheck = __webpack_require__(316);
+var BaseFuncs = __webpack_require__(306);
+var attributes = __webpack_require__(314);
 var trueFunc = BaseFuncs.trueFunc;
 var falseFunc = BaseFuncs.falseFunc;
 
@@ -37882,7 +37219,42 @@ var filters = {
     radio: getAttribFunc("type", "radio"),
     reset: getAttribFunc("type", "reset"),
     image: getAttribFunc("type", "image"),
-    submit: getAttribFunc("type", "submit")
+    submit: getAttribFunc("type", "submit"),
+
+    //dynamic state pseudos. These depend on optional Adapter methods.
+    hover: function(next, rule, options) {
+        var adapter = options.adapter;
+
+        if (typeof adapter.isHovered === 'function') {
+            return function hover(elem) {
+                return next(elem) && adapter.isHovered(elem);
+            };
+        }
+
+        return falseFunc;
+    },
+    visited: function(next, rule, options) {
+        var adapter = options.adapter;
+
+        if (typeof adapter.isVisited === 'function') {
+            return function visited(elem) {
+                return next(elem) && adapter.isVisited(elem);
+            };
+        }
+
+        return falseFunc;
+    },
+    active: function(next, rule, options) {
+        var adapter = options.adapter;
+
+        if (typeof adapter.isActive === 'function') {
+            return function active(elem) {
+                return next(elem) && adapter.isActive(elem);
+            };
+        }
+
+        return falseFunc;
+    }
 };
 
 //helper methods
@@ -37965,7 +37337,6 @@ var pseudos = {
     link: function(elem, adapter) {
         return adapter.hasAttrib(elem, "href");
     },
-    visited: falseFunc, //Valid implementation
     //TODO: :any-link once the name is finalized (as an alias of :link)
 
     //forms
@@ -38097,6 +37468,7 @@ module.exports = {
             return filters[name](next, subselect, options, context);
         } else if (typeof pseudos[name] === "function") {
             var func = pseudos[name];
+
             verifyArgs(func, name, subselect);
 
             if (func === falseFunc) {
@@ -38122,11 +37494,11 @@ module.exports = {
 
 
 /***/ }),
-/* 335 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(336),
-    compile = __webpack_require__(337);
+var parse = __webpack_require__(317),
+    compile = __webpack_require__(318);
 
 module.exports = function nthCheck(formula){
 	return compile(parse(formula));
@@ -38136,7 +37508,7 @@ module.exports.parse = parse;
 module.exports.compile = compile;
 
 /***/ }),
-/* 336 */
+/* 317 */
 /***/ (function(module, exports) {
 
 module.exports = parse;
@@ -38182,12 +37554,12 @@ function parse(formula){
 
 
 /***/ }),
-/* 337 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = compile;
 
-var BaseFuncs = __webpack_require__(327),
+var BaseFuncs = __webpack_require__(306),
     trueFunc  = BaseFuncs.trueFunc,
     falseFunc = BaseFuncs.falseFunc;
 
@@ -38227,35 +37599,35 @@ function compile(parsed){
 }
 
 /***/ }),
-/* 338 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layer; });
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(90);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(75);
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(12);
-/* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(124);
+/* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(102);
 /* harmony import */ var sprite_animator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(sprite_animator__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(110);
-/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(304);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(263);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(268);
+/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(88);
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(283);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(241);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(246);
 
 
 
@@ -38266,6 +37638,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_6___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -38296,10 +37672,10 @@ var _fbo = Symbol('fbo');
 
 var _tickers = Symbol('tickers');
 
-var Layer =
-/*#__PURE__*/
-function (_Group) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_7___default()(Layer, _Group);
+var Layer = /*#__PURE__*/function (_Group) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(Layer, _Group);
+
+  var _super = _createSuper(Layer);
 
   function Layer() {
     var _this;
@@ -38308,7 +37684,7 @@ function (_Group) {
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Layer);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Layer).call(this));
+    _this = _super.call(this);
 
     if (!options.canvas) {
       var _this$getResolution = _this.getResolution(),
@@ -38334,13 +37710,11 @@ function (_Group) {
 
     var _Renderer = opts.Renderer || _mesh_js_core__WEBPACK_IMPORTED_MODULE_8__["Renderer"];
 
-    _this[_renderer] = new _Renderer(canvas, opts);
-
-    if (canvas.__gl__) {
-      // fix blendFunc for node-canvas-webgl
-      var gl = canvas.__gl__;
-      gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
-    }
+    _this[_renderer] = new _Renderer(canvas, opts); // if(canvas.__gl__) {
+    //   // fix blendFunc for node-canvas-webgl
+    //   const gl = canvas.__gl__;
+    //   gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    // }
 
     _this.options = options;
     _this.id = options.id;
@@ -38416,7 +37790,7 @@ function (_Group) {
         }
       }
 
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Layer.prototype), "dispatchPointerEvent", this).call(this, event);
+      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Layer.prototype), "dispatchPointerEvent", this).call(this, event);
     }
     /* override */
 
@@ -38487,7 +37861,7 @@ function (_Group) {
   }, {
     key: "onPropertyChange",
     value: function onPropertyChange(key, newValue, oldValue) {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Layer.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Layer.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
 
       if (key === 'zIndex') {
         this.canvas.style.zIndex = newValue;
@@ -38577,7 +37951,7 @@ function (_Group) {
           h = _this$getResolution5.height;
 
       if (w !== width || h !== height) {
-        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Layer.prototype), "setResolution", this).call(this, {
+        _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_4___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_7___default()(Layer.prototype), "setResolution", this).call(this, {
           width: width,
           height: height
         });
@@ -38820,7 +38194,7 @@ function (_Group) {
 _document__WEBPACK_IMPORTED_MODULE_12__["default"].registerNode(Layer, 'layer');
 
 /***/ }),
-/* 339 */
+/* 320 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38828,29 +38202,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SpriteSvg; });
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(90);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(75);
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(118);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(101);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _sprite__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(277);
-/* harmony import */ var _attribute_spritesvg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(340);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(263);
-/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(306);
-/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(114);
+/* harmony import */ var _sprite__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(256);
+/* harmony import */ var _attribute_spritesvg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(321);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(241);
+/* harmony import */ var _selector__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(285);
+/* harmony import */ var _utils_attribute_value__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(92);
 
 
 
@@ -38863,6 +38237,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -38946,10 +38324,10 @@ function updateTexture(svgNode) {
   }
 }
 
-var SpriteSvg =
-/*#__PURE__*/
-function (_Sprite) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default()(SpriteSvg, _Sprite);
+var SpriteSvg = /*#__PURE__*/function (_Sprite) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(SpriteSvg, _Sprite);
+
+  var _super = _createSuper(SpriteSvg);
 
   function SpriteSvg() {
     var _this;
@@ -38966,7 +38344,7 @@ function (_Sprite) {
         svgText = _attrs2.svgText,
         _attrs = _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1___default()(_attrs2, ["svgText"]);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(SpriteSvg).call(this, _attrs));
+    _this = _super.call(this, _attrs);
     _this[_root] = document.createElement('div');
 
     if (svgText) {
@@ -38978,7 +38356,7 @@ function (_Sprite) {
           return res.text();
         }).then(function (text) {
           _this[_root].innerHTML = text;
-          if (!_this.observer || _this.attributes.flexible) updateTexture(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+          if (!_this.observer || _this.attributes.flexible) updateTexture(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
         });
         svgText = null;
       }
@@ -38990,13 +38368,12 @@ function (_Sprite) {
       _svg.setAttribute('xmlns', namespace);
 
       _this[_root].appendChild(_svg);
-    }
+    } // updateTexture(this);
 
-    updateTexture(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
 
     if (typeof MutationObserver === 'function') {
       var observer = new MutationObserver(function (mutationsList) {
-        updateTexture(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this), false);
+        updateTexture(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), false);
       });
       observer.observe(_this[_root], {
         attributes: true,
@@ -39011,18 +38388,27 @@ function (_Sprite) {
   }
 
   _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default()(SpriteSvg, [{
+    key: "setResolution",
+
+    /* override */
+    value: function setResolution(_ref) {
+      var width = _ref.width,
+          height = _ref.height;
+
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(SpriteSvg.prototype), "setResolution", this).call(this, {
+        width: width,
+        height: height
+      });
+
+      updateTexture(this);
+    }
+    /* override */
+
+  }, {
     key: "dispatchPointerEvent",
-
-    /* override */
-    // setResolution({width, height}) {
-    //   super.setResolution({width, height});
-    //   updateTexture(this);
-    // }
-
-    /* override */
     value: function dispatchPointerEvent(event) {
       // 派发事件给 svg 元素，但是目前只支持派发给 svg 根元素，不支持派发给子元素
-      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(SpriteSvg.prototype), "dispatchPointerEvent", this).call(this, event);
+      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(SpriteSvg.prototype), "dispatchPointerEvent", this).call(this, event);
 
       if (ret && this.attributes.passEvents && typeof MouseEvent === 'function') {
         var x = event.x,
@@ -39146,7 +38532,7 @@ function (_Sprite) {
   }, {
     key: "onPropertyChange",
     value: function onPropertyChange(key, newValue, oldValue) {
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(SpriteSvg.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(SpriteSvg.prototype), "onPropertyChange", this).call(this, key, newValue, oldValue);
 
       if (key === 'flexible') {
         updateTexture(this);
@@ -39186,23 +38572,23 @@ _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_9___default()(Spr
 _document__WEBPACK_IMPORTED_MODULE_12__["default"].registerNode(SpriteSvg, 'spritesvg');
 
 /***/ }),
-/* 340 */
+/* 321 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SpriteSvg; });
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _sprite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(278);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _sprite__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(257);
 
 
 
@@ -39211,22 +38597,26 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 
 var getAttribute = Symbol.for('spritejs_getAttribute');
 var setAttribute = Symbol.for('spritejs_setAttribute');
 var setDefault = Symbol.for('spritejs_setAttributeDefault');
 
-var SpriteSvg =
-/*#__PURE__*/
-function (_Sprite) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_4___default()(SpriteSvg, _Sprite);
+var SpriteSvg = /*#__PURE__*/function (_Sprite) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_2___default()(SpriteSvg, _Sprite);
+
+  var _super = _createSuper(SpriteSvg);
 
   function SpriteSvg(subject) {
     var _this;
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_0___default()(this, SpriteSvg);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(SpriteSvg).call(this, subject));
+    _this = _super.call(this, subject);
 
     _this[setDefault]({
       passEvents: false,
@@ -39268,24 +38658,24 @@ function (_Sprite) {
 
 
 /***/ }),
-/* 341 */
+/* 322 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(61);
+/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(31);
 /* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(272);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(250);
 /* harmony import */ var _babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(12);
 
@@ -39300,7 +38690,11 @@ __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -39309,10 +38703,10 @@ var _inited = Symbol('inited');
 var LayerWorker = null; // eslint-disable-line import/no-mutable-exports
 
 if (typeof Worker === 'function') {
-  LayerWorker =
-  /*#__PURE__*/
-  function (_Worker) {
-    _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_5___default()(LayerWorker, _Worker);
+  LayerWorker = /*#__PURE__*/function (_Worker) {
+    _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_3___default()(LayerWorker, _Worker);
+
+    var _super = _createSuper(LayerWorker);
 
     function LayerWorker(options) {
       var _this;
@@ -39323,7 +38717,7 @@ if (typeof Worker === 'function') {
         options.worker = "./".concat(options.id, ".worker.js");
       }
 
-      _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4___default()(LayerWorker).call(this, options.worker));
+      _this = _super.call(this, options.worker);
       _this.options = options;
 
       if (!options.canvas) {
@@ -39448,50 +38842,50 @@ if (typeof Worker === 'function') {
     }]);
 
     return LayerWorker;
-  }(_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6___default()(Worker));
+  }( /*#__PURE__*/_babel_runtime_helpers_wrapNativeSuper__WEBPACK_IMPORTED_MODULE_6___default()(Worker));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (LayerWorker);
 
 /***/ }),
-/* 342 */
+/* 323 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Scene; });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(50);
+/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(30);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(25);
 /* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(118);
-/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(119);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(120);
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(122);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(18);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(101);
+/* harmony import */ var _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(95);
+/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(98);
+/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(100);
+/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(97);
+/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(20);
 /* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(14);
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _mesh_js_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
-/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(110);
-/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(112);
-/* harmony import */ var _layer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(338);
-/* harmony import */ var _layer_worker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(341);
-/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(304);
-/* harmony import */ var _event_pointer_events__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(343);
-/* harmony import */ var _event_event__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(264);
-/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(268);
-/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(263);
+/* harmony import */ var _utils_animation_frame__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(88);
+/* harmony import */ var _node__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(90);
+/* harmony import */ var _layer__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(319);
+/* harmony import */ var _layer_worker__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(322);
+/* harmony import */ var _group__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(283);
+/* harmony import */ var _event_pointer_events__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(324);
+/* harmony import */ var _event_event__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(242);
+/* harmony import */ var _utils_texture__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(246);
+/* harmony import */ var _document__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(241);
 
 
 
@@ -39505,6 +38899,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_7___default()(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 
 
@@ -39756,10 +39154,10 @@ function setViewport(options, canvas) {
 
 var _offscreenLayerCount = Symbol('offscreenLayerCount');
 
-var Scene =
-/*#__PURE__*/
-function (_Group) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_8___default()(Scene, _Group);
+var Scene = /*#__PURE__*/function (_Group) {
+  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_6___default()(Scene, _Group);
+
+  var _super = _createSuper(Scene);
 
   /**
     width
@@ -39773,7 +39171,7 @@ function (_Group) {
 
     _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_2___default()(this, Scene);
 
-    _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene).call(this));
+    _this = _super.call(this);
 
     if (!options.container) {
       if (typeof _mesh_js_core__WEBPACK_IMPORTED_MODULE_11__["ENV"].Container === 'function') {
@@ -39804,7 +39202,7 @@ function (_Group) {
 
     if (options.autoResize) {
       if (global.addEventListener) {
-        var that = _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this);
+        var that = _babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this);
 
         global.addEventListener('resize', function listener() {
           if (typeof document !== 'undefined' && document.contains(that.container)) {
@@ -39820,7 +39218,7 @@ function (_Group) {
 
     _this.setResolution(options);
 
-    delegateEvents(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5___default()(_this));
+    delegateEvents(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this));
     _this[_offscreenLayerCount] = 0;
     return _this;
   }
@@ -39834,7 +39232,7 @@ function (_Group) {
         wrapLayer(layer);
       }
 
-      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene.prototype), "appendChild", this).call(this, layer);
+      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Scene.prototype), "appendChild", this).call(this, layer);
 
       var canvas = layer.canvas;
 
@@ -39872,7 +39270,7 @@ function (_Group) {
         wrapLayer(layer);
       }
 
-      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene.prototype), "insertBefore", this).call(this, layer, ref);
+      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Scene.prototype), "insertBefore", this).call(this, layer, ref);
 
       var canvas = layer.canvas;
 
@@ -39913,9 +39311,7 @@ function (_Group) {
   }, {
     key: "preload",
     value: function () {
-      var _preload = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+      var _preload = _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
         var _this3 = this;
 
         var _len,
@@ -40003,13 +39399,12 @@ function (_Group) {
   }, {
     key: "removeChild",
     value: function removeChild(layer) {
-      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene.prototype), "removeChild", this).call(this, layer);
+      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Scene.prototype), "removeChild", this).call(this, layer);
 
       if (ret) {
-        layer._prepareRenderFinished();
-
+        if (layer._prepareRenderFinished) layer._prepareRenderFinished();
         var canvas = layer.canvas;
-        if (canvas.remove) canvas.remove();
+        if (canvas && canvas.remove) canvas.remove();
         if (layer.offscreen) this[_offscreenLayerCount]--;
       }
 
@@ -40071,7 +39466,7 @@ function (_Group) {
   }, {
     key: "replaceChild",
     value: function replaceChild(layer, ref) {
-      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene.prototype), "replaceChild", this).call(this, layer, ref);
+      var ret = _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Scene.prototype), "replaceChild", this).call(this, layer, ref);
 
       if (ref.canvas.remove) ref.canvas.remove();
       if (ref.offscreen) this[_offscreenLayerCount]--;
@@ -40136,7 +39531,7 @@ function (_Group) {
         if (mode === 'stickyBottom') this.options.top = height - h;
       }
 
-      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_7___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6___default()(Scene.prototype), "setResolution", this).call(this, {
+      _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_5___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_8___default()(Scene.prototype), "setResolution", this).call(this, {
         width: width,
         height: height
       });
@@ -40146,7 +39541,8 @@ function (_Group) {
     value: function snapshot() {
       var _ref6 = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
           _ref6$offscreen = _ref6.offscreen,
-          offscreen = _ref6$offscreen === void 0 ? false : _ref6$offscreen;
+          offscreen = _ref6$offscreen === void 0 ? false : _ref6$offscreen,
+          layers = _ref6.layers;
 
       var _canvas = offscreen ? 'snapshotOffScreenCanvas' : 'snapshotCanvas';
 
@@ -40160,16 +39556,19 @@ function (_Group) {
 
       var context = this[_canvas].getContext('2d');
 
-      var layers = this.orderedChildren;
+      layers = layers || this.orderedChildren;
       context.clearRect(0, 0, width, height);
 
       for (var i = 0; i < layers.length; i++) {
         var layer = layers[i];
-        if (layer.render) layer.render();
-        var canvas = layer.canvas;
 
-        if (canvas && canvas !== layer) {
-          context.drawImage(canvas, 0, 0, width, height);
+        if (!layer.options.ignoreSnapshot) {
+          if (layer.render) layer.render();
+          var canvas = layer.canvas;
+
+          if (canvas && canvas !== layer) {
+            context.drawImage(canvas, 0, 0, width, height);
+          }
         }
       }
 
@@ -40239,16 +39638,16 @@ function (_Group) {
 
 
 _document__WEBPACK_IMPORTED_MODULE_20__["default"].registerNode(Scene, 'scene');
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(52)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(39)))
 
 /***/ }),
-/* 343 */
+/* 324 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createPointerEvents; });
-/* harmony import */ var _event__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(264);
+/* harmony import */ var _event__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(242);
 __webpack_require__(1).glMatrix.setMatrixArrayType(Array);
 
 

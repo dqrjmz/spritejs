@@ -66,13 +66,11 @@ export default class Layer extends Group {
     const _Renderer = opts.Renderer || Renderer;
     // 创建渲染器实例，在_renderer 属性
     this[_renderer] = new _Renderer(canvas, opts);
-    // canvas是否为webgl上下文
-    if(canvas.__gl__) {
-      // fix blendFunc for node-canvas-webgl
-      const gl = canvas.__gl__;
-      gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
-    }
-    // 创建选项参数赋值的属性
+    // if(canvas.__gl__) {
+    //   // fix blendFunc for node-canvas-webgl
+    //   const gl = canvas.__gl__;
+    //   gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    // }
     this.options = options;
     // 获取选项参数中的id ,创建层的标识id
     this.id = options.id;
